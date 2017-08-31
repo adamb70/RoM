@@ -4175,6 +4175,24 @@ fill Empty Buckets with water.</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePillarSquare_Masonry" />
+      <DisplayName>DisplayName_StonePillarSquare</DisplayName>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\StonePillarSquare.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StonePillarSquare" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
 
 
 <!-- Kharidian Masonry -->

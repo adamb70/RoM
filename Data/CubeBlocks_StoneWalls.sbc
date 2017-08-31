@@ -2753,4 +2753,53 @@
       <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
       <AvailableInSurvival>true</AvailableInSurvival>
     </Definition>
+    
+  <!--Stone pillar-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StonePillarSquare" />
+    <DisplayName>DisplayName_StonePillarSquare</DisplayName>
+    <BlockPairName>StonePillarSquare</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\StonePillarSquare.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\GeneratedStoneSlopeEdgeLeft.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\GeneratedStoneSlopeEdgeLeft_Construction_2.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneBlockSlopeDiagonal_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.04000807" StartY="-0.0352594852" EndX="0.7502209" EndY="1.0351361" />
+      <MountPoint Side="Left" StartX="-0.0361264236" StartY="-0.0352594852" EndX="0.236461878" EndY="1.0351361" />
+      <MountPoint Side="Top" StartX="-0.0400080681" StartY="1.03612638" EndX="0.249779135" EndY="0.7635381" />
+      <MountPoint Side="Bottom" StartX="-0.0400080681" StartY="-0.0361264236" EndX="0.249779135" EndY="0.236461878" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="1" />
+    </Components>
+    <MaxIntegrity>1000</MaxIntegrity>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <CompoundTemplates>
+      <Template>Cube</Template>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Pillar</BuildType>
+    <AvailableInSurvival>true</AvailableInSurvival>
+  </Definition>
 </Definitions>
