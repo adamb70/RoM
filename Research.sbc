@@ -633,6 +633,7 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="KingStatueBlock_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StonePillarSquare_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WallWithArch_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneStairs_Masonry" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -697,6 +698,12 @@
 	<Id Type="ResearchDefinition" Subtype="WallWithArch_Masonry" />
     <DisplayName>Masonry</DisplayName>
     <Entry Type="CubeBlock" Subtype="StoneArchFullWall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneStairs_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="HouseStoneStairsSimple" />
   </Definition>
 <!-- ========================================================================= -->
 
