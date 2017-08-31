@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="SmithingStation" />
+    <BlockPairName>SmithingStation</BlockPairName>
+    <DisplayName>DisplayName_Block_SmithingStation</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\Smithy.dds</Icon>
+    <Public>true</Public>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="3" y="3" z="6" />
+    <ModelOffset x="0" y="0.87" z="0" />
+    <Model>Models\Cubes\Large\Smithy.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Smithy_Construction1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="Log250cm" Count="1" />
+      <Component Tag="Timber" Count="4" />
+      <Component Tag="IngotIron" Count="5" />
+    </Components>
+    <CriticalComponent Tag="IngotIron" Index="0" />
+    <MaxIntegrity>1200</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>600</Mass>
+    <Volume>135</Volume>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmithingStation"/>
+    <DisplayName>DisplayName_Block_SmithingStation</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\Smithy.dds</Icon>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Timber" />
+      <Item Amount="5" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="SmithingStation" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="SmithingStation"/>
+    <CraftingCategories>
+      <Category>Weapons</Category>
+      <Category>MetalWorks</Category>
+      <Category>Anvil</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="SmithingStation" />
+
+    <Component Type="Inventory" Subtype="CraftingInventory"/>
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="CraftingComponent" Subtype="SmithingStation"/>
+  </Definition>
+</Definitions>

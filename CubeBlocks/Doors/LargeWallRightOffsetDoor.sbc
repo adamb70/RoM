@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Large round wall offset, right door-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="LargeRoundRightWoodGateOffset" />
+    <DisplayName>DisplayName_Block_StoneWallRoundLargeRoundDoorOffsetLeft</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\StoneWallRoundDoorLeft.dds</Icon>
+    <BlockPairName>LargeRoundRightDoorOffset</BlockPairName>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Public>true</Public>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Gate_Round_Large_Right_Offset_Frame.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneWallRoundLargeDoorOffsetMir_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="0.85" StartY="-0.017860651" EndX="1" EndY="1.01786041" />
+      <MountPoint Side="Left" StartX="-0.01582098" StartY="-0.017860651" EndX="0.226154119" EndY="1.01786041" />
+      <MountPoint Side="Right" StartX="0.790101051" StartY="-0.0205520149" EndX="0.4732386" EndY="1.02055192" />
+      <MountPoint Side="Top" StartX="-0.0178607" StartY="1.015821" EndX="0.5316354" EndY="0.7260436" />
+      <MountPoint Side="Top" StartX="0.448384255" StartY="0.9481443" EndX="1.02054691" EndY="0.4732386" />
+      <MountPoint Side="Bottom" StartX="-0.0178607" StartY="-0.0158209335" EndX="0.5316354" EndY="0.273956448" />
+      <MountPoint Side="Bottom" StartX="0.448384255" StartY="0.05185571" EndX="1.02054691" EndY="0.5267614" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Tag="Timber" Count ="8" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="3" />
+      <Component Type="InventoryItem" Subtype="MetalParts" Count ="8" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>15000</MaxIntegrity>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <GuiVisible>false</GuiVisible>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Subparts>
+      <Subpart Name="WoodGate_Round_Large_Offset_Right">
+        <HingePosition x="-0.01" y="-0.117" z="-0.60"/>
+      </Subpart>
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <AnimationSequences>
+      <Sequence Name="Open" WrapMode="Once">
+        <Event Start="0.0" Name="DoorOpening" />
+        <Event Start="0.1" Name="DoorMoving" />
+        <Event Start="1.2" Name="DoorOpened" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="WoodGate_Round_Large_Offset_Right" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
+        </Animation>
+      </Sequence>
+
+      <Sequence Name="Close" WrapMode="Once">
+        <Event Start="0.0" Name="DoorClosing" />
+        <Event Start="0.1" Name="DoorMoving" />
+        <Event Start="1.2" Name="DoorClosed" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="WoodGate_Round_Large_Offset_Right" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <LoadFromModel>true</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_gate_01" Name="Generic" />
+      <UseObject Dummy="detector_gate_02" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SecondaryAction>OpenTerminal</SecondaryAction>
+    <SupportsAccessSettings>true</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Animations>
+      <Animation State="Opening" Animation="Open" />
+      <Animation State="Closing" Animation="Close" />
+    </Animations>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <InitialState>Open</InitialState>
+    <States>
+      <State Name="Open">
+        <Transition>Closing</Transition>
+      </State>
+      <State Name="Closing">
+        <Transition>Closed</Transition>
+      </State>
+      <State Name="Closed">
+        <Transition>Opening</Transition>
+      </State>
+      <State Name="Opening">
+        <Transition>Open</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <SoundEvents>
+      <Event Name="DoorOpening" Sound="RegularDoor_Open" />
+      <Event Name="DoorMoving" Sound="RegularDoor_Move" />
+      <Event Name="DoorClosed" Sound="RegularDoor_Close" />
+    </SoundEvents>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Events>
+      <Event Name="DoorClosed" TransitionToState="Closed" />
+      <Event Name="DoorOpened" TransitionToState="Open" />
+    </Events>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="LargeRoundRightWoodGateOffset" />
+    <Component Type="MedievalGridOwnershipComponent"/>
+    <Component Type="AccessPermissionComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Component Type="SubpartAnimationComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Component Type="EntityStateComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Component Type="StateAnimationComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Component Type="StateUseObjectComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="LargeRoundRightWoodGateOffset" />
+    <Component Type="AnimationEventSoundComponent" Subtype="LargeRoundRightWoodGateOffset" />
+  </Definition>
+</Definitions>

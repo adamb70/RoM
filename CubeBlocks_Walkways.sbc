@@ -1,0 +1,838 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWay</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWay</DisplayName>
+      <BlockPairName>WalkWay</BlockPairName>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayStraight.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Front" StartX="1.03189778" StartY="-0.03239999" EndX="-0.0321325064" EndY="0.07443757" />
+        <MountPoint Side="Left" StartX="0.0" StartY="-0.03239999" EndX="0.5" EndY="0.07443757" />
+        <MountPoint Side="Right" StartX="0.5" StartY="-0.03239999" EndX="1" EndY="0.07443757" />
+        <MountPoint Side="Bottom" StartX="-0.03189783" StartY="-0.0320541859" EndX="1.03213251" EndY="0.5" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="2" />
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>500</MaxIntegrity>
+      <BlockGroupName>BlockGroupName_WalkWays</BlockGroupName>
+      <BlockVariants>
+        <BlockVariant>
+          <TypeId>CubeBlock</TypeId>
+          <SubtypeId>WalkWayAngle</SubtypeId>
+        </BlockVariant>
+        <BlockVariant>
+          <TypeId>CubeBlock</TypeId>
+          <SubtypeId>WalkWayAngleInv</SubtypeId>
+        </BlockVariant>
+      </BlockVariants>
+    </Definition>    
+    
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayStairsTop</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayStairsTop</DisplayName>
+      <BlockPairName>WalkWayStairsTop</BlockPairName>
+      <GuiVisible>false</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayStairs.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_Stairs.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Stairs_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Right" StartX="0.1" StartY="0" EndX="0.5" EndY="0.2" />
+        <MountPoint Side="Left" StartX="0.85" StartY="0" EndX="0.9" EndY="1.0" />
+        <MountPoint Side="Top" StartX="0" StartY="0.1" EndX="0.25" EndY="0.5" />
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.85" EndX="0.15" EndY="0.9" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="4" />
+        <Component Tag="Timber" Count ="2" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>
+      <MaxIntegrity>800</MaxIntegrity>
+    </Definition>    
+    
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayStairsTip</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayStairsTip</DisplayName>
+      <BlockPairName>WalkWayStairsTip</BlockPairName>
+      <GuiVisible>false</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayStairs.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_Stairs_Tip.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Stairs_Tip_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.5" EndX="0.2" EndY="0.9" />
+        <MountPoint Side="Left" StartX="0.5" StartY="0.0" EndX="0.9" EndY="0.2" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="4" />
+        <Component Tag="Timber" Count ="2" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>800</MaxIntegrity>
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayStairsMultiblock</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayStairs</DisplayName>
+      <BlockPairName>WalkWayStairsMultiblock</BlockPairName>
+      <GuiVisible>true</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayStairs.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\Palisade_Slope.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Angle_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="4" />
+        <Component Subtype="Log250cm" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Subtype="Log250cm" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <MultiBlock>WalkWayStairs</MultiBlock>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>800</MaxIntegrity>
+      <BlockGroupName>BlockGroupName_WalkWayStairs</BlockGroupName>
+      <BlockVariants>
+        <BlockVariant>
+          <TypeId>CubeBlock</TypeId>
+          <SubtypeId>WalkWayStairsMirMultiblock</SubtypeId>
+        </BlockVariant>
+      </BlockVariants>
+    </Definition>  
+    
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayStairsTopMir</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayStairsTopMir</DisplayName>
+      <BlockPairName>WalkWayStairsTopMir</BlockPairName>
+      <GuiVisible>false</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayStairsMir.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_Stairs_Mir.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Stairs_Mir_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Left" StartX="0.5" StartY="0" EndX="0.9" EndY="0.2" />
+        <MountPoint Side="Right" StartX="0.1" StartY="0" EndX="0.15" EndY="1.0" />
+        <MountPoint Side="Top" StartX="0.75" StartY="0.1" EndX="1.0" EndY="0.5" />
+        <MountPoint Side="Bottom" StartX="0.85" StartY="0.85" EndX="1.0" EndY="0.9" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="4" />
+        <Component Tag="Timber" Count ="2" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>800</MaxIntegrity>
+    </Definition>   
+    
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayStairsTipMir</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayStairsTipMir</DisplayName>
+      <BlockPairName>WalkWayStairsTipMir</BlockPairName>
+      <GuiVisible>false</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayStairs.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_Stairs_Mir_Tip.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Stairs_Mir_Tip_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.8" StartY="0.5" EndX="1.0" EndY="0.9" />
+        <MountPoint Side="Right" StartX="0.1" StartY="0.0" EndX="0.5" EndY="0.2" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="4" />
+        <Component Tag="Timber" Count ="2" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>800</MaxIntegrity>
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayStairsMirMultiblock</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayStairsMir</DisplayName>
+      <BlockPairName>WalkWayStairsMirMultiblock</BlockPairName>
+      <GuiVisible>false</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayStairsMir.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\Palisade_Slope.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Angle_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="4" />
+        <Component Subtype="Log250cm" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Subtype="Log250cm" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <MultiBlock>WalkWayStairsMir</MultiBlock>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>800</MaxIntegrity>
+    </Definition> 
+    
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayAngle</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayAngle</DisplayName>
+      <BlockPairName>WalkWayAngle</BlockPairName>
+      <Public>true</Public>
+      <GuiVisible>false</GuiVisible>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayAngle.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_Angle.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Angle_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Front" StartX="1.03189778" StartY="-0.03239999" EndX="-0.0321325064" EndY="0.07443757" />
+        <MountPoint Side="Left" StartX="0.0" StartY="-0.03239999" EndX="0.5" EndY="0.07443757" />
+        <MountPoint Side="Right" StartX="0.0" StartY="-0.03239999" EndX="1" EndY="0.07443757" />
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="0.5" />
+        <MountPoint Side="Bottom" StartX="0.5" StartY="0.0" EndX="1.0" EndY="1.0" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="1" />
+        <Component Tag="Timber" Count ="2" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>500</MaxIntegrity>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayAngleInv</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayAngleInv</DisplayName>
+      <BlockPairName>WalkWayAngleInv</BlockPairName>
+      <Public>true</Public>
+      <GuiVisible>false</GuiVisible>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayAngleInv.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_Angle_Inv.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Angle_Inv_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0.5" StartY="-0.03239999" EndX="1.0" EndY="0.07443757" />
+        <MountPoint Side="Left" StartX="0.0" StartY="-0.03239999" EndX="0.5" EndY="0.07443757" />
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="0.5" EndY="0.5" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="1" />
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>500</MaxIntegrity>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayDiagonal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayDiagonal</DisplayName>
+      <BlockPairName>WalkWayDiagonal</BlockPairName>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayDiagonal.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_Diagonal.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Diagonal_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0.5" StartY="0.0" EndX="1.0" EndY="0.036" />
+        <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="0.5" EndY="0.036" />
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="0.25" EndY="0.5" />//
+        <MountPoint Side="Bottom" StartX="0.25" StartY="0.35" EndX="0.4" EndY="0.5" />
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.5" EndX="0.5" EndY="0.75" />
+        <MountPoint Side="Bottom" StartX="0.25" StartY="0.75" EndX="0.5" EndY="1.0" />
+        <MountPoint Side="Bottom" StartX="0.5" StartY="0.75" EndX="0.85" EndY="1.0" />
+        <MountPoint Side="Bottom" StartX="0.5" StartY="0.6" EndX="0.65" EndY="0.75" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="2" />
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>500</MaxIntegrity>
+      <BlockGroupName>BlockGroupName_DiagonalWalkWays</BlockGroupName>
+      <BlockVariants>
+        <BlockVariant>
+          <TypeId>CubeBlock</TypeId>
+          <SubtypeId>WalkWayDiagonalAngle</SubtypeId>
+        </BlockVariant>
+      </BlockVariants>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayDiagonalAngle</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayDiagonalAngle</DisplayName>
+      <BlockPairName>WalkWayDiagonalAngle</BlockPairName>
+      <Public>true</Public>
+      <GuiVisible>false</GuiVisible>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayDiagonalAngle.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_Diagonal_Angle.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Diagonal_Angle_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0.1" StartY="0" EndX="0.5" EndY="0.07443757" />
+        <MountPoint Side="Right" StartX="0.5" StartY="0" EndX="0.9" EndY="0.07443757" />
+        <MountPoint Side="Bottom" StartX="0.5" StartY="0.0" EndX="0.9" EndY="0.25" />
+        <MountPoint Side="Bottom" StartX="0.75" StartY="0.1" EndX="1.0" EndY="0.5" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="1" />
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>500</MaxIntegrity>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayRoundLargeCenter</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayRoundLarge</DisplayName>
+      <BlockPairName>WalkWayRoundLargeCenter</BlockPairName>
+      <GuiVisible>false</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\PalisadeLargeRound.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_LargeRound_Center.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_LargeRound_Center_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0.2" StartY="0" EndX="0.6" EndY="0.07" />
+        <MountPoint Side="Left" StartX="0.4" StartY="0.0" EndX="0.8" EndY="0.07" />
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.4" EndX="0.3" EndY="1.0" />
+        <MountPoint Side="Bottom" StartX="0.3" StartY="0.7" EndX="0.6" EndY="1.0" />
+        <MountPoint Side="Bottom" StartX="0.3" StartY="0.6" EndX="0.4" EndY="0.7" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="2" />
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="4" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>2</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>1500</MaxIntegrity>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayRoundLargeLeft</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayRoundLarge</DisplayName>
+      <BlockPairName>WalkWayRoundLargeLeft</BlockPairName>
+      <GuiVisible>false</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\PalisadeLargeRound.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_LargeRound_Left.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_LargeRound_Left_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Left" StartX="0.1" StartY="0" EndX="0.5" EndY="0.07" />
+        <MountPoint Side="Right" StartX="0.2" StartY="0" EndX="0.6" EndY="0.07" />
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.1" EndX="1.0" EndY="0.5" />
+        <MountPoint Side="Bottom" StartX="0.6" StartY="0.5" EndX="1.0" EndY="0.8" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="2" />
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="4" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>2</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>1500</MaxIntegrity>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayRoundLargeRight</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayRoundLarge</DisplayName>
+      <BlockPairName>WalkWayRoundLargeRight</BlockPairName>
+      <GuiVisible>false</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\PalisadeLargeRound.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\WalkWay_LargeRound_Right.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_LargeRound_Right_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0.4" StartY="0" EndX="0.8" EndY="0.07" />
+        <MountPoint Side="Back" StartX="0.5" StartY="0" EndX="0.9" EndY="0.07" />
+        <MountPoint Side="Bottom" StartX="0.4" StartY="0" EndX="0.9" EndY="1.0" />
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.0" EndX="0.4" EndY="0.4" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="2" />
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="4" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>2</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>1500</MaxIntegrity>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>WalkWayLargeRoundMultiblock</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_WalkWayRoundLarge</DisplayName>
+      <BlockPairName>WalkWayLargeRoundMultiblock</BlockPairName>
+      <GuiVisible>true</GuiVisible>
+      <Public>true</Public>
+      <Icon>Textures\GUI\Icons\cubes\WalkWayLargeRound.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\large\Palisade_Slope.mwm</Model>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\WalkWay_Angle_Construction_1.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>
+        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="2" />
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="4" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <BuildTimeSeconds>2</BuildTimeSeconds>
+      <UseModelIntersection>true</UseModelIntersection>
+      <BuildType>Wall</BuildType>
+      <BuildMaterial>Wood</BuildMaterial>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <CompoundTemplates>
+        <Template>Universal</Template>
+      </CompoundTemplates>
+      <MultiBlock>WalkWayLargeRound</MultiBlock>
+      <UseModelIntersection>true</UseModelIntersection>>
+      <MaxIntegrity>1500</MaxIntegrity>
+    </Definition>
+  </CubeBlocks>
+</Definitions>

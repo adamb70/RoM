@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Crafting_Book" />
+      <BlockPairName>Crafting_Book</BlockPairName>
+      <DisplayName>Crafting Book</DisplayName>
+    <Description>This book teaches you how to craft pottery, 
+glassblowing, and more.</Description>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Model>Models\Universal\book_LawGovernment.mwm</Model>
+		  <CubeSize>Small</CubeSize>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+      		  <Size x="2" y="1" z="2" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <PhysicalMaterial>Wood</PhysicalMaterial>
+		  <Components>
+			<Component Subtype="Timber10" Count="1" />
+		  </Components>
+		  <CriticalComponent Subtype="Timber10" Index="0" />
+	  <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="1" />
+      </MountPoints>
+	  <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+		  <BuildTimeSeconds>6</BuildTimeSeconds>
+		  <Mass>1</Mass>
+		  <AvailableInSurvival>true</AvailableInSurvival>
+		  <VoxelPlacement>
+			<StaticMode>
+			  <PlacementMode>Both</PlacementMode>
+			  <MaxAllowed>1</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</StaticMode>
+			<DynamicMode>
+			  <PlacementMode>Both</PlacementMode>
+			  <MaxAllowed>1</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</DynamicMode>
+		  </VoxelPlacement>
+		</Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Crafting_Book"/>
+    <CraftingCategories>
+      <Category>Crafting_Book</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Crafting_Book" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Crafting_BookInventory" />
+    <InventoryName>Crafting_BookInventory</InventoryName>
+    <DisplayName>Crafting_Book</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Crafting_Book" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="CraftingComponent" Subtype="Crafting_Book" />
+    <Component Type="UseObjectsComponent" Subtype="Crafting_Book" />
+    <Component Type="Inventory" Subtype="Crafting_BookInventory" />
+  </Definition>
+</Definitions>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <Definition xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>CrossbowBolt2</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>40</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>100</MaxTrajectory>
+        <BackkickForce>0</BackkickForce>
+        <PhysicalMaterial>Bolt</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileTrailScale>0.1</ProjectileTrailScale>
+        <ProjectileTrailProbability>1</ProjectileTrailProbability>
+        <ProjectileHitImpulse>1.5</ProjectileHitImpulse>
+        <ProjectileMassDamage>60</ProjectileMassDamage>
+        <ProjectileHealthDamage>145</ProjectileHealthDamage>
+        <ProjectileTrailMaterial>CrossbowBolt</ProjectileTrailMaterial>
+        <ProjectileOnHitMaterialParticlesType>None</ProjectileOnHitMaterialParticlesType>
+        <ProjectileOnHitParticlesType>None</ProjectileOnHitParticlesType>
+        <ProjectileType>Bolt</ProjectileType>
+      </ProjectileProperties>
+    </Definition>
+
+    <Definition xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>Norden_CrossbowBolt</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>40</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>100</MaxTrajectory>
+        <BackkickForce>0</BackkickForce>
+        <PhysicalMaterial>Bolt</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileTrailScale>0.1</ProjectileTrailScale>
+        <ProjectileTrailProbability>1</ProjectileTrailProbability>
+        <ProjectileHitImpulse>1.5</ProjectileHitImpulse>
+        <ProjectileMassDamage>60</ProjectileMassDamage>
+        <ProjectileHealthDamage>300</ProjectileHealthDamage>
+        <ProjectileTrailMaterial>CrossbowBolt</ProjectileTrailMaterial>
+        <ProjectileOnHitMaterialParticlesType>None</ProjectileOnHitMaterialParticlesType>
+        <ProjectileOnHitParticlesType>None</ProjectileOnHitParticlesType>
+        <ProjectileType>Bolt</ProjectileType>
+      </ProjectileProperties>
+    </Definition>
+</Definitions>

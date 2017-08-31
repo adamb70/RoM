@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Characters>
+		<!-- Wolf -->
+
+
+    <Character>
+      <Id>
+        <TypeId>MyObjectBuilder_Character</TypeId>
+        <SubtypeId>Space_Wolf</SubtypeId>
+      </Id>
+      
+      <Name>Space_Wolf</Name>
+	  <AnimationController>New_Wolf</AnimationController>
+      <Model>Models\Characters\Wildlife\Wolf\Wolf01.mwm</Model>
+      <DeathSoundName>BotWolfDeath</DeathSoundName>
+      <LoopingFootsteps>true</LoopingFootsteps>
+      <PhysicalMaterial>Deer</PhysicalMaterial>
+      <Mass>1</Mass>
+      <LootingTime>300</LootingTime>
+      <Skeleton>Tetrapod_simple</Skeleton>
+      <SpineBone>Wolf_Spine_3</SpineBone>
+      <AnimationMappings>
+        <Mapping Name="Idle" AnimationSubtypeName="New_IdleWolf1" />
+        <Mapping Name="Run" AnimationSubtypeName="New_RunWolf" />
+        <Mapping Name="Walk" AnimationSubtypeName="New_WalkWolf" />
+        <Mapping Name="Attack" AnimationSubtypeName="New_AttackWolf" />
+        <Mapping Name="Died" AnimationSubtypeName="New_DiedWolf" />
+      </AnimationMappings>
+
+	  <UsableByPlayer>false</UsableByPlayer>
+      <VisibleOnHud>false</VisibleOnHud>
+
+      <Inventory>
+        <InventoryVolume>1</InventoryVolume>
+        <!-- in m3 ! -->
+        <InventoryMass>50</InventoryMass>
+      </Inventory>
+
+	  <!-- ENABLED COMPONENTS -->
+
+			<EnabledComponents>RagdollComponent InventorySpawnComponent</EnabledComponents>
+
+			<EnableSpawnInventoryAsContainer>true</EnableSpawnInventoryAsContainer>
+			<InventorySpawnContainerId>
+				<TypeId>InventoryBagEntity</TypeId>
+				<SubtypeId>BarbarianBag</SubtypeId>
+			</InventorySpawnContainerId>
+      <!-- BONES -->
+      <HeadBone>deer_Scull</HeadBone>
+      <ModelRootBoneName>DEER_dummy</ModelRootBoneName>
+      <!-- Character control -->
+
+      <VerticalPositionFlyingOnly>false</VerticalPositionFlyingOnly>
+      <UseOnlyWalking>false</UseOnlyWalking>
+
+      <MaxSlope>65</MaxSlope>
+      <MaxSprintSpeed>14</MaxSprintSpeed>
+
+      <MaxRunSpeed>6</MaxRunSpeed>
+      <MaxBackrunSpeed>6</MaxBackrunSpeed>
+      <MaxRunStrafingSpeed>5.5</MaxRunStrafingSpeed>
+
+      <MaxWalkSpeed>3.5</MaxWalkSpeed>
+      <MaxBackwalkSpeed>3.1</MaxBackwalkSpeed>
+      <MaxWalkStrafingSpeed>3.3</MaxWalkStrafingSpeed>
+
+      <MaxCrouchWalkSpeed>1</MaxCrouchWalkSpeed>
+      <MaxCrouchBackwalkSpeed>1</MaxCrouchBackwalkSpeed>
+      <MaxCrouchStrafingSpeed>0</MaxCrouchStrafingSpeed>
+
+      <CharacterHeadSize>0.35</CharacterHeadSize>
+      <CharacterHeadHeight>0.15</CharacterHeadHeight>
+      <CharacterCollisionScale>0.7</CharacterCollisionScale>
+
+	  <MaxForce>500</MaxForce>
+
+      <BoneSet>
+        <Name>Body</Name>
+      </BoneSet>
+    
+    <RagdollBonesMappings>
+      <BoneSet>
+      <Name>Wolf_Head</Name>
+      <Bones>Wolf_Head Wolf_HeadBone007</Bones>  
+      <CollisionRadius>0.25</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_Neck_2</Name>
+      <Bones>Wolf_Head Wolf_Neck_2</Bones>  
+      <CollisionRadius>0.25</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_Neck_1</Name>
+      <Bones>Wolf_Neck_2 Wolf_Neck_1</Bones>  
+      <CollisionRadius>0.2</CollisionRadius>
+    </BoneSet>
+        <BoneSet>
+      <Name>Wolf_Ribcage</Name>
+      <Bones>Wolf_Ribcage Wolf_Spine_3</Bones>  
+      <CollisionRadius>0.2</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_Tail_1</Name>
+      <Bones>Wolf_Pelvis Wolf_Tail_1</Bones>  
+      <CollisionRadius>0.2</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_Tail_2</Name>
+      <Bones>Wolf_Tail_1 Wolf_Tail_2</Bones>  
+      <CollisionRadius>0.2</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_Tail_3</Name>
+      <Bones>Wolf_Tail_2 Wolf_Tail_3</Bones>  
+      <CollisionRadius>0.1</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_L_Leg_2</Name>
+      <Bones>Wolf_L_Leg_1 Wolf_L_Leg_2</Bones>  
+      <CollisionRadius>0.2</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_L_Leg_Palm</Name>
+      <Bones>Wolf_L_Leg_2 Wolf_L_Leg_Palm</Bones>  
+      <CollisionRadius>0.1</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_L_Leg_Digit01</Name>
+      <Bones>Wolf_L_Leg_Palm Wolf_L_Leg_Digit01</Bones>  
+      <CollisionRadius>0.1</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_R_Leg_2</Name>
+      <Bones>Wolf_R_Leg_1 Wolf_R_Leg_2</Bones>  
+      <CollisionRadius>0.2</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_R_Leg_Palm</Name>
+      <Bones>Wolf_R_Leg_2 Wolf_R_Leg_Palm</Bones>  
+      <CollisionRadius>0.1</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_R_Leg_Digit01</Name>
+      <Bones>Wolf_R_Leg_Palm Wolf_R_Leg_Digit01</Bones>  
+      <CollisionRadius>0.1</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_L_FrontLeg_1</Name>
+      <Bones>Wolf_L_FrontLeg_Collarbone Wolf_L_FrontLeg_1</Bones>  
+      <CollisionRadius>0.2</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_L_FrontLeg_2</Name>
+      <Bones>Wolf_L_FrontLeg_1 Wolf_L_FrontLeg_2</Bones>  
+      <CollisionRadius>0.1</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_L_FrontLeg_Palm</Name>
+      <Bones>Wolf_L_FrontLeg_2 Wolf_L_FrontLeg_Palm</Bones>  
+      <CollisionRadius>0.05</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_L_FrontLeg_Digit</Name>
+      <Bones>Wolf_L_FrontLeg_Palm Wolf_L_FrontLeg_Digit01</Bones>  
+      <CollisionRadius>0.05</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_R_FrontLeg_1</Name>
+      <Bones>Wolf_R__FrontLeg_Collarbone Wolf_R__FrontLeg_1</Bones>  
+      <CollisionRadius>0.2</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_R_FrontLeg_2</Name>
+      <Bones>Wolf_R__FrontLeg_1 Wolf_R__FrontLeg_2</Bones>  
+      <CollisionRadius>0.1</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_R_FrontLeg_Palm</Name>
+      <Bones>Wolf_R__FrontLeg_2 Wolf_R__FrontLeg_Palm</Bones>  
+      <CollisionRadius>0.05</CollisionRadius>
+    </BoneSet>
+    <BoneSet>
+      <Name>Wolf_R_FrontLeg_Digit</Name>
+      <Bones>Wolf_R__FrontLeg_Palm Wolf_R__FrontLeg_Digit01</Bones>  
+      <CollisionRadius>0.05</CollisionRadius>
+    </BoneSet>
+     </RagdollBonesMappings>
+
+     <InitialAnimation>IdleWolf1</InitialAnimation>
+
+	 <DeadBodyShape>
+		<BoxShapeScale x="1" y="0.15" z="2"/>
+		<RelativeCenterOfMass x="0" y="0" z="0"/>
+		<RelativeShapeTranslation x="-2.2" y="-0.7" z="0"/>
+		<Friction>20</Friction>
+	 </DeadBodyShape>
+	 
+	 <RotationToSupport>OneAxis</RotationToSupport>
+    </Character>
+
+	</Characters>
+</Definitions>

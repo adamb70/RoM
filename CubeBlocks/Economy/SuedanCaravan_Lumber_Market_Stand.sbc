@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="SuedanCaravan_Lumber_Market_Stand" />
+      <BlockPairName>SuedanCaravan_Lumber_Market_Stand</BlockPairName>
+      <DisplayName>Suedan Caravan Lumber Market Stand</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+      <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+      <Public>true</Public>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Economey\market_stand.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Subtype="Timber10" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Timber10" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Mass>10</Mass>
+      <AvailableInSurvival>false</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="SuedanCaravan_Lumber_Market_Stand"/>
+    <CraftingCategories>
+      <Category>SuedanCaravan_Lumber_Market_Stand</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="SuedanCaravan_Lumber_Market_Stand" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="SuedanCaravan_Lumber_Market_StandInventory" />
+    <InventoryName>SuedanCaravan_Lumber_Market_StandInventory</InventoryName>
+    <DisplayName>SuedanCaravan_Lumber_Market_Stand</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="SuedanCaravan_Lumber_Market_Stand" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="CraftingComponent" Subtype="SuedanCaravan_Lumber_Market_Stand" />
+    <Component Type="UseObjectsComponent" Subtype="SuedanCaravan_Lumber_Market_Stand" />
+    <Component Type="Inventory" Subtype="SuedanCaravan_Lumber_Market_StandInventory" />
+  </Definition>
+
+</Definitions>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="ResearchTable" />
+    <BlockPairName>ResearchTable</BlockPairName>
+    <DisplayName>DisplayName_Block_DrawingBoard</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\DrawingBoard.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="8" y="7" z="8" />
+    <ModelOffset x="0" y="0.375" z="0" />
+    <Model>Models\Cubes\Small\DrawingBoard.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Tag="Timber" Count="8" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MaxIntegrity>1600</MaxIntegrity>
+    <Mass>75</Mass>
+    <Volume>980</Volume>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GuiVisible>true</GuiVisible>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ResearchTable"/>
+    <DisplayName>DisplayName_Block_DrawingBoard</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\DrawingBoard.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="8" Tag="Timber" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="ResearchTable" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="ResearchTable" />
+    <DisplayName>Not Used In RoM</DisplayName>
+    <MaxItemCount>7</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="ResearchTable"/>
+    <CraftingCategories>
+      <Category>Schematics</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="ResearchTable" />
+    <UseObjects>
+      <UseObject Dummy="detector_board" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="ResearchTable" />
+
+    <Component Type="Inventory" Subtype="ResearchTable"/>
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="UseObjectsComponent" Subtype="ResearchTable"/>
+  </Definition>
+</Definitions>

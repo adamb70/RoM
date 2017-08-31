@@ -1,0 +1,1962 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Herbs</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.4">
+        <NextStep>Empty</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Empty" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Herbs</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather"> NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Herbs" StartingProbability="0.4">
+        <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="ConsumableItem" Subtype="Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Herbs</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Empty</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Empty" StartingProbability="0.1">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Schematic_Herbs</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather"> NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Herbs" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="SchematicItem" Subtype="Schematic_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>CrimsonThristle</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.2">
+        <NextStep>Empty</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Empty" StartingProbability="0.4">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>CrimsonThristle</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather"> NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="CrimsonThristle" StartingProbability="0.4">
+        <ModelCollectionSubtypeId>HealingHerbs</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="ConsumableItem" Subtype="CrimsonThristle"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_CrimsonThristle</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Empty</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Empty" StartingProbability="0.1">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Schematic_CrimsonThristle</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather"> NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_CrimsonThristle" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>HealingHerbs</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_CrimsonThristle"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Pumpkin</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>FullPumpkin</NextStep>
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="FullPumpkin" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Pumpkin</ModelCollectionSubtypeId>
+        <NextStep>FullPumpkins</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Roots" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Pumpkin</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Schematic_Pumpkin</NextStep>
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Pumpkin" StartingProbability="0.1">
+        <ModelCollectionSubtypeId>Pumpkin</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="SchematicItem" Subtype="Schematic_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Berries</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+        <GrowthStep Name="Dead" StartingProbability="0.03">
+          <NextStep>Roots</NextStep>
+          <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Roots" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+          <NextStep>Empty</NextStep>
+          <TimeToNextStepInHours>0.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Empty" StartingProbability="0.02">
+        <ModelCollectionSubtypeId>BushEmpty</ModelCollectionSubtypeId>
+        <NextStep>Berries_1</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Berries_1" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>BushBerries</ModelCollectionSubtypeId>
+        <NextStep>Berries_2</NextStep>
+        <TimeToNextStepInHours>.25</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="ConsumableItem" Subtype="Berries"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Berries_2" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>BushBerries</ModelCollectionSubtypeId>
+        <NextStep>Berries_3</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="ConsumableItem" Subtype="Berries"/>
+            <Min>2</Min>
+            <Max>2</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Berries_3" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>BushBerries</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="ConsumableItem" Subtype="Berries"/>
+            <Min>3</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Berries</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+        <GrowthStep Name="Dead" StartingProbability="0.1">
+          <NextStep>Schematic_Berries</NextStep>
+          <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Berries" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>BushBerries</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Berries"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Blue_Berry</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+        <GrowthStep Name="Dead" StartingProbability="0.03">
+          <NextStep>Roots</NextStep>
+          <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Roots" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+          <NextStep>Empty</NextStep>
+          <TimeToNextStepInHours>0.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Empty" StartingProbability="0.02">
+        <ModelCollectionSubtypeId>BushEmpty</ModelCollectionSubtypeId>
+        <NextStep>Blue_Berry_1</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Blue_Berry_1" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>BushBlueBerries</ModelCollectionSubtypeId>
+        <NextStep>Blue_Berry_2</NextStep>
+        <TimeToNextStepInHours>.25</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="ConsumableItem" Subtype="Blue_Berry"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Blue_Berry_2" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>BushBlueBerries</ModelCollectionSubtypeId>
+        <NextStep>Blue_Berry_3</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="ConsumableItem" Subtype="Blue_Berry"/>
+            <Min>2</Min>
+            <Max>2</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Blue_Berry_3" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>BushBlueBerries</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Empty">
+            <Id Type="ConsumableItem" Subtype="Blue_Berry"/>
+            <Min>3</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Blue_Berry</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+        <GrowthStep Name="Dead" StartingProbability="0.1">
+          <NextStep>Schematic_Blue_Berry</NextStep>
+          <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Blue_Berry" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>BushBlueBerries</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Blue_Berry"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Mushrooms</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.4">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.2">
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <NextStep>Mushrooms</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Mushrooms" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>Mushrooms</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Mushrooms"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Mushrooms</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <NextStep>Schematic_Mushrooms</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Mushrooms" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>Mushrooms</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Mushrooms"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>HighlandCaps</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.4">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.2">
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <NextStep>HighlandCaps</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="HighlandCaps" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>Mushrooms</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="HighlandCaps"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_HighlandCaps</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <NextStep>Schematic_HighlandCaps</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_HighlandCaps" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>Mushrooms</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_HighlandCaps"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>DeadmanMushroom</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.4">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.2">
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <NextStep>DeadmanMushroom</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="DeadmanMushroom" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>DeathMushrooms</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="DeadmanMushroom"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_DeadmanMushroom</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <NextStep>Schematic_DeadmanMushroom</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_DeadmanMushroom" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>DeathMushrooms</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_DeadmanMushroom"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Norden_Spalt</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+        <NextStep>Norden_Spaltless</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Norden_Spaltless" StartingProbability="0.3">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Norden_Spalt_1</NextStep>
+        <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Norden_Spalt_1" StartingProbability="0.1">
+        <TimeToNextStepInHours>.25</TimeToNextStepInHours>
+        <NextStep>Norden_Spalt_2</NextStep>
+        <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Norden_Spaltless">
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Norden_Spalt_2" StartingProbability="0.1">
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <NextStep>Norden_Spalt_3</NextStep>
+        <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Norden_Spaltless">
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
+            <Min>2</Min>
+            <Max>2</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Norden_Spalt_3" StartingProbability="0.1">
+        <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Norden_Spaltless">
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
+            <Min>3</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Norden_Roots</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+        <NextStep>Schematic_Norden_Roots</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Norden_Roots" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Norden_Spalt</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+        <NextStep>Schematic_Norden_Spalt</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Norden_Spalt" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Norden_Barley</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+        <NextStep>Norden_Barleyless</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Norden_Barleyless" StartingProbability="0.3">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Norden_Barley_1</NextStep>
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Norden_Barley_1" StartingProbability="0.1">
+        <TimeToNextStepInHours>.25</TimeToNextStepInHours>
+        <NextStep>Norden_Barley_2</NextStep>
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Norden_Barleyless">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Norden_Barley_2" StartingProbability="0.1">
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <NextStep>Norden_Barley_3</NextStep>
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Norden_Barleyless">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
+            <Min>2</Min>
+            <Max>2</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Norden_Barley_3" StartingProbability="0.1">
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Norden_Barleyless">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
+            <Min>3</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Norden_Barley_Roots</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+        <NextStep>Schematic_Norden_Roots</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Norden_Roots" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>Norden_Barleyless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Norden_Barley_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Norden_Barley</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+        <NextStep>Schematic_Norden_Barley</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Norden_Barley" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>IronOrePile</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>IronOrePile</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="IronOrePile" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="IronOre"/>
+            <Min>2</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_IronOrePile</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>Schematic_IronOrePile</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_IronOrePile" StartingProbability="0.4">
+        <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_IronOre"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>SingleIronOre</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>SingleIronOre</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="SingleIronOre" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="IronOre"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_SingleIronOre</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>Schematic_SingleIronOre</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_SingleIronOre" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_IronOre"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>StonePile</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>StonePile</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="StonePile" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="StoneOreSmall"/>
+            <Min>2</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_StonePile</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>Schematic_StonePile</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_StonePile" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_StoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>SingleStone</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>SingleStone</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="SingleStone" StartingProbability="0.4">
+        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="StoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_SingleStone</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <NextStep>Schematic_SingleStone</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_SingleStone" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_StoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>SandStonePile</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>SandStonePile</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="SandStonePile" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>SandStonePile</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="SandStoneOreSmall"/>
+            <Min>2</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_SandStonePile</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>Schematic_SandStonePile</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_SandStonePile" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>SandStonePile</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>SingleSandStone</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>SingleSandStone</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="SingleSandStone" StartingProbability="0.4">
+        <ModelCollectionSubtypeId>SingleSandStone</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="SandStoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_SingleSandStone</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <NextStep>Schematic_SingleSandStone</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_SingleSandStone" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>SingleSandStone</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Enchanted_StonePile</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>Enchanted_StonePile</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Enchanted_StonePile" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Enchanted_StoneOreSmall"/>
+            <Min>2</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Enchanted_StonePile</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>Enchanted_Schematic_StonePile</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Enchanted_Schematic_StonePile" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Enchanted_StoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Enchanted_SingleStone</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.3">
+        <TimeToNextStepInHours>3</TimeToNextStepInHours>
+        <NextStep>Enchanted_SingleStone</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Enchanted_SingleStone" StartingProbability="0.4">
+        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Enchanted_StoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Enchanted_SingleStone</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <NextStep>Enchanted_Schematic_SingleStone</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Enchanted_Schematic_SingleStone" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Enchanted_StoneOreSmall"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Roots</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <NextStep>Roots</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Roots" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_Roots</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+        <NextStep>Still_Dead</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Still_Dead" StartingProbability="0.1">
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+        <NextStep>Schematic_Roots</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Roots" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <!--Wild equivalents of farmable items-->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>WildCabbage</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.3">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>0.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Grown" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="ConsumableItem" Subtype="Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Gathered" StartingProbability="0">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <!--Wild equivalents of farmable items-->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_WildCabbage</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Schematic_Cabbage</NextStep>
+        <TimeToNextStepInHours>0.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Cabbage" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="SchematicItem" Subtype="Schematic_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Gathered" StartingProbability="0">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+
+<!-- =============================================================================================================== -->
+  <!--Wild equivalents of farmable items-->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>WildRedCabbage</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.2">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>0.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Grown" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <!--Wild equivalents of farmable items-->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_WildRedCabbage</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Schematic_RedCabbage</NextStep>
+        <TimeToNextStepInHours>0.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_RedCabbage" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>WildPumpkin</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.4">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Grown" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Gathered" StartingProbability="0">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>   
+<!-- __________________________________________________________________________________ -->   
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_WildPumpkin</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Schematic_Grown</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Grown" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="SchematicItem" Subtype="Schematic_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Gathered" StartingProbability="0">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>   
+<!-- __________________________________________________________________________________ -->   
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>WildFlax</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.4">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.1">
+        <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Grown" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="InventoryItem" Subtype="FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Gathered" StartingProbability="0">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_WildFlax</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Schematic_Grown</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Grown" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="SchematicItem" Subtype="Schematic_Flax"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Gathered" StartingProbability="0">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>WildWheat</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.4">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.1">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Grown" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="InventoryItem" Subtype="WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Gathered" StartingProbability="0">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+    </GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Schematic_WildWheat</SubtypeId>
+    </Id>
+    <GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Sapling" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Schematic_Grown</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Schematic_Grown" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="SchematicItem" Subtype="Schematic_Wheat"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+      <GrowthStep Name="Gathered" StartingProbability="0">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+    </GrowthSteps>
+<!-- __________________________________________________________________________________ -->
+  </Definition>
+<!-- =============================================================================================================== -->
+<!-- =============================================================================================================== -->
+
+ 
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>IronNugget</SubtypeId>
+    </Id>
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <TimeToNextStepInHours>10</TimeToNextStepInHours>
+        <NextStep>IronNugget</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+
+      <GrowthStep Name="IronNugget" StartingProbability="1">
+        <ModelCollectionSubtypeId>IronNugget</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="IronNugget"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+
+    </GrowthSteps>
+  </Definition>
+  <!-- =============================================================================================================== -->
+
+  
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>CoalNugget</SubtypeId>
+    </Id>
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <TimeToNextStepInHours>10</TimeToNextStepInHours>
+        <NextStep>CoalNugget</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+
+      <GrowthStep Name="CoalNugget" StartingProbability="1">
+        <ModelCollectionSubtypeId>CoalNugget</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="CoalNugget"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+
+    </GrowthSteps>
+  </Definition>
+  <!-- =============================================================================================================== -->
+
+    <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>GoldNugget</SubtypeId>
+    </Id>
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <TimeToNextStepInHours>10</TimeToNextStepInHours>
+        <NextStep>GoldNugget</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+
+      <GrowthStep Name="GoldNugget" StartingProbability="1">
+        <ModelCollectionSubtypeId>GoldNugget</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="GoldNugget"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+
+    <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>SaltNugget</SubtypeId>
+    </Id>
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <TimeToNextStepInHours>10</TimeToNextStepInHours>
+        <NextStep>SaltNugget</NextStep>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+
+      <GrowthStep Name="SaltNugget" StartingProbability="1">
+        <ModelCollectionSubtypeId>SaltNugget</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="SaltNugget"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- __________________________________________________________________________________ -->
+
+    </GrowthSteps>
+  </Definition>  
+<!-- =============================================================================================================== -->
+
+</Definitions>

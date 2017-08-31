@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Round in wall, left door-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="RoundWallInLeftDoor" />
+    <DisplayName>DisplayName_Block_RoundWallInLeftDoor</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\RoundWallInLeftDoor.dds</Icon>
+    <BlockPairName>RoundWallInLeftDoor</BlockPairName>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Public>true</Public>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Gate_RoundIn_Left.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseStoneRoundInDoorLeft_Construction_1.mwm">
+      </Model>
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.01312327" StartY="-0.0141171459" EndX="0.6470783" EndY="1.01411712" />
+      <MountPoint Side="Front" StartX="0.208188832" StartY="-0.01479435" EndX="-0.0221402645" EndY="0.8526458" />
+      <MountPoint Side="Front" StartX="0.6849537" StartY="0.8067474" EndX="-0.017609" EndY="1.017609" />
+      <MountPoint Side="Back" StartX="-0.0154936314" StartY="-0.0164875034" EndX="0.246511325" EndY="1.01648748" />
+      <MountPoint Side="Left" StartX="-0.0141168116" StartY="-0.0141171459" EndX="0.564599" EndY="1.01411712" />
+      <MountPoint Side="Left" StartX="0.5278451" StartY="-0.0164875034" EndX="1.01648748" EndY="1.01648748" />
+      <MountPoint Side="Right" StartX="1.02214" StartY="-0.01479435" EndX="0.753070533" EndY="0.8526458" />
+      <MountPoint Side="Right" StartX="1.01760888" StartY="0.8067474" EndX="0.7199304" EndY="1.017609" />
+      <MountPoint Side="Top" StartX="-0.0131232738" StartY="1.01411676" EndX="0.3529217" EndY="0.435401022" />
+      <MountPoint Side="Top" StartX="-0.0154936314" StartY="0.472154915" EndX="0.3508598" EndY="-0.01648748" />
+      <MountPoint Side="Top" StartX="0.315046281" StartY="1.01760888" EndX="1.017609" EndY="0.65" />
+      <MountPoint Side="Bottom" StartX="-0.0131232738" StartY="-0.0141168116" EndX="0.3529217" EndY="0.564599" />
+      <MountPoint Side="Bottom" StartX="-0.0154936314" StartY="0.5278451" EndX="0.3508598" EndY="1.01648748" />
+      <MountPoint Side="Bottom" StartX="0.791811168" StartY="-0.0221400745" EndX="1.02214026" EndY="0.2512388" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Tag="Timber" Count ="8" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="8" />
+      <Component Type="InventoryItem" Subtype="MetalParts" Count ="8" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <GuiVisible>false</GuiVisible>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="RoundWallInLeftDoor" />
+    <Subparts>
+      <Subpart Name="WoodGate">
+        <HingePosition x="0.709" y="-0.117" z="-0.724"/>
+      </Subpart>
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="RoundWallInLeftDoor" />
+    <AnimationSequences>
+      <Sequence Name="Open" WrapMode="Once">
+        <Event Start="0.0" Name="DoorOpening" />
+        <Event Start="0.1" Name="DoorMoving" />
+        <Event Start="1.2" Name="DoorOpened" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="WoodGate" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseInOut" />
+        </Animation>
+      </Sequence>
+
+      <Sequence Name="Close" WrapMode="Once">
+        <Event Start="0.0" Name="DoorClosing" />
+        <Event Start="0.1" Name="DoorMoving" />
+        <Event Start="1.2" Name="DoorClosed" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="WoodGate" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseInOut" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="RoundWallInLeftDoor" />
+    <LoadFromModel>true</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_gate_01" Name="Generic" />
+      <UseObject Dummy="detector_gate_02" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="RoundWallInLeftDoor" />
+    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SecondaryAction>OpenTerminal</SecondaryAction>
+    <SupportsAccessSettings>true</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="RoundWallInLeftDoor" />
+    <Animations>
+      <Animation State="Opening" Animation="Open" />
+      <Animation State="Closing" Animation="Close" />
+    </Animations>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="RoundWallInLeftDoor" />
+    <InitialState>Open</InitialState>
+    <States>
+      <State Name="Open">
+        <Transition>Closing</Transition>
+      </State>
+      <State Name="Closing">
+        <Transition>Closed</Transition>
+      </State>
+      <State Name="Closed">
+        <Transition>Opening</Transition>
+      </State>
+      <State Name="Opening">
+        <Transition>Open</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="RoundWallInLeftDoor" />
+    <SoundEvents>
+      <Event Name="DoorOpening" Sound="RegularDoor_Open" />
+      <Event Name="DoorMoving" Sound="RegularDoor_Move" />
+      <Event Name="DoorClosed" Sound="RegularDoor_Close" />
+    </SoundEvents>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="RoundWallInLeftDoor" />
+    <Events>
+      <Event Name="DoorClosed" TransitionToState="Closed" />
+      <Event Name="DoorOpened" TransitionToState="Open" />
+    </Events>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="RoundWallInLeftDoor" />
+    <Component Type="MedievalGridOwnershipComponent"/>
+    <Component Type="AccessPermissionComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="RoundWallInLeftDoor" />
+    <Component Type="SubpartAnimationComponent" Subtype="RoundWallInLeftDoor" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="RoundWallInLeftDoor" />
+    <Component Type="EntityStateComponent" Subtype="RoundWallInLeftDoor" />
+    <Component Type="StateAnimationComponent" Subtype="RoundWallInLeftDoor" />
+    <Component Type="StateUseObjectComponent" Subtype="RoundWallInLeftDoor" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="RoundWallInLeftDoor" />
+    <Component Type="AnimationEventSoundComponent" Subtype="RoundWallInLeftDoor" />
+  </Definition>
+</Definitions>

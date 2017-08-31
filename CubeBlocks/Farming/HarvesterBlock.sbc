@@ -1,0 +1,84 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="HarvesterBlock" />
+    <DisplayName>DisplayName_Block_HarvesterBlock</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\HarvesterBlock.dds</Icon>
+    <BlockPairName>HarvesterBlock</BlockPairName>
+    <CubeSize>Small</CubeSize>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="3" y="3" z="8" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\small\HarvesterBlock.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0" Default="true" />
+      <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0" />
+      <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="8.0" />
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="8.0" EndY="3.0" />
+      <MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="3.0" EndY="8.0" />
+    </MountPoints>
+    <Components>
+      <Component Tag="Timber" Count="10" />
+      <Component Type="InventoryItem" Subtype="MetalParts" Count ="16" />
+    </Components>
+    <MaxIntegrity>1500</MaxIntegrity>
+    <Mass>100</Mass>
+    <Volume>1125</Volume>
+    <CriticalComponent Type="InventoryItem" Subtype="MetalParts" Index="0" />
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Vertical</Direction>
+    <Rotation>Both</Rotation>
+    <UseModelIntersection>true</UseModelIntersection>
+    <MinColorShift Hue="-60" Saturation="-5" Value="-10" />
+    <MaxColorShift Hue="0" Saturation="5" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="HarvesterBlock" />
+    <Component Type="UseObjectsComponent" Subtype="HarvesterBlock" />
+    <Component Type="HarvestComponent" Subtype="HarvesterBlock" />
+    <Component Type="Inventory" Subtype="HarvesterBlock" />
+    <Component Type="InventorySpawnComponent"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="HarvesterBlock" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_HarvestComponentDefinition">
+    <Id Type="MyObjectBuilder_HarvestComponent" Subtype="HarvesterBlock" />
+    <HarvestCooldownInSeconds>.2</HarvestCooldownInSeconds>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="HarvesterBlock" />
+    <MaxItemCount>28</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <Constraint xsi:type="MyObjectBuilder_ItemTagConstraint" Whitelist="true">
+      <Tag>Harvest</Tag>
+    </Constraint>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HarvesterBlock"/>
+    <DisplayName>DisplayName_Block_HarvesterBlock</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\HarvesterBlock.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="CubeBlock" Subtype="WoodChestLarge" />
+      <Item Amount="10" Tag="Timber" />
+      <Item Amount="16" Type="InventoryItem" Subtype="MetalParts" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="HarvesterBlock" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+</Definitions>

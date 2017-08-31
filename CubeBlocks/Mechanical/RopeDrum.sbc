@@ -1,0 +1,151 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="RopeDrumAloneSmall" />
+    <DisplayName>DisplayName_Block_RopeDrum</DisplayName>
+    <BlockPairName>RopeDrum_Small</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\RopeDrumAloneSmall.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="4" y="3" z="3" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\RopeDrumAloneSmall.mwm</Model>
+    <Components>
+      <Component Type="CubeBlock" Subtype="Timber10" Count="1" />
+      <Component Type="CubeBlock" Subtype="TimberRound10" Count="1" />
+      <Component Tag="Rope" Count="6" />
+    </Components>
+    <CriticalComponent Type="CubeBlock" Subtype="TimberRound10" Index="0" />
+    <MaxIntegrity>400</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Left" StartX="1" StartY="1" EndX="2" EndY="2" />
+      <MountPoint Side="Right" StartX="1" StartY="1" EndX="2" EndY="2" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <BlockGroupName>BlockGroupName_RopeDrums</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>MyObjectBuilder_CubeBlock</TypeId>
+        <SubtypeId>LockableDrumSmall</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+    <Mass>30</Mass>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="LockableDrumSmall" />
+    <DisplayName>DisplayName_LockableDrum</DisplayName>
+    <BlockPairName>LockableDrum</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\LockableDrum.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="6" y="3" z="3" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\LockableDrumTimber.mwm</Model>
+    <Components>
+      <Component Type="CubeBlock" Subtype="TimberRound10" Count="1" />
+      <Component Type="CubeBlock" Subtype="Timber10" Count="2" />
+      <Component Tag="Rope" Count="6" />
+    </Components>
+    <CriticalComponent Type="CubeBlock" Subtype="TimberRound10" Index="0" />
+    <MaxIntegrity>600</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Left" StartX="1" StartY="1" EndX="2" EndY="2" />
+      <MountPoint Side="Right" StartX="1" StartY="1" EndX="2" EndY="2" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <GuiVisible>false</GuiVisible>
+    <Mass>35</Mass>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_LockableRopeComponentDefinition">
+    <Id Type="MyObjectBuilder_LockableRopeComponent" Subtype="LockableDrumSmall" />
+    <MinRopeLength>0.7</MinRopeLength>
+    <MaxRopeLength>70</MaxRopeLength>
+    <DefaultMaxRopeLength>40</DefaultMaxRopeLength>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="LockableDrumSmall_SubpartComp" />
+    <Subparts>
+      <Subpart Name="LockableDrumLeftLock">
+        <HingePosition x="-0.45" y="0.0" z="0.0"/>
+      </Subpart>
+      <Subpart Name="LockableDrumRightLock">
+        <HingePosition x="0.45" y="0.0" z="0.0"/>
+      </Subpart>
+      <Subpart Name="LockableDrumMain" />
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="LockableDrumSmall_UseObjComp" />
+    <!--<LoadFromModel>false</LoadFromModel>-->
+    <UseObjects>
+      <UseObject Dummy="detector_drumlock_1" Name="drumlock" />
+      <UseObject Dummy="detector_drumlock_2" Name="drumlock" />
+      <UseObject Dummy="detector_ropewinding" Name="ropewinding" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="LockableDrumSmall" />
+    <Component Type="LockableRopeComponent" Subtype="LockableDrumSmall" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="LockableDrumSmall_SubpartComp" />
+    <Component Type="UseObjectsComponent" Subtype="LockableDrumSmall_UseObjComp" />
+    <Component Type="MechanicalRopeAttachmentComp"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="RopeDrumAloneSmall" />
+    <Component Type="MechanicalRopeAttachmentComp"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopeDrumAloneSmall"/>
+    <Icon>Textures\GUI\Icons\Cubes\RopeDrumAloneSmall.dds</Icon>
+    <DisplayName>DisplayName_Block_RopeDrum</DisplayName>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
+      <Item Amount="1" Type="CubeBlock" Subtype="TimberRound10" />
+      <Item Amount="6" Tag="Rope" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="RopeDrumAloneSmall" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+</Definitions>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!--Cow-->
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="Dairy_Cow" />
+      <BlockPairName>Dairy_Cow</BlockPairName>
+      <DisplayName>Dairy Cow</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
+      <Public>true</Public>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="11" y="11" z="11" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Farming\cow.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Tag="Timber" Count ="8" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Mass>10</Mass>
+      <AvailableInSurvival>false</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Dairy_Cow"/>
+    <CraftingCategories>
+      <Category>Dairy_Cow</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Dairy_Cow" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Dairy_CowInventory" />
+    <InventoryName>Dairy Cow</InventoryName>
+    <DisplayName>Dairy Cow</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Dairy_Cow" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="CraftingComponent" Subtype="Dairy_Cow" />
+    <Component Type="UseObjectsComponent" Subtype="Dairy_Cow" />
+    <Component Type="Inventory" Subtype="Dairy_CowInventory" />
+  </Definition>
+
+
+</Definitions>

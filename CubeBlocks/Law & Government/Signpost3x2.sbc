@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Signpost3x2" />
+    <DisplayName>DisplayName_Block_Signpost3x2</DisplayName>
+    <Description>Description_Block_Sign</Description>
+    <BlockPairName>Signpost3x2</BlockPairName>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\SignPost3x2.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="3" y="2" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\small\SignPost3x2.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <MountPoints>
+      <MountPoint Side="Left" StartX="0" StartY="0" EndX="0.2" EndY="1" />
+      <MountPoint Side="Right" StartX="0.8" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Front" StartX="0" StartY="0" EndX="3" EndY="2" />
+      <MountPoint Side="Top" StartX="0.0" StartY="0.8" EndX="3" EndY="1.0" />
+      <MountPoint Side="Bottom" StartX="0.0" StartY="0" EndX="3" EndY="0.2" />
+    </MountPoints>
+    <Components>
+      <Component Tag="Timber" Count="1" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Mass>28</Mass>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+    <BlockGroupName>BlockGroupName_Block_Signs</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>Signpost3x1</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+    <MaxIntegrity>40</MaxIntegrity>
+  </Definition>
+
+
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Signpost3x2_LawGovernment" />
+      <DisplayName>Law and Government: Signpost [3x2]</DisplayName>
+      <Description>Description_Block_Signs</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Signpost3x2.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>LawGovernment_Book</Category>
+      <Prerequisites>
+        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Schematic_Signpost3x2" />
+      </Results>
+	  <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Signpost3x2"/>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Signpost3x2.dds</Icon>
+    <DisplayName>DisplayName_Block_Signs</DisplayName>
+    <Description>Description_Block_Signs</Description>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Timber" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Signpost3x2" />
+    </Results>
+    <CraftingTime Seconds="2"/>
+  </Definition>
+
+
+</Definitions>

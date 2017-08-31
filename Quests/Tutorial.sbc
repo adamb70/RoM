@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- 
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_01</SubtypeId>
+    </Id>
+	<DisplayName>Welcome To The Realm of Mistvalin!</DisplayName>
+	<Description>You arrive in a Starter Town. You cant stay here forever, though you're always welcomed to visit or stay in the inn.
+
+You feel hungry and a bit thirsty, look in the nearby forests for some mushrooms and berries. Luckily, berries will quinch that thirst. 
+
+Additionally, you may find "Pristine Items", which are perfect for learning professions. Make sure you "consume" the knowledge of each type of pristine item. They're highly valued so collect as many as possible!
+
+You'll want to also grab some materials to build your tools. Find some small stones and wooden sticks, then you'll be ready to leave Munik and survive the wilderness.
+
+((And dont forget to vote the server! 
+Link on RoM's Public Steam Group Page))
+!! DO NOT PRESS "K" IT CRASHES GAME !! QUEST MENU IS BUGGED AND WONT WORK !!
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_02">
+			<Condition xsi:type="QuestConditionItem" Text="DisplayName_WoodenSticks" Type="item_received">
+				<ItemId Type="InventoryItem" Subtype="WoodenSticks" />
+				<Amount>3</Amount>
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="DisplayName_Block_StoneSmall" Type="item_received">
+				<ItemId Type="InventoryItem" Subtype="StoneOreSmall" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Red Berries" Type="item_received">
+				<ItemId Type="MyObjectBuilder_ConsumableItem" Subtype="Berries" />
+				<Amount>12</Amount>
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_02</SubtypeId>
+    </Id>
+	<DisplayName>Mastering The Elements (Part 1)</DisplayName>
+	<Description>It's important to have the tools needed for the right jobs, craft a Stone Axe.
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_03">
+			<Condition xsi:type="QuestConditionItem" Text="DisplayName_StoneAxe" Type="item_crafted">
+				<ItemId Type="MyObjectBuilder_PhysicalGunObject" Subtype="StoneAxe" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_03</SubtypeId>
+    </Id>
+	<DisplayName>Mastering The Elements (Part 2)</DisplayName>
+	<Description>Now that you have an axe, cut some trees down, and collect some logs.
+
+Then find a rocky location and use the Stone Axe to mine some Large Stones.
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="HumbleBeginnings_04">
+			<Condition xsi:type="QuestConditionItem" Text="DisplayName_Block_Log" Type="item_received">
+				<ItemId Type="InventoryItem" Subtype="Log250cm" />
+				<Amount>14</Amount>
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="DisplayName_WoodenSticks" Type="item_received">
+				<ItemId Type="InventoryItem" Subtype="WoodenSticks" />
+				<Amount>8</Amount>
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="DisplayName_Item_LargeStone" Type="item_received">
+				<ItemId Type="InventoryItem" Subtype="LargeStone" />
+				<Amount>20</Amount>
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+Quest Requirements:</Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>HumbleBeginnings_04</SubtypeId>
+    </Id>
+	<DisplayName>Choosing A Profession (Part 1)</DisplayName>
+	<Description>Go ahead and craft all of the tables and books required for all  professions. 
+
+You'll need to build a Carpenter's Table first then build a Scribe's Table to craft unwritten books.
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="HumbleBeginnings_05">
+			<Condition xsi:type="QuestConditionItem" Text="[Tables]" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Table" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Scribe_Table" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Table" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Herbalist_Table" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Table" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Carpentry Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Cooking Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Scribe Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Scribe_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Apothocary Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Herbalist Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Herbalist_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Masonry Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Machinesmith Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="[Books]" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Carpentry_Book" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Blacksmithing_Book" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Tailor_Book" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Book" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Farming_Book" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Book" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Book" />
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Carpentry Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Carpentry_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Blacksmithing Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Blacksmithing_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Tailor Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Tailor_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Cooking Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Farming Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Farming_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Apothocary Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Masonry Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Machinesmith Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Book" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_05</SubtypeId>
+    </Id>
+	<DisplayName>Choosing A Profession (Part 2)</DisplayName>
+	<Description>Now, place these tables down. They are used for crafting many different blocks associated with their respective Profession.
+
+Place the books ontop of their respective table. It's recommended to only take up  one or two professions.
+
+Have a friend do  the other profession. The books in the  begining are independant and dont require  the assistance of other professions.
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_06">
+			<Condition xsi:type="QuestConditionItem" Text="Carpentry Table" Type="block_placed">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_06</SubtypeId>
+    </Id>
+	<DisplayName>Leaving Munik</DisplayName>
+	<Description>It's time to say farewell to the Starter Town, and hello to a whole new world. So pack up your things, and move on.
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_07">
+			<Condition xsi:type="QuestConditionItem" Text="Carpentry Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Cooking Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Scribe Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Scribe_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Apothocary Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Herbalist Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Herbalist_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Masonry Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Machinesmith Table" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Carpentry Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Carpentry_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Blacksmithing Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Blacksmithing_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Tailor Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Tailor_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Cooking Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Farming Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Farming_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Apothocary Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Masonry Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Machinesmith Book" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Book" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_07</SubtypeId>
+    </Id>
+	<DisplayName>Finding A Home</DisplayName>
+	<Description>The Realm of Mistvalin is a large world, with diverse regions. You can use the roads to travel to these distant regions.
+
+The Realm is divided into five regions: The Norden Plains, The Kharidian Steppes, The Dwarven Highlands, The Dwarven Hills, and The Elven Grove.
+
+Each region has unique plants, animals, and recources. So you'll have to discover what's their before you start making a home. Luckily, you have your books to record your findings.
+
+When you find an area, lets stake a claim to tell the world this is your home. ((Their are anti-grief mechanics, so anything with items cannot be looted or picked up.))
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_08">
+			<Condition xsi:type="QuestConditionItem" Text="DisplayName_Block_ClaimBlock" Type="block_placed">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="ClaimBlock" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_08</SubtypeId>
+    </Id>
+	<DisplayName>Learning The Essentials (Part 1)</DisplayName>
+	<Description>You'll want to place those tables and books down inside your claim. Then go into a nearby forest and look for some pristine items. We're going to research a well.
+
+((Tip: pristine items have a 1:10 ratio compared to normal items. They respawn every 4.5 hours, so dont search depleted areas!))
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_09">
+			<Condition xsi:type="QuestConditionItem" Text="Pristine Wooden Sticks" Type="item_received">
+				<ItemId Type="MyObjectBuilder_SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+				<Amount>2</Amount>
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Text="Pristine Stone Ore" Type="item_received">
+				<ItemId Type="MyObjectBuilder_SchematicItem" Subtype="Schematic_StoneOreSmall" />
+				<Amount>3</Amount>
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_09</SubtypeId>
+    </Id>
+	<DisplayName>Learning The Essentials (Part 2)</DisplayName>
+	<Description>Go to the book, and drop the pristine items inside of it. You'll then be able to research the Stone Well.
+
+Stone Wells are the best source of water, you'll never die of thirst again!
+
+Quest Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet>
+			<Condition xsi:type="QuestConditionResearch" Text="Research: Stone Well" Type="research_unlocked">
+				<ResearchName>Stone_Well_Masonry</ResearchName>
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+
+-->
+</Definitions>

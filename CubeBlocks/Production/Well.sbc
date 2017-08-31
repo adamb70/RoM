@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Stone_Well" />
+      <BlockPairName>Stone_Well</BlockPairName>
+      <DisplayName>Stone Well</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
+      <Public>true</Public>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="4" y="7" z="4" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Masonry\stone_well.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Tag="Timber" Count ="1" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Mass>10</Mass>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Stone_Well"/>
+    <CraftingCategories>
+      <Category>Stone_Well</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Stone_Well" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Stone_WellInventory" />
+    <InventoryName>Stone_WellInventory</InventoryName>
+    <DisplayName>Stone Well</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Stone_Well" />
+    <Component Type="UseObjectsComponent" Subtype="Stone_Well" ForceCreate="true"/>
+    <Component Type="Inventory" Subtype="Stone_WellInventory" ForceCreate="true"/>
+    <Component Type="InventorySpawnComponent"/>
+    <Component Type="CraftingComponent" Subtype="Stone_Well" ForceCreate="true"/>
+  </Definition>
+</Definitions>

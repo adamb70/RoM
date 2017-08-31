@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EntityContainers>
+		<Container>
+			<Id>
+				<TypeId>MyObjectBuilder_Character</TypeId>
+				<SubtypeId>Bavar_Guard_male</SubtypeId>
+			</Id>
+			<DefaultComponents>
+				<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Bavar_Guard" ForceCreate="true"/>
+				<Component BuilderType="MyObjectBuilder_CharacterSoundComponent" SubtypeId="Bavar_Guard" ForceCreate="true"/>
+				<Component BuilderType="MyObjectBuilder_MedievalCharacterUseComponent" SubtypeId="CharacterUse" ForceCreate="true"/>
+			</DefaultComponents>
+		</Container>
+	</EntityContainers>
+</Definitions>

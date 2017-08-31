@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Animations>
+    <!-- Idle-->  
+    <Animation>
+      <Id>
+        <TypeId>AnimationDefinition</TypeId>
+        <SubtypeId>New_IdleWolf1</SubtypeId>
+      </Id>
+      <DisplayName>Idle</DisplayName>
+      <Description>Idle</Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <AnimationModel>Models\Characters\Wildlife\Wolf\Wolf_idle_02.mwm</AnimationModel>
+      <ClipIndex>0</ClipIndex>
+      <InfluenceArea>Body</InfluenceArea>
+      <Public>false</Public>
+      <SupportedSkeletons>Tetrapod_simple</SupportedSkeletons>
+    </Animation>
+
+    <!-- IdleEnd-->
+	
+
+
+
+
+    <!-- Run -->  
+    <Animation>
+      <Id>
+        <TypeId>AnimationDefinition</TypeId>
+        <SubtypeId>New_RunWolf</SubtypeId>
+      </Id>
+      <DisplayName>Run</DisplayName>
+      <Description>Run</Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <AnimationModel>Models\Characters\Animations\Creatures\Wolf\Wolf_run.mwm</AnimationModel>
+      <ClipIndex>0</ClipIndex>
+      <InfluenceArea>Body</InfluenceArea>
+      <Public>false</Public>
+      <SupportedSkeletons>Tetrapod_simple</SupportedSkeletons>
+    </Animation>
+    <!-- RunEnd -->
+	
+    <!-- Walk -->  
+    <Animation>
+      <Id>
+        <TypeId>AnimationDefinition</TypeId>
+        <SubtypeId>New_WalkWolf</SubtypeId>
+      </Id>
+      <DisplayName>Walk</DisplayName>
+      <Description>Walk</Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <AnimationModel>Models\Characters\Animations\Creatures\Wolf\Wolf_walk.mwm</AnimationModel>
+      <ClipIndex>0</ClipIndex>
+      <InfluenceArea>Body</InfluenceArea>
+      <Public>false</Public>
+      <SupportedSkeletons>Tetrapod_simple</SupportedSkeletons>
+    </Animation>
+    <!-- WalkEnd -->
+
+    <!-- Attack -->
+    <Animation>
+      <Id>
+        <TypeId>AnimationDefinition</TypeId>
+        <SubtypeId>New_AttackWolf</SubtypeId>
+      </Id>
+      <DisplayName>Attack</DisplayName>
+      <Description>Attack</Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <AnimationModel>Models\Characters\Animations\Creatures\Wolf\Wolf_Attack.mwm</AnimationModel>
+      <ClipIndex>0</ClipIndex>
+      <InfluenceArea>Body</InfluenceArea>
+      <Public>false</Public>
+      <SupportedSkeletons>Tetrapod_simple</SupportedSkeletons>
+    </Animation>
+    <!-- AttackEnd -->
+    
+    <!-- Died -->
+    <Animation>
+      <Id>
+        <TypeId>AnimationDefinition</TypeId>
+        <SubtypeId>New_DiedWolf</SubtypeId>
+      </Id>
+      <DisplayName>Died</DisplayName>
+      <Description>Died</Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <AnimationModel>Models\Characters\Animations\Creatures\Wolf\Wolf_Death.mwm</AnimationModel>
+      <ClipIndex>0</ClipIndex>
+      <InfluenceArea>Body</InfluenceArea>
+      <Public>false</Public>
+      <SupportedSkeletons>Tetrapod_simple</SupportedSkeletons>
+    </Animation>
+	<!-- DiedEnd -->
+  </Animations>
+</Definitions>

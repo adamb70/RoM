@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<AIBehaviors>
+		<AIBehavior xsi:type="MyObjectBuilder_BehaviorTreeDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_BehaviorTreeDefinition</TypeId>
+				<SubtypeId>DeerBehavior</SubtypeId>
+			</Id>
+			<FirstNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+				<BTNodes>
+					<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+						<BTNodes>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+								<BTNodes>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+										<ActionName>AmIBeingFollowed</ActionName>
+										<Parameters>
+											<Parameter xsi:type="MemType" MemName="Enemy" />
+										</Parameters>
+									</BTNode>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+										<BTNodes>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+												<ActionName>IsHumanInArea</ActionName>
+												<Parameters>
+													<Parameter xsi:type="IntType" IntValue="12" />
+													<Parameter xsi:type="IntType" IntValue="6" />
+													<Parameter xsi:type="MemType" MemName="Enemy" />
+												</Parameters>
+											</BTNode>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+												<ActionName>IdleDanger</ActionName>
+											</BTNode>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeDecoratorNode">
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>IsHumanInArea</ActionName>
+													<Parameters>
+														<Parameter xsi:type="IntType" IntValue="12" />
+														<Parameter xsi:type="IntType" IntValue="6" />
+														<Parameter xsi:type="MemType" MemName="Enemy" />
+													</Parameters>
+												</BTNode>
+												<DecoratorLogic xsi:type="TimerLogic">
+													<TimeInMs>1000</TimeInMs>
+												</DecoratorLogic>
+												<DefaultReturnValue>RUNNING</DefaultReturnValue>
+											</BTNode>
+										</BTNodes>
+										<Name>AlertState</Name>
+										<IsMemorable>true</IsMemorable>
+									</BTNode>
+								</BTNodes>
+								<Name>Selector</Name>
+								<IsMemorable>true</IsMemorable>
+							</BTNode>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+								<ActionName>SwitchToRun</ActionName>
+							</BTNode>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+								<BTNodes>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+										<BTNodes>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+												<ActionName>FindRandomSafeLocation</ActionName>
+												<Parameters>
+													<Parameter xsi:type="MemType" MemName="Enemy" />
+													<Parameter xsi:type="MemType" MemName="SafeLocation" />
+												</Parameters>
+											</BTNode>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+												<ActionName>SetTarget</ActionName>
+												<Parameters>
+													<Parameter xsi:type="MemType" MemName="SafeLocation" />
+												</Parameters>
+											</BTNode>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+												<BTNodes>
+													<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+														<ActionName>IsAtTargetPosition</ActionName>
+														<Parameters>
+															<Parameter xsi:type="FloatType" FloatValue="5" />
+														</Parameters>
+													</BTNode>
+													<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+														<BTNodes>
+															<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																<ActionName>RunAway</ActionName>
+															</BTNode>
+															<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																<ActionName>PlaySound</ActionName>
+																<Parameters>
+																	<Parameter xsi:type="StringType" StringValue="BotDeerBark" />
+																</Parameters>
+															</BTNode>
+														</BTNodes>
+														<Name>Selector</Name>
+													</BTNode>
+												</BTNodes>
+												<Name>Selector</Name>
+											</BTNode>
+										</BTNodes>
+										<Name>Sequence</Name>
+										<IsMemorable>true</IsMemorable>
+									</BTNode>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+										<ActionName>IsHumanInArea</ActionName>
+										<Parameters>
+											<Parameter xsi:type="IntType" IntValue="16" />
+											<Parameter xsi:type="IntType" IntValue="8" />
+											<Parameter xsi:type="MemType" MemName="Enemy" />
+										</Parameters>
+									</BTNode>
+								</BTNodes>
+								<Name>Sequence</Name>
+							</BTNode>
+						</BTNodes>
+						<Name>RunAway</Name>
+						<IsMemorable>true</IsMemorable>
+					</BTNode>
+					<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+						<BTNodes>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+								<ActionName>SwitchToWalk</ActionName>
+							</BTNode>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+								<ActionName>GotoRandomLocation</ActionName>
+							</BTNode>
+						</BTNodes>
+						<Name>Wander</Name>
+						<IsMemorable>true</IsMemorable>
+					</BTNode>
+					<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+						<ActionName>Idle</ActionName>
+					</BTNode>
+				</BTNodes>
+				<Name>MainSelector</Name>
+			</FirstNode>
+			<Behavior>Animal</Behavior>
+		</AIBehavior>
+	</AIBehaviors>
+</Definitions>

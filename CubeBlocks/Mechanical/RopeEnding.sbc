@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="RopeEndingSmall" />
+    <DisplayName>DisplayName_Block_RopeEnding</DisplayName>
+    <BlockPairName>RopeEnding</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\RopeEndingSmall.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\RopeEnding.mwm</Model>
+    <Components>
+      <Component Tag="IngotIron" Count="1" >
+        <DeconstructId>
+          <TypeId>Component</TypeId>
+          <SubtypeId>MetalParts</SubtypeId>
+        </DeconstructId>
+      </Component>
+    </Components>
+    <CriticalComponent Tag="IngotIron" Index="0" />
+    <MaxIntegrity>100</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <BlockGroupName>BlockGroupName_RopeEnds</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>MyObjectBuilder_CubeBlock</TypeId>
+        <SubtypeId>RopeReleaseSmall</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Mass>5</Mass>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="RopeEndingSmall" />
+    <Component Type="MechanicalRopeAttachmentComp"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopeEndingSmall"/>
+    <Icon>Textures\GUI\Icons\Cubes\RopeEndingSmall.dds</Icon>
+    <DisplayName>DisplayName_Block_RopeEnding</DisplayName>
+    <Category>MetalWorks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="5" Type="CubeBlock" Subtype="RopeEndingSmall" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+</Definitions>

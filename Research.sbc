@@ -1,0 +1,1573 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ 
+
+
+<!-- extra --> 
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="GourmetCooking" />
+    <DisplayName>DisplayName_Research_GourmetCooking</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="Goulash" />
+	<Entry Type="CraftingRecipeDefinition" Subtype="Bread" />
+  </Definition>
+
+
+
+    <!-- ************************************************************
+                        Kharidian Ancestry Knowledge
+       ************************************************************ -->
+
+
+ <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Kharidian_Ancestry" />
+    <DisplayName>Nomadic knowledge that has been passed down to each generation inorder to survive the harsh Kharidian Desert.</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Kharidian_GlassBlowing" />
+    <DisplayName>Nomadic knowledge that has been passed down to each generation inorder to survive the harsh Kharidian Desert.</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Kharidian_Metalwork" />
+    <DisplayName>Nomadic knowledge that has been passed down to each generation inorder to survive the harsh Kharidian Desert.</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+
+    <!-- ************************************************************
+                        Norden Ancestry Knowledge
+       ************************************************************ -->
+
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Ancestry" />
+    <DisplayName>Norden knowledge that has been passed down to each generation inorder to cultivate the Norden Plains.</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Brewing" />
+    <DisplayName>Norden knowledge that has been passed down to each generation inorder to cultivate the Norden Plains.</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Leathermaking" />
+    <DisplayName>Norden knowledge that has been passed down to each generation inorder to cultivate the Norden Plains.</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Metalwork" />
+    <DisplayName>Norden knowledge that has been passed down to each generation inorder to cultivate the Norden Plains.</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+    <!-- ************************************************************
+                        Dwarven Ancestry Knowledge
+       ************************************************************ -->
+
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Dwarven_Ancestry" />
+    <DisplayName>Dwarven knowledge that has been passed down to each generation inorder to excavate the Dun'Mordun Mountains.</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Dwarven_Brewing" />
+    <DisplayName>Dwarven knowledge that has been passed down to each generation inorder to excavate the Dun'Mordun Mountains.</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Dwarven_Steelwork" />
+    <DisplayName>Dwarven knowledge that has been passed down to each generation inorder to excavate the Dun'Mordun Mountains.</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Dwarven_Metalwork" />
+    <DisplayName>Dwarven knowledge that has been passed down to each generation inorder to excavate the Dun'Mordun Mountains.</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+
+
+
+    <!-- ************************************************************
+                        Universal Knowledge
+       ************************************************************ -->
+
+
+    <!-- Blacksmithing -->
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="IronWorks" />
+    <DisplayName>DisplayName_Research_IronWorks</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_Hardening" />
+	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_Mechanics" />
+  </Definition>
+  
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Hardening" />
+    <DisplayName>DisplayName_Research_Hardening</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="CrossbowQuiver" />
+	<Entry Type="CraftingRecipeDefinition" Subtype="Crossbow" />
+	<Entry Type="CraftingRecipeDefinition" Subtype="CrossbowQuiverSmelting" />
+	<Entry Type="CraftingRecipeDefinition" Subtype="CrossbowSmelting" />
+  </Definition>
+  
+						<!-- Stone Work -->
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneWorks" />
+    <DisplayName>DisplayName_Research_StoneWorks</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_Masonry" />
+	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_DefensiveStoneWorks" />
+	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_IronWorks" />
+	<Entry Type="CubeBlock" Subtype="StonePillarSquare" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneStairsCorner" />
+	<Entry Type="CubeBlock" Subtype="HouseHalfStoneTriangleMir" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneRoundedWall" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneRoundedWindow" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneRoundedDoorOfset" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneRoundedDoorOfsetRight" />
+	<Entry Type="CubeBlock" Subtype="StoneWallDoorCenterMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneArchHalfWallMir" />
+	<Entry Type="CubeBlock" Subtype="HouseHalfStoneTriangleMir" />
+	<Entry Type="CubeBlock" Subtype="HouseHalfStoneTriangleOdd" />
+	<Entry Type="CubeBlock" Subtype="CatapultProjectileM" />
+	<Entry Type="CubeBlock" Subtype="CatapultProjectile" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneStairsSimple" />
+  </Definition>
+				
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="Masonry" />
+	<DisplayName>DisplayName_Research_Mansonry</DisplayName>
+	<Entry Type="CubeBlock" Subtype="StoneSlopeCorner" />
+	<Entry Type="CubeBlock" Subtype="StoneSlopeCornerRound" />
+	<Entry Type="CubeBlock" Subtype="StoneBlockSlopeCornerStraight" />
+	<Entry Type="CubeBlock" Subtype="StoneWallWindowCenterMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneSpiralStaircase" />
+	<Entry Type="CubeBlock" Subtype="StoneSpiralStaircaseMir" />
+	<Entry Type="CubeBlock" Subtype="StoneSpiralStaircaseSharp" />
+	<Entry Type="CubeBlock" Subtype="StoneSpiralStaircaseSharpMir" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneRoundedWall" />
+	<Entry Type="CubeBlock" Subtype="SlicedRoofTileSlope_Main" />
+	<Entry Type="CubeBlock" Subtype="SlicedRoofTileCornerSharpIn_Main" />
+	<Entry Type="CubeBlock" Subtype="SlicedRoofTileCornerSharp_Main" />
+	<Entry Type="CubeBlock" Subtype="RoofTileCornerRoundMain" />
+	<Entry Type="CubeBlock" Subtype="RoofTileLargeRound_Main" />
+	    <!--Multiblocks-->
+	<Entry Type="CubeBlock" Subtype="StoneWallRoundLargeWindowLeftMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneWallRoundLargeWindowBothMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeDoorLeftMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeDoorBothMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="RoofTileOddTopWithTop" />
+	<Entry Type="CubeBlock" Subtype="RoofTileOddCut" />
+	<Entry Type="CubeBlock" Subtype="RoofTileOddEnd" />
+	<Entry Type="CubeBlock" Subtype="RoofTileOddTurn" />
+	<Entry Type="CubeBlock" Subtype="RoofTileOddT" />
+	<Entry Type="CubeBlock" Subtype="RoofTileOddCross" />
+	<Entry Type="CubeBlock" Subtype="RoofTileCornerRound5TallMultiBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="DefensiveStoneWorks" />
+    <DisplayName>DisplayName_Research_DefensiveStoneworks</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_Battlements" />
+	<Entry Type="CubeBlock" Subtype="StoneCube" />
+	<Entry Type="CubeBlock" Subtype="StoneSlope" />
+	<Entry Type="CubeBlock" Subtype="StoneBlockSlopeDiagonal" />
+	<Entry Type="CubeBlock" Subtype="StoneSlopeBattlementRightMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneSlopeBattlementLeftMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneSlopeBattlementBothMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneRoundedFull" />
+	<Entry Type="CubeBlock" Subtype="StoneRoundLargeFull" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneRoundIn" />
+	<Entry Type="CubeBlock" Subtype="HouseStoneRoundInDoorLeft" />
+	<Entry Type="CubeBlock" Subtype="StoneCeilingStraight" />
+	<Entry Type="CubeBlock" Subtype="SlopeLongLargeMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneArchFullWall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Battlements" />
+    <DisplayName>DisplayName_Research_Battlements</DisplayName>
+	<Entry Type="CubeBlock" Subtype="StonePlatformRoundLargeMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementRoundLargeAdvancedWithPlatform" />
+	<Entry Type="CubeBlock" Subtype="StonePlatformRoundAdvanced" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementRoundMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StonePlatformDiagonalMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementCenterDiagonalWithPlatform" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementAdvancedStraightBottom" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementAdvancedStraightMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementAdvancedCornerBottom" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementAdvancedCornerOutMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StonePlatformInvCorner" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementAdvancedCornerInMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementRoundLargeSide_1" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementRoundSmall" />
+	<Entry Type="CubeBlock" Subtype="StoneBattlementSideDiagonal" />
+	<Entry Type="CubeBlock" Subtype="BattlementStoneStraight" />
+	<Entry Type="CubeBlock" Subtype="BattlementStoneCorner" />
+	<Entry Type="CubeBlock" Subtype="BattlementRoofTriangleMultiBlock" />
+	<Entry Type="CubeBlock" Subtype="BattlementRoofTriangleMirMultiBlock" />
+  </Definition>
+  <!-- ========================================================================= -->
+
+
+
+
+
+    						<!-- Woodcrafting -->
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+   <!-- <Entry or Id Type="" Subtype="" /> Use this to add new entries to this and other mod sections -->
+    Id Type="ResearchDefinition" Subtype="Carpentry" />
+    <DisplayName>DisplayName_Research_Carpentry</DisplayName>
+	<Entry Type="CraftingRecipeDefinition" Subtype="WindMillBlade" />
+	<Entry Type="CubeBlock" Subtype="WoodenFloorRoundLarge_MultiBlock" />
+	<Entry Type="CubeBlock" Subtype="SlicedRoofTileSlopeWood_Main" />
+	<Entry Type="CubeBlock" Subtype="SlicedRoofTileCornerSharpInWood_Main" />
+	<Entry Type="CubeBlock" Subtype="SlicedRoofTileCornerSharpWood_Main" />
+	<Entry Type="CubeBlock" Subtype="RoofTileOddTopWoodWithTop" />
+  </Definition>
+<!-- ========================================================================= -->
+
+   						 <!-- Machinesmith -->
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Mechanics" />
+    <DisplayName>DisplayName_Research_Mechanics</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Schematic_AdvancedMechanics" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatapultHead" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RopeEndingSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TurnCrossSmall" />
+  </Definition>
+  <!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="AdvancedMechanics" />
+    <DisplayName>DisplayName_Research_AdvancedMechanics</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Weight" />
+  </Definition>
+  <!-- ========================================================================= -->
+
+
+
+  <!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="MechanizedFarmingEquipment" />
+    <DisplayName>DisplayName_Research_MechanizedFarmingEquipment</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Weaving" />
+    <DisplayName>DisplayName_Research_Weaving</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+
+
+   			 <!-- ^^^ Vanilla ^^^ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   			 <!-- Machinesmith -->
+
+
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HarvesterBlock_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="HarvesterBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="PlowBlock_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="PlowBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SeedingBlock_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedingBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodenPortcullisMultiBlock_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WoodenPortcullisMultiBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodenDrawbridge_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WoodenDrawbridge" />
+  </Definition>
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="LockGearBox2_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="LockGearBox2" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RopeDrumAloneSmall_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="RopeDrumAloneSmall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RopePowerSmall_Machinesmith" />
+    <DisplayName>Machinesmith</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="RopePowerSmall" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+
+
+
+
+
+
+
+  					  <!-- Blacksmithing Equipment -->
+
+
+    <!-- Blacksmithing Items -->
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SmithingStation_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SmithingStation" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Anvil_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SmithingStation_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Anvil" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronIngotToMetalParts" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stove_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_PickAxe_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronShovel_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Axe_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Hammer_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Plow_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Sword_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Mace_Blacksmithing" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Stove_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stove" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Iron_Nails_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Nails" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Iron_PickAxe_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Pickaxe" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="PickAxeSmelting" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="IronShovel_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronShovel" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronShovelSmelting" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Iron_Axe_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronAxe" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="AxeSmelting" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Iron_Hammer_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Hammer" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HammerSmelting" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Iron_Plow_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="PlowSmelting" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Iron_Sword_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Sword" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SwordSmelting" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Iron_Mace_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Mace" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="MaceSmelting" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="TorchStand_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="TorchWall_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchWall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="FireBucket_Blacksmithing" />
+    <DisplayName>Blacksmithing</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="FireBucket" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+    <!-- Blacksmithing Crops -->
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="IronOre_Blacksmith" />
+    <DisplayName>Blacksmithing</DisplayName>
+<!-- Blacksmith -->
+    <Entry Type="CraftingRecipeDefinition" Subtype="Anvil_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Nails_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchWall_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="FireBucket_Blacksmithing" />
+<!-- Machinesmith -->
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedingBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="PlowBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HarvesterBlock_Machinesmith" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+
+
+
+  					  <!-- Fletching Equipment -->
+
+
+
+
+    <!-- Fletching Items -->
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="CrossbowQuiver_Fletching" />
+    <DisplayName>Fletching</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowQuiver" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Crossbow_Fletching" />
+    <DisplayName>Fletching</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Crossbow" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+
+  					  <!-- Masonry Equipment -->
+
+
+    <!-- Masonry Items -->
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="MillStone_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="MillStone" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Furnace_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Furnace" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronOreToIronIngots" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Stone_Well_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Well" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HouseHalfStoneDoor_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="HouseHalfStoneDoor" />
+    <Entry Type="CubeBlock" Subtype="HouseStoneRoundedDoor" />
+    <Entry Type="CubeBlock" Subtype="HouseStoneRoundedDoorOfset" />
+    <Entry Type="CubeBlock" Subtype="HouseStoneRoundedDoorOfsetRight" />
+    <Entry Type="CubeBlock" Subtype="StoneWallDoorCenter1" />
+    <Entry Type="CubeBlock" Subtype="StoneWallDoorCenter2" />
+    <Entry Type="CubeBlock" Subtype="StoneWallDoorCenterMultiBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HouseHalfStoneWindow_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="HouseHalfStoneWindow" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneArchHalfWall_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneArchHalfWall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneWallRoundLargeMultiBlock_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeMultiBlock" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneWallRoundLargeDoorRightMultiBlock_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneWallRoundLargeWindowRightMultiBlock_Masonry" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneWallRoundLargeDoorRightMultiBlock_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeDoorRightMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeDoorLeftMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeRoundDoorLeftMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeDoorBothMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeRoundDoorBothMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeDoorOffsetRightMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeRoundDoorOffsetRightMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeRoundDoorOffsetBothMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeDoorOffsetLeftMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeRoundDoorOffsetLeftMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="StoneWallRoundLargeDoorOffsetBothMultiBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneWallRoundLargeWindowRightMultiBlock_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+	<Entry Type="CubeBlock" Subtype="StoneWallRoundLargeWindowRightMultiBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="BattlementRoofTriangleMultiBlock_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="BattlementRoofTriangleMultiBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HouseHalfStoneWall_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="HouseHalfStoneWall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HouseHalfStoneWindow_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HouseHalfStoneDoor_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneArchHalfWall_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneWallRoundLargeMultiBlock_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="BattlementStoneStraight_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SmallWoodenGateW_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneArchFull_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneCube_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="KingStatueBlock_Masonry" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="BattlementStoneStraight_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="BattlementStoneStraight" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneBattlementRoundSmall_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneBattlementSideDiagonal_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneBattlementRoundLargeSide_1_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="BattlementRoofTriangleMultiBlock_Masonry" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneBattlementRoundSmall_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneBattlementRoundSmall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneBattlementSideDiagonal_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneBattlementSideDiagonal" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneBattlementRoundLargeSide_1_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneBattlementRoundLargeSide_1" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SmallWoodenGateW_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="SmallWoodenGateW" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneArchFull_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneArchFull" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneCube_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneCube" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="KingStatueBlock_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="KingStatueBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+
+    <!-- Masonry Crops -->
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneOreSmall_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="MillStone_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Furnace_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SmithingStation_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HouseHalfStoneWall_Masonry" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Enchanted_StoneOreSmall_Masonry" />
+    <DisplayName>Enchanted Masonry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="RedCabbage_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Enchanted_Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Enchanted_StoneAxe" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+
+
+
+
+  					  <!-- Law and Government -->
+
+
+    <!-- Law and Government Items -->
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Signpost3x2_LawGovernment" />
+    <DisplayName>Law and Government</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Signpost3x2" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SignPost3x1ArrowOffset_LawGovernment" />
+    <DisplayName>Law and Government</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SignPost3x1ArrowOffset" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="ClaimBlockWood_LawGovernment" />
+    <DisplayName>Law and Government</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="ClaimBlock_LawGovernment" />
+    <Entry Type="CubeBlock" Subtype="ClaimBlockWood" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="ClaimBlock_LawGovernment" />
+    <DisplayName>Law and Government</DisplayName>
+    <Entry Type="CubeBlock" Subtype="ClaimBlock" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+
+
+
+  					  <!-- Carpenter Equipment -->
+
+
+    <!-- Carpenter Items -->
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Empty_Bucket_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Empty_Bucket" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Compost_Bin_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bin" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WheelMediumSmall_Nails_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Nails" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SpinningWheel_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SpinningWheel" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="BannerWorkstation_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="BannerWorkstation" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Wardrobe_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wardrobe" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodChair_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodChair" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodBarrel_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodBarrel" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodChestLarge_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodChestLarge" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodenGate_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WoodenGate" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="PalisadeGate_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="MyObjectBuilder_CubeBlock" Subtype="PalisadeGate" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodenFlatDoorW_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WoodenFlatDoorW" />
+  </Definition>
+========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Blueberry_Kegstand_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blueberry_Kegstand" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Ale_Kegstand_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Juice_Kegstand_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Juice_Kegstand" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Grape_Kegstand_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Grape_Kegstand" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodenShelf_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenShelf" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodenDiningTable_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenDiningTable" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WeaponRack_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WeaponRack" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Bookshelf_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bookshelf" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bookshelf_Profession" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileLog_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StockpileLog" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileTimber_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StockpileTimber" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileStone_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StockpileStone" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+    <!-- Carpenter Crops -->
+
+
+<!-- ======================================= Norden Pristine ================================== -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="TreeSmall_WoodenSticks_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bin_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Nails_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SpinningWheel_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="BannerWorkstation_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wardrobe_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodChair_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="PalisadeGate_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenGate_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenPortcullisMultiBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenDrawbridge_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="LogToTimberRound10" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blueberry_Kegstand_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Grape_Kegstand_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Juice_Kegstand_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="LockGearBox2_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RopeDrumAloneSmall_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RopePowerSmall_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodBarrel_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodChestLarge_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowQuiver_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Crossbow_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="ClaimBlockWood_LawGovernment" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="NordicChair_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="NorseBed_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="NordicThrone_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLog_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimber_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStone_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bookshelf_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WeaponRack_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenDiningTable_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenShelf_Carpenter" />
+
+  </Definition>
+
+
+<!-- ===================================  Norden Expansion  ====================================== -->
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="NordicChair_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="NordicChair" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="NorseBed_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="NorseBed" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="NordicThrone_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="NordicThrone" />
+  </Definition>
+
+<!-- ===================================== Elven Pristine ==================================== -->
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Enchanted_TreeSmall_WoodenSticks_Carpenter" />
+    <DisplayName>Enchanted Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Enchanted_Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Enchanted_StoneAxe" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElvenChair_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElfTable_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElvenBed_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElvenThrone_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElvenWindow_Carpenter" />
+  </Definition>
+
+
+<!-- ===================================  Elven Expansion  ====================================== -->
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="ElvenChair_Carpenter" />
+    <DisplayName>Enchanted Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElvenChair" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="ElfTable_Carpenter" />
+    <DisplayName>Enchanted Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElfTable" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="ElvenBed_Carpenter" />
+    <DisplayName>Enchanted Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElvenBed" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="ElvenThrone_Carpenter" />
+    <DisplayName>Enchanted Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElvenThrone" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="ElvenWindow_Carpenter" />
+    <DisplayName>Enchanted Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="ElvenWindow" />
+  </Definition>
+
+<!-- ===================================== Kharidian Pristine ==================================== -->
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SandStoneOreSmall_Masonry" />
+    <DisplayName>Sandstone Masonry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SandStoneWall_Masonry" />
+  </Definition>
+
+<!-- ====================================  Kharidian Expansion  ===================================== -->
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SandStoneWall_Masonry" />
+    <DisplayName>Sandstone Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="BrickWall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SandStoneDoorWay_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SandStoneWallWindow_Masonry" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SandStoneDoorWay_Masonry" />
+    <DisplayName>Sandstone Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="BrickDoorWay" />
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SandStoneWallWindow_Masonry" />
+    <DisplayName>Sandstone Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="BrickWallWindow" />
+  </Definition>
+
+
+
+
+  					  <!-- Farming Equipment -->
+
+
+
+
+
+
+
+
+    <!-- Farming Crops -->
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Herbs_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagHerbs" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagHerbs" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagHerbs_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Herbs_Compost_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Pumpkin_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagPumpkin" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagPumpkin" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagPumpkin_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Pumpkin_Compost_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Cabbage_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagCabbage" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagCabbage" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagCabbage_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Cabbage_Compost_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Cabbage_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RedCabbage_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagRedCabbage" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagRedCabbage" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagRedCabbage_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RedCabbage_Compost_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RedCabbage_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Flax_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagFlax" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagFlax" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagFlax_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Flax_Compost_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Flax_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Wheat_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagWheat" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagWheat" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagWheat_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wheat_Compost_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wheat_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="TreeSmall_Seed_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagTreeSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagTreeSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagTreeSmall_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TreeSmall_Compost_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TreeSmall_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Spalt_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagNorden_Spalt" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagNorden_Spalt" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagNorden_Spalt_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Spalt_Farming_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Spalt_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Barley_Farming" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagNorden_Barley" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagNorden_Barley" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagNorden_Barley_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Plow" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bucket" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Barley_Farming_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Barley_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+    <!-- Farming Compost Crops -->
+
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Herbs_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagHerbs_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagHerbs_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Pumpkin_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagPumpkin_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagPumpkin_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Cabbage_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagCabbage_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagCabbage_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RedCabbage_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagRedCabbage_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagRedCabbage_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Flax_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagFlax_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagFlax_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Wheat_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagWheat_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagWheat_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="TreeSmall_Seed_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagTreeSmall_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagTreeSmall_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Spalt_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagNorden_Spalt_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagNorden_Spalt_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Barley_Farming_Compost" />
+    <DisplayName>Farming</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedBagNorden_Barley_Compost" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Single_SeedBagNorden_Barley_Compost" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+
+
+
+    <!-- Tailor -->
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="LinenString_Tailor" />
+    <DisplayName>Tailor</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="LinenString" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Rope_Tailor" />
+    <DisplayName>Tailor</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Rope" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Flag10x10_Tailor" />
+    <DisplayName>Tailor</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Flag10x10" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="FlagRed10x10_Tailor" />
+    <DisplayName>Tailor</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="FlagRed10x10" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+   				 <!-- Herblore -->
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Flax_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Flax_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="LinenString_Tailor" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Rope_Tailor" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Flag10x10_Tailor" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="FlagRed10x10_Tailor" />
+  </Definition>
+
+
+
+
+    				<!-- Apothecary -->
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SpiderEggs_Apothecary" />
+    <DisplayName>Apothocary</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Bone_Apothocary" />
+    <DisplayName>Apothocary</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Bandage_Apothocary" />
+    <DisplayName>Apothocary</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bandage" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Minor_Strength_Potion_Apothocary" />
+    <DisplayName>Apothocary</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Minor_Strength_Potion" />
+  </Definition>
+<!-- ========================================================================= -->
+				<!-- Cooking -->
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Dough_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bread_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RedBerryPie_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Bread_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bread" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RedBerryPie_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="RedBerryPie" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RedBerries_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Berry_Juice_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Berry_Juice_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Berry_Juice" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Grape_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Grape_Juice_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Grape_Juice_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Grape_Juice" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Blue_Berry_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blue_Berry_Juice_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Blue_Berry_Juice_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blue_Berry_Juice" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Pumpkin_Cooking" />
+    <DisplayName>Norden Cooking</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SpiderLeg_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Salad_Cooking" />
+    <DisplayName>Norden Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Salad" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Goulash_Cooking" />
+    <DisplayName>Norden Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Goulash" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Herbs_Cooking" />
+    <DisplayName>Cooking</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="MushroomSoup_Cooking" />
+    <DisplayName>Norden Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="MushroomSoup" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HighlandCapsSoup_Cooking" />
+    <DisplayName>Dwarven Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="HighlandCapsSoup" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RootsWithShrooms_Cooking" />
+    <DisplayName>Norden Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="RootsWithShrooms" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="ShroomSteak_Cooking" />
+    <DisplayName>Norden Cooking</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="ShroomSteak" />
+  </Definition>
+<!-- ========================================================================= -->			
+				<!-- Herblore -->
+
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Wheat_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheatFlourSack" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Dough_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wheat_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="TreeSmall_Seed_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TreeSmall_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RedBerries_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Goulash_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Salad_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Berry_Juice_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Grape_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Grape_Juice_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Blue_Berry_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blue_Berry_Juice_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Roots_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="RootsWithShrooms_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Meat_Herblore" />
+    <DisplayName>Hunting</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="RoastMeat_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Goulash_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="ShroomSteak_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Pumpkin_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Salad_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Pumpkin_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CarvedPumpkin" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SpiderLeg_Cooking" />
+    <DisplayName>Spider Legs</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Cabbage_Herblore" />
+    <DisplayName>Cabbage</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Goulash_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Salad_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Cabbage_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="RedCabbage_Herblore" />
+    <DisplayName>Red Cabbage</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Goulash_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Salad_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RedCabbage_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Herbs_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Herbs_Farming" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RootsWithShrooms_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RoastMeat_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bandage_Apothocary" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Mushroom_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="ShroomSteak_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RootsWithShrooms_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="MushroomSoup_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HighlandCaps_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="HighlandCapsSoup_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="CrimsonThristle_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="DeadmanMushroom_Herblore" />
+    <DisplayName>Herblore</DisplayName>
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Spalt_Herblore" />
+    <DisplayName>Norden Spalt</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Spalt_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Roots_Herblore" />
+    <DisplayName>Norden Roots</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Minor_Strength_Potion_Apothocary" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Barley_Herblore" />
+    <DisplayName>Norden Barley</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Barley_Farming" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Norden_Barley_Roots_Herblore" />
+    <DisplayName>Norden Roots</DisplayName>
+  </Definition>
+
+</Definitions>

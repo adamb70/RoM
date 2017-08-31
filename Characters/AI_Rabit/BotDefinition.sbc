@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Bots>
+		<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+				<SubtypeId>NormalRabbit</SubtypeId>
+			</Id>
+			<DisplayName>Rabbit</DisplayName>
+			<Icon>Textures\GUI\Icons\SpawnDeer.dds</Icon>
+			<BotModel>Medieval_rabbit</BotModel>
+			<BotBehaviorTree Subtype="RabbitBehavior" />
+			<BehaviorType>Animal</BehaviorType>
+			<TargetType>MedievalTarget</TargetType>
+			<Public>true</Public>
+			<AvailableInSurvival>false</AvailableInSurvival>
+			<InventoryContentGenerated>true</InventoryContentGenerated>
+			<InventoryContainerTypeId>
+				<TypeId>ContainerTypeDefinition</TypeId>
+				<SubtypeId>RabbitBagContent</SubtypeId>
+			</InventoryContainerTypeId>
+		</Bot>
+	</Bots>
+</Definitions>
