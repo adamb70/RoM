@@ -3091,4 +3091,217 @@
     <Mirrored>true</Mirrored>
   </Definition>
   
+<!-- Stone Stair Corners -->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="HouseStoneStairsCorner" />
+    <DisplayName>DisplayName_Block_StoneBlockStairsCorner</DisplayName>
+    <BlockPairName>StoneBlockStairsCorner</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\AngledStairsSlopeCorner.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\HouseStoneStairsCorner.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseStoneStairsCorner_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseStoneStairsCorner_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Back" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.15" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.25" EndY="1" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.15" />
+      <MountPoint Side="Top" StartX="0.85" StartY="0" EndX="1" EndY="0.15" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <BuildType>Staircase</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>8000</MaxIntegrity>
+    <BlockGroupName>BlockGroupName_StairsSlopeCorners</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>StoneStairsCornerStraight</SubtypeId>
+      </BlockVariant>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>StoneStairsCornerRound</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+    <UseModelIntersection>true</UseModelIntersection>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneStairsCornerStraight" />
+    <DisplayName>DisplayName_Block_StoneBlockStairsCornerStraight</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\DiagonalStairsSlopeCorner.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneStairsCornerStraight.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneStairsCornerStraight_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneStairsCornerStraight_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Back" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.25" EndY="1" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Bottom" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0.75" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0.25" StartY="0.5" EndX="0.75" EndY="1" />
+      <MountPoint Side="Top" StartX="0.85" StartY="0" EndX="1" EndY="0.15" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <BuildType>Staircase</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>8000</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneStairsCornerRound" />
+    <DisplayName>DisplayName_Block_StoneBlockStairsCornerRound</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\StoneBlockStairsCorner.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneStairsCornerRound.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneStairsCornerRound_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneStairsCornerRound_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Back" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.25" EndY="1" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Bottom" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0.75" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0.25" StartY="0.5" EndX="0.75" EndY="1" />
+      <MountPoint Side="Top" StartX="0.85" StartY="0" EndX="1" EndY="0.15" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <BuildType>Staircase</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>8000</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="HouseStoneStairsCornerIn" />
+    <DisplayName>DisplayName_Block_HouseStoneStairsCornerIn</DisplayName>
+    <BlockPairName>HouseStoneStairsCornerIn</BlockPairName>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\cubes\StoneStairsSimple.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\HouseStoneStairsCornerIn.mwm</Model>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Front" StartX="-0.0106550455" StartY="-0.0233940128" EndX="1.02339375" EndY="1.01065576" />
+      <MountPoint Side="Back" StartX="-0.02339306" StartY="-0.023393726" EndX="1.01065576" EndY="1.010656" />
+      <MountPoint Side="Left" StartX="-0.0216149334" StartY="-0.02339325" EndX="1.0202105" EndY="1.01065588" />
+      <MountPoint Side="Bottom" StartX="-0.023393726" StartY="-0.0216143616" EndX="1.01065576" EndY="1.0202105" />
+      <MountPoint Side="Right" StartX="0.02606308" StartY="-0.0275746826" EndX="1.008141398" EndY="1.02757478" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.0324" EndX="1.0324" EndY="-0.032400012" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="7" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <BuildType>Staircase</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>8000</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+  
 </Definitions>

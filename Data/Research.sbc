@@ -636,6 +636,7 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="StoneStairs_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StoneSpiralStairs_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="SharpStoneStairs_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CornerStoneStairs_Masonry" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -725,7 +726,7 @@
 	<Id Type="ResearchDefinition" Subtype="SharpStoneStairs_Masonry" />
     <DisplayName>Masonry</DisplayName>
     <Entry Type="CubeBlock" Subtype="StoneSpiralStaircaseSharp" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="SharpStoneStairs_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SharpStoneStairsMir_Masonry" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -734,8 +735,36 @@
     <Entry Type="CubeBlock" Subtype="StoneSpiralStaircaseSharpMir" />
   </Definition>
 <!-- ========================================================================= -->
- 
- 
+<Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="CornerStoneStairs_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="HouseStoneStairsCorner" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneStairsCornerStraight_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StoneStairsCornerRound_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HouseStoneStairsCornerIn_Masonry" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneStairsCornerStraight_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneStairsCornerStraight" />
+  </Definition>
+<!-- ========================================================================= -->
+   <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StoneStairsCornerRound_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneStairsCornerRound" />
+  </Definition>
+<!-- ========================================================================= -->
+   <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HouseStoneStairsCornerIn_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="HouseStoneStairsCornerIn" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
 <!-- ========================================================================= -->
 
     <!-- Masonry Crops -->
