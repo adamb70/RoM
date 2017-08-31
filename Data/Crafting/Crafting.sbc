@@ -4329,6 +4329,25 @@ fill Empty Buckets with water.</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmallStoneRoundedWindow_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\StoneRoundedWindow.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Rounded Stone Wall</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SmallStoneRoundedWindow" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+
+
 
 <!-- Kharidian Masonry -->
 
