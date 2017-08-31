@@ -303,8 +303,7 @@
     </CompoundTemplates>
     <MaxIntegrity>13000</MaxIntegrity>
   </Definition>
-
-    
+  
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="HouseStoneRoundedWall" />
       <DisplayName>DisplayName_Block_StoneWallRound</DisplayName>
@@ -3362,4 +3361,180 @@
     <AvailableInSurvival>false</AvailableInSurvival>
   </Definition>
   
+<!--Stone Round Large Multiblock-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneRoundLargeFull" />
+    <DisplayName>DisplayName_Block_StoneBlockRoundLarge</DisplayName>
+    <BlockPairName>StoneBlockRoundLarge</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\StoneRoundLargeFull.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\StoneRoundLargeFull.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneRoundLargeFull_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Left" StartX="0.3" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="6" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="8" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MultiBlock>StoneRoundLargeFull</MultiBlock>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>23000</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <AvailableInSurvival>true</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneRoundLargeFull_2" />
+    <DisplayName>DisplayName_Block_StoneBlockRoundLarge</DisplayName>
+    <BlockPairName>StoneBlockRoundLarge2</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\StoneRoundLargeFull.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\StoneRoundLargeFull_2.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneRoundLargeFull_2_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="0.7" EndY="1.0" />
+      <MountPoint Side="Top" StartX="0.75" StartY="0" EndX="1" EndY="0.7" />
+      <MountPoint Side="Bottom" StartX="0.75" StartY="0.3" EndX="1" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="6" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="11" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>22500</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+    <AvailableInSurvival>true</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneRoundLargeFullMir" />
+    <DisplayName>DisplayName_Block_StoneBlockRoundLarge</DisplayName>
+    <BlockPairName>StoneBlockRoundLargeMir</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\StoneRoundLargeFull.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\StoneRoundLargeFullMir.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneRoundLargeFullMir_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0" StartY="0.0" EndX="0.7" EndY="1.0" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="6" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="11" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>22500</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+    <AvailableInSurvival>true</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneRoundLargeFullMir_2" />
+    <DisplayName>DisplayName_Block_StoneBlockRoundLarge</DisplayName>
+    <BlockPairName>StoneBlockRoundLargeMir2</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\StoneRoundLargeFull.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\StoneRoundLargeFullMir_2.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneRoundLargeFullMir_2_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Left" StartX="0.3" StartY="0.0" EndX="1" EndY="1.0" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="0.25" EndY="0.7" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0.3" EndX="0.25" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="6" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="6" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>22500</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+    <AvailableInSurvival>true</AvailableInSurvival>
+  </Definition>
 </Definitions>
