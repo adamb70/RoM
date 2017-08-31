@@ -4371,7 +4371,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_WallWithArch</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Stone Door Manuscript
+      <DisplayName>Masonry: Stone Arch
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4405,7 +4405,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_StoneStairs</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Stone Door Manuscript
+      <DisplayName>Masonry: Stone Stairs
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4431,7 +4431,41 @@ Masonry.
         <SubtypeId>StoneStairs_Masonry</SubtypeId>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
-    </Definition>    
+    </Definition>
+<!-- =================================================================================== -->
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Masonry_Schematic_StoneSpiralStairs</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Masonry: Stone Spiral Stairs
+
+As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for constructing stone stairs. 
+This knowledge would be valuable for
+Masonry.
+</DisplayName>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\SpiralStairs.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>StoneSpiralStairs_Masonry</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
 <!-- =================================================================================== -->
 <!-- Kharidian Masonry -->
 <!-- ===================================================================================  -->
