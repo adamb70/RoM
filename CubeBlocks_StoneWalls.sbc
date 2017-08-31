@@ -2861,4 +2861,110 @@
     <NavigationDefinition>Ramp1x1</NavigationDefinition>
   </Definition>
   
+  <!-- Stone Spiral Stairs-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSpiralStaircase" />
+    <DisplayName>DisplayName_Block_StoneSpiralStaircase</DisplayName>
+    <BlockPairName>StoneSpiralStaircase</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\SpiralStairs.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneSpiralStaircase.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneSpiralStaircase_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneSpiralStaircase_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="3" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>RoundedStaircase</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <GeneratedBlocks>
+      <GeneratedBlock>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>GeneratedStoneSlopeStairs</SubtypeId>
+      </GeneratedBlock>
+    </GeneratedBlocks>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <BlockGroupName>BlockGroupName_SpiralStaircases</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>StoneSpiralStaircaseMir</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+  </Definition>
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSpiralStaircaseMir" />
+    <DisplayName>DisplayName_Block_StoneSpiralStaircaseMir</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\StairsLeftSpiral.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\StoneSpiralStaircaseMir.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneSpiralStaircaseMir_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneSpiralStaircaseMir_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="3" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <BuildType>RoundedStaircase</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <GeneratedBlocks>
+      <GeneratedBlock>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>GeneratedStoneSlopeStairs</SubtypeId>
+      </GeneratedBlock>
+    </GeneratedBlocks>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+    <Mirrored>true</Mirrored>
+  </Definition>
+  
 </Definitions>
