@@ -258,6 +258,22 @@
 
 
 <!-- ========================================================================================= -->
+    <!-- stop the vanilla bolts showing in carpenter bench -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowBolt"/>
+    <DisplayName>DisplayName_Ammo_CrossbowQuiver</DisplayName>
+    <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="ScrapWood" />
+      <Item Amount="1" Tag="IngotIron" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="10" Type="ProjectileItem" Subtype="CrossbowBolt" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+   </Definition>
+  
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
       <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowQuiver" />
       <DisplayName>Iron Crossbow Bolts</DisplayName>
