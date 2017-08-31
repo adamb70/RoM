@@ -4193,6 +4193,23 @@ fill Empty Buckets with water.</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallWithArch_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\StoneArchFullWall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Stone Wall Arch</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_WallWithArch" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
 
 
 <!-- Kharidian Masonry -->
