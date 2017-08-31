@@ -248,6 +248,64 @@
     
 <!--Stone Round Blocks-->
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="HouseStoneRoundedFull" />
+    <DisplayName>DisplayName_Block_StoneBlockRound</DisplayName>
+    <BlockPairName>StoneBlockRound</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\StoneRoundedFull.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\HouseStoneRoundedFull.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseStoneRoundedFull_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseStoneRoundedFull_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Front" StartX="0.152872264" StartY="-0.0275746826" EndX="-0.0275747776" EndY="1.02757478" />
+      <MountPoint Side="Back" StartX="-0.02606306" StartY="-0.0275746826" EndX="1.00814176" EndY="1.02757478" />
+      <MountPoint Side="Back" StartX="0.9342945" StartY="-0.0275746826" EndX="1.01429462" EndY="1.02757478" />
+      <MountPoint Side="Left" StartX="0.8471281" StartY="-0.0275746826" EndX="1.02757454" EndY="1.02757478" />
+      <MountPoint Side="Right" StartX="1.02606308" StartY="-0.0275746826" EndX="-0.008141398" EndY="1.02757478" />
+      <MountPoint Side="Right" StartX="0.06570625" StartY="-0.0275746826" EndX="-0.01429379" EndY="1.02757478" />
+      <MountPoint Side="Top" StartX="0.591786265" StartY="1.02606308" EndX="1.02757478" EndY="-0.008141398" />
+      <MountPoint Side="Top" StartX="-0.02606306" StartY="0.408213556" EndX="1.00814176" EndY="-0.02757454" />
+      <MountPoint Side="Top" StartX="0.0514232628" StartY="0.731628239" EndX="1.01183474" EndY="-0.0186585188" />
+      <MountPoint Side="Top" StartX="0.2683421" StartY="0.94857657" EndX="1.01865852" EndY="-0.0118345022" />
+      <MountPoint Side="Bottom" StartX="0.591786265" StartY="-0.02606306" EndX="1.02757478" EndY="1.0081414" />
+      <MountPoint Side="Bottom" StartX="-0.02606306" StartY="0.591786444" EndX="1.00814176" EndY="1.02757454" />
+      <MountPoint Side="Bottom" StartX="0.0514232628" StartY="0.268371761" EndX="1.01183474" EndY="1.01865852" />
+      <MountPoint Side="Bottom" StartX="0.2683421" StartY="0.0514234565" EndX="1.01865852" EndY="1.0118345" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="7" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <UseModelIntersection>true</UseModelIntersection>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>13000</MaxIntegrity>
+  </Definition>
+
+    
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="HouseStoneRoundedWall" />
       <DisplayName>DisplayName_Block_StoneWallRound</DisplayName>
       <BlockPairName>StoneWallRound</BlockPairName>
