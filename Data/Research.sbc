@@ -637,6 +637,7 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="StoneSpiralStairs_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="SharpStoneStairs_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="CornerStoneStairs_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HouseStoneRoundedFull_Masonry" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -762,7 +763,12 @@
     <Entry Type="CubeBlock" Subtype="HouseStoneStairsCornerIn" />
   </Definition>
 <!-- ========================================================================= -->
-
+   <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HouseStoneRoundedFull_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="HouseStoneRoundedFull" />
+  </Definition>
+<!-- ========================================================================= -->
 
 
 <!-- ========================================================================= -->
