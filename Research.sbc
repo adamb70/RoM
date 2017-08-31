@@ -137,7 +137,6 @@
 	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_Masonry" />
 	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_DefensiveStoneWorks" />
 	<Entry Type="CraftingRecipeDefinition" Subtype="Schematic_IronWorks" />
-	<Entry Type="CubeBlock" Subtype="StonePillarSquare" />
 	<Entry Type="CubeBlock" Subtype="HouseStoneStairsCorner" />
 	<Entry Type="CubeBlock" Subtype="HouseHalfStoneTriangleMir" />
 	<Entry Type="CubeBlock" Subtype="HouseStoneRoundedWall" />
@@ -630,6 +629,7 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="StoneArchFull_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StoneCube_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="KingStatueBlock_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StonePillarSquare_Masonry" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -684,7 +684,12 @@
     <Entry Type="CubeBlock" Subtype="KingStatueBlock" />
   </Definition>
 <!-- ========================================================================= -->
-
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StonePillarSquare_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StonePillarSquare" />
+  </Definition>
+<!-- ========================================================================= -->
 
 
 
