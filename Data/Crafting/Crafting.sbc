@@ -1484,7 +1484,25 @@ research related to Law and Government</Description>
 
 
   			  <!--Farming-->
-
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LandscapeStake_Farming" />
+      <DisplayName>Farming: Landscaping Stake</DisplayName>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\LandscapingStake.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Farming_Book_Seeds</Category>
+      <Prerequisites>
+        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_Flax" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="LandscapeStake_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
 	<!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stone_Plow" />
@@ -4895,6 +4913,22 @@ Most commonly used for the Crafting profession.</Description>
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+ <!-- ========================================================================================================== -->   
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LandscapeStake"/>
+    <DisplayName>DisplayName_Tool_LandscapeStake</DisplayName>
+    <Description>Description_Tool_LandscapeStake</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\LandscapingStake.dds</Icon>
+    <Category>Herbalist_Table</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="HandItem" Subtype="LandscapeStakeItem" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
 <!-- =================================================================================== -->
 
 <!-- EXAMPLE HOW TO ADD SPECIFIC PROGRESS SOUND FOR CRAFTING ITEM <ProgressBarSoundCue>HudErrorMessage</ProgressBarSoundCue> -->
