@@ -635,6 +635,7 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="WallWithArch_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StoneStairs_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StoneSpiralStairs_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SharpStoneStairs_Masonry" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -720,7 +721,19 @@
     <Entry Type="CubeBlock" Subtype="StoneSpiralStaircaseMir" />
   </Definition>
 <!-- ========================================================================= -->
-
+<Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SharpStoneStairs_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneSpiralStaircaseSharp" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SharpStoneStairs_Masonry" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SharpStoneStairsMir_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="StoneSpiralStaircaseSharpMir" />
+  </Definition>
+<!-- ========================================================================= -->
  
  
 <!-- ========================================================================= -->

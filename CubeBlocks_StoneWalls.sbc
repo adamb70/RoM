@@ -2917,6 +2917,7 @@
       </BlockVariant>
     </BlockVariants>
   </Definition>
+  
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="StoneSpiralStaircaseMir" />
     <DisplayName>DisplayName_Block_StoneSpiralStaircaseMir</DisplayName>
@@ -2949,6 +2950,129 @@
     </Components>
     <BuildTimeSeconds>6</BuildTimeSeconds>
     <BuildType>RoundedStaircase</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <GeneratedBlocks>
+      <GeneratedBlock>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>GeneratedStoneSlopeStairs</SubtypeId>
+      </GeneratedBlock>
+    </GeneratedBlocks>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+    <Mirrored>true</Mirrored>
+  </Definition>
+  
+  <!--Start Stone Stairs-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSpiralStaircaseSharp" />
+    <DisplayName>DisplayName_Block_StoneSpiralStaircaseSharp</DisplayName>
+    <BlockPairName>StoneSpiralStaircaseSharp</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\StairsSharp.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneSpiralStaircaseSharp.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneSpiralStaircaseSharp_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneSpiralStaircaseSharp_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <MountPoints>
+      <MountPoint Side="Right" StartX="0" StartY="0.0" EndX="1" EndY="1" />
+      <MountPoint Side="Left" StartX="0" StartY="0.3" EndX="0.5" EndY="0.5" />
+      <MountPoint Side="Left" StartX="0.5" StartY="0.0" EndX="1.0" EndY="0.3" />
+      <MountPoint Side="Front" StartX="0.0" StartY="0.7" EndX="0.5" EndY="1.0" />
+      <MountPoint Side="Front" StartX="0.5" StartY="0.5" EndX="1.0" EndY="0.7" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1.0" EndY="1.0" />
+    </MountPoints>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="3" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <GeneratedBlocks>
+      <GeneratedBlock>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>GeneratedStoneSlopeStairs</SubtypeId>
+      </GeneratedBlock>
+    </GeneratedBlocks>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <BlockGroupName>BlockGroupName_AngledSpiralStaircases</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>StoneSpiralStaircaseSharpMir</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSpiralStaircaseSharpMir" />
+    <DisplayName>DisplayName_Block_StoneSpiralStaircaseSharpMir</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\AngleStairsLeftSpiral.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\StoneSpiralStaircaseSharpMir.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneSpiralStaircaseSharpMir_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneSpiralStaircaseSharpMir_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <MountPoints>
+      <MountPoint Side="Left" StartX="0" StartY="0.0" EndX="1" EndY="1" />
+      <MountPoint Side="Right" StartX="0" StartY="0.0" EndX="0.5" EndY="0.3" />
+      <MountPoint Side="Right" StartX="0.5" StartY="0.3" EndX="1.0" EndY="0.5" />
+      <MountPoint Side="Front" StartX="0.0" StartY="0.5" EndX="0.5" EndY="0.7" />
+      <MountPoint Side="Front" StartX="0.5" StartY="0.7" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1.0" EndY="1.0" />
+    </MountPoints>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="3" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <BuildTimeSeconds>6</BuildTimeSeconds>
     <Direction>Horizontal</Direction>
     <Rotation>Vertical</Rotation>
     <GeneratedBlocks>
