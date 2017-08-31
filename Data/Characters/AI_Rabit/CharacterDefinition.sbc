@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Characters>
+		<!-- DEER -->
+		<Character>
+			<Id>
+				<TypeId>MyObjectBuilder_Character</TypeId>
+				<SubtypeId>Medieval_rabbit</SubtypeId>
+			</Id>
+
+			<UsableByPlayer>false</UsableByPlayer>
+
+			<DisplayName>Rabbit</DisplayName>
+			<Name>Medieval_rabbit</Name>
+			<Model>Models\Characters\Basic\ME_rabbit.mwm</Model>
+			<AnimationController>AC_Rabbit</AnimationController>
+			<RotationToSupport>OneAxis</RotationToSupport>
+			<PhysicalMaterial>Deer</PhysicalMaterial>
+			<Mass>1</Mass>
+			<LootingTime>300</LootingTime>
+			<Skeleton>Tetrapod_simple</Skeleton>
+			<SpineBone>deer_Neck4</SpineBone>
+			<AnimationMappings>
+				<Mapping Name="Idle" AnimationSubtypeName="IdleRabbit1" />
+				<Mapping Name="Run" AnimationSubtypeName="RunRabbit" />
+				<Mapping Name="Walk" AnimationSubtypeName="WalkRabbit" />
+				<Mapping Name="Died" AnimationSubtypeName="DiedRabbit" />
+			</AnimationMappings>
+
+
+			<VisibleOnHud>false</VisibleOnHud>
+
+			<Inventory>
+				<InventoryVolume>1</InventoryVolume>
+				<!-- in m3 ! -->
+				<InventoryMass>50</InventoryMass>
+				<MaxItemCount>5</MaxItemCount>
+			</Inventory>
+
+			<InventorySpawnContainerId>
+				<TypeId>InventoryBagEntity</TypeId>
+				<SubtypeId>BarbarianBag</SubtypeId>
+			</InventorySpawnContainerId>
+
+			<!-- ENABLED COMPONENTS -->
+			<!-- <EnabledComponents>RagdollComponent</EnabledComponents> -->
+			<EnabledComponents>InventorySpawnComponent</EnabledComponents>
+
+			<EnableSpawnInventoryAsContainer>true</EnableSpawnInventoryAsContainer>
+
+
+			<!-- BONES -->
+			<HeadBone>deer_Scull</HeadBone>
+			<ModelRootBoneName>DEER_dummy</ModelRootBoneName>
+			<!-- Character control -->
+
+			<UseOnlyWalking>false</UseOnlyWalking>
+
+			<MaxSlope>65</MaxSlope>
+			<MaxSprintSpeed>12</MaxSprintSpeed>
+
+			<JumpForce>10</JumpForce>
+
+			<MaxRunSpeed>10</MaxRunSpeed>
+			<MaxBackrunSpeed>8</MaxBackrunSpeed>
+			<MaxRunStrafingSpeed>0</MaxRunStrafingSpeed>
+
+			<MaxWalkSpeed>1</MaxWalkSpeed>
+			<MaxBackwalkSpeed>1</MaxBackwalkSpeed>
+			<MaxWalkStrafingSpeed>0</MaxWalkStrafingSpeed>
+
+			<MaxCrouchWalkSpeed>1</MaxCrouchWalkSpeed>
+			<MaxCrouchBackwalkSpeed>1</MaxCrouchBackwalkSpeed>
+			<MaxCrouchStrafingSpeed>0</MaxCrouchStrafingSpeed>
+
+			<CharacterHeadSize>0.35</CharacterHeadSize>
+			<CharacterHeadHeight>0.15</CharacterHeadHeight>
+			<CharacterCollisionScale>0.7</CharacterCollisionScale>
+
+
+			<!-- Ragdoll definitions -->
+			<RagdollRootBody>Ragdoll_deer_Pelvis001</RagdollRootBody>
+			<RagdollDataFile>Models\Characters\Basic\ME_Deer_ragdoll.hkt</RagdollDataFile>
+			<RagdollBonesMappings>
+				<!-- Always need to be at least the root bone and the last bone  -->
+				<BoneSet>
+					<Name>Ragdoll_deer_Pelvis001</Name>
+					<Bones>deer_Pelvis deer_Ribcage</Bones>
+				</BoneSet>
+				<BoneSet>
+					<Name>Ragdoll_deer_Neck001</Name>
+					<Bones>deer_Neck1 deer_Neck4</Bones>
+				</BoneSet>
+				<BoneSet>
+					<Name>Ragdoll_deer_Scull001</Name>
+					<Bones>deer_Scull deer_Jaw</Bones>
+				</BoneSet>
+				<BoneSet>
+					<Name>Ragdoll_deer_FrontRLegScapula001</Name>
+					<Bones>deer_FrontRLegScapula deer_FrontRLegPhalangesManus</Bones>
+				</BoneSet>
+				<BoneSet>
+					<Name>Ragdoll_deer_LScapula001</Name>
+					<Bones>deer_LScapula deer_LPhalangesManus</Bones>
+				</BoneSet>
+				<BoneSet>
+					<Name>Ragdoll_deer_LFemur001</Name>
+					<Bones>deer_LFemur deer_LPhalanxPrima</Bones>
+				</BoneSet>
+				<BoneSet>
+					<Name>Ragdoll_deer_RFemur001</Name>
+					<Bones>deer_RFemur deer_RPhalanxPrima</Bones>
+				</BoneSet>
+			</RagdollBonesMappings>
+
+			<DeadBodyShape>
+				<BoxShapeScale x="1" y="0.2" z="2"/>
+				<RelativeCenterOfMass x="0" y="0" z="0"/>
+				<RelativeShapeTranslation x="2.35" y="-0.65" z="0"/>
+				<Friction>20</Friction>
+			</DeadBodyShape>
+
+		</Character>
+	</Characters>
+</Definitions>

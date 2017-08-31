@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Apothocary_Table" />
+      <BlockPairName>Apothocary_Table</BlockPairName>
+      <DisplayName>Apothocary's Table</DisplayName>
+      <PrimarySound>BlockBonfire</PrimarySound>
+      <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
+      <Icon>Textures\GUI\Icons\Universal\Books\Apothacary_icon.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
+		  <CubeSize>Small</CubeSize>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="6" y="3" z="3" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>Models\Cubes\Small\WoodTable.mwm</Model>
+		  <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Tag="Timber" Count="1" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MaxIntegrity>200</MaxIntegrity>
+	  <MountPoints>
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="6" EndY="3" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="6" EndY="3" />
+      </MountPoints>
+	  <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+		  <BuildTimeSeconds>6</BuildTimeSeconds>
+		  <Mass>10</Mass>
+		  <AvailableInSurvival>true</AvailableInSurvival>
+		  <VoxelPlacement>
+			<StaticMode>
+			  <PlacementMode>Both</PlacementMode>
+			  <MaxAllowed>1</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</StaticMode>
+			<DynamicMode>
+			  <PlacementMode>Both</PlacementMode>
+			  <MaxAllowed>1</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</DynamicMode>
+		  </VoxelPlacement>
+		</Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Apothocary_Table"/>
+    <DisplayName>Apothocary's Table</DisplayName>
+
+<Description>This is an essential for being an Apothocary.</Description>
+      <Icon>Textures\GUI\Icons\Universal\Books\Apothacary_icon.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="InventoryItem" Subtype="Log250cm" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Apothocary_Table" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Apothocary_Table"/>
+    <CraftingCategories>
+      <Category>Apothocary_Table</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Apothocary_Table" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Apothocary_TableInventory" />
+    <InventoryName>Apothocary_TableInventory</InventoryName>
+    <DisplayName>Apothocary_Table</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Apothocary_Table" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="CraftingComponent" Subtype="Apothocary_Table" />
+    <Component Type="UseObjectsComponent" Subtype="Apothocary_Table" />
+    <Component Type="Inventory" Subtype="Apothocary_TableInventory" />
+  </Definition>
+
+
+</Definitions>

@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Shutters-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="WoodenFlatShutters" />
+    <DisplayName>DisplayName_Block_WoodenFlatShutters</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\PlankShutter.dds</Icon>
+    <BlockPairName>WoodenFlatShutters</BlockPairName>
+    <Public>true</Public>
+    <GuiVisible>false</GuiVisible>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\PlankShutterFrame.mwm</Model>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberWindow_Construction_1.mwm">
+      </Model>
+    </BuildProgressModels>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Tag="Timber" Count ="4" />
+      <Component Type="InventoryItem" Subtype="MetalParts" Count ="2" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.0349058621" EndX="-0.032400012" EndY="0.42989403" />
+      <MountPoint Side="Front" StartX="0.7374" StartY="0.7698602" EndX="0.2626" EndY="1.02810025" />
+      <MountPoint Side="Front" StartX="1.02882659" StartY="0.365093976" EndX="0.6842358" EndY="1.031525" />
+      <MountPoint Side="Front" StartX="0.321223974" StartY="0.365093976" EndX="-0.0233668089" EndY="1.031525" />
+      <MountPoint Side="Left" StartX="-0.0338439941" StartY="-0.0349058621" EndX="0.130955979" EndY="0.42989403" />
+      <MountPoint Side="Left" StartX="-0.0314826965" StartY="0.365093976" EndX="0.128662691" EndY="1.031525" />
+      <MountPoint Side="Right" StartX="1.033844" StartY="-0.0349058621" EndX="0.869044" EndY="0.42989403" />
+      <MountPoint Side="Right" StartX="1.0314827" StartY="0.365093976" EndX="0.8713373" EndY="1.031525" />
+      <MountPoint Side="Top" StartX="0.2626" StartY="1.033844" EndX="0.7374" EndY="0.869044" />
+      <MountPoint Side="Top" StartX="-0.02882657" StartY="1.0314827" EndX="0.3157642" EndY="0.8713373" />
+      <MountPoint Side="Top" StartX="0.678776" StartY="1.0314827" EndX="1.02336681" EndY="0.8713373" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.0338439941" EndX="1.0324" EndY="0.130955979" />
+    </MountPoints>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>860</MaxIntegrity>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <GuiVisible>true</GuiVisible>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="WoodenRoundRoundShutters" />
+    <DisplayName>DisplayName_Block_WoodenRoundRoundShutters</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\WoodShutterRound.dds</Icon>
+    <BlockPairName>WoodenRoundRoundShutters</BlockPairName>
+    <Public>true</Public>
+    <CubeSize>Large</CubeSize>
+    <GuiVisible>false</GuiVisible>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\WoodShutterRoundFrame.mwm</Model>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseStoneRoundedWindow_Construction_1.mwm">
+      </Model>
+    </BuildProgressModels>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="3" />
+      <Component Tag="Timber" Count ="2" />
+      <Component Type="InventoryItem" Subtype="MetalParts" Count ="4" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="0.08964002" StartY="-0.021242572" EndX="-0.0212425" EndY="1.0212425" />
+      <MountPoint Side="Back" StartX="-0.01907816" StartY="-0.02124238" EndX="0.225403056" EndY="1.02124238" />
+      <MountPoint Side="Left" StartX="0.909382463" StartY="-0.02124238" EndX="1.02124238" EndY="1.02124238" />
+      <MountPoint Side="Right" StartX="1.01905787" StartY="-0.021242572" EndX="0.774606168" EndY="1.0212425" />
+      <MountPoint Side="Top" StartX="-0.01907816" StartY="0.3997082" EndX="0.28130585" EndY="-0.02124238" />
+      <MountPoint Side="Top" StartX="0.6002996" StartY="1.01905775" EndX="1.0212425" EndY="0.7186942" />
+      <MountPoint Side="Top" StartX="0.2784441" StartY="0.9390662" EndX="0.712182" EndY="0.547671735" />
+      <MountPoint Side="Top" StartX="0.0609443672" StartY="0.7215558" EndX="0.4523283" EndY="0.287818" />
+      <MountPoint Side="Bottom" StartX="-0.01907816" StartY="0.6002918" EndX="0.28130585" EndY="1.02124238" />
+      <MountPoint Side="Bottom" StartX="0.6002996" StartY="-0.0190578" EndX="1.0212425" EndY="0.28130576" />
+      <MountPoint Side="Bottom" StartX="0.2784441" StartY="0.06093383" EndX="0.712182" EndY="0.452328265" />
+      <MountPoint Side="Bottom" StartX="0.0609443672" StartY="0.278444141" EndX="0.4523283" EndY="0.712182" />
+    </MountPoints>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <GuiVisible>true</GuiVisible>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="WoodenRoundShutters" />
+    <DisplayName>DisplayName_Block_WoodenRoundShutters</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\WoodShutter.dds</Icon>
+    <BlockPairName>WoodenRoundShutters</BlockPairName>
+    <Public>true</Public>
+    <CubeSize>Large</CubeSize>
+    <GuiVisible>false</GuiVisible>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\WoodShutterFrame.mwm</Model>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfStoneWindow_Construction_1.mwm">
+      </Model>
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="0.4324" />
+      <MountPoint Side="Front" StartX="1.03082955" StartY="0.3675671" EndX="0.6060295" EndY="0.8323671" />
+      <MountPoint Side="Front" StartX="0.3943618" StartY="0.367567152" EndX="-0.0304383039" EndY="0.8323671" />
+      <MountPoint Side="Front" StartX="1.0324" StartY="0.767772853" EndX="-0.032400012" EndY="1.03257287" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="-0.03239999" EndX="0.232400045" EndY="0.4324" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="0.3675671" EndX="0.232400045" EndY="0.8323671" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="0.767772853" EndX="0.232400045" EndY="1.03257287" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="-0.03239999" EndX="0.76759994" EndY="0.4324" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="0.367567152" EndX="0.76759994" EndY="0.8323671" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="0.767772853" EndX="0.76759994" EndY="1.03257287" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.0324" EndX="1.0324" EndY="0.76759994" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.0324000381" EndX="1.0324" EndY="0.232400045" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="3" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="3" />
+      <Component Tag="Timber" Count ="2" />
+      <Component Type="InventoryItem" Subtype="MetalParts" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <GuiVisible>true</GuiVisible>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="WoodenFlatShutters" />
+    <Subparts>
+      <Subpart Name="PlankShutter">
+        <HingePosition x="0.525" y="-0.248" z="-1.285"/>
+      </Subpart>
+      <Subpart Name="PlankShutterLock">
+        <HingePosition x="-0.447" y="0.265" z="-1.188"/>
+      </Subpart>
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="WoodenFlatShutters" />
+    <AnimationSequences>
+      <Sequence Name="Open" WrapMode="Once">
+        <Event Start="0.2" Name="DoorOpening" />
+        <Event Start="1.6" Name="DoorOpened" />
+
+        <Animation Start="0" End="0.4">
+          <Subpart Name="PlankShutterLock" Type="Rotation" Axis="Z" From="120" To="0" Method="QuarticEaseOut" />
+        </Animation>
+        <Animation Start="0.4" End="1.6">
+          <Subpart Name="PlankShutter" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
+        </Animation>
+      </Sequence>
+
+      <Sequence Name="Close" WrapMode="Once">
+        <Event Start="0.2" Name="DoorClosing" />
+        <Event Start="1.6" Name="DoorClosed" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="PlankShutter" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
+        </Animation>
+        <Animation Start="1.2" End="1.6">
+          <Subpart Name="PlankShutterLock" Type="Rotation" Axis="Z" From="0" To="120" Method="QuarticEaseIn" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="WoodenFlatShutters" />
+    <LoadFromModel>true</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_gate_01" Name="Generic" />
+      <UseObject Dummy="detector_gate_02" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="WoodenFlatShutters" />
+    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SecondaryAction>OpenTerminal</SecondaryAction>
+    <SupportsAccessSettings>true</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="WoodenFlatShutters" />
+    <Animations>
+      <Animation State="Opening" Animation="Open" />
+      <Animation State="Closing" Animation="Close" />
+    </Animations>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="WoodenFlatShutters" />
+    <InitialState>Open</InitialState>
+    <States>
+      <State Name="Open">
+        <Transition>Closing</Transition>
+      </State>
+      <State Name="Closing">
+        <Transition>Closed</Transition>
+      </State>
+      <State Name="Closed">
+        <Transition>Opening</Transition>
+      </State>
+      <State Name="Opening">
+        <Transition>Open</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="WoodenFlatShutters" />
+    <SoundEvents>
+      <Event Name="DoorClosed" Sound="DoorOpen" />
+    </SoundEvents>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="WoodenFlatShutters" />
+    <Events>
+      <Event Name="DoorClosed" TransitionToState="Closed" />
+      <Event Name="DoorOpened" TransitionToState="Open" />
+    </Events>
+  </Definition>
+
+  <Sounds>
+    <Sound>
+      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="DoorOpen" />
+      <Category>IMP</Category>
+      <MaxDistance>30</MaxDistance>
+      <Volume>0.6</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\HUD\HudPlaceBlock01.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+  </Sounds>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="WoodenFlatShutters" />
+    <Component Type="MedievalGridOwnershipComponent"/>
+    <Component Type="AccessPermissionComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="WoodenFlatShutters" />
+    <Component Type="SubpartAnimationComponent" Subtype="WoodenFlatShutters" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WoodenFlatShutters" />
+    <Component Type="EntityStateComponent" Subtype="WoodenFlatShutters" />
+    <Component Type="StateAnimationComponent" Subtype="WoodenFlatShutters" />
+    <Component Type="StateUseObjectComponent" Subtype="WoodenFlatShutters" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WoodenFlatShutters" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WoodenFlatShutters" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="WoodenRoundShutters" />
+    <Component Type="MedievalGridOwnershipComponent"/>
+    <Component Type="AccessPermissionComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="WoodenRoundShutters" />
+    <Component Type="SubpartAnimationComponent" Subtype="WoodenRoundShutters" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WoodenRoundShutters" />
+    <Component Type="EntityStateComponent" Subtype="WoodenRoundShutters" />
+    <Component Type="StateAnimationComponent" Subtype="WoodenRoundShutters" />
+    <Component Type="StateUseObjectComponent" Subtype="WoodenRoundShutters" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WoodenRoundShutters" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WoodenRoundShutters" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="WoodenRoundRoundShutters" />
+    <Component Type="MedievalGridOwnershipComponent"/>
+    <Component Type="AccessPermissionComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="WoodenRoundRoundShutters" />
+    <Component Type="SubpartAnimationComponent" Subtype="WoodenRoundRoundShutters" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WoodenRoundRoundShutters" />
+    <Component Type="EntityStateComponent" Subtype="WoodenRoundRoundShutters" />
+    <Component Type="StateAnimationComponent" Subtype="WoodenRoundRoundShutters" />
+    <Component Type="StateUseObjectComponent" Subtype="WoodenRoundRoundShutters" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WoodenRoundRoundShutters" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WoodenRoundRoundShutters" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="WoodenRoundShutters" />
+    <Subparts>
+      <Subpart Name="WoodShutterR">
+        <HingePosition x="0.28617" y="0.24878" z="-0.782774"/>
+      </Subpart>
+      <Subpart Name="WoodShutterL">
+        <HingePosition x="-0.2881" y="0.24878" z="-0.782774"/>
+      </Subpart>
+      <Subpart Name="WoodShutterLock">
+        <HingePosition x="0.2881" y="0.24878" z="-0.782774"/>
+      </Subpart>
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="WoodenRoundShutters" />
+    <AnimationSequences>
+      <Sequence Name="OpenSequence" WrapMode="Once">
+        <Event Start="0.2" Name="DoorOpening" />
+        <Event Start="2" Name="DoorOpened" />
+
+        <Animation Start="0" End="0.8">
+          <!-- Initialize rotations -->
+          <Subpart Name="WoodShutterLock" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterR" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterL" Type="Rotation" Axis="Y" From="90" To="90" Method="QuadraticEaseIn" />
+
+          <Subpart Name="WoodShutterLock" Type="Translation" Axis="X" From="-0.07" To="0" Method="QuadraticEaseIn" />
+        </Animation>
+        <Animation Start="0.8" End="2">
+          <Subpart Name="WoodShutterR" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterL" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterLock" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="CloseSequence" WrapMode="Once">
+        <Event Start="0.2" Name="DoorClosing" />
+        <Event Start="2" Name="DoorClosed" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="WoodShutterR" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterL" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterLock" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
+        </Animation>
+        <Animation Start="1.2" End="2">
+          <Subpart Name="WoodShutterLock" Type="Translation" Axis="X" From="0" To="-0.07" Method="QuadraticEaseIn" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="WoodenRoundShutters" />
+    <LoadFromModel>true</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_gate_01" Name="Generic" />
+      <UseObject Dummy="detector_gate_02" Name="Generic" />
+      <UseObject Dummy="detector_gate_03" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="WoodenRoundShutters" />
+    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SecondaryAction>OpenTerminal</SecondaryAction>
+    <SupportsAccessSettings>true</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="WoodenRoundShutters" />
+    <Animations>
+      <Animation State="Opening" Animation="OpenSequence" />
+      <Animation State="Closing" Animation="CloseSequence" />
+    </Animations>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="WoodenRoundShutters" />
+    <InitialState>Open</InitialState>
+    <States>
+      <State Name="Open">
+        <Transition>Closing</Transition>
+      </State>
+      <State Name="Closing">
+        <Transition>Closed</Transition>
+      </State>
+      <State Name="Closed">
+        <Transition>Opening</Transition>
+      </State>
+      <State Name="Opening">
+        <Transition>Open</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="WoodenRoundShutters" />
+    <SoundEvents>
+      <Event Name="DoorClosed" Sound="DoorOpen" />
+    </SoundEvents>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="WoodenRoundShutters" />
+    <Events>
+      <Event Name="DoorClosed" TransitionToState="Closed" />
+      <Event Name="DoorOpened" TransitionToState="Open" />
+    </Events>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="WoodenRoundRoundShutters" />
+    <Subparts>
+      <Subpart Name="WoodShutterRoundR">
+        <HingePosition x="0.1701" y="0.13165" z="-0.41562"/>
+      </Subpart>
+      <Subpart Name="WoodShutterRoundL">
+        <HingePosition x="-0.432" y="0.13165" z="0.186"/>
+      </Subpart>
+      <Subpart Name="WoodShutterRoundLock">
+        <HingePosition x="0.1701" y="0.13165" z="-0.41562"/>
+      </Subpart>
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="WoodenRoundRoundShutters" />
+    <AnimationSequences>
+      <Sequence Name="OpenSequence" WrapMode="Once">
+        <Event Start="0.2" Name="DoorOpening" />
+        <Event Start="2" Name="DoorOpened" />
+
+        <Animation Start="0" End="0.8">
+          <!-- Initialize rotations -->
+          <Subpart Name="WoodShutterRoundLock" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterRoundR" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterRoundL" Type="Rotation" Axis="Y" From="90" To="90" Method="QuadraticEaseIn" />
+
+          <Subpart Name="WoodShutterRoundLock" Type="Translation" Axis="X" From="-0.07" To="0" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterRoundLock" Type="Translation" Axis="Z" From="0.07" To="0" Method="QuadraticEaseIn" />
+        </Animation>
+        <Animation Start="0.8" End="2">
+          <Subpart Name="WoodShutterRoundR" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterRoundL" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterRoundLock" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="CloseSequence" WrapMode="Once">
+        <Event Start="0.2" Name="DoorClosing" />
+        <Event Start="2" Name="DoorClosed" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="WoodShutterRoundR" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterRoundL" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterRoundLock" Type="Rotation"  Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
+        </Animation>
+        <Animation Start="1.2" End="2">
+          <Subpart Name="WoodShutterRoundLock" Type="Translation" Axis="X" From="0" To="-0.07" Method="QuadraticEaseIn" />
+          <Subpart Name="WoodShutterRoundLock" Type="Translation" Axis="Z" From="0" To="0.07" Method="QuadraticEaseIn" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="WoodenRoundRoundShutters" />
+    <LoadFromModel>true</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_gate_01" Name="Generic" />
+      <UseObject Dummy="detector_gate_02" Name="Generic" />
+      <UseObject Dummy="detector_gate_03" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="WoodenRoundRoundShutters" />
+    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SecondaryAction>OpenTerminal</SecondaryAction>
+    <SupportsAccessSettings>true</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="WoodenRoundRoundShutters" />
+    <Animations>
+      <Animation State="Opening" Animation="OpenSequence" />
+      <Animation State="Closing" Animation="CloseSequence" />
+    </Animations>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="WoodenRoundRoundShutters" />
+    <InitialState>Open</InitialState>
+    <States>
+      <State Name="Open">
+        <Transition>Closing</Transition>
+      </State>
+      <State Name="Closing">
+        <Transition>Closed</Transition>
+      </State>
+      <State Name="Closed">
+        <Transition>Opening</Transition>
+      </State>
+      <State Name="Opening">
+        <Transition>Open</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="WoodenRoundRoundShutters" />
+    <Events>
+      <Event Name="DoorClosed" TransitionToState="Closed" />
+      <Event Name="DoorOpened" TransitionToState="Open" />
+    </Events>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="WoodenRoundRoundShutters" />
+    <SoundEvents>
+      <Event Name="DoorClosed" Sound="DoorOpen" />
+    </SoundEvents>
+  </Definition>
+</Definitions>

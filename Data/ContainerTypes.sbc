@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ContainerTypes>
+
+
+
+
+
+    <ContainerType CountMin="2" CountMax="2">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>Bavar_GuardBagContent</SubtypeId>
+      </Id>
+      <Items>
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>CubeBlock</TypeId>
+            <SubtypeId>Skull</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Bones</SubtypeId>
+          </Id>
+        </Item>
+
+      </Items>
+    </ContainerType>
+
+    <ContainerType CountMin="3" CountMax="4">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>Deer2BagContent</SubtypeId>
+      </Id>
+      <Items>
+        <Item AmountMin="1" AmountMax="3">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Meat</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="0" AmountMax="1">
+          <Frequency>0.1</Frequency>
+          <Id>
+            <TypeId>SchematicItem</TypeId>
+            <SubtypeId>Schematic_Meat</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Bones</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>DeerSkin</SubtypeId>
+          </Id>
+        </Item>
+
+      </Items>
+    </ContainerType>
+
+
+
+    <ContainerType CountMin="4" CountMax="5">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>DeerBuck2BagContent</SubtypeId>
+      </Id>
+      <Items>
+        <Item AmountMin="1" AmountMax="3">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Meat</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="0" AmountMax="1">
+          <Frequency>0.1</Frequency>
+          <Id>
+            <TypeId>SchematicItem</TypeId>
+            <SubtypeId>Schematic_Meat</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Bones</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>DeerSkin</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Antlers</SubtypeId>
+          </Id>
+        </Item>
+
+      </Items>
+    </ContainerType>
+
+
+    <ContainerType CountMin="3" CountMax="3">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>BarbarianBagContent</SubtypeId>
+      </Id>
+      <Items>
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>CubeBlock</TypeId>
+            <SubtypeId>Skull</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Bones</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="6" AmountMax="25">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Gold_Coins</SubtypeId>
+          </Id>
+        </Item>
+
+
+      </Items>
+    </ContainerType>
+
+
+
+    <ContainerType CountMin="3" CountMax="7">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>Highland_Spider_BagContent</SubtypeId>
+      </Id>
+      <Items>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>.30</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Venom_Gland</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="5">
+          <Frequency>.80</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Spider_Silk</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="2">
+          <Frequency>.80</Frequency>
+          <Id>
+            <TypeId>Component</TypeId>
+            <SubtypeId>Spider_Fang</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="6">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>SpiderLeg</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>.1</Frequency>
+          <Id>
+            <TypeId>SchematicItem</TypeId>
+            <SubtypeId>Schematic_SpiderLeg</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>.5</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>SpiderEggs</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>.1</Frequency>
+          <Id>
+            <TypeId>SchematicItem</TypeId>
+            <SubtypeId>Schematic_SpiderEggs</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Bones</SubtypeId>
+          </Id>
+        </Item>
+
+
+      </Items>
+    </ContainerType>
+
+
+    <ContainerType CountMin="1" CountMax="2">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>CrossbowBarbarianBagContent</SubtypeId>
+      </Id>
+      <Items>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1.14</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Goulash</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1.12</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>MushroomSoup</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1.16</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Salad</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1.10</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>ShroomSteak</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1.16</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>RootsWithShrooms</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="2">
+          <Frequency>1.14</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Bandage</SubtypeId>
+          </Id>
+        </Item>
+
+        <Item AmountMin="1" AmountMax="6">
+          <Frequency>1.2</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Berries</SubtypeId>
+          </Id>
+        </Item>
+        <Item AmountMin="1" AmountMax="12">
+          <Frequency>1.2</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Mushrooms</SubtypeId>
+          </Id>
+        </Item>
+        <Item AmountMin="1" AmountMax="8">
+          <Frequency>1.2</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Roots</SubtypeId>
+          </Id>
+        </Item>
+        <Item AmountMin="2" AmountMax="4">
+          <Frequency>2</Frequency>
+          <Id>
+            <TypeId>AmmoMagazine</TypeId>
+            <SubtypeId>CrossbowQuiver</SubtypeId>
+          </Id>
+        </Item>
+        <Item AmountMin="1" AmountMax="4">
+          <Frequency>1.5</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Herbs</SubtypeId>
+          </Id>
+        </Item>
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>0.4</Frequency>
+          <Id>
+            <TypeId>PhysicalGunObject</TypeId>
+            <SubtypeId>Axe</SubtypeId>
+          </Id>
+        </Item>
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>0.4</Frequency>
+          <Id>
+            <TypeId>PhysicalGunObject</TypeId>
+            <SubtypeId>Hammer</SubtypeId>
+          </Id>
+        </Item>
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1</Frequency>
+          <Id>
+
+            <TypeId>PhysicalGunObject</TypeId>
+            <SubtypeId>PickAxe</SubtypeId>
+          </Id>
+
+        </Item>
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>0.2</Frequency>
+          <Id>
+            <TypeId>PhysicalGunObject</TypeId>
+            <SubtypeId>HandTorchItem</SubtypeId>
+          </Id>
+        </Item>
+      </Items>
+    </ContainerType>
+    <ContainerType CountMin="1" CountMax="1">
+      <Id>
+        <TypeId>ContainerTypeDefinition</TypeId>
+        <SubtypeId>WolfContainer</SubtypeId>
+      </Id>
+      <Items>
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1.14</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Goulash</SubtypeId>
+          </Id>
+        </Item>
+        <Item AmountMin="1" AmountMax="1">
+          <Frequency>1.16</Frequency>
+          <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>Salad</SubtypeId>
+          </Id>
+        </Item>
+      </Items>
+    </ContainerType>
+
+  </ContainerTypes>
+</Definitions>

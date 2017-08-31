@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StatDefinitions> 
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Health</SubtypeId>
+      </Id>
+      <Name>Health</Name>
+      <MinValue>0</MinValue>
+      <MaxValue>200</MaxValue>
+      <GuiDef>
+        <HeightMultiplier>1.5</HeightMultiplier>
+        <Priority>1000</Priority>
+        <Color x="172" y="0" z="0" />
+        <CriticalRatio>0.259</CriticalRatio>
+        <CriticalColorFrom x="255" y="192" z="203" />
+        <CriticalColorTo x="255" y="0" z="0" />
+      </GuiDef>
+  </Stat>
+
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Stamina</SubtypeId>
+      </Id>
+      <Name>Stamina</Name>
+      <MinValue>0</MinValue>
+      <MaxValue>200</MaxValue>
+      <GuiDef>
+        <HeightMultiplier>1.0</HeightMultiplier>
+        <Priority>500</Priority>
+        <Color x="255" y="255" z="255" />
+        <CriticalRatio>0.259</CriticalRatio>
+        <DisplayCriticalDivider>true</DisplayCriticalDivider>
+        <CriticalColorFrom x="255" y="192" z="203" />
+        <CriticalColorTo x="255" y="0" z="0" />
+      </GuiDef>
+    </Stat>
+
+
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Fury</SubtypeId>
+      </Id>
+      <Name>Fury</Name>
+      <MinValue>1</MinValue>
+      <MaxValue>100</MaxValue>
+      <DefaultValue>1</DefaultValue>
+      <GuiDef>
+        <HeightMultiplier>1.0</HeightMultiplier>
+        <Priority>500</Priority>
+        <Color x="255" y="135" z="37" />
+        <CriticalRatio>0.001</CriticalRatio>
+        <DisplayCriticalDivider>true</DisplayCriticalDivider>
+        <CriticalColorFrom x="255" y="192" z="203" />
+        <CriticalColorTo x="255" y="0" z="0" />
+      </GuiDef>
+    </Stat>
+
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Food</SubtypeId>
+      </Id>
+      <Name>Food</Name>
+      <MinValue>0</MinValue>
+      <MaxValue>200</MaxValue>
+      <DefaultValue>60</DefaultValue>
+      <GuiDef>
+        <HeightMultiplier>0.7</HeightMultiplier>
+        <Priority>400</Priority>
+        <Color x="49" y="153" z="8" />
+        <CriticalRatio>0.159</CriticalRatio>
+        <CriticalColorFrom x="255" y="192" z="203" />
+        <CriticalColorTo x="255" y="0" z="0" />
+      </GuiDef>
+    </Stat>
+
+
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Thirst</SubtypeId>
+      </Id>
+      <Name>Thirst</Name>
+      <MinValue>0</MinValue>
+      <MaxValue>200</MaxValue>
+      <DefaultValue>80</DefaultValue>
+      <GuiDef>
+        <HeightMultiplier>0.7</HeightMultiplier>
+        <Priority>400</Priority>
+        <Color x="3" y="121" z="255" />
+        <CriticalRatio>0.159</CriticalRatio>
+        <CriticalColorFrom x="255" y="192" z="203" />
+        <CriticalColorTo x="255" y="0" z="0" />
+      </GuiDef>
+    </Stat>
+
+
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Mood</SubtypeId>
+      </Id>
+      <Name>Mood</Name>
+      <MinValue>0</MinValue>
+      <MaxValue>100</MaxValue>
+      <DefaultValue>90</DefaultValue>
+      <GuiDef>
+        <HeightMultiplier>0.7</HeightMultiplier>
+        <Priority>100</Priority>
+        <Color x="255" y="255" z="0" />
+        <CriticalRatio>0.25</CriticalRatio>
+        <DisplayCriticalDivider>true</DisplayCriticalDivider>
+        <CriticalColorFrom x="255" y="192" z="203" />
+        <CriticalColorTo x="255" y="0" z="0" />
+      </GuiDef>
+    </Stat>
+
+
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Alcohol</SubtypeId>
+      </Id>
+      <Name>Alcohol</Name>
+      <MinValue>1</MinValue>
+      <MaxValue>100</MaxValue>
+      <DefaultValue>1</DefaultValue>
+      <GuiDef>
+        <HeightMultiplier>0.7</HeightMultiplier>
+        <Priority>125</Priority>
+        <Color x="49" y="153" z="8" />
+        <CriticalRatio>0.001</CriticalRatio>
+        <CriticalColorFrom x="255" y="192" z="203" />
+        <CriticalColorTo x="255" y="0" z="0" />
+      </GuiDef>
+    </Stat>
+
+
+    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Poison</SubtypeId>
+      </Id>
+      <Name>Poison</Name>
+      <MinValue>1</MinValue>
+      <MaxValue>100</MaxValue>
+      <DefaultValue>1</DefaultValue>
+      <GuiDef>
+        <HeightMultiplier>0.7</HeightMultiplier>
+        <Priority>150</Priority>
+        <Color x="95" y="0" z="93" />
+        <CriticalRatio>0.001</CriticalRatio>
+        <CriticalColorFrom x="255" y="192" z="203" />
+        <CriticalColorTo x="255" y="0" z="0" />
+      </GuiDef>
+    </Stat>
+
+
+  </StatDefinitions>
+</Definitions>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+      <Id Type="CubeBlock" Subtype="Tent" />
+      <DisplayName>Tent</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\Tent.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="10" y="5" z="11" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Nomadic\Tent.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Type="CubeBlock" Subtype="WoodChest" Count="1" />
+        <Component Type="InventoryItem" Subtype="ScrapWoodBranches" Count="6" />
+        <Component Type="InventoryItem" Subtype="WoodenSticks" Count="8" />
+      </Components>
+      <CriticalComponent Subtype="WoodenSticks" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>2</BuildTimeSeconds>
+      <Mass>25</Mass>
+      <MaxIntegrity>1000</MaxIntegrity>
+    <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="10" EndY="10" />
+    </MountPoints>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tent"/>
+    <Icon>Textures\GUI\Icons\Cubes\Tent.dds</Icon>
+    <DisplayName>Tent</DisplayName>
+    <Description>A tent is important for any traveler. This tent
+provides a bed, some storage, and a place to change your clothes.</Description>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="CubeBlock" Subtype="WoodChest" />
+      <Item Amount="6" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="8" Type="InventoryItem" Subtype="WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Tent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="TentInventory" />
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="false">
+      <Id Type="InventoryItem" Subtype="Log250cm" />
+      <Id Type="InventoryItem" Subtype="LargeStone" />
+      <Id Type="CubeBlock" Subtype="Timber10" />
+      <Id Type="CubeBlock" Subtype="TimberRound10" />
+    </Constraint>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Tent" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+      <UseObject Dummy="detector_ownership" Name="ownership"/>
+      <UseObject Dummy="detector_respawn" Name="respawn"/>
+      <UseObject Dummy="detector_wardrobe" Name="wardrobe"/>
+    </UseObjects>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Tent" />
+    <Component Type="RespawnComponent" />
+    <Component Type="BindableRespawnComponent" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="UseObjectsComponent" Subtype="Tent" />
+    <Component Type="Inventory" Subtype="TentInventory" />
+    <Component Type="InventorySpawnComponent" />
+  </Definition>
+</Definitions>

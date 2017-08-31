@@ -1,0 +1,2846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmPumpkin_Test</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- _____________________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability="0.5">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.0025</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>.0025</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+<!-- _____________________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".5">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.0025</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.0025</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>.005</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- _____________________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+		  <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+<!-- -->
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmPumpkin_Test</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- _____________________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>.01</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+		  <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+<!-- -->
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmPumpkin_Compost_Test</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability="1">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+		  <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+  <!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmPumpkin</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- _____________________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+		  <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+<!-- -->
+<!-- _____________________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- _____________________________________________________________________________________ -->
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmPumpkin</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- _____________________________________________________________________________________ -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+		  <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+<!-- -->
+<!-- _____________________________________________________________________________________ -->
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmPumpkin_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+		  <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmPumpkin_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Pumpkin"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+		  <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+  <!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmCabbage</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmCabbage</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmCabbage_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmCabbage_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Cabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+  <!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmRedCabbage</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmRedCabbage</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmRedCabbage_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmRedCabbage_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_RedCabbage"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmFlax</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmFlax</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmFlax_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability="1">
+        <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability="1">
+        <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmFlax_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_FlaxStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmWheat</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmWheat</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmWheat_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmWheat_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <NextStep>Dead</NextStep>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_WheatStraws"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmHerbs</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Herbs_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Herbs_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmHerbs</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmHerbs_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Herbs_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Herbs_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmHerbs_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Herbs"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmTrees</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall_Seeds</NextStep>
+        <TimeToNextStepInHours>.45</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>3</Min>
+            <Max>6</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall_Seeds" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="TreeSmall">
+            <Id Type="ConsumableItem" Subtype="TreeSmall_Seed"/>
+            <Min>2</Min>
+            <Max>5</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall2</NextStep>
+        <TimeToNextStepInHours>2</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall2" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall_Seeds2</NextStep>
+        <TimeToNextStepInHours>.45</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>3</Min>
+            <Max>6</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall_Seeds2" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="TreeSmall">
+            <Id Type="ConsumableItem" Subtype="TreeSmall_Seed"/>
+            <Min>2</Min>
+            <Max>5</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmTrees</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="TreeSmall" StartingProbability="1">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall_Seeds</NextStep>
+        <TimeToNextStepInHours>.45</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>3</Min>
+            <Max>6</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall_Seeds" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="TreeSmall">
+            <Id Type="ConsumableItem" Subtype="TreeSmall_Seed"/>
+            <Min>2</Min>
+            <Max>5</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmTrees_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall_Seeds</NextStep>
+        <TimeToNextStepInHours>.45</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>3</Min>
+            <Max>6</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall_Seeds" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="TreeSmall">
+            <Id Type="ConsumableItem" Subtype="TreeSmall_Seed"/>
+            <Min>2</Min>
+            <Max>5</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall2" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall_Seeds2</NextStep>
+        <TimeToNextStepInHours>.45</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>3</Min>
+            <Max>6</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall_Seeds2" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="TreeSmall">
+            <Id Type="ConsumableItem" Subtype="TreeSmall_Seed"/>
+            <Min>2</Min>
+            <Max>5</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmTrees_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="TreeSmall" StartingProbability="1">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>TreeSmall_Seeds</NextStep>
+        <TimeToNextStepInHours>.45</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Min>3</Min>
+            <Max>6</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="TreeSmall_Seeds" StartingProbability="0">
+        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="TreeSmall">
+            <Id Type="ConsumableItem" Subtype="TreeSmall_Seed"/>
+            <Min>2</Min>
+            <Max>5</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmNorden_Spalt</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmNorden_Spalt</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmNorden_Spalt_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herbs_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmNorden_Spalt_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Spalt"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- =============================================================================================================== -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmNorden_Barley</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmNorden_Barley</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmNorden_Barley_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling" StartingProbability=".7">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Sapling2" StartingProbability=".3">
+        <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Young2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown2</NextStep>
+        <TimeToNextStepInHours>.5</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Withered2</NextStep>
+        <TimeToNextStepInHours>4</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Withering_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered2" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- ======================================================================================= -->
+  <Definition xsi:type="VR.EI.FarmableEnvironmentItem">
+    <Id>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmNorden_Barley_Compost</SubtypeId>
+    </Id>
+    <DeadState>Dead</DeadState>
+    <GrowthSteps>
+<!-- ___________________________________________________________________________ -->
+<!-- -->
+      <GrowthStep Name="Young" StartingProbability="1">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStepInHours>1</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley_Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Grown" StartingProbability="0">
+        <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStepInHours>24</TimeToNextStepInHours>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="InventoryItem" Subtype="Rotten_Norden_Barley"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+<!-- -->
+<!-- ___________________________________________________________________________ -->
+      <GrowthStep Name="Dead" StartingProbability="0">
+        <!-- I'm in the dead state, please remove me from the world :) -->
+      </GrowthStep>
+    </GrowthSteps>
+    <MaxSlope>30</MaxSlope>
+  </Definition>
+<!-- =============================================================================================================== -->
+</Definitions>

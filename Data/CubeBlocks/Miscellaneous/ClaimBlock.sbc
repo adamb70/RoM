@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="ClaimBlock" />
+    <DisplayName>DisplayName_Block_ClaimBlock</DisplayName>
+    <BlockPairName>ClaimBlock</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\ClaimBlock.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\ClaimBlock.mwm</Model>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count="20" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.7" File="Models\Cubes\large\ClaimBlock_Construction_1.mwm" />
+    </BuildProgressModels>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GuiVisible>true</GuiVisible>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <MaxIntegrity>1000</MaxIntegrity>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Volumetric</PlacementMode>
+        <MaxAllowed>0.5</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>InVoxel</PlacementMode>
+        <MaxAllowed>0.5</MaxAllowed>
+        <MinAllowed>0.2</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ClaimBlockComponentDefinition">
+    <Id Type="MyObjectBuilder_ClaimBlockComponent" Subtype="ClaimBlockTier1" />
+    <ContextMenuId Type="MyObjectBuilder_ContextMenu" Subtype="ClaimBlock"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityBannerComponentDefinition">
+    <Id Type="MyObjectBuilder_OwnershipBannerComponent" Subtype="ClaimBlockBanner" />
+    <Material>ShieldMaterial</Material>
+    <Type>Player</Type>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="ClaimBlock" />
+    <Component Type="ClaimBlockComponent" Subtype="ClaimBlockTier1" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="ClaimBlockRespawnComponent" />
+    <Component Type="OwnershipBannerComponent" Subtype="ClaimBlockBanner" />
+  </Definition>
+
+</Definitions>

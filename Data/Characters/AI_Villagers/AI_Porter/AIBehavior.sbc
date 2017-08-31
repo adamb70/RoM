@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<AIBehaviors>
+		<AIBehavior xsi:type="MyObjectBuilder_BehaviorTreeDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_BehaviorTreeDefinition</TypeId>
+				<SubtypeId>PeasantBehavior</SubtypeId>
+			</Id>
+			<FirstNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+				<BTNodes>
+					<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+						<BTNodes>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+								<ActionName>HasPlaceArea</ActionName>
+								<Parameters>
+									<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+								</Parameters>
+							</BTNode>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+								<BTNodes>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+										<BTNodes>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+												<ActionName>FindClosestPlaceAreaInRadius</ActionName>
+												<Parameters>
+													<Parameter xsi:type="FloatType" FloatValue="1000" />
+													<Parameter xsi:type="StringType" StringValue="ForestingArea" />
+													<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+												</Parameters>
+											</BTNode>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+												<ActionName>IsWoodInPlaceArea</ActionName>
+												<Parameters>
+													<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+													<Parameter xsi:type="MemType" MemName="ItemTarget" />
+												</Parameters>
+											</BTNode>
+										</BTNodes>
+										<Name>FindForestingSequence</Name>
+									</BTNode>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+										<BTNodes>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+												<ActionName>FindClosestPlaceAreaInRadius</ActionName>
+												<Parameters>
+													<Parameter xsi:type="FloatType" FloatValue="1000" />
+													<Parameter xsi:type="StringType" StringValue="MiningArea" />
+													<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+												</Parameters>
+											</BTNode>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+												<ActionName>IsStoneOreInPlaceArea</ActionName>
+												<Parameters>
+													<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+													<Parameter xsi:type="MemType" MemName="ItemTarget" />
+												</Parameters>
+											</BTNode>
+										</BTNodes>
+										<Name>FindMiningSequence</Name>
+									</BTNode>
+								</BTNodes>
+								<Name>FindWorkPlaceSelector</Name>
+							</BTNode>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+								<ActionName>HasPlaceArea</ActionName>
+								<Parameters>
+									<Parameter xsi:type="MemType" MemName="StockpileTarget" />
+								</Parameters>
+							</BTNode>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+								<ActionName>FindClosestPlaceAreaInRadius</ActionName>
+								<Parameters>
+									<Parameter xsi:type="FloatType" FloatValue="1000" />
+									<Parameter xsi:type="StringType" StringValue="Stockpile" />
+									<Parameter xsi:type="MemType" MemName="StockpileTarget" />
+								</Parameters>
+							</BTNode>
+						</BTNodes>
+						<Name>CheckValidWorkSelector</Name>
+					</BTNode>
+					<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+						<BTNodes>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+								<BTNodes>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeDecoratorNode">
+										<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+											<BTNodes>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+													<BTNodes>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+															<BTNodes>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																	<ActionName>IsWoodInPlaceArea</ActionName>
+																	<Parameters>
+																		<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+																		<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																	</Parameters>
+																</BTNode>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																	<ActionName>IsStoneOreInPlaceArea</ActionName>
+																	<Parameters>
+																		<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+																		<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																	</Parameters>
+																</BTNode>
+															</BTNodes>
+															<Name>CheckForItemsSelector</Name>
+														</BTNode>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+															<BTNodes>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+																	<BTNodes>
+																		<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																			<ActionName>TryReserveEntity</ActionName>
+																			<Parameters>
+																				<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																				<Parameter xsi:type="IntType" IntValue="20000" />
+																			</Parameters>
+																		</BTNode>
+																		<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+																			<BTNodes>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+																					<BTNodes>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																							<ActionName>FindRandomWoodInPlaceArea</ActionName>
+																							<Parameters>
+																								<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+																								<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																							</Parameters>
+																						</BTNode>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeDecoratorNode">
+																							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+																								<BTNodes>
+																									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																										<ActionName>ClearTarget</ActionName>
+																										<Parameters>
+																											<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																										</Parameters>
+																									</BTNode>
+																									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																										<ActionName>DummyFailingNode</ActionName>
+																									</BTNode>
+																								</BTNodes>
+																								<Name>Sequence</Name>
+																							</BTNode>
+																							<DecoratorLogic xsi:type="CounterLogic">
+																								<Count>3</Count>
+																							</DecoratorLogic>
+																							<DefaultReturnValue>SUCCESS</DefaultReturnValue>
+																						</BTNode>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																							<ActionName>DummyRunningNode</ActionName>
+																						</BTNode>
+																					</BTNodes>
+																					<Name>FindNewWoodSequence</Name>
+																				</BTNode>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+																					<BTNodes>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																							<ActionName>FindRandomStoneOreInPlaceArea</ActionName>
+																							<Parameters>
+																								<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+																								<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																							</Parameters>
+																						</BTNode>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeDecoratorNode">
+																							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+																								<BTNodes>
+																									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																										<ActionName>ClearTarget</ActionName>
+																										<Parameters>
+																											<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																										</Parameters>
+																									</BTNode>
+																									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																										<ActionName>DummyFailingNode</ActionName>
+																									</BTNode>
+																								</BTNodes>
+																								<Name>Sequence</Name>
+																							</BTNode>
+																							<DecoratorLogic xsi:type="TimerLogic">
+																								<TimeInMs>3</TimeInMs>
+																							</DecoratorLogic>
+																							<DefaultReturnValue>SUCCESS</DefaultReturnValue>
+																						</BTNode>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																							<ActionName>DummyRunningNode</ActionName>
+																						</BTNode>
+																					</BTNodes>
+																					<Name>FindNewStoneSequence</Name>
+																				</BTNode>
+																			</BTNodes>
+																			<Name>Selector</Name>
+																			<IsMemorable>true</IsMemorable>
+																		</BTNode>
+																	</BTNodes>
+																	<Name>TryReserveItemSelector</Name>
+																</BTNode>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																	<ActionName>SetTarget</ActionName>
+																	<Parameters>
+																		<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																	</Parameters>
+																</BTNode>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																	<ActionName>SwitchToRun</ActionName>
+																</BTNode>
+															</BTNodes>
+															<Name>SetTargetSequence</Name>
+														</BTNode>
+													</BTNodes>
+													<Name>ItemFinderSequence</Name>
+													<IsMemorable>true</IsMemorable>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+													<BTNodes>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+															<ActionName>FindClosestPlaceAreaInRadius</ActionName>
+															<Parameters>
+																<Parameter xsi:type="FloatType" FloatValue="1000" />
+																<Parameter xsi:type="StringType" StringValue="Stockpile" />
+																<Parameter xsi:type="MemType" MemName="StockpileTarget" />
+															</Parameters>
+														</BTNode>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+															<ActionName>SetAndAimTarget</ActionName>
+															<Parameters>
+																<Parameter xsi:type="MemType" MemName="StockpileTarget" />
+															</Parameters>
+														</BTNode>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+															<ActionName>SwitchToWalk</ActionName>
+														</BTNode>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+															<BTNodes>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																	<ActionName>IsAtTargetPosition</ActionName>
+																	<Parameters>
+																		<Parameter xsi:type="FloatType" FloatValue="2" />
+																	</Parameters>
+																</BTNode>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																	<ActionName>GotoAndAimTarget</ActionName>
+																</BTNode>
+															</BTNodes>
+															<Name>GotoWorkplaceSelector</Name>
+														</BTNode>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+															<ActionName>DummyFailingNode</ActionName>
+														</BTNode>
+													</BTNodes>
+													<Name>GoToStockpileSequence</Name>
+													<IsMemorable>true</IsMemorable>
+												</BTNode>
+											</BTNodes>
+											<Name>Selector</Name>
+											<IsMemorable>true</IsMemorable>
+										</BTNode>
+										<DecoratorLogic xsi:type="CounterLogic">
+											<Count>3</Count>
+										</DecoratorLogic>
+										<DefaultReturnValue>RUNNING</DefaultReturnValue>
+									</BTNode>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+										<ActionName>EquipItem</ActionName>
+										<Parameters>
+											<Parameter xsi:type="StringType" StringValue="ManipulationTool" />
+										</Parameters>
+									</BTNode>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+										<BTNodes>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+												<BTNodes>
+													<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+														<ActionName>IsHoldingItem</ActionName>
+													</BTNode>
+													<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+														<BTNodes>
+															<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																<ActionName>IsAtTargetPosition</ActionName>
+																<Parameters>
+																	<Parameter xsi:type="FloatType" FloatValue="1" />
+																</Parameters>
+															</BTNode>
+															<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																<ActionName>IsLookingAtTarget</ActionName>
+															</BTNode>
+														</BTNodes>
+														<Name>IsAtItemSequence</Name>
+													</BTNode>
+													<BTNode xsi:type="MyObjectBuilder_BehaviorTreeDecoratorNode">
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+															<ActionName>PlaySound</ActionName>
+															<Parameters>
+																<Parameter xsi:type="StringType" StringValue="BotPeasantJob" />
+															</Parameters>
+														</BTNode>
+														<DecoratorLogic xsi:type="TimerLogic">
+															<TimeInMs>10000</TimeInMs>
+														</DecoratorLogic>
+														<DefaultReturnValue>FAILURE</DefaultReturnValue>
+													</BTNode>
+													<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+														<ActionName>GotoAndAimTarget</ActionName>
+													</BTNode>
+												</BTNodes>
+												<Name>GotoItemSelector</Name>
+												<IsMemorable>true</IsMemorable>
+											</BTNode>
+											<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+												<BTNodes>
+													<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+														<ActionName>IsHoldingItem</ActionName>
+													</BTNode>
+													<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+														<ActionName>Collect</ActionName>
+													</BTNode>
+												</BTNodes>
+												<Name>CollectItemSelector</Name>
+											</BTNode>
+										</BTNodes>
+										<Name>CollectItemsSequence</Name>
+									</BTNode>
+									<BTNode xsi:type="MyObjectBuilder_BehaviorTreeDecoratorNode">
+										<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+											<BTNodes>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>IsHoldingItem</ActionName>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+													<BTNodes>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+															<ActionName>HasPlaceArea</ActionName>
+															<Parameters>
+																<Parameter xsi:type="MemType" MemName="StockpileTarget" />
+															</Parameters>
+														</BTNode>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+															<ActionName>FindClosestPlaceAreaInRadius</ActionName>
+															<Parameters>
+																<Parameter xsi:type="FloatType" FloatValue="1000" />
+																<Parameter xsi:type="StringType" StringValue="Stockpile" />
+																<Parameter xsi:type="MemType" MemName="StockpileTarget" />
+															</Parameters>
+														</BTNode>
+													</BTNodes>
+													<Name>FindStockpileSelector</Name>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>SwitchToWalk</ActionName>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>SetAndAimTarget</ActionName>
+													<Parameters>
+														<Parameter xsi:type="MemType" MemName="StockpileTarget" />
+													</Parameters>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+													<BTNodes>
+														<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+															<BTNodes>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+																	<BTNodes>
+																		<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																			<ActionName>IsHoldingItem</ActionName>
+																		</BTNode>
+																		<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+																			<BTNodes>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																					<ActionName>IsTargetValid</ActionName>
+																					<Parameters>
+																						<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																					</Parameters>
+																				</BTNode>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																					<ActionName>TryReserveEntity</ActionName>
+																					<Parameters>
+																						<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																						<Parameter xsi:type="IntType" IntValue="20000" />
+																					</Parameters>
+																				</BTNode>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																					<ActionName>SetTarget</ActionName>
+																					<Parameters>
+																						<Parameter xsi:type="MemType" MemName="ItemTarget" />
+																					</Parameters>
+																				</BTNode>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+																					<BTNodes>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+																							<BTNodes>
+																								<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																									<ActionName>IsAtTargetPosition</ActionName>
+																									<Parameters>
+																										<Parameter xsi:type="FloatType" FloatValue="1" />
+																									</Parameters>
+																								</BTNode>
+																								<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																									<ActionName>IsLookingAtTarget</ActionName>
+																								</BTNode>
+																							</BTNodes>
+																							<Name>TargetCheckSequence</Name>
+																						</BTNode>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																							<ActionName>GotoAndAimTarget</ActionName>
+																						</BTNode>
+																					</BTNodes>
+																					<Name>GotoSelector</Name>
+																				</BTNode>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+																					<BTNodes>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																							<ActionName>IsHoldingItem</ActionName>
+																						</BTNode>
+																						<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																							<ActionName>Collect</ActionName>
+																						</BTNode>
+																					</BTNodes>
+																					<Name>CollectSelector</Name>
+																					<IsMemorable>true</IsMemorable>
+																				</BTNode>
+																			</BTNodes>
+																			<Name>ReacquireItemSequence</Name>
+																			<IsMemorable>true</IsMemorable>
+																		</BTNode>
+																	</BTNodes>
+																	<Name>Selector</Name>
+																</BTNode>
+																<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+																	<BTNodes>
+																		<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																			<ActionName>SetTarget</ActionName>
+																			<Parameters>
+																				<Parameter xsi:type="MemType" MemName="StockpileTarget" />
+																			</Parameters>
+																		</BTNode>
+																		<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+																			<BTNodes>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																					<ActionName>IsAtTargetPosition</ActionName>
+																					<Parameters>
+																						<Parameter xsi:type="FloatType" FloatValue="0.75" />
+																					</Parameters>
+																				</BTNode>
+																				<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+																					<ActionName>GotoAndAimTarget</ActionName>
+																				</BTNode>
+																			</BTNodes>
+																			<Name>Selector</Name>
+																		</BTNode>
+																	</BTNodes>
+																	<Name>Sequence</Name>
+																	<IsMemorable>true</IsMemorable>
+																</BTNode>
+															</BTNodes>
+															<Name>Sequence</Name>
+														</BTNode>
+													</BTNodes>
+													<Name>IsAtStockpileSelector</Name>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>DropItem</ActionName>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>SwitchToRun</ActionName>
+												</BTNode>
+											</BTNodes>
+											<Name>TakeItemToStockpileSequence</Name>
+											<IsMemorable>true</IsMemorable>
+										</BTNode>
+										<DecoratorLogic xsi:type="CounterLogic">
+											<Count>8</Count>
+										</DecoratorLogic>
+										<DefaultReturnValue>RUNNING</DefaultReturnValue>
+									</BTNode>
+								</BTNodes>
+								<Name>GatherStuffSequence</Name>
+								<IsMemorable>true</IsMemorable>
+							</BTNode>
+							<BTNode xsi:type="MyObjectBuilder_BehaviorTreeDecoratorNode">
+								<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSelectorNode">
+									<BTNodes>
+										<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+											<BTNodes>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>FindClosestPlaceAreaInRadius</ActionName>
+													<Parameters>
+														<Parameter xsi:type="FloatType" FloatValue="1000" />
+														<Parameter xsi:type="StringType" StringValue="ForestingArea" />
+														<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+													</Parameters>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>IsWoodInPlaceArea</ActionName>
+													<Parameters>
+														<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+														<Parameter xsi:type="MemType" MemName="ItemTarget" />
+													</Parameters>
+												</BTNode>
+											</BTNodes>
+											<Name>CheckForestingSequence</Name>
+										</BTNode>
+										<BTNode xsi:type="MyObjectBuilder_BehaviorTreeSequenceNode">
+											<BTNodes>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>FindClosestPlaceAreaInRadius</ActionName>
+													<Parameters>
+														<Parameter xsi:type="FloatType" FloatValue="1000" />
+														<Parameter xsi:type="StringType" StringValue="MiningArea" />
+														<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+													</Parameters>
+												</BTNode>
+												<BTNode xsi:type="MyObjectBuilder_BehaviorTreeActionNode">
+													<ActionName>IsStoneOreInPlaceArea</ActionName>
+													<Parameters>
+														<Parameter xsi:type="MemType" MemName="WorkPlaceTarget" />
+														<Parameter xsi:type="MemType" MemName="ItemTarget" />
+													</Parameters>
+												</BTNode>
+											</BTNodes>
+											<Name>CheckMiningSequence</Name>
+										</BTNode>
+									</BTNodes>
+									<Name>LookForNewWorkSelector</Name>
+								</BTNode>
+								<DecoratorLogic xsi:type="CounterLogic">
+									<Count>30</Count>
+								</DecoratorLogic>
+								<DefaultReturnValue>FAILURE</DefaultReturnValue>
+							</BTNode>
+						</BTNodes>
+						<Name>MainSelector</Name>
+					</BTNode>
+				</BTNodes>
+				<Name>MainSequence</Name>
+			</FirstNode>
+			<Behavior>Peasant</Behavior>
+		</AIBehavior>
+	</AIBehaviors>
+</Definitions>

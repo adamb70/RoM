@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Bots>
+		<Bot xsi:type="MyObjectBuilder_HumanoidBotDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_HumanoidBot</TypeId>
+				<SubtypeId>Bavar_Baker_Male</SubtypeId>
+			</Id>
+			<DisplayName>Bavar Baker</DisplayName>
+			<Icon>Textures\GUI\Icons\SpawnServant.dds</Icon>
+			<BotModel>Bavar_Guard_male</BotModel>
+			<BotBehaviorTree Subtype="Bavar_Citizen_Standstill" />
+			<BehaviorType>Peasant</BehaviorType>
+			<TargetType>Humanoid</TargetType>
+			<StartingItem Subtype="WoodenMallet" />
+			<InventoryItems>
+
+			</InventoryItems>
+			<InventoryContentGenerated>true</InventoryContentGenerated>
+			<InventoryContainerTypeId>
+				<TypeId>ContainerTypeDefinition</TypeId>
+				<SubtypeId>Bavar_GuardBagContent</SubtypeId>
+			</InventoryContainerTypeId>
+			<FactionTag>BVAR</FactionTag>
+			<Commandable>false</Commandable>
+			<Public>true</Public>
+			<AvailableInSurvival>false</AvailableInSurvival>
+		</Bot>
+
+		<Bot xsi:type="MyObjectBuilder_HumanoidBotDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_HumanoidBot</TypeId>
+				<SubtypeId>Bavar_Baker_Female</SubtypeId>
+			</Id>
+			<DisplayName>Bavar Baker</DisplayName>
+			<Icon>Textures\GUI\Icons\SpawnServant.dds</Icon>
+			<BotModel>Bavar_Peasant_female</BotModel>
+			<BotBehaviorTree Subtype="Bavar_Citizen_Standstill" />
+			<BehaviorType>Peasant</BehaviorType>
+			<TargetType>Humanoid</TargetType>
+			<StartingItem Subtype="WoodenMallet" />
+			<InventoryItems>
+
+			</InventoryItems>
+			<InventoryContentGenerated>true</InventoryContentGenerated>
+			<InventoryContainerTypeId>
+				<TypeId>ContainerTypeDefinition</TypeId>
+				<SubtypeId>Bavar_GuardBagContent</SubtypeId>
+			</InventoryContainerTypeId>
+			<FactionTag>BVAR</FactionTag>
+			<Commandable>false</Commandable>
+			<Public>true</Public>
+			<AvailableInSurvival>false</AvailableInSurvival>
+		</Bot>
+
+
+	</Bots>
+</Definitions>

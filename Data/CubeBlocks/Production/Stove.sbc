@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="Stove" />
+      <BlockPairName>Stove</BlockPairName>
+      <DisplayName>Stove</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Stove.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="8" y="7" z="4" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Cooking\Fancy_range.mwm</Model>
+      <Components>
+        <Component Subtype="IronIngot" Count="9" />
+      </Components>
+      <CriticalComponent Subtype="IronIngot" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+      </MountPoints>
+      <ParticleScale>0.22</ParticleScale>
+      <LightRadius Min="6.5" Max="6.5" Default="6.5" />
+      <LightFalloff Min="0.3" Max="0.3" Default="0.3" />
+      <LightIntensity Min="0.3" Max="0.3" Default="0.3" />
+      <PrimarySound>BlockBonfire</PrimarySound>
+      <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
+      <PhysicalMaterial>Iron</PhysicalMaterial>
+      <Mass>12</Mass>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stove"/>
+    <DisplayName>Stove</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Stove.dds</Icon>
+    <Category>Anvil</Category>
+    <Prerequisites>
+      <Item Amount="9" Type="InventoryItem" Subtype="IronIngot" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Stove" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="Stove" />
+    <Effects>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
+      </Effect>
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_furnace">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Cooking"/>
+      </Effect>
+    </Effects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Stove" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_furnace" Name="inventory" />
+      <UseObject Dummy="detector_inventory" Name="inventory" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Stove"/>
+    <CraftingCategories>
+      <Category>Cooking_Oven</Category>
+      <Category>Cooking_Table</Category>
+      <Category>Cooking</Category>
+    </CraftingCategories>
+    <CraftingInventory>StoveInventory</CraftingInventory>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="StoveInventory" />
+    <InventoryName>StoveInventory</InventoryName>
+    <DisplayName>Stove</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="StoveStorage" />
+    <InventoryName>StoveStorage</InventoryName>
+    <DisplayName>Stove Storage</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Stove" />
+    <Component Type="Inventory" Subtype="StoveInventory" />
+    <Component Type="Inventory" Subtype="StoveStorage" />
+    <Component Type="CraftingComponent" Subtype="Stove" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="Stove" />
+    <Component Type="UseObjectsComponent" Subtype="Stove" />
+    <Component Type="Inventory" Subtype="Fuel" />
+    <Component Type="FuelComponent" Subtype="Fire" />
+  </Definition>
+
+
+</Definitions>

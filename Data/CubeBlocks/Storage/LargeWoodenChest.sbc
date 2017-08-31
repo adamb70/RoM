@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodChestLarge"/>
+    <DisplayName>DisplayName_Block_WoodChestLarge</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\WoodChestLarge.dds</Icon>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Timber" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="WoodChestLarge" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="WoodChestLargeInventory" />
+    <MaxItemCount>28</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="false">
+      <Id Type="InventoryItem" Subtype="Log250cm" />
+      <Id Type="InventoryItem" Subtype="LargeStone" />
+      <Id Type="InventoryItem" Subtype="LargeSandStone" />
+      <Id Type="CubeBlock" Subtype="Timber10" />
+      <Id Type="CubeBlock" Subtype="TimberRound10" />
+    </Constraint>
+  </Definition>
+
+</Definitions>

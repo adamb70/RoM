@@ -1,0 +1,391 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Books</DisplayName>
+      <Name>Books</Name>
+      <SearchBlocks>true</SearchBlocks>
+      <ShowInCreative>true</ShowInCreative>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <ItemIds>
+        <string>CubeBlockDefinition/Carpentry_Book</string>
+        <string>CubeBlockDefinition/Blacksmithing_Book</string>
+        <string>CubeBlockDefinition/Tailor_Book</string>
+        <string>CubeBlockDefinition/Cooking_Book</string>
+        <string>CubeBlockDefinition/Farming_Book</string>
+        <string>CubeBlockDefinition/Apothocary_Book</string>
+        <string>CubeBlockDefinition/Masonry_Book</string>
+        <string>CubeBlockDefinition/Machinesmith_Book</string>
+      </ItemIds>
+    </Category>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Kharidian Tech Tree</DisplayName>
+      <Name>Kharidian Tech Tree</Name>
+      <SearchBlocks>false</SearchBlocks>
+      <ShowInCreative>true</ShowInCreative>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <ItemIds>
+        <string>MyObjectBuilder_FurnaceBlock/Kharidian_Furnace</string>
+      </ItemIds>
+    </Category>
+
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Norden Tech Tree</DisplayName>
+      <Name>Norden Tech Tree</Name>
+      <SearchBlocks>false</SearchBlocks>
+      <ShowInCreative>true</ShowInCreative>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <ItemIds>
+        <string>MyObjectBuilder_FurnaceBlock/Norden_Furnace</string>
+      </ItemIds>
+    </Category>
+
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Dwarven Tech Tree</DisplayName>
+      <Name>Dwarven Tech Tree</Name>
+      <SearchBlocks>true</SearchBlocks>
+      <ShowInCreative>true</ShowInCreative>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <ItemIds>
+        <string>MyObjectBuilder_FurnaceBlock/Dwarven_Furnace</string>
+        <string>MyObjectBuilder_FurnaceBlock/Brew_Dwarven_MashingStation</string>
+        <string>CubeBlock/Brew_Dwarven_LauteringStation</string>
+        <string>MyObjectBuilder_FurnaceBlock/Brew_Dwarven_BoilStation</string>
+        <string>CubeBlock/Brew_Dwarven_WhirlpoolingStation</string>
+        <string>CubeBlock/Brew_Dwarven_CoolingStation</string>
+        <string>CubeBlock/Brew_Dwarven_FermentingStation</string>
+        <string>CubeBlock/Brew_Dwarven_MaturingFilteringStation</string>
+      </ItemIds>
+    </Category>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_CharacterAnimations</DisplayName>
+      <Name>CharacterAnimations</Name>
+      <IsShipCategory>true</IsShipCategory>
+      <ShowAnimations>true</ShowAnimations>
+      <ItemIds>
+        <string>Wave</string>
+        <string>Victory</string>
+        <string>Thumb-Up</string>
+        <string>FacePalm</string>
+      </ItemIds>
+    </Category>    
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_CharacterTools</DisplayName>
+      <Name>CharacterTools</Name>
+      <SearchBlocks>false</SearchBlocks>
+      <AvailableInSurvival>false</AvailableInSurvival>
+      <ItemIds>
+        <string>PrefabThrowerDefinition/LargeProjectilePrefab</string>
+        <string>PrefabThrowerDefinition/MediumProjectilePrefab</string>
+        <string>PrefabThrowerDefinition/LargeProjectilePrefab10</string>
+        <string>PrefabThrowerDefinition/MediumProjectilePrefab10</string>
+        <string>RopeDefinition/BasicRope</string>
+        <string>RopeDefinition/RayCastTearableRope</string>
+        <string>Hammer</string>
+        <string>DisassemblyHammer</string>
+        <string>WoodenMallet</string>
+        <string>DisassemblyWoodenMallet</string>
+        <string>Axe</string>
+        <string>StoneAxe</string>
+        <string>PickAxe</string>
+        <string>Mace</string>
+        <string>Sword</string>
+        <string>HandTorchItem</string>
+        <string>ManipulationTool</string>
+        <string>Crossbow</string>
+        <string>AreaMarker/RespawnSafeZone</string>
+        <string>Plow</string>
+        <string>SeedBagPumpkin</string>
+        <string>SeedBagCabbage</string>
+        <string>SeedBagFlax</string>
+        <string>SeedBagWheat</string>
+        <string>SeedBagHerbs</string>
+      </ItemIds>
+    </Category>
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_CharacterTools</DisplayName>
+      <Name>CharacterToolsSurvival</Name>
+      <SearchBlocks>false</SearchBlocks>
+      <ShowInCreative>false</ShowInCreative>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <ItemIds>
+        <string>RopeDefinition/BasicRope</string>
+        <string>RopeDefinition/RayCastTearableRope</string>       
+        <string>ManipulationTool</string>
+        <string>Hammer</string>
+        <string>WoodenMallet</string>
+        <string>Axe</string>
+        <string>StoneAxe</string>
+        <string>PickAxe</string>
+        <string>Mace</string>
+        <string>Sword</string>
+        <string>Crossbow</string>
+        <string>Plow</string>
+        <string>SeedBagPumpkin</string>
+        <string>SeedBagCabbage</string>
+        <string>SeedBagFlax</string>
+      </ItemIds>
+    </Category>
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_VoxelHands</DisplayName>
+      <Name>VoxelHands</Name>
+      <Public>true</Public>
+      <AvailableInSurvival>false</AvailableInSurvival>
+      <ItemIds>
+        <string>VoxelHandDefinition/Box</string>
+        <string>VoxelHandDefinition/Capsule</string>
+        <string>VoxelHandDefinition/Ramp</string>
+        <string>VoxelHandDefinition/Sphere</string>
+        <string>VoxelHandDefinition/AutoLevel</string>
+      </ItemIds>
+    </Category>
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_GeneratedBlocks</DisplayName>
+      <Name>GeneratedBlocks</Name>
+      <Public>false</Public>
+      <ItemIds>
+        <string>CubeBlock/GeneratedTileTop</string>
+        <string>CubeBlock/GeneratedTileTopEdgeLeft</string>
+        <string>CubeBlock/GeneratedTileTopEdgeRight</string>
+        <string>CubeBlock/GeneratedTileSideEdgeLeft</string>
+        <string>CubeBlock/GeneratedTileSideEdgeRight</string>
+        <string>CubeBlock/GeneratedTileSide</string>
+        <string>CubeBlock/GeneratedTileTopOddEdgeLeft</string>
+        <string>CubeBlock/GeneratedTileTopOddEdgeRight</string>
+        <string>CubeBlock/GeneratedTileSideCorner</string>
+        <string>CubeBlock/GeneratedTileSideCornerIn_1</string>
+        <string>CubeBlock/GeneratedTileSideCornerIn_2</string>
+        <string>CubeBlock/GeneratedTileSideCornerIn_Mir</string>
+        <string>CubeBlock/GeneratedTileSideCornerIn_3</string>
+        <string>CubeBlock/GeneratedTileSideCornerIn_4</string>
+        <string>CubeBlock/GeneratedWoodTop</string>
+        <string>CubeBlock/GeneratedWoodSideSharp</string>
+        <string>CubeBlock/GeneratedWoodTopEdgeLeft</string>
+        <string>CubeBlock/GeneratedWoodTopEdgeRight</string>
+        <string>CubeBlock/GeneratedWoodSideEdgeLeft</string>
+        <string>CubeBlock/GeneratedWoodSideEdgeRight</string>
+        <string>CubeBlock/GeneratedWoodSide</string>
+        <string>CubeBlock/GeneratedWoodOddEdgeLeft</string>
+        <string>CubeBlock/GeneratedWoodOddEdgeRight</string>
+        <string>CubeBlock/GeneratedWoodSideCornerIn_1</string>
+        <string>CubeBlock/GeneratedWoodSideCornerIn_2</string>
+        <string>CubeBlock/GeneratedWoodSideCornerIn_Mir</string>
+        <string>CubeBlock/GeneratedWoodSideCornerIn_3</string>
+        <string>CubeBlock/GeneratedWoodSideCornerIn_4</string>
+        <string>CubeBlock/GeneratedStoneArchLeft</string>
+        <string>CubeBlock/GeneratedStoneArchRight</string>
+        <string>CubeBlock/GeneratedStoneBattlementEdgeLeft</string>
+        <string>CubeBlock/GeneratedStoneBattlementEdgeRight</string>
+        <string>CubeBlock/GeneratedStoneBattlementEdgeLeft_2</string>
+        <string>CubeBlock/GeneratedStoneSlopeEdgeLeft</string>
+        <string>CubeBlock/GeneratedStoneSlopeStairs</string>
+        <string>CubeBlock/GeneratedStoneBattlementMir</string>
+        <string>CubeBlock/GeneratedHayTop_1</string>
+        <string>CubeBlock/GeneratedHayTop_2</string>
+        <string>CubeBlock/GeneratedHayTopEdgeLeft_1</string>
+        <string>CubeBlock/GeneratedHayTopEdgeLeft_2</string>
+        <string>CubeBlock/GeneratedHayTopEdgeRight_1</string>
+        <string>CubeBlock/GeneratedTileTopCornerRound</string>
+        <string>CubeBlock/GeneratedHayTopEdgeRight_2</string>
+        <string>CubeBlock/GeneratedHaySide</string>
+        <string>CubeBlock/GeneratedHaySideEdgeRight</string>
+        <string>CubeBlock/GeneratedHaySideEdgeLeft</string>
+        <string>CubeBlock/GeneratedHayOddEdgeLeft</string>
+        <string>CubeBlock/GeneratedHayOddEdgeRight</string>
+        <string>CubeBlock/GeneratedHayTopFull</string>
+        <string>CubeBlock/GeneratedHaySideCornerIn_1</string>
+        <string>CubeBlock/GeneratedHaySideCornerIn_Mir</string>
+        <string>CubeBlock/GeneratedHaySideCornerIn_2</string>
+        <string>CubeBlock/GeneratedHaySideCorner</string>
+        <string>CubeBlock/GeneratedHaySideCornerIn_3</string>
+        <string>CubeBlock/GeneratedHaySideCornerIn</string>
+        <string>CubeBlock/GeneratedHaySideCornerIn_4</string>
+        <string>CubeBlock/GeneratedHayTopEdgeLeftFull</string>
+        <string>CubeBlock/GeneratedHayTopEdgeRightFull</string>
+        <string>CubeBlock/GeneratedWoodSideCornerIn</string>
+        <string>CubeBlock/GeneratedHayTopEdge</string>
+        <string>CubeBlock/SlicedRoofTileSlope_Top</string>
+        <string>CubeBlock/SlicedRoofTileSlope_EdgeLeft</string>
+        <string>CubeBlock/SlicedRoofTileSlope_EdgeLeftTop</string>
+        <string>CubeBlock/SlicedRoofTileSlope_EdgeRight</string>
+        <string>CubeBlock/SlicedRoofTileSlope_EdgeRightTop</string>
+        <string>CubeBlock/SlicedRoofTileCornerSharpIn_Top</string>
+        <string>CubeBlock/SlicedRoofTileCornerSharp_Top</string>
+        <string>CubeBlock/SlicedRoofTileSlopeWood_Top</string>
+        <string>CubeBlock/SlicedRoofTileSlopeWood_EdgeLeft</string>
+        <string>CubeBlock/SlicedRoofTileSlopeWood_EdgeLeftTop</string>
+        <string>CubeBlock/SlicedRoofTileSlopeWood_EdgeRight</string>
+        <string>CubeBlock/SlicedRoofTileSlopeWood_EdgeRightTop</string>
+        <string>CubeBlock/SlicedRoofTileCornerSharpInWood_Top</string>
+        <string>CubeBlock/SlicedRoofTileCornerSharpWood_Top</string>
+        <string>CubeBlock/SlicedRoofHaySlope_Top</string>
+        <string>CubeBlock/SlicedRoofHaySlope_EdgeLeft</string>
+        <string>CubeBlock/SlicedRoofHaySlope_EdgeLeftTop</string>
+        <string>CubeBlock/SlicedRoofHaySlope_EdgeRight</string>
+        <string>CubeBlock/SlicedRoofHaySlope_EdgeRightTop</string>
+        <string>CubeBlock/SlicedRoofHayCornerSharpIn_Top</string>
+        <string>CubeBlock/SlicedRoofHayCornerSharp_Top</string>
+        <string>CubeBlock/GeneratedTileSideCornerRound</string>
+      </ItemIds>
+    </Category>
+    <Category>
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_Bots</DisplayName>
+      <Name>Bots</Name>
+      <Public>true</Public>
+      <ItemIds>
+        <string>MyObjectBuilder_HumanoidBot/Space_spider</string>
+        <string>MyObjectBuilder_HumanoidBot/NormalBarbarian</string>
+        <string>MyObjectBuilder_HumanoidBot/NormalPeasant</string>
+	    	<string>MyObjectBuilder_HumanoidBot/NormalMiner</string>
+	    	<string>MyObjectBuilder_HumanoidBot/NormalWoodcutter</string>
+        <string>MyObjectBuilder_HumanoidBot/Servant</string>
+        <string>MyObjectBuilder_AnimalBot/NormalDeer</string>
+        <string>MyObjectBuilder_AnimalBot/NormalWolf</string>
+        <string>MyObjectBuilder_HumanoidBot/Child</string>
+        <string>MyObjectBuilder_HumanoidBot/Female</string>
+        <string>MyObjectBuilder_HumanoidBot/OldMale</string>
+        <string>AiCommandDefinition/CommandMinerBehavior</string>
+        <string>AiCommandDefinition/CommandPorterBehavior</string>
+        <string>AiCommandDefinition/CommandWoodcutterBehavior</string>
+        <string>AiCommandDefinition/CommandFollowerBehavior</string>
+        <string>AreaMarker/MiningArea</string>
+        <string>AreaMarker/Stockpile</string>
+        <string>AreaMarker/ForestingArea</string>
+      </ItemIds>
+    </Category>
+    <Category>
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_Consumables</DisplayName>
+      <Name>Consumables</Name>
+      <Public>true</Public>
+      <AvailableInSurvival>false</AvailableInSurvival>
+      <ItemIds>
+        <string>ConsumableItem/Berries</string>
+        <string>ConsumableItem/Mushrooms</string>
+        <string>ConsumableItem/Herbs</string>
+        <string>ConsumableItem/Roots</string>
+        <string>ConsumableItem/Meat</string>
+        <string>ConsumableItem/Pumpkin</string>
+        <string>ConsumableItem/RoastMeat</string>
+        <string>ConsumableItem/Bandage</string>
+        <string>ConsumableItem/Goulash</string>
+        <string>ConsumableItem/MushroomSoup</string>
+        <string>ConsumableItem/RootsWithShrooms</string>
+        <string>ConsumableItem/ShroomSteak</string>
+        <string>ConsumableItem/Salad</string>
+        <string>ConsumableItem/Cabbage</string>
+      </ItemIds>
+    </Category>
+    <Category>
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_Schematics</DisplayName>
+      <Name>Schematics</Name>
+      <Public>false</Public>
+      <AvailableInSurvival>false</AvailableInSurvival>
+      <ItemIds>
+        <string>SchematicItem/Masonry</string>
+        <string>SchematicItem/IronWorks</string>
+        <string>SchematicItem/StoneSlope</string>
+        <string>SchematicItem/Hardening</string>
+        <string>SchematicItem/StoneWorks</string>
+        <string>SchematicItem/DefensiveStoneWorks</string>
+        <string>SchematicItem/Battlements</string>
+        <string>SchematicItem/Carpentry</string>
+        <string>SchematicItem/Mechanics</string>
+        <string>SchematicItem/AdvancedMechanics</string>
+        <string>SchematicItem/Farming</string>
+        <string>SchematicItem/MechanizedFarmingEquipment</string>
+        <string>SchematicItem/Weaving</string>
+        <string>SchematicItem/GourmetCooking</string>
+      </ItemIds>
+    </Category>
+  </CategoryClasses>
+</Definitions>

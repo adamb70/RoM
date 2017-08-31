@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="Pickaxe"/>
+
+    <!-- Display -->
+    <DisplayName>Iron Pickaxe</DisplayName>
+    <Description>Description_Tool_Pickaxe</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronPickaxe.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\PickAxe_OneHand.mwm</Model>
+
+    <PhysicalMaterial>PickAxe</PhysicalMaterial>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>1000</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_MinerToolBehaviorDefinition" Subtype="PickaxeNormal"/>
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MinerToolBehaviorDefinition">
+    <Id Type="MinerToolBehaviorDefinition" Subtype="PickaxeNormal"/>
+    <Efficiency>3.3</Efficiency>
+    <YieldMultiplier>1.0</YieldMultiplier>
+    <MiningDistance>3</MiningDistance>
+    <MiningRadius>0.25</MiningRadius>
+    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Iron_Pickaxe"/>
+
+    <PrimaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <Sound>Swing</Sound>
+      <Animation>Mining</Animation>
+    </PrimaryEffect>
+
+    <SecondaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <Sound>Swing</Sound>
+      <Animation>Attack</Animation>
+    </SecondaryEffect>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MinerToolBehaviorDefinition">
+    <Id Type="MinerToolBehaviorDefinition" Subtype="PickaxeCombat"/>
+    <Efficiency>1</Efficiency>
+    <YieldMultiplier>0</YieldMultiplier>
+
+    <PrimaryEffect>
+      <MainHandAnimation>Attack</MainHandAnimation>
+    </PrimaryEffect>
+  </Definition>
+</Definitions>

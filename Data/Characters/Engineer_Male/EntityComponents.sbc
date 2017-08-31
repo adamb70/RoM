@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+
+  <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+    <Id Type="MyObjectBuilder_CharacterStatComponent" Subtype="RoM_male" />
+    <Stats>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Health</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Stamina</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Fury</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Food</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Mood</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Alcohol</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Poison</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Thirst</SubtypeId>
+      </Stat>	  
+    </Stats>
+    <Scripts>
+      <Script>MedievalStatEffect</Script>
+    </Scripts>
+  </Definition>
+</Definitions>

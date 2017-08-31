@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sounds>
+    <Sound>
+      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="RegularDoor_Open" />
+      <Category>IMP</Category>
+      <MaxDistance>30</MaxDistance>
+      <Volume>8</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorOpen3d01.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorOpen3d02.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorOpen3d03.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorOpen3d04.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+    <Sound>
+      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="RegularDoor_Close" />
+      <Category>IMP</Category>
+      <MaxDistance>30</MaxDistance>
+      <Volume>0.6</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorClose3d01.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorClose3d02.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorClose3d03.wav</Start>
+        </Wave>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorClose3d04.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+
+    <Sound>
+      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="RegularDoor_Move" />
+      <Category>IMP</Category>
+      <MaxDistance>30</MaxDistance>
+      <Volume>0.6</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\BLOCK/BlockDoorMove3d01.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>  </Sounds>
+
+</Definitions>

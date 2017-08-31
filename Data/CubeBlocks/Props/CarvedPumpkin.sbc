@@ -1,0 +1,136 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>CarvedPumpkin</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_CarvedPumpkin</DisplayName>
+      <BlockPairName>CarvedPumpkin</BlockPairName>
+      <Icon>Textures\GUI\Icons\Cubes\PumpkinCarved.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Small\Pumpkin_carved.mwm</Model>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+      </MountPoints>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Tag="ScrapWood" Count="4" />
+      </Components>
+      <CriticalComponent Tag="ScrapWood" Index="0" />
+      <MaxIntegrity>50</MaxIntegrity>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <ParticleScale>0.2</ParticleScale>
+      <LightRadius Min="6.5" Max="6.5" Default="6.5" />
+      <LightFalloff Min="0.65" Max="0.65" Default="0.65" />
+      <LightIntensity Min="0.24" Max="0.24" Default="0.24" />
+      <Period>0</Period>
+      <Flickering>0</Flickering>
+      <PrimarySound>BlockBonfire</PrimarySound>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Mass>5</Mass>
+      <Volume>8</Volume>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+  </CubeBlocks>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_EntityStateComponent</TypeId>
+      <SubtypeId>CarvedPumpkin</SubtypeId>
+    </Id>
+    <InitialState>On</InitialState>
+    <States>
+      <State Name="On">
+        <Transition>Off</Transition>
+      </State>
+      <State Name="Off">
+        <Transition>On</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_EntityFXComponent</TypeId>
+      <SubtypeId>CarvedPumpkin</SubtypeId>
+    </Id>
+    <Effects>
+      <Effect StartEvent="On" StopEvent="Off" Dummy="detector_pumpkin">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
+      </Effect>
+    </Effects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_UseObjectsComponent</TypeId>
+      <SubtypeId>CarvedPumpkin</SubtypeId>
+    </Id>
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_pumpkin" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_StateUseObjectComponent</TypeId>
+      <SubtypeId>CarvedPumpkin</SubtypeId>
+    </Id>
+    <Tooltip>UseObject_DynamicPress</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SupportsAccessSettings>false</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_pumpkin" From="On" To="Off" ActionName="ActionHint_DouseFire" />
+      <Trigger Dummy="detector_pumpkin" From="Off" To="On" ActionName="ActionHint_LightFire" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <EntityContainers>
+    <Container>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>CarvedPumpkin</SubtypeId>
+      </Id>
+      <DefaultComponents>
+        <Component BuilderType="MyObjectBuilder_EntityStateComponent" SubtypeId="CarvedPumpkin" ForceCreate="true"/>
+        <Component BuilderType="MyObjectBuilder_EntityFXComponent" SubtypeId="CarvedPumpkin" ForceCreate="true"/>
+        <Component BuilderType="MyObjectBuilder_UseObjectsComponent" SubtypeId="CarvedPumpkin" ForceCreate="true"/>
+        <Component BuilderType="MyObjectBuilder_StateUseObjectComponent" SubtypeId="CarvedPumpkin" ForceCreate="true"/>
+      </DefaultComponents>
+    </Container>
+  </EntityContainers>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CarvedPumpkin"/>
+    <DisplayName>DisplayName_Block_CarvedPumpkin</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\PumpkinCarved.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="ScrapWood" />
+      <Item Amount="1" Type="ConsumableItem" Subtype="Pumpkin" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="CarvedPumpkin" />
+    </Results>
+    <CraftingTime Seconds="6"/>
+  </Definition>
+</Definitions>

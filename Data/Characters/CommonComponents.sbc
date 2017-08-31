@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_MedievalCharacterPickupComponentDefinition">
+    <Id Type="MyObjectBuilder_MedievalCharacterPickupComponent" Subtype="CharacterPickup2" />
+    <Wheel X="0.5" Y="0.45" Texture="Textures\GUI\Icons\ProgressCircle128.dds" Size="128" Scale="1.0" RadPerSecond="4.28"/>
+    <PickableItems>
+      <!--5s Pickup Time-->
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="WoodTable" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Cooking_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Scribe_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Apothocary_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Herbalist_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Masonry_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Machinesmith_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Stove" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Compost_Bin" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Stone_Well" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Norden_Ale_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Juice_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Grape_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Blueberry_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Anvil" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="ClaimTotem" PickupTime="5"/>
+
+      <!--3s Pickup Time-->
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Carpentry_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Blacksmithing_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Tailor_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Cooking_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Farming_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Apothocary_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Masonry_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Machinesmith_Book" PickupTime="3"/>
+
+      <!--2s Pickup Time-->
+      <Item TypeId="MyObjectBuilder_CubeBlock" PickupTime="2"/>
+      <Item TypeId="MyObjectBuilder_FireLightBlock" PickupTime="2"/>
+      <Item TypeId="MyObjectBuilder_RopeHookBlock" PickupTime="2"/>
+      <Item TypeId="MyObjectBuilder_WheelBlock" PickupTime="2"/>
+      <Item TypeId="MyObjectBuilder_LockableDrum" PickupTime="2"/>
+      <Item TypeId="MyObjectBuilder_CogWheelsBlock" PickupTime="2"/>
+      <!--1s Pickup Time-->
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber10" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber9" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber8" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber7" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber6" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber5" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber4" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber3" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber2" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber1" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound10" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound9" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound8" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound7" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound6" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound5" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound4" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound3" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound2" PickupTime="1"/>
+      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound1" PickupTime="1"/>
+
+
+      <Item TypeId="HandItem" SubtypeId="LandscapeStakeItem" PickupTime="1"/>
+      <!--Instant Pickup-->
+    </PickableItems>
+    <ToolBlacklist>
+      <Tool TypeId="MyObjectBuilder_CubePlacer"/>
+    </ToolBlacklist>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MedievalCharacterUseComponentDefinition">
+    <Id Type="MyObjectBuilder_MedievalCharacterUseComponent" Subtype="CharacterUse" />
+    <TapDuration>300</TapDuration>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuickEquipComponentDefinition">
+    <Id Type="QuickEquipComponent" Subtype="Humanoid"/>
+    <Item Action="CharacterTorch">
+      <Id Type="EquipmentItem" Subtype="HandTorchItem"/>
+    </Item>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="Internal"/>
+    <InventoryName>Internal</InventoryName>
+	  <DisplayName>DisplayName_InventoryName_Internal</DisplayName>
+    <MaxItemCount>28</MaxItemCount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MultiComponentDefinition">
+    <Id Type="AreaInventory" Subtype="Ground"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MultiComponentDefinition">
+    <Id Type="AreaInventoryAggregate" Subtype="NearbyInventories"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Humanoid" />
+    <CraftingCategories>
+      <Category>Tools</Category>
+      <Category>Farming</Category>
+      <Category>SmallBlocks</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityQuestComponentDefinition">
+    <Id Type="EntityQuestComponent" Subtype="Humanoid" />
+    <InitialQuestId>HumbleBeginnings_01</InitialQuestId>
+  </Definition>
+
+  <!-- Character stances -->
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="CharacterStances" />
+    <InitialState>NormalMode</InitialState>
+    <States>
+      <State Name="NormalMode">
+        <Transition>CombatMode</Transition>
+      </State>
+      <State Name="CombatMode">
+        <Transition>NormalMode</Transition>
+      </State>
+    </States>
+  </Definition>
+  <!-- END OF "Character stances" -->
+
+  <Definition xsi:type="MyObjectBuilder_CharacterHandItemsComponentDefinition">
+    <Id Type="CharacterHandItemsComponent" Subtype="Humanoid"/>
+    <MainHand>MainHand</MainHand>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventorySpawnComponentDefinition">
+    <Id Type="InventorySpawnComponent"/>
+    <ContainerDefinition Type="MyObjectBuilder_InventoryBagEntity" Subtype="LootBag"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CombatComponentDefinition">
+    <Id Type="CombatComponent" Subtype="Humanoid"/>
+
+    <SwingOrigin>
+      <X>0</X>
+      <Y>1.3</Y>
+      <Z>0</Z>
+    </SwingOrigin>
+
+    <MiddleZoneAngle>60</MiddleZoneAngle>
+    <SideZonesAngle>70</SideZonesAngle>
+    <TopZoneHeight>1</TopZoneHeight>
+
+    <BottomZoneHeight>.9</BottomZoneHeight>
+    <CollisionRadius>.35</CollisionRadius>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CharacterDetectorComponentDefinition">
+    <Id Type="MyObjectBuilder_CharacterShapecastDetectorComponent" Subtype="Default" />
+    <TargetingDistance>3.0</TargetingDistance><!--Picks up blocks-->
+    <InteractionDistance>3.0</InteractionDistance><!--Opens Dummies-->
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TargetingComponentDefinition">
+    <Id Type="MyObjectBuilder_AiDetectorComponent" Subtype="Default" />
+    <TargetingDistance>3.0</TargetingDistance>
+    <TargetingPosition>
+      <X>0</X>
+      <Y>1.5</Y>
+      <Z>0</Z>
+    </TargetingPosition>
+  </Definition>
+</Definitions>

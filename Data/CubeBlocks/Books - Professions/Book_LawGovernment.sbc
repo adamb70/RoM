@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="LawGovernment_Book" />
+      <BlockPairName>LawGovernment_Book</BlockPairName>
+      <DisplayName>Law and Government Book</DisplayName>
+    <Description>This book teaches you how to rule and 
+manage a kingdom. It will contain various
+research related to Law and Government</Description>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Model>Models\Universal\book_LawGovernment.mwm</Model>
+		  <CubeSize>Small</CubeSize>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+      		  <Size x="2" y="1" z="2" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <PhysicalMaterial>Wood</PhysicalMaterial>
+		  <Components>
+			<Component Subtype="Timber10" Count="1" />
+		  </Components>
+		  <CriticalComponent Subtype="Timber10" Index="0" />
+	  <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="1" />
+      </MountPoints>
+	  <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+		  <BuildTimeSeconds>6</BuildTimeSeconds>
+		  <Mass>1</Mass>
+		  <AvailableInSurvival>true</AvailableInSurvival>
+		  <VoxelPlacement>
+			<StaticMode>
+			  <PlacementMode>Both</PlacementMode>
+			  <MaxAllowed>1</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</StaticMode>
+			<DynamicMode>
+			  <PlacementMode>Both</PlacementMode>
+			  <MaxAllowed>1</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</DynamicMode>
+		  </VoxelPlacement>
+		</Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="LawGovernment_Book"/>
+    <CraftingCategories>
+      <Category>LawGovernment_Book</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="LawGovernment_Book" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="LawGovernment_BookInventory" />
+    <InventoryName>LawGovernment_BookInventory</InventoryName>
+    <DisplayName>LawGovernment_Book</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="LawGovernment_Book" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="CraftingComponent" Subtype="LawGovernment_Book" />
+    <Component Type="UseObjectsComponent" Subtype="LawGovernment_Book" />
+    <Component Type="Inventory" Subtype="LawGovernment_BookInventory" />
+  </Definition>
+</Definitions>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Dwarven_Ale_Kegstand" />
+      <BlockPairName>Dwarven_Ale_Kegstand</BlockPairName>
+      <DisplayName>Dwarven Ale Kegstand</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
+      <Public>true</Public>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="4" y="7" z="4" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Cooking\Norden_Ale_Kegstand.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Tag="Timber" Count ="1" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Tag="Timber" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Mass>10</Mass>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Dwarven_Ale_Kegstand"/>
+    <CraftingCategories>
+      <Category>Dwarven_Ale_Kegstand</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Dwarven_Ale_Kegstand" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Dwarven_Ale_KegstandInventory" />
+    <InventoryName>Dwarven_Ale_KegstandInventory</InventoryName>
+    <DisplayName>Dwarven_Ale_Kegstand</DisplayName>
+    <MaxItemCount>28</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Dwarven_Ale_Kegstand" />
+    <Component Type="UseObjectsComponent" Subtype="Dwarven_Ale_Kegstand" ForceCreate="true"/>
+    <Component Type="Inventory" Subtype="Dwarven_Ale_KegstandInventory" ForceCreate="true"/>
+    <Component Type="InventorySpawnComponent"/>
+    <Component Type="CraftingComponent" Subtype="Dwarven_Ale_Kegstand" ForceCreate="true"/>
+  </Definition>
+
+
+</Definitions>

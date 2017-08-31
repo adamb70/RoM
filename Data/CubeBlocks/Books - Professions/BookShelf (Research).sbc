@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Bookshelf_Profession" />
+    <DisplayName>Bookshelf (Professions)</DisplayName>
+    <BlockPairName>Bookshelf_Profession</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Bookshelf.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <GuiVisible>true</GuiVisible>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="5" y="8" z="2" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\BookShelf.mwm</Model>
+    <Components>
+      <Component Tag="Timber" Count="4" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MaxIntegrity>800</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="0" StartY="0" EndX="5" EndY="8" />
+      <MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="8" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="8" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="2" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="5" EndY="2" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bookshelf_Profession"/>
+    <Icon>Textures\GUI\Icons\Cubes\Bookshelf.dds</Icon>
+    <DisplayName>Bookshelf (Profession)</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Timber" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Blacksmithing_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Tailor_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Carpentry_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Cooking_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Farming_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Apothocary_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Masonry_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Machinesmith_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Fletching_Book" />
+      <Item Amount="1" Type="CubeBlock" Subtype="LawGovernment_Book" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Bookshelf_Profession" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Bookshelf_Profession"/>
+    <CraftingCategories>
+      <Category>Apothocary_Book</Category>
+      <Category>Blacksmithing_Book</Category>
+      <Category>Carpentry_Book</Category>
+      <Category>Norden_Carpentry_Book</Category>
+      <Category>Elven_Carpentry_Book</Category>
+      <Category>Dwarven_Carpentry_Book</Category>
+      <Category>Kharidian_Carpentry_Book</Category>
+      <Category>Cooking_Book</Category>
+      <Category>Crafting_Book</Category>
+      <Category>Fletching_Book</Category>
+      <Category>Enchanted_Farming_Book_Seeds</Category>
+      <Category>Enchanted_Farming_Book_Seeds_Compost</Category>
+      <Category>Farming_Book_Seeds</Category>
+      <Category>Farming_Book_Compost</Category>
+      <Category>LawGovernment_Book</Category>
+      <Category>Machinesmith_Book</Category>
+      <Category>Masonry_Book</Category>
+      <Category>Tailor_Book</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Bookshelf_Profession" />
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Bookshelf_Profession" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Bookshelf_Profession" />
+    <Component Type="Inventory" Subtype="Bookshelf_Profession" />
+    <Component Type="CraftingComponent" Subtype="Bookshelf_Profession" />
+    <Component Type="UseObjectsComponent" Subtype="Bookshelf_Profession" />
+    <Component Type="InventorySpawnComponent"/>
+  </Definition>
+</Definitions>

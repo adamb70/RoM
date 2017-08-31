@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+
+
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Fermenting_Vat" />
+      <BlockPairName>Fermenting_Vat</BlockPairName>
+      <DisplayName>Fermenting Vat</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Fermenting_Vat_Full.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="10" y="10" z="10" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Cooking\Fermenting_Vat_Full.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Tag="Timber" Count ="4" />
+        <Component Subtype="Iron_Nails" Count ="12" />
+      </Components>
+      <CriticalComponent Subtype="Timber10" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Mass>10</Mass>
+      <AvailableInSurvival>false</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+
+
+
+
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Fermenting_Vat"/>
+    <CraftingCategories>
+      <Category>Fermenting_Vat</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Fermenting_Vat" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Fermenting_VatInventory" />
+    <InventoryName>Fermenting_VatInventory</InventoryName>
+    <DisplayName>Fermenting_Vat</DisplayName>
+    <MaxItemCount>28</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Fermenting_Vat" />
+    <Component Type="UseObjectsComponent" Subtype="Fermenting_Vat" ForceCreate="true"/>
+    <Component Type="Inventory" Subtype="Fermenting_VatInventory" ForceCreate="true"/>
+    <Component Type="InventorySpawnComponent"/>
+    <Component Type="CraftingComponent" Subtype="Fermenting_Vat" ForceCreate="true"/>
+  </Definition>
+
+
+</Definitions>

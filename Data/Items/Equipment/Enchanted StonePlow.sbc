@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="Enchanted_Stone_Plow"/>
+
+    <!-- Display -->
+
+    <DisplayName>Enchanted Stone Plow</DisplayName>
+    <Description>An enchanted stone plow; better than a normal stone plow.</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\Plow.mwm</Model>
+
+    <PhysicalMaterial>Plow</PhysicalMaterial>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>800</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_PlowingToolBehaviorDefinition" Subtype="PlowingNormal"/>
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_PlowingToolBehaviorDefinition">
+    <Id Type="MyObjectBuilder_PlowingToolBehaviorDefinition" Subtype="PlowingNormal"/>
+    <Efficiency>2</Efficiency>
+
+    <PrimaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>1.5</AnimationTime>
+      <Sound>Swing</Sound>
+      <Animation>Plowing</Animation>
+    </PrimaryEffect>
+  </Definition>
+</Definitions>

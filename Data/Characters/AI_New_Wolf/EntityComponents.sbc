@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EntityComponents>
+		<EntityComponent xsi:type="MyObjectBuilder_CharacterSoundComponentDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_CharacterSoundComponent</TypeId>
+				<SubtypeId>Space_Wolf</SubtypeId>
+			</Id>
+			<LoopingFootsteps>true</LoopingFootsteps>
+			<Death>VocBarbarianPain</Death>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_CharacterStatComponent</TypeId>
+				<SubtypeId>Space_Wolf</SubtypeId>
+			</Id>
+			<Stats>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Health</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Stamina</SubtypeId>
+				</Stat>
+			</Stats>
+			<Scripts>
+				<Script>BarbarianStatEffect</Script>
+			</Scripts>
+		</EntityComponent>
+	</EntityComponents>
+</Definitions>
