@@ -3789,5 +3789,170 @@
     <AvailableInSurvival>true</AvailableInSurvival>
   </Definition>
   
+<!-- Stone Slope Corners -->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSlopeCorner" />
+    <DisplayName>DisplayName_Block_StoneBlockSlopeCorner</DisplayName>
+    <BlockPairName>StoneBlockSlopeCorner</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\StoneBlockSlopeCorner.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneSlopeCorner.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneSlopeCorner_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneSlopeCorner_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Back" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.25" EndY="1" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>7500</MaxIntegrity>
+    <BlockGroupName>BlockGroupName_SlopeCorners</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>StoneSlopeCornerRound</SubtypeId>
+      </BlockVariant>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>StoneBlockSlopeCornerStraight</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+    <UseModelIntersection>true</UseModelIntersection>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSlopeCornerRound" />
+    <DisplayName>DisplayName_Block_StoneBlockSlopeCornerRound</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\RoundSlopeCorner.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneSlopeRound.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneSlopeRound_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneSlopeRound_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Back" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.25" EndY="1" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Bottom" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0.75" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0.25" StartY="0.5" EndX="0.75" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>7500</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneBlockSlopeCornerStraight" />
+    <DisplayName>DisplayName_Block_StoneBlockSlopeCornerStraight</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\DiagonalSlopeCorner.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneBlockSlopeCornerStraight.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneBlockSlopeCornerStraight_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneBlockSlopeCornerStraight_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Back" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.25" EndY="1" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0" EndX="0.75" EndY="0.5" />
+      <MountPoint Side="Bottom" StartX="0.75" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0.75" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0.25" StartY="0.5" EndX="0.75" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="2" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>7500</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+  </Definition>
   
 </Definitions>
