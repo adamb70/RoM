@@ -3537,4 +3537,257 @@
     <GuiVisible>false</GuiVisible>
     <AvailableInSurvival>true</AvailableInSurvival>
   </Definition>
+
+<!-- Stone Slopes Small -->
+<Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSlope" />
+    <DisplayName>DisplayName_Block_StoneBlockSlope</DisplayName>
+    <BlockPairName>StoneBlockSlope</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\SmallSlope.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneSlope.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneSlope_Construction_1.mwm" />
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneSlope_Construction_2.mwm" />-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="0.25" EndY="0.25" />
+      <MountPoint Side="Left" StartX="0.25" StartY="0.0" EndX="0.5" EndY="0.5" />
+      <MountPoint Side="Left" StartX="0.5" StartY="0.0" EndX="0.75" EndY="0.75" />
+      <MountPoint Side="Left" StartX="0.75" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="0.25" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0.0" EndX="0.50" EndY="0.75" />
+      <MountPoint Side="Right" StartX="0.50" StartY="0.0" EndX="0.75" EndY="0.50" />
+      <MountPoint Side="Right" StartX="0.75" StartY="0.0" EndX="1.0" EndY="0.25" />
+      <MountPoint Side="Bottom" StartX="-0.0233933926" StartY="-0.0106560234" EndX="1.02339351" EndY="1.02339351" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="6" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>12500</MaxIntegrity>
+    <NavigationDefinition>Ramp1x1l</NavigationDefinition>
+    <BlockGroupName>BlockGroupName_SmallSlopes</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>StoneBlockSlopeDiagonal</SubtypeId>
+      </BlockVariant>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+          <SubtypeId>SmallSlopeCeiling</SubtypeId>
+      </BlockVariant>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+          <SubtypeId>StoneSlopeBattlementRightMultiBlock</SubtypeId>
+      </BlockVariant>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+          <SubtypeId>StoneSlopeBattlementLeftMultiBlock</SubtypeId>
+      </BlockVariant>
+        <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+          <SubtypeId>StoneSlopeBattlementBothMultiBlock</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneBlockSlopeDiagonal" />
+    <DisplayName>DisplayName_StoneBlockSlopeDiagonal</DisplayName>
+    <BlockPairName>StoneBlockDiagonal</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\StoneBlockSlopeDiagonal.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\StoneBlockSlopeDiagonal.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\StoneBlockSlopeDiagonal_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\StoneBlockSlopeDiagonal_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="0.3" EndY="0.3" />
+      <MountPoint Side="Top" StartX="0.3" StartY="0" EndX="0.7" EndY="0.7" />
+      <MountPoint Side="Top" StartX="0.7" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0.7" EndX="0.3" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0.3" StartY="0.3" EndX="0.7" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0.7" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="6" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>12500</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GuiVisible>false</GuiVisible>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSlopeBattlementRightMultiBlock" />
+    <DisplayName>DisplayName_Block_StoneBlockSlopeBattlementRight</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\SmallSlopeRBattlement.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneSlope.mwm</Model>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="0.25" EndY="0.25" />
+      <MountPoint Side="Left" StartX="0.25" StartY="0.0" EndX="0.5" EndY="0.5" />
+      <MountPoint Side="Left" StartX="0.5" StartY="0.0" EndX="0.75" EndY="0.75" />
+      <MountPoint Side="Left" StartX="0.75" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="0.25" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0.0" EndX="0.50" EndY="0.75" />
+      <MountPoint Side="Right" StartX="0.50" StartY="0.0" EndX="0.75" EndY="0.50" />
+      <MountPoint Side="Right" StartX="0.75" StartY="0.0" EndX="1.0" EndY="0.25" />
+      <MountPoint Side="Bottom" StartX="-0.0233933926" StartY="-0.0106560234" EndX="1.02339351" EndY="1.02339351" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="2" />
+    </Components>
+    <MaxIntegrity>2000</MaxIntegrity>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MultiBlock>StoneSlopeBattlementRight</MultiBlock>
+    <GuiVisible>false</GuiVisible>
+    <AvailableInSurvival>true</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSlopeBattlementLeftMultiBlock" />
+    <DisplayName>DisplayName_Block_StoneBlockSlopeBattlementLeft</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\StoneSlope.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneSlope.mwm</Model>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="0.25" EndY="0.25" />
+      <MountPoint Side="Left" StartX="0.25" StartY="0.0" EndX="0.5" EndY="0.5" />
+      <MountPoint Side="Left" StartX="0.5" StartY="0.0" EndX="0.75" EndY="0.75" />
+      <MountPoint Side="Left" StartX="0.75" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="0.25" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0.0" EndX="0.50" EndY="0.75" />
+      <MountPoint Side="Right" StartX="0.50" StartY="0.0" EndX="0.75" EndY="0.50" />
+      <MountPoint Side="Right" StartX="0.75" StartY="0.0" EndX="1.0" EndY="0.25" />
+      <MountPoint Side="Bottom" StartX="-0.0233933926" StartY="-0.0106560234" EndX="1.02339351" EndY="1.02339351" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="2" />
+    </Components>
+    <MaxIntegrity>2000</MaxIntegrity>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MultiBlock>StoneSlopeBattlementLeft</MultiBlock>
+    <GuiVisible>false</GuiVisible>
+    <AvailableInSurvival>true</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="StoneSlopeBattlementBothMultiBlock" />
+    <DisplayName>DisplayName_Block_StoneBlockSlopeBattlementBoth</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\SmallSlopeBattlements.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\StoneSlope.mwm</Model>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="0.25" EndY="0.25" />
+      <MountPoint Side="Left" StartX="0.25" StartY="0.0" EndX="0.5" EndY="0.5" />
+      <MountPoint Side="Left" StartX="0.5" StartY="0.0" EndX="0.75" EndY="0.75" />
+      <MountPoint Side="Left" StartX="0.75" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="0.25" EndY="1.0" />
+      <MountPoint Side="Right" StartX="0.25" StartY="0.0" EndX="0.50" EndY="0.75" />
+      <MountPoint Side="Right" StartX="0.50" StartY="0.0" EndX="0.75" EndY="0.50" />
+      <MountPoint Side="Right" StartX="0.75" StartY="0.0" EndX="1.0" EndY="0.25" />
+      <MountPoint Side="Bottom" StartX="-0.0233933926" StartY="-0.0106560234" EndX="1.02339351" EndY="1.02339351" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="10" />
+    </Components>
+    <MaxIntegrity>10000</MaxIntegrity>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MultiBlock>StoneSlopeBattlementBoth</MultiBlock>
+    <GuiVisible>false</GuiVisible>
+    <AvailableInSurvival>true</AvailableInSurvival>
+  </Definition>
+  
+  
 </Definitions>
