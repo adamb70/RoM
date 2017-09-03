@@ -3722,6 +3722,22 @@ produce Blue Berry Juice.</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- =================================================================================== -->
+ <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopeDrumAloneSmall"/>
+    <Icon>Textures\GUI\Icons\Cubes\RopeDrumAloneSmall.dds</Icon>
+    <DisplayName>DisplayName_Block_RopeDrum</DisplayName>
+    <Category>Machinesmith_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
+      <Item Amount="1" Type="CubeBlock" Subtype="TimberRound10" />
+      <Item Amount="6" Tag="Rope" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="RopeDrumAloneSmall" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+<!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopeDrumAloneSmall_Machinesmith" />
       <DisplayName>Machinesmith: Rope Drum Alone</DisplayName>
@@ -3755,6 +3771,22 @@ produce Blue Berry Juice.</DisplayName>
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
+<!-- =================================================================================== -->
+<Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopePowerSmall"/>
+    <Icon>Textures\GUI\Icons\Cubes\RopePowerSmall.dds</Icon>
+    <DisplayName>DisplayName_Block_RopeTorsionSpring</DisplayName>
+    <Category>Machinesmith_Table</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Timber" />
+      <Item Amount="4" Tag="Rope" />
+      <Item Amount="2" Type="CogWheelsBlock" Subtype="CatchBlockSmall2" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CogWheelsBlock" Subtype="RopePowerSmall" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
 
