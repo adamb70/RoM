@@ -649,6 +649,7 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="HouseStoneRoundInDoorLeft_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="HouseStoneRoundIn_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StoneCeilingStraight_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HouseHalfStoneTriangleMultiBlock_Masonry" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -837,7 +838,13 @@
     <Entry Type="CubeBlock" Subtype="StoneCeilingStraight" />
   </Definition>
 <!-- ========================================================================= -->
-
+<Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="HouseHalfStoneTriangleMultiBlock_Masonry" />
+    <DisplayName>Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="HouseHalfStoneTriangleMultiBlock" />
+    <Entry Type="CubeBlock" Subtype="HouseHalfStoneTriangleOdd" />
+  </Definition>
+<!-- ========================================================================= -->
 
 <!-- ========================================================================= -->
 
