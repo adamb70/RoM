@@ -4014,7 +4014,7 @@ fill Empty Buckets with water.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\cubes\StoneWall.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>DisplayName_Block_StoneWall</DisplayName>
+      <DisplayName>Masonry: Stone Wall</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
         <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
@@ -4029,7 +4029,7 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseHalfStoneWindow_Masonry" />
-      <DisplayName>DisplayName_Block_StoneWallWindow</DisplayName>
+      <DisplayName>Masonry: Stone Wall With Window</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\cubes\StoneWindow.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4050,7 +4050,7 @@ fill Empty Buckets with water.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\StoneWallArchHalf.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>DisplayName_Block_StoneWallArchHalf</DisplayName>
+      <DisplayName>Masonry: Stone Wall Arch</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
         <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
@@ -4065,13 +4065,13 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneWallRoundLargeMultiBlock_Masonry" />
-      <DisplayName>DisplayName_Block_StoneWallRoundLarge</DisplayName>
+      <DisplayName>Masonry: Large Round Wall</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\StoneWallRoundLarge.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="14" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4083,13 +4083,13 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneWallRoundLargeDoorRightMultiBlock_Masonry" />
-      <DisplayName>DisplayName_Block_StoneWallRoundLargeDoor</DisplayName>
+      <DisplayName>Masonry: Large Round Walls With Door</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\LargeRoundWallRightDoor.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="18" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4101,32 +4101,14 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneWallRoundLargeWindowRightMultiBlock_Masonry" />
-      <DisplayName>DisplayName_Block_StoneWallRoundLargeWindow</DisplayName>
+      <DisplayName>Masonry: Large Round Walls With Windows</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\LargeRoundWallRightWindow.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneWallRoundLargeWindowRightMultiBlock" />
-      </Results>
-	  <CraftingTime Seconds="3"/>
-    </Definition>
-<!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneWallRoundLargeWindowRightMultiBlock_Masonry" />
-      <DisplayName>DisplayName_Block_StoneWallRoundLargeWindow</DisplayName>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\LargeRoundWallRightWindow.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Masonry_Book</Category>
-      <Prerequisites>
-        <Item Amount="25" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="25" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
 	  
@@ -4137,7 +4119,7 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BattlementRoofTriangleMultiBlock_Masonry" />
-      <DisplayName>DisplayName_Block_RoofBattlement</DisplayName>
+      <DisplayName>Masonry: Roof Battlement</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\BattlementRoofTriangle.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4155,7 +4137,7 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BattlementStoneStraight_Masonry" />
-      <DisplayName>DisplayName_Block_StoneBattlementStraight</DisplayName>
+      <DisplayName>Masonry: Battlement</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\BattlementStoneStraight.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4173,7 +4155,7 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneBattlementRoundSmall_Masonry" />
-      <DisplayName>DisplayName_Block_StoneBattlementRoundSmall</DisplayName>
+      <DisplayName>Masonry: Small Round Battlement</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\cubes\StoneBattlementRoundSmall.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4191,7 +4173,7 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneBattlementSideDiagonal_Masonry" />
-      <DisplayName>DisplayName_StoneBattlementDiagonal</DisplayName>
+      <DisplayName>Masonry: Diagonal Battlement</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\StoneBattlementSideDiagonal.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4209,7 +4191,7 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneBattlementRoundLargeSide_1_Masonry" />
-      <DisplayName>DisplayName_Block_StoneBattlementRoundLargeSide</DisplayName>
+      <DisplayName>Masonry: Large Round Battlement</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\StoneBattlementRoundLargeSide.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4227,7 +4209,7 @@ fill Empty Buckets with water.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePillarSquare_Masonry" />
-      <DisplayName>DisplayName_StonePillarSquare</DisplayName>
+      <DisplayName>Masonry: Stone Pillar</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\StonePillarSquare.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4353,7 +4335,7 @@ fill Empty Buckets with water.</DisplayName>
       <DisplayName>Masonry: Large Rounded Stone Block</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="30" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4384,7 +4366,7 @@ fill Empty Buckets with water.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\cubes\StoneRoundedWindow.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Masonry: Rounded Stone Wall</DisplayName>
+      <DisplayName>Masonry: Rounded Stone Window</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
         <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
