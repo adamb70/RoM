@@ -4434,7 +4434,7 @@ fill Empty Buckets with water.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\cubes\StoneRoundInDoorLeft.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Masonry: Large Stone Slope</DisplayName>
+      <DisplayName>Masonry: Round Interior Door</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
@@ -4442,6 +4442,23 @@ fill Empty Buckets with water.</DisplayName>
       </Prerequisites>
       <Results>
 	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseStoneRoundInDoorLeft" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseStoneRoundIn_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\HouseStoneRoundIn.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Round Interior Wall</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseStoneRoundIn" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
