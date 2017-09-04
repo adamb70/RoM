@@ -923,17 +923,49 @@ a crossbow.</DisplayName>
       <CraftingTime Seconds="3"/>
     </Definition>
 <!-- =================================================================================== -->
+    <!-- Stop vanilla rope showing -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BasicRope"/>
+    <DisplayName>DisplayName_Rope_Basic</DisplayName>
+    <Description>Description_Rope_Basic</Description>
+    <Icon>Textures\GUI\Icons\cubes\BasicRope.dds</Icon>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="5" Type="HandItem" Subtype="Rope" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopeTearable"/>
+    <DisplayName>DisplayName_Rope_TearableRope</DisplayName>
+    <Description>Description_Rope_TearableRope</Description>
+    <Icon>Textures\GUI\Icons\cubes\TearableRope.dds</Icon>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="5" Type="HandItem" Subtype="RopeTearable" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Rope" />
-      <Icon>Textures\GUI\Icons\Materials\Rope.dds</Icon>
-      <DisplayName>DisplayName_Block_Rope</DisplayName>
+      <DisplayName>DisplayName_Rope_Basic</DisplayName>
+      <Description>Description_Rope_Basic</Description>
+      <Icon>Textures\GUI\Icons\cubes\BasicRope.dds</Icon>
       <Category>Weaving</Category>
       <Prerequisites>
         <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="InventoryItem" Subtype="Rope" />
+	    <Item Amount="5" Type="HandItem" Subtype="Rope" />
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
@@ -941,7 +973,7 @@ a crossbow.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Rope_Tailor" />
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Materials\Rope.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\BasicRope.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <DisplayName>Rope</DisplayName>
       <Category>Tailor_Book</Category>
@@ -954,18 +986,84 @@ a crossbow.</DisplayName>
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
+    <!-- -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Rope_Tearable" />
+      <DisplayName>DisplayName_Rope_TearableRope</DisplayName>
+      <Description>Description_Rope_TearableRope</Description>
+      <Icon>Textures\GUI\Icons\cubes\TearableRope.dds</Icon>
+      <Category>Weaving</Category>
+      <Prerequisites>
+        <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="HandItem" Subtype="RopeTearable" />
+	  </Results>
+      <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Rope_Tearable_Tailor" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\TearableRope.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Tearable Rope</DisplayName>
+      <Category>Tailor_Book</Category>
+      <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Rope_Tearable_Schematic" />
+	  </Results>
+      <CraftingTime Seconds="3"/>
+    </Definition>
 <!-- =================================================================================== -->
+    <!-- Stop Vanilla flags showing -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PersonalFlag"/>
+    <Icon>Textures\GUI\Icons\Cubes\Flag10x10.dds</Icon>
+    <DisplayName>DisplayName_Block_FlagPersonal</DisplayName>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="ScrapWood" />
+      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Flag10x10" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FactionFlag"/>
+    <Icon>Textures\GUI\Icons\Cubes\FlagRed10x10.dds</Icon>
+    <DisplayName>DisplayName_Block_FlagFaction</DisplayName>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="ScrapWood" />
+      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="FlagRed10x10" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- -->
+  
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Flag10x10" />
       <Icon>Textures\GUI\Icons\Cubes\Flag10x10.dds</Icon>
       <DisplayName>DisplayName_Block_FlagPersonal</DisplayName>
       <Category>Weaving</Category>
       <Prerequisites>
+      <Item Amount="1" Tag="ScrapWood" />
         <Item Amount="4" Type="InventoryItem" Subtype="LinenString" />
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="BlockItem" Subtype="Flag10x10" />
+	    <Item Amount="1" Type="CubeBlock" Subtype="Flag10x10" />
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
@@ -986,6 +1084,7 @@ a crossbow.</DisplayName>
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
+    
 <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FlagRed10x10" />
@@ -993,11 +1092,12 @@ a crossbow.</DisplayName>
       <DisplayName>DisplayName_Block_FlagFaction</DisplayName>
       <Category>Weaving</Category>
       <Prerequisites>
+        <Item Amount="1" Tag="ScrapWood" />
         <Item Amount="4" Type="InventoryItem" Subtype="LinenString" />
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="BlockItem" Subtype="FlagRed10x10" />
+	    <Item Amount="1" Type="CubeBlock" Subtype="FlagRed10x10" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
