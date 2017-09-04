@@ -4616,6 +4616,57 @@ fill Empty Buckets with water.</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RoofTileOddTopWithTop_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\RoofTileOddTop.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Tile Roof Tops</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_RoofTileOddTopWithTop" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SlicedRoofTileSlope_Main_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\BasicRoof.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Tile Roofs</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="25" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SlicedRoofTileSlope_Main" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RoofTileCornerRoundTallMultiBlock_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\RoofTileCornerRoundTall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Tile Roof Cone</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="25" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="17" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_RoofTileCornerRoundTallMultiBlock" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
 
 
 <!-- Kharidian Masonry -->
