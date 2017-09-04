@@ -4337,7 +4337,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_WallWithArch</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Stone Arch
+      <DisplayName>Stone Arch Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4371,7 +4371,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_StoneStairs</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Stone Stairs
+      <DisplayName>Stone Stairs Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4405,7 +4405,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_StoneSpiralStairs</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Stone Spiral Stairs
+      <DisplayName>Stone Spiral Stairs Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4439,7 +4439,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_SharpSpiralStairs</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Stone Spiral Stairs Sharp
+      <DisplayName>Stone Spiral Stairs Sharp Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4473,7 +4473,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_CornerStoneStairs</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Stone Corner Stairs
+      <DisplayName>Stone Corner Stairs Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4507,7 +4507,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_HouseStoneRoundedFull</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Rounded Stone Block
+      <DisplayName>Rounded Stone Block Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4541,7 +4541,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_StoneRoundLargeFull</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Large Rounded Stone Block
+      <DisplayName>Large Rounded Stone Block Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4575,7 +4575,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_SmallStoneRoundedWall</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Rounded Stone Wall
+      <DisplayName>Rounded Stone Wall Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4609,7 +4609,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_SmallStoneRoundedWindow</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Rounded Stone Window
+      <DisplayName>Rounded Stone Window Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4643,7 +4643,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_StoneSlope</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Stone Slope
+      <DisplayName>Stone Slope Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4677,7 +4677,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_StoneSlopeCorner</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Stone Slope Corner
+      <DisplayName>Stone Slope Corner Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4711,7 +4711,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_SlopeLongLargeMultiBlock</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Large Stone Slope
+      <DisplayName>Large Stone Slope Manuscript
 
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4739,6 +4739,40 @@ Masonry.
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
 <!-- =================================================================================== -->
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Masonry_Schematic_HouseStoneRoundInDoorLeft</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Round Interior With Door Manuscript
+
+As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for constructing a stone slope corner. 
+This knowledge would be valuable for
+Masonry.
+</DisplayName>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\StoneRoundInDoorLeft.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>HouseStoneRoundInDoorLeft_Masonry</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
 
 
 
@@ -4751,7 +4785,7 @@ Masonry.
         <SubtypeId>Masonry_Schematic_SandStoneWall</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Sandstone Wall</DisplayName>
+      <DisplayName>Sandstone Wall Manuscript</DisplayName>
 
       <Description>As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4783,7 +4817,7 @@ This knowledge would be valuable for Masonry.</Description>
         <SubtypeId>Masonry_Schematic_SandStoneDoorWay</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Sandstone Door</DisplayName>
+      <DisplayName>Sandstone Door Manuscript</DisplayName>
 
       <Description>As you examine the manuscript, you notice 
 diagrams and written instructions explaining
@@ -4815,7 +4849,7 @@ This knowledge would be valuable for Masonry.</Description>
         <SubtypeId>Masonry_Schematic_SandStoneWallWindow</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Masonry: Sandstone Window</DisplayName>
+      <DisplayName>Sandstone Window Manuscript</DisplayName>
 
       <Description>As you examine the manuscript, you notice 
 diagrams and written instructions explaining
