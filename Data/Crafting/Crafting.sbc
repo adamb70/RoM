@@ -4543,12 +4543,79 @@ fill Empty Buckets with water.</DisplayName>
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
-	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_MachicolationStraightMultiBlock_Masonry" />
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_MachicolationStraightMultiBlock" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- =================================================================================== -->
-
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePlatformRoundAdvanced_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\SmallRoundLedgePlatform.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Small Round Stone Ledges</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="22" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformRoundAdvanced" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneBattlementAdvancedStraightBottom_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\LedgePlatform.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Stone Ledges</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="13" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementAdvancedStraightBottom" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePlatformDiagonalMultiBlock_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\DiagonalLedgePlatform.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Diagonal Stone Ledges</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformDiagonalMultiBlock" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePlatformRoundLargeMultiBlock_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\LargeRoundLedgePlatform.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Large Round Stone Ledges</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="19" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="28" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformRoundLargeMultiBlock" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
 
 
 <!-- Kharidian Masonry -->
