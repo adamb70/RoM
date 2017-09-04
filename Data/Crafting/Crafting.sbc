@@ -4497,6 +4497,59 @@ fill Empty Buckets with water.</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Machicolation_RoundLargeMultiBlock_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\MachicolationRoundLarge.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Large Round Stone Machicolations</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="35" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_Machicolation_RoundLargeMultiBlock" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Machicolation_RoundMultiBlock_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\MachicolationRound.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Round Stone Machicolations</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="17" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="26" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_Machicolation_RoundMultiBlock" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MachicolationStraightMultiBlock_Masonry" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\cubes\MachicolationStraight.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Masonry: Straight Stone Machicolations</DisplayName>
+      <Category>Masonry_Book</Category>
+      <Prerequisites>
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_MachicolationStraightMultiBlock_Masonry" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+
+
 
 <!-- Kharidian Masonry -->
 
