@@ -14,7 +14,7 @@ namespace Yurand2000Mods.MOTD
         }
         public void MOTD()
         {
-            MyAPIGateway.Utilities.ShowMissionScreen(screenTitle: Title, screenDescription: Description, currentObjective: "     [Alpha 0.3]", currentObjectivePrefix: "Info, Rules, and Tips.");
+            MyAPIGateway.Utilities.ShowMissionScreen(screenTitle: Title, screenDescription: Description, currentObjective: "    [Alpha Phase II]", currentObjectivePrefix: "Info/Rules/Tips");
         }
         protected override void UnloadData()
         {
