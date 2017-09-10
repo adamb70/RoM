@@ -5922,6 +5922,39 @@ Machinesmith.</Description>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
 <!-- =================================================================================== -->
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Machinesmith_Schematic_TurnCrossSmall</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Hand Crank Manuscript</DisplayName>
+
+    <Description>As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for constructing a hand crank Manuscript. 
+This knowledge would be valuable for a 
+Machinesmith.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\TurnCrossSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>TurnCrossSmall_Machinesmith</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
       <Id>
         <TypeId>SchematicItem</TypeId>
