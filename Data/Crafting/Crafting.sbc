@@ -3276,6 +3276,23 @@ inorder to withstand more .</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- ====================================================================== -->
+<Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrateWood_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\CrateWood.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Wooden Crate</DisplayName>
+      <Category>Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_CrateWood" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodenShelf_Carpenter" />
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>

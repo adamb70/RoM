@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrateWood"/>
+    <Icon>Textures\GUI\Icons\Cubes\CrateWood.dds</Icon>
+    <DisplayName>DisplayName_Block_CrateWood</DisplayName>
+    <Description>Description_Block_CrateWood</Description>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="6" Tag="Timber" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="CrateWood" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+
+</Definitions>
