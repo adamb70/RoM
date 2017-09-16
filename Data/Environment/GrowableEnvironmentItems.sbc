@@ -905,7 +905,7 @@
       </GrowthStep>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Schematic_IronOrePile" StartingProbability="0.4">
-        <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
+        <ModelCollectionSubtypeId>PristineIron</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
             <Id Type="SchematicItem" Subtype="Schematic_IronOre"/>
@@ -967,7 +967,7 @@
       </GrowthStep>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Schematic_SingleIronOre" StartingProbability="0.8">
-        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <ModelCollectionSubtypeId>PristineIron</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
             <Id Type="SchematicItem" Subtype="Schematic_IronOre"/>
@@ -1091,7 +1091,7 @@
       </GrowthStep>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Schematic_SingleStone" StartingProbability="0.8">
-        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <ModelCollectionSubtypeId>PristineStone</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
             <Id Type="SchematicItem" Subtype="Schematic_StoneOreSmall"/>
@@ -1341,7 +1341,7 @@
       </GrowthStep>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Enchanted_Schematic_SingleStone" StartingProbability="0.8">
-        <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
+        <ModelCollectionSubtypeId>PristineStone</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
             <Id Type="SchematicItem" Subtype="Schematic_Enchanted_StoneOreSmall"/>
