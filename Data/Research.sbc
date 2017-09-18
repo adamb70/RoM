@@ -1275,6 +1275,7 @@
 	<Id Type="ResearchDefinition" Subtype="SandStoneOreSmall_Masonry" />
     <DisplayName>Sandstone Masonry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="SandStoneWall_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SandStoneCube_Masonry" />
   </Definition>
 
 <!-- ====================================  Kharidian Expansion  ===================================== -->
@@ -1297,6 +1298,12 @@
 	<Id Type="ResearchDefinition" Subtype="SandStoneWallWindow_Masonry" />
     <DisplayName>Sandstone Masonry</DisplayName>
     <Entry Type="CubeBlock" Subtype="BrickWallWindow" />
+  </Definition>
+  
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="SandStoneCube_Masonry" />
+    <DisplayName>Sandstone Masonry</DisplayName>
+    <Entry Type="CubeBlock" Subtype="SandstoneCube" />
   </Definition>
 
 
