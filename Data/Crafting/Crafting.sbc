@@ -5711,4 +5711,107 @@ foes at close range.</Description>
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
+  
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bed_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Basic Bed</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadBed" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicBed"/>
+    <DisplayName>Basic Bed</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tent_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTent"/>
+    <DisplayName>Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadTent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AdvTent_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentAdv" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTentAdv"/>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadTentAdv" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+<!-- =================================================================================== -->
 </Definitions>

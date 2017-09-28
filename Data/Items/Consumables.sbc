@@ -7640,5 +7640,101 @@ This knowledge would be valuable for Masonry.</Description>
     </Definition>
 <!-- ===================================================================================  -->
 
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Nomadic_Schematic_NomadBed</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Basic Bed Manuscript</DisplayName>
+
+      <Description>As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for constructing a basic bed.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>Bed_Nomadic</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- ===================================================================================  -->
+
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Nomadic_Schematic_NomadTent</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Tent Manuscript</DisplayName>
+
+      <Description>As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for constructing a basic tent.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>Tent_Nomadic</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- ===================================================================================  -->
+
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Nomadic_Schematic_NomadTentAdv</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Advanced Tent Manuscript</DisplayName>
+
+      <Description>As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for constructing a tent with storage.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>Tent_NomadicAdv</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- ===================================================================================  -->
+
 
 </Definitions>
