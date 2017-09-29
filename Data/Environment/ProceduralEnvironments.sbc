@@ -273,12 +273,12 @@
         <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0015"/>
         <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.007"/>
         <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0007"/>
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.0015"/>
+        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.002"/>
 
         <Item Type="Gatherable" Subtype="StonePile" Density="0.015"/>
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.07"/>
         <Item Type="Gatherable" Subtype="Roots" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="Herbs" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.02"/>
       </Mapping>
       <Mapping>
         <Biome>200</Biome>
@@ -287,12 +287,12 @@
         <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0015"/>
         <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.007"/>
         <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.0015"/>
+        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.002"/>
 
         <Item Type="Gatherable" Subtype="StonePile" Density="0.015"/>
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.07"/>
         <Item Type="Gatherable" Subtype="Roots" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Herbs" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.02"/>
       </Mapping>
       <Mapping>
         <Biome>200</Biome>
@@ -412,8 +412,8 @@
       <Mapping Name="WildFlaxPatches">
         <Material>Grass</Material>
         <Biome>110</Biome>
-        <Item Type="Gatherable" Subtype="Schematic_WildFlax" Density=".01"/>
-        <Item Type="Gatherable" Subtype="WildFlax" Density=".1"/>
+        <Item Type="Gatherable" Subtype="Schematic_WildFlax" Density=".02"/>
+        <Item Type="Gatherable" Subtype="WildFlax" Density=".15"/>
       </Mapping>
       <Mapping Name="WildCabbagePatches">
         <Material>Grass</Material>
@@ -425,6 +425,7 @@
         <Material>Grass</Material>
         <Biome>130</Biome>
         <Item Type="Gatherable" Subtype="Schematic_WildWheat" Density=".01"/>
+        <Item Type="Gatherable" Subtype="Schematic_Norden_Barley" Density=".005"/>
         <Item Type="Gatherable" Subtype="WildWheat" Density=".1"/>
       </Mapping>
 
@@ -1341,7 +1342,7 @@
         <Item Type="Gatherable" Subtype="Schematic_WildFlax" Density="0.000015"/>
         <Item Type="Gatherable" Subtype="Schematic_WildWheat" Density="0.000015"/>
         <Item Type="Gatherable" Subtype="Schematic_Norden_Barley" Density="0.000015"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Barley_Roots" Density="0.000015"/>
+        <Item Type="Gatherable" Subtype="Schematic_Norden_Barley_Roots" Density="0.00004"/>
 
         <Item Type="Gatherable" Subtype="Herbs" Density="0.000255"/>
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.000155"/>
@@ -1381,7 +1382,7 @@
 		<Material>COGRocks_grass</Material>
 		<Material>COGDesert_Soil</Material>
         <Item Type="Gatherable" Subtype="WildFlax" Density=".05"/>
-
+  
         <Item Type="Gatherable" Subtype="Schematic_WildFlax" Density=".005"/>
       </Mapping>
 	  
@@ -1390,8 +1391,9 @@
         <Biome>140</Biome>
 		<Material>COGDesert_Rubble</Material>
 		<Item Type="Gatherable" Subtype="WildWheat" Density=".05"/>
-
+    <Item Type="Gatherable" Subtype="Norden_Barley" Density="0.002"/>
 		<Item Type="Gatherable" Subtype="Schematic_WildWheat" Density=".005"/>
+		<Item Type="Gatherable" Subtype="Schematic_Norden_Barley_Roots" Density=".005"/>
       </Mapping>
 	  
 	  <Mapping Name="WildFlaxPatches2">
@@ -1399,8 +1401,9 @@
         <Biome>130</Biome>
 		<Material>COGDesert_Rubble</Material>
         <Item Type="Gatherable" Subtype="WildFlax" Density=".05"/>
-
+        <Item Type="Gatherable" Subtype="Norden_Barley" Density="0.01"/>
         <Item Type="Gatherable" Subtype="Schematic_WildFlax" Density=".005"/>
+        <Item Type="Gatherable" Subtype="Schematic_Norden_Barley" Density=".003"/>
       </Mapping>
 	  
 	  <Mapping Name="WildWheatPatches">
@@ -1412,8 +1415,9 @@
 			<Material>COGRocks_grass</Material>
 			<Material>COGDesert_Soil</Material>
         <Item Type="Gatherable" Subtype="WildWheat" Density=".05"/>
-
+        <Item Type="Gatherable" Subtype="Norden_Barley" Density="0.01"/>
         <Item Type="Gatherable" Subtype="Schematic_WildWheat" Density=".005"/>
+        <Item Type="Gatherable" Subtype="Schematic_Norden_Barley" Density=".003"/>
       </Mapping>
 	  
 	  
@@ -1462,9 +1466,9 @@
 			<Material>COGWoods</Material>
 			<Material>COGSnow</Material>
 			<Material>COGWoods_Snow</Material> 
-        <Item Type="Gatherable" Subtype="Herbs" Density=".05"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density=".08"/>
 
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density=".005"/>
+        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density=".01"/>
       </Mapping>
 	  
 	  <Mapping Name="WildberriePatches">
