@@ -4,9 +4,17 @@
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="Nomadic_Book" />
       <BlockPairName>Nomadic_Book</BlockPairName>
-      <DisplayName>Nomadic Book</DisplayName>
-      <Description>This book is used as a survival guide to 
-      learn the essentials within the Realm of Mistvalin.</Description>
+      <DisplayName>Ways of The Nomad</DisplayName>
+      <Description>
+      "The realm poses many dangers, but just
+      as many opportunities. Mastering survial
+      is to manifest that success." - Musad Ali
+
+      This book is used as a survival guide to
+      learn the essentials within the Realm of 
+      Mistvalin. This book contains research 
+      that can be unlocked.
+      </Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Nomadic.dds</Icon>
       <Model>Models\Universal\book_nomadic.mwm</Model>
 		  <CubeSize>Small</CubeSize>
@@ -45,6 +53,7 @@
     <Id Type="CraftingComponent" Subtype="Nomadic_Book"/>
     <CraftingCategories>
       <Category>Nomadic_Book</Category>
+      <Category>Stone_Well_Research</Category>
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
