@@ -5,10 +5,17 @@
     <Id Type="CubeBlock" Subtype="Masonry_Book" />
       <BlockPairName>Masonry_Book</BlockPairName>
       <DisplayName>Masonry Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"Masonry, the art of transforming raw stone into
+beautiful structures. The realm is but clay yet
+to be shaped."
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Masonry.dds</Icon>
       <Model>Models\Universal\book_masonry.mwm</Model>
 		  <CubeSize>Small</CubeSize>
@@ -47,6 +54,7 @@ inside this book for you to research.</Description>
     <Id Type="CraftingComponent" Subtype="Masonry_Book"/>
     <CraftingCategories>
       <Category>Masonry_Book</Category>
+      <Category>Stone_Well_Research</Category>
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
