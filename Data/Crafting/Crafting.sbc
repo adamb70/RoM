@@ -3141,7 +3141,8 @@ inorder to plant it again.</Description>
 
 An empty bucket can be filled with 
 liquids and solids. Most commonly
-water from a well.
+water from a well. Can be crafted 
+from a Carpentry Table.
 
 
 ((Hint: Search small trees and small
@@ -4214,11 +4215,14 @@ or Barley Malt.
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
       <DisplayName>Survival Essentials: Stone Well</DisplayName>
       <Description>
-"Wells are the vital organ of any lively settlement.
-Without them, their are no citizens." -Nordic Proverb
+"Wells are the vital organ of any lively 
+settlement. Without them, their are no 
+citizens." -Nordic Proverb
+
 
 A well provides water, which can be used to 
-fill empty buckets.
+fill empty buckets. Can be crafted from a
+Masonry Block.
 
 
 ((Hint: Pick up small stones on the ground
@@ -5748,7 +5752,8 @@ perfect for an encampment!</Description>
 barricade, perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="10" Tag="Universal_Stick" />
+      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="5" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="SmallBarricade" />
