@@ -1126,7 +1126,7 @@ a crossbow.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bandage" />
       <DisplayName>DisplayName_Consumables_Bandage</DisplayName>
-      <Icon>Textures\GUI\Icons\Bandage.dds</Icon>
+      <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
       <Category>Apothocary_Table</Category>
       <Prerequisites>
         <Item Amount="2" Type="ConsumableItem" Subtype="Herbs" />
@@ -1144,7 +1144,7 @@ a crossbow.</DisplayName>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bandage_Apothocary" />
       <DisplayName>Apothocary: Bandage</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Bandage.dds</Icon>
+      <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Apothocary_Book</Category>
       <Prerequisites>
@@ -3135,13 +3135,23 @@ inorder to plant it again.</Description>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
-      <DisplayName>Carpenter: Empty Bucket</DisplayName>
+      <DisplayName>Survival Essentials: Empty Bucket</DisplayName>
+      <Description>
+"The bucket is a vessel of possbilities."
+
+An empty bucket can be filled with 
+liquids and solids. Most commonly
+water from a well.
+
+
+((Hint: Search small trees and small
+pine trees to aquire Pristine Sticks))</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Carpentry_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="1" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3156,7 +3166,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="2" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -4176,11 +4186,16 @@ into valuable ingots.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MillStone_Masonry" />
-      <DisplayName>Masonry: Mill Stone
+      <DisplayName>Masonry: Millstone</DisplayName>
+      <Description>
+"The millstone is as old as civilization. 
+Sufficient grain production is the key
+to any prosperous city."
 
 Used to grind Barley or Wheat
 into grains, perfect for bread
-or Barley Malt.</DisplayName>
+or Barley Malt.
+</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
 	<Icon>Textures\GUI\Icons\Cubes\MillStone_Small.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4197,21 +4212,24 @@ or Barley Malt.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
-      <DisplayName>Masonry: Stone Well</DisplayName>
+      <DisplayName>Survival Essentials: Stone Well</DisplayName>
       <Description>
-"The well is the vital organ of any settlement.
-Without wells, their are no citizens."
+"Wells are the vital organ of any lively settlement.
+Without them, their are no citizens." -Nordic Proverb
 
 A well provides water, which can be used to 
 fill empty buckets.
-</Description>
+
+
+((Hint: Pick up small stones on the ground
+to aquire Pristine Stones))</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Stone_Well_Research</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+        <Item Amount="1" Tag="Pristine_Stone" />
+        <Item Amount="1" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -4233,8 +4251,8 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
       <Category>Masonry_Table</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="StoneOreSmall" />
-        <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="3" Tag="Universal_Stone" />
+        <Item Amount="2" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -5663,7 +5681,7 @@ that can be unlocked.
     <Icon>Textures\GUI\Icons\Universal\Books\Nomadic.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="1" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Nomadic_Book" />
@@ -5678,13 +5696,22 @@ that can be unlocked.
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\LongBarricade.dds</Icon>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-    <DisplayName>Wooden Barricades</DisplayName>
-    <Description>Learning this will unlock construction 
+    <DisplayName>Survival Essentials: Wooden Barricades</DisplayName>
+    <Description>
+"Barricades are the first line of defence
+against a foe. Quick to set up, but long to 
+break through." -Jarl Aksel, Siege of Reyjk
+
+Learning this will unlock construction 
 of wooden barricades, perfect for an 
-encampment. This is essential!</Description>
+encampment. This is essential!
+
+
+((Hint: Search small trees and small
+pine trees to aquire Pristine Sticks))</Description>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="1" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" />
@@ -5703,7 +5730,7 @@ perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
       <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
-      <Item Amount="15" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="15" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="LongBarricade" />
@@ -5721,7 +5748,7 @@ perfect for an encampment!</Description>
 barricade, perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="10" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="SmallBarricade" />
@@ -5736,14 +5763,22 @@ barricade, perfect for an encampment!</Description>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-    <DisplayName>DisplayName_Block_BonFire</DisplayName>
-    <Description>The Campfire is the simplist way to cook 
+    <DisplayName>Survival Essentials: Campfire</DisplayName>
+    <Description>
+"Fire, the invention that started it all.
+Fire can be destructive, if not lethal, but
+to master fire is to manifest survival!" 
+
+The Campfire is the simplist way to cook 
 food with, though it's limited to lower
-tier foods. Learning this is essential 
-for survival!</Description>
+skilled foods.
+
+
+((Hint: Pick up small stones on the ground
+to aquire Pristine Stones))</Description>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      <Item Amount="1" Tag="Pristine_Stone" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_Bonfire" />
@@ -5761,7 +5796,7 @@ tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="9" Type="InventoryItem" Subtype="StoneOreSmall" />
+      <Item Amount="9" Tag="Universal_Stone" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="BonFire" />
