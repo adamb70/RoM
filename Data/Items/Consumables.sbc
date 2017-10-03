@@ -681,7 +681,8 @@ or Chef.
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
       <Id Type="ConsumableItem" Subtype="Berries" />
-	  <Tag>Berry</Tag>
+      <Tag>Berry</Tag>
+      <Tag>Universal_Berry</Tag>
       <Public>true</Public>
       <DisplayName>Red Berries</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Red_Berry.dds</Icon>
@@ -707,6 +708,7 @@ or Chef.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_Berries</SubtypeId>
       </Id>
+      <Tag>Pristine_Berry</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Red Berries</DisplayName>
 
@@ -919,7 +921,8 @@ or Chef.
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
       <Id Type="ConsumableItem" Subtype="Blue_Berry" />
-	  <Tag>Berry</Tag>
+      <Tag>Universal_Berry</Tag>
+      <Tag>Berry</Tag>
       <Public>true</Public>
       <DisplayName>Blue Berries</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Blue_Berry.dds</Icon>
@@ -945,6 +948,7 @@ or Chef.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_Blue_Berry</SubtypeId>
       </Id>
+      <Tag>Pristine_Berry</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Blue Berries</DisplayName>
 
@@ -1170,7 +1174,7 @@ This knowledge would be valuable for a Farmer.
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>15</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="5" Time="1" />
+        <Stat Name="Food" Value="10" Time="1" />
         <Stat Name="Mood" Value="3" Time="1" />
       </Stats>
       <UseSound>PlayEat</UseSound>
@@ -1296,7 +1300,7 @@ This knowledge would be valuable for a Farmer.
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>10</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="3" Time="3" />
+        <Stat Name="Food" Value="15" Time="1" />
         <Stat Name="Mood" Value="3" Time="1" />
       </Stats>
       <UseSound>PlayEat</UseSound>
@@ -1407,6 +1411,7 @@ This knowledge would be valuable for a Farmer.
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
       <Id Type="ConsumableItem" Subtype="Mushrooms" />
+      <Tag>Universal_Mushroom</Tag>
       <Public>true</Public>
       <DisplayName>Mushrooms</DisplayName>
       <Icon>Textures\GUI\Icons\Consumables\Mushrooms.dds</Icon>
@@ -1431,6 +1436,7 @@ This knowledge would be valuable for a Farmer.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_Mushrooms</SubtypeId>
       </Id>
+      <Tag>Pristine_Mushroom</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Mushrooms</DisplayName>
 
@@ -1463,6 +1469,7 @@ or Chef.
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
       <Id Type="ConsumableItem" Subtype="HighlandCaps" />
+      <Tag>Universal_Mushroom</Tag>
       <Public>true</Public>
       <DisplayName>Highland Caps</DisplayName>
       <Icon>Textures\GUI\Icons\Consumables\Mushrooms.dds</Icon>
@@ -1487,6 +1494,7 @@ or Chef.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_HighlandCaps</SubtypeId>
       </Id>
+      <Tag>Pristine_Mushroom</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Highland Caps</DisplayName>
 
@@ -2636,6 +2644,7 @@ perfect specimen for Blacksmith.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_StoneOreSmall</SubtypeId>
       </Id>
+      <Tag>Pristine_Stone</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Stone Ore</DisplayName>
       <Description>
@@ -2670,6 +2679,7 @@ perfect specimen for Masonry.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_SandStoneOreSmall</SubtypeId>
       </Id>
+      <Tag>Pristine_Stone</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Sandstone Ore</DisplayName>
       <Description>
@@ -2704,6 +2714,7 @@ perfect specimen for Masonry.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_Enchanted_StoneOreSmall</SubtypeId>
       </Id>
+      <Tag>Pristine_Stone</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Enchanted Stone</DisplayName>
       <Description>
@@ -2739,6 +2750,7 @@ Farming.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_TreeSmall_WoodenSticks</SubtypeId>
       </Id>
+      <Tag>Pristine_Stick</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Wooden Sticks</DisplayName>
       <Description>
@@ -2773,6 +2785,7 @@ perfect specimen for a Carpenter.
         <TypeId>SchematicItem</TypeId>
         <SubtypeId>Schematic_Enchanted_TreeSmall_WoodenSticks</SubtypeId>
       </Id>
+      <Tag>Pristine_Stick</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Enchanted Wooden Sticks</DisplayName>
       <Description>
@@ -6367,8 +6380,8 @@ knowledge would be valuable for Blacksmithing.
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>16</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="25" Time="1" />
-        <Stat Name="Mood" Value="15" Time="1" />
+        <Stat Name="Food" Value="50" Time="1" />
+        <Stat Name="Mood" Value="25" Time="1" />
       </Stats>
       <UseSound>PlayEat</UseSound>
     </Definition>
@@ -6454,7 +6467,7 @@ would be valuable for a Chef.
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <Stats>
-        <Stat Name="Food" Value="45" Time="1" />
+        <Stat Name="Food" Value="90" Time="1" />
         <Stat Name="Mood" Value="50" Time="1" />
       </Stats>
       <UseSound>PlayEat</UseSound>
@@ -6508,7 +6521,7 @@ would be valuable for a Chef.
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <Stats>
-        <Stat Name="Food" Value="75" Time="1" />
+        <Stat Name="Food" Value="125" Time="1" />
       </Stats>
       <UseSound>PlayEat</UseSound>
     </Definition>
@@ -6615,7 +6628,7 @@ knowledge would be valuable for a Chef.
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <Stats>
-        <Stat Name="Food" Value="75" Time="1" />
+        <Stat Name="Food" Value="125" Time="1" />
         <Stat Name="Mood" Value="100" Time="1" />
         <Stat Name="Stamina" Value="50" Time="1" />
       </Stats>
@@ -6837,7 +6850,7 @@ This knowledge would be valuable for an Apothocary.
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="45" Time="1" />
+        <Stat Name="Food" Value="60" Time="1" />
         <Stat Name="Stamina" Value="3" Time="3" />
         <Stat Name="Mood" Value="55" Time="1" />
       </Stats>
@@ -6920,7 +6933,7 @@ perfect specimen for an Apothocary or Chef.
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="90" Time="1" />
+        <Stat Name="Food" Value="150" Time="1" />
         <Stat Name="Stamina" Value="25" Time="4" />
         <Stat Name="Mood" Value="45" Time="1" />
         <Stat Name="Thirst" Value="3" Time="1" />
@@ -6966,6 +6979,8 @@ would be valuable for a Chef.</Description>
 	  <Tag>Dish</Tag>
       <Public>true</Public>
       <DisplayName>Mushroom Soup</DisplayName>
+      <Description>
+"A simple dish, not very filling..."</Description>
       <Icon>Textures\GUI\Icons\Consumables\Dish_MushroomSoup.dds</Icon>
       <Size>
         <X>0.3</X>
@@ -6979,9 +6994,8 @@ would be valuable for a Chef.</Description>
       <MaxStackAmount>30</MaxStackAmount>
       <Stats>
         <Stat Name="Food" Value="20" Time="1" />
-        <Stat Name="Stamina" Value="7" Time="8" />
-        <Stat Name="Mood" Value="15" Time="1" />
-        <Stat Name="Thirst" Value="20" Time="1" />
+        <Stat Name="Mood" Value="5" Time="1" />
+        <Stat Name="Thirst" Value="40" Time="1" />
       </Stats>
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
@@ -7038,7 +7052,7 @@ knowledge would be valuable for a Chef.</Description>
       <Stats>
         <Stat Name="Food" Value="20" Time="1" />
         <Stat Name="Stamina" Value="7" Time="8" />
-        <Stat Name="Mood" Value="15" Time="1" />
+        <Stat Name="Mood" Value="5" Time="1" />
         <Stat Name="Thirst" Value="40" Time="1" />
       </Stats>
       <UseSound>PlayEat</UseSound>
@@ -7094,11 +7108,11 @@ knowledge would be valuable for a Chef.</Description>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="1" Time="1" />
+        <Stat Name="Food" Value="2" Time="1" />
         <Stat Name="Stamina" Value="7" Time="8" />
         <Stat Name="Mood" Value="15" Time="1" />
-        <Stat Name="Thirst" Value="20" Time="1" />
-        <Stat Name="Health" Value="20" Time="10" />
+        <Stat Name="Thirst" Value="40" Time="1" />
+        <Stat Name="Health" Value="20" Time="5" />
       </Stats>
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
@@ -7153,8 +7167,7 @@ This knowledge would be valuable for a Chef.</Description>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="20" Time="1" />
-        <Stat Name="Stamina" Value="12" Time="7" />
+        <Stat Name="Food" Value="40" Time="1" />
         <Stat Name="Mood" Value="10" Time="1" />
         <Stat Name="Thirst" Value="3" Time="1" />
       </Stats>
@@ -7211,7 +7224,7 @@ would be valuable for a Chef.</Description>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="60" Time="1" />
+        <Stat Name="Food" Value="120" Time="1" />
         <Stat Name="Stamina" Value="5" Time="6" />
         <Stat Name="Mood" Value="40" Time="1" />
         <Stat Name="Thirst" Value="3" Time="1" />
@@ -7269,7 +7282,7 @@ knowledge would be valuable for a Chef.</Description>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
       <Stats>
-        <Stat Name="Food" Value="20" Time="1" />
+        <Stat Name="Food" Value="40" Time="1" />
         <Stat Name="Stamina" Value="5" Time="12" />
         <Stat Name="Mood" Value="10" Time="1" />
         <Stat Name="Thirst" Value="3" Time="1" />
