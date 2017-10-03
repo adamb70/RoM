@@ -5818,8 +5818,7 @@ tier foods.</Description>
     <DisplayName>Red Berry Preserve</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Blue_Berry" />
-      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Berries" />
+      <Item Amount="1" Tag="Pristine_Berry" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_BerryPreserve" />
@@ -5837,7 +5836,7 @@ tier foods.</Description>
     <DisplayName>Fence Gate</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="1" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_FenceGate" />
@@ -5852,8 +5851,8 @@ tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\FenceGate.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="19" Type="InventoryItem" Subtype="Log250cm" />
-      <Item Amount="15" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="5" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="MyObjectBuilder_CubeBlock" Subtype="FenceGate" />
@@ -5871,7 +5870,7 @@ tier foods.</Description>
     <DisplayName>Basic Bed</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="1" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadBed" />
@@ -5886,7 +5885,7 @@ tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="8" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
@@ -5904,7 +5903,7 @@ tier foods.</Description>
     <DisplayName>Tent</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="1" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTent" />
@@ -5919,7 +5918,7 @@ tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="8" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="8" Tag="Universal_Stick" />
       <Item Amount="6" Type="InventoryItem" Subtype="ScrapWoodBranches" />
     </Prerequisites>
     <Results>
@@ -5938,7 +5937,7 @@ tier foods.</Description>
     <DisplayName>Advanced Tent</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="1" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentAdv" />
@@ -5948,17 +5947,16 @@ tier foods.</Description>
 
 <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTentAdv"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tent"/>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
     <DisplayName>Advanced Tent</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
     <Description>A tent is important for any traveler. This tent
-    provides a bed, some storage, and a place to change your clothes.
-    </Description>
+provides a bed, some storage, and a place to change your clothes.</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
       <Item Amount="1" Type="CubeBlock" Subtype="WoodChest" />
-      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
-      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="6" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="8" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Tent" />
