@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Sounds>
+<!-- ================================================================= -->
     <Sound>
       <Id>
         <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
@@ -18,5 +19,24 @@
         </Wave>
       </Waves>
     </Sound>
+<!-- ================================================================= -->
+    <Sound>
+      <Id>
+        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+        <SubtypeId>ResearchSound</SubtypeId>
+      </Id>
+      <Category>PLAYER</Category>
+      <MaxDistance>5</MaxDistance>
+      <Volume>1</Volume>
+      <VolumeVariation>1</VolumeVariation>
+      <PitchVariation>100</PitchVariation>
+      <Loopable>true</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\PLAYER\ResearchSound.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+<!-- ================================================================= -->
   </Sounds>
 </Definitions>
