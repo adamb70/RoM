@@ -5919,8 +5919,8 @@ tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="8" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="6" Type="InventoryItem" Subtype="ScrapWoodBranches" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="NomadTent" />
@@ -5951,14 +5951,17 @@ tier foods.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTentAdv"/>
     <DisplayName>Advanced Tent</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+    <Description>A tent is important for any traveler. This tent
+    provides a bed, some storage, and a place to change your clothes.
+    </Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="12" Type="InventoryItem" Subtype="ScrapWoodBranches" />
       <Item Amount="1" Type="CubeBlock" Subtype="WoodChest" />
+      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="NomadTentAdv" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Tent" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
