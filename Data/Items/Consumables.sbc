@@ -2470,7 +2470,7 @@ This knowledge would be valuable for a Farmer.
         <Z>0.3</Z>
       </Size>
       <Mass>0.15</Mass>
-      <Model>Models\Consumables\Bread.mwm</Model>
+      <Model>Models\Consumables\PineCone.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
       <Stats>
@@ -2504,7 +2504,7 @@ or Chef.
         <Z>1</Z>
       </Size>
       <Mass>6.7</Mass>
-      <Model>Models\Components\WheatStraws.mwm</Model>
+      <Model>Models\Consumables\PineCone.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
       <UseSound>PlayEat</UseSound>
@@ -7621,7 +7621,190 @@ This knowledge would be valuable for Masonry.</Description>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
+<!-- ===================================================================================  -->    
+
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Nomadic_Schematic_FenceGate</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Fence Gate Manuscript</DisplayName>
+
+      <Description>As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for constructing a fence gate.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\FenceGate.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>FenceGate_Nomadic</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
 <!-- ===================================================================================  -->
+
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Nomadic_Schematic_NomadBed</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Basic Bed Manuscript</DisplayName>
+
+      <Description>As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for constructing a basic bed.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>Bed_Nomadic</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- ===================================================================================  -->
+
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Nomadic_Schematic_NomadTent</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Tent Manuscript</DisplayName>
+
+      <Description>As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for constructing a basic tent.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>Tent_Nomadic</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- ===================================================================================  -->
+
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Nomadic_Schematic_NomadTentAdv</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Advanced Tent Manuscript</DisplayName>
+
+      <Description>As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for constructing a tent with storage.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>Tent_NomadicAdv</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+
+<!-- ===================================================================================  -->
+    
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Nomadic_Schematic_BerryPreserve</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Red Berry Preserve Manuscript</DisplayName>
+
+      <Description>As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for cooking red berry preserve.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Consumables\RedJam.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>BerryPreserve_Nomadic</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- ===================================================================================  -->   
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="BerryPreserve" />
+    <Tag>Dish</Tag>
+      <Public>true</Public>
+      <DisplayName>Red Berry Preserve</DisplayName>
+      <Icon>Textures\GUI\Icons\Consumables\RedJam.dds</Icon>
+      <Size>
+        <X>0.3</X>
+        <Y>0.1</Y>
+        <Z>0.3</Z>
+      </Size>
+      <Mass>0.5</Mass>
+      <Model>Models\Consumables\JamJar.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <Stats>
+        <Stat Name="Food" Value="8" Time="1" />
+        <Stat Name="Mood" Value="4" Time="1" />
+        <Stat Name="Thirst" Value="4" Time="1" />
+      </Stats>
+      <UseSound>PlayEat</UseSound>
+  </Definition> 
 
 
 </Definitions>

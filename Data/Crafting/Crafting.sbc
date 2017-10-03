@@ -5673,15 +5673,15 @@ foes at close range.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Nomadic_Book" />
     <DisplayName>Basic Survival Guide</DisplayName>
     <Description>
-"The realm poses many dangers, but just
-as many opportunities. Mastering survial
-is to manifest that success."
+    "The realm poses many dangers, but just
+    as many opportunities. Mastering survial
+    is to manifest that success."
 
-This book is used as a survival guide to
-learn the essentials within the Realm of 
-Mistvalin. This book contains research 
-that can be unlocked.
-</Description>
+    This book is used as a survival guide to
+    learn the essentials within the Realm of 
+    Mistvalin. This book contains research 
+    that can be unlocked.
+    </Description>
     <Icon>Textures\GUI\Icons\Universal\Books\Nomadic.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
@@ -5807,5 +5807,161 @@ tier foods.</Description>
       <Item Amount="1" Type="CubeBlock" Subtype="BonFire" />
     </Results>
     <CraftingTime Seconds="3"/>
+  </Definition>  
+<!-- =================================================================================== -->  
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedJam.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Red Berry Preserve</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Blue_Berry" />
+      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Berries" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_BerryPreserve" />
+    </Results>
+    <CraftingTime Seconds="3"/>
   </Definition>
+
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\FenceGate.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Fence Gate</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_FenceGate" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FenceGate"/>
+    <DisplayName>Fence Gate</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\FenceGate.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="19" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="15" Type="InventoryItem" Subtype="WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="MyObjectBuilder_CubeBlock" Subtype="FenceGate" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bed_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Basic Bed</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadBed" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicBed"/>
+    <DisplayName>Basic Bed</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tent_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTent"/>
+    <DisplayName>Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadTent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AdvTent_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentAdv" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTentAdv"/>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="12" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="1" Type="CubeBlock" Subtype="WoodChest" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadTentAdv" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+<!-- =================================================================================== -->
 </Definitions>

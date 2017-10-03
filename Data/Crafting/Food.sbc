@@ -578,10 +578,21 @@ and Pristine Mushrooms.))</Description>
     </Definition>
 <!-- =================================================================================== -->
 
-
-
-
-
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve"/>
+    <DisplayName>Red Berry Preserve</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\RedJam.dds</Icon>
+    <Category>Cooking</Category>
+    <Prerequisites>
+      <Item Amount="6" Type="ConsumableItem" Subtype="Berries" />
+      <!--<Item Amount="9" Type="ConsumableItem" Subtype="Blue_Berry" />-->
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="BerryPreserve" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>  
+<!-- =================================================================================== -->
 
 
 </Definitions>
