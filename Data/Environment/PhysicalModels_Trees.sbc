@@ -1,390 +1,281 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <!--Version 01-->
+
+  <!-- Version 01 -->
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_TreeSmall01</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Bushes\Small_tree_LOD0.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree02" />
+    <Model>Models\Environment\Trees\EnchantedPineTree10m.mwm</Model>
+    <BranchesStartHeight>2.342</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>50</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree03" />
+    <Model>Models\Environment\Trees\EnchantedPineTree15m.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree04" />
+    <Model>Models\Environment\Trees\EnchantedPineTree175m.mwm</Model>
+    <BranchesStartHeight>10.689</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>100</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree05" />
+    <Model>Models\Environment\Trees\EnchantedPineTree225m.mwm</Model>
+    <BranchesStartHeight>5.351</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>100</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree06" />
+    <Model>Models\Environment\Trees\EnchantedPineTree25m.mwm</Model>
+    <BranchesStartHeight>7.588</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>100</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
+  </Definition>
+    
+    
+    
+  <!-- Version 02 -->
+  
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_TreeSmall01" />
+    <Model>Models\Environment\Bushes\EnchantedSmall_tree_LOD0.mwm</Model>
     <BranchesStartHeight>1.342</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>15</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_TreeSmall01_colorVar2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Bushes\Small_tree_LOD0.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_TreeSmall01_colorVar2" />
+    <Model>Models\Environment\Bushes\EnchantedSmall_tree_LOD0.mwm</Model>
     <BranchesStartHeight>1.342</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>15</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_TreeMedium01</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Bushes\Bigger_tree_LOD0.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_TreeMedium01" />
+    <Model>Models\Environment\Bushes\EnchantedBigger_tree_LOD0.mwm</Model>
     <BranchesStartHeight>1.542</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>20</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_TreeMedium01_colorVar2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Bushes\Bigger_tree_LOD0.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_TreeMedium01_colorVar2" />
+    <Model>Models\Environment\Bushes\EnchantedBigger_tree_LOD0.mwm</Model>
     <BranchesStartHeight>1.542</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>20</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_TreePine4m</SubtypeId>
-    </Id>
-    <Model>Models\Environment\TreesMedium\PineTreeMedium4m.mwm</Model>
-    <BranchesStartHeight>1.342</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>15</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_TreePine4m_colorVar2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\TreesMedium\PineTreeMedium4m.mwm</Model>
-    <BranchesStartHeight>1.342</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>15</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree02</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree10m.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree02_v2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree10m_v2.mwm</Model>
     <BranchesStartHeight>2.342</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>50</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
     <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree03</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree15m.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree02_v2_colorVar2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree10m_v2.mwm</Model>
+    <BranchesStartHeight>2.342</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>50</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree02_v2_colorVar3" />
+    <Model>Models\Environment\Trees\EnchantedPineTree10m_v2.mwm</Model>
+    <BranchesStartHeight>2.342</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>50</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree03_v2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree15m_v2.mwm</Model>
     <BranchesStartHeight>5.302</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>70</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
     <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree04</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree175m.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree03_v2_colorVar2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree15m_v2.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree03_v2_colorVar3" />
+    <Model>Models\Environment\Trees\EnchantedPineTree15m_v2.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>Tree</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="0" Saturation="-25" Value="0" />
+    <MaxColorShift Hue="0" Saturation="-25" Value="0" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree04_v2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree175m_v2.mwm</Model>
     <BranchesStartHeight>10.689</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>100</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
     <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree05</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree225m.mwm</Model>
-    <BranchesStartHeight>5.351</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>100</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-60" Saturation="0" Value="0" />
-    <MaxColorShift Hue="0" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree06</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree25m.mwm</Model>
-    <BranchesStartHeight>7.588</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>100</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-60" Saturation="0" Value="0" />
-    <MaxColorShift Hue="0" Saturation="0" Value="0" />
-  </Definition>
-
-  <!--Version 02-->
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree02_v2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree10m_v2.mwm</Model>
-    <BranchesStartHeight>2.342</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>50</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree02_v2_colorVar2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree10m_v2.mwm</Model>
-    <BranchesStartHeight>2.342</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>50</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree02_v2_colorVar3</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree10m_v2.mwm</Model>
-    <BranchesStartHeight>2.342</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>50</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
-  </Definition>
-
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree03_v2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree15m_v2.mwm</Model>
-    <BranchesStartHeight>5.302</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>70</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree03_v2_colorVar2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree15m_v2.mwm</Model>
-    <BranchesStartHeight>5.302</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>70</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree03_v2_colorVar3</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree15m_v2.mwm</Model>
-    <BranchesStartHeight>5.302</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>70</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="-25" Value="0" />
-    <MaxColorShift Hue="-25" Saturation="-25" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree04_v2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree175m_v2.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree04_v2_colorVar2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree175m_v2.mwm</Model>
     <BranchesStartHeight>10.689</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>100</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree04_v2_colorVar2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree175m_v2.mwm</Model>
-    <BranchesStartHeight>10.689</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>100</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree05_v2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree225m_v2.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree05_v2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree225m_v2.mwm</Model>
     <BranchesStartHeight>5.351</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>100</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree05_v2_colorVar2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree225m_v2.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree05_v2_colorVar2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree225m_v2.mwm</Model>
     <BranchesStartHeight>5.351</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>100</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree06_v2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree25m_v2.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree06_v2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree25m_v2.mwm</Model>
     <BranchesStartHeight>7.588</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>100</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
+    <MaxColorShift Hue="1" Saturation="0" Value="0" />
   </Definition>
-
-  <!---->
+  
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree06_v2_colorVar2</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree25m_v2.mwm</Model>
+    <Id Type="TreeDefinition" Subtype="Enchanted_Tree06_v2_colorVar2" />
+    <Model>Models\Environment\Trees\EnchantedPineTree25m_v2.mwm</Model>
     <BranchesStartHeight>7.588</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>100</HitPoints>
     <CutEffect>ChipOff_Wood</CutEffect>
     <FallSound>ImpTreeFelling</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="10" Saturation="0" Value="0" />
-    <MaxColorShift Hue="55" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
-    <Id>
-      <TypeId>TreeDefinition</TypeId>
-      <SubtypeId>Enchanted_Tree06_v2_colorVar3</SubtypeId>
-    </Id>
-    <Model>Models\Environment\Trees\PineTree25m_v2.mwm</Model>
-    <BranchesStartHeight>7.588</BranchesStartHeight>
-    <PhysicalMaterial>Tree</PhysicalMaterial>
-    <HitPoints>100</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
-    <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="20" Saturation="0" Value="0" />
-    <MaxColorShift Hue="35" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="-5" Value="0" />
+    <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
 </Definitions>

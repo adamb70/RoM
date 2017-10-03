@@ -155,7 +155,7 @@
         <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
       </GrowthStep>
       <GrowthStep Name="Enchanted_Schematic_TreeSmall" StartingProbability="0.9">
-        <ModelCollectionSubtypeId>TreeSmall</ModelCollectionSubtypeId>
+        <ModelCollectionSubtypeId>Enchanted_TreeSmall</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
             <Id Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks"/>
@@ -180,7 +180,7 @@
         <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
       </GrowthStep>
       <GrowthStep Name="Enchanted_TreeSmall" StartingProbability="0.9">
-        <ModelCollectionSubtypeId>TreeSmall</ModelCollectionSubtypeId>
+        <ModelCollectionSubtypeId>Enchanted_TreeSmall</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
             <Id Type="InventoryItem" Subtype="Enchanted_WoodenSticks"/>
@@ -483,12 +483,12 @@
     </Id>
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0.05">
-        <NextStep>TreeSapling</NextStep>
+        <NextStep>Enchanted_TreeSapling</NextStep>
         <TimeToNextStepInHours>2</TimeToNextStepInHours>
       </GrowthStep>
-      <GrowthStep Name="TreeSapling" StartingProbability="0.15">
-        <ModelCollectionSubtypeId>TreeSmall</ModelCollectionSubtypeId>
-        <NextStep>TreePine10</NextStep>
+      <GrowthStep Name="Enchanted_TreeSapling" StartingProbability="0.15">
+        <ModelCollectionSubtypeId>Enchanted_TreeSmall</ModelCollectionSubtypeId>
+        <NextStep>Enchanted_TreePine10</NextStep>
         <TimeToNextStepInHours>36</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather">
@@ -497,55 +497,55 @@
             <Max>4</Max>
           </Action>
           <Action Name="Cut">
-            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="TreeMedium01"/>
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Enchanted_TreeMedium01"/>
           </Action>
         </Actions>
       </GrowthStep>
-      <GrowthStep Name="TreePine10" StartingProbability="0.05">
-        <ModelCollectionSubtypeId>TreePine10</ModelCollectionSubtypeId>
-        <NextStep>TreePine15</NextStep>
+      <GrowthStep Name="Enchanted_TreePine10" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Enchanted_TreePine10</ModelCollectionSubtypeId>
+        <NextStep>Enchanted_TreePine15</NextStep>
         <TimeToNextStepInHours>12</TimeToNextStepInHours>
         <Actions>
           <Action Name="Cut">
-            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree02"/>
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Enchanted_Tree02"/>
           </Action>
         </Actions>
       </GrowthStep>
-      <GrowthStep Name="TreePine15" StartingProbability="0.05">
-        <ModelCollectionSubtypeId>TreePine15</ModelCollectionSubtypeId>
-        <NextStep>TreePine175</NextStep>
+      <GrowthStep Name="Enchanted_TreePine15" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Enchanted_TreePine15</ModelCollectionSubtypeId>
+        <NextStep>Enchanted_TreePine175</NextStep>
         <TimeToNextStepInHours>16</TimeToNextStepInHours>
         <Actions>
           <Action Name="Cut">
-            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree03"/>
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Enchanted_Tree03"/>
           </Action>
         </Actions>
       </GrowthStep>
-      <GrowthStep Name="TreePine175" StartingProbability="0.05">
-        <ModelCollectionSubtypeId>TreePine175</ModelCollectionSubtypeId>
-        <NextStep>TreePine225</NextStep>
+      <GrowthStep Name="Enchanted_TreePine175" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Enchanted_TreePine175</ModelCollectionSubtypeId>
+        <NextStep>Enchanted_TreePine225</NextStep>
         <TimeToNextStepInHours>20</TimeToNextStepInHours>
         <Actions>
           <Action Name="Cut">
-            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree04"/>
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Enchanted_Tree04"/>
           </Action>
         </Actions>
       </GrowthStep>
-      <GrowthStep Name="TreePine225" StartingProbability="0.05">
-        <ModelCollectionSubtypeId>TreePine225</ModelCollectionSubtypeId>
-        <NextStep>TreeFull</NextStep>
+      <GrowthStep Name="Enchanted_TreePine225" StartingProbability="0.05">
+        <ModelCollectionSubtypeId>Enchanted_TreePine225</ModelCollectionSubtypeId>
+        <NextStep>Enchanted_TreeFull</NextStep>
         <TimeToNextStepInHours>24</TimeToNextStepInHours>
         <Actions>
           <Action Name="Cut">
-            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree05"/>
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Enchanted_Tree05"/>
           </Action>
         </Actions>
       </GrowthStep>
-      <GrowthStep Name="TreeFull" StartingProbability="0.6">
-        <ModelCollectionSubtypeId>TreePine25</ModelCollectionSubtypeId>
+      <GrowthStep Name="Enchanted_TreeFull" StartingProbability="0.6">
+        <ModelCollectionSubtypeId>Enchanted_TreePine25</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Cut">
-            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Enchanted_Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
