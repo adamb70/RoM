@@ -3498,6 +3498,23 @@ inorder to withstand more .</DisplayName>
     </Definition>
 <!-- ====================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wardrobe_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Wardrobe</DisplayName>
+      <Category>Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_Wardrobe" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodenGate_Carpenter" />
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\WoodenGate.dds</Icon>
