@@ -3628,6 +3628,40 @@ for a Carpenter.
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
       <Id>
         <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Carpenter_Schematic_Wardrobe</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Wardrobe Manuscript</DisplayName>
+      <Description>
+As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for constructing a Wardrobe.
+This knowledge would be valuable 
+for a Carpenter.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>ResearchSound</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>StockpileStone_Wardrobe</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
         <SubtypeId>Carpenter_Schematic_WoodenGate</SubtypeId>
       </Id>
       <Public>true</Public>

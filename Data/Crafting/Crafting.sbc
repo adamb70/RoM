@@ -1667,9 +1667,9 @@ to read from it.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_Flax" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Flax" />
       </Prerequisites>
       <Results>
 	  
@@ -3286,7 +3286,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Tailor: Banner Workstation</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3403,7 +3403,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Dining Table</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="24" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="18" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3559,8 +3559,22 @@ inorder to withstand more .</DisplayName>
         <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
-	  
 	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileIronSmall" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wardrobe_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Wardrobe</DisplayName>
+      <Category>Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_Wardrobe" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
@@ -3573,7 +3587,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Gate</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="55" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="45" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -3847,7 +3861,7 @@ produce Blue Berry Juice.</DisplayName>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
         <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
-        <Item Amount="40" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="30" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3864,7 +3878,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="45" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="35" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="12" Type="SchematicItem" Subtype="Schematic_IronOre" />
       </Prerequisites>
       <Results>
@@ -3883,7 +3897,7 @@ produce Blue Berry Juice.</DisplayName>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_IronOre" />
-        <Item Amount="45" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="35" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -4395,7 +4409,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="14" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4413,7 +4427,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="18" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="14" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4431,7 +4445,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="13" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="25" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4829,7 +4843,7 @@ fill empty buckets.
       <DisplayName>Masonry: Large Round Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="35" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4846,7 +4860,7 @@ fill empty buckets.
       <DisplayName>Masonry: Round Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="17" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="26" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4863,7 +4877,7 @@ fill empty buckets.
       <DisplayName>Masonry: Straight Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="11" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4880,7 +4894,7 @@ fill empty buckets.
       <DisplayName>Masonry: Small Round Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="22" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4914,7 +4928,7 @@ fill empty buckets.
       <DisplayName>Masonry: Diagonal Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4931,7 +4945,7 @@ fill empty buckets.
       <DisplayName>Masonry: Large Round Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="19" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="28" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
