@@ -24,7 +24,7 @@
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileIronSmall"/>
     <DisplayName>DisplayName_Block_StockpileIronSmall</DisplayName>
     <Icon>Textures\GUI\Icons\Props\StockpileIronSmall.dds</Icon>
-    <Category></Category>
+    <Category>Carpentry_Table</Category>
     <Prerequisites>
       <Item Amount="4" Tag="Timber" />
     </Prerequisites>
@@ -3437,7 +3437,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Bookshelf</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3451,10 +3451,10 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
 	<Icon>Textures\GUI\Icons\Props\Stockpile_Log.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Carpenter: Log Stockpile</DisplayName>
+      <DisplayName>Carpentry: Large Log Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="32" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3468,10 +3468,10 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Props\Stockpile_Timber.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Carpenter: Timber Stockpile</DisplayName>
+      <DisplayName>Carpentry: Large Timber Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="32" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3485,14 +3485,82 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Props\Stockpile_Stone.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Carpenter: Stone Stockpile</DisplayName>
+      <DisplayName>Carpentry: Large Stone Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="32" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
 	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileStone" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileLogSmall_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileLogSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Small Log Stockpile</DisplayName>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileLogSmall" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileTimberSmall_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileTimberSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Small Timber Stockpile</DisplayName>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileTimberSmall" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileStoneSmall_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileOreSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Small Stone Stockpile</DisplayName>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileStoneSmall" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileIronSmall_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileIronSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Small Iron Stockpile</DisplayName>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileIronSmall" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>

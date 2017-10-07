@@ -1136,24 +1136,47 @@
 	<Id Type="ResearchDefinition" Subtype="StockpileLog_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CubeBlock" Subtype="StockpileLog" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="StockpileTimber_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CubeBlock" Subtype="StockpileTimber" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="StockpileStone_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CubeBlock" Subtype="StockpileStone" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall" />
   </Definition>
 <!-- ========================================================================= -->
-
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileLogSmall_Carpenter" />
+    <DisplayName>Survival</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLog_Carpenter" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileTimberSmall_Carpenter" />
+    <DisplayName>Survival</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimber_Carpenter" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileStoneSmall_Carpenter" />
+    <DisplayName>Survival</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStone_Carpenter" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileIronSmall_Carpenter" />
+    <DisplayName>Survival</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileIronSmall" />
+  </Definition>
+<!-- ========================================================================= -->
 
     <!-- Carpenter Crops -->
 
@@ -1189,9 +1212,10 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="NordicChair_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="NorseBed_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="NordicThrone_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLog_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimber_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStone_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileIronSmall_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Bookshelf_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WeaponRack_Carpenter" />

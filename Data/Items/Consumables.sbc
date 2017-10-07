@@ -3393,12 +3393,12 @@ This knowledge would be valuable for a Carpenter.
         <SubtypeId>Carpenter_Schematic_StockpileLog</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Log Stockpile Manuscript</DisplayName>
+      <DisplayName>Large Log Stockpile Manuscript</DisplayName>
       <Description>
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
-the process for constructing a Large and Small 
-Log Stockpile. This knowledge would be valuable 
+the process for constructing a Large Log 
+Stockpile. This knowledge would be valuable 
 for a Carpenter.
 </Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -3427,12 +3427,12 @@ for a Carpenter.
         <SubtypeId>Carpenter_Schematic_StockpileTimber</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Timber Stockpile Manuscript</DisplayName>
+      <DisplayName>Large Timber Stockpile Manuscript</DisplayName>
       <Description>
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
-the process for constructing a Large and Small 
-Timber Stockpile. This knowledge would be valuable 
+the process for constructing a Large Timber 
+Stockpile. This knowledge would be valuable 
 for a Carpenter.
 </Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -3461,12 +3461,12 @@ for a Carpenter.
         <SubtypeId>Carpenter_Schematic_StockpileStone</SubtypeId>
       </Id>
       <Public>true</Public>
-      <DisplayName>Stone Stockpile Manuscript</DisplayName>
+      <DisplayName>Large Stone Stockpile Manuscript</DisplayName>
       <Description>
 As you examine the manuscript, you notice 
 diagrams and written instructions explaining
-the process for constructing a Large and Small 
-Stone Stockpile. This knowledge would be valuable 
+the process for constructing a Large Stone 
+Stockpile. This knowledge would be valuable 
 for a Carpenter.
 </Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -3485,6 +3485,142 @@ for a Carpenter.
       <Research>
         <TypeId>ResearchDefinition</TypeId>
         <SubtypeId>StockpileStone_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Carpenter_Schematic_StockpileLogSmall</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Small Log Stockpile Manuscript</DisplayName>
+      <Description>
+As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for constructing a Small Log Stockpile. 
+This knowledge would be valuable for a Carpenter.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Props\Stockpile_Log.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>ResearchSound</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>StockpileLogSmall_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Carpenter_Schematic_StockpileTimberSmall</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Small Timber Stockpile Manuscript</DisplayName>
+      <Description>
+As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for constructing a Small Timber 
+Stockpile. This knowledge would be valuable 
+for a Carpenter.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\Stockpile_Timber.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>ResearchSound</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>StockpileTimberSmall_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Carpenter_Schematic_StockpileStoneSmall</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Small Stone Stockpile Manuscript</DisplayName>
+      <Description>
+As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for constructing a Small Stone 
+Stockpile. This knowledge would be valuable 
+for a Carpenter.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Props\Stockpile_Stone.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>ResearchSound</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>StockpileStoneSmall_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id>
+        <TypeId>SchematicItem</TypeId>
+        <SubtypeId>Carpenter_Schematic_StockpileIronSmall</SubtypeId>
+      </Id>
+      <Public>true</Public>
+      <DisplayName>Small Iron Stockpile Manuscript</DisplayName>
+      <Description>
+As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for constructing a Small Iron 
+Stockpile. This knowledge would be valuable 
+for a Carpenter.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileIronSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>ResearchSound</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>StockpileIronSmall_Carpenter</SubtypeId>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
