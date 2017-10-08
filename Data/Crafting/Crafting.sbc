@@ -3564,6 +3564,7 @@ inorder to withstand more .</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wardrobe_Carpenter" />
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
@@ -3579,7 +3580,7 @@ inorder to withstand more .</DisplayName>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- ====================================================================== -->
-<Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodBed_Carpenter" />
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\WoodBed.dds</Icon>
@@ -5950,7 +5951,7 @@ tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\FenceGate.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="8" Tag="Timber" />
       <Item Amount="5" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
