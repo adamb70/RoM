@@ -1040,6 +1040,12 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="Wardrobe" />
   </Definition>
 <!-- ========================================================================= -->
+<Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodBed_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodBed" />
+  </Definition>
+<!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="WoodChair_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
@@ -1229,6 +1235,7 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="WeaponRack_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodenDiningTable_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodenShelf_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodBed_Carpenter" />
   </Definition>
 
 
@@ -1912,11 +1919,21 @@
   </Definition>
   
 <!-- ========================================================================= -->
-
+  
   <Definition xsi:type="ResearchDefinition">
-    <Id Type="ResearchDefinition" Subtype="Bed_Nomadic" />
+    <Id Type="ResearchDefinition" Subtype="TentBranches_Nomadic" />
     <DisplayName>Nomadic Research</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="NomadicBed" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="AdvTentBranches_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="NomadTentBranches" />
+  </Definition>
+  
+<!-- ========================================================================= -->
+  
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="AdvTentBranches_Nomadic" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TentBranches" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Tent_Nomadic" />
   </Definition>
   
 <!-- ========================================================================= -->
@@ -1924,6 +1941,7 @@
   <Definition xsi:type="ResearchDefinition">
     <Id Type="ResearchDefinition" Subtype="Tent_Nomadic" />
     <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="AdvTent_Nomadic" />
     <Entry Type="CraftingRecipeDefinition" Subtype="NomadicTent" />
   </Definition>
   
@@ -1936,5 +1954,4 @@
   </Definition>
   
 <!-- ========================================================================= -->
-  
 </Definitions>
