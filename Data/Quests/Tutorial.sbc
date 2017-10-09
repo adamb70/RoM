@@ -8,18 +8,15 @@
       <SubtypeId>RoMQuest_Tutorial_01</SubtypeId>
     </Id>
 	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>You arrive in a Starter Town. You cant stay here forever, though you're always welcomed to visit or stay in the inn.
+	<Description>Welcome to Mistvalin!
 
-You feel hungry and a bit thirsty, look in the nearby forests for some mushrooms and berries. Luckily, berries will quinch that thirst. 
+You arrive in a small town, feeling hungry and a bit thirsty. You are welcomed to look around and visit the inn, but you have no coins to pay for food!
 
-Additionally, you may find "Pristine Items", which are perfect for learning professions. Make sure you "consume" the knowledge of each type of pristine item. They're highly valued so collect as many as possible!
+Instead, you must find your own food in a nearby forest. Mushrooms, roots, and berries can be eaten. Berries will also quench your thirst.
 
-You'll want to also grab some materials to build your tools. Find some small stones and wooden sticks, then you'll be ready to leave Munik and survive the wilderness.
+You'll also want to grab some materials to build tools. Find some small stones and wooden sticks, then you'll be ready to survive the wilderness.
 
-((And dont forget to vote the server! 
-Link on RoM's Public Steam Group Page))
-
-Quest Requirements:</Description>
+Requirements:</Description>
 	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
 	<Conditions>
 		<ConditionSet NextQuestId="RoMQuest_Tutorial_02">
@@ -44,12 +41,88 @@ Quest Requirements:</Description>
       <SubtypeId>RoMQuest_Tutorial_02</SubtypeId>
     </Id>
 	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>It's important to have the tools needed for the right jobs, craft a Stone Axe.
+	<Description>Before you can start building things, you need to learn their recipe from a book.
 
-Quest Requirements:</Description>
+In your inventory you can craft a Survival Guide that will allow you to learn basic recipes for survival.
+
+Craft the book and place it on the floor.
+
+Requirements:</Description>
 	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
 	<Conditions>
 		<ConditionSet NextQuestId="RoMQuest_Tutorial_03">
+      <Condition xsi:type="QuestConditionItem" Type="item_crafted">
+				<ItemId Type="CubeBlock" Subtype="Nomadic_Book" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Type="block_placed">
+				<ItemId Type="CubeBlock" Subtype="Nomadic_Book" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  
+    <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_03</SubtypeId>
+    </Id>
+	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
+	<Description>The recipes in the book require "Pristine Items".
+
+You will find pristine sticks from small trees, pristine stone and iron can be found by picking up stones on the ground.
+
+Pristine items are rare and highly valued so collect as many as possible! Make sure you "consume" the knowledge of each type of pristine item.
+
+Find some pristine stones on the floor and then learn how to make a fireplace using the Survival Guide book.
+
+Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_04">
+      <Condition xsi:type="QuestConditionResearch" Type="research_unlocked">
+        <ResearchName>Bonfire_Nomadic</ResearchName>
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_04</SubtypeId>
+    </Id>
+	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
+	<Description>Now that you have crafted a manuscript with the Survival Guide book, you can consume it to learn the recipe.
+
+It's time to put your new knowledge to use, gather stones and build a fireplace so you can cook yourself some food.
+
+Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_05">
+			<Condition xsi:type="QuestConditionItem" Type="item_crafted">
+				<ItemId Type="CubeBlock" Subtype="BonFire" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_05</SubtypeId>
+    </Id>
+	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
+	<Description>You've got the basics, now you need tools to be able to secure your camp.
+
+Gather the necessary resources, then craft the Stone Axe.  
+
+Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_06">
 			<Condition xsi:type="QuestConditionItem" Type="item_crafted">
 				<ItemId Type="MyObjectBuilder_HandItem" Subtype="StoneAxe" />
 			</Condition>
@@ -57,269 +130,178 @@ Quest Requirements:</Description>
 	</Conditions>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
-      <SubtypeId>RoMQuest_Tutorial_03</SubtypeId>
-    </Id>
-	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>Now that you have an axe, cut some trees down, and collect some logs.
-
-Then find a rocky location and use the Stone Axe to mine some Large Stones.
-
-Quest Requirements:</Description>
-	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
-	<Conditions>
-		<ConditionSet NextQuestId="RoMQuest_Tutorial_04">
-			<Condition xsi:type="QuestConditionItem" Type="item_received">
-				<ItemId Type="InventoryItem" Subtype="Log250cm" />
-				<Amount>14</Amount>
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Type="item_received">
-				<ItemId Type="InventoryItem" Subtype="WoodenSticks" />
-				<Amount>8</Amount>
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Type="item_received">
-				<ItemId Type="InventoryItem" Subtype="LargeStone" />
-				<Amount>20</Amount>
-			</Condition>
-		</ConditionSet>
-	</Conditions>
-Quest Requirements:</Definition>
   
-  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
-      <SubtypeId>RoMQuest_Tutorial_04</SubtypeId>
-    </Id>
-	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>Go ahead and craft all of the tables and books required for all  professions. 
-
-You'll need to build a Carpenter's Table first then build a Scribe's Table to craft unwritten books.
-
-Quest Requirements:</Description>
-	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
-	<Conditions>
-		<ConditionSet NextQuestId="RoMQuest_Tutorial_05">
-			<Condition xsi:type="QuestConditionItem" Text="[Tables]" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Table" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Scribe_Table" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Table" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Herbalist_Table" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Table" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Carpentry Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Cooking Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Scribe Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Scribe_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Apothocary Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Herbalist Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Herbalist_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Masonry Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Machinesmith Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="[Books]" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Carpentry_Book" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Blacksmithing_Book" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Tailor_Book" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Book" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Farming_Book" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Book" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Book" />
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Carpentry Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Carpentry_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Blacksmithing Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Blacksmithing_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Tailor Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Tailor_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Cooking Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Farming Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Farming_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Apothocary Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Masonry Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Machinesmith Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Book" />
-			</Condition>
-		</ConditionSet>
-	</Conditions>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
-      <SubtypeId>RoMQuest_Tutorial_05</SubtypeId>
-    </Id>
-	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>Now, place these tables down. They are used for crafting many different blocks associated with their respective Profession.
-
-Place the books ontop of their respective table. It's recommended to only take up  one or two professions.
-
-Have a friend do  the other profession. The books in the  begining are independant and dont require  the assistance of other professions.
-
-Quest Requirements:</Description>
-	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
-	<Conditions>
-		<ConditionSet NextQuestId="RoMQuest_Tutorial_06">
-			<Condition xsi:type="QuestConditionItem" Text="Carpentry Table" Type="block_placed">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
-			</Condition>
-		</ConditionSet>
-	</Conditions>
-  </Definition>
-
   <Definition xsi:type="MyObjectBuilder_QuestDefinition">
     <Id>
       <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
       <SubtypeId>RoMQuest_Tutorial_06</SubtypeId>
     </Id>
 	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>It's time to say farewell to the Starter Town, and hello to a whole new world. So pack up your things, and move on.
+	<Description>Now that you have an axe, cut some trees down and collect logs.
 
-Quest Requirements:</Description>
+Requirements:</Description>
 	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
 	<Conditions>
 		<ConditionSet NextQuestId="RoMQuest_Tutorial_07">
-			<Condition xsi:type="QuestConditionItem" Text="Carpentry Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Cooking Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Scribe Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Scribe_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Apothocary Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Herbalist Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Herbalist_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Masonry Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Machinesmith Table" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Table" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Carpentry Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Carpentry_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Blacksmithing Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Blacksmithing_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Tailor Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Tailor_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Cooking Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Cooking_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Farming Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Farming_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Apothocary Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Apothocary_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Masonry Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Masonry_Book" />
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Machinesmith Book" Type="item_received">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Machinesmith_Book" />
+			<Condition xsi:type="QuestConditionItem" Type="item_received">
+				<ItemId Type="InventoryItem" Subtype="Log250cm" />
+				<Amount>8</Amount>
 			</Condition>
 		</ConditionSet>
 	</Conditions>
   </Definition>
-  
+    
   <Definition xsi:type="MyObjectBuilder_QuestDefinition">
     <Id>
       <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
       <SubtypeId>RoMQuest_Tutorial_07</SubtypeId>
     </Id>
 	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>The Realm of Mistvalin is a large world, with diverse regions. You can use the roads to travel to these distant regions.
+	<Description>To secure your camp you will need to surround yourself with defences.
 
-The Realm is divided into five regions: The Norden Plains, The Kharidian Steppes, The Dwarven Highlands, The Dwarven Hills, and The Elven Grove.
+Use the Survival Guide book to learn how to craft barricades. You may need to gather more pristine sticks for this.
 
-Each region has unique plants, animals, and recources. So you'll have to discover what's their before you start making a home. Luckily, you have your books to record your findings.
+Once you have read the manuscript, build some defences.
 
-When you find an area, lets stake a claim to tell the world this is your home. ((Their are anti-grief mechanics, so anything with items cannot be looted or picked up.))
-
-Quest Requirements:</Description>
+Requirements:</Description>
 	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
 	<Conditions>
 		<ConditionSet NextQuestId="RoMQuest_Tutorial_08">
-			<Condition xsi:type="QuestConditionItem" Text="DisplayName_Block_ClaimBlock" Type="block_placed">
-				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="ClaimBlock" />
+			<Condition xsi:type="QuestConditionItem" Type="item_crafted">
+				<ItemId Type="CubeBlock" Subtype="LongBarricade" />
+			</Condition>
+      <Condition xsi:type="QuestConditionItem" Type="item_crafted">
+				<ItemId Type="CubeBlock" Subtype="SmallBarricade" />
 			</Condition>
 		</ConditionSet>
 	</Conditions>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Definition xsi:type="MyObjectBuilder_QuestDefinition">
     <Id>
       <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
       <SubtypeId>RoMQuest_Tutorial_08</SubtypeId>
     </Id>
 	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>You'll want to place those tables and books down inside your claim. Then go into a nearby forest and look for some pristine items. We're going to research a well.
+	<Description>Excellent, now you have a camp! However, you now have something to lose if you die.
 
-((Tip: pristine items have a 1:10 ratio compared to normal items. They respawn every 4.5 hours, so dont search depleted areas!))
+To set a respawn point, craft a bed and place it somewhere safe. 
 
-Quest Requirements:</Description>
+Don't forget to claim it!
+
+Requirements:</Description>
 	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
 	<Conditions>
 		<ConditionSet NextQuestId="RoMQuest_Tutorial_09">
-			<Condition xsi:type="QuestConditionItem" Text="Pristine Wooden Sticks" Type="item_received">
-				<ItemId Type="MyObjectBuilder_SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-				<Amount>2</Amount>
-			</Condition>
-			<Condition xsi:type="QuestConditionItem" Text="Pristine Stone Ore" Type="item_received">
-				<ItemId Type="MyObjectBuilder_SchematicItem" Subtype="Schematic_StoneOreSmall" />
-				<Amount>3</Amount>
+			<Condition xsi:type="QuestConditionItem" Type="block_placed">
+				<ItemId Type="CubeBlock" Subtype="NomadBed" />
 			</Condition>
 		</ConditionSet>
 	</Conditions>
-  </Definition>
-  
+  </Definition> 
+
   <Definition xsi:type="MyObjectBuilder_QuestDefinition">
     <Id>
       <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
       <SubtypeId>RoMQuest_Tutorial_09</SubtypeId>
     </Id>
 	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
-	<Description>Go to the book, and drop the pristine items inside of it. You'll then be able to research the Stone Well.
+	<Description>The Survival Guide book can teach you all you need to keep building your camp, but you will need to expand at some point.
 
-Stone Wells are the best source of water, you'll never die of thirst again!
+To build more advanced things, you will need to craft a new book. Books can be made in the scribe table.
 
-Quest Requirements:</Description>
+Create a scribe table, and use it to craft a carpentry book. 
+
+Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_10">
+			<Condition xsi:type="QuestConditionItem" Type="item_crafted">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Scribe_Table" />
+			</Condition>
+			<Condition xsi:type="QuestConditionItem" Type="item_received">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="Carpentry_Book" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+    <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_10</SubtypeId>
+    </Id>
+	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
+	<Description>The carpentry book is used to research things related to carpentry.
+
+There are lots of things to research in RoM and it will take you a long time to learn all of them. It is recommended that you focus on only a couple of professions and trade with other players for items you can't create.
+
+Open the carpentry book to see the items that are available to research. If you do not see any items, then you need to right-click a pristine stick to learn the basics. You can right-click all pristine items to learn their research.
+
+Certain items will be unavailable for research until other recipes are learned.
+
+Now that you know where to learn carpentry recipes, you can build a carpentry table which will be used to craft these items.
+
+Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_11">
+			<Condition xsi:type="QuestConditionItem" Type="item_crafted">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="WoodTable" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_11</SubtypeId>
+    </Id>
+	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
+	<Description>The Realm of Mistvalin is a large world, with diverse regions. You can use the roads to fast-travel to these distant regions.
+
+The Realm is divided into five regions: The Norden Plains, The Kharidian Steppes, The Dwarven Highlands, The Dwarven Hills, and The Elven Grove.
+
+Each region has unique plants, animals, and recources. So you'll have to discover what's there before you start making a home.
+
+When you find an area to build a house, lets stake a claim to tell the world this is your home. ((There are anti-grief mechanics, so anything with items cannot be looted or picked up.))
+
+Requirements:</Description>
+	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
+	<Conditions>
+		<ConditionSet NextQuestId="RoMQuest_Tutorial_12">
+			<Condition xsi:type="QuestConditionItem" Type="block_placed">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="ClaimBlock" />
+			</Condition>
+		</ConditionSet>
+	</Conditions>
+  </Definition>
+  
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id>
+      <TypeId>MyObjectBuilder_QuestDefinition</TypeId>
+      <SubtypeId>RoMQuest_Tutorial_12</SubtypeId>
+    </Id>
+	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
+	<Description>Now that you have claimed a chunk of land, you will need to remember to pay your taxes by interacting with the claim totem.
+
+You now have enough knowledge to survive the Realm on your own, it's up to you to decide what to do next.
+
+If you want to learn blacksmithing, it might be a good idea to find a nearby source of iron. Ore deposits can be found by looking on the surface for ore nuggets. The ore deposit should be a few blocks below.
+
+If you need large stone but don't have a pickaxe, you can dig with a shovel in rocky grass.
+
+To open the quest log to see this info again, press K.
+
+Requirements:</Description>
 	<QuestArcId>RoMQuest_Tutorial</QuestArcId>
 	<Conditions>
 		<ConditionSet>
-			<Condition xsi:type="QuestConditionResearch" Text="Research: Stone Well" Type="research_unlocked">
-				<ResearchName>Stone_Well_Masonry</ResearchName>
+			<Condition xsi:type="QuestConditionItem" Type="block_placed">
+				<ItemId Type="MyObjectBuilder_CubeBlock" Subtype="HouseTimberFloor" />
 			</Condition>
 		</ConditionSet>
 	</Conditions>
