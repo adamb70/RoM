@@ -878,6 +878,98 @@ a crossbow.</DisplayName>
 
 
 
+  			  <!-- Shops / Market / Economey | City of Reyjk -->
+
+
+
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Bread_Reyjk_Bakery" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\baked_bread.dds</Icon>
+      <DisplayName>Sell: Bread (15GP)</DisplayName>
+      <Category>Reyjk_Food_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="ConsumableItem" Subtype="Bread" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="15" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+				Lumber Market
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Reyjk_Lumber" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>Reyjk_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="10" Type="InventoryItem" Subtype="Log250cm" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="130" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+				General Market
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Reyjk_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\InventoryItem\DeerSkin.dds</Icon>
+      <DisplayName>Sell: Deer Hide (25G)</DisplayName>
+      <Category>Reyjk_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="DeerSkin" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="25" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerAntlers_Reyjk_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\InventoryItem\Antlers.dds</Icon>
+      <DisplayName>Sell: Deer Antlers (35G)</DisplayName>
+      <Category>Reyjk_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Antlers" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="35" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Buy_Sand_Bucket_Reyjk_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Farming\Sand_Bucket.dds</Icon>
+      <DisplayName>Buy: Bucket of Sand (2G)</DisplayName>
+      <Category>Reyjk_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="2" Type="InventoryItem" Subtype="Gold_Coins" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="CubeBlock" Subtype="Sand_Bucket" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+
+
+
 
 <!-- =================================================================================== -->
 
