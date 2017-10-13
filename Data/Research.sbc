@@ -408,6 +408,14 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Plow_Blacksmithing" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Sword_Blacksmithing" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Mace_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Nails_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchWall_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="FireBucket_Blacksmithing" />
+<!-- Machinesmith -->
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedingBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="PlowBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HarvesterBlock_Machinesmith" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -489,6 +497,14 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="FireBucket" />
   </Definition>
 <!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="IronSmithing_Blacksmithing" />
+    <DisplayName>Iron Smithing</DisplayName>
+<!-- Blacksmith -->
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronOreToIronIngots" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Anvil_Blacksmithing" />
+  </Definition>
+<!-- ========================================================================= -->
 
 
     <!-- Blacksmithing Crops -->
@@ -498,16 +514,8 @@
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="IronOre_Blacksmith" />
     <DisplayName>Blacksmithing</DisplayName>
-<!-- Blacksmith -->
-    <Entry Type="CraftingRecipeDefinition" Subtype="Anvil_Blacksmithing" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Nails_Blacksmithing" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand_Blacksmithing" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="TorchWall_Blacksmithing" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="FireBucket_Blacksmithing" />
-<!-- Machinesmith -->
-    <Entry Type="CraftingRecipeDefinition" Subtype="SeedingBlock_Machinesmith" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="PlowBlock_Machinesmith" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="HarvesterBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronSmithing_Blacksmithing" />
+
   </Definition>
 <!-- ========================================================================= -->
 
@@ -556,7 +564,6 @@
 	<Id Type="ResearchDefinition" Subtype="Furnace_Masonry" />
     <DisplayName>Masonry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Furnace" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="IronOreToIronIngots" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -936,7 +943,6 @@
     <DisplayName>Masonry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="MillStone_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Furnace_Masonry" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="SmithingStation_Blacksmithing" />
     <Entry Type="CraftingRecipeDefinition" Subtype="HouseHalfStoneWall_Masonry" />
   </Definition>
 
@@ -1014,6 +1020,7 @@
 	<Id Type="ResearchDefinition" Subtype="WheelMediumSmall_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Nails_Carpenter" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1105,6 +1112,7 @@
 	<Id Type="ResearchDefinition" Subtype="Juice_Kegstand_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Juice_Kegstand" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blueberry_Kegstand" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1161,6 +1169,8 @@
     <DisplayName>Survival</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLog_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1168,6 +1178,8 @@
     <DisplayName>Survival</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimber_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1175,12 +1187,16 @@
     <DisplayName>Survival</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall" />
     <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStone_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="StockpileIronSmall_Carpenter" />
     <DisplayName>Survival</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="StockpileIronSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
   </Definition>
 <!-- ========================================================================= -->
 
@@ -1200,8 +1216,6 @@
 	<Id Type="ResearchDefinition" Subtype="TreeSmall_WoodenSticks_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bin_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Nails_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="SpinningWheel_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="BannerWorkstation_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Wardrobe_Carpenter" />

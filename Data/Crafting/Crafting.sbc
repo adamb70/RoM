@@ -3215,7 +3215,7 @@ pine trees to aquire Pristine Sticks))</Description>
       <Icon>Textures\GUI\Icons\Cubes\WheelMediumSmall.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <DisplayName>Carpenter: Wheel</DisplayName>
-      <Category>Carpentry_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
@@ -3692,7 +3692,7 @@ open Spalt Lager Kegs.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Carpentry_Book</Category>
+      <Category></Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
@@ -3721,10 +3721,7 @@ open Spalt Lager Kegs.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Juice_Kegstand_Carpenter" />
-      <DisplayName>Carpenter: Berry Juice Kegstand
-
-Allows you to store and
-produce Red Berry Juice.</DisplayName>
+      <DisplayName>Carpenter: Kegstand</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -3764,7 +3761,7 @@ produce Grabe Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Carpentry_Book</Category>
+      <Category></Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
@@ -3800,7 +3797,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Carpentry_Book</Category>
+      <Category></Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
@@ -3926,13 +3923,16 @@ produce Blue Berry Juice.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
-      <DisplayName>Machinesmith: Catch Block</DisplayName>
+      <DisplayName>Carpentry: Catch Block</DisplayName>
+    <Description>
+Used for making carts, this catchblock 
+is perfect for an axel!</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\CatchBlockSmall.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Machinesmith_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3945,7 +3945,7 @@ produce Blue Berry Juice.</DisplayName>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CatchBlockSmall2"/>
     <Icon>Textures\GUI\Icons\Cubes\CatchBlockSmall.dds</Icon>
     <DisplayName>DisplayName_Block_CatchBlock</DisplayName>
-    <Category>Machinesmith_Table</Category>
+    <Category>Carpentry_Table</Category>
     <Prerequisites>
       <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
       <Item Amount="1" Type="CubeBlock" Subtype="TimberRound10" />
@@ -3982,7 +3982,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -4048,7 +4048,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -4114,7 +4114,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -5133,6 +5133,23 @@ and construct them faster.</Description>
       <Results>
 	  
 	    <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_SmithingStation" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronSmithing_Blacksmithing" />
+      <DisplayName>Blacksmithing: Iron Smelting</DisplayName>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Blacksmithing_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_IronSmithing" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
