@@ -202,45 +202,6 @@
 
 
 
-    <Definition>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>Large_Wort_Boiler</SubtypeId>
-      </Id>
-      <BlockPairName>Large_Wort_Boiler</BlockPairName>
-      <DisplayName>Large Wort Boiler</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Large\large_Wort_Boiler.dds</Icon>
-      <Public>true</Public>
-      <CubeSize>Large</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Large\large_wort_boiler.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="IronIngot" Count="8" />
-        <Component Tag="Timber" Count ="4" />
-      </Components>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>false</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
 
 
 
