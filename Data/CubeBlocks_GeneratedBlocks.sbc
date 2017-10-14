@@ -1,0 +1,39 @@
+﻿<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="GeneratedStoneSlopeEdgeLeft" />
+    <DisplayName>GeneratedStoneSlopeEdgeLeft</DisplayName>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\StonePillarSquare.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\GeneratedStoneSlopeEdgeLeft.mwm</Model>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.04000807" StartY="-0.0352594852" EndX="0.7502209" EndY="1.0351361" />
+      <MountPoint Side="Left" StartX="-0.0361264236" StartY="-0.0352594852" EndX="0.236461878" EndY="1.0351361" />
+      <MountPoint Side="Top" StartX="-0.0400080681" StartY="1.03612638" EndX="0.249779135" EndY="0.7635381" />
+      <MountPoint Side="Bottom" StartX="-0.0400080681" StartY="-0.0361264236" EndX="0.249779135" EndY="0.236461878" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Type="InventoryItem" Subtype="LargeStone" Count ="1" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <CompoundTemplates>
+      <Template>Cube</Template>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>1000</MaxIntegrity>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Pillar</BuildType>
+    <GeneratedBlockType>Pillar</GeneratedBlockType>
+    <CreateFracturedPieces>false</CreateFracturedPieces>
+    <AvailableInSurvival>false</AvailableInSurvival>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+  </Definition>
+  
+</Definitions>
