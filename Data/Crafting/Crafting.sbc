@@ -576,6 +576,22 @@ a crossbow.</DisplayName>
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_MunKhazar_Lumber" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>MunKhazar_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="13" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
 
 
 <!-- ========================================================================================= -->
@@ -617,6 +633,22 @@ a crossbow.</DisplayName>
       <Results>
 	  
 	    <Item Amount="130" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Munik_Lumber" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>Munik_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="13" Type="InventoryItem" Subtype="Gold_Coins" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
@@ -913,6 +945,22 @@ a crossbow.</DisplayName>
       <Results>
 	  
 	    <Item Amount="130" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Reyjk_Lumber" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>Reyjk_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="13" Type="InventoryItem" Subtype="Gold_Coins" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
@@ -6094,6 +6142,7 @@ tier foods.</Description>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
       <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTent" />
@@ -6129,6 +6178,7 @@ tier foods.</Description>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
       <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentAdv" />

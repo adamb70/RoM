@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="NeedleThread" />
+      <BlockPairName>NeedleThread</BlockPairName>
+      <DisplayName>Needle and Thread</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Tailor\NeedleThread.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Tailor\needle_thread_Small.mwm</Model>
+      <Components>
+        <Component Subtype="WoodenSticks" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Timber" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Direction>Horizontal</Direction>
+      <Rotation>Vertical</Rotation>
+      <ParticleScale>0.22</ParticleScale>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Mass>1</Mass>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+    
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NeedleThread"/>
+    <DisplayName>NeedleThread</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Stove.dds</Icon>
+    <Category>Anvil</Category>
+    <Prerequisites>
+      <Item Amount="9" Type="InventoryItem" Subtype="IronIngot" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Stove" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="NeedleThread"/>
+    <CraftingCategories>
+      <Category>NeedleThread</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NeedleThread" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="NeedleThread_Inventory" />
+    <InventoryName>NeedleThread_Inventory</InventoryName>
+    <DisplayName>NeedleThread</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="NeedleThread" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="CraftingComponent" Subtype="NeedleThread" />
+    <Component Type="UseObjectsComponent" Subtype="NeedleThread" />
+    <Component Type="Inventory" Subtype="NeedleThread_Inventory" />
+  </Definition>
+
+
+</Definitions>
