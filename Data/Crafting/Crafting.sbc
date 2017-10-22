@@ -280,11 +280,11 @@
       <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
       <Category>Fletching_Table</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="5" Tag="ScrapWood" />
+        <Item Amount="1" Tag="IngotIron" />
       </Prerequisites>
       <Results>
-	    <Item Amount="10" Type="ProjectileItem" Subtype="CrossbowBolt2" />
+	    <Item Amount="10" Type="ProjectileItem" Subtype="CrossbowBolt_RoM" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>

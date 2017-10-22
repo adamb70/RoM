@@ -55,79 +55,8 @@
 
 
 
-    <Definition>
-      <Id>
-        <TypeId>MyObjectBuilder_RopeHookBlock</TypeId>
-        <SubtypeId>RopeDrumAloneSmall</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Block_RopeDrum</DisplayName>
-      <BlockPairName>RopeDrum_Small</BlockPairName>
-      <Public>true</Public>
-      <Icon>Textures\GUI\Icons\Cubes\RopeDrumAloneSmall.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="4" y="3" z="3" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\Small\RopeDrumAloneSmall.mwm</Model>
-      <Components>
-        <Component Tag="Timber" Count ="1" />
-        <Component Subtype="TimberRound10" Count="1" />
-        <Component Subtype="Rope" Count="6" />
-      </Components>
-      <CriticalComponent Subtype="TimberRound10" Index="0" />
-      <MountPoints>
-        <MountPoint Side="Left" StartX="1" StartY="1" EndX="2" EndY="2" />
-        <MountPoint Side="Right" StartX="1" StartY="1" EndX="2" EndY="2" />
-      </MountPoints>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <BlockGroupName>BlockGroupName_RopeDrums</BlockGroupName>
-      <BlockVariants>
-        <BlockVariant>
-          <TypeId>MyObjectBuilder_LockableDrum</TypeId>
-          <SubtypeId>LockableDrumSmall</SubtypeId>
-        </BlockVariant>
-      </BlockVariants>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Mass>30</Mass>
-    </Definition>
-    <Definition xsi:type="MyObjectBuilder_LockableDrumDefinition">
-      <Id>
-        <TypeId>MyObjectBuilder_LockableDrum</TypeId>
-        <SubtypeId>LockableDrumSmall</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_LockableDrum</DisplayName>
-      <BlockPairName>LockableDrum</BlockPairName>
-      <Public>true</Public>
-      <Icon>Textures\GUI\Icons\Cubes\LockableDrum.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="6" y="3" z="3" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\Small\LockableDrumTimber.mwm</Model>
-      <Components>
-        <Component Subtype="TimberRound10" Count="1" />
-        <Component Tag="Timber" Count ="2" />
-        <Component Subtype="Rope" Count="6" />
-      </Components>
-      <CriticalComponent Subtype="TimberRound10" Index="0" />
-      <MountPoints>
-        <MountPoint Side="Left" StartX="1" StartY="1" EndX="2" EndY="2" />
-        <MountPoint Side="Right" StartX="1" StartY="1" EndX="2" EndY="2" />
-      </MountPoints>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <MinCustomRopeLength>0.7</MinCustomRopeLength>
-      <MaxCustomRopeLength>70</MaxCustomRopeLength>
-      <DefaultMaxRopeLength>40</DefaultMaxRopeLength>
-      <GuiVisible>false</GuiVisible>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Mass>35</Mass>
-    </Definition>
+    
+    
 
     <!--<Definition>
       <Id>

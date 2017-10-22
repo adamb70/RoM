@@ -35,10 +35,6 @@
 
       <!--2s Pickup Time-->
       <Item TypeId="MyObjectBuilder_CubeBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_FireLightBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_RopeHookBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_WheelBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_LockableDrum" PickupTime="2"/>
       <Item TypeId="MyObjectBuilder_CogWheelsBlock" PickupTime="2"/>
       <!--1s Pickup Time-->
       <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber10" PickupTime="1"/>
@@ -67,7 +63,6 @@
       <!--Instant Pickup-->
     </PickableItems>
     <ToolBlacklist>
-      <Tool TypeId="MyObjectBuilder_CubePlacer"/>
     </ToolBlacklist>
   </Definition>
 
@@ -109,9 +104,10 @@
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_EntityQuestComponentDefinition">
-    <Id Type="EntityQuestComponent" Subtype="Humanoid" />
-    <InitialQuestId>RoMQuest_Tutorial_01</InitialQuestId>
+  <Definition xsi:type="MyObjectBuilder_QuestEntityComponentDefinition">
+    <Id Type="QuestEntityComponent" Subtype="Humanoid" />
+    <InitialQuest>HumbleBeginnings</InitialQuest>
+    <HungerQuest>HungryBellies</HungerQuest>
   </Definition>
 
   <!-- Character stances -->
