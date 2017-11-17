@@ -4,6 +4,7 @@
     <Id Type="MyObjectBuilder_Planet"/>
 
     <Component Type="MyObjectBuilder_MultiplayerComponent" ForceCreate="true"/>
+    <Component Type="MyObjectBuilder_RenderComponentPlanet" ForceCreate="true"/>
     <Component Type="MyObjectBuilder_PlanetEnvironmentComponent" ForceCreate="true"/>
     <Component Type="MyObjectBuilder_PlanetAreasComponent" SubtypeId="Terra" ForceCreate="true"/>
     <Component Type="MyObjectBuilder_PlanetAreaOwnershipComponent" SubtypeId="Terra" ForceCreate="true"/>
@@ -14,8 +15,10 @@
     <Component Type="MyObjectBuilder_PlanetGridIntegrityComponent" ForceCreate="true"/>
     <Component Type="MyObjectBuilder_PlanetActionTrackingComponent" ForceCreate="true"/>
     <Component Type="MyObjectBuilder_PlanetJanitorComponent" ForceCreate="true" />
-	<Component Type="MyObjectBuilder_LandscapingSystem" Subtype="Terra" ForceCreate="true" />
+    <Component Type="MyObjectBuilder_PlanetDepositHelperComponent" ForceCreate="true"/>
+    <Component Type="MyObjectBuilder_LandscapingSystem" Subtype="Terra" ForceCreate="true" />
     <Component Type="MyObjectBuilder_VoxelMesherComponent" Subtype="Terra" ForceCreate="true" />
+    <!--<Component Type="MedievalMapBackgroundComponentDefinition" Subtype="RoM_Map" ForceCreate="true" />-->
   </Definition>
 	
   <Definition xsi:type="MyObjectBuilder_LandscapingSystemDefinition">
@@ -25,29 +28,22 @@
     <TrianglePadding>.25</TrianglePadding>
     <ValidRope Type="MyObjectBuilder_RopeDefinition" Subtype="BasicRope"/>
 
-    <PreviewColor Hex="#44EEDD80"/>
-    <PreviewHighlightThickness>2</PreviewHighlightThickness>
-    <PreviewRange>10</PreviewRange>
+    <PreviewColor R="142" G="116" B="82" A="55"/>
+    <PreviewHighlightThickness>5</PreviewHighlightThickness>
+    <PreviewRange>15</PreviewRange>
     <PreviewFadeRange>2.5</PreviewFadeRange>
     <PreviewFadeFrames>15</PreviewFadeFrames>
-
     <PreviewOffset>.04</PreviewOffset>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_PlanetAreasComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_PlanetAreasComponent</TypeId>
-      <SubtypeId>Terra</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_PlanetAreasComponent" Subtype="Terra" />
     <NumAreas>80</NumAreas>
     <NumRegions>8</NumRegions>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_PlanetAreaOwnershipComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_PlanetAreaOwnershipComponent</TypeId>
-      <SubtypeId>Terra</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_PlanetAreaOwnershipComponent" Subtype="Terra" />
     <OwnedAreaSets>
 
 <!-- =================================================================================================== -->
@@ -189,10 +185,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_PlanetAreaUpkeepComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_PlanetAreaUpkeepComponent</TypeId>
-      <SubtypeId>Terra2</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_PlanetAreaUpkeepComponent" Subtype="Terra2" />
     <TaxFreeFactions>
       <FactionTag>ENGI</FactionTag>
       <FactionTag>BARB</FactionTag>
@@ -212,11 +205,11 @@
     <Id Type="MyObjectBuilder_VoxelMesherComponent" Subtype="Terra"/>
 
     <Postprocessing xsi:type="MyObjectBuilder_VoxelPostprocessingDecimate" ForPhysics="true">
-      <LodSet FromLod="0">
+      <!--<LodSet FromLod="0">
         <FeatureAngle>15</FeatureAngle>
         <EdgeThreshold>.04</EdgeThreshold>
         <PlaneThreshold>.02</PlaneThreshold>
-      </LodSet>
+      </LodSet>-->
       <LodSet FromLod="1">
         <FeatureAngle>15</FeatureAngle>
         <EdgeThreshold>.04</EdgeThreshold>
@@ -228,5 +221,229 @@
         <PlaneThreshold>.06</PlaneThreshold>
       </LodSet>
     </Postprocessing>
+  </Definition>
+  
+  
+  
+  <!-- from map mod. new way of doing things? -->
+  
+  <Definition xsi:type="MyObjectBuilder_MedievalMapBackgroundDefinition">
+    <Id Type="MyObjectBuilder_MedievalMapBackgroundDefinition" Subtype="RoM_Map"/>
+
+    <!-- Settings for heightmap drawing, unused,
+          You can play arround with this but be ware that the
+          mmheightmap only works when the resolutions match at the moment. -->
+    <!--<LightDirection x="-1" y="-1" z="-1"/>
+    <TintColor R="170" G="124" B="74" A="255"/> -->
+    <DrawHeightmap>false</DrawHeightmap>
+
+    <!-- Resolution of the generated texture, going much higher than
+         the resolution of the heightmap will not be super helpful -->
+    <Resolution>4096</Resolution>
+
+    <Features>
+      <!-- Road -->
+      <Feature Material="67">
+        <Color R="75" G="30" B="0" A="220"/>
+      </Feature>
+      <!--Forests-->
+      <Feature Material="130">
+        <Color R="130" G="100" B="42" A="80"/>
+      </Feature>  
+	  <!--forest dense-->
+      <Feature Material="140">
+        <Color R="102" G="73" B="16" A="160"/>
+      </Feature>
+	  <!--elf forest dense-->
+      <Feature Material="150">
+        <Color R="102" G="73" B="16" A="160"/>
+      </Feature>
+	  
+	  <!--mountian Forests-->
+     <Feature Material="160">
+        <Color R="130" G="100" B="42" A="80"/>
+      </Feature>	
+	  <!--mountian dense forsts-->
+      <Feature Material="170">
+        <Color R="130" G="100" B="42" A="80"/>
+      </Feature>	  
+	  <!--mountian forest snow-->
+	  <Feature Material="210">
+        <Color R="159" G="132" B="79" A="160"/>
+      </Feature>
+	 <!--mountina foest snow-->
+	  <Feature Material="200">
+        <Color R="159" G="132" B="79" A="160"/>
+      </Feature>
+	 <!--snow-->
+	  <Feature Material="180">
+        <Color R="245" G="220" B="170" A="160"/>
+      </Feature>
+	  <!--snow-->
+	  <Feature Material="190">
+        <Color R="245" G="220" B="170" A="160"/>
+      </Feature>
+	  
+	 <!--desert-->
+	  
+	 
+	  <!--sand
+	  <Feature Material="50">
+        <Color R="180" G="140" B="50" A="160"/>
+      </Feature>-->
+	  <!--rubble-->
+	  <Feature Material="70">
+        <Color R="180" G="140" B="50" A="160"/>
+      </Feature>
+	 <!--sandsone-->
+	  <Feature Material="100">
+        <Color R="180" G="140" B="50" A="160"/>
+      </Feature>
+	  
+	  <!--bots
+	  <Feature Biome="160">
+        <Color R="200" G="50" B="42" A="127"/>
+      </Feature>-->
+	 
+      
+      
+
+      <Feature Material="124">
+        <Color R="0" G="120" B="0" A="80"/>
+        <!--<Color R="173" G="156" B="131" A="255"/>-->
+      </Feature>
+      <Feature Material="123">
+        <Color R="0" G="120" B="0" A="80"/>
+        <!--<Color R="173" G="156" B="131" A="255"/>-->
+      </Feature>
+      <Feature Material="122">
+        <Color R="0" G="120" B="0" A="80"/>
+        <!--<Color R="173" G="156" B="131" A="255"/>-->
+      </Feature>
+      <Feature Material="121">
+        <Color R="0" G="120" B="0" A="80"/>
+        <!--<Color R="173" G="156" B="131" A="255"/>-->
+      </Feature>
+      <!--Mountains-->
+      <Feature Material="104">
+        <Color R="0" G="0" B="0" A="180"/>
+      </Feature>
+      <Feature Material="62">
+        <Color R="0" G="0" B="0" A="150"/>
+      </Feature>
+      <Feature Material="45">
+        <Color R="0" G="0" B="0" A="130"/>
+      </Feature>
+      <Feature Material="34">
+        <Color R="0" G="0" B="0" A="90"/>
+      </Feature>
+    </Features>
+
+    <SpriteSheet Texture="Textures\GUI\Map\BackgroundSprites.png" BaseSize="64">
+      <SpriteCount>100</SpriteCount>
+      <Sprite Name="HillSmall" X="768" Y="192" Width="127" Height="64" />
+      <Sprite Name="HillSmall_v2" X="895" Y="192" Width="64" Height="64" />
+      <Sprite Name="HillMedium" X="512" Y="256" Width="127" Height="64" />
+      <Sprite Name="MountainSmall" X="512" Y="192" Width="64" Height="64" />
+      <Sprite Name="MountainSmall_v2" X="576" Y="192" Width="64" Height="64" />
+      <Sprite Name="MountainSmall_v3" X="640" Y="192" Width="64" Height="64" />
+      <Sprite Name="MountainSmall_v4" X="704" Y="192" Width="64" Height="64" />
+      <Sprite Name="MountainMedium" X="0" Y="192" Width="128" Height="128" />
+      <Sprite Name="MountainMedium_v2" X="128" Y="192" Width="128" Height="128" />
+      <Sprite Name="MountainMedium_v3" X="256" Y="192" Width="128" Height="128" />
+      <Sprite Name="MountainMedium_v4" X="384" Y="192" Width="128" Height="128" />
+      <Sprite Name="MountainLarge" X="0" Y="0" Width="256" Height="192" />
+      <Sprite Name="MountainLarge_v2" X="256" Y="0" Width="256" Height="192" />
+      <Sprite Name="MountainLarge_v3" X="512" Y="0" Width="256" Height="192" />
+      <Sprite Name="MountainLarge_v4" X="768" Y="0" Width="256" Height="192" />
+      <Sprite Name="ForestSparse" X="0" Y="320" Width="64" Height="64" />
+      <Sprite Name="ForestSparse_v2" X="64" Y="320" Width="64" Height="64" />
+      <Sprite Name="PineTreeBundle" X="0" Y="384" Width="128" Height="128" />
+      <Sprite Name="PineTreeBundle_v2" X="128" Y="384" Width="128" Height="128" />
+      <Sprite Name="PineTreeBundle_v3" X="256" Y="384" Width="128" Height="128" />
+      <Sprite Name="PineTreeBundle_v4" X="384" Y="384" Width="128" Height="128" />
+      <Sprite Name="PineTreeBundle_v5" X="512" Y="384" Width="128" Height="128" />
+
+      <HeightSprite AltitudeDiff=".05" Altitude=".10" Priority="4">
+        <Sprite>HillSmall</Sprite>
+        <Sprite>HillSmall_v2</Sprite>
+      </HeightSprite>
+      <HeightSprite AltitudeDiff=".05" Altitude=".15" Priority="5">
+        <Sprite>HillMedium</Sprite>
+      </HeightSprite>
+
+      <HeightSprite AltitudeDiff=".06" Altitude=".15" Priority="7">
+        <Sprite>MountainSmall</Sprite>
+        <Sprite>MountainSmall_v2</Sprite>
+        <Sprite>MountainSmall_v3</Sprite>
+        <Sprite>MountainSmall_v4</Sprite>
+      </HeightSprite>
+      <HeightSprite AltitudeDiff=".09" Altitude=".20" Priority="6">
+        <Sprite>MountainMedium</Sprite>
+        <Sprite>MountainMedium_v2</Sprite>
+        <Sprite>MountainMedium_v3</Sprite>
+        <Sprite>MountainMedium_v4</Sprite>
+      </HeightSprite>
+      <HeightSprite AltitudeDiff=".11" Altitude=".55" Priority="6">
+        <Sprite>MountainLarge</Sprite>
+        <Sprite>MountainLarge_v2</Sprite>
+        <Sprite>MountainLarge_v3</Sprite>
+        <Sprite>MountainLarge_v4</Sprite>
+      </HeightSprite>
+
+      <BiomeSprite Biome="50" Density=".1" Priority="6">
+        <Sprite>ForestSparse</Sprite>
+        <Sprite>ForestSparse_v2</Sprite>
+      </BiomeSprite>
+      <BiomeSprite Biome="60" Density=".8" Priority="5">
+        <Sprite>PineTreeBundle</Sprite>
+        <Sprite>PineTreeBundle_v2</Sprite>
+        <Sprite>PineTreeBundle_v3</Sprite>
+        <Sprite>PineTreeBundle_v4</Sprite>
+        <Sprite>PineTreeBundle_v5</Sprite>
+      </BiomeSprite>
+	  <BiomeSprite Biome="165" Density=".8" Priority="5">
+        <Sprite>PineTreeBundle</Sprite>
+        <Sprite>PineTreeBundle_v2</Sprite>
+        <Sprite>PineTreeBundle_v3</Sprite>
+        <Sprite>PineTreeBundle_v4</Sprite>
+        <Sprite>PineTreeBundle_v5</Sprite>
+      </BiomeSprite>
+      <BiomeSprite Biome="70" Density=".8" Priority="4">
+        <Sprite>PineTreeBundle</Sprite>
+        <Sprite>PineTreeBundle_v2</Sprite>
+        <Sprite>PineTreeBundle_v3</Sprite>
+        <Sprite>PineTreeBundle_v4</Sprite>
+        <Sprite>PineTreeBundle_v5</Sprite>
+      </BiomeSprite>
+	  
+	  <BiomeSprite Biome="100" Density=".05" Priority="5">
+        <Sprite>ForestSparse</Sprite>
+        <Sprite>ForestSparse_v2</Sprite>
+      </BiomeSprite>
+	  
+	  <BiomeSprite Biome="110" Density=".5" Priority="5">
+        <Sprite>PineTreeBundle</Sprite>
+        <Sprite>PineTreeBundle_v2</Sprite>
+        <Sprite>PineTreeBundle_v3</Sprite>
+        <Sprite>PineTreeBundle_v4</Sprite>
+        <Sprite>PineTreeBundle_v5</Sprite>
+      </BiomeSprite>
+	  <BiomeSprite Biome="120" Density=".5" Priority="5">
+        <Sprite>PineTreeBundle</Sprite>
+        <Sprite>PineTreeBundle_v2</Sprite>
+        <Sprite>PineTreeBundle_v3</Sprite>
+        <Sprite>PineTreeBundle_v4</Sprite>
+        <Sprite>PineTreeBundle_v5</Sprite>
+      </BiomeSprite>
+	  
+	  <BiomeSprite Biome="150" Density=".9" Priority="6">
+        <Sprite>PineTreeBundle</Sprite>
+        <Sprite>PineTreeBundle_v2</Sprite>
+        <Sprite>PineTreeBundle_v3</Sprite>
+        <Sprite>PineTreeBundle_v4</Sprite>
+        <Sprite>PineTreeBundle_v5</Sprite>
+      </BiomeSprite>
+    </SpriteSheet>
   </Definition>
 </Definitions>

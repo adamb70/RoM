@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="Stone_Plow"/>
+
+    <!-- Display -->
+
+    <DisplayName>Stone Plow</DisplayName>
+    <Description>A stone plow; not very strong, but it'll work.</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\Plow.mwm</Model>
+
+    <PhysicalMaterial>Plow</PhysicalMaterial>
+
+    <MaxStackAmount>1</MaxStackAmount>
+    
+    <Animation>Plow</Animation>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>800</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+      <Slot>OffHand</Slot>
+    </Position>
+    
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.533</X>
+        <Y>-1.0</Y>
+        <Z>-0.339</Z>
+      </Position>
+      <Orientation>
+        <X>0.2288072</X>
+        <Y>0.6835734</Y>
+        <Z>-0.240634</Z>
+        <W>0.6499768</W>
+      </Orientation>
+    </EquippedTransformFps>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_PlowingToolBehaviorDefinition" Subtype="PlowStone"/>
+    </StanceToBehavior>
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="GenericToolCombatBehavior"/>
+    </StanceToBehavior>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_PlowingToolBehaviorDefinition">
+    <Id Type="MyObjectBuilder_PlowingToolBehaviorDefinition" Subtype="PlowStone"/>
+    <Efficiency>2</Efficiency>
+    <TargetingDistance>2.0</TargetingDistance>
+    <PrimaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>1.5</AnimationTime>
+      <Sound>Swing</Sound>
+      <Animation>Plowing</Animation>
+    </PrimaryEffect>
+  </Definition>
+
+</Definitions>

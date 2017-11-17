@@ -2,10 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CubeBlocks>
     <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>ChristmasTree</SubtypeId>
-      </Id>
+      <Id Type="CubeBlock" Subtype="ChristmasTree" />
       <BlockPairName>ChristmasTree</BlockPairName>
       <DisplayName>DisplayName_Block_ChristmasTree</DisplayName>
       <Icon>Textures\GUI\Icons\ChristmasTree.dds</Icon>
@@ -54,10 +51,7 @@
   </CubeBlocks>
 
   <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_EntityStateComponent</TypeId>
-      <SubtypeId>ChristmasTree</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="ChristmasTree" />
     <InitialState>On</InitialState>
     <States>
       <State Name="On">
@@ -70,10 +64,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_EntityFXComponent</TypeId>
-      <SubtypeId>ChristmasTree</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="ChristmasTree" />
     <Effects>
       <Effect StartEvent="On" StopEvent="Off" Dummy="detector_fire">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
@@ -82,10 +73,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_UseObjectsComponent</TypeId>
-      <SubtypeId>ChristmasTree</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="ChristmasTree" />
     <LoadFromModel>false</LoadFromModel>
     <UseObjects>
       <UseObject Dummy="detector_fire" Name="Generic" />
@@ -93,10 +81,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_StateUseObjectComponent</TypeId>
-      <SubtypeId>ChristmasTree</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="ChristmasTree" />
     <Tooltip>UseObject_DynamicPress</Tooltip>
     <PrimaryAction>Manipulate</PrimaryAction>
     <SupportsAccessSettings>false</SupportsAccessSettings>
@@ -108,10 +93,7 @@
 
   <EntityContainers>
     <Container>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>ChristmasTree</SubtypeId>
-      </Id>
+      <Id Type="CubeBlock" Subtype="ChristmasTree" />
       <DefaultComponents>
         <Component BuilderType="MyObjectBuilder_EntityStateComponent" SubtypeId="ChristmasTree" ForceCreate="true"/>
         <Component BuilderType="MyObjectBuilder_EntityFXComponent" SubtypeId="ChristmasTree" ForceCreate="true"/>

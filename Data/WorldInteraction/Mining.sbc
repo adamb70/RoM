@@ -39,7 +39,7 @@
     <Entry VoxelMaterial="PlantedSoil">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
     </Entry>
-    <Entry VoxelMaterial="ExhaustedSoil">
+    <Entry VoxelMaterial="ExhaustedSoil" Volume="256">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
     </Entry>
     <Entry VoxelMaterial="Clay" Volume="256">
@@ -125,15 +125,15 @@
 <!-- Rocks Moss ========================================================= -->
     <Entry VoxelMaterial="COGRocks_moss" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Rocks Moss ========================================================= -->
     <Entry VoxelMaterial="COGRocks_grass" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Grass ========================================================= -->
@@ -194,15 +194,15 @@
 <!-- Rocks moss ========================================================= -->
     <Entry VoxelMaterial="COG Rocks moss" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Rocks Grass ========================================================= -->
     <Entry VoxelMaterial="COG Rocks Grass" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Woods ========================================================= -->
@@ -277,29 +277,26 @@
 <!-- ======================================================================================================= -->
 
   <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition">
-    <Id>
-      <TypeId>VoxelMiningDefinition</TypeId>
-      <SubtypeId>Iron_Pickaxe</SubtypeId>
-    </Id>
+    <Id Type="VoxelMiningDefinition" Subtype="Iron_Pickaxe" />
     <!-- ROCKS_GRASS -->
     <Entry VoxelMaterial="Rocks_grass" Volume="192">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
     <Entry VoxelMaterial="Rocks_moss" Volume="192">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
     
     <!-- STONE -->
     <Entry VoxelMaterial="Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
     <Entry VoxelMaterial="Stone_02" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
     
     <!-- IRON ORE -->
@@ -307,7 +304,7 @@
       <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
     </Entry>
     <Entry VoxelMaterial="IronOre_RegularYield" Volume="128">
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
     </Entry>
     <Entry VoxelMaterial="IronOre_PoorYield" Volume="256">
@@ -372,15 +369,15 @@
 <!-- Rocks Moss ========================================================= -->
     <Entry VoxelMaterial="COGRocks_moss" Volume="192">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Rocks Moss ========================================================= -->
     <Entry VoxelMaterial="COGRocks_grass" Volume="192">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Grass ========================================================= -->
@@ -440,15 +437,15 @@
 <!-- Rocks moss ========================================================= -->
     <Entry VoxelMaterial="COG Rocks moss" Volume="192">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Rocks Grass ========================================================= -->
     <Entry VoxelMaterial="COG Rocks Grass" Volume="192">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Woods ========================================================= -->
@@ -560,29 +557,26 @@
 <!-- ======================================================================================================= -->
 
   <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition">
-    <Id>
-      <TypeId>VoxelMiningDefinition</TypeId>
-      <SubtypeId>Stone_Pickaxe</SubtypeId>
-    </Id>
+    <Id Type="VoxelMiningDefinition" Subtype="Stone_Pickaxe" />
     <!-- ROCKS_GRASS -->
     <Entry VoxelMaterial="Rocks_grass" Volume="192">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
     <Entry VoxelMaterial="Rocks_moss" Volume="192">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
     
     <!-- STONE -->
     <Entry VoxelMaterial="Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
     <Entry VoxelMaterial="Stone_02" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
     
     <!-- IRON ORE -->
@@ -590,7 +584,7 @@
       <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
     </Entry>
     <Entry VoxelMaterial="IronOre_RegularYield" Volume="128">
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
     </Entry>
     <Entry VoxelMaterial="IronOre_PoorYield" Volume="256">
@@ -655,15 +649,15 @@
 <!-- Rocks Moss ========================================================= -->
     <Entry VoxelMaterial="COGRocks_moss" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Rocks Moss ========================================================= -->
     <Entry VoxelMaterial="COGRocks_grass" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Grass ========================================================= -->
@@ -723,15 +717,15 @@
 <!-- Rocks moss ========================================================= -->
     <Entry VoxelMaterial="COG Rocks moss" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Rocks Grass ========================================================= -->
     <Entry VoxelMaterial="COG Rocks Grass" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeStone" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
     </Entry>
 
 <!-- Woods ========================================================= -->

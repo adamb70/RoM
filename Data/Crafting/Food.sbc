@@ -31,15 +31,15 @@
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WheatFlourSack" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FlourWheat" />
       <DisplayName>Grind Wheat</DisplayName>
       <Icon>Textures\GUI\Icons\Materials\FlourBag.dds</Icon>
       <Category>Milling</Category>
       <Prerequisites>
-        <Item Amount="8" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="8" Type="InventoryItem" Subtype="StrawsWheat" />
       </Prerequisites>
       <Results>
-	<Item Amount="1" Type="InventoryItem" Subtype="WheatFlourSack" />
+	<Item Amount="1" Type="InventoryItem" Subtype="FlourWheat" />
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
@@ -137,7 +137,7 @@ Red Berry Pie.</Description>
       <Icon>Textures\GUI\Icons\Universal\Cooking\dough.dds</Icon>
       <Category>Cooking_Table</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="WheatFlourSack" />
+        <Item Amount="1" Type="InventoryItem" Subtype="FlourWheat" />
       </Prerequisites>
       <Results>
 	<Item Amount="4" Type="InventoryItem" Subtype="Dough" />
@@ -276,7 +276,7 @@ Requires a Juicer Stand.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RoastMeat" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MeatRoasted" />
       <DisplayName>DisplayName_Consumables_RoastMeat</DisplayName>
       <Icon>Textures\GUI\Icons\Consumables\MeatRoasted.dds</Icon>
       <Category>Cooking</Category>
@@ -285,14 +285,14 @@ Requires a Juicer Stand.</Description>
         <Item Amount="1" Type="ConsumableItem" Subtype="Herbs" />
       </Prerequisites>
       <Results>
-	<Item Amount="1" Type="ConsumableItem" Subtype="RoastMeat" />
+	<Item Amount="1" Type="ConsumableItem" Subtype="MeatRoasted" />
 	  </Results>
       <CraftingTime Seconds="6"/>
     </Definition>
 	
 	<!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RoastMeat_Cooking" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MeatRoasted_Cooking" />
       <DisplayName>Cooking: Roast Meat</DisplayName>
     <Description>Recipie for learning how to make Roast Meat.</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -304,7 +304,7 @@ Requires a Juicer Stand.</Description>
         <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Herbs" />
       </Prerequisites>
       <Results>
-	<Item Amount="1" Type="SchematicItem" Subtype="RoastMeat_Schematic" />
+	<Item Amount="1" Type="SchematicItem" Subtype="MeatRoasted_Schematic" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
@@ -346,7 +346,7 @@ Requires a Juicer Stand.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MushroomSoup" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SoupMushroom" />
       <DisplayName>DisplayName_Consumables_Mushroom_Soup</DisplayName>
       <Description>
 "A simple dish, not very filling..."</Description>
@@ -357,14 +357,14 @@ Requires a Juicer Stand.</Description>
         <Item Amount="2" Tag="Universal_Mushroom" />
       </Prerequisites>
       <Results>
-	<Item Amount="1" Type="ConsumableItem" Subtype="MushroomSoup" />
+	<Item Amount="1" Type="ConsumableItem" Subtype="SoupMushroom" />
 	  </Results>
       <CraftingTime Seconds="6"/>
     </Definition>
 	
 	<!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MushroomSoup_Cooking" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />
       <DisplayName>Cooking: Mushroom Soup</DisplayName>
     <Description>
 "Anyone can make soup, just toss
@@ -388,7 +388,7 @@ and Pristine Mushrooms.))</Description>
         <Item Amount="1" Tag="Pristine_Mushroom" />
       </Prerequisites>
       <Results>
-	<Item Amount="1" Type="SchematicItem" Subtype="MushroomSoup_Schematic" />
+	<Item Amount="1" Type="SchematicItem" Subtype="SoupMushroom_Schematic" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
@@ -504,25 +504,25 @@ and Pristine Mushrooms.))</Description>
     
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ShroomSteak" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SteakWithMushrooms" />
       <DisplayName>DisplayName_Consumables_Shroomsteak</DisplayName>
       <Icon>Textures\GUI\Icons\Consumables\Dish_Shroomsteak.dds</Icon>
       <Category>Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="ConsumableItem" Subtype="RoastMeat" />
+        <Item Amount="1" Type="ConsumableItem" Subtype="MeatRoasted" />
         <Item Amount="3" Type="ConsumableItem" Subtype="Mushrooms" />
         <Item Amount="1" Type="ConsumableItem" Subtype="Cabbage" />
         <Item Amount="1" Type="ConsumableItem" Subtype="Roots" />
       </Prerequisites>
       <Results>
-	<Item Amount="1" Type="ConsumableItem" Subtype="ShroomSteak" />
+	<Item Amount="1" Type="ConsumableItem" Subtype="SteakWithMushrooms" />
 	  </Results>
       <CraftingTime Seconds="6"/>
     </Definition>
 	
 	<!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ShroomSteak_Cooking" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SteakWithMushrooms_Cooking" />
       <DisplayName>Cooking: Shroom Steak</DisplayName>
     <Description>Recipie for learning how to make Shroom Steak.</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -536,7 +536,7 @@ and Pristine Mushrooms.))</Description>
         <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Roots" />
       </Prerequisites>
       <Results>
-	<Item Amount="1" Type="SchematicItem" Subtype="ShroomSteak_Schematic" />
+	<Item Amount="1" Type="SchematicItem" Subtype="SteakWithMushrooms_Schematic" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="SmithingStation" />
+    <Id Type="CubeBlock" Subtype="Smithy" />
     <BlockPairName>SmithingStation</BlockPairName>
     <DisplayName>DisplayName_Block_SmithingStation</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\Smithy.dds</Icon>
@@ -20,7 +20,7 @@
     </BuildProgressModels>
     <PhysicalMaterial>Rock</PhysicalMaterial>
     <Components>
-      <Component Type="InventoryItem" Subtype="Log250cm" Count="1" />
+      <Component Tag="Log" Count="1" />
       <Component Tag="Timber" Count="4" />
       <Component Tag="IngotIron" Count="5" />
     </Components>
@@ -47,23 +47,23 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmithingStation"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Smithy"/>
     <DisplayName>DisplayName_Block_SmithingStation</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\Smithy.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
       <Item Amount="4" Tag="Timber" />
-      <Item Amount="5" Type="InventoryItem" Subtype="IronIngot" />
-      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="5" Tag="Ingot" />
+      <Item Amount="1" Tag="Log" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="SmithingStation" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Smithy" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="SmithingStation"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Smithy"/>
     <CraftingCategories>
       <Category>Weapons</Category>
       <Category>MetalWorks</Category>
@@ -71,13 +71,14 @@
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="SmithingStation" />
+    <Id Type="CubeBlock" Subtype="Smithy" />
 
     <Component Type="Inventory" Subtype="CraftingInventory"/>
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="SmithingStation"/>
+    <Component Type="CraftingComponentQueued" Subtype="Smithy"/>
   </Definition>
 </Definitions>

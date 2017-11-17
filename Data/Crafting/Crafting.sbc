@@ -154,7 +154,7 @@
       <Category></Category>
       <Prerequisites>
 		<Item Amount="15" Type="InventoryItem" Subtype="Timber10" />
-      <Item Amount="10" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="10" Type="InventoryItem" Subtype="IngotIron" />
 		<Item Amount="1" Type="HandItem" Subtype="Hammer" />
       </Prerequisites>
       <Results>
@@ -173,7 +173,7 @@
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category></Category>
       <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="10" Type="InventoryItem" Subtype="IngotIron" />
         <Item Amount="10" Type="InventoryItem" Subtype="Timber10" />
         <Item Amount="1" Type="HandItem" Subtype="StoneAxe" />
       </Prerequisites>
@@ -194,7 +194,7 @@
       <Category></Category>
       <Prerequisites>
         <Item Amount="30" Type="InventoryItem" Subtype="MetalParts" />
-        <Item Amount="15" Type="InventoryItem" Subtype="LargeStone" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StoneLarge" />
       </Prerequisites>
       <Results>
 	  
@@ -316,8 +316,8 @@ how to make Iron Crossbow Bolts.</DisplayName>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\Crossbow.dds</Icon>
       <Category>Fletching_Table</Category>
       <Prerequisites>
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="2" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -386,7 +386,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>MunKhazar_General_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="DeerSkin" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
       </Prerequisites>
       <Results>
 	  
@@ -420,7 +420,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Wheat (4G)</DisplayName>
       <Category>MunKhazar_Food_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="1" Type="InventoryItem" Subtype="StrawsWheat" />
       </Prerequisites>
       <Results>
 	  
@@ -562,7 +562,7 @@ a crossbow.</DisplayName>
 				Lumber Market
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_MunKhazar_Lumber" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_MunKhazar_Lumber_10" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
       <DisplayName>Sell: Log (13G)</DisplayName>
@@ -622,7 +622,7 @@ a crossbow.</DisplayName>
 				Lumber Market
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Munik_Lumber" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Munik_Lumber_10" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
       <DisplayName>Sell: Log (13G)</DisplayName>
@@ -662,7 +662,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>Munik_General_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="DeerSkin" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
       </Prerequisites>
       <Results>
 	  
@@ -736,7 +736,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Wheat (4G)</DisplayName>
       <Category>Rienburg_Food_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="1" Type="InventoryItem" Subtype="StrawsWheat" />
       </Prerequisites>
       <Results>
 	  
@@ -866,7 +866,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>Rienburg_General_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="DeerSkin" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
       </Prerequisites>
       <Results>
 	  
@@ -934,7 +934,7 @@ a crossbow.</DisplayName>
 				Lumber Market
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Reyjk_Lumber" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Reyjk_Lumber_10" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
       <DisplayName>Sell: Log (13G)</DisplayName>
@@ -974,7 +974,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>Reyjk_General_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="DeerSkin" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
       </Prerequisites>
       <Results>
 	  
@@ -1032,22 +1032,22 @@ a crossbow.</DisplayName>
 
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LinenString" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StringLinen" />
       <Icon>Textures\GUI\Icons\Materials\LinenString.dds</Icon>
-      <DisplayName>DisplayName_Block_LinenString</DisplayName>
+      <DisplayName>DisplayName_Item_LinenString</DisplayName>
       <Category>Weaving</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="FlaxStraws" />
+        <Item Amount="2" Type="InventoryItem" Subtype="StrawsFlax" />
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+	    <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LinenString_Tailor" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StringLinen_Tailor" />
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Materials\LinenString.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -1058,7 +1058,7 @@ a crossbow.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="LinenString_Schematic" />
+	    <Item Amount="1" Type="SchematicItem" Subtype="StringLinen_Schematic" />
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
@@ -1071,7 +1071,7 @@ a crossbow.</DisplayName>
     <Icon>Textures\GUI\Icons\cubes\BasicRope.dds</Icon>
     <Category></Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="5" Type="HandItem" Subtype="Rope" />
@@ -1086,7 +1086,7 @@ a crossbow.</DisplayName>
     <Icon>Textures\GUI\Icons\cubes\TearableRope.dds</Icon>
     <Category></Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="5" Type="HandItem" Subtype="RopeTearable" />
@@ -1101,7 +1101,7 @@ a crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\cubes\BasicRope.dds</Icon>
       <Category>Weaving</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1134,7 +1134,7 @@ a crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\cubes\TearableRope.dds</Icon>
       <Category>Weaving</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1168,7 +1168,7 @@ a crossbow.</DisplayName>
     <Category></Category>
     <Prerequisites>
       <Item Amount="1" Tag="ScrapWood" />
-      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Flag10x10" />
@@ -1183,7 +1183,7 @@ a crossbow.</DisplayName>
     <Category></Category>
     <Prerequisites>
       <Item Amount="1" Tag="ScrapWood" />
-      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="FlagRed10x10" />
@@ -1199,7 +1199,7 @@ a crossbow.</DisplayName>
       <Category>Weaving</Category>
       <Prerequisites>
       <Item Amount="1" Tag="ScrapWood" />
-        <Item Amount="4" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1233,7 +1233,7 @@ a crossbow.</DisplayName>
       <Category>Weaving</Category>
       <Prerequisites>
         <Item Amount="1" Tag="ScrapWood" />
-        <Item Amount="4" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1270,7 +1270,7 @@ a crossbow.</DisplayName>
       <Category>Apothocary_Table</Category>
       <Prerequisites>
         <Item Amount="2" Type="ConsumableItem" Subtype="Herbs" />
-        <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1416,7 +1416,7 @@ a crossbow.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="InventoryItem" Subtype="Alcohal" />
+	    <Item Amount="1" Type="InventoryItem" Subtype="Alcohol" />
       </Results>
 	  <CraftingTime Seconds="4"/>
     </Definition>
@@ -1507,7 +1507,7 @@ a crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\book.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="1" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -1824,8 +1824,8 @@ to read from it.
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
       <Category>Herbalist_Table</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="WoodenSticks" />
-        <Item Amount="1" Type="InventoryItem" Subtype="StoneOreSmall" />
+        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="1" Type="InventoryItem" Subtype="StoneSmall" />
       </Prerequisites>
       <Results>
 	  
@@ -2318,7 +2318,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
-        <Item Amount="15" Type="InventoryItem" Subtype="FlaxStraws" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StrawsFlax" />
       </Prerequisites>
       <Results>
 	  
@@ -2392,7 +2392,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="InventoryItem" Subtype="FlaxStraws" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StrawsFlax" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -2465,7 +2465,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
-        <Item Amount="15" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StrawsWheat" />
       </Prerequisites>
       <Results>
 	  
@@ -2539,7 +2539,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StrawsWheat" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -3340,7 +3340,7 @@ pine trees to aquire Pristine Sticks))</Description>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3458,7 +3458,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>DisplayName_Block_WoodChair</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3850,7 +3850,7 @@ open Spalt Lager Kegs.</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3883,7 +3883,7 @@ open Spalt Lager Kegs.</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3919,7 +3919,7 @@ produce Grabe Juice.</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3955,7 +3955,7 @@ produce Blue Berry Juice.</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -4231,7 +4231,7 @@ is perfect for an axel!</Description>
   </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TurnCrossSmall"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrankWheel"/>
     <Icon>Textures\GUI\Icons\Cubes\TurnCrossSmall.dds</Icon>
     <DisplayName>DisplayName_Block_TurnWheelCross</DisplayName>
     <Category>Machinesmith_Table</Category>
@@ -4240,7 +4240,7 @@ is perfect for an axel!</Description>
       <Item Amount="2" Type="InventoryItem" Subtype="MetalParts" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="TurnCrossSmall" />
+      <Item Amount="1" Type="CubeBlock" Subtype="CrankWheel" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -4281,7 +4281,7 @@ is perfect for an axel!</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TurnCrossSmall_Machinesmith" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrankWheel_Machinesmith" />
       <DisplayName>Machinesmith: Hand Crank</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\TurnCrossSmall.dds</Icon>
@@ -4292,7 +4292,7 @@ is perfect for an axel!</Description>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="Machinesmith_Schematic_TurnCrossSmall" />
+	    <Item Amount="1" Type="SchematicItem" Subtype="Machinesmith_Schematic_CrankWheel" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
@@ -5329,7 +5329,7 @@ cooking recipes.</Description>
       <Icon>Textures\GUI\Icons\Universal\cooking\stove.dds</Icon>
       <Category>Anvil</Category>
 	  <Prerequisites>
-      <Item Amount="9" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="9" Type="InventoryItem" Subtype="IngotIron" />
 	  </Prerequisites>
 	  <Results>
 		 
@@ -5365,7 +5365,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Universal\Blacksmithing\iron_nails.dds</Icon>
       <Category>Anvil</Category>
 	  <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
 	  </Prerequisites>
 	  <Results>
 		
@@ -5400,7 +5400,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
         <Item Amount="1" Type="InventoryItem" Subtype="MetalParts" />
       </Prerequisites>
       <Results>
@@ -5436,7 +5436,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Cubes\WallTorch.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="2" Type="InventoryItem" Subtype="Sticks" />
         <Item Amount="2" Type="InventoryItem" Subtype="MetalParts" />
       </Prerequisites>
       <Results>
@@ -5471,7 +5471,7 @@ walls by a large amount.</Description>
     <Icon>Textures\GUI\Icons\Cubes\FireBucket.dds</Icon>
     <Category>Anvil</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="FireBucket" />
@@ -5487,8 +5487,8 @@ walls by a large amount.</Description>
       <DisplayName>Iron Axe</DisplayName> 
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5523,8 +5523,8 @@ at a faster rate then stone axes.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HammerOneHand_Construction.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5559,8 +5559,8 @@ at a faster rate then wooden hammers.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronPickaxe.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="2" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5597,7 +5597,7 @@ at a faster rate then wooden hammers.</Description>
     <Prerequisites>
       <Item Amount="4" Tag="ScrapWood" />
       <Item Amount="1" Tag="Timber" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="HandItem" Subtype="IronShovel" />
@@ -5628,8 +5628,8 @@ at a faster rate then wooden hammers.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5664,8 +5664,8 @@ for a longer time then Stone Plows.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5702,7 +5702,7 @@ Most commonly used for the Crafting profession.</Description>
       <Icon>Textures\GUI\Icons\Universal\Crafting\GlassblowingPipe.dds</Icon>
       <Category></Category>
       <Prerequisites>
-      <Item Amount="3" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="3" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5736,7 +5736,7 @@ Most commonly used for the Crafting profession.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronSword.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5752,8 +5752,8 @@ Most commonly used for the Crafting profession.</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\LandscapingStake.dds</Icon>
     <Category>Herbalist_Table</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="2" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="4" Type="HandItem" Subtype="LandscapeStakeItem" />
@@ -5795,7 +5795,7 @@ foes at close range.</Description>
         <Item Amount="3" Type="InventoryItem" Subtype="IronOre" />
       </Prerequisites>
       <Results>
-        <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>
@@ -5806,7 +5806,7 @@ foes at close range.</Description>
       <DisplayName>DisplayName_IronIngotToMetalParts</DisplayName>
       <Category>Smelting</Category>
       <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5913,7 +5913,7 @@ foes at close range.</Description>
         <Item Amount="16" Type="InventoryItem" Subtype="IronNugget" />
       </Prerequisites>
       <Results>	  
-        <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>
@@ -6158,7 +6158,7 @@ tier foods.</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
       <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
-      <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
       <Item Amount="4" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>

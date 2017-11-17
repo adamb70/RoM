@@ -12,10 +12,10 @@
     <Model>Models\Cubes\Small\Wardrobe.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
     <Components>
-      <Component Tag="Timber" Count="4" />
-      <Component Type="InventoryItem" Subtype="MetalParts" Count="8" />
+      <Component Tag="Plank" Count="8" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count="8" />
     </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
+    <CriticalComponent Tag="Plank" Index="0" />
     <MaxIntegrity>1300</MaxIntegrity>
     <MirroringY>Z</MirroringY>
     <MirroringZ>Y</MirroringZ>
@@ -42,8 +42,8 @@
     <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
-      <Item Amount="8" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Amount="8" Tag="Plank" />
+      <Item Amount="8" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Wardrobe" />

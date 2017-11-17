@@ -1,11 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <StatDefinitions> 
-    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
-      <Id>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Health</SubtypeId>
-      </Id>
+    <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+      <Id Type="EntityStat" Subtype="Health" />
       <Name>Health</Name>
       <MinValue>0</MinValue>
       <MaxValue>200</MaxValue>
@@ -17,13 +13,10 @@
         <CriticalColorFrom x="255" y="192" z="203" />
         <CriticalColorTo x="255" y="0" z="0" />
       </GuiDef>
-  </Stat>
+    </Definition>
 
-    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
-      <Id>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Stamina</SubtypeId>
-      </Id>
+    <Definition xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id Type="EntityStat" Subtype="Stamina" />
       <Name>Stamina</Name>
       <MinValue>0</MinValue>
       <MaxValue>200</MaxValue>
@@ -36,14 +29,11 @@
         <CriticalColorFrom x="255" y="192" z="203" />
         <CriticalColorTo x="255" y="0" z="0" />
       </GuiDef>
-    </Stat>
+    </Definition>
 
 
-    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
-      <Id>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Fury</SubtypeId>
-      </Id>
+    <Definition xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id Type="EntityStat" Subtype="Fury" />
       <Name>Fury</Name>
       <MinValue>1</MinValue>
       <MaxValue>100</MaxValue>
@@ -57,13 +47,10 @@
         <CriticalColorFrom x="255" y="192" z="203" />
         <CriticalColorTo x="255" y="0" z="0" />
       </GuiDef>
-    </Stat>
+    </Definition>
 
-    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
-      <Id>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Food</SubtypeId>
-      </Id>
+    <Definition xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id Type="EntityStat" Subtype="Food" />
       <Name>Food</Name>
       <MinValue>0</MinValue>
       <MaxValue>200</MaxValue>
@@ -76,14 +63,11 @@
         <CriticalColorFrom x="255" y="192" z="203" />
         <CriticalColorTo x="255" y="0" z="0" />
       </GuiDef>
-    </Stat>
+    </Definition>
 
 
-    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
-      <Id>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Thirst</SubtypeId>
-      </Id>
+    <Definition xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id Type="EntityStat" Subtype="Thirst" />
       <Name>Thirst</Name>
       <MinValue>0</MinValue>
       <MaxValue>200</MaxValue>
@@ -96,14 +80,11 @@
         <CriticalColorFrom x="255" y="192" z="203" />
         <CriticalColorTo x="255" y="0" z="0" />
       </GuiDef>
-    </Stat>
+    </Definition>
 
 
-    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
-      <Id>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Mood</SubtypeId>
-      </Id>
+    <Definition xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id Type="EntityStat" Subtype="Mood" />
       <Name>Mood</Name>
       <MinValue>0</MinValue>
       <MaxValue>100</MaxValue>
@@ -117,14 +98,11 @@
         <CriticalColorFrom x="255" y="192" z="203" />
         <CriticalColorTo x="255" y="0" z="0" />
       </GuiDef>
-    </Stat>
+    </Definition>
 
 
-    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
-      <Id>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Alcohol</SubtypeId>
-      </Id>
+    <Definition xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id Type="EntityStat" Subtype="Alcohol" />
       <Name>Alcohol</Name>
       <MinValue>1</MinValue>
       <MaxValue>100</MaxValue>
@@ -137,14 +115,11 @@
         <CriticalColorFrom x="255" y="192" z="203" />
         <CriticalColorTo x="255" y="0" z="0" />
       </GuiDef>
-    </Stat>
+    </Definition>
 
 
-    <Stat xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
-      <Id>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Poison</SubtypeId>
-      </Id>
+    <Definition xsi:type="MyObjectBuilder_EntityStatDefinition" EnabledInCreative="false">
+      <Id Type="EntityStat" Subtype="Poison" />
       <Name>Poison</Name>
       <MinValue>1</MinValue>
       <MaxValue>100</MaxValue>
@@ -157,8 +132,6 @@
         <CriticalColorFrom x="255" y="192" z="203" />
         <CriticalColorTo x="255" y="0" z="0" />
       </GuiDef>
-    </Stat>
-
-
-  </StatDefinitions>
+    </Definition>
+    
 </Definitions>

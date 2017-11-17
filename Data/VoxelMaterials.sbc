@@ -560,10 +560,7 @@
 	
 	<!--snow for in forests replaces all Woods subtype in the mountians, can be removed completly--> 
 	<Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-		<Id>
-		  <TypeId>VoxelMaterialDefinition</TypeId>
-		  <SubtypeId>COG Woods Snow</SubtypeId>		
-		</Id>
+		<Id Type="VoxelMaterialDefinition" Subtype="COG Woods Snow" />
 		<MaterialTypeName>Grass</MaterialTypeName>
 		<MinedOre>Stone</MinedOre>
 		<MinedOreRatio>0</MinedOreRatio>
@@ -674,10 +671,7 @@
 	
 		<!--Might want to add some dry foliage let me know-->	
 	<Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-		<Id>
-		  <TypeId>VoxelMaterialDefinition</TypeId>
-		  <SubtypeId>COG Desert Soil</SubtypeId>
-		</Id>
+		<Id Type="VoxelMaterialDefinition" Subtype="COG Desert Soil" />
 		<MaterialTypeName>Grass</MaterialTypeName>
 		<MinedOre>Stone</MinedOre>
 		<MinedOreRatio>0</MinedOreRatio>
@@ -704,10 +698,7 @@
 	
 	
 	<Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-		<Id>
-		  <TypeId>VoxelMaterialDefinition</TypeId>
-		  <SubtypeId>COG Desert Rubble</SubtypeId>
-		</Id>
+		<Id Type="VoxelMaterialDefinition" Subtype="COG Desert Rubble" />
 		<MaterialTypeName>Grass</MaterialTypeName>
 		<MinedOre>Stone</MinedOre>	<!--sand stone ore-->
 		<MinedOreRatio>1</MinedOreRatio>
@@ -941,10 +932,7 @@
   
 	<!--using vanilla iron def for 120,130-->
 	<Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>COGCoal</SubtypeId>
-    </Id>
+    <Id Type="VoxelMaterialDefinition" Subtype="COGCoal" />
     <MaterialTypeName>Rock</MaterialTypeName>
     <MinedOre>CoalOre</MinedOre>			<!--change to coal ore-->
     <MinedOreRatio>1</MinedOreRatio>		<!--change drop amount-->
@@ -958,10 +946,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>COGSalt</SubtypeId>
-    </Id>
+    <Id Type="VoxelMaterialDefinition" Subtype="COGSalt" />
     <MaterialTypeName>Rock</MaterialTypeName>
     <MinedOre>SaltOre</MinedOre>			<!--change to salt ore-->
     <MinedOreRatio>2</MinedOreRatio>		<!--change drop amount5-->
@@ -975,10 +960,7 @@
   
 	
   <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>COGGold</SubtypeId>
-    </Id>
+    <Id Type="VoxelMaterialDefinition" Subtype="COGGold" />
     <MaterialTypeName>Rock</MaterialTypeName>
     <MinedOre>GoldOre</MinedOre>			<!--change to gold ore-->
     <MinedOreRatio>1</MinedOreRatio>		<!--change drop amount-->
@@ -993,10 +975,7 @@
   
   
   <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>COGMithril</SubtypeId>
-    </Id>
+    <Id Type="VoxelMaterialDefinition" Subtype="COGMithril" />
     <MaterialTypeName>Rock</MaterialTypeName>
     <MinedOre>MithrilOre</MinedOre>			<!--change to mythril ore-->
     <MinedOreRatio>1</MinedOreRatio>		<!--change drop amount-->
@@ -1095,10 +1074,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition"><!--This is a fake ore used for changing the color of the elf forest-->
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>COG_FakeOre</SubtypeId>
-    </Id>
+    <Id Type="VoxelMaterialDefinition" Subtype="COG_FakeOre" />
     <MaterialTypeName>Enchanted_Soil</MaterialTypeName>
     <MinedOre>None</MinedOre>
     <MinedOreRatio>0</MinedOreRatio>

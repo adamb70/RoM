@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Furnace" />
+    <Id Type="CubeBlock" Subtype="FurnaceClay" />
     <BlockPairName>Furnace</BlockPairName>
     <DisplayName>DisplayName_Block_Furnace</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
@@ -21,10 +21,10 @@
 			-->
     <PhysicalMaterial>Rock</PhysicalMaterial>
     <Components>
-      <Component Type="InventoryItem" Subtype="StoneOreSmall" Count="18" />
-      <Component Type="InventoryItem" Subtype="Dirt" Count="9" />
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="18" />
+      <Component Type="InventoryItem" Subtype="Clay" Count="20" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <CriticalComponent Type="InventoryItem" Subtype="Clay" Index="0" />
     <Mass>400</Mass>
     <Volume>4500</Volume>
     <MaxIntegrity>800</MaxIntegrity>
@@ -40,7 +40,7 @@
     <LightRadius Min="6.5" Max="6.5" Default="6.5" />
     <LightFalloff Min="0.3" Max="0.3" Default="0.3" />
     <LightIntensity Min="0.3" Max="0.3" Default="0.3" />
-    <PrimarySound>BlockBonfire</PrimarySound>
+    <PrimarySound>BlockFire</PrimarySound>
     <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
     <AvailableInSurvival>true</AvailableInSurvival>
     <VoxelPlacement>
@@ -58,31 +58,31 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Furnace"/>
+    <Id Type="CraftingRecipeDefinition" Subtype="FurnaceClay"/>
     <DisplayName>DisplayName_Block_Furnace</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
     <Category>Masonry_Table</Category>
     <Prerequisites>
-      <Item Amount="9" Type="InventoryItem" Subtype="Dirt" />
-      <Item Amount="18" Type="InventoryItem" Subtype="StoneOreSmall" />
+      <Item Amount="20" Type="InventoryItem" Subtype="Clay" />
+      <Item Amount="18" Type="InventoryItem" Subtype="StoneSmall" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Furnace" />
+      <Item Amount="1" Type="CubeBlock" Subtype="FurnaceClay" />
     </Results>
-    <CraftingTime Seconds="3"/>
+    <CraftingTime Seconds="6"/>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="Furnace" />
+    <Id Type="EntityFXComponent" Subtype="FurnaceClay" />
     <Effects>
       <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
-        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
+        <EffectId Type="EffectDefinition" Subtype="Torch"/>
       </Effect>
     </Effects>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Furnace" />
+    <Id Type="UseObjectsComponent" Subtype="FurnaceClay" />
     <LoadFromModel>false</LoadFromModel>
     <UseObjects>
       <UseObject Dummy="detector_furnace" Name="inventory" />
@@ -90,32 +90,33 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Furnace" />
+    <Id Type="MyObjectBuilder_Inventory" Subtype="FurnaceClay" />
     <InventoryName>Furnace</InventoryName>
     <DisplayName>DisplayName_InventoryName_Crafting</DisplayName>
     <MaxItemCount>12</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Furnace"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="FurnaceClay"/>
     <CraftingCategories>
       <Category>Smelting</Category>
       <Category>Melting</Category>
     </CraftingCategories>
-    <CraftingInventory>Furnace</CraftingInventory>
+    <CraftingInventory>FurnaceClay</CraftingInventory>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
     <ConstrainInventory>true</ConstrainInventory>
+    <PowerRequired>All</PowerRequired>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Furnace" />
-    <Component Type="Inventory" Subtype="Furnace" />
-    <Component Type="CraftingComponent" Subtype="Furnace" />
+    <Id Type="CubeBlock" Subtype="FurnaceClay" />
+    <Component Type="Inventory" Subtype="FurnaceClay" />
+    <Component Type="CraftingComponentQueued" Subtype="FurnaceClay" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="EntityFXComponent" Subtype="Furnace" />
-    <Component Type="UseObjectsComponent" Subtype="Furnace" />
+    <Component Type="EntityFXComponent" Subtype="FurnaceClay" />
+    <Component Type="UseObjectsComponent" Subtype="FurnaceClay" />
     <Component Type="Inventory" Subtype="Fuel" />
     <Component Type="FuelComponent" Subtype="Fire" />
   </Definition>

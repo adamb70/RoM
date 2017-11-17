@@ -1,354 +1,338 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <CubeBlocks>
-    <Definition>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>House Half Timber Wall</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Block_WoodenWall</DisplayName>
-      <Description>
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="WallClay" />
+    <DisplayName>DisplayName_Block_WoodenWall</DisplayName>
+    <Description>
 Nails are not required to finish construction. 
 They only increase the item's integrity.
 </Description>
-      <BlockPairName>WoodenWall</BlockPairName>
-      <Public>true</Public>
-      <Icon>Textures\GUI\Icons\cubes\House Half Timber Wall.dds</Icon>
-      <CubeSize>Large</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\large\House Half Timber Wall.mwm</Model>
-      <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberWall_Construction_1.mwm">
-          <MountPointOverrides>
-            <MountPoint Side="Top" Enabled="false" />
-          </MountPointOverrides>
-        </Model>
-        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
-          <MountPointOverrides>
-            <MountPoint Side="Top" Enabled="false" />
-          </MountPointOverrides>
-        </Model>-->
-      </BuildProgressModels>
-      <MountPoints>
-        <MountPoint Side="Front" StartX="0.932400048" StartY="0.8695013" EndX="0.06759995" EndY="1.03430128" />
-        <MountPoint Side="Front" StartX="0.932400048" StartY="-0.03239999" EndX="0.06759995" EndY="0.132399991" />
-        <MountPoint Side="Front" StartX="1.03445077" StartY="-0.03023529" EndX="0.8696508" EndY="1.03456473" />
-        <MountPoint Side="Front" StartX="0.132119715" StartY="-0.03023529" EndX="-0.0326802731" EndY="1.03456473" />
-        <MountPoint Side="Front" StartX="0.936212957" StartY="0.06436181" EndX="0.06378704" EndY="0.935638249" />
-        <MountPoint Side="Left" StartX="-0.0362223163" StartY="-0.03023529" EndX="0.128577858" EndY="1.03456473" />
-        <MountPoint Side="Right" StartX="1.03622234" StartY="-0.03023529" EndX="0.8714222" EndY="1.03456473" />
-        <MountPoint Side="Top" StartX="0.06759997" StartY="1.03622222" EndX="0.932400048" EndY="0.8714222" />
-        <MountPoint Side="Top" StartX="-0.03445077" StartY="1.03622234" EndX="0.1303492" EndY="0.8714222" />
-        <MountPoint Side="Top" StartX="0.8678803" StartY="1.03622234" EndX="1.03268027" EndY="0.8714222" />
-        <MountPoint Side="Bottom" StartX="0.06759997" StartY="-0.03622217" EndX="0.932400048" EndY="0.128577814" />
-        <MountPoint Side="Bottom" StartX="-0.03445077" StartY="-0.0362223163" EndX="0.1303492" EndY="0.128577858" />
-        <MountPoint Side="Bottom" StartX="0.8678803" StartY="-0.0362223163" EndX="1.03268027" EndY="0.128577858" />
-      </MountPoints>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="4" />
-        <Component Tag="Timber" Count ="2" />
-        <Component Subtype="Iron_Nails" Count ="12" />
-      </Components>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <UseModelIntersection>true</UseModelIntersection>
-      <BuildType>Wall</BuildType>
-      <BuildMaterial>Wood</BuildMaterial>
-      <Direction>Horizontal</Direction>
-      <Rotation>Both</Rotation>
-      <CompoundTemplates>
-        <Template>Universal</Template>
-      </CompoundTemplates>
-      <MaxIntegrity>800</MaxIntegrity>
-    </Definition>
-    <Definition>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>House Half Timber Window</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Block_WoodenWallWindow</DisplayName>
-      <Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Wall.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\House Half Timber Wall.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberWall_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWall_Construction_2.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>-->
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="0.932400048" StartY="0.8695013" EndX="0.06759995" EndY="1.03430128" />
+      <MountPoint Side="Front" StartX="0.932400048" StartY="-0.03239999" EndX="0.06759995" EndY="0.132399991" />
+      <MountPoint Side="Front" StartX="1.03445077" StartY="-0.03023529" EndX="0.8696508" EndY="1.03456473" />
+      <MountPoint Side="Front" StartX="0.132119715" StartY="-0.03023529" EndX="-0.0326802731" EndY="1.03456473" />
+      <MountPoint Side="Front" StartX="0.936212957" StartY="0.06436181" EndX="0.06378704" EndY="0.935638249" />
+      <MountPoint Side="Left" StartX="-0.0362223163" StartY="-0.03023529" EndX="0.128577858" EndY="1.03456473" />
+      <MountPoint Side="Right" StartX="1.03622234" StartY="-0.03023529" EndX="0.8714222" EndY="1.03456473" />
+      <MountPoint Side="Top" StartX="0.06759997" StartY="1.03622222" EndX="0.932400048" EndY="0.8714222" />
+      <MountPoint Side="Top" StartX="-0.03445077" StartY="1.03622234" EndX="0.1303492" EndY="0.8714222" />
+      <MountPoint Side="Top" StartX="0.8678803" StartY="1.03622234" EndX="1.03268027" EndY="0.8714222" />
+      <MountPoint Side="Bottom" StartX="0.06759997" StartY="-0.03622217" EndX="0.932400048" EndY="0.128577814" />
+      <MountPoint Side="Bottom" StartX="-0.03445077" StartY="-0.0362223163" EndX="0.1303492" EndY="0.128577858" />
+      <MountPoint Side="Bottom" StartX="0.8678803" StartY="-0.0362223163" EndX="1.03268027" EndY="0.128577858" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Subtype="WoodenSticks" Count="4" />
+      <Component Tag="Timber" Count ="2" />
+      <Component Subtype="Iron_Nails" Count ="12" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <BuildMaterial>Wood</BuildMaterial>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="WallClayWithWindow" />
+    <DisplayName>DisplayName_Block_WoodenWallWindow</DisplayName>
+    <Description>
 Nails are not required to finish construction. 
 They only increase the item's integrity.
 </Description>
-      <BlockPairName>WoodenWallWindow</BlockPairName>
-      <Public>true</Public>
-      <Icon>Textures\GUI\Icons\cubes\House Half Timber Window.dds</Icon>
-      <CubeSize>Large</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\large\House Half Timber Window.mwm</Model>
-      <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberWindow_Construction_1.mwm">
-          <MountPointOverrides>
-            <MountPoint Side="Top" Enabled="false" />
-          </MountPointOverrides>
-        </Model>
-        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWindow_Construction_2.mwm">
-          <MountPointOverrides>
-            <MountPoint Side="Top" Enabled="false" />
-          </MountPointOverrides>
-        </Model>-->
-      </BuildProgressModels>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MountPoints>
-        <MountPoint Side="Front" StartX="1.0324" StartY="-0.0349058621" EndX="-0.032400012" EndY="0.42989403" />
-        <MountPoint Side="Front" StartX="0.7374" StartY="0.7698602" EndX="0.2626" EndY="1.02810025" />
-        <MountPoint Side="Front" StartX="1.02882659" StartY="0.365093976" EndX="0.6842358" EndY="1.031525" />
-        <MountPoint Side="Front" StartX="0.321223974" StartY="0.365093976" EndX="-0.0233668089" EndY="1.031525" />
-        <MountPoint Side="Left" StartX="-0.0338439941" StartY="-0.0349058621" EndX="0.130955979" EndY="0.42989403" />
-        <MountPoint Side="Left" StartX="-0.0314826965" StartY="0.365093976" EndX="0.128662691" EndY="1.031525" />
-        <MountPoint Side="Right" StartX="1.033844" StartY="-0.0349058621" EndX="0.869044" EndY="0.42989403" />
-        <MountPoint Side="Right" StartX="1.0314827" StartY="0.365093976" EndX="0.8713373" EndY="1.031525" />
-        <MountPoint Side="Top" StartX="0.2626" StartY="1.033844" EndX="0.7374" EndY="0.869044" />
-        <MountPoint Side="Top" StartX="-0.02882657" StartY="1.0314827" EndX="0.3157642" EndY="0.8713373" />
-        <MountPoint Side="Top" StartX="0.678776" StartY="1.0314827" EndX="1.02336681" EndY="0.8713373" />
-        <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.0338439941" EndX="1.0324" EndY="0.130955979" />
-      </MountPoints>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="4" />
-        <Component Tag="Timber" Count ="2" />
-        <Component Subtype="Iron_Nails" Count ="12" />
-      </Components>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <UseModelIntersection>true</UseModelIntersection>
-      <BuildType>Wall</BuildType>
-      <BuildMaterial>Wood</BuildMaterial>
-      <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-      <CompoundTemplates>
-        <Template>Universal</Template>
-      </CompoundTemplates>
-      <MaxIntegrity>760</MaxIntegrity>
-      <BlockGroupName>BlockGroupName_WoodenWalls_Windows</BlockGroupName>
-      <BlockVariants>
-        <BlockVariant>
-          <TypeId>MyObjectBuilder_CubeBlock</TypeId>
-          <SubtypeId>WoodenFlatShutters</SubtypeId>
-        </BlockVariant>
-      </BlockVariants>
-    </Definition>
-    <Definition>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>House Half Timber Door</SubtypeId>
-      </Id>
-      <DisplayName>Wooden Entrance</DisplayName>
-      <Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Window.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\House Half Timber Window.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberWindow_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberWindow_Construction_2.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.0349058621" EndX="-0.032400012" EndY="0.42989403" />
+      <MountPoint Side="Front" StartX="0.7374" StartY="0.7698602" EndX="0.2626" EndY="1.02810025" />
+      <MountPoint Side="Front" StartX="1.02882659" StartY="0.365093976" EndX="0.6842358" EndY="1.031525" />
+      <MountPoint Side="Front" StartX="0.321223974" StartY="0.365093976" EndX="-0.0233668089" EndY="1.031525" />
+      <MountPoint Side="Left" StartX="-0.0338439941" StartY="-0.0349058621" EndX="0.130955979" EndY="0.42989403" />
+      <MountPoint Side="Left" StartX="-0.0314826965" StartY="0.365093976" EndX="0.128662691" EndY="1.031525" />
+      <MountPoint Side="Right" StartX="1.033844" StartY="-0.0349058621" EndX="0.869044" EndY="0.42989403" />
+      <MountPoint Side="Right" StartX="1.0314827" StartY="0.365093976" EndX="0.8713373" EndY="1.031525" />
+      <MountPoint Side="Top" StartX="0.2626" StartY="1.033844" EndX="0.7374" EndY="0.869044" />
+      <MountPoint Side="Top" StartX="-0.02882657" StartY="1.0314827" EndX="0.3157642" EndY="0.8713373" />
+      <MountPoint Side="Top" StartX="0.678776" StartY="1.0314827" EndX="1.02336681" EndY="0.8713373" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.0338439941" EndX="1.0324" EndY="0.130955979" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Subtype="WoodenSticks" Count="4" />
+      <Component Tag="Timber" Count ="2" />
+      <Component Subtype="Iron_Nails" Count ="12" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <BuildMaterial>Wood</BuildMaterial>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>760</MaxIntegrity>
+    <BlockGroupName>BlockGroupName_WoodenWalls_Windows</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>MyObjectBuilder_CubeBlock</TypeId>
+        <SubtypeId>WallClayWithShutters</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="WallClayWithEntrance" />
+    <DisplayName>DisplayName_Block_WoodenWallDoor</DisplayName>
+    <Description>
 Nails are not required to finish construction. 
 They only increase the item's integrity.
 </Description>
-      <BlockPairName>WoodenWallDoor</BlockPairName>
-      <Public>true</Public>
-      <Icon>Textures\GUI\Icons\cubes\House Half Timber Door.dds</Icon>
-      <CubeSize>Large</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\large\House Half Timber Door.mwm</Model>
-      <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberDoor_Construction_1.mwm">
-          <MountPointOverrides>
-            <MountPoint Side="Top" Enabled="false" />
-          </MountPointOverrides>
-        </Model>
-        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberDoor_Construction_2.mwm">
-          <MountPointOverrides>
-            <MountPoint Side="Top" Enabled="false" />
-          </MountPointOverrides>
-        </Model>-->
-      </BuildProgressModels>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MountPoints>
-        <MountPoint Side="Front" StartX="1.02962387" StartY="-0.0342126861" EndX="0.6709341" EndY="1.032467" />
-        <MountPoint Side="Front" StartX="0.3290661" StartY="-0.0342127346" EndX="-0.03518951" EndY="1.03246713" />
-        <MountPoint Side="Front" StartX="0.7357341" StartY="0.867801368" EndX="0.264266074" EndY="1.032467" />
-        <MountPoint Side="Left" StartX="-0.0326138027" StartY="-0.0342126861" EndX="0.132186279" EndY="1.032467" />
-        <MountPoint Side="Right" StartX="1.03261375" StartY="-0.0342127346" EndX="0.8678137" EndY="1.03246713" />
-        <MountPoint Side="Top" StartX="-0.0296238419" StartY="1.03261387" EndX="0.3290659" EndY="0.867813766" />
-        <MountPoint Side="Top" StartX="0.6709339" StartY="1.03261375" EndX="1.03518951" EndY="0.8678137" />
-        <MountPoint Side="Top" StartX="0.2642659" StartY="1.03261375" EndX="0.7357339" EndY="0.8678137" />
-        <MountPoint Side="Bottom" StartX="-0.0296238419" StartY="-0.0326137543" EndX="0.3290659" EndY="0.132186323" />
-        <MountPoint Side="Bottom" StartX="0.6709339" StartY="-0.03261385" EndX="1.03518951" EndY="0.132186219" />
-      </MountPoints>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="3" />
-        <Component Tag="Timber" Count ="2" />
-        <Component Subtype="Iron_Nails" Count ="12" />
-      </Components>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <UseModelIntersection>true</UseModelIntersection>
-      <BuildType>Wall</BuildType>
-      <BuildMaterial>Wood</BuildMaterial>
-      <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-      <CompoundTemplates>
-        <Template>Universal</Template>
-      </CompoundTemplates>
-      <MaxIntegrity>720</MaxIntegrity>
-      <BlockGroupName>BlockGroupName_WoodenWall_Doors</BlockGroupName>
-      <BlockVariants>
-      </BlockVariants>
-    </Definition>
-    <Definition>
-      <Id>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Door.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\House Half Timber Door.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberDoor_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberDoor_Construction_2.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.02962387" StartY="-0.0342126861" EndX="0.6709341" EndY="1.032467" />
+      <MountPoint Side="Front" StartX="0.3290661" StartY="-0.0342127346" EndX="-0.03518951" EndY="1.03246713" />
+      <MountPoint Side="Front" StartX="0.7357341" StartY="0.867801368" EndX="0.264266074" EndY="1.032467" />
+      <MountPoint Side="Left" StartX="-0.0326138027" StartY="-0.0342126861" EndX="0.132186279" EndY="1.032467" />
+      <MountPoint Side="Right" StartX="1.03261375" StartY="-0.0342127346" EndX="0.8678137" EndY="1.03246713" />
+      <MountPoint Side="Top" StartX="-0.0296238419" StartY="1.03261387" EndX="0.3290659" EndY="0.867813766" />
+      <MountPoint Side="Top" StartX="0.6709339" StartY="1.03261375" EndX="1.03518951" EndY="0.8678137" />
+      <MountPoint Side="Top" StartX="0.2642659" StartY="1.03261375" EndX="0.7357339" EndY="0.8678137" />
+      <MountPoint Side="Bottom" StartX="-0.0296238419" StartY="-0.0326137543" EndX="0.3290659" EndY="0.132186323" />
+      <MountPoint Side="Bottom" StartX="0.6709339" StartY="-0.03261385" EndX="1.03518951" EndY="0.132186219" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Subtype="WoodenSticks" Count="3" />
+      <Component Tag="Timber" Count ="2" />
+      <Component Subtype="Iron_Nails" Count ="12" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <BuildMaterial>Wood</BuildMaterial>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>720</MaxIntegrity>
+    <BlockGroupName>BlockGroupName_WoodenWall_Doors</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
         <TypeId>CubeBlock</TypeId>
-        <SubtypeId>House Half Timber Triangle</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Block_WoodenWallSlope</DisplayName>
-      <Description>
+        <SubtypeId>WallClayWithDoor</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="WallClaySlope" />
+    <DisplayName>DisplayName_Block_WoodenWallSlope</DisplayName>
+    <Description>
 Nails are not required to finish construction. 
 They only increase the item's integrity.
 </Description>
-      <BlockPairName>WoodenWallSlope</BlockPairName>
-      <Public>true</Public>
-      <Icon>Textures\GUI\Icons\Cubes\House Half Timber Triangle.dds</Icon>
-      <CubeSize>Large</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\large\House Half Timber Triangle.mwm</Model>
-      <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberTriangle_Construction_1.mwm" />
-        <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberTriangle_Construction_2.mwm" />-->
-      </BuildProgressModels>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MountPoints>
-        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="0.1" />
-        <MountPoint Side="Right" StartX="0.9" StartY="0.0" EndX="1.0" EndY="1.0" />
-        <MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="0.5" EndY="0.5" />
-        <MountPoint Side="Front" StartX="0.5" StartY="0.0" EndX="0.5" EndY="0.5" />
-        <MountPoint Side="Front" StartX="0.5" StartY="0.5" EndX="0.75" EndY="0.25" />
-        <MountPoint Side="Front" StartX="0.5" StartY="0.0" EndX="1" EndY="0.25" />
-        <MountPoint Side="Front" StartX="0.0" StartY="0.5" EndX="0.25" EndY="1" />
-        <MountPoint Side="Front" StartX="0.25" StartY="0.5" EndX="0.5" EndY="0.75" />
-      </MountPoints>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="2" />
-        <Component Tag="Timber" Count ="1" />
-        <Component Subtype="Iron_Nails" Count ="12" />
-      </Components>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <UseModelIntersection>true</UseModelIntersection>
-      <BuildType>Wall</BuildType>
-      <BuildMaterial>Wood</BuildMaterial>
-      <Direction>Horizontal</Direction>
-      <Rotation>Both</Rotation>
-      <CompoundTemplates>
-        <Template>Universal</Template>
-      </CompoundTemplates>
-      <MaxIntegrity>400</MaxIntegrity>
-    </Definition>
-    <Definition>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>HouseTimberTriangleOdd</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Block_WoodenWallTop</DisplayName>
-      <Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\House Half Timber Triangle.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\House Half Timber Triangle.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfTimberTriangle_Construction_1.mwm" />
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfTimberTriangle_Construction_2.mwm" />-->
+    </BuildProgressModels>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="0.1" />
+      <MountPoint Side="Right" StartX="0.9" StartY="0.0" EndX="1.0" EndY="1.0" />
+      <MountPoint Side="Front" StartX="0.0" StartY="0.0" EndX="0.5" EndY="0.5" />
+      <MountPoint Side="Front" StartX="0.5" StartY="0.0" EndX="0.5" EndY="0.5" />
+      <MountPoint Side="Front" StartX="0.5" StartY="0.5" EndX="0.75" EndY="0.25" />
+      <MountPoint Side="Front" StartX="0.5" StartY="0.0" EndX="1" EndY="0.25" />
+      <MountPoint Side="Front" StartX="0.0" StartY="0.5" EndX="0.25" EndY="1" />
+      <MountPoint Side="Front" StartX="0.25" StartY="0.5" EndX="0.5" EndY="0.75" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Subtype="WoodenSticks" Count="2" />
+      <Component Tag="Timber" Count ="1" />
+      <Component Subtype="Iron_Nails" Count ="12" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <BuildMaterial>Wood</BuildMaterial>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>400</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="WallClaySlopeTop" />
+    <DisplayName>DisplayName_Block_WoodenWallTop</DisplayName>
+    <Description>
 Nails are not required to finish construction. 
 They only increase the item's integrity.
 </Description>
-      <BlockPairName>WoodenWallTop</BlockPairName>
-      <Public>true</Public>
-      <Icon>Textures\GUI\Icons\Cubes\HouseTimberTriangleOdd.dds</Icon>
-      <CubeSize>Large</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\large\HouseTimberTriangleOdd.mwm</Model>
-      <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseTimberTriangleOdd_Construction_1.mwm">
-        </Model>
-      </BuildProgressModels>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MountPoints>
-        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="0.1" />
-        <MountPoint Side="Right" StartX="0.9" StartY="0.0" EndX="1.0" EndY="0.1" />
-        <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="0.1" EndY="0.1" />
-      </MountPoints>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="2" />
-        <Component Tag="Timber" Count ="1" />
-        <Component Subtype="Iron_Nails" Count ="12" />
-      </Components>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-      <CompoundTemplates>
-        <Template>Universal</Template>
-      </CompoundTemplates>
-      <UseModelIntersection>true</UseModelIntersection>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <MaxIntegrity>280</MaxIntegrity>
-    </Definition>
-   <Definition>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>StickFence</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Block_StickFence</DisplayName>
-      <Description>
-Nails are not required to finish construction. 
-They only increase the item's integrity.
-</Description>
-      <BlockPairName>StickFence</BlockPairName>
-      <Public>true</Public>
-      <Icon>Textures\GUI\Icons\cubes\StickFence.dds</Icon>
-      <CubeSize>Large</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\large\StickFence.mwm</Model>
-      <BuildProgressModels>
-        <Model BuildPercentUpperBound="0.8" File="Models\Cubes\large\StickFence_Construction_1.mwm">
-        </Model>
-      </BuildProgressModels>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MountPoints>
-        <MountPoint Side="Front" StartX="1.02962387" StartY="-0.0342126861" EndX="0.6709341" EndY="1.032467" />
-        <MountPoint Side="Front" StartX="0.3290661" StartY="-0.0342127346" EndX="-0.03518951" EndY="1.03246713" />
-        <MountPoint Side="Front" StartX="0.7357341" StartY="0.867801368" EndX="0.264266074" EndY="1.032467" />
-        <MountPoint Side="Left" StartX="-0.0326138027" StartY="-0.0342126861" EndX="0.132186279" EndY="1.032467" />
-        <MountPoint Side="Right" StartX="1.03261375" StartY="-0.0342127346" EndX="0.8678137" EndY="1.03246713" />
-        <MountPoint Side="Bottom" StartX="-0.0296238419" StartY="-0.0326137543" EndX="0.3290659" EndY="0.132186323" />
-        <MountPoint Side="Bottom" StartX="0.6709339" StartY="-0.03261385" EndX="1.03518951" EndY="0.132186219" />
-      </MountPoints>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="4" />
-        <Component Subtype="Iron_Nails" Count ="6" />
-      </Components>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <UseModelIntersection>true</UseModelIntersection>
-      <BuildType>Wall</BuildType>
-      <BuildMaterial>Wood</BuildMaterial>
-      <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-      <CompoundTemplates>
-        <Template>Universal</Template>
-      </CompoundTemplates>
-      <MaxIntegrity>360</MaxIntegrity>
-    </Definition>
-  </CubeBlocks>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\HouseTimberTriangleOdd.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\HouseTimberTriangleOdd.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseTimberTriangleOdd_Construction_1.mwm">
+      </Model>
+    </BuildProgressModels>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="0.1" />
+      <MountPoint Side="Right" StartX="0.9" StartY="0.0" EndX="1.0" EndY="0.1" />
+      <MountPoint Side="Left" StartX="0.0" StartY="0.0" EndX="0.1" EndY="0.1" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Subtype="WoodenSticks" Count="2" />
+      <Component Tag="Timber" Count ="1" />
+      <Component Subtype="Iron_Nails" Count ="12" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <UseModelIntersection>true</UseModelIntersection>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <MaxIntegrity>280</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="FenceStick" />
+    <DisplayName>DisplayName_Block_StickFence</DisplayName>
+    <Description>
+  Nails are not required to finish construction. 
+  They only increase the item's integrity.
+  </Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\StickFence.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\StickFence.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.8" File="Models\Cubes\large\StickFence_Construction_1.mwm">
+      </Model>
+    </BuildProgressModels>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.02962387" StartY="-0.0342126861" EndX="0.6709341" EndY="1.032467" />
+      <MountPoint Side="Front" StartX="0.3290661" StartY="-0.0342127346" EndX="-0.03518951" EndY="1.03246713" />
+      <MountPoint Side="Front" StartX="0.7357341" StartY="0.867801368" EndX="0.264266074" EndY="1.032467" />
+      <MountPoint Side="Left" StartX="-0.0326138027" StartY="-0.0342126861" EndX="0.132186279" EndY="1.032467" />
+      <MountPoint Side="Right" StartX="1.03261375" StartY="-0.0342127346" EndX="0.8678137" EndY="1.03246713" />
+      <MountPoint Side="Bottom" StartX="-0.0296238419" StartY="-0.0326137543" EndX="0.3290659" EndY="0.132186323" />
+      <MountPoint Side="Bottom" StartX="0.6709339" StartY="-0.03261385" EndX="1.03518951" EndY="0.132186219" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Subtype="WoodenSticks" Count="4" />
+      <Component Subtype="Iron_Nails" Count ="6" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>false</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <BuildMaterial>Wood</BuildMaterial>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>360</MaxIntegrity>
+  </Definition>
+
 </Definitions>

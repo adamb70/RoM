@@ -2,10 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CubeBlocks>
     <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id>
-        <TypeId>MyObjectBuilder_CubeBlock</TypeId>
-        <SubtypeId>FireBucket</SubtypeId>
-      </Id>
+      <Id Type="MyObjectBuilder_CubeBlock" Subtype="FireBucket" />
       <BlockPairName>FireBucket</BlockPairName>
       <DisplayName>DisplayName_Block_FireBucket</DisplayName>
       <Icon>Textures\GUI\Icons\Cubes\FireBucket.dds</Icon>
@@ -46,10 +43,7 @@
   </CubeBlocks>
 
   <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_EntityStateComponent</TypeId>
-      <SubtypeId>FireBucket</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="FireBucket" />
     <InitialState>Off</InitialState>
     <States>
       <State Name="On">
@@ -62,10 +56,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_EntityFXComponent</TypeId>
-      <SubtypeId>FireBucket</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="FireBucket" />
     <Effects>
       <Effect StartEvent="On" StopEvent="Off" Dummy="detector_fire">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
@@ -74,10 +65,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_UseObjectsComponent</TypeId>
-      <SubtypeId>FireBucket</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="FireBucket" />
     <LoadFromModel>false</LoadFromModel>
     <UseObjects>
       <UseObject Dummy="detector_fire" Name="Generic" />
@@ -85,10 +73,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_StateUseObjectComponent</TypeId>
-      <SubtypeId>FireBucket</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="FireBucket" />
     <Tooltip>UseObject_DynamicPress</Tooltip>
     <PrimaryAction>Manipulate</PrimaryAction>
     <SupportsAccessSettings>false</SupportsAccessSettings>
@@ -100,10 +85,7 @@
 
   <EntityContainers>
     <Container>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>FireBucket</SubtypeId>
-      </Id>
+      <Id Type="CubeBlock" Subtype="FireBucket" />
       <DefaultComponents>
         <Component BuilderType="MyObjectBuilder_EntityStateComponent" SubtypeId="FireBucket" ForceCreate="true"/>
         <Component BuilderType="MyObjectBuilder_EntityFXComponent" SubtypeId="FireBucket" ForceCreate="true"/>

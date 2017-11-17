@@ -1,113 +1,78 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Herbs"/>
-    <GatherActionHint>ActionHint_GatherHerbs</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="FarmHerbs"/>
-    <GatherActionHint>ActionHint_GatherHerbs</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Pumpkin"/>
-    <GatherActionHint>ActionHint_GatherPumpkins</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Berries"/>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_Berries"/>
     <GatherActionHint>ActionHint_GatherBerries</GatherActionHint>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Mushrooms"/>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Norden_Spalt"/>
+    <GatherActionHint>Gather Spalt</GatherActionHint>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_Norden_Roots"/>
+    <GatherActionHint>ActionHint_GatherRoots</GatherActionHint>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_Mushrooms"/>
     <GatherActionHint>ActionHint_GatherMushrooms</GatherActionHint>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="StonePile"/>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_StonePile"/>
     <GatherActionHint>ActionHint_GatherStonePile</GatherActionHint>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="SingleStone"/>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_SingleStone"/>
     <GatherActionHint>ActionHint_GatherSingleStone</GatherActionHint>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Roots"/>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_Roots"/>
     <GatherActionHint>ActionHint_GatherRoots</GatherActionHint>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="WildCabbage"/>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_Herbs"/>
+    <GatherActionHint>ActionHint_GatherHerbs</GatherActionHint>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_Blue_Berry"/>
+    <GatherActionHint>ActionHint_GatherBerries</GatherActionHint>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_WildPumpkin"/>
+    <GatherActionHint>ActionHint_GatherPumpkins</GatherActionHint>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_WildCabbage"/>
     <GatherActionHint>ActionHint_GatherCabbage</GatherActionHint>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="FarmCabbage"/>
-    <GatherActionHint>ActionHint_GatherCabbage</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="WildPumpkin"/>
-    <GatherActionHint>ActionHint_GatherPumpkin</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="FarmPumpkin"/>
-    <GatherActionHint>ActionHint_GatherPumpkin</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="WildFlax"/>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_WildFlax"/>
     <GatherActionHint>ActionHint_GatherFlax</GatherActionHint>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="FarmFlax"/>
-    <GatherActionHint>ActionHint_GatherFlax</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="WildWheat"/>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_WildWheat"/>
     <GatherActionHint>ActionHint_GatherWheat</GatherActionHint>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="FarmWheat"/>
-    <GatherActionHint>ActionHint_GatherWheat</GatherActionHint>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_Norden_Barley"/>
+    <GatherActionHint>Gather Barley</GatherActionHint>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="TreePine4m"/>
-    <GatherActionHint>ActionHint_GatherSmallTree</GatherActionHint>
+    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="Schematic_Norden_Barley_Roots"/>
+    <GatherActionHint>ActionHint_GatherRoots</GatherActionHint>
   </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="TreePine10"/>
-    <GatherActionHint>ActionHint_GatherSmallTree</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="TreePine15"/>
-    <GatherActionHint>ActionHint_GatherSmallTree</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="TreePine175"/>
-    <GatherActionHint>ActionHint_GatherSmallTree</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="TreePine225"/>
-    <GatherActionHint>ActionHint_GatherSmallTree</GatherActionHint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_GatherableDefinition">
-    <Id Type="MyObjectBuilder_GatherableDefinition" Subtype="TreePine25"/>
-    <GatherActionHint>ActionHint_GatherSmallTree</GatherActionHint>
-  </Definition>
-
+  
 </Definitions>

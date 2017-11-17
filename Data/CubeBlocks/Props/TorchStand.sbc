@@ -2,10 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CubeBlocks>
     <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id>
-        <TypeId>MyObjectBuilder_CubeBlock</TypeId>
-        <SubtypeId>TorchStand</SubtypeId>
-      </Id>
+      <Id Type="MyObjectBuilder_CubeBlock" Subtype="TorchStand" />
       <BlockPairName>TorchStand</BlockPairName>
       <DisplayName>DisplayName_Block_TorchStand</DisplayName>
       <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
@@ -47,10 +44,7 @@
   </CubeBlocks>
 
   <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_EntityStateComponent</TypeId>
-      <SubtypeId>TorchStand</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="TorchStand" />
     <InitialState>Off</InitialState>
     <States>
       <State Name="On">
@@ -63,10 +57,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_EntityFXComponent</TypeId>
-      <SubtypeId>TorchStand</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="TorchStand" />
     <Effects>
       <Effect StartEvent="On" StopEvent="Off" Dummy="detector_fire">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
@@ -75,10 +66,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_UseObjectsComponent</TypeId>
-      <SubtypeId>TorchStand</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="TorchStand" />
     <LoadFromModel>false</LoadFromModel>
     <UseObjects>
       <UseObject Dummy="detector_fire" Name="Generic" />
@@ -86,10 +74,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_StateUseObjectComponent</TypeId>
-      <SubtypeId>TorchStand</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="TorchStand" />
     <Tooltip>UseObject_DynamicPress</Tooltip>
     <PrimaryAction>Manipulate</PrimaryAction>
     <SupportsAccessSettings>false</SupportsAccessSettings>
@@ -101,10 +86,7 @@
 
   <EntityContainers>
     <Container>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>TorchStand</SubtypeId>
-      </Id>
+      <Id Type="CubeBlock" Subtype="TorchStand" />
       <DefaultComponents>
         <Component BuilderType="MyObjectBuilder_EntityStateComponent" SubtypeId="TorchStand" ForceCreate="true"/>
         <Component BuilderType="MyObjectBuilder_EntityFXComponent" SubtypeId="TorchStand" ForceCreate="true"/>

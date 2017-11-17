@@ -2,10 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Herbs</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Herbs" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.4">
@@ -19,7 +16,7 @@
         <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather"> NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -41,10 +38,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Herbs</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Herbs" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -58,7 +52,7 @@
         <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather"> NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -80,10 +74,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>CrimsonThristle</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="CrimsonThristle" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.2">
@@ -97,7 +88,7 @@
         <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather"> NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -119,10 +110,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_CrimsonThristle</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_CrimsonThristle" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -136,7 +124,7 @@
         <TimeToNextStepInHours>2.5</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather"> NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -158,10 +146,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Pumpkin</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Pumpkin" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.05">
@@ -197,10 +182,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Pumpkin</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Pumpkin" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -224,10 +206,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Berries</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Berries" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
         <GrowthStep Name="Dead" StartingProbability="0.03">
@@ -254,7 +233,7 @@
         <TimeToNextStepInHours>2</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather" NextStep="Roots">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -304,10 +283,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Berries</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Berries" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
         <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -331,10 +307,7 @@
 <!-- =============================================================================================================== -->
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Blue_Berry</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Blue_Berry" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
         <GrowthStep Name="Dead" StartingProbability="0.03">
@@ -361,7 +334,7 @@
         <TimeToNextStepInHours>2</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather" NextStep="Roots">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -411,10 +384,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Blue_Berry</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Blue_Berry" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
         <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -437,10 +407,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Mushrooms</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Mushrooms" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.4">
@@ -468,10 +435,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Mushrooms</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Mushrooms" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -499,10 +463,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>HighlandCaps</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HighlandCaps" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.4">
@@ -530,10 +491,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_HighlandCaps</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_HighlandCaps" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -561,10 +519,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>DeadmanMushroom</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="DeadmanMushroom" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.4">
@@ -592,10 +547,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_DeadmanMushroom</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_DeadmanMushroom" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -623,10 +575,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Norden_Spalt</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Norden_Spalt" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.3">
@@ -688,10 +637,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Norden_Roots</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Norden_Roots" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -714,10 +660,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Norden_Spalt</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Norden_Spalt" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -740,10 +683,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Norden_Barley</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Norden_Barley" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.3">
@@ -805,10 +745,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Norden_Barley_Roots</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Norden_Barley_Roots" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -831,10 +768,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Norden_Barley</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Norden_Barley" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -857,10 +791,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>IronOrePile</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="IronOrePile" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.35">
@@ -888,10 +819,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_IronOrePile</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_IronOrePile" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.3">
@@ -919,10 +847,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>SingleIronOre</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="SingleIronOre" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.35">
@@ -950,10 +875,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_SingleIronOre</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_SingleIronOre" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -981,10 +903,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>StonePile</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="StonePile" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.35">
@@ -1001,7 +920,7 @@
         <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="StoneOreSmall"/>
+            <Id Type="InventoryItem" Subtype="StoneSmall"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -1012,10 +931,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_StonePile</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_StonePile" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1043,10 +959,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>SingleStone</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="SingleStone" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.3">
@@ -1063,7 +976,7 @@
         <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="StoneOreSmall"/>
+            <Id Type="InventoryItem" Subtype="StoneSmall"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1074,10 +987,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_SingleStone</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_SingleStone" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1106,10 +1016,7 @@
 <!-- =============================================================================================================== -->
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>SandStonePile</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="SandStonePile" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.35">
@@ -1137,10 +1044,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_SandStonePile</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_SandStonePile" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1168,10 +1072,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>SingleSandStone</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="SingleSandStone" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.3">
@@ -1199,10 +1100,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_SingleSandStone</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_SingleSandStone" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1231,10 +1129,7 @@
 <!-- =============================================================================================================== -->
 
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Enchanted_StonePile</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Enchanted_StonePile" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.35">
@@ -1262,10 +1157,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Enchanted_StonePile</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Enchanted_StonePile" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1293,10 +1185,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Enchanted_SingleStone</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Enchanted_SingleStone" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.3">
@@ -1324,10 +1213,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Enchanted_SingleStone</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Enchanted_SingleStone" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1355,10 +1241,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Roots</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Roots" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.35">
@@ -1386,10 +1269,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_Roots</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_Roots" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1418,10 +1298,7 @@
 <!-- =============================================================================================================== -->
   <!--Wild equivalents of farmable items-->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>WildCabbage</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="WildCabbage" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.3">
@@ -1462,10 +1339,7 @@
 <!-- ======================================================================================= -->
   <!--Wild equivalents of farmable items-->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_WildCabbage</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_WildCabbage" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1507,10 +1381,7 @@
 <!-- =============================================================================================================== -->
   <!--Wild equivalents of farmable items-->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>WildRedCabbage</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="WildRedCabbage" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.2">
@@ -1547,10 +1418,7 @@
 <!-- ======================================================================================= -->
   <!--Wild equivalents of farmable items-->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_WildRedCabbage</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_WildRedCabbage" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1586,10 +1454,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>WildPumpkin</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="WildPumpkin" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.4">
@@ -1629,10 +1494,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_WildPumpkin</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_WildPumpkin" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1672,10 +1534,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>WildFlax</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="WildFlax" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.4">
@@ -1699,7 +1558,7 @@
         <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Gathered">
-            <Id Type="InventoryItem" Subtype="FlaxStraws"/>
+            <Id Type="InventoryItem" Subtype="StrawsFlax"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1715,10 +1574,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_WildFlax</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_WildFlax" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1758,10 +1614,7 @@
   </Definition>
 <!-- =============================================================================================================== -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>WildWheat</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="WildWheat" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.4">
@@ -1785,7 +1638,7 @@
         <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Gathered">
-            <Id Type="InventoryItem" Subtype="WheatStraws"/>
+            <Id Type="InventoryItem" Subtype="StrawsWheat"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1801,10 +1654,7 @@
   </Definition>
 <!-- ======================================================================================= -->
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Schematic_WildWheat</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_WildWheat" />
     <GrowthSteps>
 <!-- __________________________________________________________________________________ -->
       <GrowthStep Name="Dead" StartingProbability="0.1">
@@ -1847,10 +1697,7 @@
 
  
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>IronNugget</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="IronNugget" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0">
         <TimeToNextStepInHours>10</TimeToNextStepInHours>
@@ -1876,10 +1723,7 @@
 
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>CoalNugget</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="CoalNugget" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0">
         <TimeToNextStepInHours>10</TimeToNextStepInHours>
@@ -1904,10 +1748,7 @@
   <!-- =============================================================================================================== -->
 
     <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>GoldNugget</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="GoldNugget" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0">
         <TimeToNextStepInHours>10</TimeToNextStepInHours>
@@ -1932,10 +1773,7 @@
 <!-- =============================================================================================================== -->
 
     <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>SaltNugget</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="SaltNugget" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0">
         <TimeToNextStepInHours>10</TimeToNextStepInHours>

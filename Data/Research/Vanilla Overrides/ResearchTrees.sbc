@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+  <!-- ============ Civil Engineering ============ -->
+
+  <Definition xsi:type="MyObjectBuilder_ResearchTreeDefinition">
+    <Id Type="ResearchTreeDefinition" Subtype="Civil" />
+	<DisplayName>DisplayName_ResearchTree_CivilEngineering</DisplayName>
+	<Description>Description_ResearchTree_CivilEngineering</Description>
+    <Icon>Textures\GUI\Icons\Schematics\Masonry.dds</Icon>
+	<RootNode Type="ResearchNodeDefinition" Subtype="CivilianCarpentry" />
+	<RootNode Type="ResearchNodeDefinition" Subtype="CivilianSmelting" />
+	<RootNode Type="ResearchNodeDefinition" Subtype="CivilianClaimblockWood" />
+	<RootNode Type="ResearchNodeDefinition" Subtype="CivilianWoodenHouse" />
+  </Definition>
+    
+  <!-- =========================================== -->
+  
+  
+  <!-- ========== Economic Engineering =========== -->
+  
+  <Definition xsi:type="MyObjectBuilder_ResearchTreeDefinition">
+    <Id Type="ResearchTreeDefinition" Subtype="Economic" />
+	<DisplayName>DisplayName_ResearchTree_EconomicEngineering</DisplayName>
+	<Description>testy</Description>
+  <!--   <Icon>Textures\GUI\Icons\Schematics\Weaving.dds</Icon>
+	<RootNode Type="ResearchNodeDefinition" Subtype="EconomicSmelting" />
+	<RootNode Type="ResearchNodeDefinition" Subtype="EconomicClaimblockWood" />
+	<RootNode Type="ResearchNodeDefinition" Subtype="EconomicWoodenHouse" /> -->
+  </Definition>
+ 
+  <!-- =========================================== -->
+  
+  
+  <!-- ========== Military Engineering =========== -->
+  
+  <Definition xsi:type="MyObjectBuilder_ResearchTreeDefinition">
+  <Id Type="ResearchTreeDefinition" Subtype="Military" />
+	<!-- <DisplayName>DisplayName_ResearchTree_MilitaryEngineering</DisplayName>
+	<Description>Description_ResearchTree_MilitaryEngineering</Description>
+    <Icon>Textures\GUI\Icons\Schematics\AdvancedMechanics.dds</Icon>
+	<RootNode Type="ResearchNodeDefinition" Subtype="MilitaryPalisades" />
+	<RootNode Type="ResearchNodeDefinition" Subtype="MilitarySmelting" /> -->
+  </Definition>
+  
+   <!-- =========================================== -->
+  
+</Definitions>

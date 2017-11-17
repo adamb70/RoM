@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- Barbarian Loot -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+	  <Id Type="LootTableDefinition" Subtype="BarbarianBagContent" />
+	  <Rolls>2</Rolls>
+
+    <Item Type="ConsumableItem" Subtype="Berries" Weight="2.5" Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Mushrooms" Weight="2.5" Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Roots" Weight="2.5" Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Herbs" Weight="2.5" Amount="5" />    
+    <Item Type="ConsumableItem" Subtype="Goulash" Weight="1" Amount="1" />
+    <Item Type="ConsumableItem" Subtype="SoupMushroom" Weight="2" Amount="2" />
+    <Item Type="ConsumableItem" Subtype="Salad" Weight="2" Amount="2" />
+    <Item Type="ConsumableItem" Subtype="SteakWithMushrooms" Weight="2" Amount="2" />
+    <Item Type="ConsumableItem" Subtype="RootsWithShrooms" Weight="2" Amount="2" />    
+    <Item Type="ConsumableItem" Subtype="Bandage" Weight="3" Amount="5" />
+
+    <Item Type="HandItem" Subtype="HammerWood" Weight="1" />
+    <Item Type="HandItem" Subtype="PickaxeCopper" Weight="1" />
+    <Item Type="HandItem" Subtype="AxeCopper" Weight="1" />
+
+    <Item Type="EquipmentItem" Subtype="Torch" Weight="2" />
+
+    <Item Type="CubeBlock" Subtype="Skull" AlwaysDrops="true" IsUnique="true" />
+	<Item Type="LootTableDefinition" Subtype="MapPieces" Weight="1" />
+	<Item Type="LootTableDefinition" Subtype="Map" Weight="0.1" />
+
+	<Item Weight="1" />
+  </Definition>
+
+  <!-- Guaranteed at least 2 meat -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+	  <Id Type="LootTableDefinition" Subtype="RoMDoeBagContent" />
+	  <Rolls>2</Rolls>
+	  <Item Type="ConsumableItem" Subtype="Meat" Amount="1" AlwaysDrops="true" IsUnique="true" />
+	  <Item Type="InventoryItem" Subtype="PeltDeer" Weight="1.5" />
+	  <Item Weight="2" />
+  </Definition>
+  
+  <!-- Guaranteed exactly 1 antler and at least 1 meat -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+	  <Id Type="LootTableDefinition" Subtype="RoMBuckBagContent" />
+	  <Rolls>2</Rolls>
+	  <!-- AlwaysDrops and IsUnique both true, doesn't count against rolls -->
+	  <Item Type="InventoryItem" Subtype="Antlers" AlwaysDrops="true" IsUnique="true" />
+	  <Item Type="ConsumableItem" Subtype="Meat" AlwaysDrops="true" IsUnique="true" />
+	  <!-- The rest does count against rolls -->
+	  <Item Type="ConsumableItem" Subtype="Meat" Weight="2" />
+	  <Item Type="InventoryItem" Subtype="PeltDeer" Weight="1.5" />
+	  <Item Weight="2" />
+  </Definition>
+
+  <!-- Stone pile -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+    <Id Type="LootTableDefinition" Subtype="StonePile" />
+    <Rolls>1</Rolls>
+    <Item Type="InventoryItem" Subtype="StoneSmall" Amount="2" AlwaysDrops="true" IsUnique="true" />
+    <Item Type="InventoryItem" Subtype="StoneSmall" Amount="1" Weight="50" />
+
+    <Item Weight="42" />
+  </Definition>
+  
+  <!-- Large SandStone -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+    <Id Type="LootTableDefinition" Subtype="SandStoneLarge" />
+    <Rolls>1</Rolls>
+    <Item Type="InventoryItem" Subtype="StoneLarge" Amount="1" AlwaysDrops="true" IsUnique="true" />
+
+    <Item Weight="42" />
+  </Definition>
+  
+</Definitions>

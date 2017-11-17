@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="EconomicClaimblockWood" />
+    <DisplayName>DisplayName_ResearchNode_EconomicClaimblockWood</DisplayName>
+    <Description>Description_ResearchNode_EconomicClaimblockWood</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ClaimblockWood.dds</Icon>
+    <!-- <Quest Type="QuestDefinition" Subtype="EconomicClaimblockWood" /> -->
+    <Research Type="ResearchDefinition" Subtype="EconomicClaimblockWood" />
+  </Definition>
+
+  
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="EconomicClaimblockWood" />
+    <DisplayName>DisplayName_Research_EconomicClaimblockWood</DisplayName>
+    <Entry Type="CubeBlock" Subtype="ClaimBlockWood" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SchematicEconomicClaimblockWood" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicEconomicClaimblockWood"/>
+    <DisplayName>DisplayName_Schematic_EconomicClaimblockWood</DisplayName>
+    <Description>Description_Schematic_EconomicClaimblockWood</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Carpentry.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicEconomicClaimblockWood" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicEconomicClaimblockWood" />
+    <DisplayName>DisplayName_Schematic_EconomicClaimblockWood</DisplayName>
+    <Description>Description_Schematic_EconomicClaimblockWood</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Carpentry.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="EconomicClaimblockWood" />
+  </Definition>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="CivilianClaimblockWood" />
+    <DisplayName>DisplayName_ResearchNode_CivilianClaimblockWood</DisplayName>
+    <Description>Description_ResearchNode_CivilianClaimblockWood</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ClaimblockWood.dds</Icon>
+    <!-- <Quest Type="QuestDefinition" Subtype="CivilianClaimblockWood" /> -->
+    <Research Type="ResearchDefinition" Subtype="CivilianClaimblockWood" />
+  </Definition>
+  
+  
+  
+  
+</Definitions>

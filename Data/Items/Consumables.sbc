@@ -152,10 +152,7 @@ can often bring comfort in troubling times.
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_CaveMushrooms</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_CaveMushrooms" />
       <Public>true</Public>
       <DisplayName>Cave Mushrooms</DisplayName>
 
@@ -204,10 +201,7 @@ or Chef.
 
     <!--Schematics-->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Kharidian_Ancestry</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Kharidian_Ancestry" />
       <Public>true</Public>
       <DisplayName>Kharidian Ancestry</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -233,10 +227,7 @@ or Chef.
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Kharidian_GlassBlowing</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Kharidian_GlassBlowing" />
       <Public>true</Public>
       <DisplayName>Kharidian Glass Blowing</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -266,10 +257,7 @@ or Chef.
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Norden_Ancestry</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Norden_Ancestry" />
       <Public>true</Public>
       <DisplayName>Norden Ancestry</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -294,10 +282,7 @@ or Chef.
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Norden_Brewing</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Norden_Brewing" />
       <Public>true</Public>
       <DisplayName>Norden Brewing</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -328,10 +313,7 @@ or Chef.
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Dwarven_Ancestry</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Dwarven_Ancestry" />
       <Public>true</Public>
       <DisplayName>Dwarven Ancestry</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -356,10 +338,7 @@ or Chef.
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Dwarven_Brewing</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Dwarven_Brewing" />
       <Public>true</Public>
       <DisplayName>Dwarven Brewing</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -390,10 +369,7 @@ or Chef.
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>LinenString_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="StringLinen_Schematic" />
       <Public>true</Public>
       <DisplayName>Linen String Manuscript</DisplayName>
       <Description>
@@ -417,16 +393,13 @@ or Chef.
       <UseSound>ResearchSound</UseSound>
       <Research>
         <TypeId>ResearchDefinition</TypeId>
-        <SubtypeId>LinenString_Tailor</SubtypeId>
+        <SubtypeId>StringLinen_Tailor</SubtypeId>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Rope_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Rope_Schematic" />
       <Public>true</Public>
       <DisplayName>Rope Manuscript</DisplayName>
       <Description>
@@ -456,10 +429,7 @@ or Chef.
     </Definition>
     
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Rope_Tearable_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Rope_Tearable_Schematic" />
       <Public>true</Public>
       <DisplayName>Tearable Rope Manuscript</DisplayName>
       <Description>
@@ -489,10 +459,7 @@ or Chef.
     </Definition>
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Flag10x10_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Flag10x10_Schematic" />
       <Public>true</Public>
       <DisplayName>Personal Flag Manuscript</DisplayName>
       <Description>
@@ -522,10 +489,7 @@ or Chef.
     </Definition>
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>FlagRed10x10_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="FlagRed10x10_Schematic" />
       <Public>true</Public>
       <DisplayName>House Flag Manuscript</DisplayName>
       <Description>
@@ -588,10 +552,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_SpiderEggs</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_SpiderEggs" />
       <Public>true</Public>
       <DisplayName>Pristine Spider Eggs</DisplayName>
 
@@ -645,10 +606,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_SpiderLeg</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_SpiderLeg" />
       <Public>true</Public>
       <DisplayName>Pristine Spider Leg</DisplayName>
 
@@ -704,10 +662,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Berries</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Berries" />
       <Tag>Pristine_Berry</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Red Berries</DisplayName>
@@ -763,10 +718,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Berry_Juice</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Berry_Juice" />
       <Public>true</Public>
       <DisplayName>Red Berry Juice</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -835,10 +787,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Grape</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Grape" />
       <Public>true</Public>
       <DisplayName>Pristine Grapes</DisplayName>
 
@@ -892,10 +841,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Grape_Juice</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Grape_Juice" />
       <Public>true</Public>
       <DisplayName>Grape Juice</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -944,10 +890,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Blue_Berry</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Blue_Berry" />
       <Tag>Pristine_Berry</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Blue Berries</DisplayName>
@@ -1003,10 +946,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Blue_Berry_Juice</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Blue_Berry_Juice" />
       <Public>true</Public>
       <DisplayName>Blue Berry Juice</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -1054,10 +994,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Cabbage</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Cabbage" />
       <Public>true</Public>
       <DisplayName>Pristine Cabbage</DisplayName>
 
@@ -1089,10 +1026,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Cabbage</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Cabbage" />
       <Public>true</Public>
       <DisplayName>Cabbage Farming Manuscript</DisplayName>
       <Description>
@@ -1123,10 +1057,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Cabbage_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Cabbage_Compost" />
       <Public>true</Public>
       <DisplayName>Cabbage Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -1181,10 +1112,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_RedCabbage</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_RedCabbage" />
       <Public>true</Public>
       <DisplayName>Pristine Red Cabbage</DisplayName>
 
@@ -1216,10 +1144,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_RedCabbage</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_RedCabbage" />
       <Public>true</Public>
       <DisplayName>Red Cabbage Farming Manuscript</DisplayName>
       <Description>
@@ -1250,10 +1175,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_RedCabbage_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_RedCabbage_Compost" />
       <Public>true</Public>
       <DisplayName>Red Cabbage Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -1307,10 +1229,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Pumpkin</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Pumpkin" />
       <Public>true</Public>
       <DisplayName>Pristine Pumpkin</DisplayName>
 
@@ -1342,10 +1261,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Pumpkin</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Pumpkin" />
       <Public>true</Public>
       <DisplayName>Pumpkin Farming Manuscript</DisplayName>
       <Description>
@@ -1376,10 +1292,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Pumpkin_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Pumpkin_Compost" />
       <Public>true</Public>
       <DisplayName>Pumpkin Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -1432,10 +1345,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Mushrooms</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Mushrooms" />
       <Tag>Pristine_Mushroom</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Mushrooms</DisplayName>
@@ -1490,10 +1400,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_HighlandCaps</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_HighlandCaps" />
       <Tag>Pristine_Mushroom</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Highland Caps</DisplayName>
@@ -1549,10 +1456,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_DeadmanMushroom</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_DeadmanMushroom" />
       <Public>true</Public>
       <DisplayName>Pristine Deadman's Mushroom</DisplayName>
 
@@ -1605,10 +1509,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Fireflies</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Fireflies" />
       <Public>true</Public>
       <DisplayName>Pristine Fire Flies</DisplayName>
 
@@ -1661,10 +1562,7 @@ perfect specimen for an Apothocary.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Herbs</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Herbs" />
       <Public>true</Public>
       <DisplayName>Pristine Herbs</DisplayName>
 
@@ -1696,10 +1594,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Herbs</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Herbs" />
       <Public>true</Public>
       <DisplayName>Herb Farming Manuscript</DisplayName>
       <Description>
@@ -1730,10 +1625,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Herbs_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Herbs_Compost" />
       <Public>true</Public>
       <DisplayName>Herbs Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -1788,10 +1680,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_CrimsonThristle</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_CrimsonThristle" />
       <Public>true</Public>
       <DisplayName>Pristine Crimson Thristle</DisplayName>
 
@@ -1823,10 +1712,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_CrimsonThristle</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_CrimsonThristle" />
       <Public>true</Public>
       <DisplayName>Crimson Thristle Farming Manuscript</DisplayName>
       <Description>
@@ -1857,10 +1743,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_CrimsonThristle_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_CrimsonThristle_Compost" />
       <Public>true</Public>
       <DisplayName>CrimsonThristle Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -1913,10 +1796,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Norden_Spalt</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Norden_Spalt" />
       <Public>true</Public>
       <DisplayName>Pristine Norden Spalt</DisplayName>
 
@@ -1970,10 +1850,7 @@ perfect specimen for an Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Norden_Roots</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Norden_Roots" />
       <Public>true</Public>
       <DisplayName>Pristine Norden Spalt Roots</DisplayName>
 
@@ -2004,10 +1881,7 @@ perfect specimen for an Apothocary.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Norden_Spalt</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Norden_Spalt" />
       <Public>true</Public>
       <DisplayName>Norden Spalt Farming Manuscript</DisplayName>
       <Description>
@@ -2038,10 +1912,7 @@ perfect specimen for an Apothocary.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Norden_Spalt_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Norden_Spalt_Compost" />
       <Public>true</Public>
       <DisplayName>Norden Spalt Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -2095,10 +1966,7 @@ perfect specimen for an Apothocary.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Norden_Barley</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Norden_Barley" />
       <Public>true</Public>
       <DisplayName>Pristine Norden Barley</DisplayName>
 
@@ -2151,10 +2019,7 @@ perfect specimen for a Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Norden_Barley_Roots</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Norden_Barley_Roots" />
       <Public>true</Public>
       <DisplayName>Pristine Norden Barley Roots</DisplayName>
 
@@ -2186,10 +2051,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Norden_Barley</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Norden_Barley" />
       <Public>true</Public>
       <DisplayName>Norden Barley Farming Manuscript</DisplayName>
       <Description>
@@ -2220,10 +2082,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Norden_Barley_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Norden_Barley_Compost" />
       <Public>true</Public>
       <DisplayName>Norden Barley Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -2254,10 +2113,7 @@ or Chef.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Flax</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Flax" />
       <Public>true</Public>
       <DisplayName>Pristine Flax</DisplayName>
 
@@ -2288,10 +2144,7 @@ perfect specimen for a Tailor or Farmer.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Flax</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Flax" />
       <Public>true</Public>
       <DisplayName>Flax Farming Manuscript</DisplayName>
       <Description>
@@ -2322,10 +2175,7 @@ perfect specimen for a Tailor or Farmer.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Flax_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Flax_Compost" />
       <Public>true</Public>
       <DisplayName>Flax Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -2356,10 +2206,7 @@ perfect specimen for a Tailor or Farmer.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Wheat</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Wheat" />
       <Public>true</Public>
       <DisplayName>Pristine Wheat</DisplayName>
 
@@ -2391,10 +2238,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Wheat</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Wheat" />
       <Public>true</Public>
       <DisplayName>Wheat Farming Manuscript</DisplayName>
       <Description>
@@ -2425,10 +2269,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Wheat_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Wheat_Compost" />
       <Public>true</Public>
       <DisplayName>Wheat Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -2481,10 +2322,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_TreeSmall_Seed</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_TreeSmall_Seed" />
       <Public>true</Public>
       <DisplayName>Pristine Pine Cone</DisplayName>
 
@@ -2516,10 +2354,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_TreeSmall_Seed</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_TreeSmall_Seed" />
       <Public>true</Public>
       <DisplayName>Tree Seed Farming Manuscript</DisplayName>
       <Description>
@@ -2550,10 +2385,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_TreeSmall_Seed_Compost</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_TreeSmall_Seed_Compost" />
       <Public>true</Public>
       <DisplayName>Pine Tree Farming (Compost) Manuscript</DisplayName>
       <Description>
@@ -2606,10 +2438,7 @@ or Chef.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_IronOre</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_IronOre" />
       <Public>true</Public>
       <DisplayName>Pristine Iron Ore</DisplayName>
 
@@ -2640,10 +2469,7 @@ perfect specimen for Blacksmith.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_StoneOreSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       <Tag>Pristine_Stone</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Stone Ore</DisplayName>
@@ -2675,10 +2501,7 @@ perfect specimen for Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_SandStoneOreSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
       <Tag>Pristine_Stone</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Sandstone Ore</DisplayName>
@@ -2710,10 +2533,7 @@ perfect specimen for Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Enchanted_StoneOreSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Enchanted_StoneOreSmall" />
       <Tag>Pristine_Stone</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Enchanted Stone</DisplayName>
@@ -2746,10 +2566,7 @@ Farming.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_TreeSmall_WoodenSticks</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       <Tag>Pristine_Stick</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Wooden Sticks</DisplayName>
@@ -2781,10 +2598,7 @@ perfect specimen for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Enchanted_TreeSmall_WoodenSticks</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks" />
       <Tag>Pristine_Stick</Tag>
       <Public>true</Public>
       <DisplayName>Pristine Enchanted Wooden Sticks</DisplayName>
@@ -2816,10 +2630,7 @@ perfect specimen for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Log250cm</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Log250cm" />
       <Public>true</Public>
       <DisplayName>Pristine Wooden Log</DisplayName>
       <Description>
@@ -2850,10 +2661,7 @@ perfect specimen for an Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Compost_Bin</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Compost_Bin" />
       <Public>true</Public>
       <DisplayName>Compost Bin Manuscript</DisplayName>
       <Description>
@@ -2885,10 +2693,7 @@ Carpenter.
 <!-- =================================================================================== -->
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Farming_Schematic_Compost_Bucket</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Farming_Schematic_Compost_Bucket" />
       <Public>true</Public>
       <DisplayName>Compost Manuscript</DisplayName>
       <Description>
@@ -2918,10 +2723,7 @@ would be valuable for a Farmer.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Empty_Bucket</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bucket" />
       <Public>true</Public>
       <DisplayName>Bucket Manuscript</DisplayName>
       <Description>
@@ -2951,10 +2753,7 @@ would be valuable for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WheelMediumSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WheelMediumSmall" />
       <Public>true</Public>
       <DisplayName>Wheel Manuscript</DisplayName>
       <Description>
@@ -2985,10 +2784,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WheelMediumSmall_Nails</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WheelMediumSmall_Nails" />
       <Public>true</Public>
       <DisplayName>Reinforced Wheel Manuscript</DisplayName>
       <Description>
@@ -3018,10 +2814,7 @@ This knowledge would be valuable for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_SpinningWheel</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_SpinningWheel" />
       <Public>true</Public>
       <DisplayName>Spinning Wheel Manuscript</DisplayName>
       <Description>
@@ -3052,10 +2845,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>BannerWorkstation_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="BannerWorkstation_Schematic" />
       <Public>true</Public>
       <DisplayName>Banner Workstation Manuscript</DisplayName>
       <Description>
@@ -3086,10 +2876,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Wardrobe</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Wardrobe" />
       <Public>true</Public>
       <DisplayName>Wardrobe Manuscript</DisplayName>
       <Description>
@@ -3120,10 +2907,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WoodBed</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WoodBed" />
       <Public>true</Public>
       <DisplayName>Wardrobe Manuscript</DisplayName>
       <Description>
@@ -3154,10 +2938,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WoodChair</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WoodChair" />
       <Public>true</Public>
       <DisplayName>Wood Chair Manuscript</DisplayName>
       <Description>
@@ -3188,10 +2969,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WoodBarrel</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WoodBarrel" />
       <Public>true</Public>
       <DisplayName>Wood Barrel Manuscript</DisplayName>
       <Description>
@@ -3222,10 +3000,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WoodChestLarge</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WoodChestLarge" />
       <Public>true</Public>
       <DisplayName>Wood Chest Manuscript</DisplayName>
       <Description>
@@ -3255,10 +3030,7 @@ This knowledge would be valuable for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_CrateWood</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_CrateWood" />
       <Public>true</Public>
       <DisplayName>Wooden Crate Manuscript</DisplayName>
       <Description>
@@ -3288,10 +3060,7 @@ This knowledge would be valuable for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WoodenShelf</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WoodenShelf" />
       <Public>true</Public>
       <DisplayName>Wooden Shelf Manuscript</DisplayName>
       <Description>
@@ -3322,10 +3091,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WoodenDiningTable</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WoodenDiningTable" />
       <Public>true</Public>
       <DisplayName>Wooden Dining Table Manuscript</DisplayName>
       <Description>
@@ -3355,10 +3121,7 @@ This knowledge would be valuable for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WeaponRack</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WeaponRack" />
       <Public>true</Public>
       <DisplayName>Weapon Rack Manuscript</DisplayName>
       <Description>
@@ -3389,10 +3152,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Bookshelf</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Bookshelf" />
       <Public>true</Public>
       <DisplayName>Bookshelf Manuscript</DisplayName>
       <Description>
@@ -3422,10 +3182,7 @@ This knowledge would be valuable for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_StockpileLog</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileLog" />
       <Public>true</Public>
       <DisplayName>Large Log Stockpile Manuscript</DisplayName>
       <Description>
@@ -3456,10 +3213,7 @@ for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_StockpileTimber</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileTimber" />
       <Public>true</Public>
       <DisplayName>Large Timber Stockpile Manuscript</DisplayName>
       <Description>
@@ -3490,10 +3244,7 @@ for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_StockpileStone</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileStone" />
       <Public>true</Public>
       <DisplayName>Large Stone Stockpile Manuscript</DisplayName>
       <Description>
@@ -3525,10 +3276,7 @@ for a Carpenter.
 <!-- =================================================================================== -->
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_StockpileLogSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileLogSmall" />
       <Public>true</Public>
       <DisplayName>Small Log Stockpile Manuscript</DisplayName>
       <Description>
@@ -3558,10 +3306,7 @@ This knowledge would be valuable for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_StockpileTimberSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileTimberSmall" />
       <Public>true</Public>
       <DisplayName>Small Timber Stockpile Manuscript</DisplayName>
       <Description>
@@ -3592,10 +3337,7 @@ for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_StockpileStoneSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileStoneSmall" />
       <Public>true</Public>
       <DisplayName>Small Stone Stockpile Manuscript</DisplayName>
       <Description>
@@ -3626,10 +3368,7 @@ for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_StockpileIronSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileIronSmall" />
       <Public>true</Public>
       <DisplayName>Small Iron Stockpile Manuscript</DisplayName>
       <Description>
@@ -3660,44 +3399,7 @@ for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Wardrobe</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>Wardrobe Manuscript</DisplayName>
-      <Description>
-As you examine the manuscript, you notice 
-diagrams and written instructions explaining
-the process for constructing a Wardrobe.
-This knowledge would be valuable 
-for a Carpenter.
-</Description>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-    <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <Model>Models\Cubes\small\Scroll.mwm</Model>
-      <PhysicalMaterial>None</PhysicalMaterial>
-      <MaxStackAmount>10</MaxStackAmount>
-      <UseSound>ResearchSound</UseSound>
-      <Research>
-        <TypeId>ResearchDefinition</TypeId>
-        <SubtypeId>Wardrobe_Carpenter</SubtypeId>
-      </Research>
-      <CanSpawnFromScreen>true</CanSpawnFromScreen>
-    </Definition>
-<!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WoodenGate</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WoodenGate" />
       <Public>true</Public>
       <DisplayName>Wooden Gate Manuscript</DisplayName>
       <Description>
@@ -3728,10 +3430,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_PalisadeGate</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_PalisadeGate" />
       <Public>true</Public>
       <DisplayName>Palisade Gate Manuscript</DisplayName>
       <Description>
@@ -3762,10 +3461,7 @@ Carpenter.
     </Definition>
 <!-- ===================================================================================  -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SmallWoodenGateW</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SmallWoodenGateW" />
       <Public>true</Public>
       <DisplayName>Wooden Gate Manuscript</DisplayName>
       <Description>
@@ -3795,10 +3491,7 @@ This knowledge would be valuable for Masonry.
     </Definition>
 <!-- ===================================================================================  -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_WoodenFlatDoorW</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_WoodenFlatDoorW" />
       <Public>true</Public>
       <DisplayName>Wooden Door Manuscript</DisplayName>
       <Description>
@@ -3829,10 +3522,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Norden_Ale_Kegstand</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Norden_Ale_Kegstand" />
       <Public>true</Public>
       <DisplayName>Kegstand Manuscript</DisplayName>
       <Description>
@@ -3863,10 +3553,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Juice_Kegstand</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Juice_Kegstand" />
       <Public>true</Public>
       <DisplayName>Kegstand Manuscript</DisplayName>
       <Description>
@@ -3897,10 +3584,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Grape_Kegstand</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Grape_Kegstand" />
       <Public>true</Public>
       <DisplayName>Kegstand Manuscript</DisplayName>
       <Description>
@@ -3931,10 +3615,7 @@ Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_Blueberry_Kegstand</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Blueberry_Kegstand" />
       <Public>true</Public>
       <DisplayName>Kegstand Manuscript</DisplayName>
       <Description>
@@ -3972,10 +3653,7 @@ Carpenter.
 
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneArchFull</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneArchFull" />
       <Public>true</Public>
       <DisplayName>Stone Arch Manuscript</DisplayName>
       <Description>
@@ -4006,10 +3684,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneCube</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneCube" />
       <Public>true</Public>
       <DisplayName>Stone Cube Manuscript</DisplayName>
       <Description>
@@ -4039,10 +3714,7 @@ This knowledge would be valuable for Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_KingStatueBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_KingStatueBlock" />
       <Public>true</Public>
       <DisplayName>King Statue Manuscript</DisplayName>
       <Description>
@@ -4073,10 +3745,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_MillStone</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_MillStone" />
       <Public>true</Public>
       <DisplayName>Mill Stone Manuscript</DisplayName>
       <Description>
@@ -4107,10 +3776,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_Stone_Well</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_Stone_Well" />
       <Public>true</Public>
       <DisplayName>Stone Well Manuscript</DisplayName>
       <Description>
@@ -4141,10 +3807,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_Furnace</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_Furnace" />
       <Public>true</Public>
       <DisplayName>Furnace Manuscript</DisplayName>
       <Description>
@@ -4175,10 +3838,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_HouseHalfStoneDoor</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_HouseHalfStoneDoor" />
       <Public>true</Public>
       <DisplayName>Stone Door Manuscript</DisplayName>
       <Description>
@@ -4209,10 +3869,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_HouseHalfStoneWall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_HouseHalfStoneWall" />
       <Public>true</Public>
       <DisplayName>Stone Wall Manuscript</DisplayName>
       <Description>
@@ -4243,10 +3900,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_HouseHalfStoneWindow</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_HouseHalfStoneWindow" />
       <Public>true</Public>
       <DisplayName>Stone Window Manuscript</DisplayName>
       <Description>
@@ -4277,10 +3931,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneArchHalfWall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneArchHalfWall" />
       <Public>true</Public>
       <DisplayName>Stone Arch Wall Manuscript</DisplayName>
       <Description>
@@ -4311,10 +3962,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneWallRoundLargeMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneWallRoundLargeMultiBlock" />
       <Public>true</Public>
       <DisplayName>Large Round Stone Wall Manuscript</DisplayName>
       <Description>
@@ -4345,10 +3993,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneWallRoundLargeDoorRightMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneWallRoundLargeDoorRightMultiBlock" />
       <Public>true</Public>
       <DisplayName>Large Round Stone Door Manuscript</DisplayName>
       <Description>
@@ -4379,10 +4024,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneWallRoundLargeWindowRightMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneWallRoundLargeWindowRightMultiBlock" />
       <Public>true</Public>
       <DisplayName>Large Round Wall With Windows Manuscript</DisplayName>
       <Description>
@@ -4413,10 +4055,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_BattlementRoofTriangleMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_BattlementRoofTriangleMultiBlock" />
       <Public>true</Public>
       <DisplayName>Stone Roof Battlement Manuscript</DisplayName>
       <Description>
@@ -4447,10 +4086,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_BattlementStoneStraight</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_BattlementStoneStraight" />
       <Public>true</Public>
       <DisplayName>Stone Battlement Manuscript</DisplayName>
       <Description>
@@ -4481,10 +4117,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneBattlementRoundSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementRoundSmall" />
       <Public>true</Public>
       <DisplayName>Stone Battlement Manuscript</DisplayName>
       <Description>
@@ -4515,10 +4148,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneBattlementSideDiagonal</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementSideDiagonal" />
       <Public>true</Public>
       <DisplayName>Stone Battlement Manuscript</DisplayName>
       <Description>
@@ -4549,10 +4179,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneBattlementRoundLargeSide_1</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementRoundLargeSide_1" />
       <Public>true</Public>
       <DisplayName>Stone Battlement Manuscript</DisplayName>
       <Description>
@@ -4583,10 +4210,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StonePillarSquare</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StonePillarSquare" />
       <Public>true</Public>
       <DisplayName>Stone Pillar Manuscript</DisplayName>
       <Description>
@@ -4617,10 +4241,7 @@ Masonry.
     </Definition>     
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_WallWithArch</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_WallWithArch" />
       <Public>true</Public>
       <DisplayName>Stone Arch Manuscript</DisplayName>
       <Description>
@@ -4651,10 +4272,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneStairs</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneStairs" />
       <Public>true</Public>
       <DisplayName>Stone Stairs Manuscript</DisplayName>
       <Description>
@@ -4685,10 +4303,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneSpiralStairs</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneSpiralStairs" />
       <Public>true</Public>
       <DisplayName>Stone Spiral Stairs Manuscript</DisplayName>
       <Description>
@@ -4719,10 +4334,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SharpSpiralStairs</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SharpSpiralStairs" />
       <Public>true</Public>
       <DisplayName>Stone Spiral Stairs Sharp Manuscript</DisplayName>
       <Description>
@@ -4753,10 +4365,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_CornerStoneStairs</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_CornerStoneStairs" />
       <Public>true</Public>
       <DisplayName>Stone Corner Stairs Manuscript</DisplayName>
       <Description>
@@ -4787,10 +4396,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_HouseStoneRoundedFull</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_HouseStoneRoundedFull" />
       <Public>true</Public>
       <DisplayName>Rounded Stone Block Manuscript</DisplayName>
       <Description>
@@ -4821,10 +4427,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneRoundLargeFull</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneRoundLargeFull" />
       <Public>true</Public>
       <DisplayName>Large Rounded Stone Block Manuscript</DisplayName>
       <Description>
@@ -4855,10 +4458,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SmallStoneRoundedWall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SmallStoneRoundedWall" />
       <Public>true</Public>
       <DisplayName>Rounded Stone Wall Manuscript</DisplayName>
       <Description>
@@ -4889,10 +4489,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SmallStoneRoundedWindow</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SmallStoneRoundedWindow" />
       <Public>true</Public>
       <DisplayName>Rounded Stone Window Manuscript</DisplayName>
       <Description>
@@ -4923,10 +4520,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneSlope</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneSlope" />
       <Public>true</Public>
       <DisplayName>Stone Slope Manuscript</DisplayName>
       <Description>
@@ -4957,10 +4551,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneSlopeCorner</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneSlopeCorner" />
       <Public>true</Public>
       <DisplayName>Stone Slope Corner Manuscript</DisplayName>
       <Description>
@@ -4991,10 +4582,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SlopeLongLargeMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SlopeLongLargeMultiBlock" />
       <Public>true</Public>
       <DisplayName>Large Stone Slope Manuscript</DisplayName>
       <Description>
@@ -5025,10 +4613,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_HouseStoneRoundInDoorLeft</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_HouseStoneRoundInDoorLeft" />
       <Public>true</Public>
       <DisplayName>Round Interior With Door Manuscript</DisplayName>
       <Description>
@@ -5059,10 +4644,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_HouseStoneRoundIn</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_HouseStoneRoundIn" />
       <Public>true</Public>
       <DisplayName>Round Interior Wall Manuscript</DisplayName>
       <Description>
@@ -5093,10 +4675,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneCeilingStraight</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneCeilingStraight" />
       <Public>true</Public>
       <DisplayName>Stone Arch Ceiling Manuscript</DisplayName>
       <Description>
@@ -5127,10 +4706,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_HouseHalfStoneTriangleMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_HouseHalfStoneTriangleMultiBlock" />
       <Public>true</Public>
       <DisplayName>Stone Wall Slope Manuscript</DisplayName>
       <Description>
@@ -5161,10 +4737,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_Machicolation_RoundLargeMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_Machicolation_RoundLargeMultiBlock" />
       <Public>true</Public>
       <DisplayName>Large Round Machicolations Manuscript</DisplayName>
       <Description>
@@ -5195,10 +4768,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_Machicolation_RoundMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_Machicolation_RoundMultiBlock" />
       <Public>true</Public>
       <DisplayName>Round Stone Machicolations Manuscript</DisplayName>
       <Description>
@@ -5229,10 +4799,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_MachicolationStraightMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_MachicolationStraightMultiBlock" />
       <Public>true</Public>
       <DisplayName>Round Straight Machicolations Manuscript</DisplayName>
       <Description>
@@ -5263,10 +4830,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StonePlatformRoundAdvanced</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformRoundAdvanced" />
       <Public>true</Public>
       <DisplayName>Small Round Stone Ledges Manuscript</DisplayName>
       <Description>
@@ -5297,10 +4861,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StoneBattlementAdvancedStraightBottom</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementAdvancedStraightBottom" />
       <Public>true</Public>
       <DisplayName>Stone Ledges Manuscript</DisplayName>
       <Description>
@@ -5331,10 +4892,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StonePlatformDiagonalMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformDiagonalMultiBlock" />
       <Public>true</Public>
       <DisplayName>Diagonal Stone Ledges Manuscript</DisplayName>
       <Description>
@@ -5365,10 +4923,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_StonePlatformRoundLargeMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformRoundLargeMultiBlock" />
       <Public>true</Public>
       <DisplayName>Large Round Stone Ledges Manuscript</DisplayName>
       <Description>
@@ -5399,10 +4954,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_RoofTileOddTopWithTop</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_RoofTileOddTopWithTop" />
       <Public>true</Public>
       <DisplayName>Tile Roof Tops Manuscript</DisplayName>
       <Description>
@@ -5433,10 +4985,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
      <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SlicedRoofTileSlope_Main</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SlicedRoofTileSlope_Main" />
       <Public>true</Public>
       <DisplayName>Tile Roofs Manuscript</DisplayName>
       <Description>
@@ -5467,10 +5016,7 @@ Masonry.
     </Definition>
 <!-- =================================================================================== -->
       <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_RoofTileCornerRoundTallMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_RoofTileCornerRoundTallMultiBlock" />
       <Public>true</Public>
       <DisplayName>Tile Roof Cone Manuscript</DisplayName>
       <Description>
@@ -5507,10 +5053,7 @@ Masonry.
 <!-- Kharidian Masonry -->
 <!-- ===================================================================================  -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SandStoneWall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SandStoneWall" />
       <Public>true</Public>
       <DisplayName>Sandstone Wall Manuscript</DisplayName>
 
@@ -5539,10 +5082,7 @@ This knowledge would be valuable for Masonry.</Description>
     </Definition>
 <!-- ===================================================================================  -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SandStoneDoorWay</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SandStoneDoorWay" />
       <Public>true</Public>
       <DisplayName>Sandstone Door Manuscript</DisplayName>
 
@@ -5571,10 +5111,7 @@ This knowledge would be valuable for Masonry.</Description>
     </Definition>
 <!-- ===================================================================================  -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SandStoneWallWindow</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SandStoneWallWindow" />
       <Public>true</Public>
       <DisplayName>Sandstone Window Manuscript</DisplayName>
 
@@ -5603,10 +5140,7 @@ This knowledge would be valuable for Masonry.</Description>
     </Definition>
 <!-- ===================================================================================  -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Masonry_Schematic_SandStoneCube</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Masonry_Schematic_SandStoneCube" />
       <Public>true</Public>
       <DisplayName>Sandstone Cube Manuscript</DisplayName>
 
@@ -5648,10 +5182,7 @@ This knowledge would be valuable for Masonry.</Description>
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_SmithingStation</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_SmithingStation" />
       <Public>true</Public>
       <DisplayName>Smithing Station Manuscript</DisplayName>
 
@@ -5681,10 +5212,7 @@ This knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_IronSmithing</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_IronSmithing" />
       <Public>true</Public>
       <DisplayName>Iron Smelting</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -5708,10 +5236,7 @@ This knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Iron_Nails</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Nails" />
       <Public>true</Public>
       <DisplayName>Iron Nails Manuscript</DisplayName>
 
@@ -5741,10 +5266,7 @@ Carpenter.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Anvil</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Anvil" />
       <Public>true</Public>
       <DisplayName>Anvil Manuscript</DisplayName>
 
@@ -5773,10 +5295,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Stove</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Stove" />
       <Public>true</Public>
       <DisplayName>Stove Manuscript</DisplayName>
 
@@ -5806,10 +5325,7 @@ knowledge would be valuable for Blacksmithing.</Description>
 <!-- =================================================================================== -->
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_SeedingBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_SeedingBlock" />
       <Public>true</Public>
       <DisplayName>Seeding Block Manuscript</DisplayName>
 
@@ -5839,10 +5355,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_PlowBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_PlowBlock" />
       <Public>true</Public>
       <DisplayName>Plow Block Manuscript</DisplayName>
 
@@ -5872,10 +5385,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_HarvesterBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_HarvesterBlock" />
       <Public>true</Public>
       <DisplayName>Harvester Block Manuscript</DisplayName>
 
@@ -5904,10 +5414,7 @@ This knowledge would be valuable for a Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_WoodenPortcullisMultiBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_WoodenPortcullisMultiBlock" />
       <Public>true</Public>
       <DisplayName>Portcullis Manuscript</DisplayName>
 
@@ -5937,10 +5444,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_WoodenDrawbridge</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_WoodenDrawbridge" />
       <Public>true</Public>
       <DisplayName>Wooden Drawbridge Manuscript</DisplayName>
 
@@ -5970,10 +5474,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_CatchBlockSmall2</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_CatchBlockSmall2" />
       <Public>true</Public>
       <DisplayName>Catch Block Manuscript</DisplayName>
 
@@ -6003,10 +5504,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_LockGearBox2</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_LockGearBox2" />
       <Public>true</Public>
       <DisplayName>Lock Gear Box Manuscript</DisplayName>
 
@@ -6036,10 +5534,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_RopePowerSmallCogWheel1</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_RopePowerSmallCogWheel1" />
       <Public>false</Public>
       <DisplayName>Rope Power Cog Wheel Manuscript</DisplayName>
 
@@ -6069,10 +5564,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_RopeDrumAloneSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_RopeDrumAloneSmall" />
       <Public>true</Public>
       <DisplayName>Rope Drum Alone Manuscript</DisplayName>
 
@@ -6101,10 +5593,7 @@ This knowledge would be valuable for a  Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_RopePowerSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_RopePowerSmall" />
       <Public>true</Public>
       <DisplayName>Rope Power Manuscript</DisplayName>
 
@@ -6134,10 +5623,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_LockGearBox2_Iron</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_LockGearBox2_Iron" />
       <Public>true</Public>
       <DisplayName>Lock Gear Box Manuscript</DisplayName>
 
@@ -6167,10 +5653,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_RopePowerSmallCogWheel1_Iron</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_RopePowerSmallCogWheel1_Iron" />
       <Public>true</Public>
       <DisplayName>Iron Rope Power Cog Wheel Manuscript</DisplayName>
 
@@ -6200,10 +5683,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_RopePowerSmall_Iron</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_RopePowerSmall_Iron" />
       <Public>true</Public>
       <DisplayName>Iron Rope Power Manuscript</DisplayName>
 
@@ -6233,10 +5713,7 @@ Machinesmith.</Description>
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Machinesmith_Schematic_TurnCrossSmall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Machinesmith_Schematic_CrankWheel" />
       <Public>true</Public>
       <DisplayName>Hand Crank Manuscript</DisplayName>
 
@@ -6260,16 +5737,13 @@ Machinesmith.</Description>
       <UseSound>ResearchSound</UseSound>
       <Research>
         <TypeId>ResearchDefinition</TypeId>
-        <SubtypeId>TurnCrossSmall_Machinesmith</SubtypeId>
+        <SubtypeId>CrankWheel_Machinesmith</SubtypeId>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Iron_Sword</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Sword" />
       <Public>true</Public>
       <DisplayName>Iron Sword Manuscript</DisplayName>
 
@@ -6298,10 +5772,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Iron_Mace</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Mace" />
       <Public>true</Public>
       <DisplayName>Iron Mace Manuscript</DisplayName>
 
@@ -6330,10 +5801,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Iron_Plow</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Plow" />
       <Public>true</Public>
       <DisplayName>Iron Plow Manuscript</DisplayName>
 
@@ -6362,10 +5830,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Iron_PickAxe</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_PickAxe" />
       <Public>true</Public>
       <DisplayName>Iron Pickaxe Manuscript</DisplayName>
 
@@ -6394,10 +5859,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_IronShovel</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_IronShovel" />
       <Public>true</Public>
       <DisplayName>Iron Shovel Manuscript</DisplayName>
 
@@ -6427,10 +5889,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Iron_Hammer</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Hammer" />
       <Public>true</Public>
       <DisplayName>Iron Hammer Manuscript</DisplayName>
       <Description>
@@ -6460,10 +5919,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_Iron_Axe</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Axe" />
       <Public>true</Public>
       <DisplayName>Iron Axe Manuscript</DisplayName>
       <Description>
@@ -6493,10 +5949,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_TorchStand</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_TorchStand" />
       <Public>true</Public>
       <DisplayName>Torch Stand Manuscript</DisplayName>
       <Description>
@@ -6526,10 +5979,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_TorchWall</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_TorchWall" />
       <Public>true</Public>
       <DisplayName>Torch Wall Manuscript</DisplayName>
       <Description>
@@ -6559,10 +6009,7 @@ knowledge would be valuable for Blacksmithing.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Blacksmithing_Schematic_FireBucket</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Blacksmithing_Schematic_FireBucket" />
       <Public>true</Public>
       <DisplayName>Fire Bucket Manuscript</DisplayName>
       <Description>
@@ -6618,10 +6065,7 @@ knowledge would be valuable for Blacksmithing.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Bread_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Bread_Schematic" />
       <Public>true</Public>
       <DisplayName>Bread Baking Manuscript</DisplayName>
       
@@ -6652,10 +6096,7 @@ would be valuable for a Chef.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Dough_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Dough_Schematic" />
       <Public>true</Public>
       <DisplayName>Dough Baking Manuscript</DisplayName>
       <Description>
@@ -6706,10 +6147,7 @@ would be valuable for a Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>RedberryPie_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="RedberryPie_Schematic" />
       <Public>true</Public>
       <DisplayName>Red Berry Pie Manuscript</DisplayName>
       <Description>
@@ -6759,10 +6197,7 @@ would be valuable for a Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Baked_Cake_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Baked_Cake_Schematic" />
       <Public>true</Public>
       <DisplayName>Cake Manuscript</DisplayName>
       <Description>
@@ -6813,10 +6248,7 @@ would be valuable for a Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Chocolate_Bar_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Chocolate_Bar_Schematic" />
       <Public>true</Public>
       <DisplayName>Chocolate Bar Manuscript</DisplayName>
       <Description>
@@ -6868,10 +6300,7 @@ would be valuable for a Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Baked_Cake_Chocolate_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Baked_Cake_Chocolate_Schematic" />
       <Public>true</Public>
       <DisplayName>Chocolate Cake Manuscript</DisplayName>
       <Description>
@@ -6921,10 +6350,7 @@ would be valuable for a Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Bandage_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Bandage_Schematic" />
       <Public>true</Public>
       <DisplayName>Bandage Manuscript</DisplayName>
       <Description>
@@ -6976,10 +6402,7 @@ would be valuable for a Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Roots</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Roots" />
       <Public>true</Public>
       <DisplayName>Pristine Roots</DisplayName>
 
@@ -7033,10 +6456,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Minor_Potion_Strength</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Minor_Potion_Strength" />
       <Public>true</Public>
       <DisplayName>Minor Strength Potion</DisplayName>
       <Description>
@@ -7066,7 +6486,7 @@ or Chef.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-      <Id Type="ConsumableItem" Subtype="RoastMeat" />
+      <Id Type="ConsumableItem" Subtype="MeatRoasted" />
 	  <Tag>Meat</Tag>
       <Public>true</Public>
       <DisplayName>Roast Meat</DisplayName>
@@ -7116,10 +6536,7 @@ or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Schematic_Meat</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Schematic_Meat" />
       <Public>true</Public>
       <DisplayName>Pristine Raw Meat</DisplayName>
 <Description>As you examine the quality of this Meat 
@@ -7175,10 +6592,7 @@ perfect specimen for an Apothocary or Chef.
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Goulash_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Goulash_Schematic" />
       <Public>true</Public>
       <DisplayName>Goulash Cooking Manuscript</DisplayName>
 
@@ -7207,7 +6621,7 @@ would be valuable for a Chef.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-      <Id Type="ConsumableItem" Subtype="MushroomSoup" />
+      <Id Type="ConsumableItem" Subtype="SoupMushroom" />
 	  <Tag>Dish</Tag>
       <Public>true</Public>
       <DisplayName>Mushroom Soup</DisplayName>
@@ -7234,10 +6648,7 @@ would be valuable for a Chef.</Description>
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>MushroomSoup_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="SoupMushroom_Schematic" />
       <Public>true</Public>
       <DisplayName>Mushroom Soup Cooking Manuscript</DisplayName>
 
@@ -7260,7 +6671,7 @@ knowledge would be valuable for a Chef.</Description>
       <UseSound>ResearchSound</UseSound>
       <Research>
         <TypeId>ResearchDefinition</TypeId>
-        <SubtypeId>MushroomSoup_Cooking</SubtypeId>
+        <SubtypeId>SoupMushroom_Cooking</SubtypeId>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7292,10 +6703,7 @@ knowledge would be valuable for a Chef.</Description>
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>HighlandCapsSoup_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="HighlandCapsSoup_Schematic" />
       <Public>true</Public>
       <DisplayName>Highland Stew Cooking Manuscript</DisplayName>
 
@@ -7351,10 +6759,7 @@ knowledge would be valuable for a Chef.</Description>
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>CrimsonThristleTea_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="CrimsonThristleTea_Schematic" />
       <Public>true</Public>
       <DisplayName>Crimson Thristle Tea Cooking Manuscript</DisplayName>
 
@@ -7408,10 +6813,7 @@ This knowledge would be valuable for a Chef.</Description>
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Salad_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Salad_Schematic" />
       <Public>true</Public>
       <DisplayName>Salad Cooking Manuscript</DisplayName>
 
@@ -7440,7 +6842,7 @@ would be valuable for a Chef.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-      <Id Type="ConsumableItem" Subtype="ShroomSteak" />
+      <Id Type="ConsumableItem" Subtype="SteakWithMushrooms" />
 	  <Tag>Dish</Tag>
       <Public>true</Public>
       <DisplayName>Shroom Steak</DisplayName>
@@ -7466,10 +6868,7 @@ would be valuable for a Chef.</Description>
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>ShroomSteak_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="SteakWithMushrooms_Schematic" />
       <Public>true</Public>
       <DisplayName>Shroom Steak Cooking Manuscript</DisplayName>
 
@@ -7492,7 +6891,7 @@ knowledge would be valuable for a Chef.</Description>
       <UseSound>ResearchSound</UseSound>
       <Research>
         <TypeId>ResearchDefinition</TypeId>
-        <SubtypeId>ShroomSteak_Cooking</SubtypeId>
+        <SubtypeId>SteakWithMushrooms_Cooking</SubtypeId>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7524,10 +6923,7 @@ knowledge would be valuable for a Chef.</Description>
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>RootsWithShrooms_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="RootsWithShrooms_Schematic" />
       <Public>true</Public>
       <DisplayName>Roots With Shrooms Cooking Manuscript</DisplayName>
 
@@ -7567,10 +6963,7 @@ This knowledge would be valuable for a Chef.</Description>
 
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Fletching_Schematic_CrossbowQuiver</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Fletching_Schematic_CrossbowQuiver" />
       <Public>true</Public>
       <DisplayName>Crossbow Quiver Manuscript</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -7594,10 +6987,7 @@ This knowledge would be valuable for a Chef.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Fletching_Schematic_Crossbow</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Fletching_Schematic_Crossbow" />
       <Public>true</Public>
       <DisplayName>Crossbow Manuscript</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -7632,10 +7022,7 @@ This knowledge would be valuable for a Chef.</Description>
 
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>LawGovernment_Schematic_ClaimBlockWood</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlockWood" />
       <Public>true</Public>
       <DisplayName>Law and Government: Territorial Claim [Tier 1]</DisplayName>
       <Description>The power to stake your claim in the realm is important
@@ -7661,10 +7048,7 @@ for any leader.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>LawGovernment_Schematic_ClaimBlock</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlock" />
       <Public>true</Public>
       <DisplayName>Law and Government: Territorial Claim [Tier 2]</DisplayName>
       <Description>The power to stake your claim in the realm is important for
@@ -7690,10 +7074,7 @@ any leader. Though, making a more durable claim never hurts.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>LawGovernment_Schematic_SignPost3x1ArrowOffset</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="LawGovernment_Schematic_SignPost3x1ArrowOffset" />
       <Public>true</Public>
       <DisplayName>Law and Government: Signpost [3x1]</DisplayName>
       <Description>Description_Block_ArrowSigns</Description>
@@ -7718,10 +7099,7 @@ any leader. Though, making a more durable claim never hurts.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>LawGovernment_Schematic_Signpost3x2</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="LawGovernment_Schematic_Signpost3x2" />
       <Public>true</Public>
       <DisplayName>Law and Government: Signpost [3x2]</DisplayName>
       <Description>Description_Block_Signs</Description>
@@ -7751,10 +7129,7 @@ any leader. Though, making a more durable claim never hurts.</Description>
 
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>LandscapeStake_Schematic</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="LandscapeStake_Schematic" />
       <Public>true</Public>
       <DisplayName>Landscaping Stake Manuscript</DisplayName>
       <Description>
@@ -7789,10 +7164,7 @@ any leader. Though, making a more durable claim never hurts.</Description>
 <!-- =================================================================================== -->    
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_LongBarricade</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" />
       <Public>true</Public>
       <DisplayName>Wooden Barricade Manuscript</DisplayName>
 
@@ -7823,10 +7195,7 @@ This knowledge would be valuable for Masonry.</Description>
 <!-- ===================================================================================  -->
     
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_Bonfire</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_Bonfire" />
       <Public>true</Public>
       <DisplayName>Bonfire Manuscript</DisplayName>
 
@@ -7856,10 +7225,7 @@ This knowledge would be valuable for Masonry.</Description>
 <!-- ===================================================================================  -->    
 
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_FenceGate</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_FenceGate" />
       <Public>true</Public>
       <DisplayName>Fence Gate Manuscript</DisplayName>
 
@@ -7888,10 +7254,7 @@ This knowledge would be valuable for Masonry.</Description>
 <!-- ===================================================================================  -->
 
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_NomadBed</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_NomadBed" />
       <Public>true</Public>
       <DisplayName>Basic Bed Manuscript</DisplayName>
 
@@ -7920,10 +7283,7 @@ This knowledge would be valuable for Masonry.</Description>
 <!-- ===================================================================================  -->
 
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_NomadTent</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTent" />
       <Public>true</Public>
       <DisplayName>Linen Tent Manuscript</DisplayName>
 
@@ -7952,10 +7312,7 @@ This knowledge would be valuable for Masonry.</Description>
 <!-- ===================================================================================  -->
 
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_NomadTentAdv</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentAdv" />
       <Public>true</Public>
       <DisplayName>Advanced Linen Tent Manuscript</DisplayName>
 
@@ -7985,10 +7342,7 @@ This knowledge would be valuable for Masonry.</Description>
 <!-- ===================================================================================  -->
 
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_NomadTentBranches</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranches" />
       <Public>true</Public>
       <DisplayName>Tent Manuscript</DisplayName>
 
@@ -8017,10 +7371,7 @@ This knowledge would be valuable for Masonry.</Description>
 <!-- ===================================================================================  -->
 
 <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_NomadTentBranchesAdv</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranchesAdv" />
       <Public>true</Public>
       <DisplayName>Advanced Tent Manuscript</DisplayName>
 
@@ -8050,10 +7401,7 @@ This knowledge would be valuable for Masonry.</Description>
 <!-- ===================================================================================  -->
     
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Nomadic_Schematic_BerryPreserve</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Nomadic_Schematic_BerryPreserve" />
       <Public>true</Public>
       <DisplayName>Red Berry Preserve Manuscript</DisplayName>
 
@@ -8106,10 +7454,7 @@ the process for cooking red berry preserve.</Description>
   <!-- ===================================================================================  -->
     
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id>
-        <TypeId>SchematicItem</TypeId>
-        <SubtypeId>Carpenter_Schematic_NeedleThread</SubtypeId>
-      </Id>
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_NeedleThread" />
       <Public>true</Public>
       <DisplayName>Needle and Thread Manuscript</DisplayName>
 

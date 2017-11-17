@@ -23,11 +23,11 @@
         <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="8.0" EndY="3.0" />
         <MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="3.0" EndY="8.0" />-->
     </MountPoints>
-    <CriticalComponent Type="InventoryItem" Subtype="MetalParts" Index="0" />
+    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
     <Components>
       <Component Tag="ScrapWood" Count="5" />
       <Component Tag="Timber" Count ="8" />
-      <Component Type="InventoryItem" Subtype="MetalParts" Count ="60" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="60" />
     </Components>
     <MaxIntegrity>4000</MaxIntegrity>
     <Mass>400</Mass>
@@ -159,7 +159,7 @@
     <Prerequisites>
       <Item Amount="5" Tag="ScrapWood" />
       <Item Amount="4" Tag="Timber" />
-      <Item Amount="60" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Amount="60" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="PlowBlock" />

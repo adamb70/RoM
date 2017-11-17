@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="MyObjectBuilder_Character" Subtype="Medieval_male" />
-    <Component Type="CraftingComponent" Subtype="Humanoid"/>
-    <Component Type="InventorySpawnComponent"/>
-    <Component Type="CharacterRagdollComponent"/>
-    <Component Type="MedievalCharacterPickupComponent" Subtype="CharacterPickup2" />
-    <Component Type="MedievalCharacterUseComponent" Subtype="CharacterUse"/>
-    <Component Type="CharacterStatComponent" Subtype="RoM_male" />
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="EntityBase" Subtype="Medieval_male" />
+    
+    <CopyFrom Type="EntityBase" Subtype="RoMPlayableCharacter" />
+        
+    <Component Type="ModelComponent" Subtype="Medieval_male" />
+    <Component Type="SkeletonComponent" Subtype="Medieval_male"/>
+    <Component Type="CharacterAnimationControllerComponent" Subtype="Medieval_male"/>
     <Component Type="CharacterSoundComponent" Subtype="MedievalMale"/>
-    <Component Type="EntityQuestComponent" Subtype="Humanoid"/>
-    <Component Type="CharacterControllerComponent"/>
-    <Component Type="Inventory" Subtype="Internal"/>
-    <Component Type="AreaInventory" Subtype="Ground"/>
-    <Component Type="AreaInventoryAggregate" Subtype="NearbyInventories"/>
-    <Component Type="EntityEquipmentComponent" Subtype="Humanoid"/>
-    <Component Type="EntityStateComponent" Subtype="CharacterStances" />
-    <Component Type="CharacterHandItemsComponent" Subtype="Humanoid" />
-    <Component Type="EntityStanceComponent" />
-    <Component Type="CombatComponent" Subtype="Humanoid" />
-    <Component Type="QuickEquipComponent" Subtype="Humanoid" />
-    <Component Type="CharacterShapecastDetectorComponent" Subtype="Default" />
+	
+    <Component Type="RenderComponentCharacter" Subtype="Medieval_male"/>    
   </Definition>
 </Definitions>
