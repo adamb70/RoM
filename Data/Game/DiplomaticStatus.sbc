@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Self" />
+    <DisplayName>DisplayName_DiplomaticStatus_Self</DisplayName>
+    <Color>#006400</Color>
+    <FastTravelAllowed>true</FastTravelAllowed>
+    <CanPayTaxes>true</CanPayTaxes>
+    <ShareLocationOnMap>true</ShareLocationOnMap>
+    <RegionState>1</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Faction" />
+    <DisplayName>DisplayName_DiplomaticStatus_Faction</DisplayName>
+    <Color>#006400</Color>
+    <FastTravelAllowed>true</FastTravelAllowed>
+    <CanPayTaxes>true</CanPayTaxes>
+    <ShareLocationOnMap>true</ShareLocationOnMap>
+    <RegionState>4</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Neutral" />
+    <DisplayName>DisplayName_DiplomaticStatus_Neutral</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Neutral.png</Icon>
+    <Color>#F1F1E9</Color>
+    <Transition Target="War" DisplayName="DisplayName_DiplomaticStatus_DeclareWar" Description="DisplayName_DiplomaticStatus_DeclareWar_Tooltip" />
+    <Transition Target="FriendRequestByParty1" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_ProposeAlliance" Description="DisplayName_DiplomaticStatus_ProposeAlliance_Tooltip" />
+    <Transition Target="FriendRequestByParty2" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_ProposeAlliance" Description="DisplayName_DiplomaticStatus_ProposeAlliance_Tooltip" />
+    <Transition Target="Trade_Pact_RequestByParty1" AssociatedParty="1" DisplayName="Propose Trade Pact" Description="Offers a Trade Pact with this faction. Allows fast travel for both factions." />
+    <Transition Target="Trade_Pact_RequestByParty2" AssociatedParty="2" DisplayName="Propose Trade Pact" Description="Offers a Trade Pact with this faction. Allows fast travel for both factions." />
+    <RegionState>4</RegionState>
+  </Definition>
+
+
+  <!-- Vassal -->
+
+<!-- ====================================================== -->
+<!-- ======= Party 1: Vassal || Party 2: Overlord ======= -->
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="VassalRequestByParty1" />
+    <DisplayName>Request Vassalization</DisplayName>
+    <Icon>Textures\Vassal_Icon.png</Icon>
+    <Color>#A00000</Color>
+    <Transition Target="War" 		AssociatedParty="1" DisplayName="Cancel Vassalization" Description="Cancle the vassalization request with this faction." />
+    <Transition Target="War" 		AssociatedParty="2" DisplayName="Reject Overlordship" Description="Reject the offer of Overlordship." />
+    <Transition Target="Overlordship2"  AssociatedParty="2" DisplayName="Accept Overlordship" Description="Become the overlord of this faction. This faction then becomes your vassal." />
+    <PartyToAlert>2</PartyToAlert>
+    <RegionState>3</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Overlordship2" />
+    <DisplayName>Overlordship</DisplayName>
+    <Icon>Textures\Vassal_Icon.png</Icon>
+    <Color>#1E407C</Color>
+    <CanPayTaxes>true</CanPayTaxes>
+    <ShareLocationOnMap>true</ShareLocationOnMap>
+    <Notification>in a Overlord/Vassal agreement with</Notification>
+    <Transition Target="IndependanceRequestByParty1" 	AssociatedParty="1" DisplayName="Request Independance" Description="Request to be released from vassalization" />
+    <Transition Target="War" 				AssociatedParty="1" DisplayName="Declare Independance" Description="This will declare a war of independance against your overlord. Your faction is no longer a vassal." />
+    <Transition Target="Neutral" 			AssociatedParty="2" DisplayName="Release Vassal" Description="Release your vassal and that faction becomes independant. Once independant, war may be declared." />
+    <RegionState>3</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="IndependanceRequestByParty1" />
+    <DisplayName>Request Independance</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Alliance.png</Icon>
+    <Color>#1E407C</Color>
+    <Transition Target="Overlordship2"  AssociatedParty="1" DisplayName="Cancle Independance" Description="Cancle the independance movement and return to being a vassal." />
+    <Transition Target="Overlordship2"  AssociatedParty="2" DisplayName="Reject Vassal Independance" Description="Decline vassal independance." />
+    <Transition Target="Neutral"  	AssociatedParty="2" DisplayName="Accept Vassal Independance" Description="Your vassal becomes independant." />
+    <PartyToAlert>2</PartyToAlert>
+    <RegionState>3</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="ReleaseVassalRequestByParty2" />
+    <DisplayName>Release Vassal</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Neutral.png</Icon>
+    <Color>#1E407C</Color>
+    <Transition Target="Overlordship2"  AssociatedParty="2" DisplayName="Revoke Vassal Independance" Description="Revoke vassal independance." />
+    <Transition Target="Overlordship2"  AssociatedParty="1" DisplayName="Reject Independance" Description="Reject independance and return to being a vassal." />
+    <Transition Target="Neutral"  	AssociatedParty="1" DisplayName="Accept Independance" Description="Your faction becomes independant. Your old overlord is able to attack you once independant." />
+    <PartyToAlert>2</PartyToAlert>
+    <RegionState>3</RegionState>
+  </Definition>
+
+<!-- ====================================================== -->
+<!-- ======= Party 1: Overlord || Party 2: Vassal ======= -->
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="VassalRequestByParty2" />
+    <DisplayName>Request Vassalization</DisplayName>
+    <Icon>Textures\Vassal_Icon.png</Icon>
+    <Color>#A00000</Color>
+    <Transition Target="War" AssociatedParty="2" DisplayName="Cancel Vassalization" Description="Cancle the vassalization request with this faction." />
+    <Transition Target="War" AssociatedParty="1" DisplayName="Reject Overlordship" Description="Reject the offer of Overlordship." />
+    <Transition Target="Overlordship1" AssociatedParty="1" DisplayName="Accept Overlordship" Description="Become the overlord of this faction. This faction then becomes your vassal." />
+    <PartyToAlert>1</PartyToAlert>
+    <RegionState>3</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Overlordship1" />
+    <DisplayName>Overlordship</DisplayName>
+    <Icon>Textures\Vassal_Icon.png</Icon>
+    <Color>#1E407C</Color>
+    <CanPayTaxes>true</CanPayTaxes>
+    <ShareLocationOnMap>true</ShareLocationOnMap>
+    <Notification>in a Overlord/Vassal agreement with</Notification>
+    <Transition Target="IndependanceRequestByParty2" 	AssociatedParty="2" DisplayName="Request Independance" Description="Request to be released from vassalization" />
+    <Transition Target="War" 	      			AssociatedParty="2" DisplayName="Declare Independance" Description="This will declare a war of independance against your overlord. Your faction is no longer a vassal." />
+    <Transition Target="Neutral"			AssociatedParty="1" DisplayName="Release Vassal" Description="Release your vassal and that faction becomes independant. Once independant, war may be declared." />
+    <RegionState>3</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="IndependanceRequestByParty2" />
+    <DisplayName>Request Independance</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Alliance.png</Icon>
+    <Color>#1E407C</Color>
+    <Transition Target="Overlordship1"  AssociatedParty="2" DisplayName="Cancle Independance Request" Description="Cancle the independance movement and return to being a vassal." />
+    <Transition Target="Overlordship1"  AssociatedParty="1" DisplayName="Reject Vassal Independance" Description="Decline vassal independance." />
+    <Transition Target="Neutral"  	AssociatedParty="1" DisplayName="Accept Vassal Independance" Description="Your vassal becomes independant." />
+    <PartyToAlert>2</PartyToAlert>
+    <RegionState>3</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="ReleaseVassalRequestByParty1" />
+    <DisplayName>Release Vassal</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Neutral.png</Icon>
+    <Color>#1E407C</Color>
+    <Transition Target="Overlordship1"  AssociatedParty="1" DisplayName="Revoke Vassal Independance" Description="Revoke vassal independance." />
+    <Transition Target="Overlordship1"  AssociatedParty="2" DisplayName="Decline Independance" Description="Reject independance and return to being a vassal." />
+    <Transition Target="Neutral"  	AssociatedParty="2" DisplayName="Accept Independance" Description="Your faction becomes independant. Your old overlord is able to attack you once independant." />
+    <PartyToAlert>2</PartyToAlert>
+    <RegionState>3</RegionState>
+  </Definition>
+
+<!-- ===================================================== -->
+  			<!-- War -->
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="War" />
+    <DisplayName>DisplayName_DiplomaticStatus_War</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_War.png</Icon>
+    <Color>#A00000</Color>
+    <Notification>HUD_Notification_DiplomaticStatusChange_War</Notification>
+    <Transition Target="PeaceRequestByParty1" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_Surrender" Description="DisplayName_DiplomaticStatus_Surrender_Tooltip" />
+    <Transition Target="PeaceRequestByParty2" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_Surrender" Description="DisplayName_DiplomaticStatus_Surrender_Tooltip" />
+    <Transition Target="VassalRequestByParty1" AssociatedParty="1" DisplayName="Request Vassalization" Description="Your faction becomes a vassal of the opponent's faction." />
+    <Transition Target="VassalRequestByParty2" AssociatedParty="2" DisplayName="Request Vassalization" Description="Your faction becomes a vassal of the opponent's faction." />
+    <RegionState>2</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="PeaceRequestByParty1" />
+    <DisplayName>DisplayName_DiplomaticStatus_Surrendering</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Surrender.png</Icon>
+    <Color>#A00000</Color>
+    <Transition Target="War" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_CancelSurrender" Description="DisplayName_DiplomaticStatus_CancelSurrender_Tooltip" />
+    <Transition Target="War" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_RejectSurrender" Description="DisplayName_DiplomaticStatus_RejectSurrender_Tooltip" />
+    <Transition Target="Neutral" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_AcceptSurrender" Description="DisplayName_DiplomaticStatus_AcceptSurrender_Tooltip" />
+    <PartyToAlert>2</PartyToAlert>
+    <RegionState>2</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="PeaceRequestByParty2" />
+    <DisplayName>DisplayName_DiplomaticStatus_Surrendering</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Surrender.png</Icon>
+    <Color>#A00000</Color>
+    <Transition Target="War" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_CancelSurrender" Description="DisplayName_DiplomaticStatus_CancelSurrender_Tooltip" />
+    <Transition Target="War" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_RejectSurrender" Description="DisplayName_DiplomaticStatus_RejectSurrender_Tooltip" />
+    <Transition Target="Neutral" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_AcceptSurrender" Description="DisplayName_DiplomaticStatus_AcceptSurrender_Tooltip" />
+    <PartyToAlert>1</PartyToAlert>
+    <RegionState>2</RegionState>
+  </Definition>
+
+  <!-- Allies -->
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Allied" />
+    <DisplayName>DisplayName_DiplomaticStatus_Allied</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Alliance.png</Icon>
+    <Color>#1E407C</Color>
+    <Notification>HUD_Notification_DiplomaticStatusChange_Alliance</Notification>
+    <Transition Target="Neutral" DisplayName="DisplayName_DiplomaticStatus_CancelAlliance" Description="DisplayName_DiplomaticStatus_CancelAlliance_Tooltip" />
+    <FastTravelAllowed>true</FastTravelAllowed>
+    <ShareLocationOnMap>true</ShareLocationOnMap>
+    <RegionState>4</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="FriendRequestByParty1" />
+    <DisplayName>DisplayName_DiplomaticStatus_AwaitingAlliance</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Request_Alliance.png</Icon>
+    <Color>#F1F1E9</Color>
+    <Transition Target="Neutral" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_CancelAllianceRequest" Description="DisplayName_DiplomaticStatus_CancelAllianceRequest_Tooltip" />
+    <Transition Target="Neutral" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_RejectAllianceRequest" Description="DisplayName_DiplomaticStatus_RejectAllianceRequest_Tooltip" />
+    <Transition Target="Allied" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_AcceptAllianceRequest" Description="DisplayName_DiplomaticStatus_AcceptAllianceRequest_Tooltip" />
+    <PartyToAlert>2</PartyToAlert>
+    <RegionState>4</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="FriendRequestByParty2" />
+    <DisplayName>DisplayName_DiplomaticStatus_AwaitingAlliance</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Request_Alliance.png</Icon>
+    <Color>#F1F1E9</Color>
+    <Transition Target="Neutral" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_CancelAllianceRequest" Description="DisplayName_DiplomaticStatus_CancelAllianceRequest_Tooltip" />
+    <Transition Target="Neutral" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_RejectAllianceRequest" Description="DisplayName_DiplomaticStatus_RejectAllianceRequest_Tooltip" />
+    <Transition Target="Allied" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_AcceptAllianceRequest" Description="DisplayName_DiplomaticStatus_AcceptAllianceRequest_Tooltip" />
+    <PartyToAlert>1</PartyToAlert>
+    <RegionState>4</RegionState>
+  </Definition>
+
+  <!-- Trade Pact -->
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Trade_Pact" />
+    <DisplayName>Trade Pact</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Alliance.png</Icon>
+    <Color>#1E407C</Color>
+    <Notification>HUD_Notification_DiplomaticStatusChange_Alliance</Notification>
+    <Transition Target="FriendRequestByParty1" AssociatedParty="1" DisplayName="DisplayName_DiplomaticStatus_ProposeAlliance" Description="DisplayName_DiplomaticStatus_ProposeAlliance_Tooltip" />
+    <Transition Target="FriendRequestByParty2" AssociatedParty="2" DisplayName="DisplayName_DiplomaticStatus_ProposeAlliance" Description="DisplayName_DiplomaticStatus_ProposeAlliance_Tooltip" />
+    <Transition Target="Neutral" DisplayName="Cancle Trade Pact" Description="Cancles the Trade Pact with this faction." />
+    <FastTravelAllowed>true</FastTravelAllowed>
+    <RegionState>4</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Trade_Pact_RequestByParty1" />
+    <DisplayName>Trade Pact</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Request_Alliance.png</Icon>
+    <Color>#F1F1E9</Color>
+    <Transition Target="Neutral" AssociatedParty="1" DisplayName="Cancel Trade Pact" Description="DisplayName_DiplomaticStatus_CancelAllianceRequest_Tooltip" />
+    <Transition Target="Neutral" AssociatedParty="2" DisplayName="Reject Trade Pact" Description="DisplayName_DiplomaticStatus_RejectAllianceRequest_Tooltip" />
+    <Transition Target="Trade_Pact" AssociatedParty="2" DisplayName="Accept Trade Pact" Description="Accept a Trade Pact with this faction. This allows access for fast travel for both parties." />
+    <PartyToAlert>2</PartyToAlert>
+    <RegionState>4</RegionState>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DiplomaticStatusDefinition">
+    <Id Type="DiplomaticStatusDefinition" Subtype="Trade_Pact_RequestByParty2" />
+    <DisplayName>Trade Pact</DisplayName>
+    <Icon>Textures\GUI\Book\Status_Icon_Request_Alliance.png</Icon>
+    <Color>#F1F1E9</Color>
+    <Transition Target="Neutral" AssociatedParty="2" DisplayName="Cancel Trade Pact" Description="Cancles the Trade Pact" />
+    <Transition Target="Neutral" AssociatedParty="1" DisplayName="Reject Trade Pact" Description="Rejects the Trade Pact" />
+    <Transition Target="Trade_Pact" AssociatedParty="1" DisplayName="Accept Trade Pact" Description="Accept a Trade Pact with this faction. This allows access for fast travel for both parties." />
+    <PartyToAlert>1</PartyToAlert>
+    <RegionState>4</RegionState>
+  </Definition>
+
+
+</Definitions>
