@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Overridden to change mining definition -->
+  <Definition xsi:type="MyObjectBuilder_MinerToolBehaviorDefinition">
+    <Id Type="MinerToolBehaviorDefinition" Subtype="PickaxeBronze"/>
+    <Efficiency>3.3</Efficiency>
+    <YieldMultiplier>1.0</YieldMultiplier>
+    <MiningDistance>3</MiningDistance>
+    <MiningRadius>0.25</MiningRadius>
+    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Bronze_Pickaxe"/>
+
+    <PrimaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>Mining</Animation>
+    </PrimaryEffect>
+
+    <SecondaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>Attack</Animation>
+    </SecondaryEffect>
+  </Definition>
+
+</Definitions>

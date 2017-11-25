@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- Volume 64 = 1 dirt -->
-
-
+  
+  
+  
 <!-- ======================================================================================================= -->
-<!-- Shovel ================================================================================================ -->
+<!-- Vanilla Shovel - Keep this updated with vanilla version =============================================== -->
 <!-- ======================================================================================================= -->
-
   <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition">
-    <Id Type="VoxelMiningDefinition" Subtype="Shovel" />
+    <Id Type="VoxelMiningDefinition" Subtype="VanillaShovel" />
     
     <!-- GRASS -->
     <Entry VoxelMaterial="Grass">
@@ -42,14 +42,19 @@
     <Entry VoxelMaterial="ExhaustedSoil" Volume="256">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
     </Entry>
+    <Entry VoxelMaterial="DirtSteppe">
+      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
+    </Entry>
     <Entry VoxelMaterial="Clay" Volume="256">
       <MinedItem Type="InventoryItem" Subtype="Clay" Amount="1" />
     </Entry>
-    <Entry VoxelMaterial="Sand">
+    <Entry VoxelMaterial="SandDark">
     </Entry>
     <Entry VoxelMaterial="SandDark">
     </Entry>
     <Entry VoxelMaterial="SandGrass">
+    </Entry>
+    <Entry VoxelMaterial="SandGrassGreen">
     </Entry>
     <Entry VoxelMaterial="Snow">
     </Entry>
@@ -77,758 +82,159 @@
       <MinedItem Type="InventoryItem" Subtype="OreCopper" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
     </Entry>
+  </Definition>
+
+
+<!-- ======================================================================================================= -->
+<!-- Shovel ================================================================================================ -->
+<!-- ======================================================================================================= -->
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
+    <Id Type="VoxelMiningDefinition" Subtype="Shovel"/>
+    <!-- Include Vanilla Shovel -->
+    <CopyFrom Type="VoxelMiningDefinition" Subtype="VanillaShovel"/>
     
-
-<!-- Start RoM Ores -->
-
-
-<!-- Coal ========================================================= -->
+  <!-- Coal ========================================================= -->
     <Entry VoxelMaterial="COGCoal" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="CoalOre" Amount="1" />
     </Entry>
-
-<!-- Salt ========================================================= -->
+  <!-- Salt ========================================================= -->
     <Entry VoxelMaterial="COGSalt" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="SaltOre" Amount="1" />
     </Entry>
-
-<!-- FakeOre ========================================================= -->
-    <Entry VoxelMaterial="COG_FakeOre" Volume="64">
+  <!-- Grass_old ========================================================= -->
+    <Entry VoxelMaterial="COGSteppeYellowGrass" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
     </Entry>
-
-<!-- Grass_old ========================================================= -->
-    <Entry VoxelMaterial="COGGrass_old" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods ========================================================= -->
-    <Entry VoxelMaterial="COGWoods" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_grass ========================================================= -->
-    <Entry VoxelMaterial="COGWoods_grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_needles ========================================================= -->
-    <Entry VoxelMaterial="COGWoods_needles" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGGrass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Rocks Moss ========================================================= -->
-    <Entry VoxelMaterial="COGRocks_moss" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Rocks Moss ========================================================= -->
-    <Entry VoxelMaterial="COGRocks_grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
+  <!-- Grass ========================================================= -->
     <Entry VoxelMaterial="COGWoods_Snow" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
     </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSnow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
+  <!-- Grass ========================================================= -->
     <Entry VoxelMaterial="COGDesert_Soil" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
     </Entry>
-
-<!-- Grass ========================================================= -->
+  <!-- Grass ========================================================= -->
     <Entry VoxelMaterial="COGDesert_Rubble" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
     </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSand_Stone" Volume="64">
+  <!-- Grass ========================================================= -->
+    <Entry VoxelMaterial="Sandstone" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
     </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSand" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
+  <!-- Grass ========================================================= -->
     <Entry VoxelMaterial="COGFakeOre" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
     </Entry>
-
-
-<!-- RoM Map Voxels ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ RoM Map Voxels -->
-
-
-<!-- RoM Voxels vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv RoM Voxels -->
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COG Grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Rocks moss ========================================================= -->
-    <Entry VoxelMaterial="COG Rocks moss" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Rocks Grass ========================================================= -->
-    <Entry VoxelMaterial="COG Rocks Grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Woods ========================================================= -->
-    <Entry VoxelMaterial="COG Woods" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_grass ========================================================= -->
-    <Entry VoxelMaterial="COG Woods_grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_needles ========================================================= -->
-    <Entry VoxelMaterial="COG Woods_needles" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods Snow ========================================================= -->
-    <Entry VoxelMaterial="COG Woods Snow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Snow ========================================================= -->
-    <Entry VoxelMaterial="COG Snow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass_old ========================================================= -->
-    <Entry VoxelMaterial="COG Grass_old" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Desert Soil ========================================================= -->
-    <Entry VoxelMaterial="COG Desert Soil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-    </Entry>
-
-<!-- Sand Stone ========================================================= -->
-    <Entry VoxelMaterial="COG Sand Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-    </Entry>
-
-<!-- Sand ========================================================= -->
-    <Entry VoxelMaterial="COG Sand" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-    </Entry>
-
-<!-- PlowedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG PlowedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- PlantedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG PlantedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- ExhaustedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG ExhaustedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- End RoM Ores -->
-
 
   </Definition>
   
 
+  
 
+<!-- ======================================================================================================= -->
+<!-- Stone Pick Axe ======================================================================================== -->
+<!-- ======================================================================================================= -->
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
+    <Id Type="VoxelMiningDefinition" Subtype="Stone_Pickaxe" />
+    <!-- Include Vanilla Pickaxe -->
+    <CopyFrom Type="VoxelMiningDefinition" Subtype="Pickaxe"/>
+    
+  <!-- Start RoM Ores -->
+
+  <!-- Coal ========================================================= -->
+    <Entry VoxelMaterial="COGCoal" Volume="64">
+      <MinedItem Type="InventoryItem" Subtype="CoalOre" Amount="1" />
+    </Entry>
+  <!-- Salt ========================================================= -->
+    <Entry VoxelMaterial="COGSalt" Volume="64">
+      <MinedItem Type="InventoryItem" Subtype="SaltOre" Amount="1" />
+    </Entry>
+  <!-- FakeOre ========================================================= -->
+    <Entry VoxelMaterial="COGSteppeYellowGrass" Volume="64">
+      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
+    </Entry>
+  <!-- Woods ========================================================= -->
+    <Entry VoxelMaterial="COGWoods_Snow" Volume="64">
+      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
+    </Entry>
+  <!-- Grass ========================================================= -->
+    <Entry VoxelMaterial="COGDesert_Soil" Volume="64">
+      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
+    </Entry>
+  <!-- Grass ========================================================= -->
+    <Entry VoxelMaterial="COGDesert_Rubble" Volume="64">
+      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
+    </Entry>
+  <!-- Grass ========================================================= -->
+    <Entry VoxelMaterial="Sandstone" Volume="64">
+      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
+      <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
+    </Entry>
+  <!-- Grass ========================================================= -->
+    <Entry VoxelMaterial="COGFakeOre" Volume="64">
+      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
+    </Entry>
+
+  <!-- End RoM Ores -->
+
+  </Definition>
+
+  
+<!-- ======================================================================================================= -->
+<!-- Copper Pick Axe ======================================================================================= -->
+<!-- ======================================================================================================= -->
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
+    <Id Type="VoxelMiningDefinition" Subtype="Copper_Pickaxe" />
+    <!-- Include Stone Pickaxe -->
+    <CopyFrom Type="VoxelMiningDefinition" Subtype="Stone_Pickaxe"/>
+    
+    
+  </Definition>
+  
+  
+<!-- ======================================================================================================= -->
+<!-- Bronze Pick Axe ======================================================================================= -->
+<!-- ======================================================================================================= -->
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
+    <Id Type="VoxelMiningDefinition" Subtype="Bronze_Pickaxe" />
+    <!-- Include Copper Pickaxe -->
+    <CopyFrom Type="VoxelMiningDefinition" Subtype="Copper_Pickaxe"/>
+    
+    
+  </Definition>
+  
 <!-- ======================================================================================================= -->
 <!-- Iron Pick Axe ========================================================================================= -->
 <!-- ======================================================================================================= -->
-
-  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition">
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
     <Id Type="VoxelMiningDefinition" Subtype="Iron_Pickaxe" />
-    <!-- ROCKS_GRASS -->
-    <Entry VoxelMaterial="Rocks_grass" Volume="192">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-    <Entry VoxelMaterial="Rocks_moss" Volume="192">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
+    <!-- Include Bronze Pickaxe -->
+    <CopyFrom Type="VoxelMiningDefinition" Subtype="Bronze_Pickaxe"/>
     
-    <!-- STONE -->
-    <Entry VoxelMaterial="Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Stone_02" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-    
-    <!-- IRON ORE -->
-    <Entry VoxelMaterial="IronOre_RichYield" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="IronOre_RegularYield" Volume="128">
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="IronOre_PoorYield" Volume="256">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="3" />
-      <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
-    </Entry>
-
-
-<!-- Start RoM Ores -->
-
-
-<!-- Coal ========================================================= -->
-    <Entry VoxelMaterial="COGCoal" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="CoalOre" Amount="1" />
-    </Entry>
-
-<!-- Mithril ========================================================= -->
+    <!-- Mithril ========================================================= -->
     <Entry VoxelMaterial="COGMithril" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="MithrilOre" Amount="1" />
     </Entry>
 
-<!-- Gold ========================================================= -->
-    <Entry VoxelMaterial="COGGold" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="GoldOre" Amount="1" />
-    </Entry>
-
-<!-- Salt ========================================================= -->
-    <Entry VoxelMaterial="COGSalt" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="SaltOre" Amount="1" />
-    </Entry>
-
-<!-- FakeOre ========================================================= -->
-    <Entry VoxelMaterial="COG_FakeOre" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass_old ========================================================= -->
-    <Entry VoxelMaterial="COGGrass_old" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods ========================================================= -->
-    <Entry VoxelMaterial="COGWoods" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_grass ========================================================= -->
-    <Entry VoxelMaterial="COGWoods_grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_needles ========================================================= -->
-    <Entry VoxelMaterial="COGWoods_needles" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGGrass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Rocks Moss ========================================================= -->
-    <Entry VoxelMaterial="COGRocks_moss" Volume="192">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Rocks Moss ========================================================= -->
-    <Entry VoxelMaterial="COGRocks_grass" Volume="192">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGWoods_Snow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSnow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGDesert_Soil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGDesert_Rubble" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSand_Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSand" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGFakeOre" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- RoM Map Voxels ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ RoM Map Voxels -->
-
-
-<!-- RoM Voxels vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv RoM Voxels -->
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COG Grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Rocks moss ========================================================= -->
-    <Entry VoxelMaterial="COG Rocks moss" Volume="192">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Rocks Grass ========================================================= -->
-    <Entry VoxelMaterial="COG Rocks Grass" Volume="192">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Woods ========================================================= -->
-    <Entry VoxelMaterial="COG Woods" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_grass ========================================================= -->
-    <Entry VoxelMaterial="COG Woods_grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_needles ========================================================= -->
-    <Entry VoxelMaterial="COG Woods_needles" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods Snow ========================================================= -->
-    <Entry VoxelMaterial="COG Woods Snow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Snow ========================================================= -->
-    <Entry VoxelMaterial="COG Snow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass_old ========================================================= -->
-    <Entry VoxelMaterial="COG Grass_old" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Desert Soil ========================================================= -->
-    <Entry VoxelMaterial="COG Desert Soil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Sand Stone ========================================================= -->
-    <Entry VoxelMaterial="COG Sand Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Sand ========================================================= -->
-    <Entry VoxelMaterial="COG Sand" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- PlowedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG PlowedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- PlantedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG PlantedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- ExhaustedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG ExhaustedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- End RoM Ores -->
-
-
-
-
-    <!-- GRASS -->
-    <Entry VoxelMaterial="Grass">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Grass_02">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Grass_old">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-    <!-- FOREST -->
-    <Entry VoxelMaterial="Woods">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Woods_grass">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Woods_needles">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-    <!-- DIRT -->
-    <Entry VoxelMaterial="Soil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="PlowedSoil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="PlantedSoil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="ExhaustedSoil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
   </Definition>
-
-
+  
 
 <!-- ======================================================================================================= -->
-<!-- Stone Pick Axe ========================================================================================= -->
+<!-- Steel Pick Axe ======================================================================================== -->
 <!-- ======================================================================================================= -->
-
-  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition">
-    <Id Type="VoxelMiningDefinition" Subtype="Stone_Pickaxe" />
-    <!-- ROCKS_GRASS -->
-    <Entry VoxelMaterial="Rocks_grass" Volume="192">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-    <Entry VoxelMaterial="Rocks_moss" Volume="192">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
+    <Id Type="VoxelMiningDefinition" Subtype="Steel_Pickaxe" />
+    <!-- Include Iron Pickaxe -->
+    <CopyFrom Type="VoxelMiningDefinition" Subtype="Iron_Pickaxe"/>
     
-    <!-- STONE -->
-    <Entry VoxelMaterial="Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Stone_02" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-    
-    <!-- IRON ORE -->
-    <Entry VoxelMaterial="IronOre_RichYield" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="IronOre_RegularYield" Volume="128">
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="IronOre_PoorYield" Volume="256">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="3" />
-      <MinedItem Type="InventoryItem" Subtype="IronOre" Amount="1" />
-    </Entry>
 
-
-<!-- Start RoM Ores -->
-
-
-<!-- Coal ========================================================= -->
-    <Entry VoxelMaterial="COGCoal" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="CoalOre" Amount="1" />
-    </Entry>
-
-<!-- Mithril ========================================================= -->
-    <Entry VoxelMaterial="COGMithril" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="MithrilOre" Amount="1" />
-    </Entry>
-
-<!-- Gold ========================================================= -->
-    <Entry VoxelMaterial="COGGold" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="GoldOre" Amount="1" />
-    </Entry>
-
-<!-- Salt ========================================================= -->
-    <Entry VoxelMaterial="COGSalt" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="SaltOre" Amount="1" />
-    </Entry>
-
-<!-- FakeOre ========================================================= -->
-    <Entry VoxelMaterial="COG_FakeOre" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass_old ========================================================= -->
-    <Entry VoxelMaterial="COGGrass_old" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods ========================================================= -->
-    <Entry VoxelMaterial="COGWoods" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_grass ========================================================= -->
-    <Entry VoxelMaterial="COGWoods_grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_needles ========================================================= -->
-    <Entry VoxelMaterial="COGWoods_needles" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGGrass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Rocks Moss ========================================================= -->
-    <Entry VoxelMaterial="COGRocks_moss" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Rocks Moss ========================================================= -->
-    <Entry VoxelMaterial="COGRocks_grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGWoods_Snow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSnow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGDesert_Soil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGDesert_Rubble" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSand_Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGSand" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COGFakeOre" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- RoM Map Voxels ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ RoM Map Voxels -->
-
-
-<!-- RoM Voxels vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv RoM Voxels -->
-
-<!-- Grass ========================================================= -->
-    <Entry VoxelMaterial="COG Grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Rocks moss ========================================================= -->
-    <Entry VoxelMaterial="COG Rocks moss" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Rocks Grass ========================================================= -->
-    <Entry VoxelMaterial="COG Rocks Grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-<!-- Woods ========================================================= -->
-    <Entry VoxelMaterial="COG Woods" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_grass ========================================================= -->
-    <Entry VoxelMaterial="COG Woods_grass" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods_needles ========================================================= -->
-    <Entry VoxelMaterial="COG Woods_needles" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Woods Snow ========================================================= -->
-    <Entry VoxelMaterial="COG Woods Snow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Snow ========================================================= -->
-    <Entry VoxelMaterial="COG Snow" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Grass_old ========================================================= -->
-    <Entry VoxelMaterial="COG Grass_old" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- Desert Soil ========================================================= -->
-    <Entry VoxelMaterial="COG Desert Soil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-    </Entry>
-
-<!-- Sand Stone ========================================================= -->
-    <Entry VoxelMaterial="COG Sand Stone" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-    </Entry>
-
-<!-- Sand ========================================================= -->
-    <Entry VoxelMaterial="COG Sand" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
-    </Entry>
-
-<!-- PlowedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG PlowedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- PlantedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG PlantedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- ExhaustedSoil ========================================================= -->
-    <Entry VoxelMaterial="COG ExhaustedSoil" Volume="64">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-<!-- End RoM Ores -->
-
-
-
-
-    <!-- GRASS -->
-    <Entry VoxelMaterial="Grass">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Grass_02">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Grass_old">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-    <!-- FOREST -->
-    <Entry VoxelMaterial="Woods">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Woods_grass">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Woods_needles">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-    <!-- DIRT -->
-    <Entry VoxelMaterial="Soil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="PlowedSoil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="PlantedSoil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="ExhaustedSoil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
   </Definition>
-
+  
 
 </Definitions>

@@ -5863,7 +5863,7 @@ foes at close range.</Description>
       </Prerequisites>
       <Results>
 	  
-	  <Item Amount="1" Type="InventoryItem" Subtype="GoldIngot" />
+	  <Item Amount="1" Type="InventoryItem" Subtype="IngotGold" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>
@@ -5871,16 +5871,16 @@ foes at close range.</Description>
 
 	<Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="GoldOreToGoldIngots" />
-      <Icon>Textures\GUI\Icons\GoldOreIcon.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\OreGold.dds</Icon>
       <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
       <DisplayName>Smelt gold ore to ingots</DisplayName>
       <Category>Smelting</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="GoldOre" />
+        <Item Amount="3" Type="InventoryItem" Subtype="OreGold" />
       </Prerequisites>
       <Results>
 	  
-	  <Item Amount="1" Type="InventoryItem" Subtype="GoldIngot" />
+	  <Item Amount="1" Type="InventoryItem" Subtype="IngotGold" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>

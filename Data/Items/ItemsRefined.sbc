@@ -102,22 +102,26 @@ rate then normal items.</Description>
     <!-- ===================== ingots ===================== -->
   
   <!-- ================================================================================ -->
+  <!--tweeked some of the vanilla propertied of the ingot-->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="GoldIngot" />
-      <DisplayName>Gold Ingot</DisplayName>
-	  <Description>Valuable Metal.</Description>
-      <Icon>Textures\GUI\Icons\Ingot\GoldIngotIcon.dds</Icon>
-      <Size>
-        <X>0.25</X>
-        <Y>0.25</Y>
-        <Z>0.25</Z>
-      </Size>
-      <Mass>200</Mass>
-      <Model>Models\Ingots\GoldIngot.mwm</Model>
-      <MaxStackAmount>16</MaxStackAmount>
-      <Health>520</Health>
+    <Id Type="InventoryItem" Subtype="IngotGold" />
+    <Public>true</Public>
+    <Tag>Ingot</Tag>
+    <Tag>IngotGold</Tag>
+    <DisplayName>DisplayName_Item_IngotGold</DisplayName>
+    <Description>Description_Item_IngotGold</Description>
+    <Icon>Textures\GUI\Icons\Materials\IngotGold.dds</Icon>
+    <Model>Models\Components\GoldIngot.mwm</Model>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>80</Mass>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>520</Health>
   </Definition>
-  
   <!-- ================================================================================ -->
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">

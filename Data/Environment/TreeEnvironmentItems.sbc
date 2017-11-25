@@ -24,7 +24,26 @@
       </GrowthStep>
     </GrowthSteps>
   </Definition>
-
+  
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem"> <!-- snowy tree schematic -->
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_SnowyTreeSmall" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Schematic_TreeSmall</NextStep>
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+      </GrowthStep>
+      <GrowthStep Name="Schematic_TreeSmall" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>TreePine4mSnowy</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
 
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id>
