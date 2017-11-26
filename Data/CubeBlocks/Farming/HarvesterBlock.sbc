@@ -22,12 +22,12 @@
     </MountPoints>
     <Components>
       <Component Tag="Timber" Count="10" />
-      <Component Type="InventoryItem" Subtype="MetalParts" Count ="16" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="16" />
     </Components>
     <MaxIntegrity>1500</MaxIntegrity>
     <Mass>100</Mass>
     <Volume>1125</Volume>
-    <CriticalComponent Type="InventoryItem" Subtype="MetalParts" Index="0" />
+    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
     <BuildTimeSeconds>6</BuildTimeSeconds>
     <Direction>Vertical</Direction>
     <Rotation>Both</Rotation>
@@ -72,9 +72,9 @@
     <Icon>Textures\GUI\Icons\Cubes\HarvesterBlock.dds</Icon>
     <Category>Machinesmith_Table</Category>
     <Prerequisites>
-      <Item Amount="1" Type="CubeBlock" Subtype="WoodChestLarge" />
+      <Item Amount="1" Type="CubeBlock" Subtype="ChestWoodLarge" />
       <Item Amount="10" Tag="Timber" />
-      <Item Amount="16" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Amount="16" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="HarvesterBlock" />

@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="ClaimTotem" />
     <DisplayName>Claim Totem</DisplayName>
     <Description>The Claim Totem is used to stake your claim in the Realm of Mistvalin.</Description>
     <BlockPairName>ClaimTotem</BlockPairName>
-      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\SkullImpaled.dds</Icon>
     <CubeSize>Small</CubeSize>
     <BlockTopology>TriangleMesh</BlockTopology>
@@ -40,12 +38,12 @@
         <MinAllowed>0</MinAllowed>
       </DynamicMode>
     </VoxelPlacement>
-    <MaxIntegrity>30</MaxIntegrity>
+    <MaxIntegrity>300</MaxIntegrity>
   </Definition>
 <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClaimTotem"/>
-      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\SkullImpaled.dds</Icon>
     <DisplayName>Claim Totem</DisplayName>    
     <Description>The Claim Totem is used to stake your claim in the Realm of Mistvalin.</Description>

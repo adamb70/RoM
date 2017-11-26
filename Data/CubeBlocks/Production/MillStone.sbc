@@ -14,10 +14,10 @@
     <Model>Models\Cubes\small\MillStone_Small.mwm</Model>
     <MirroringY>Z</MirroringY>
     <MirroringZ>Y</MirroringZ>
-    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
     <Components>
       <Component Tag="Timber" Count="5" />
-      <Component Type="InventoryItem" Subtype="LargeStone" Count="5" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count="5" />
     </Components>
     <MaxIntegrity>2000</MaxIntegrity>
     <Mass>700</Mass>
@@ -44,13 +44,13 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MillStone"/>
+    <Id Type="CraftingRecipeDefinition" Subtype="MillStone"/>
     <DisplayName>DisplayName_Block_MillStone</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\MillStone_Small.dds</Icon>
     <Category>Masonry_Table</Category>
     <Prerequisites>
       <Item Amount="5" Tag="Timber" />
-      <Item Amount="5" Type="InventoryItem" Subtype="LargeStone"/>
+      <Item Amount="5" Type="InventoryItem" Subtype="StoneLarge"/>
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="MillStone" />
@@ -61,23 +61,24 @@
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="MillStone" />
     <Component Type="Inventory" Subtype="MillStone" />
-    <Component Type="CraftingComponent" Subtype="MillStone" />
+    <Component Type="CraftingComponentQueued" Subtype="MillStone" />
     <Component Type="InventorySpawnComponent" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="MillStone" />
+    <Id Type="Inventory" Subtype="MillStone" />
     <DisplayName>DisplayName_InventoryName_Crafting</DisplayName>
     <MaxItemCount>7</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="MillStone" />
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="MillStone" />
     <CraftingCategories>
       <Category>Milling</Category>
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
   </Definition>
 </Definitions>

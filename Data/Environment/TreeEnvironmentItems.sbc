@@ -24,7 +24,26 @@
       </GrowthStep>
     </GrowthSteps>
   </Definition>
-
+  
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem"> <!-- snowy tree schematic -->
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Schematic_SnowyTreeSmall" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>Schematic_TreeSmall</NextStep>
+        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
+      </GrowthStep>
+      <GrowthStep Name="Schematic_TreeSmall" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>TreePine4mSnowy</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
 
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id>
@@ -41,7 +60,7 @@
         <ModelCollectionSubtypeId>TreeSmall</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>1</Min>
             <Max>4</Max>
           </Action>
@@ -49,46 +68,6 @@
       </GrowthStep>
     </GrowthSteps>
   </Definition>
-
-
-
-<!-- ================================================================== -->
-  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>TreePine4m</SubtypeId>
-      <!-- It's actually a spruce, not pine -->
-    </Id>
-    <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.05">
-        <NextStep>TreeSmall</NextStep>
-        <TimeToNextStepInHours>4.5</TimeToNextStepInHours>
-      </GrowthStep>
-      <GrowthStep Name="TreeSmall" StartingProbability="0.375">
-        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
-        <NextStep>TreeSmall_Seeds</NextStep>
-        <TimeToNextStepInHours>2</TimeToNextStepInHours>
-        <Actions>
-          <Action Name="Gather" NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
-            <Min>1</Min>
-            <Max>4</Max>
-          </Action>
-        </Actions>
-      </GrowthStep>
-      <GrowthStep Name="TreeSmall_Seeds" StartingProbability="0.375">
-        <ModelCollectionSubtypeId>TreePine4m</ModelCollectionSubtypeId>
-        <Actions>
-          <Action Name="Gather" NextStep="TreeSmall">
-            <Id Type="ConsumableItem" Subtype="TreeSmall_Seed"/>
-            <Min>1</Min>
-            <Max>2</Max>
-          </Action>
-        </Actions>
-      </GrowthStep>
-    </GrowthSteps>
-  </Definition>
-
 
 
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
@@ -196,10 +175,7 @@
   <!-- Here comes real cuttable pines-->
 
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>TreePine10</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="TreePine10" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0.05">
         <NextStep>TreeSapling</NextStep>
@@ -211,7 +187,7 @@
         <TimeToNextStepInHours>36</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>3</Min>
             <Max>6</Max>
           </Action>
@@ -232,10 +208,7 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>TreePine15</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="TreePine15" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0.05">
         <NextStep>TreeSapling</NextStep>
@@ -247,7 +220,7 @@
         <TimeToNextStepInHours>36</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>3</Min>
             <Max>6</Max>
           </Action>
@@ -278,10 +251,7 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>TreePine175</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="TreePine175" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0.05">
         <NextStep>TreeSapling</NextStep>
@@ -293,7 +263,7 @@
         <TimeToNextStepInHours>36</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>3</Min>
             <Max>6</Max>
           </Action>
@@ -334,10 +304,7 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>TreePine225</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="TreePine225" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0.05">
         <NextStep>TreeSapling</NextStep>
@@ -349,7 +316,7 @@
         <TimeToNextStepInHours>36</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>3</Min>
             <Max>6</Max>
           </Action>
@@ -400,10 +367,7 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>TreePine25</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="TreePine25" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0.05">
         <NextStep>TreeSapling</NextStep>
@@ -415,7 +379,7 @@
         <TimeToNextStepInHours>36</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather">
-            <Id Type="InventoryItem" Subtype="WoodenSticks"/>
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>3</Min>
             <Max>6</Max>
           </Action>
@@ -477,10 +441,7 @@
 
 
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id>
-      <TypeId>MyObjectBuilder_GrowableEnvironmentItemDefinition</TypeId>
-      <SubtypeId>Enchanted_TreePine25</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="Enchanted_TreePine25" />
     <GrowthSteps>
       <GrowthStep Name="Dead" StartingProbability="0.05">
         <NextStep>Enchanted_TreeSapling</NextStep>

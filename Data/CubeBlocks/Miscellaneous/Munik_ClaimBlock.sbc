@@ -6,17 +6,18 @@
     <BlockPairName>Munik_ClaimBlock</BlockPairName>
     <Public>true</Public>
     <Icon>Textures\GUI\Icons\Cubes\ClaimBlock.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
     <CubeSize>Large</CubeSize>
     <BlockTopology>TriangleMesh</BlockTopology>
     <Size x="1" y="1" z="1" />
     <ModelOffset x="0" y="0" z="0" />
     <Model>Models\Cubes\Large\ClaimBlock.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <PhysicalMaterial>ClaimStone</PhysicalMaterial>
     <Components>
       <Component Tag="ScrapWood" Count="4" />
-      <Component Type="InventoryItem" Subtype="LargeStone" Count="20" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count="20" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
     <BuildProgressModels>
       <Model BuildPercentUpperBound="0.7" File="Models\Cubes\large\ClaimBlock_Construction_1.mwm" />
     </BuildProgressModels>
@@ -47,8 +48,7 @@
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Munik_ClaimBlock" />
-        <Component BuilderType="MyObjectBuilder_SafezoneRespawnComponent" ForceCreate="true"/>
+    <Component BuilderType="SafezoneRespawnComponent" ForceCreate="true"/>
   </Definition>
 
-	
 </Definitions>

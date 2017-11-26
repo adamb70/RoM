@@ -1,114 +1,155 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+
+<!-- Pristine Tags -->
+
+<!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="ScrapWood"/>
-    <DisplayName>DisplayName_Item_WoodenSticks</DisplayName>
-    <Description>Description_Item_WoodenSticks</Description>
+    <Id Type="ItemTagDefinition" Subtype="Pristine_Stone"/>
+    <DisplayName>Pristine Stone</DisplayName>
+    <Description>
+Can be any of the allowed types of stones. 
+Pristine Stones can be found by picking up
+small stones. Colors may vary.
+</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\StoneSmall.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Pristine_Stick"/>
+    <DisplayName>Pristine Stick</DisplayName>
+    <Description>
+Can be any of the allowed types of sticks. 
+Pristine Sticks can be found by searching 
+small trees and pine trees. Chopping trees
+do not provide Pristine Sticks.
+</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Pristine_Berry"/>
+    <DisplayName>Pristine Berries</DisplayName>
+    <Description>
+Can be any of the allowed types of berries. 
+Pristine Berries are found on berry bushes, 
+they grow everywhere within the realm.
+</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Berries.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Pristine_Mushroom"/>
+    <DisplayName>Pristine Mushrooms</DisplayName>
+    <Description>
+Can be any of the allowed types of mushrooms.
+Pristine Mushrooms are found in mushroom patches, 
+they grow everywhere within the realm.
+</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Mushrooms.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+
+
+
+
+
+<!-- Normal Tags -->
+
+
+
+
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Universal_Stone"/>
+    <DisplayName>Stone</DisplayName>
+    <Description>
+Can be any of the allowed types of stones. 
+Stones can be found by picking up
+small stones. Colors may vary.
+</Description>
+    <Icon>Textures\GUI\Icons\Materials\StoneSmall.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Universal_Stick"/>
+    <DisplayName>Stick</DisplayName>
+    <Description>
+Can be any of the allowed types of sticks. 
+Sticks can be found by searching small 
+trees and pine trees. Chopping trees
+do not provide Pristine Sticks.
+</Description>
     <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
   </Definition>
-
+<!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Ore"/>
-    <DisplayName>DisplayName_ItemTag_Ore</DisplayName>
-    <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+    <Id Type="ItemTagDefinition" Subtype="Universal_Berry"/>
+    <DisplayName>Berries</DisplayName>
+    <Description>
+Can be any of the allowed types of berries. 
+Berries are found on berry bushes, they 
+grow everywhere within the realm.
+</Description>
+    <Icon>Textures\GUI\Icons\Consumables\Berries.dds</Icon>
   </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Universal_Mushroom"/>
+    <DisplayName>Mushrooms</DisplayName>
+    <Description>
+Can be any of the allowed types of mushrooms.
+Mushrooms are found in mushroom patches, 
+they grow everywhere within the realm.
+</Description>
+      <Icon>Textures\GUI\Icons\Consumables\Mushrooms.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
 
+
+
+
+
+
+
+
+
+<!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
     <Id Type="ItemTagDefinition" Subtype="Rotten"/>
     <DisplayName>Rotten Food</DisplayName>
     <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
   </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="OreIron"/>
-    <DisplayName>DisplayName_Ore_IronOre</DisplayName>
-    <Description>Description_Ore_IronOre</Description>
-    <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Ingot"/>
-    <DisplayName>DisplayName_ItemTag_Ingot</DisplayName>
-    <Icon>Textures\GUI\Icons\Materials\IronIngot.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="IngotIron"/>
-    <DisplayName>DisplayName_Item_IronIngot</DisplayName>
-    <Description>Description_Item_IronIngot</Description>
-    <Icon>Textures\GUI\Icons\Materials\IronIngot.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Meat"/>
-    <DisplayName>DisplayName_Consumables_Meat</DisplayName>
-    <Description>Description_Consumables_Meat</Description>
-    <Icon>Textures\GUI\Icons\Consumables\Meat.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Berry"/>
-    <DisplayName>DisplayName_Consumables_Berries</DisplayName>
-    <Description>Description_Consumables_Berries</Description>
-    <Icon>Textures\GUI\Icons\Consumables\Berries.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Timber"/>
-    <DisplayName>DisplayName_Block_Timber10</DisplayName>
-    <Description>Description_Item_Timber</Description>
-    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="ProjectileCatapult"/>
-    <DisplayName>DisplayName_Block_LargeProjectile</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\CatapultProjectileLarge.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Torch"/>
-    <DisplayName>DisplayName_Torch</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Torch.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Flag"/>
-    <DisplayName>DisplayName_ItemTag_Flag</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\BannerBlue.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Harvest"/>
-    <DisplayName>DisplayName_ItemTag_Harvest</DisplayName>
-    <Icon>Textures\GUI\Icons\Materials\WheatStraws.dds</Icon>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
-    <Id Type="ItemTagDefinition" Subtype="Dish"/>
-    <DisplayName>DisplayName_ItemTag_Dish</DisplayName>
-    <Icon>Textures\GUI\Icons\Consumables\Dish_MushroomSoup.dds</Icon>
-  </Definition>
-  
+<!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
     <Id Type="ItemTagDefinition" Subtype="Bone"/>
     <DisplayName>DisplayName_ItemTag_Bone</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\bones.dds</Icon>
   </Definition>
-  
+  <!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
     <Id Type="ItemTagDefinition" Subtype="Drink"/>
     <DisplayName>DisplayName_ItemTag_Beer</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Cooking\jug_of_water.dds</Icon>
 	<Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
   </Definition>
-  
+  <!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
     <Id Type="ItemTagDefinition" Subtype="Larva"/>
     <DisplayName>DisplayName_ItemTag_Larva</DisplayName>
     <Icon>Textures\GUI\Icons\Berries.dds</Icon>
   </Definition>
-  
+  <!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
     <Id Type="ItemTagDefinition" Subtype="Carapace"/>
     <DisplayName>DisplayName_ItemTag_Carapace</DisplayName>
@@ -116,4 +157,5 @@
 	<Icon>Textures\GUI\Icons\Materials\StoneSmall.dds</Icon>
     <Icon>Textures\GUI\Icons\Berries.dds</Icon>
   </Definition>
+<!-- =================================================================== -->
 </Definitions>

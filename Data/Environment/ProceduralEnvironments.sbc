@@ -38,433 +38,21 @@
 
       <Proxy Type="MyObjectBuilder_EnvironmentModuleProxyDefinition" Subtype="BotSpawner" />
     </Item>
+
+    <Item Name="Boulder">
+      <ProxyActivationLod>1</ProxyActivationLod>
+
+      <Provider Type="MyObjectBuilder_ProceduralEnvironmentModuleDefinition" Subtype="Memory"/>
+      <Proxy Type="MyObjectBuilder_EnvironmentModuleProxyDefinition" Subtype="VoxelMap" />
+    </Item>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_ProceduralWorldEnvironment">
-    <Id>
-      <TypeId>MyObjectBuilder_ProceduralWorldEnvironment</TypeId>
-      <SubtypeId>Earth Environment</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_ProceduralWorldEnvironment" Subtype="Mistvalin_Environment" />
 
     <!-- Maximum lod untill sectors are synchronized -->
     <MaxSyncLod>1</MaxSyncLod>
     <SectorSize>40</SectorSize>
-
-    <ItemsPerSqMeter>0.17</ItemsPerSqMeter>
-
-    <ScanningMethod>Random</ScanningMethod>
-
-    <ItemTypes Type="MyObjectBuilder_EnvironmentItemTypesDefinition" Subtype="Default"/>
-
-    <!-- !!Item Groups are pending revision!! -->
-
-    <ItemGroup Density=".017" Name="Bots" LodStart="1" LodEnd="1">
-      <Mapping>
-        <Material>Woods</Material>
-
-        <Item Type="Bot" Subtype="Deer"/>
-      </Mapping>
-      <Mapping>
-        <Biome>60</Biome>
-
-        <Item Type="Bot" Subtype="Deer" Density="0.5"/>
-        <Item Type="Bot" Subtype="Barbarian" Density="0.1"/>
-      </Mapping>
-    </ItemGroup>
-
-    <ItemGroup Density=".085" Name="Trees" LodStart="-1" LodEnd="1">
-      <Mapping>
-        <Biome>60</Biome>
-        <Material>Woods</Material>
-
-        <Item Type="Tree" Subtype="TreePine4m" Density="0.25"/>
-        <Item Type="Tree" Subtype="TreeSmall" Density="0.20"/>
-        <Item Type="Tree" Subtype="Schematic_TreePine4m" Density="0.040"/>
-        <Item Type="Tree" Subtype="Schematic_Seeds_TreePine4m" Density="0.040"/>
-        <Item Type="Tree" Subtype="Schematic_TreeSmall" Density="0.040"/>
-        <Item Type="Tree" Subtype="TreePine10" Density="0.6"/>
-        <Item Type="Tree" Subtype="TreePine15" Density="0.55"/>
-        <Item Type="Tree" Subtype="TreePine175" Density="0.45"/>
-        <Item Type="Tree" Subtype="TreePine225" Density="0.015"/>
-        <Item Type="Tree" Subtype="TreePine25" Density="0.001"/>
-      </Mapping>
-      <Mapping>
-        <Biome>60</Biome>
-        <Material>Woods_needles</Material>
-
-
-        <Item Type="Tree" Subtype="TreePine4m" Density="0.25"/>
-        <Item Type="Tree" Subtype="TreeSmall" Density="0.20"/>
-        <Item Type="Tree" Subtype="Schematic_TreePine4m" Density="0.040"/>
-        <Item Type="Tree" Subtype="Schematic_Seeds_TreePine4m" Density="0.040"/>
-        <Item Type="Tree" Subtype="Schematic_TreeSmall" Density="0.040"/>
-        <Item Type="Tree" Subtype="TreePine10" Density="0.6"/>
-        <Item Type="Tree" Subtype="TreePine15" Density="0.55"/>
-        <Item Type="Tree" Subtype="TreePine175" Density="0.45"/>
-        <Item Type="Tree" Subtype="TreePine225" Density="0.015"/>
-        <Item Type="Tree" Subtype="TreePine25" Density="0.001"/>
-      </Mapping>
-      <Mapping>
-        <Biome>60</Biome>
-        <Material>Woods_grass</Material>
-
-        <Item Type="Tree" Subtype="TreePine4m" Density="0.25"/>
-        <Item Type="Tree" Subtype="TreeSmall" Density="0.20"/>
-        <Item Type="Tree" Subtype="Schematic_TreePine4m" Density="0.040"/>
-        <Item Type="Tree" Subtype="Schematic_Seeds_TreePine4m" Density="0.040"/>
-        <Item Type="Tree" Subtype="Schematic_TreeSmall" Density="0.040"/>
-        <Item Type="Tree" Subtype="TreePine10" Density="0.6"/>
-        <Item Type="Tree" Subtype="TreePine15" Density="0.55"/>
-        <Item Type="Tree" Subtype="TreePine175" Density="0.45"/>
-        <Item Type="Tree" Subtype="TreePine225" Density="0.015"/>
-        <Item Type="Tree" Subtype="TreePine25" Density="0.001"/>
-      </Mapping>
-      <Mapping>
-        <Biome>70</Biome>
-        <Material>Woods</Material>
-        
-        <Item Type="Tree" Subtype="TreePine4m" Density="0.0025"/>
-        <Item Type="Tree" Subtype="TreeSmall" Density="0.0020"/>
-        <Item Type="Tree" Subtype="Schematic_TreePine4m" Density="0.0040"/>
-        <Item Type="Tree" Subtype="Schematic_Seeds_TreePine4m" Density="0.0040"/>
-        <Item Type="Tree" Subtype="Schematic_TreeSmall" Density="0.0040"/>
-        <Item Type="Tree" Subtype="TreePine15" Density="0.005"/>
-        <Item Type="Tree" Subtype="TreePine175" Density="0.3"/>
-        <Item Type="Tree" Subtype="TreePine225" Density="0.35"/>
-        <Item Type="Tree" Subtype="TreePine25" Density="0.5"/>
-      </Mapping>
-    </ItemGroup>
-
-    <ItemGroup Density=".36" Name="Small Items" LodStart="0" LodEnd="0">
-      <Mapping>
-        <Material>Woods</Material>
-        
-        <Item Type="Static" Subtype="Bush" Density="0.015"/>
-        <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
-
-        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.0025"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Spalt" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Roots" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.0035"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0018"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0035"/>
-        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.0025"/>
-
-        <Item Type="Gatherable" Subtype="Berries" Density="0.025"/> 
-        <Item Type="Gatherable" Subtype="Norden_Spalt" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Mushrooms" Density="0.035"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.15"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.018"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.035"/>
-        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/> 
-      </Mapping>    
-      <Mapping>
-        <Biome>60</Biome>
-        <Material>Woods</Material>
-
-        <Item Type="Static" Subtype="Bush" Density="0.035"/>
-        <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
-        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.0035"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Spalt" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Roots" Density="0.0005"/>
-        <Item Type="Static" Subtype="Bush" Density="0.07"/>
-        <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.002"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0022"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.0035"/>
-
-        <Item Type="Gatherable" Subtype="Berries" Density="0.035"/> 
-        <Item Type="Gatherable" Subtype="Norden_Spalt" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.02"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.035"/> 
-
-      </Mapping>
-      <Mapping>
-        <Biome>60</Biome>
-        <Material>Woods_needles</Material>
-
-        <Item Type="Static" Subtype="Bush" Density="0.035"/>
-        <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
-        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.0035"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Spalt" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Roots" Density="0.0005"/>
-        <Item Type="Static" Subtype="Bush" Density="0.07"/>
-        <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0022"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0022"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.0035"/>
-
-        <Item Type="Gatherable" Subtype="Berries" Density="0.035"/> 
-        <Item Type="Gatherable" Subtype="Norden_Spalt" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.022"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.035"/> 
-
-      </Mapping>
-      <Mapping>
-        <Biome>60</Biome>
-        <Material>Woods_grass</Material>
-
-        <Item Type="Static" Subtype="Bush" Density="0.035"/>
-        <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
-        <Item Type="Static" Subtype="Bush" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.0035"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Spalt" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Roots" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_WildPumpkin" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.002"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0022"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.0035"/>
-
-        <Item Type="Gatherable" Subtype="Berries" Density="0.035"/> 
-        <Item Type="Gatherable" Subtype="Norden_Spalt" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="WildPumpkin" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.02"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.035"/> 
-      </Mapping>
-      <Mapping>
-        <Biome>70</Biome>
-        <Material>Woods</Material>
-        
-        <Item Type="Static" Subtype="Bush" Density="0.007"/>
-        <Item Type="Static" Subtype="Fern" Density="0.04" MaxRoll="35"/>
-        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.0025"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Spalt" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Roots" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.004"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.002"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0022"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0025"/>
-        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.0025"/>
-
-        <Item Type="Gatherable" Subtype="Berries" Density="0.025"/> 
-        <Item Type="Gatherable" Subtype="Norden_Spalt" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Mushrooms" Density="0.04"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.02"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.025"/>
-        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/> 
-      </Mapping>
-
-      <!-- Road biomes -->
-
-      <Mapping>
-        <Biome>200</Biome>
-        <Material>Soil</Material>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.01"/>
-      </Mapping>
-      <Mapping>
-        <Biome>200</Biome>
-        <Slope Min="0" Max="35"/>
-        <Material>Grass</Material>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0007"/>
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.002"/>
-
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.07"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="Herbs" Density="0.02"/>
-      </Mapping>
-      <Mapping>
-        <Biome>200</Biome>
-        <Slope Min="0" Max="35"/>
-        <Material>Grass_02</Material>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.002"/>
-
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.07"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Herbs" Density="0.02"/>
-      </Mapping>
-      <Mapping>
-        <Biome>200</Biome>
-        <Slope Min="0" Max="80"/>
-        <Material>Rocks_grass</Material>
-        <Item Type="Gatherable" Subtype="Schematic_SingleIronOre" Density="0.001"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0025"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.001"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0007"/>
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.00015"/>
-
-        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.010"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.025"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.01"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="Herbs" Density="0.0015"/>
-      </Mapping>
-      <Mapping>
-        <Biome>200</Biome>
-        <Slope Min="0" Max="35"/>
-        <Material>Woods</Material>
-
-        <Item Type="Static" Subtype="Fern" Density="0.015" MaxRoll="35"/>
-        <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0007"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0007"/>
-
-        <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.07"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.007"/>
-      </Mapping>
-      <Mapping>
-        <Biome>200</Biome>
-        <Slope Min="0" Max="35"/>
-        <Material>Woods_grass</Material>
-        <Item Type="Static" Subtype="Fern" Density="0.015" MaxRoll="35"/>
-        <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0007"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0007"/>
-
-        <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.07"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.007"/>
-      </Mapping>
-      <Mapping>
-        <Biome>200</Biome>
-        <Slope Min="0" Max="35"/>
-        <Material>Woods_needles</Material>
-        <Item Type="Static" Subtype="Fern" Density="0.015" MaxRoll="35"/>
-        <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0007"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.001"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0007"/>
-
-        <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.01"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.007"/>
-      </Mapping>
-
-      <!-- Biomes tweaks-->
-
-      <Mapping>
-        <Slope Min="0" Max="80"/>
-        <Material>Rocks_grass</Material>
-        <Item Type="Gatherable" Subtype="Schematic_SingleIronOre" Density="0.001"/>
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0007"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.00007"/>
-
-        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.01"/>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.05"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.0007"/>
-      </Mapping>
-
-      <Mapping>
-        <Height Min="80" Max="100"/>
-        <Slope Min="0" Max="20"/>
-        <Material>Grass</Material>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.00035"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.00025"/>
-
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.0035"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.0025"/>
-      </Mapping>
-
-      <Mapping>
-        <Slope Min="0" Max="30"/>
-
-        <Material>Grass_old</Material>
-        <Material>Grass</Material>
-
-        <Item Type="Static" Subtype="Bush" Density="0.00015"/>
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.0000155"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.000015"/>
-        <Item Type="Gatherable" Subtype="Schematic_WildCabbage" Density="0.000015"/>
-        <Item Type="Gatherable" Subtype="Schematic_WildPumpkin" Density="0.000015"/>
-        <Item Type="Gatherable" Subtype="Schematic_WildFlax" Density="0.000015"/>
-        <Item Type="Gatherable" Subtype="Schematic_WildWheat" Density="0.000015"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Barley" Density="0.000015"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Barley_Roots" Density="0.000015"/>
-
-        <Item Type="Gatherable" Subtype="Herbs" Density="0.000255"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.000155"/>
-        <Item Type="Gatherable" Subtype="WildCabbage" Density="0.00015"/>
-        <Item Type="Gatherable" Subtype="WildPumpkin" Density="0.00015"/>
-        <Item Type="Gatherable" Subtype="WildFlax" Density="0.00015"/>
-        <Item Type="Gatherable" Subtype="WildWheat" Density="0.00015"/>
-        <Item Type="Gatherable" Subtype="Norden_Barley" Density="0.00015"/>
-      </Mapping>
-
-      <Mapping Name="WildFlaxPatches">
-        <Material>Grass</Material>
-        <Biome>110</Biome>
-        <Item Type="Gatherable" Subtype="Schematic_WildFlax" Density=".02"/>
-        <Item Type="Gatherable" Subtype="WildFlax" Density=".15"/>
-      </Mapping>
-      <Mapping Name="WildCabbagePatches">
-        <Material>Grass</Material>
-        <Biome>120</Biome>
-        <Item Type="Gatherable" Subtype="Schematic_WildCabbage" Density=".01"/>
-        <Item Type="Gatherable" Subtype="WildCabbage" Density=".1"/>
-      </Mapping>
-      <Mapping Name="WildWheatPatches">
-        <Material>Grass</Material>
-        <Biome>130</Biome>
-        <Item Type="Gatherable" Subtype="Schematic_WildWheat" Density=".01"/>
-        <Item Type="Gatherable" Subtype="Schematic_Norden_Barley" Density=".005"/>
-        <Item Type="Gatherable" Subtype="WildWheat" Density=".1"/>
-      </Mapping>
-
-      <Mapping>
-        <Slope Min="15" Max="30"/>
-
-        <Material>Grass_old</Material>
-        <Material>Grass</Material>
-        <Material>Rocks_grass</Material>
-        
-        <Item Type="Static" Subtype="Bush" Density="0.1"/>
-        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.0025"/>
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.0025"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0003"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleIronOre" Density="0.0001"/>
-        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.0025"/>
-
-        <Item Type="Gatherable" Subtype="Berries" Density="0.025"/> 
-        <Item Type="Gatherable" Subtype="Herbs" Density="0.025"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.004"/>
-        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.001"/>
-        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/> 
-      </Mapping>
-    </ItemGroup>
-  </Definition>
-
-<!-- ===================================================================================================================== -->
-
-  <Definition xsi:type="MyObjectBuilder_ProceduralWorldEnvironment">
-    <Id>
-      <TypeId>MyObjectBuilder_ProceduralWorldEnvironment</TypeId>
-      <SubtypeId>Mistvalin_Environment</SubtypeId>
-    </Id>
-
-    <!-- Maximum lod untill sectors are synchronized -->
-    <MaxSyncLod>1</MaxSyncLod>
-    <SectorSize>40</SectorSize>
-
-    <ItemsPerSqMeter>0.17</ItemsPerSqMeter>
 
     <ScanningMethod>Random</ScanningMethod>
 
@@ -477,25 +65,25 @@
 	  <!--city bots-->
 	  <Mapping><!--NPC for spawn village E6-->
 		<Biome>220</Biome>
-        <Material>COGSoil</Material>
+        <Material>Soil</Material>
 
       </Mapping>
 	  
 	  <Mapping><!--NPC for spawn village munik-->
 		<Biome>222</Biome>
-        <Material>COGSoil</Material>
+        <Material>Soil</Material>
 
       </Mapping>
 	  
 	  <Mapping><!--NPC for spawn village rienburg-->
 		<Biome>224</Biome>
-        <Material>COGSoil</Material>
+        <Material>Soil</Material>
 
       </Mapping>
 	  
 	  <Mapping><!--NPC for spawn village dunmorden-->
 		<Biome>226</Biome>
-        <Material>COGSoil</Material>
+        <Material>Soil</Material>
 
       </Mapping>
 	  
@@ -510,9 +98,9 @@
 	  
 	  
 	  <Mapping>
-        <Material>COGWoods</Material>
-
-        <Item Type="Bot" Subtype="Deer"/>
+        <Material>Woods</Material>
+        <Item Type="Bot" Subtype="Deer" Density="0.7"/>
+        <Item Type="Bot" Subtype="DeerNothern" Density="0.2"/>
       </Mapping>
 	  
       <Mapping>
@@ -525,8 +113,9 @@
 	  
 	  <Mapping><!--elven bot area 2-->
         <Biome>160</Biome>
-
+        
         <Item Type="Bot" Subtype="Deer" Density="0.5"/>
+        <Item Type="Bot" Subtype="DeerNothern" Density="0.1"/>
         <Item Type="Bot" Subtype="Barbarian" Density="0.2"/>
       </Mapping>
 	  
@@ -534,6 +123,7 @@
         <Biome>162</Biome>
 
         <Item Type="Bot" Subtype="Deer" Density="0.5"/>
+        <Item Type="Bot" Subtype="DeerNothern" Density="0.2"/>
         <Item Type="Bot" Subtype="Barbarian" Density="0.2"/>
       </Mapping>
 	  
@@ -551,18 +141,19 @@
 	  <Mapping>	<!--Deep Elven Forest Bot Area-->
         <Biome>150</Biome>
         <Item Type="Bot" Subtype="Deer" Density="0.5"/>
+        <Item Type="Bot" Subtype="DeerNothern" Density="0.1"/>
         <Item Type="Bot" Subtype="Barbarian" Density="0.2"/>
       </Mapping>
 
 
 	  <Mapping>	<!--Barbarossas hord high-->
         <Biome>168</Biome>
-		<Material>COGSoil</Material>
+		<Material>Soil</Material>
       </Mapping>
 	  
 	  <Mapping>	<!--Barbarossas hord low-->
         <Biome>170</Biome>
-		<Material>COGSoil</Material>
+		<Material>Soil</Material>
       </Mapping>
 
 	  
@@ -575,16 +166,15 @@
 <!-- ===================================== Norden Area ============================================= -->
       <Mapping>
         <Biome>50</Biome><!--nordic forest edge-->
-		<!--because there is no way to say (<Material>!Stone</Material>)-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+        <!--because there is no way to say (<Material>!Stone</Material>)-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Slope Min="0" Max="45"/>
 
         <Item Type="Tree" Subtype="TreePine4m" Density="0.15"/> 
         <Item Type="Tree" Subtype="TreeSmall" Density="0.15"/> 
@@ -602,15 +192,15 @@
 	  
       <Mapping>
         <Biome>60</Biome><!--nordic forest mid-->    <!-- This is spawning norden forests in Elven Grove -->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Slope Min="0" Max="45"/>
+        
         <Item Type="Tree" Subtype="TreePine4m" Density="0.15"/> 
         <Item Type="Tree" Subtype="TreeSmall" Density="0.15"/> 
         <Item Type="Tree" Subtype="Schematic_TreePine4m" Density="0.015"/> 
@@ -624,16 +214,15 @@
       </Mapping>
       
       <Mapping>
-        <Biome>70</Biome><!--nordic forest dencse-->
-        <Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+        <Biome>70</Biome><!--nordic forest dense-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Slope Min="0" Max="45"/>
 
         <Item Type="Tree" Subtype="TreePine4m" Density="0.025"/> 
         <Item Type="Tree" Subtype="TreeSmall" Density="0.020"/> 
@@ -646,17 +235,17 @@
         <Item Type="Tree" Subtype="TreePine25" Density="0.5"/>  
       </Mapping>
 <!-- ===================================== Dwarven Area ============================================= -->	  
-	  <Mapping>
-	  <Biome>100</Biome><!--mount forest edge-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+      <Mapping>
+        <Biome>100</Biome><!--mountain forest edge-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Slope Min="0" Max="45"/>
+        
         <Item Type="Tree" Subtype="TreePine4m" Density="0.05"/> 
         <Item Type="Tree" Subtype="TreeSmall" Density="0.050"/> 
         <Item Type="Tree" Subtype="Schematic_TreePine4m" Density="0.005"/> 
@@ -668,18 +257,33 @@
         <Item Type="Tree" Subtype="TreePine225" Density="0.015"/> 
         <Item Type="Tree" Subtype="TreePine25" Density="0.001"/>  
       </Mapping>
+      
+      <Mapping> <!-- Snowy Trees -->
+        <Biome>100</Biome><!--mountain forest edge-->
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        <Slope Min="0" Max="45"/>
+        
+        <Item Type="Tree" Subtype="TreePine4mSnowy" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine10Snowy" Density="0.4"/>
+        <Item Type="Tree" Subtype="TreePine15Snowy" Density="0.65"/>
+        <Item Type="Tree" Subtype="TreePine175Snowy" Density="0.55"/>
+        <Item Type="Gatherable" Subtype="HazelLargeBranchless" Density="0.3"/>
+        <Item Type="Gatherable" Subtype="HazelMediumBranchless" Density="0.3"/>
+        <Item Type="Tree" Subtype="Schematic_SnowyTreeSmall" Density="0.005"/>
+      </Mapping>
 	  
       <Mapping>
-        <Biome>110</Biome><!--mount forest mid-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+        <Biome>110</Biome><!--mountain forest mid-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Slope Min="0" Max="45"/>
+        
         <Item Type="Tree" Subtype="TreePine4m" Density="0.15"/> 
         <Item Type="Tree" Subtype="TreeSmall" Density="0.10"/> 
         <Item Type="Tree" Subtype="Schematic_TreePine4m" Density="0.015"/> 
@@ -692,17 +296,32 @@
         <Item Type="Tree" Subtype="TreePine25" Density="0.001"/> 
       </Mapping>
       
+      <Mapping> <!-- Snowy Trees -->
+        <Biome>110</Biome><!--mountain forest edge-->
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        <Slope Min="0" Max="45"/>
+        
+        <Item Type="Tree" Subtype="TreePine4mSnowy" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine10Snowy" Density="0.4"/>
+        <Item Type="Tree" Subtype="TreePine15Snowy" Density="0.65"/>
+        <Item Type="Tree" Subtype="TreePine175Snowy" Density="0.55"/>
+        <Item Type="Gatherable" Subtype="HazelLargeBranchless" Density="0.3"/>
+        <Item Type="Gatherable" Subtype="HazelMediumBranchless" Density="0.3"/>
+        <Item Type="Tree" Subtype="Schematic_SnowyTreeSmall" Density="0.005"/>
+      </Mapping>
+      
       <Mapping>
-        <Biome>120</Biome><!--mount forest dencse-->
- 		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>      
+        <Biome>120</Biome><!--mount forest dense-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Slope Min="0" Max="45"/>
+        
         <Item Type="Tree" Subtype="TreePine4m" Density="0.025"/> 
         <Item Type="Tree" Subtype="TreeSmall" Density="0.020"/> 
         <Item Type="Tree" Subtype="Schematic_TreePine4m" Density="0.0025"/> 
@@ -713,172 +332,193 @@
         <Item Type="Tree" Subtype="TreePine225" Density="0.35"/> 
         <Item Type="Tree" Subtype="TreePine25" Density="0.5"/> 
       </Mapping>
+      
+      <Mapping> <!-- Snowy Trees -->
+        <Biome>120</Biome><!--mountain forest edge-->
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        <Slope Min="0" Max="45"/>
+        
+        <Item Type="Tree" Subtype="TreePine4mSnowy" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine10Snowy" Density="0.4"/>
+        <Item Type="Tree" Subtype="TreePine15Snowy" Density="0.65"/>
+        <Item Type="Tree" Subtype="TreePine175Snowy" Density="0.55"/>
+        <Item Type="Gatherable" Subtype="HazelLargeBranchless" Density="0.3"/>
+        <Item Type="Gatherable" Subtype="HazelMediumBranchless" Density="0.3"/>
+        <Item Type="Tree" Subtype="Schematic_SnowyTreeSmall" Density="0.005"/>
+      </Mapping>
 	  
 <!-- ===================================== Elven Area ============================================= -->
-	  <Mapping>
-        <Biome>144</Biome><!--elf forestmajic dencse-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material> 
-		<Material>COGWoods_elven</Material> 
-		<Material>COGWoods_grass_elven</Material> 
-		<Material>COGWoods_needles_elven</Material> 
-	<Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>       
-	<Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>
+      <Mapping>
+        <Biome>144</Biome><!--elf forest magic dense-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        <Material>COGWoods_elven</Material>
+        <Material>COGWoods_grass_elven</Material>
+        <Material>COGWoods_needles_elven</Material>
+        
+        <Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>       
+        <Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>   
       </Mapping>
-	  <Mapping>
-        <Biome>146</Biome><!--elf forestmajic dencse-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material> 
-    <Material>COGWoods_elven</Material> 
-		<Material>COGWoods_grass_elven</Material> 
-		<Material>COGWoods_needles_elven</Material> 
-	<Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>       
-	<Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>  
+      
+      <Mapping>
+        <Biome>146</Biome><!--elf forest magic dense-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material> 
+        <Material>COGWoods_elven</Material>
+        <Material>COGWoods_grass_elven</Material>
+        <Material>COGWoods_needles_elven</Material>
+        
+        <Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>       
+        <Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>  
       </Mapping>
-	  <Mapping>
-        <Biome>148</Biome><!--elf forestmajic dencse-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material> 
-    <Material>COGWoods_elven</Material> 
-		<Material>COGWoods_grass_elven</Material> 
-		<Material>COGWoods_needles_elven</Material> 
-	<Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>        
-	<Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>   
+      
+      <Mapping>
+        <Biome>148</Biome><!--elf forest magic dense-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        <Material>COGWoods_elven</Material>
+        <Material>COGWoods_grass_elven</Material>
+        <Material>COGWoods_needles_elven</Material>
+        
+        <Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>        
+        <Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>   
       </Mapping>
-	  <Mapping>
-        <Biome>150</Biome><!--elf forestmajic dencse-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material> 
-    <Material>COGWoods_elven</Material> 
-		<Material>COGWoods_grass_elven</Material> 
-		<Material>COGWoods_needles_elven</Material> 
-	<Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>       
- 	<Item Type="Tree" Subtype="Schematic_Enchanted_TreeSmall" Density="0.0000000000000001"/>  
-	<Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>   
-      </Mapping>
-
-	  <Mapping>
-		<Biome>166</Biome><!--elf forestmajic dencse--> <!--elven bots-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material> 
-    <Material>COGWoods_elven</Material> 
-		<Material>COGWoods_grass_elven</Material> 
-		<Material>COGWoods_needles_elven</Material> 
-	<Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>        
-	<Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>  
+      
+      <Mapping>
+        <Biome>150</Biome><!--elf forest magic dense-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material> 
+        <Material>COGWoods_elven</Material>
+        <Material>COGWoods_grass_elven</Material>
+        <Material>COGWoods_needles_elven</Material>
+        
+        <Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>       
+        <Item Type="Tree" Subtype="Schematic_Enchanted_TreeSmall" Density="0.0000000000000001"/>  
+        <Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>   
       </Mapping>
 
+      <Mapping>
+        <Biome>166</Biome><!--elf forest magic dense--> <!--elven bots-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material> 
+        <Material>COGWoods_elven</Material>
+        <Material>COGWoods_grass_elven</Material>
+        <Material>COGWoods_needles_elven</Material>
+        
+        <Item Type="Tree" Subtype="Enchanted_TreeSmall" Density="0.001"/>        
+        <Item Type="Tree" Subtype="Enchanted_TreePine25" Density="0.2"/>  
+      </Mapping>
 
     </ItemGroup>
 
 	
 	
     <ItemGroup Density=".36" Name="Small Items" LodStart="0" LodEnd="0">     
-      
-
-
-
-
-
-
 	
 		<!--Items for dry grass area-->
-		<Mapping>
-			<Material>COGGrass_old</Material>
-			<Slope Min="0" Max="10"/>
-			<Height Min="0" Max="0.1"/>
-		<Item Type="Static" Subtype="Bush" Density="0.0015"/>  
-		
-		
-		</Mapping>
-	
-	
-		<!--Items for sand area-->
-		<Mapping>
-			<Material>COGSand</Material>
-			<Slope Min="0" Max="10"/>
-			<Height Min="0" Max="0.08"/>
-		
-		
-		</Mapping>
-	
-	
-	
-		<!--Items for desert mountains-->
-		<Mapping>
-			<Material>COGDesert_Soil</Material>
-			<Material>COGGrass_old</Material>
-			<Slope Min="0" Max="30"/>
-			<Height Min="0.08" Max="1"/>
-		<Item Type="Static" Subtype="Bush" Density="0.0015"/>  
-		</Mapping>
+      <Mapping>
+        <Material>COGSteppeYellowGrass</Material>
+        <Slope Min="0" Max="10"/>
+        <Height Min="0" Max="0.1"/>
+        
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/>
+        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.00005"/>
+        
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.0005"/>
+        <Item Type="Gatherable" Subtype="Opuntia" Density="0.001"/>
+        <Item Type="Gatherable" Subtype="Roots" Density="0.002"/>
+        <Item Type="Gatherable" Subtype="DriedBush" Density="0.0006"/>
+      
+      </Mapping>
+    
+    
+      <!--Items for sand area-->
+      <Mapping>
+        <Material>SandDark</Material>
+        <Slope Min="0" Max="10"/>
+        <Height Min="0" Max="0.08"/>
+      
+        <Item Type="Gatherable" Subtype="Opuntia" Density="0.00001"/>
+      </Mapping>
+    
+    
+    
+      <!--Items for desert mountains-->
+      <Mapping>
+        <Material>COGDesert_Soil</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Slope Min="0" Max="30"/>
+        <Height Min="0.08" Max="1"/>
+        <Item Type="Static" Subtype="Opuntia" Density="0.0005"/>  
+      </Mapping>
 
 
 
 
-		<Mapping>
-			<Material>COGDesert_Rubble</Material>
-			<Material>COGDesert_Soil</Material>
-			<Slope Min="0" Max="45"/>
-			<Height Min="0.08" Max="1"/>
-		<Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/>  
-        	<Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
-	 	<Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.00035"/> 
-        	<Item Type="Gatherable" Subtype="Schematic_SingleSandStone" Density="0.00075"/> 
-		</Mapping>
+      <Mapping>
+        <Material>COGDesert_Rubble</Material>
+        <Material>COGDesert_Soil</Material>
+        <Slope Min="0" Max="45"/>
+        <Height Min="0.08" Max="1"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/>  
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.00035"/> 
+        <Item Type="Gatherable" Subtype="Schematic_SingleSandStone" Density="0.00075"/> 
+      </Mapping>
 
 
-	
-		<Mapping>
-			<Material>COGDesert_Soil</Material>
-			<Material>COGDesert_Rubble</Material>
-			<Height Min="0.03" Max="0.08"/>
-		</Mapping>
+    
+      <Mapping>
+        <Material>COGDesert_Soil</Material>
+        <Material>COGDesert_Rubble</Material>
+        <Height Min="0.03" Max="0.08"/>
+      </Mapping>
 
-		<Mapping>
-			<Material>COGDesert_Rubble</Material>
-			<Material>COGDesert_Soil</Material>
-			<Height Min="0.03" Max="0.08"/>
-		<Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
-        	<Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
-	 	<Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.00035"/> 
-        	<Item Type="Gatherable" Subtype="Schematic_SingleSandStone" Density="0.00075"/> 
-		</Mapping>
+      <Mapping>
+        <Material>COGDesert_Rubble</Material>
+        <Material>COGDesert_Soil</Material>
+        <Height Min="0.03" Max="0.08"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.00035"/> 
+        <Item Type="Gatherable" Subtype="Schematic_SingleSandStone" Density="0.00075"/> 
+      </Mapping>
 
 
 
@@ -889,18 +529,18 @@
 <!-- ===================================== Norden Area ============================================= -->
       <Mapping>
         <Biome>50</Biome>
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        
         <Item Type="Static" Subtype="Bush" Density="0.035"/>
         <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
-        <Item Type="Static" Subtype="Bush" Density="0.07"/>
 
         <Item Type="Gatherable" Subtype="Berries" Density="0.025"/> 
         <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
@@ -908,7 +548,9 @@
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
         <Item Type="Gatherable" Subtype="Roots" Density="0.015"/>
         <Item Type="Gatherable" Subtype="Norden_Spalt" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/> 
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/>
+        <Item Type="Gatherable" Subtype="HazelMedium" Density="0.01"/>
+        <Item Type="Gatherable" Subtype="HazelSmall" Density="0.02"/>
 
         <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.0025"/>
         <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.0015"/>
@@ -922,15 +564,16 @@
 
       <Mapping>
         <Biome>60</Biome>
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        
         <Item Type="Static" Subtype="Bush" Density="0.035"/>
         <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
         <Item Type="Static" Subtype="Bush" Density="0.005"/>
@@ -942,7 +585,9 @@
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
         <Item Type="Gatherable" Subtype="Roots" Density="0.015"/>
         <Item Type="Gatherable" Subtype="Norden_Spalt" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/> 
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/>
+        <Item Type="Gatherable" Subtype="HazelMedium" Density="0.01"/>
+        <Item Type="Gatherable" Subtype="HazelSmall" Density="0.02"/>
 
         <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.002"/>
         <Item Type="Gatherable" Subtype="Schematic_WildPumpkin" Density="0.0005"/>
@@ -954,17 +599,19 @@
         <Item Type="Gatherable" Subtype="Schematic_Norden_Roots" Density="0.00005"/>
         <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.002"/>
       </Mapping>
+      
       <Mapping>
         <Biome>70</Biome>
- 		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>      
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+ 
         <Item Type="Static" Subtype="Bush" Density="0.007"/>
         <Item Type="Static" Subtype="Fern" Density="0.04" MaxRoll="35"/>
         <Item Type="Gatherable" Subtype="Berries" Density="0.025"/> 
@@ -974,6 +621,8 @@
         <Item Type="Gatherable" Subtype="Roots" Density="0.025"/>
         <Item Type="Gatherable" Subtype="Norden_Spalt" Density="0.0005"/>
         <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/> 
+        <Item Type="Gatherable" Subtype="HazelMedium" Density="0.01"/>
+        <Item Type="Gatherable" Subtype="HazelSmall" Density="0.02"/>
 
         <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.002"/>
         <Item Type="Gatherable" Subtype="Schematic_Mushrooms" Density="0.004"/>
@@ -987,15 +636,14 @@
 <!-- ===================================== Dwarven Area ============================================= -->	  
 	  <Mapping>
         <Biome>100</Biome>
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        
         <Item Type="Static" Subtype="Bush" Density="0.035"/>
         <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
         <Item Type="Gatherable" Subtype="Berries" Density="0.035"/> 
@@ -1013,17 +661,39 @@
         <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0015"/>
         <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.003"/>
       </Mapping>
+      
+      <Mapping>  <!-- Snowy Material Items -->
+        <Biome>100</Biome>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        
+        <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
+        
+        <Item Type="Gatherable" Subtype="Berries" Density="0.035"/>        
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.022"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
+        <Item Type="Gatherable" Subtype="Roots" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.035"/> 
+
+        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.003"/>
+        <Item Type="Gatherable" Subtype="Schematic_HighlandCaps" Density="0.0015"/>
+        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0011"/>
+        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0011"/>
+        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0015"/>
+        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.003"/>
+      </Mapping>
+      
       <Mapping>
         <Biome>110</Biome>
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        
         <Item Type="Static" Subtype="Bush" Density="0.035"/>
         <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
         <Item Type="Static" Subtype="Bush" Density="0.005"/>
@@ -1043,18 +713,63 @@
         <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0015"/>
         <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.003"/>
       </Mapping>
+      
+      <Mapping> <!-- Snowy Material Items -->
+        <Biome>110</Biome>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        
+        <Item Type="Static" Subtype="Fern" Density="0.025" MaxRoll="35"/>
+        
+        <Item Type="Gatherable" Subtype="Berries" Density="0.035"/> 
+        <Item Type="Gatherable" Subtype="WildPumpkin" Density="0.005"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.02"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
+        <Item Type="Gatherable" Subtype="Roots" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.035"/> 
+
+        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.003"/>
+        <Item Type="Gatherable" Subtype="Schematic_WildPumpkin" Density="0.0005"/>
+        <Item Type="Gatherable" Subtype="Schematic_HighlandCaps" Density="0.0015"/>
+        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.001"/>
+        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0011"/>
+        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0015"/>
+        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.003"/>
+      </Mapping>
+      
       <Mapping>
         <Biome>120</Biome>
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>        
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>      
+        
         <Item Type="Static" Subtype="Bush" Density="0.007"/>
+        <Item Type="Static" Subtype="Fern" Density="0.04" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="Berries" Density="0.025"/> 
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.04"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.02"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
+        <Item Type="Gatherable" Subtype="Roots" Density="0.025"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.025"/> 
+
+        <Item Type="Gatherable" Subtype="Schematic_Berries" Density="0.002"/>
+        <Item Type="Gatherable" Subtype="Schematic_HighlandCaps" Density="0.002"/>
+        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.001"/>
+        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0011"/>
+        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0025"/>
+        <Item Type="Gatherable" Subtype="Schematic_Blue_Berry" Density="0.002"/>
+      </Mapping>
+      
+      <Mapping> <!-- Snowy Material Items -->
+        <Biome>120</Biome>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>        
+        
         <Item Type="Static" Subtype="Fern" Density="0.04" MaxRoll="35"/>
         <Item Type="Gatherable" Subtype="Berries" Density="0.025"/> 
         <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.04"/>
@@ -1073,93 +788,98 @@
 <!-- ===================================== Elven Area ============================================= -->
       <Mapping>
         <Biome>144</Biome>
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
-	<Item Type="Gatherable" Subtype="CrimsonThristle" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="DeadmanMushroom" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="Schematic_DeadmanMushroom" Density="0.00005"/>  
-	<Item Type="Gatherable" Subtype="Schematic_CrimsonThristle" Density="0.00005"/>  
-	<Item Type="Gatherable" Subtype="Schematic_Enchanted_StonePile" Density="0.00015"/>  
-	<Item Type="Gatherable" Subtype="Schematic_Enchanted_SingleStone" Density="0.00015"/>  
-	<Item Type="Gatherable" Subtype="Enchanted_StonePile" Density="0.0022"/>  
-	<Item Type="Gatherable" Subtype="Enchanted_SingleStone" Density="0.0022"/>  
-	<Item Type="Gatherable" Subtype="WildRedCabbage" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="Schematic_WildRedCabbage" Density="0.00005"/>  
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        
+        <Item Type="Gatherable" Subtype="CrimsonThristle" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="DeadmanMushroom" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="Schematic_DeadmanMushroom" Density="0.00005"/>  
+        <Item Type="Gatherable" Subtype="Schematic_CrimsonThristle" Density="0.00005"/>  
+        <Item Type="Gatherable" Subtype="Schematic_Enchanted_StonePile" Density="0.00015"/>  
+        <Item Type="Gatherable" Subtype="Schematic_Enchanted_SingleStone" Density="0.00015"/>  
+        <Item Type="Gatherable" Subtype="Enchanted_StonePile" Density="0.0022"/>  
+        <Item Type="Gatherable" Subtype="Enchanted_SingleStone" Density="0.0022"/>  
+        <Item Type="Gatherable" Subtype="WildRedCabbage" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="Schematic_WildRedCabbage" Density="0.00005"/>  
       </Mapping>
-	  
 	  
       <Mapping>
         <Biome>146</Biome>
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>
-	<Item Type="Gatherable" Subtype="CrimsonThristle" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="DeadmanMushroom" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="Schematic_DeadmanMushroom" Density="0.00005"/>  
-	<Item Type="Gatherable" Subtype="Schematic_CrimsonThristle" Density="0.00005"/>  
-	<Item Type="Gatherable" Subtype="Schematic_Enchanted_StonePile" Density="0.00015"/>  
-	<Item Type="Gatherable" Subtype="Schematic_Enchanted_SingleStone" Density="0.00015"/>  
-	<Item Type="Gatherable" Subtype="Enchanted_StonePile" Density="0.0022"/>  
-	<Item Type="Gatherable" Subtype="Enchanted_SingleStone" Density="0.0022"/>  
-	<Item Type="Gatherable" Subtype="WildRedCabbage" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="Schematic_WildRedCabbage" Density="0.00005"/>  
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        
+        <Item Type="Gatherable" Subtype="CrimsonThristle" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="DeadmanMushroom" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="Schematic_DeadmanMushroom" Density="0.00005"/>  
+        <Item Type="Gatherable" Subtype="Schematic_CrimsonThristle" Density="0.00005"/>  
+        <Item Type="Gatherable" Subtype="Schematic_Enchanted_StonePile" Density="0.00015"/>  
+        <Item Type="Gatherable" Subtype="Schematic_Enchanted_SingleStone" Density="0.00015"/>  
+        <Item Type="Gatherable" Subtype="Enchanted_StonePile" Density="0.0022"/>  
+        <Item Type="Gatherable" Subtype="Enchanted_SingleStone" Density="0.0022"/>  
+        <Item Type="Gatherable" Subtype="WildRedCabbage" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="Schematic_WildRedCabbage" Density="0.00005"/>  
       </Mapping>
+      
       <Mapping>
         <Biome>148</Biome>
- 		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>      
-	<Item Type="Gatherable" Subtype="CrimsonThristle" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="DeadmanMushroom" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="Schematic_DeadmanMushroom" Density="0.00005"/>  
-	<Item Type="Gatherable" Subtype="Schematic_CrimsonThristle" Density="0.00005"/>  
-	<Item Type="Gatherable" Subtype="Schematic_Enchanted_StonePile" Density="0.00015"/>  
-	<Item Type="Gatherable" Subtype="Schematic_Enchanted_SingleStone" Density="0.00015"/>  
-	<Item Type="Gatherable" Subtype="Enchanted_StonePile" Density="0.0022"/>  
-	<Item Type="Gatherable" Subtype="Enchanted_SingleStone" Density="0.0022"/>  
-	<Item Type="Gatherable" Subtype="WildRedCabbage" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="Schematic_WildRedCabbage" Density="0.00005"/>  
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>   
+        
+        <Item Type="Gatherable" Subtype="CrimsonThristle" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="DeadmanMushroom" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="Schematic_DeadmanMushroom" Density="0.00005"/>  
+        <Item Type="Gatherable" Subtype="Schematic_CrimsonThristle" Density="0.00005"/>  
+        <Item Type="Gatherable" Subtype="Schematic_Enchanted_StonePile" Density="0.00015"/>  
+        <Item Type="Gatherable" Subtype="Schematic_Enchanted_SingleStone" Density="0.00015"/>  
+        <Item Type="Gatherable" Subtype="Enchanted_StonePile" Density="0.0022"/>  
+        <Item Type="Gatherable" Subtype="Enchanted_SingleStone" Density="0.0022"/>  
+        <Item Type="Gatherable" Subtype="WildRedCabbage" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="Schematic_WildRedCabbage" Density="0.00005"/>  
       </Mapping>
+      
       <Mapping>
-        <Biome>150</Biome><!--elf forestmajic dencse-->
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
-		<Material>COGWoods_needles</Material>
-		<Material>COGWoods_grass</Material>
-		<Material>COGWoods</Material>
-		<Material>COGSnow</Material>
-		<Material>COGWoods_Snow</Material>  
-	<Item Type="Gatherable" Subtype="CrimsonThristle" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="DeadmanMushroom" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="Schematic_DeadmanMushroom" Density="0.00005"/>  
-	<Item Type="Gatherable" Subtype="Schematic_CrimsonThristle" Density="0.00005"/>  
-	<Item Type="Gatherable" Subtype="Schematic_Enchanted_StonePile" Density="0.00015"/>  
-	<Item Type="Gatherable" Subtype="Schematic_Enchanted_SingleStone" Density="0.00015"/>  
-	<Item Type="Gatherable" Subtype="Enchanted_StonePile" Density="0.0022"/>  
-	<Item Type="Gatherable" Subtype="Enchanted_SingleStone" Density="0.0022"/>  
-	<Item Type="Gatherable" Subtype="WildRedCabbage" Density="0.00075"/>  
-	<Item Type="Gatherable" Subtype="Schematic_WildRedCabbage" Density="0.00005"/>  
+        <Biome>150</Biome><!--elf forest magic dense-->
+        <Material>Grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Soil</Material>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods</Material>
+        <Material>Snow</Material>
+        <Material>COGWoods_Snow</Material>
+        
+        <Item Type="Gatherable" Subtype="CrimsonThristle" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="DeadmanMushroom" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="Schematic_DeadmanMushroom" Density="0.00005"/>  
+        <Item Type="Gatherable" Subtype="Schematic_CrimsonThristle" Density="0.00005"/>  
+        <Item Type="Gatherable" Subtype="Schematic_Enchanted_StonePile" Density="0.00015"/>  
+        <Item Type="Gatherable" Subtype="Schematic_Enchanted_SingleStone" Density="0.00015"/>  
+        <Item Type="Gatherable" Subtype="Enchanted_StonePile" Density="0.0022"/>  
+        <Item Type="Gatherable" Subtype="Enchanted_SingleStone" Density="0.0022"/>  
+        <Item Type="Gatherable" Subtype="WildRedCabbage" Density="0.00075"/>  
+        <Item Type="Gatherable" Subtype="Schematic_WildRedCabbage" Density="0.00005"/>  
       </Mapping>
 	  
 	  <!--ore nuggets-->
@@ -1218,14 +938,20 @@
 
       <Mapping>
         <Biome>240</Biome>
-        <Material>COGSoil</Material>
+        <Material>Soil</Material>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.01"/>
+		
+      </Mapping>
+      <Mapping>
+        <Biome>240</Biome>
+        <Material>DirtSteppe</Material>
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.01"/>
 		
       </Mapping>
       <Mapping>
         <Biome>240</Biome>
         <Slope Min="0" Max="35"/>
-        <Material>COGGrass</Material>
+        <Material>Grass</Material>
         <Item Type="Gatherable" Subtype="StonePile" Density="0.015"/>
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.07"/>
         <Item Type="Gatherable" Subtype="Roots" Density="0.0007"/>
@@ -1238,22 +964,8 @@
       </Mapping>
       <Mapping>
         <Biome>240</Biome>
-        <Slope Min="0" Max="35"/>
-        <Material>Grass_02</Material>
-        <Item Type="Gatherable" Subtype="StonePile" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="SingleStone" Density="0.007"/>
-        <Item Type="Gatherable" Subtype="Roots" Density="0.005"/>
-        <Item Type="Gatherable" Subtype="Herbs" Density="0.00015"/>
-
-        <Item Type="Gatherable" Subtype="Schematic_StonePile" Density="0.0015"/>
-        <Item Type="Gatherable" Subtype="Schematic_SingleStone" Density="0.0035"/>
-        <Item Type="Gatherable" Subtype="Schematic_Roots" Density="0.0005"/>
-        <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.000015"/>
-      </Mapping>
-      <Mapping>
-        <Biome>240</Biome>
         <Slope Min="0" Max="80"/>
-        <Material>COGRocks_grass</Material>
+        <Material>Rocks_grass</Material>
         <Item Type="Gatherable" Subtype="StonePile" Density="0.025"/>
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.01"/>
         <Item Type="Gatherable" Subtype="Roots" Density="0.007"/>
@@ -1269,7 +981,7 @@
       <Mapping>
         <Biome>240</Biome>
         <Slope Min="0" Max="35"/>
-        <Material>COGWoods</Material>
+        <Material>Woods</Material>
 
         <Item Type="Static" Subtype="Fern" Density="0.015" MaxRoll="35"/>
         <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
@@ -1285,7 +997,7 @@
       <Mapping>
         <Biome>240</Biome>
         <Slope Min="0" Max="35"/>
-        <Material>COGWoods_grass</Material>
+        <Material>Woods_grass</Material>
         <Item Type="Static" Subtype="Fern" Density="0.015" MaxRoll="35"/>
         <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
         <Item Type="Gatherable" Subtype="StonePile" Density="0.007"/>
@@ -1300,7 +1012,7 @@
       <Mapping>
         <Biome>240</Biome>
         <Slope Min="0" Max="35"/>
-        <Material>COGWoods_needles</Material>
+        <Material>Woods_needles</Material>
         <Item Type="Static" Subtype="Fern" Density="0.015" MaxRoll="35"/>
         <Item Type="Gatherable" Subtype="Mushrooms" Density="0.015"/>
         <Item Type="Gatherable" Subtype="StonePile" Density="0.007"/>
@@ -1317,7 +1029,7 @@
 
       <Mapping>
         <Slope Min="0" Max="80"/>
-        <Material>COGRocks_grass</Material>
+        <Material>Rocks_grass</Material>
         <Item Type="Gatherable" Subtype="StonePile" Density="0.007"/>
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.05"/>
         <Item Type="Gatherable" Subtype="Roots" Density="0.0007"/>
@@ -1333,7 +1045,7 @@
       <Mapping>
         <Height Min="80" Max="100"/>
         <Slope Min="0" Max="20"/>
-        <Material>COGGrass</Material>
+        <Material>Grass</Material>
         <Item Type="Gatherable" Subtype="SingleStone" Density="0.0007"/>
         <Item Type="Gatherable" Subtype="Roots" Density="0.0005"/>
 
@@ -1347,7 +1059,7 @@
         <Slope Min="0" Max="30"/>
 		<Height Min="0" Max="30"/>
 
-        <Material>COGGrass</Material>
+        <Material>Grass</Material>
 
         <Item Type="Static" Subtype="Bush" Density="0.00015"/>
         <Item Type="Gatherable" Subtype="Schematic_Herbs" Density="0.0000155"/>
@@ -1372,7 +1084,7 @@
         <Slope Min="0" Max="30"/>
 		<Height Min="30" Max="100"/><!--Mountain grasslands-->
 
-        <Material>COGGrass</Material>
+        <Material>Grass</Material>
 
         <Item Type="Static" Subtype="Bush" Density="0.0015"/>
         <Item Type="Gatherable" Subtype="Herbs" Density="0.00015"/>
@@ -1391,10 +1103,10 @@
       <Mapping Name="WildFlaxPatches">
         
         <Biome>130</Biome>
-		<Material>COGGrass</Material>
-		<Material>COGGrass_old</Material>
-		<Material>COGSoil</Material>
-		<Material>COGRocks_grass</Material>
+		<Material>Grass</Material>
+		<Material>COGSteppeYellowGrass</Material>
+		<Material>Soil</Material>
+		<Material>Rocks_grass</Material>
 		<Material>COGDesert_Soil</Material>
         <Item Type="Gatherable" Subtype="WildFlax" Density=".05"/>
   
@@ -1424,10 +1136,10 @@
 	  <Mapping Name="WildWheatPatches">
 	  
         <Biome>140</Biome>
-			<Material>COGGrass</Material>
-			<Material>COGGrass_old</Material>
-			<Material>COGSoil</Material>
-			<Material>COGRocks_grass</Material>
+			<Material>Grass</Material>
+			<Material>COGSteppeYellowGrass</Material>
+			<Material>Soil</Material>
+			<Material>Rocks_grass</Material>
 			<Material>COGDesert_Soil</Material>
         <Item Type="Gatherable" Subtype="WildWheat" Density=".05"/>
         <Item Type="Gatherable" Subtype="Norden_Barley" Density="0.01"/>
@@ -1436,17 +1148,17 @@
       </Mapping>
 	  
 	  
-	  <!--Nordic palnts-->
+	  <!--Nordic plants-->
       <Mapping Name="WildPumpkinPatches">
         <Biome>10</Biome>
-			<Material>COGGrass</Material>
-			<Material>COGGrass_old</Material>
-			<Material>COGSoil</Material>
-			<Material>COGRocks_grass</Material>
-			<Material>COGWoods_needles</Material>
-			<Material>COGWoods_grass</Material>
-			<Material>COGWoods</Material>
-			<Material>COGSnow</Material>
+			<Material>Grass</Material>
+			<Material>COGSteppeYellowGrass</Material>
+			<Material>Soil</Material>
+			<Material>Rocks_grass</Material>
+			<Material>Woods_needles</Material>
+			<Material>Woods_grass</Material>
+			<Material>Woods</Material>
+			<Material>Snow</Material>
 			<Material>COGWoods_Snow</Material> 
         <Item Type="Gatherable" Subtype="WildPumpkin" Density=".05"/>
 
@@ -1455,47 +1167,47 @@
 	  
 	  <Mapping Name="WildcabagePatches">
         <Biome>20</Biome>
-			<Material>COGGrass</Material>
-			<Material>COGGrass_old</Material>
-			<Material>COGSoil</Material>
-			<Material>COGRocks_grass</Material>
-			<Material>COGWoods_needles</Material>
-			<Material>COGWoods_grass</Material>
-			<Material>COGWoods</Material>
-			<Material>COGSnow</Material>
+			<Material>Grass</Material>
+			<Material>COGSteppeYellowGrass</Material>
+			<Material>Soil</Material>
+			<Material>Rocks_grass</Material>
+			<Material>Woods_needles</Material>
+			<Material>Woods_grass</Material>
+			<Material>Woods</Material>
+			<Material>Snow</Material>
 			<Material>COGWoods_Snow</Material>
         <Item Type="Gatherable" Subtype="WildCabbage" Density=".05"/>
 
         <Item Type="Gatherable" Subtype="Schematic_WildCabbage" Density=".005"/>
       </Mapping>
 	  
-	  <!--Mountian Plants-->
+	  <!--Mountain Plants-->
 	  <Mapping Name="WildherbPatches">
         <Biome>30</Biome>
-			<Material>COGGrass</Material>
-			<Material>COGGrass_old</Material>
-			<Material>COGSoil</Material>
-			<Material>COGRocks_grass</Material>
-			<Material>COGWoods_needles</Material>
-			<Material>COGWoods_grass</Material>
-			<Material>COGWoods</Material>
-			<Material>COGSnow</Material>
+			<Material>Grass</Material>
+			<Material>COGSteppeYellowGrass</Material>
+			<Material>Soil</Material>
+			<Material>Rocks_grass</Material>
+			<Material>Woods_needles</Material>
+			<Material>Woods_grass</Material>
+			<Material>Woods</Material>
+			<Material>Snow</Material>
 			<Material>COGWoods_Snow</Material> 
         <Item Type="Gatherable" Subtype="Herbs" Density=".08"/>
 
         <Item Type="Gatherable" Subtype="Schematic_Herbs" Density=".01"/>
       </Mapping>
 	  
-	  <Mapping Name="WildberriePatches">
+	  <Mapping Name="WildberryPatches">
         <Biome>40</Biome>
-			<Material>COGGrass</Material>
-			<Material>COGGrass_old</Material>
-			<Material>COGSoil</Material>
-			<Material>COGRocks_grass</Material>
-			<Material>COGWoods_needles</Material>
-			<Material>COGWoods_grass</Material>
-			<Material>COGWoods</Material>
-			<Material>COGSnow</Material>
+			<Material>Grass</Material>
+			<Material>COGSteppeYellowGrass</Material>
+			<Material>Soil</Material>
+			<Material>Rocks_grass</Material>
+			<Material>Woods_needles</Material>
+			<Material>Woods_grass</Material>
+			<Material>Woods</Material>
+			<Material>Snow</Material>
 			<Material>COGWoods_Snow</Material> 
         <Item Type="Gatherable" Subtype="Berries" Density=".05"/> 
 
@@ -1506,9 +1218,9 @@
       <Mapping>
         <Slope Min="15" Max="30"/>
 
-        <Material>COGGrass_old</Material>
-        <Material>COGGrass</Material>
-        <Material>COGRocks_grass</Material>
+        <Material>COGSteppeYellowGrass</Material>
+        <Material>Grass</Material>
+        <Material>Rocks_grass</Material>
         
         <Item Type="Static" Subtype="Bush" Density="0.1"/>
         <Item Type="Gatherable" Subtype="Berries" Density="0.025"/> 
@@ -1527,7 +1239,7 @@
 	10	WildPumpkinPatches
 	20	WildcabagePatches
 	30	WildherbPatches
-	40	WildberriePatches
+	40	WildberryPatches
 	50	norden forest outter
 	60	norden forest mid
 	70	norden forest inner

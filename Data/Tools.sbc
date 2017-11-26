@@ -10,10 +10,7 @@
 
 
     <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Beer_Mug</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Beer_Mug" />
       <Public>true</Public>
       <DisplayName>Beer Mug</DisplayName>
       <Icon>Textures\GUI\Icons\Mace.dds</Icon>
@@ -77,10 +74,7 @@
 
 
     <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Shield</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Shield" />
       <Public>true</Public>
       <DisplayName>Shield</DisplayName>
       <Icon>Textures\GUI\Icons\Sword.dds</Icon>
@@ -172,934 +166,10 @@
 <!-- Normal -->
 
 
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Plow_Test</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>Polearm</DisplayName>
-      <Icon>Textures\GUI\Icons\Sword.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\Plow.mwm</Model>
-      <VoxelMinings>
-      </VoxelMinings>
-      <PrimaryActions>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1.0</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1.5</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>>Swing</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1.0</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1.5</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>>Swing</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>Sword</PhysicalMaterial>
-      <MaxStackAmount>1</MaxStackAmount>
-      <HitDistance>3.6</HitDistance>
-    </PhysicalItem>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Hammer</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>DisplayName_Hammer</DisplayName>
-      <MaxStackAmount>1</MaxStackAmount>
-      <Icon>Textures\GUI\Icons\HammerOneHand_Construction.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\Hammer_OneHand.mwm</Model>
-      <VoxelMinings>
-      </VoxelMinings>
-      <PrimaryActions>
-        <Action>
-          <Name>Build</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1</Efficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1.33</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Buildable</string>
-              </EntityType>
-              <Animation>BuildWall</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Build</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1.0</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>Attack</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1.0</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Attack</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Deconstruct</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.9</Efficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Deconstructible</string>
-              </EntityType>
-              <Animation>Attack</Animation>
-              <Component>Deconstruct</Component>
-              <StatsAction>Labour</StatsAction>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>Hammer</PhysicalMaterial>
-      <HitDistance>1.5</HitDistance>
-    </PhysicalItem>
-
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>WoodenMallet</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>DisplayName_WoodenMallet</DisplayName>
-      <MaxStackAmount>1</MaxStackAmount>
-      <Icon>Textures\GUI\Icons\WoodenMallet.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\WoodenMallet.mwm</Model>
-      <VoxelMinings>
-      </VoxelMinings>
-      <PrimaryActions>
-        <Action>
-          <Name>Build</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.5</Efficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1.33</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Buildable</string>
-              </EntityType>
-              <Animation>BuildWall</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Build</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1.0</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>Attack</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1.0</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Attack</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Deconstruct</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.2</Efficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Deconstructible</string>
-              </EntityType>
-              <Animation>Attack</Animation>
-              <Component>Deconstruct</Component>
-              <StatsAction>Labour</StatsAction>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>WoodenMallet</PhysicalMaterial>
-      <HitDistance>1.5</HitDistance>
-    </PhysicalItem>
-
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Axe</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>Iron Axe</DisplayName>
-      <Icon>Textures\GUI\Icons\Axe.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\Axe_OneHand.mwm</Model>
-      <VoxelMinings>
-      </VoxelMinings>
-      <PrimaryActions>
-        <Action>
-          <Name>Cut</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.3</Efficiency>
-          <SwingSoundStart>0.3</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Cutting</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Cut</Component>
-            </HitCondition>
-            <HitCondition>
-              <EntityType>
-                <string>Lumber</string>
-                <string>Log</string>
-              </EntityType>
-              <Animation>CuttingLog</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Cut</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>2</EndTime>
-          <Efficiency>1.75</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.8</HitStart>
-          <HitDuration>2</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>Attack_axe</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>2</EndTime>
-          <Efficiency>1.75</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.8</HitStart>
-          <HitDuration>2</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Attack</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Craft</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.3</Efficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitSound>ToolAxeLumbering</HitSound>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Lumber</string>
-              </EntityType>
-              <Animation>Lumbering</Animation>
-              <Component>Craft</Component>
-              <StatsAction>Labour</StatsAction>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Cut</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.3</Efficiency>
-          <SwingSoundStart>0.3</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Log</string>
-              </EntityType>
-              <Animation>CuttingLog</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Cut</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>Axe</PhysicalMaterial>
-      <MaxStackAmount>1</MaxStackAmount>
-      <HitDistance>1.5</HitDistance>
-    </PhysicalItem>
-    
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>PickAxe</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>Iron Pickaxe</DisplayName>
-      <Icon>Textures\GUI\Icons\PickAxe.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\PickAxe_OneHand.mwm</Model>
-      <ShowItemHP>true</ShowItemHP>
-      <VoxelMinings>
-        <Mining>
-          <MinedOre>Stone</MinedOre>
-          <HitCount>10</HitCount>
-          <PhysicalItemId>
-            <TypeId>Component</TypeId>
-            <SubtypeId>LargeStone</SubtypeId>
-          </PhysicalItemId>
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-        <Mining>
-          <MinedOre>IronRich</MinedOre>
-          <HitCount>12</HitCount>
-          <PhysicalItemId Type="Component" Subtype="IronOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-        <Mining>
-          <MinedOre>Iron</MinedOre>
-          <HitCount>12</HitCount>
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="IronOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-        <Mining>
-          <MinedOre>IronPoor</MinedOre>
-          <HitCount>10</HitCount>
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="IronOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-		<Mining>
-          <MinedOre>CoalOre</MinedOre>
-          <HitCount>10</HitCount>
-		  <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-		  <PhysicalItemId Type="Component" Subtype="CoalOre" />
-		  <PhysicalItemId Type="Component" Subtype="CoalOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-		<Mining>
-          <MinedOre>MithrilOre</MinedOre>
-          <HitCount>10</HitCount>
-          <PhysicalItemId Type="Component" Subtype="MithrilOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-		<Mining>
-          <MinedOre>GoldOre</MinedOre>
-          <HitCount>10</HitCount>
-		  <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="GoldOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-		<Mining>
-          <MinedOre>SaltOre</MinedOre>
-          <HitCount>10</HitCount>
-		  <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="SaltOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-      </VoxelMinings>
-
-      <PrimaryActions>
-        <Action>
-          <Name>Mine</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>3.4</Efficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Voxel</string>
-              </EntityType>
-              <Animation>Mining</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Mine</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>2</EndTime>
-          <Efficiency>1.75</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.8</HitStart>
-          <HitDuration>2</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>Attack</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>2</EndTime>
-          <Efficiency>1.75</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.8</HitStart>
-          <HitDuration>2</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Attack</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>PickAxe</PhysicalMaterial>
-      <MaxStackAmount>1</MaxStackAmount>
-      <HitDistance>1.6</HitDistance>
-    </PhysicalItem>
-    
-
-
-
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>StoneAxe</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>DisplayName_StoneAxe</DisplayName>
-      <Icon>Textures\GUI\Icons\StoneAxe.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\StoneAxe.mwm</Model>
-      <ShowItemHP>true</ShowItemHP>
-      <VoxelMinings>
-        <Mining>
-          <MinedOre>Stone</MinedOre>
-          <HitCount>10</HitCount>
-          <PhysicalItemId>
-            <TypeId>Component</TypeId>
-            <SubtypeId>LargeStone</SubtypeId>
-          </PhysicalItemId>
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-        <Mining>
-          <MinedOre>IronRich</MinedOre>
-          <HitCount>12</HitCount>
-          <PhysicalItemId Type="Component" Subtype="IronOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-        <Mining>
-          <MinedOre>Iron</MinedOre>
-          <HitCount>12</HitCount>
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="IronOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-        <Mining>
-          <MinedOre>IronPoor</MinedOre>
-          <HitCount>10</HitCount>
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="IronOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-		<Mining>
-          <MinedOre>SaltOre</MinedOre>
-          <HitCount>10</HitCount>
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="SaltOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-		<Mining>
-          <MinedOre>CoalOre</MinedOre>
-          <HitCount>10</HitCount>
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-          <PhysicalItemId Type="Component" Subtype="LargeStone" />
-		  <PhysicalItemId Type="Component" Subtype="CoalOre" />
-		  <PhysicalItemId Type="Component" Subtype="CoalOre" />
-          <RemovedRadius>0.25</RemovedRadius>
-          <OnlyApplyMaterial>false</OnlyApplyMaterial>
-        </Mining>
-      </VoxelMinings>
-
-      <PrimaryActions>
-        <Action>
-          <Name>Mine</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1.9</Efficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Voxel</string>
-              </EntityType>
-              <Animation>Mining</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Mine</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Cut</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.15</Efficiency>
-          <StatsEfficiency>UnhappyLabour</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Tree</string>
-              </EntityType>
-              <Animation>Cutting</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Cut</Component>
-            </HitCondition>
-            <HitCondition>
-              <EntityType>
-                <string>Lumber</string>
-                <string>Log</string>
-              </EntityType>
-              <Animation>CuttingLog</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Cut</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>2</EndTime>
-          <Efficiency>1.75</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.8</HitStart>
-          <HitDuration>2</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>Attack</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>2</EndTime>
-          <Efficiency>1.75</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.8</HitStart>
-          <HitDuration>2</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Attack</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Craft</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.15</Efficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1</HitDuration>
-          <HitSound>ToolAxeLumbering</HitSound>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Lumber</string>
-              </EntityType>
-              <Animation>Lumbering</Animation>
-              <Component>Craft</Component>
-              <StatsAction>Labour</StatsAction>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>StoneAxe</PhysicalMaterial>
-      <MaxStackAmount>1</MaxStackAmount>
-      <HitDistance>1.5</HitDistance>
-    </PhysicalItem>
-
-
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Enchanted_StoneAxe</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Enchanted_StoneAxe" />
       <Public>true</Public>
       <DisplayName>Enchanted Stone Axe</DisplayName>
       <Icon>Textures\GUI\Icons\StoneAxe.dds</Icon>
@@ -1314,286 +384,9 @@
 
 
 
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Mace</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>Iron Mace</DisplayName>
-      <Icon>Textures\GUI\Icons\Mace.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\Mace.mwm</Model>
-      <VoxelMinings>
-      </VoxelMinings>
-
-      <PrimaryActions>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>1</EndTime>
-          <Efficiency>1.0</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.5</HitStart>
-          <HitDuration>1</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>Attack</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>1.0</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.5</HitStart>
-          <HitDuration>1</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Attack</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>Mace</PhysicalMaterial>
-      <MaxStackAmount>1</MaxStackAmount>
-      <HitDistance>1.5</HitDistance>
-    </PhysicalItem>
-
-
 
     <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Wooden_Club</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>Wooden Club</DisplayName>
-      <Icon>Textures\GUI\Icons\Mace.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\Mace.mwm</Model>
-      <VoxelMinings>
-      </VoxelMinings>
-
-      <PrimaryActions>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>1</EndTime>
-          <Efficiency>0.7</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.5</HitStart>
-          <HitDuration>1</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>Attack</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>1</EndTime>
-          <Efficiency>0.7</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.5</HitStart>
-          <HitDuration>1</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Attack</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>Mace</PhysicalMaterial>
-      <MaxStackAmount>1</MaxStackAmount>
-      <HitDistance>1.5</HitDistance>
-    </PhysicalItem>
-
-
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Sword</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>Iron Sword</DisplayName>
-      <Icon>Textures\GUI\Icons\Sword.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\Sword.mwm</Model>
-      <VoxelMinings>
-      </VoxelMinings>
-      <PrimaryActions>
-        <Action>
-          <Name>BasicAttack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>1.5</EndTime>
-          <Efficiency>1.3</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1.5</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Character</string>
-              </EntityType>
-              <Animation>Attack_sword</Animation>
-              <StatsAction>BasicAttack</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-        <Action>
-          <Name>Attack</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>1.5</EndTime>
-          <Efficiency>1.3</Efficiency>
-          <StatsEfficiency>WeakAttack</StatsEfficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1.5</HitDuration>
-          <CustomShapeRadius>0.5</CustomShapeRadius>
-          <Crosshair>crosshair</Crosshair>
-          <HitConditions>
-            <HitCondition>
-              <Animation>Attack_axe_test</Animation>
-              <StatsAction>SwingTool</StatsAction>
-              <StatsModifier>Attack</StatsModifier>
-              <Component>Attack</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>Sword</PhysicalMaterial>
-      <MaxStackAmount>1</MaxStackAmount>
-      <HitDistance>3.6</HitDistance>
-    </PhysicalItem>
-
-
-
-
-    <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Iron_Dagger</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Iron_Dagger" />
       <Public>true</Public>
       <DisplayName>Iron Dagger</DisplayName>
       <Icon>Textures\GUI\Icons\Sword.dds</Icon>
@@ -1682,10 +475,7 @@
 
 
     <PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Bavar_Gaurd_Sword</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Bavar_Gaurd_Sword" />
       <Public>true</Public>
       <DisplayName>Bavar Gaurd Sword</DisplayName>
       <Icon>Textures\GUI\Icons\Sword.dds</Icon>
@@ -1771,80 +561,11 @@
     </PhysicalItem>
 
 
-    <!--//////////////////////// Plow \\\\\\\\\\\\\\\\\\\\\\\\-->
-    <PhysicalItem xsi:type="MyObjectBuilder_PlowToolDefinition">
-      <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Plow</SubtypeId>
-      </Id>
-      <Public>true</Public>
-      <DisplayName>Iron Plow</DisplayName>
-      <Icon>Textures\GUI\Icons\HandPlow.dds</Icon>
-      <Size>
-        <X>1.2</X>
-        <Y>0.6</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.5</Mass>
-      <Volume>3</Volume>
-      <Model>Models\Weapons\Plow.mwm</Model>
-      <ShowItemHP>true</ShowItemHP>
-      <PrimaryActions>
-        <Action>
-          <Name>Plow</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>2</Efficiency>
-          <SwingSoundStart>0.4</SwingSoundStart>
-          <SwingSound>Swing</SwingSound>
-          <HitStart>0.6</HitStart>
-          <HitDuration>1.5</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <EntityType>
-                <string>Voxel</string>
-              </EntityType>
-              <Animation>Plowing</Animation>
-              <StatsAction>Labour</StatsAction>
-              <Component>Plow</Component>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </PrimaryActions>
-      <SecondaryActions>
-        <Action>
-          <Name>Block</Name>
-          <StartTime>0.3</StartTime>
-          <EndTime>0.53</EndTime>
-          <Efficiency>0.4</Efficiency>
-          <StatsEfficiency>WeakBlock</StatsEfficiency>
-          <HitStart>0.6</HitStart>
-          <HitDuration>0</HitDuration>
-          <HitConditions>
-            <HitCondition>
-              <Animation>block_idle</Animation>
-              <Component>Block</Component>
-              <StatsActionIfHit>Block</StatsActionIfHit>
-              <StatsModifierIfHit>Block</StatsModifierIfHit>
-            </HitCondition>
-          </HitConditions>
-        </Action>
-      </SecondaryActions>
-      <PhysicalMaterial>Plow</PhysicalMaterial>
-      <MaxStackAmount>1</MaxStackAmount>
-      <HitDistance>3.6</HitDistance>
-    </PhysicalItem>
-
-
 
 
     <PhysicalItem xsi:type="MyObjectBuilder_PlowToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Stone_Plow</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Stone_Plow" />
       <Public>true</Public>
       <DisplayName>Stone Plow</DisplayName>
       <Icon>Textures\GUI\Icons\HandPlow.dds</Icon>
@@ -1906,10 +627,7 @@
 
     <PhysicalItem xsi:type="MyObjectBuilder_PlowToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Enchanted_Stone_Plow</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Enchanted_Stone_Plow" />
       <Public>true</Public>
       <DisplayName>Enchanted Stone Plow</DisplayName>
       <Icon>Textures\GUI\Icons\HandPlow.dds</Icon>
@@ -1973,10 +691,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagPumpkin_Test</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagPumpkin_Test" />
       <Public>true</Public>
       <DisplayName>Pumpkin Test</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2026,10 +741,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagPumpkin_Test</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagPumpkin_Test" />
       <Public>true</Public>
       <DisplayName>Single Pumpkin Seed Test</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2079,10 +791,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagPumpkin</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagPumpkin" />
       <Public>true</Public>
       <DisplayName>DisplayName_SeedBagPumpkin</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2132,10 +841,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagPumpkin</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagPumpkin" />
       <Public>true</Public>
       <DisplayName>Single Pumpkin Seed</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2185,10 +891,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagCabbage</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagCabbage" />
       <Public>true</Public>
       <DisplayName>DisplayName_SeedBagCabbage</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2238,10 +941,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagCabbage</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagCabbage" />
       <Public>true</Public>
       <DisplayName>Single Cabbage Seed</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2291,10 +991,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagFlax</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagFlax" />
       <Public>true</Public>
       <DisplayName>DisplayName_SeedBagFlax</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2344,10 +1041,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagFlax</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagFlax" />
       <Public>true</Public>
       <DisplayName>Single Flax Seed</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2397,10 +1091,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagWheat</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagWheat" />
       <Public>true</Public>
       <DisplayName>DisplayName_SeedBagWheat</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2450,10 +1141,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagWheat</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagWheat" />
       <Public>true</Public>
       <DisplayName>Single Wheat Seed</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2503,10 +1191,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagHerbs</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagHerbs" />
       <Public>true</Public>
       <DisplayName>DisplayName_SeedBagHerbs</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2556,10 +1241,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagHerbs</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagHerbs" />
       <Public>true</Public>
       <DisplayName>Single Herb Seed</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2609,10 +1291,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagTreeSmall</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagTreeSmall" />
       <Public>true</Public>
       <DisplayName>Tree Seed Bag</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2662,10 +1341,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagTreeSmall</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagTreeSmall" />
       <Public>true</Public>
       <DisplayName>Single Tree Seed</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2715,10 +1391,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagNorden_Spalt</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagNorden_Spalt" />
       <Public>true</Public>
       <DisplayName>Norden Spalt Seed Bag</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2768,10 +1441,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagNorden_Spalt</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagNorden_Spalt" />
       <Public>true</Public>
       <DisplayName>Single Norden Spalt Seed</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2821,10 +1491,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagNorden_Barley</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagNorden_Barley" />
       <Public>true</Public>
       <DisplayName>Norden Barley Seed Bag</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2874,10 +1541,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagNorden_Barley</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagNorden_Barley" />
       <Public>true</Public>
       <DisplayName>Single Norden Barley Seed</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2926,10 +1590,7 @@
     </PhysicalItem>
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagRedCabbage</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagRedCabbage" />
       <Public>true</Public>
       <DisplayName>Red Cabbage Seeds</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -2978,10 +1639,7 @@
     </PhysicalItem>
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagRedCabbage</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagRedCabbage" />
       <Public>true</Public>
       <DisplayName>Single Red Cabbage</DisplayName>
       <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
@@ -3043,10 +1701,7 @@
 
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagPumpkin_Compost_Test</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagPumpkin_Compost_Test" />
       <Public>true</Public>
       <DisplayName>Pumpkin Seed Bag Test (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3097,10 +1752,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagPumpkin_Compost_Test</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagPumpkin_Compost_Test" />
       <Public>true</Public>
       <DisplayName>Single Pumpkin Seed Test(Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3151,10 +1803,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagPumpkin_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagPumpkin_Compost" />
       <Public>true</Public>
       <DisplayName>Pumpkin Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3205,10 +1854,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagPumpkin_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagPumpkin_Compost" />
       <Public>true</Public>
       <DisplayName>Single Pumpkin Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3259,10 +1905,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagCabbage_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagCabbage_Compost" />
       <Public>true</Public>
       <DisplayName>Cabbage Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3313,10 +1956,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagCabbage_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagCabbage_Compost" />
       <Public>true</Public>
       <DisplayName>Single Cabbage Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3367,10 +2007,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagRedCabbage_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagRedCabbage_Compost" />
       <Public>true</Public>
       <DisplayName>Red Cabbage Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3421,10 +2058,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagRedCabbage_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagRedCabbage_Compost" />
       <Public>true</Public>
       <DisplayName>Single Red Cabbage Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3475,10 +2109,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagFlax_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagFlax_Compost" />
       <Public>true</Public>
       <DisplayName>Flax  Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3529,10 +2160,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagFlax_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagFlax_Compost" />
       <Public>true</Public>
       <DisplayName>Single Flax  Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3583,10 +2211,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagWheat_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagWheat_Compost" />
       <Public>true</Public>
       <DisplayName>Wheat Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3637,10 +2262,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagWheat_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagWheat_Compost" />
       <Public>true</Public>
       <DisplayName>Single Wheat Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3691,10 +2313,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagHerbs_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagHerbs_Compost" />
       <Public>true</Public>
       <DisplayName>Herb Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3745,10 +2364,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagHerbs_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagHerbs_Compost" />
       <Public>true</Public>
       <DisplayName>Single Herb Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3799,10 +2415,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagTreeSmall_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagTreeSmall_Compost" />
       <Public>true</Public>
       <DisplayName>Tree Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3853,10 +2466,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagTreeSmall_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagTreeSmall_Compost" />
       <Public>true</Public>
       <DisplayName>Single Tree Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3907,10 +2517,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagNorden_Spalt_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagNorden_Spalt_Compost" />
       <Public>true</Public>
       <DisplayName>Norden Spalt Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -3961,10 +2568,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagNorden_Spalt_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagNorden_Spalt_Compost" />
       <Public>true</Public>
       <DisplayName>Single Norden Spalt Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -4015,10 +2619,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>SeedBagNorden_Barley_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="SeedBagNorden_Barley_Compost" />
       <Public>true</Public>
       <DisplayName>Norden Barley Seed Bag (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
@@ -4069,10 +2670,7 @@
 <!-- =============================================================================================================== -->
     <PhysicalItem xsi:type="MyObjectBuilder_SeedBagToolDefinition">
       <!-- TODO: Designer Check -->
-      <Id>
-        <TypeId>PhysicalGunObject</TypeId>
-        <SubtypeId>Single_SeedBagNorden_Barley_Compost</SubtypeId>
-      </Id>
+      <Id Type="PhysicalGunObject" Subtype="Single_SeedBagNorden_Barley_Compost" />
       <Public>true</Public>
       <DisplayName>Single Norden Barley Seed (Compost)</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>

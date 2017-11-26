@@ -1,44 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_MedievalCharacterPickupComponentDefinition">
-    <Id Type="MyObjectBuilder_MedievalCharacterPickupComponent" Subtype="CharacterPickup2" />
+    <Id Type="MyObjectBuilder_MedievalCharacterPickupComponent" Subtype="RoMCharacterPickup" />
     <Wheel X="0.5" Y="0.45" Texture="Textures\GUI\Icons\ProgressCircle128.dds" Size="128" Scale="1.0" RadPerSecond="4.28"/>
     <PickableItems>
+      <!-- ==================================== Vanilla ==================================== -->
       <!--5s Pickup Time-->
       <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="WoodTable" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Cooking_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Scribe_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Apothocary_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Herbalist_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Masonry_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Machinesmith_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Stove" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Compost_Bin" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Stone_Well" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Norden_Ale_Kegstand" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Juice_Kegstand" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Grape_Kegstand" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Blueberry_Kegstand" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Anvil" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="ClaimTotem" PickupTime="5"/>
-
-      <!--3s Pickup Time-->
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Carpentry_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Blacksmithing_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Tailor_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Cooking_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Farming_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Apothocary_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Masonry_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Machinesmith_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Nomadic_Book" PickupTime="3"/>
-
       <!--2s Pickup Time-->
       <Item TypeId="MyObjectBuilder_CubeBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_FireLightBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_RopeHookBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_WheelBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_LockableDrum" PickupTime="2"/>
       <Item TypeId="MyObjectBuilder_CogWheelsBlock" PickupTime="2"/>
       <!--1s Pickup Time-->
       <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber10" PickupTime="1"/>
@@ -62,24 +32,114 @@
       <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound2" PickupTime="1"/>
       <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound1" PickupTime="1"/>
 
-
       <Item TypeId="HandItem" SubtypeId="LandscapeStakeItem" PickupTime="1"/>
+      
+      <!-- =================================== /Vanilla ====================================== -->
+      
+      
+      <!-- ==================================== RoM Stuff ==================================== -->
+      <!--5s Pickup Time-->
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Cooking_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Scribe_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Apothocary_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Herbalist_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Masonry_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Machinesmith_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Stove" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Compost_Bin" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Stone_Well" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Norden_Ale_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Juice_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Grape_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Blueberry_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Anvil" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="ClaimTotem" PickupTime="5"/>
+      <!-- ============ -->
+      <!--3s Pickup Time-->
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Carpentry_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Blacksmithing_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Tailor_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Cooking_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Farming_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Apothocary_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Masonry_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Machinesmith_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Nomadic_Book" PickupTime="3"/>
+      <!-- ============ -->
+      <!--2s Pickup Time-->
+      
+      <!-- ============ -->
+      <!--1s Pickup Time-->
+      
+      <!-- ============ -->
+
       <!--Instant Pickup-->
     </PickableItems>
-    <ToolBlacklist>
+    <!--<ToolBlacklist>
       <Tool TypeId="MyObjectBuilder_CubePlacer"/>
-    </ToolBlacklist>
+    </ToolBlacklist>-->
+    
+    <DefaultEffect Type="MyObjectBuilder_ParticleEffectDefinition" Subtype="PickupObject" />
+    <Effect>
+      <ItemType Type="MyObjectBuilder_GatherableDefinition" />
+      <Effect Type="MyObjectBuilder_ParticleEffectDefinition" Subtype="PickupEnvironmentItem" />
+    </Effect>
+    <Effect>
+      <ItemType Type="MyObjectBuilder_EntityBase" Subtype="Gatherable" />
+      <Effect Type="MyObjectBuilder_ParticleEffectDefinition" Subtype="PickupEnvironmentItem" />
+    </Effect>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_MedievalCharacterUseComponentDefinition">
     <Id Type="MyObjectBuilder_MedievalCharacterUseComponent" Subtype="CharacterUse" />
     <TapDuration>300</TapDuration>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+    <Id Type="MyObjectBuilder_CharacterStatComponent" Subtype="RoMStats" />
+    <Stats>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Health</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Stamina</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Food</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Fury</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Mood</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Alcohol</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Poison</SubtypeId>
+      </Stat>
+      <Stat>
+        <TypeId>MyObjectBuilder_EntityStat</TypeId>
+        <SubtypeId>Thirst</SubtypeId>
+      </Stat>	  
+    </Stats>
+    <Scripts>
+      <Script>MedievalStatEffect</Script>
+    </Scripts>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_QuickEquipComponentDefinition">
     <Id Type="QuickEquipComponent" Subtype="Humanoid"/>
     <Item Action="CharacterTorch">
-      <Id Type="EquipmentItem" Subtype="HandTorchItem"/>
+      <Id Type="EquipmentItem" Subtype="Torch"/>
     </Item>
   </Definition>
 
@@ -88,6 +148,13 @@
     <InventoryName>Internal</InventoryName>
 	  <DisplayName>DisplayName_InventoryName_Internal</DisplayName>
     <MaxItemCount>28</MaxItemCount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="Animal"/>
+    <InventoryName>Internal</InventoryName>
+    <DisplayName>DisplayName_InventoryName_Internal</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_MultiComponentDefinition">
@@ -98,20 +165,22 @@
     <Id Type="AreaInventoryAggregate" Subtype="NearbyInventories"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Humanoid" />
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Humanoid" />
     <CraftingCategories>
       <Category>Tools</Category>
       <Category>Farming</Category>
-      <Category>SmallBlocks</Category>
+      <Category>Personal</Category>
+      <Category>Maps</Category>
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_EntityQuestComponentDefinition">
-    <Id Type="EntityQuestComponent" Subtype="Humanoid" />
-    <InitialQuestId>HumbleBeginnings_01</InitialQuestId>
+  <Definition xsi:type="MyObjectBuilder_QuestEntityComponentDefinition">
+    <Id Type="QuestEntityComponent" Subtype="Humanoid" />
+    <InitialQuest>HumbleBeginnings</InitialQuest>
+    <HungerQuest>HungryBellies</HungerQuest>
   </Definition>
 
   <!-- Character stances -->
@@ -139,6 +208,17 @@
     <ContainerDefinition Type="MyObjectBuilder_InventoryBagEntity" Subtype="LootBag"/>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_InventorySpawnComponentDefinition">
+    <Id Type="InventorySpawnComponent" Subtype="CharacterBag" />
+    <ContainerDefinition Type="MyObjectBuilder_InventoryBagEntity" Subtype="CharacterBag"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_WaypointComponentDefinition">
+    <Id Type="WaypointComponent" Subtype="Corpse" />
+    <OnlyOwner>true</OnlyOwner>
+	<Waypoint Type="MyObjectBuilder_WaypointDefinition" Subtype="Corpse" />
+  </Definition>
+
   <Definition xsi:type="MyObjectBuilder_CombatComponentDefinition">
     <Id Type="CombatComponent" Subtype="Humanoid"/>
 
@@ -158,8 +238,10 @@
 
   <Definition xsi:type="MyObjectBuilder_CharacterDetectorComponentDefinition">
     <Id Type="MyObjectBuilder_CharacterShapecastDetectorComponent" Subtype="Default" />
-    <TargetingDistance>3.0</TargetingDistance><!--Picks up blocks-->
-    <InteractionDistance>3.0</InteractionDistance><!--Opens Dummies-->
+    <TargetingDistance>3.0</TargetingDistance>
+    <!--Picks up blocks-->
+    <InteractionDistance>3.0</InteractionDistance>
+    <!--Opens Dummies-->
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_TargetingComponentDefinition">
@@ -171,4 +253,125 @@
       <Z>0</Z>
     </TargetingPosition>
   </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CharacterMovementComponentDefinition">
+    <Id Type="MyObjectBuilder_CharacterMovementComponent" Subtype="CharacterMovement" />
+  </Definition>
+   
+  <Definition xsi:type="MyObjectBuilder_FirstPersonCameraComponentDefinition">
+    <Id Type="MyObjectBuilder_FirstPersonCameraComponent" Subtype="DefaultFirstPerson" />
+    <HeadBone>HeadDummy</HeadBone>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ThirdPersonCameraComponentDefinition">
+    <Id Type="MyObjectBuilder_ThirdPersonCameraComponent" Subtype="DefaultThirdPerson" />
+    <MinDistance>0.0</MinDistance>
+    <MaxDistance>15</MaxDistance>
+    <CameraRadius>0.3</CameraRadius>
+    <TargetOffset>
+      <X>0</X>
+      <Y>2.0</Y>
+      <Z>0</Z>
+    </TargetOffset>
+	<UnsafeThreshold>0.6</UnsafeThreshold>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_FirstPersonControllerComponentDefinition">
+    <Id Type="MyObjectBuilder_FirstPersonControllerComponent" Subtype="DefaultFirstPerson" />
+    <IronsightFovMultiplier>0.5</IronsightFovMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ThirdPersonControllerComponentDefinition">
+    <Id Type="MyObjectBuilder_ThirdPersonControllerComponent" Subtype="DefaultThirdPerson" />
+    <MinScrollOffset>1.2</MinScrollOffset>
+    <SmoothingZoomCoeff>0.4</SmoothingZoomCoeff>
+    <SmoothingYawCoeff>0.7</SmoothingYawCoeff>
+    <SmoothingPitchCoeff>0.2</SmoothingPitchCoeff>
+    <SmoothingAccYawCoeff>0.75</SmoothingAccYawCoeff>
+    <OffsetAccYawCoeff>0.2</OffsetAccYawCoeff>
+    <CameraRadius>0.2</CameraRadius>
+    <TargetOffsetMinDist>
+      <X>0.0</X>
+      <Y>1.88</Y>
+      <Z>0</Z>
+    </TargetOffsetMinDist>
+    <TargetOffsetMaxDist>
+      <X>0</X>
+      <Y>2.3</Y>
+      <Z>0</Z>
+    </TargetOffsetMaxDist>
+    <UnsafeCapsule>
+      <Start>
+        <X>0</X>
+        <Y>0.3</Y>
+        <Z>0</Z>
+      </Start>
+      <End>
+        <X>0</X>
+        <Y>1.3</Y>
+        <Z>0</Z>
+      </End>
+      <Radius>0.3</Radius>
+    </UnsafeCapsule>
+  </Definition>
+
+  <!-- Character Ragdoll component definiton-->
+  <Definition xsi:type="MyObjectBuilder_RagdollComponentDefinition">
+    <Id Type="RagdollComponent" Subtype="Humanoid" />
+  </Definition>
+
+  <!-- Flight component used in creative mode. -->
+  <Definition xsi:type="MyObjectBuilder_FlightComponentDefinition">
+    <Id Type="FlightComponent" Subtype="FlightDefault" />
+    <MaximumSpeed>100</MaximumSpeed>
+    <Acceleration>50.0</Acceleration>
+    <SlowdownFactor>0.30</SlowdownFactor>
+    <RotationSpeedFactor>0.0025</RotationSpeedFactor>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CharacterDamageComponentDefinition">
+    <Id Type="CharacterDamageComponent" Subtype="Humanoid" />
+    <MinDamageVelocity>12</MinDamageVelocity>
+    <MediumDamageVelocity>13</MediumDamageVelocity>
+    <DeadlyDamageVelocity>16</DeadlyDamageVelocity>
+    <DamageHitObjectMinMass>10</DamageHitObjectMinMass>
+    <DamageHitObjectMinVelocity>8.5</DamageHitObjectMinVelocity>
+    <DamageHitObjectMediumEnergy>100</DamageHitObjectMediumEnergy>
+    <DamageHitObjectSmallEnergy>80</DamageHitObjectSmallEnergy>
+    <DamageHitObjectCriticalEnergy>200</DamageHitObjectCriticalEnergy>
+    <DamageHitObjectDeadlyEnergy>500</DamageHitObjectDeadlyEnergy>
+    <SmallDamage>10</SmallDamage>
+    <MediumDamage>30</MediumDamage>
+    <CriticalDamage>70</CriticalDamage>
+    <DeadlyDamage>10000</DeadlyDamage>
+    <SqueezeDeadlyDamageMass>1000</SqueezeDeadlyDamageMass>
+  </Definition>
+
+  <!-- Corpse component used for respawning and cleanup. -->
+  <Definition xsi:type="MyObjectBuilder_CorpseComponentDefinition">
+    <Id Type="CorpseComponent" Subtype="CharacterCorpse" />
+    <RespawnTime>5</RespawnTime>
+    <LootingTime>30</LootingTime>
+    <BoxShapeScale x="1" y="1" z="0.5"/>
+    <RelativeCenterOfMass x="0" y="0" z="1"/>
+    <RelativeShapeTranslation x="0" y="0" z="0.5"/>
+    <Friction>0.5</Friction>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CharacterPhysicsDefinition">
+    <Id Type="CharacterPhysics" Subtype="Humanoid" />
+
+    <Mass>80</Mass>
+    <MaxImpulse>10000</MaxImpulse>
+    <MaxForce>10000</MaxForce>
+    <MaxSpeedRelativeToShip>10</MaxSpeedRelativeToShip>
+    <MaxSlope>70</MaxSlope>
+
+    <UseCustomSupport>true</UseCustomSupport>
+
+    <CharacterWidth>0.7</CharacterWidth>
+    <CharacterHeight>1.8</CharacterHeight>
+    <CharacterCrouchHeight>0.8</CharacterCrouchHeight>
+  </Definition>
+  
 </Definitions>

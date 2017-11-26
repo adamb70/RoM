@@ -2,10 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Weapons>
     <Weapon>
-      <Id>
-        <TypeId>WeaponDefinition</TypeId>
-        <SubtypeId>Crossbow</SubtypeId>
-      </Id>
+      <Id Type="WeaponDefinition" Subtype="Crossbow" />
       <ProjectileAmmoData RateOfFire="12" ShootSoundName="ToolCrossbShot" />
       <ReloadSoundName>ToolCrossbReload</ReloadSoundName>
       <DeviateShotAngle>0.5</DeviateShotAngle>
@@ -15,10 +12,7 @@
     </Weapon>
 
     <Weapon>
-      <Id>
-        <TypeId>WeaponDefinition</TypeId>
-        <SubtypeId>Blunderbust</SubtypeId>
-      </Id>
+      <Id Type="WeaponDefinition" Subtype="Blunderbust" />
       <ProjectileAmmoData RateOfFire="12" ShootSoundName="ToolCrossbShot" />
       <ReloadSoundName>ToolCrossbReload</ReloadSoundName>
       <DeviateShotAngle>1</DeviateShotAngle>
@@ -29,10 +23,7 @@
 
 
     <Weapon>
-      <Id>
-        <TypeId>WeaponDefinition</TypeId>
-        <SubtypeId>Norden_Crossbow</SubtypeId>
-      </Id>
+      <Id Type="WeaponDefinition" Subtype="Norden_Crossbow" />
       <ProjectileAmmoData RateOfFire="12" ShootSoundName="ToolCrossbShot" />
       <ReloadSoundName>ToolCrossbReload</ReloadSoundName>
       <DeviateShotAngle>0</DeviateShotAngle>

@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Wooden PortCullisMultiblock-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_PortcullisWoodWithPillarsStone" />
+    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <Public>true</Public>
+    <CubeSize>Large</CubeSize>
+    <PhysicalMaterial>GateStone</PhysicalMaterial>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="2" y="3" z="1" />
+    <Center x="0" y="0" z="0" />
+    <ModelOffset x="0.0" y="0.0" z="0.0" />
+    <Model>Models\Cubes\large\Portcullis_1.mwm</Model>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="2.8" EndX="2" EndY="3" />
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="0.25" EndY="2" />
+      <MountPoint Side="Back" StartX="1.75" StartY="0" EndX="2" EndY="2" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="15" />
+      <Component Tag="Timber" Count ="20" />
+      <Component Tag="Plank" Count ="12" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="5" />
+      <Component Tag="Rope" Count="2" />
+    </Components>
+    <BuildTimeSeconds>1</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>27500</MaxIntegrity>
+    <GuiVisible>true</GuiVisible>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <MultiBlock>NPC_WoodenPortcullisMultiBlock</MultiBlock>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WoodenPortcullis_1" />
+    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <PhysicalMaterial>GateStone</PhysicalMaterial>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Portcullis_1.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <!--<BuildProgressModels>
+        <Model BuildPercentUpperBound="0.7" File="Models\Cubes\large\HouseHalfStoneWall_Construction_1.mwm">
+        </Model>
+        -->
+    <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfStoneWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    <!--
+      </BuildProgressModels>-->
+    <Components>
+      <Component Tag="ScrapWood" Count="2" />
+      <Component Tag="Timber" Count ="5" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="1" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="40" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MaxIntegrity>6000</MaxIntegrity>
+    <BuildTimeSeconds>1</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+      <MountPoint Side="Right" StartX="0.6" StartY="0" EndX="0.8" EndY="1" />
+      <MountPoint Side="Left" StartX="0.2" StartY="0.8" EndX="0.4" EndY="1" />
+      <MountPoint Side="Left" StartX="0.5" StartY="0" EndX="1.0" EndY="0.1" />
+      <MountPoint Side="Top" StartX="0.7" StartY="0.6" EndX="1" EndY="0.8" />
+      <MountPoint Side="Front" StartX="0" StartY="0" EndX="0.3" EndY="1" />
+      <MountPoint Side="Back" StartX="0.7" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_2" />
+    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <PhysicalMaterial>GateStone</PhysicalMaterial>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Portcullis_2.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <!--<BuildProgressModels>
+        <Model BuildPercentUpperBound="0.7" File="Models\Cubes\large\HouseHalfStoneWall_Construction_1.mwm">
+        </Model>
+        -->
+    <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfStoneWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    <!--
+      </BuildProgressModels>-->
+    <Components>
+      <Component Tag="ScrapWood" Count="2" />
+      <Component Tag="Timber" Count ="5" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="1" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MaxIntegrity>2000</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+      <MountPoint Side="Left" StartX="0.2" StartY="0" EndX="0.4" EndY="1" />
+      <MountPoint Side="Right" StartX="0.6" StartY="0.8" EndX="0.8" EndY="1" />
+      <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="0.5" EndY="0.1" />
+      <MountPoint Side="Top" StartX="0" StartY="0.6" EndX="0.3" EndY="0.8" />
+      <MountPoint Side="Front" StartX="0.7" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="0.3" EndY="1" />
+    </MountPoints>
+    <BuildTimeSeconds>1</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_3" />
+    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <PhysicalMaterial>GateStone</PhysicalMaterial>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Portcullis_3.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <!--<BuildProgressModels>
+        <Model BuildPercentUpperBound="0.4" File="Models\Cubes\large\HouseHalfStoneWall_Construction_1.mwm">
+        </Model>
+        -->
+    <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfStoneWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    <!--
+      </BuildProgressModels>-->
+    <Components>
+      <Component Tag="ScrapWood" Count="2" />
+      <Component Tag="Timber" Count ="5" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="1" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MaxIntegrity>2000</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+      <MountPoint Side="Right" StartX="0.6" StartY="0" EndX="0.8" EndY="1" />
+      <MountPoint Side="Top" StartX="0" StartY="0.6" EndX="1" EndY="0.8" />
+      <MountPoint Side="Front" StartX="0" StartY="0" EndX="0.3" EndY="1" />
+      <MountPoint Side="Back" StartX="0.7" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <BuildTimeSeconds>1</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_4" />
+    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <PhysicalMaterial>GateStone</PhysicalMaterial>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Portcullis_4.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <!--<BuildProgressModels>
+        <Model BuildPercentUpperBound="0.4" File="Models\Cubes\large\HouseHalfStoneWall_Construction_1.mwm">
+        </Model>
+        -->
+    <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfStoneWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    <!--
+      </BuildProgressModels>-->
+    <Components>
+      <Component Tag="ScrapWood" Count="2" />
+      <Component Tag="Timber" Count ="5" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="1" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MaxIntegrity>2000</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+      <MountPoint Side="Left" StartX="0.2" StartY="0" EndX="0.4" EndY="1" />
+      <MountPoint Side="Top" StartX="0" StartY="0.6" EndX="1" EndY="0.8" />
+      <MountPoint Side="Front" StartX="0.7" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="0.3" EndY="1" />
+    </MountPoints>
+    <BuildTimeSeconds>1</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_5" />
+    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <PhysicalMaterial>GateStone</PhysicalMaterial>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Portcullis_5.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <!--<BuildProgressModels>
+        <Model BuildPercentUpperBound="0.2" File="Models\Cubes\large\HouseHalfStoneWall_Construction_1.mwm">
+        </Model>
+        -->
+    <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfStoneWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    <!--
+      </BuildProgressModels>-->
+    <Components>
+      <Component Tag="ScrapWood" Count="2" />
+      <Component Tag="Timber" Count ="5" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="1" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MaxIntegrity>2000</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+      <MountPoint Side="Right" StartX="0.6" StartY="0" EndX="0.8" EndY="1" />
+      <MountPoint Side="Top" StartX="0" StartY="0.6" EndX="1" EndY="0.8" />
+      <MountPoint Side="Front" StartX="0" StartY="0" EndX="0.3" EndY="1" />
+      <MountPoint Side="Back" StartX="0.7" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <BuildTimeSeconds>1</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_6" />
+    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <PhysicalMaterial>GateStone</PhysicalMaterial>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Portcullis_6.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <!--<BuildProgressModels>
+        <Model BuildPercentUpperBound="0.2" File="Models\Cubes\large\HouseHalfStoneWall_Construction_1.mwm">
+        </Model>
+        -->
+    <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfStoneWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    <!--
+      </BuildProgressModels>-->
+    <Components>
+      <Component Tag="ScrapWood" Count="2" />
+      <Component Tag="Timber" Count ="5" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="1" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MaxIntegrity>2000</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+      <MountPoint Side="Left" StartX="0.2" StartY="0" EndX="0.4" EndY="1" />
+      <MountPoint Side="Top" StartX="0" StartY="0.6" EndX="1" EndY="0.8" />
+      <MountPoint Side="Front" StartX="0.7" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="0.3" EndY="1" />
+    </MountPoints>
+    <BuildTimeSeconds>1</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_IronPart" />
+    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\PortcullisDoor.mwm</Model>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <Components>
+      <Component Tag="ScrapWood" Count="2" />
+      <Component Tag="Timber" Count ="5" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="1" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MaxIntegrity>2000</MaxIntegrity>
+    <BuildTimeSeconds>1</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Both</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <AvailableInSurvival>false</AvailableInSurvival>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Subparts>
+      <Subpart Name="PortcullisDoor" PhysicalMaterial="Wood">
+        <HingePosition x="-1.25" y="-1.05" z="-0.44"/>
+      </Subpart>
+    </Subparts>
+  </Definition>
+
+  <!--
+        ///Animation Methods\\\
+    QuadraticEaseIn, Out,InOut,OutIn, 
+    QuarticEaseIn, Out,InOut,OutIn, 
+    QuinticEaseIn, Out,InOut,OutIn,
+    SinusoidalEaseIn, Out,InOut,OutIn,
+    ExponentialEaseIn, Out,InOut,OutIn,
+    CircularEaseIn, Out,InOut,OutIn,
+    ElasticEaseIn, Out,InOut,OutIn,
+    BackEaseIn, Out,InOut,OutIn,
+    BounceEaseIn, Out,InOut,OutIn,
+   -->
+
+  <!--<OpeningSequences>
+    <Sequence Speed="1.06" OpenDelay="0" CloseDelay="2" Move="Slide" MaxSlide="0.265" ClosingSpeedMult="0.5">
+      <Id ="
+"=" y" /"/>
+    </Sequence>
+    <Sequence Speed="3.56" OpenDelay="0.25" CloseDelay="1" Move="Slide" MaxSlide="0.89" ClosingSpeedMult="0.25">
+      <Id ="
+"=" y" /"/>
+    </Sequence>
+    <Sequence Speed="6.96" OpenDelay="0.5" CloseDelay="0" Move="Slide" MaxSlide="1.74" ClosingSpeedMult="0.25">
+      <Id ="
+"=" y" /"/>
+    </Sequence>
+  </OpeningSequences>-->
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <AnimationSequences>
+      <Sequence Name="OpenSequence" WrapMode="Once">
+        <Event Start="0.2" Name="DoorOpening" />
+        <Event Start="2.5" Name="DoorOpened" />
+
+        <Animation Start="0" End="2.5">
+          <Subpart Name="PortcullisDoor" Type="Translation" Axis="Y" From="-2.895" To="0" Method="Linear" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="CloseSequence" WrapMode="Once">
+        <Event Start="0.2" Name="DoorClosing" />
+        <Event Start="1.2" Name="DoorClosed" />
+
+        <Animation Start="0" End="1.0">
+          <Subpart Name="PortcullisDoor" Type="Translation" Axis="Y" From="0" To="-2.895" Method="QuarticEaseIn" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_gate_01" Name="Generic" />
+      <UseObject Dummy="detector_gate_02" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SecondaryAction>OpenTerminal</SecondaryAction>
+    <SupportsAccessSettings>true</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Animations>
+      <Animation State="Opening" Animation="OpenSequence" />
+      <Animation State="Closing" Animation="CloseSequence" />
+    </Animations>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <InitialState>Open</InitialState>
+    <States>
+      <State Name="Closed">
+        <Transition>Opening</Transition>
+      </State>
+      <State Name="Closing">
+        <Transition>Closed</Transition>
+      </State>
+      <State Name="Open">
+        <Transition>Closing</Transition>
+      </State>
+      <State Name="Opening">
+        <Transition>Open</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <SoundEvents>
+      <Event Name="DoorClosed" Sound="DoorOpen" />
+    </SoundEvents>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Events>
+      <Event Name="DoorClosed" TransitionToState="Closed" />
+      <Event Name="DoorOpened" TransitionToState="Open" />
+    </Events>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="UseObjectsComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="SubpartAnimationComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="EntityStateComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="StateAnimationComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="StateUseObjectComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WoodenPortcullis_1" />
+  </Definition>
+</Definitions>

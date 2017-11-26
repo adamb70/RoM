@@ -1,42 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="MyObjectBuilder_Character" Subtype="Medieval_female" />
-    <Component Type="CraftingComponent" Subtype="Humanoid"/>
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="EntityBase" Subtype="Medieval_female" />
 
-    <Component Type="InventorySpawnComponent"/>
+    <CopyFrom Type="EntityBase" Subtype="RoMPlayableCharacter" />
 
-    <Component Type="CharacterRagdollComponent"/>
-
-    <Component Type="MedievalCharacterPickupComponent" Subtype="CharacterPickup2" ForceCreate="true" />
-
-    <Component Type="MedievalCharacterUseComponent" Subtype="CharacterUse" ForceCreate="true"/>
-
-    <Component Type="CharacterStatComponent" Subtype="RoM_female" ForceCreate="true"/>
-
-    <Component Type="CharacterSoundComponent" Subtype="MedievalFemale" ForceCreate="true"/>
-
-    <Component Type="CharacterControllerComponent" ForceCreate="true"/>
-
-    <Component Type="Inventory" Subtype="Internal"/>
-
-    <Component Type="AreaInventory" Subtype="Ground"/>
-
-    <Component Type="AreaInventoryAggregate" Subtype="NearbyInventories"/>
-
-    <Component Type="EntityEquipmentComponent" Subtype="Humanoid"/>
-
-    <Component Type="EntityStateComponent" Subtype="CharacterStances" ForceCreate="true" />
-
-    <Component Type="CharacterHandItemsComponent" Subtype="Humanoid" ForceCreate="true" />
-
-    <Component Type="EntityStanceComponent" ForceCreate="true" />
-
-    <Component Type="CombatComponent" Subtype="Humanoid" ForceCreate="true" />
-
-    <Component Type="QuickEquipComponent" Subtype="Humanoid" ForceCreate="true" />
-
-    <Component Type="CharacterShapecastDetectorComponent" Subtype="Default" />
-
+    <Component Type="ModelComponent" Subtype="Medieval_female"/>
+    <Component Type="SkeletonComponent" Subtype="Medieval_female"/>
+    <Component Type="CharacterAnimationControllerComponent" Subtype="Medieval_female"/>
+    <Component Type="CharacterSoundComponent" Subtype="MedievalFemale"/>
+	
+	<Component Type="RenderComponentCharacter" Subtype="Medieval_female"/>
   </Definition>
 </Definitions>

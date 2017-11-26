@@ -259,8 +259,8 @@
     <DisplayName>DisplayName_Research_Mechanics</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Schematic_AdvancedMechanics" />
     <Entry Type="CraftingRecipeDefinition" Subtype="CatapultHead" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="RopeEndingSmall" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="TurnCrossSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RopeEnd" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrankWheel" />
   </Definition>
   <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -367,9 +367,9 @@
   </Definition>
 <!-- ========================================================================= --> 
 <Definition xsi:type="ResearchDefinition">
-	<Id Type="ResearchDefinition" Subtype="TurnCrossSmall_Machinesmith" />
+	<Id Type="ResearchDefinition" Subtype="CrankWheel_Machinesmith" />
     <DisplayName>Machinesmith</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="TurnCrossSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrankWheel" />
   </Definition>
 <!-- ========================================================================= -->
 
@@ -408,6 +408,14 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Plow_Blacksmithing" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Sword_Blacksmithing" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Mace_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Nails_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="TorchWall_Blacksmithing" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="FireBucket_Blacksmithing" />
+<!-- Machinesmith -->
+    <Entry Type="CraftingRecipeDefinition" Subtype="SeedingBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="PlowBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="HarvesterBlock_Machinesmith" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -489,6 +497,14 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="FireBucket" />
   </Definition>
 <!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="IronSmithing_Blacksmithing" />
+    <DisplayName>Iron Smithing</DisplayName>
+<!-- Blacksmith -->
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronOreToIronIngots" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Anvil_Blacksmithing" />
+  </Definition>
+<!-- ========================================================================= -->
 
 
     <!-- Blacksmithing Crops -->
@@ -498,16 +514,8 @@
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="IronOre_Blacksmith" />
     <DisplayName>Blacksmithing</DisplayName>
-<!-- Blacksmith -->
-    <Entry Type="CraftingRecipeDefinition" Subtype="Anvil_Blacksmithing" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="Iron_Nails_Blacksmithing" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="TorchStand_Blacksmithing" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="TorchWall_Blacksmithing" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="FireBucket_Blacksmithing" />
-<!-- Machinesmith -->
-    <Entry Type="CraftingRecipeDefinition" Subtype="SeedingBlock_Machinesmith" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="PlowBlock_Machinesmith" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="HarvesterBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="IronSmithing_Blacksmithing" />
+
   </Definition>
 <!-- ========================================================================= -->
 
@@ -556,7 +564,6 @@
 	<Id Type="ResearchDefinition" Subtype="Furnace_Masonry" />
     <DisplayName>Masonry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Furnace" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="IronOreToIronIngots" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -936,8 +943,6 @@
     <DisplayName>Masonry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="MillStone_Masonry" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Furnace_Masonry" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="SmithingStation_Blacksmithing" />
     <Entry Type="CraftingRecipeDefinition" Subtype="HouseHalfStoneWall_Masonry" />
   </Definition>
 
@@ -1015,6 +1020,7 @@
 	<Id Type="ResearchDefinition" Subtype="WheelMediumSmall_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Nails_Carpenter" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1039,6 +1045,12 @@
 	<Id Type="ResearchDefinition" Subtype="Wardrobe_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Wardrobe" />
+  </Definition>
+<!-- ========================================================================= -->
+<Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodBed_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodBed" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1100,6 +1112,7 @@
 	<Id Type="ResearchDefinition" Subtype="Juice_Kegstand_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Juice_Kegstand" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blueberry_Kegstand" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1137,23 +1150,56 @@
 	<Id Type="ResearchDefinition" Subtype="StockpileLog_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CubeBlock" Subtype="StockpileLog" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="StockpileTimber_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CubeBlock" Subtype="StockpileTimber" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="StockpileStone_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
     <Entry Type="CubeBlock" Subtype="StockpileStone" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall" />
   </Definition>
 <!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileLogSmall_Carpenter" />
+    <DisplayName>Survival</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLog_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileTimberSmall_Carpenter" />
+    <DisplayName>Survival</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimber_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileStoneSmall_Carpenter" />
+    <DisplayName>Survival</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStone_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="StockpileIronSmall_Carpenter" />
+    <DisplayName>Survival</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileIronSmall" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
+  </Definition>
+<!-- ========================================================================= -->
+
 
 
     <!-- Carpenter Crops -->
@@ -1163,11 +1209,7 @@
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="TreeSmall_WoodenSticks_Carpenter" />
     <DisplayName>Carpentry</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bin_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="WheelMediumSmall_Nails_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="SpinningWheel_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="BannerWorkstation_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Wardrobe_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodChair_Carpenter" />
@@ -1182,7 +1224,7 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
     <Entry Type="CraftingRecipeDefinition" Subtype="LockGearBox2_Machinesmith" />
     <Entry Type="CraftingRecipeDefinition" Subtype="RopeDrumAloneSmall_Machinesmith" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="TurnCrossSmall_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrankWheel_Machinesmith" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodBarrel_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodChestLarge_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowQuiver_Fletching" />
@@ -1191,14 +1233,16 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="NordicChair_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="NorseBed_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="NordicThrone_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLog_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimber_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStone_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileIronSmall_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Bookshelf_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WeaponRack_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodenDiningTable_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodenShelf_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodBed_Carpenter" />
   </Definition>
 
 
@@ -1519,9 +1563,9 @@
     <!-- Tailor -->
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
-	<Id Type="ResearchDefinition" Subtype="LinenString_Tailor" />
+	<Id Type="ResearchDefinition" Subtype="StringLinen_Tailor" />
     <DisplayName>Tailor</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="LinenString" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StringLinen" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1558,7 +1602,7 @@
 	<Id Type="ResearchDefinition" Subtype="Flax_Herblore" />
     <DisplayName>Herblore</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Flax_Farming" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="LinenString_Tailor" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StringLinen_Tailor" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Rope_Tailor" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Rope_Tearable_Tailor" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Flag10x10_Tailor" />
@@ -1682,9 +1726,9 @@
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
-	<Id Type="ResearchDefinition" Subtype="MushroomSoup_Cooking" />
+	<Id Type="ResearchDefinition" Subtype="SoupMushroom_Cooking" />
     <DisplayName>Norden Cooking</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="MushroomSoup" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SoupMushroom" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1700,9 +1744,9 @@
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
-	<Id Type="ResearchDefinition" Subtype="ShroomSteak_Cooking" />
+	<Id Type="ResearchDefinition" Subtype="SteakWithMushrooms_Cooking" />
     <DisplayName>Norden Cooking</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="ShroomSteak" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SteakWithMushrooms" />
   </Definition>
 <!-- ========================================================================= -->			
 				<!-- Herblore -->
@@ -1713,7 +1757,7 @@
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="Wheat_Herblore" />
     <DisplayName>Herblore</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="WheatFlourSack" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="FlourWheat" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Dough_Cooking" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Wheat_Farming" />
   </Definition>
@@ -1753,9 +1797,9 @@
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="Meat_Herblore" />
     <DisplayName>Hunting</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="RoastMeat_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="MeatRoasted_Cooking" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Goulash_Cooking" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="ShroomSteak_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SteakWithMushrooms_Cooking" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1764,11 +1808,6 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="Salad_Cooking" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Pumpkin_Farming" />
     <Entry Type="CraftingRecipeDefinition" Subtype="CarvedPumpkin" />
-  </Definition>
-<!-- ========================================================================= -->
-  <Definition xsi:type="ResearchDefinition">
-	<Id Type="ResearchDefinition" Subtype="SpiderLeg_Cooking" />
-    <DisplayName>Spider Legs</DisplayName>
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1792,16 +1831,15 @@
     <DisplayName>Herblore</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Herbs_Farming" />
     <Entry Type="CraftingRecipeDefinition" Subtype="RootsWithShrooms_Cooking" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="RoastMeat_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="MeatRoasted_Cooking" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Bandage_Apothocary" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="Mushroom_Herblore" />
     <DisplayName>Herblore</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="ShroomSteak_Cooking" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SteakWithMushrooms_Cooking" />
     <Entry Type="CraftingRecipeDefinition" Subtype="RootsWithShrooms_Cooking" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="MushroomSoup_Cooking" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -1883,11 +1921,21 @@
   </Definition>
   
 <!-- ========================================================================= -->
-
+  
   <Definition xsi:type="ResearchDefinition">
-    <Id Type="ResearchDefinition" Subtype="Bed_Nomadic" />
+    <Id Type="ResearchDefinition" Subtype="TentBranches_Nomadic" />
     <DisplayName>Nomadic Research</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="NomadicBed" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="AdvTentBranches_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="NomadTentBranches" />
+  </Definition>
+  
+<!-- ========================================================================= -->
+  
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="AdvTentBranches_Nomadic" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TentBranches" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Tent_Nomadic" />
   </Definition>
   
 <!-- ========================================================================= -->
@@ -1895,17 +1943,26 @@
   <Definition xsi:type="ResearchDefinition">
     <Id Type="ResearchDefinition" Subtype="Tent_Nomadic" />
     <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="AdvTent_Nomadic" />
     <Entry Type="CraftingRecipeDefinition" Subtype="NomadicTent" />
   </Definition>
   
 <!-- ========================================================================= -->
   
   <Definition xsi:type="ResearchDefinition">
-    <Id Type="ResearchDefinition" Subtype="Tent_NomadicAdv" />
+    <Id Type="ResearchDefinition" Subtype="AdvTent_Nomadic" />
     <DisplayName>Nomadic Research</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="NomadicTentAdv" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Tent" />
   </Definition>
   
 <!-- ========================================================================= -->
   
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="NeedleThread_Carpenter" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="NeedleThread" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SpinningWheel_Carpenter" />
+  </Definition>
+  
+<!-- ========================================================================= -->
 </Definitions>

@@ -24,7 +24,7 @@
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileIronSmall"/>
     <DisplayName>DisplayName_Block_StockpileIronSmall</DisplayName>
     <Icon>Textures\GUI\Icons\Props\StockpileIronSmall.dds</Icon>
-    <Category></Category>
+    <Category>Carpentry_Table</Category>
     <Prerequisites>
       <Item Amount="4" Tag="Timber" />
     </Prerequisites>
@@ -154,7 +154,7 @@
       <Category></Category>
       <Prerequisites>
 		<Item Amount="15" Type="InventoryItem" Subtype="Timber10" />
-      <Item Amount="10" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="10" Type="InventoryItem" Subtype="IngotIron" />
 		<Item Amount="1" Type="HandItem" Subtype="Hammer" />
       </Prerequisites>
       <Results>
@@ -173,7 +173,7 @@
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category></Category>
       <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="10" Type="InventoryItem" Subtype="IngotIron" />
         <Item Amount="10" Type="InventoryItem" Subtype="Timber10" />
         <Item Amount="1" Type="HandItem" Subtype="StoneAxe" />
       </Prerequisites>
@@ -194,7 +194,7 @@
       <Category></Category>
       <Prerequisites>
         <Item Amount="30" Type="InventoryItem" Subtype="MetalParts" />
-        <Item Amount="15" Type="InventoryItem" Subtype="LargeStone" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StoneLarge" />
       </Prerequisites>
       <Results>
 	  
@@ -280,11 +280,11 @@
       <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
       <Category>Fletching_Table</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="5" Tag="ScrapWood" />
+        <Item Amount="1" Tag="IngotIron" />
       </Prerequisites>
       <Results>
-	    <Item Amount="10" Type="ProjectileItem" Subtype="CrossbowBolt2" />
+	    <Item Amount="10" Type="ProjectileItem" Subtype="CrossbowBolt_RoM" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
@@ -316,8 +316,8 @@ how to make Iron Crossbow Bolts.</DisplayName>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\Crossbow.dds</Icon>
       <Category>Fletching_Table</Category>
       <Prerequisites>
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="2" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -386,7 +386,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>MunKhazar_General_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="DeerSkin" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
       </Prerequisites>
       <Results>
 	  
@@ -420,7 +420,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Wheat (4G)</DisplayName>
       <Category>MunKhazar_Food_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="1" Type="InventoryItem" Subtype="StrawsWheat" />
       </Prerequisites>
       <Results>
 	  
@@ -562,7 +562,7 @@ a crossbow.</DisplayName>
 				Lumber Market
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_MunKhazar_Lumber" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_MunKhazar_Lumber_10" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
       <DisplayName>Sell: Log (13G)</DisplayName>
@@ -573,6 +573,22 @@ a crossbow.</DisplayName>
       <Results>
 	  
 	    <Item Amount="130" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_MunKhazar_Lumber" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>MunKhazar_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="13" Type="InventoryItem" Subtype="Gold_Coins" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
@@ -606,7 +622,7 @@ a crossbow.</DisplayName>
 				Lumber Market
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Munik_Lumber" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Munik_Lumber_10" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
       <DisplayName>Sell: Log (13G)</DisplayName>
@@ -620,6 +636,22 @@ a crossbow.</DisplayName>
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Munik_Lumber" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>Munik_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="13" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
 <!-- ========================================================================================= -->
 				General Market
 <!-- ========================================================================================= -->
@@ -630,7 +662,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>Munik_General_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="DeerSkin" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
       </Prerequisites>
       <Results>
 	  
@@ -704,7 +736,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Wheat (4G)</DisplayName>
       <Category>Rienburg_Food_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="1" Type="InventoryItem" Subtype="StrawsWheat" />
       </Prerequisites>
       <Results>
 	  
@@ -834,7 +866,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>Rienburg_General_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="DeerSkin" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
       </Prerequisites>
       <Results>
 	  
@@ -878,6 +910,114 @@ a crossbow.</DisplayName>
 
 
 
+  			  <!-- Shops / Market / Economey | City of Reyjk -->
+
+
+
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Bread_Reyjk_Bakery" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\baked_bread.dds</Icon>
+      <DisplayName>Sell: Bread (15GP)</DisplayName>
+      <Category>Reyjk_Food_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="ConsumableItem" Subtype="Bread" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="15" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+				Lumber Market
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Reyjk_Lumber_10" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>Reyjk_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="10" Type="InventoryItem" Subtype="Log250cm" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="130" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Reyjk_Lumber" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>Reyjk_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="13" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+				General Market
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Reyjk_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\InventoryItem\DeerSkin.dds</Icon>
+      <DisplayName>Sell: Deer Hide (25G)</DisplayName>
+      <Category>Reyjk_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="25" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerAntlers_Reyjk_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\InventoryItem\Antlers.dds</Icon>
+      <DisplayName>Sell: Deer Antlers (35G)</DisplayName>
+      <Category>Reyjk_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Antlers" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="35" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Buy_Sand_Bucket_Reyjk_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Farming\Sand_Bucket.dds</Icon>
+      <DisplayName>Buy: Bucket of Sand (2G)</DisplayName>
+      <Category>Reyjk_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="2" Type="InventoryItem" Subtype="Gold_Coins" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="CubeBlock" Subtype="Sand_Bucket" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+
+
+
 
 <!-- =================================================================================== -->
 
@@ -892,22 +1032,22 @@ a crossbow.</DisplayName>
 
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LinenString" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StringLinen" />
       <Icon>Textures\GUI\Icons\Materials\LinenString.dds</Icon>
-      <DisplayName>DisplayName_Block_LinenString</DisplayName>
+      <DisplayName>DisplayName_Item_LinenString</DisplayName>
       <Category>Weaving</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="FlaxStraws" />
+        <Item Amount="2" Type="InventoryItem" Subtype="StrawsFlax" />
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+	    <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LinenString_Tailor" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StringLinen_Tailor" />
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Materials\LinenString.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -918,7 +1058,7 @@ a crossbow.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="LinenString_Schematic" />
+	    <Item Amount="1" Type="SchematicItem" Subtype="StringLinen_Schematic" />
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
@@ -931,7 +1071,7 @@ a crossbow.</DisplayName>
     <Icon>Textures\GUI\Icons\cubes\BasicRope.dds</Icon>
     <Category></Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="5" Type="HandItem" Subtype="Rope" />
@@ -946,7 +1086,7 @@ a crossbow.</DisplayName>
     <Icon>Textures\GUI\Icons\cubes\TearableRope.dds</Icon>
     <Category></Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="5" Type="HandItem" Subtype="RopeTearable" />
@@ -961,7 +1101,7 @@ a crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\cubes\BasicRope.dds</Icon>
       <Category>Weaving</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -994,7 +1134,7 @@ a crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\cubes\TearableRope.dds</Icon>
       <Category>Weaving</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1028,7 +1168,7 @@ a crossbow.</DisplayName>
     <Category></Category>
     <Prerequisites>
       <Item Amount="1" Tag="ScrapWood" />
-      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Flag10x10" />
@@ -1043,7 +1183,7 @@ a crossbow.</DisplayName>
     <Category></Category>
     <Prerequisites>
       <Item Amount="1" Tag="ScrapWood" />
-      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="FlagRed10x10" />
@@ -1059,7 +1199,7 @@ a crossbow.</DisplayName>
       <Category>Weaving</Category>
       <Prerequisites>
       <Item Amount="1" Tag="ScrapWood" />
-        <Item Amount="4" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1093,7 +1233,7 @@ a crossbow.</DisplayName>
       <Category>Weaving</Category>
       <Prerequisites>
         <Item Amount="1" Tag="ScrapWood" />
-        <Item Amount="4" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1126,11 +1266,11 @@ a crossbow.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bandage" />
       <DisplayName>DisplayName_Consumables_Bandage</DisplayName>
-      <Icon>Textures\GUI\Icons\Bandage.dds</Icon>
+      <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
       <Category>Apothocary_Table</Category>
       <Prerequisites>
         <Item Amount="2" Type="ConsumableItem" Subtype="Herbs" />
-        <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+        <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
       </Prerequisites>
       <Results>
 	  
@@ -1276,7 +1416,7 @@ a crossbow.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="InventoryItem" Subtype="Alcohal" />
+	    <Item Amount="1" Type="InventoryItem" Subtype="Alcohol" />
       </Results>
 	  <CraftingTime Seconds="4"/>
     </Definition>
@@ -1367,7 +1507,7 @@ a crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\book.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="1" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -1381,11 +1521,18 @@ a crossbow.</DisplayName>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Carpentry_Book" />
       <DisplayName>Carpentry Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"The Carpenter bends trees to it's will. Wood is
+the medium from which the Carpenter crafts many
+things. From tools, to furniture. The Carpenter 
+is required for any settlement." 
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Carpentry_icon.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1402,11 +1549,17 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Blacksmithing_Book" />
       <DisplayName>Blacksmithing Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"From rock, to metal. The Blacksmith crafts the mighty
+swords and tools for war, but are just as needed within
+the hometown.
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Blacksmith.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1423,11 +1576,16 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tailor_Book" />
       <DisplayName>Tailor Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"Linen, the canvas of the Tailor. They weave the war
+banners and interior decoration of many homes."
+ 
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Tailor.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1444,11 +1602,18 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cooking_Book" />
       <DisplayName>Cooking Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"The chef does not simply prepare food, but will cook
+up entire feasts. Nothing restores a town's mood better
+then the skilled cooking of a chef. Matched by none, 
+they search the whole realm for the best ingrediants." 
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1465,11 +1630,18 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Farming_Book" />
       <DisplayName>Farming Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"Farming, the art of sculpting land into bountiful 
+harvests. Patiant, Studious, and Wise. Farmers are 
+the most important people when it comes to supporting
+a town's population."
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Farm.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1486,11 +1658,18 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Apothocary_Book" />
       <DisplayName>Apothocary Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"The science of plants, and the properties that can
+be extracted from them. The Apothocary, seen as an
+angel when healing the sick, and the devil in times
+of war when they poison entire towns."
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Apothacary_icon.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1507,11 +1686,17 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Book" />
       <DisplayName>Masonry Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"Masonry, the art of transforming raw earth into
+beautiful structures. The earth is but clay yet
+to be shaped."
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Masonry.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1528,11 +1713,17 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Machinesmith_Book" />
       <DisplayName>Machinesmith Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"The machinesmith, master of mechanical knowledge. 
+They craft mighty the seige equipment and the harvestors
+that reap the fields." 
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\Machinesmith.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1549,11 +1740,17 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Fletching_Book" />
       <DisplayName>Fletching Book</DisplayName>
-    <Description>This book is used to record the potential ingredients 
+    <Description>
+"Fletching wood into bows and arrows. Important for
+times of war, and times of hunting. Those who prefer
+the bow, take the time to learn fletching."
+
+This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
-As you find new ingredients, recipes will be unlocked 
-inside this book for you to research. Place the book 
-on a surface to read from it.</Description>
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\book.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1569,10 +1766,17 @@ on a surface to read from it.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LawGovernment_Book" />
       <DisplayName>Law and Government Book</DisplayName>
-    <Description>This book teaches you how to rule and 
-manage a kingdom. It will contain various
-research related to Law and Government. Place the book 
-on a surface to read from it.</Description>
+    <Description>
+"Government is the essential tool of any leader.
+How such a government is set up though, is the 
+fundamental question for any settlement."
+
+This book teaches how to rule and manage a kingdom,
+with research related to Law and Government. As you 
+find new pristine ingredients, research will be 
+available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
@@ -1603,9 +1807,9 @@ on a surface to read from it.</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_Flax" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Flax" />
       </Prerequisites>
       <Results>
 	  
@@ -1620,8 +1824,8 @@ on a surface to read from it.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
       <Category>Herbalist_Table</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="WoodenSticks" />
-        <Item Amount="1" Type="InventoryItem" Subtype="StoneOreSmall" />
+        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="1" Type="InventoryItem" Subtype="StoneSmall" />
       </Prerequisites>
       <Results>
 	  
@@ -2114,7 +2318,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
-        <Item Amount="15" Type="InventoryItem" Subtype="FlaxStraws" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StrawsFlax" />
       </Prerequisites>
       <Results>
 	  
@@ -2188,7 +2392,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="InventoryItem" Subtype="FlaxStraws" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StrawsFlax" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -2261,7 +2465,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
-        <Item Amount="15" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StrawsWheat" />
       </Prerequisites>
       <Results>
 	  
@@ -2335,7 +2539,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="InventoryItem" Subtype="WheatStraws" />
+        <Item Amount="15" Type="InventoryItem" Subtype="StrawsWheat" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -3071,13 +3275,24 @@ inorder to plant it again.</Description>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
-      <DisplayName>Carpenter: Empty Bucket</DisplayName>
+      <DisplayName>Survival Essentials: Empty Bucket</DisplayName>
+      <Description>
+"The bucket is a vessel of possbilities."
+
+An empty bucket can be filled with 
+liquids and solids. Most commonly
+water from a well. Can be crafted 
+from a Carpentry Table.
+
+
+((Hint: Search small trees and small
+pine trees to aquire Pristine Sticks))</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Carpentry_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="1" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3092,7 +3307,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="2" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3125,7 +3340,7 @@ inorder to plant it again.</Description>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3140,7 +3355,7 @@ inorder to plant it again.</Description>
       <Icon>Textures\GUI\Icons\Cubes\WheelMediumSmall.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <DisplayName>Carpenter: Wheel</DisplayName>
-      <Category>Carpentry_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
@@ -3211,7 +3426,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Tailor: Banner Workstation</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3243,7 +3458,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>DisplayName_Block_WoodChair</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3328,7 +3543,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Dining Table</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="24" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="18" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3362,7 +3577,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Bookshelf</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3376,10 +3591,10 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
 	<Icon>Textures\GUI\Icons\Props\Stockpile_Log.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Carpenter: Log Stockpile</DisplayName>
+      <DisplayName>Carpentry: Large Log Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="32" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3393,10 +3608,10 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Props\Stockpile_Timber.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Carpenter: Timber Stockpile</DisplayName>
+      <DisplayName>Carpentry: Large Timber Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="32" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3410,14 +3625,114 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Props\Stockpile_Stone.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Carpenter: Stone Stockpile</DisplayName>
+      <DisplayName>Carpentry: Large Stone Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="32" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
 	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileStone" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileLogSmall_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileLogSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Small Log Stockpile</DisplayName>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileLogSmall" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileTimberSmall_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileTimberSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Small Timber Stockpile</DisplayName>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileTimberSmall" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileStoneSmall_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileOreSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Small Stone Stockpile</DisplayName>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileStoneSmall" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileIronSmall_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Props\StockpileIronSmall.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Small Iron Stockpile</DisplayName>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileIronSmall" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wardrobe_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Wardrobe</DisplayName>
+      <Category>Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_Wardrobe" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ====================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodBed_Carpenter" />
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\WoodBed.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <DisplayName>Carpenter: Wooden Bed</DisplayName>
+      <Category>Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_WoodBed" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
@@ -3430,7 +3745,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Gate</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="55" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="45" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -3495,11 +3810,11 @@ inorder to withstand more .</DisplayName>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NeedleThread_Carpenter" />
       <DisplayName>Carpenter: Needle and Thread</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-	<Icon>Textures\GUI\Icons\Cubes\SpinningWheel.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Tailor\NeedleThread.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category></Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="1" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      	<Item Amount="1" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3517,7 +3832,7 @@ open Spalt Lager Kegs.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Carpentry_Book</Category>
+      <Category></Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
@@ -3535,7 +3850,7 @@ open Spalt Lager Kegs.</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3546,10 +3861,7 @@ open Spalt Lager Kegs.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Juice_Kegstand_Carpenter" />
-      <DisplayName>Carpenter: Berry Juice Kegstand
-
-Allows you to store and
-produce Red Berry Juice.</DisplayName>
+      <DisplayName>Carpenter: Kegstand</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -3571,7 +3883,7 @@ produce Red Berry Juice.</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3589,7 +3901,7 @@ produce Grabe Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Carpentry_Book</Category>
+      <Category></Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
@@ -3607,7 +3919,7 @@ produce Grabe Juice.</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3625,7 +3937,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Carpentry_Book</Category>
+      <Category></Category>
       <Prerequisites>
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
@@ -3643,7 +3955,7 @@ produce Blue Berry Juice.</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3704,7 +4016,7 @@ produce Blue Berry Juice.</DisplayName>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
         <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
-        <Item Amount="40" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="30" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3721,7 +4033,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="45" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="35" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="12" Type="SchematicItem" Subtype="Schematic_IronOre" />
       </Prerequisites>
       <Results>
@@ -3740,7 +4052,7 @@ produce Blue Berry Juice.</DisplayName>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_IronOre" />
-        <Item Amount="45" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="35" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3751,13 +4063,16 @@ produce Blue Berry Juice.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
-      <DisplayName>Machinesmith: Catch Block</DisplayName>
+      <DisplayName>Carpentry: Catch Block</DisplayName>
+    <Description>
+Used for making carts, this catchblock 
+is perfect for an axel!</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\CatchBlockSmall.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Machinesmith_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3770,7 +4085,7 @@ produce Blue Berry Juice.</DisplayName>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CatchBlockSmall2"/>
     <Icon>Textures\GUI\Icons\Cubes\CatchBlockSmall.dds</Icon>
     <DisplayName>DisplayName_Block_CatchBlock</DisplayName>
-    <Category>Machinesmith_Table</Category>
+    <Category>Carpentry_Table</Category>
     <Prerequisites>
       <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
       <Item Amount="1" Type="CubeBlock" Subtype="TimberRound10" />
@@ -3807,7 +4122,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3873,7 +4188,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3916,7 +4231,7 @@ produce Blue Berry Juice.</DisplayName>
   </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TurnCrossSmall"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrankWheel"/>
     <Icon>Textures\GUI\Icons\Cubes\TurnCrossSmall.dds</Icon>
     <DisplayName>DisplayName_Block_TurnWheelCross</DisplayName>
     <Category>Machinesmith_Table</Category>
@@ -3925,7 +4240,7 @@ produce Blue Berry Juice.</DisplayName>
       <Item Amount="2" Type="InventoryItem" Subtype="MetalParts" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="TurnCrossSmall" />
+      <Item Amount="1" Type="CubeBlock" Subtype="CrankWheel" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -3939,7 +4254,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
       </Prerequisites>
       <Results>
 	  
@@ -3966,7 +4281,7 @@ produce Blue Berry Juice.</DisplayName>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TurnCrossSmall_Machinesmith" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrankWheel_Machinesmith" />
       <DisplayName>Machinesmith: Hand Crank</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\TurnCrossSmall.dds</Icon>
@@ -3977,7 +4292,7 @@ produce Blue Berry Juice.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="Machinesmith_Schematic_TurnCrossSmall" />
+	    <Item Amount="1" Type="SchematicItem" Subtype="Machinesmith_Schematic_CrankWheel" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
@@ -4112,11 +4427,16 @@ into valuable ingots.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MillStone_Masonry" />
-      <DisplayName>Masonry: Mill Stone
+      <DisplayName>Masonry: Millstone</DisplayName>
+      <Description>
+"The millstone is as old as civilization. 
+Sufficient grain production is the key
+to any prosperous city."
 
 Used to grind Barley or Wheat
 into grains, perfect for bread
-or Barley Malt.</DisplayName>
+or Barley Malt.
+</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
 	<Icon>Textures\GUI\Icons\Cubes\MillStone_Small.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -4133,17 +4453,27 @@ or Barley Malt.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
-      <DisplayName>Masonry: Stone Well
+      <DisplayName>Survival Essentials: Stone Well</DisplayName>
+      <Description>
+"Wells are the vital organ of any lively 
+settlement. Without them, their are no 
+citizens." -Nordic Proverb
 
-You can use the Stone Well to
-fill Empty Buckets with water.</DisplayName>
+
+A well provides water, which can be used to 
+fill empty buckets. Can be crafted from a
+Masonry Block.
+
+
+((Hint: Pick up small stones on the ground
+to aquire Pristine Stones))</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Masonry_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+        <Item Amount="1" Tag="Pristine_Stone" />
+        <Item Amount="1" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -4155,11 +4485,18 @@ fill Empty Buckets with water.</DisplayName>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stone_Well" />  
       <DisplayName>Stone Well</DisplayName>
+      <Description>
+"The well is the vital organ of any settlement.
+Without wells, their are no citizens."
+
+A well provides water, which can be used to 
+fill empty buckets.
+</Description>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
       <Category>Masonry_Table</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="StoneOreSmall" />
-        <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="3" Tag="Universal_Stone" />
+        <Item Amount="2" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -4230,7 +4567,7 @@ fill Empty Buckets with water.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="14" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4248,7 +4585,7 @@ fill Empty Buckets with water.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="18" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="14" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4266,7 +4603,7 @@ fill Empty Buckets with water.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="13" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="25" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4664,7 +5001,7 @@ fill Empty Buckets with water.</DisplayName>
       <DisplayName>Masonry: Large Round Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="35" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4681,7 +5018,7 @@ fill Empty Buckets with water.</DisplayName>
       <DisplayName>Masonry: Round Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="17" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="26" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4698,7 +5035,7 @@ fill Empty Buckets with water.</DisplayName>
       <DisplayName>Masonry: Straight Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="11" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4715,7 +5052,7 @@ fill Empty Buckets with water.</DisplayName>
       <DisplayName>Masonry: Small Round Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="22" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4749,7 +5086,7 @@ fill Empty Buckets with water.</DisplayName>
       <DisplayName>Masonry: Diagonal Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4766,7 +5103,7 @@ fill Empty Buckets with water.</DisplayName>
       <DisplayName>Masonry: Large Round Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="19" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
         <Item Amount="28" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4920,7 +5257,6 @@ fill Empty Buckets with water.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmithingStation_Blacksmithing" />
       <DisplayName>Blacksmithing: Smithing Station</DisplayName>
-
     <Description>An upgraded version of the anvil,
 allows you to craft higher tier items
 and construct them faster.</Description>
@@ -4937,6 +5273,23 @@ and construct them faster.</Description>
       <Results>
 	  
 	    <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_SmithingStation" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronSmithing_Blacksmithing" />
+      <DisplayName>Blacksmithing: Iron Smelting</DisplayName>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Blacksmithing_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_IronSmithing" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
@@ -4976,7 +5329,7 @@ cooking recipes.</Description>
       <Icon>Textures\GUI\Icons\Universal\cooking\stove.dds</Icon>
       <Category>Anvil</Category>
 	  <Prerequisites>
-      <Item Amount="9" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="9" Type="InventoryItem" Subtype="IngotIron" />
 	  </Prerequisites>
 	  <Results>
 		 
@@ -5012,7 +5365,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Universal\Blacksmithing\iron_nails.dds</Icon>
       <Category>Anvil</Category>
 	  <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
 	  </Prerequisites>
 	  <Results>
 		
@@ -5047,7 +5400,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
         <Item Amount="1" Type="InventoryItem" Subtype="MetalParts" />
       </Prerequisites>
       <Results>
@@ -5083,7 +5436,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Cubes\WallTorch.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
+        <Item Amount="2" Type="InventoryItem" Subtype="Sticks" />
         <Item Amount="2" Type="InventoryItem" Subtype="MetalParts" />
       </Prerequisites>
       <Results>
@@ -5118,7 +5471,7 @@ walls by a large amount.</Description>
     <Icon>Textures\GUI\Icons\Cubes\FireBucket.dds</Icon>
     <Category>Anvil</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="FireBucket" />
@@ -5134,8 +5487,8 @@ walls by a large amount.</Description>
       <DisplayName>Iron Axe</DisplayName> 
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5170,8 +5523,8 @@ at a faster rate then stone axes.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HammerOneHand_Construction.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5206,8 +5559,8 @@ at a faster rate then wooden hammers.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronPickaxe.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="2" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5244,7 +5597,7 @@ at a faster rate then wooden hammers.</Description>
     <Prerequisites>
       <Item Amount="4" Tag="ScrapWood" />
       <Item Amount="1" Tag="Timber" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="HandItem" Subtype="IronShovel" />
@@ -5275,8 +5628,8 @@ at a faster rate then wooden hammers.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5311,8 +5664,8 @@ for a longer time then Stone Plows.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5349,7 +5702,7 @@ Most commonly used for the Crafting profession.</Description>
       <Icon>Textures\GUI\Icons\Universal\Crafting\GlassblowingPipe.dds</Icon>
       <Category></Category>
       <Prerequisites>
-      <Item Amount="3" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="3" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5383,7 +5736,7 @@ Most commonly used for the Crafting profession.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronSword.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5399,8 +5752,8 @@ Most commonly used for the Crafting profession.</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\LandscapingStake.dds</Icon>
     <Category>Herbalist_Table</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="1" Type="InventoryItem" Subtype="LinenString" />
+      <Item Amount="2" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
       <Item Amount="4" Type="HandItem" Subtype="LandscapeStakeItem" />
@@ -5442,7 +5795,7 @@ foes at close range.</Description>
         <Item Amount="3" Type="InventoryItem" Subtype="IronOre" />
       </Prerequisites>
       <Results>
-        <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>
@@ -5453,7 +5806,7 @@ foes at close range.</Description>
       <DisplayName>DisplayName_IronIngotToMetalParts</DisplayName>
       <Category>Smelting</Category>
       <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
 	  
@@ -5510,7 +5863,7 @@ foes at close range.</Description>
       </Prerequisites>
       <Results>
 	  
-	  <Item Amount="1" Type="InventoryItem" Subtype="GoldIngot" />
+	  <Item Amount="1" Type="InventoryItem" Subtype="IngotGold" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>
@@ -5518,16 +5871,16 @@ foes at close range.</Description>
 
 	<Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="GoldOreToGoldIngots" />
-      <Icon>Textures\GUI\Icons\GoldOreIcon.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\OreGold.dds</Icon>
       <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
       <DisplayName>Smelt gold ore to ingots</DisplayName>
       <Category>Smelting</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="GoldOre" />
+        <Item Amount="3" Type="InventoryItem" Subtype="OreGold" />
       </Prerequisites>
       <Results>
 	  
-	  <Item Amount="1" Type="InventoryItem" Subtype="GoldIngot" />
+	  <Item Amount="1" Type="InventoryItem" Subtype="IngotGold" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>
@@ -5560,7 +5913,7 @@ foes at close range.</Description>
         <Item Amount="16" Type="InventoryItem" Subtype="IronNugget" />
       </Prerequisites>
       <Results>	  
-        <Item Amount="1" Type="InventoryItem" Subtype="IronIngot" />
+        <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>
@@ -5576,12 +5929,20 @@ foes at close range.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Nomadic_Book" />
     <DisplayName>Basic Survival Guide</DisplayName>
-    <Description>This book is used as a survival guide to 
-      learn the essentials within the Realm of Mistvalin.</Description>
+    <Description>
+    "The realm poses many dangers, but just
+    as many opportunities. Mastering survial
+    is to manifest that success."
+
+    This book is used as a survival guide to
+    learn the essentials within the Realm of 
+    Mistvalin. This book contains research 
+    that can be unlocked.
+    </Description>
     <Icon>Textures\GUI\Icons\Universal\Books\Nomadic.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="1" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Nomadic_Book" />
@@ -5596,10 +5957,22 @@ foes at close range.</Description>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\LongBarricade.dds</Icon>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-    <DisplayName>Wooden Barricades</DisplayName>
+    <DisplayName>Survival Essentials: Wooden Barricades</DisplayName>
+    <Description>
+"Barricades are the first line of defence
+against a foe. Quick to set up, but long to 
+break through." -Jarl Aksel, Siege of Reyjk
+
+Learning this will unlock construction 
+of wooden barricades, perfect for an 
+encampment. This is essential!
+
+
+((Hint: Search small trees and small
+pine trees to aquire Pristine Sticks))</Description>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="1" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" />
@@ -5613,11 +5986,11 @@ foes at close range.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LongBarricade" />
     <Icon>Textures\GUI\Icons\Cubes\LongBarricade.dds</Icon>
     <DisplayName>Long Barricade Kit</DisplayName>
-    <Description>Used to construct a long wooden barricade</Description>
+    <Description>Used to construct a long wooden barricade,
+perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
-      <Item Amount="15" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="2" Type="InventoryItem" Subtype="Log250cm" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="LongBarricade" />
@@ -5630,11 +6003,12 @@ foes at close range.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmallBarricade" />
     <Icon>Textures\GUI\Icons\Cubes\SmallBarricade.dds</Icon>
-    <DisplayName>Small Barricade Kit</DisplayName>
-    <Description>Used to construct a small wooden barricade</Description>
+    <DisplayName>Corner Barricade Kit</DisplayName>
+    <Description>Used to construct the corner of a wooden 
+barricade, perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="SmallBarricade" />
@@ -5649,10 +6023,22 @@ foes at close range.</Description>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-    <DisplayName>DisplayName_Block_BonFire</DisplayName>
+    <DisplayName>Survival Essentials: Campfire</DisplayName>
+    <Description>
+"Fire, the invention that started it all.
+Fire can be destructive, if not lethal, but
+to master fire is to manifest survival!" 
+
+The Campfire is the simplist way to cook 
+food with, though it's limited to lower
+skilled foods.
+
+
+((Hint: Pick up small stones on the ground
+to aquire Pristine Stones))</Description>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      <Item Amount="1" Tag="Pristine_Stone" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_Bonfire" />
@@ -5664,10 +6050,13 @@ foes at close range.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire"/>
     <DisplayName>DisplayName_Block_BonFire</DisplayName>
+    <Description>The Campfire is the simplist way to cook 
+food with, though it's limited to lower
+tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="9" Type="InventoryItem" Subtype="StoneOreSmall" />
+      <Item Amount="9" Tag="Universal_Stone" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="BonFire" />
@@ -5684,8 +6073,7 @@ foes at close range.</Description>
     <DisplayName>Red Berry Preserve</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Blue_Berry" />
-      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Berries" />
+      <Item Amount="1" Tag="Pristine_Berry" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_BerryPreserve" />
@@ -5703,7 +6091,7 @@ foes at close range.</Description>
     <DisplayName>Fence Gate</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="1" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_FenceGate" />
@@ -5718,8 +6106,8 @@ foes at close range.</Description>
     <Icon>Textures\GUI\Icons\Cubes\FenceGate.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="19" Type="InventoryItem" Subtype="Log250cm" />
-      <Item Amount="15" Type="InventoryItem" Subtype="WoodenSticks" />
+      <Item Amount="8" Tag="Timber" />
+      <Item Amount="5" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="MyObjectBuilder_CubeBlock" Subtype="FenceGate" />
@@ -5728,31 +6116,14 @@ foes at close range.</Description>
   </Definition>
   
   <!-- =================================================================================== -->
-
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bed_Nomadic" />
-    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-    <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
-    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-    <DisplayName>Basic Bed</DisplayName>
-    <Category>Nomadic_Book</Category>
-    <Prerequisites>
-      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadBed" />
-    </Results>
-    <CraftingTime Seconds="3"/>
-  </Definition>
-
-<!-- =================================================================================== -->
+  
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicBed"/>
     <DisplayName>Basic Bed</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="8" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
@@ -5767,10 +6138,11 @@ foes at close range.</Description>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-    <DisplayName>Tent</DisplayName>
+    <DisplayName>Linen Tent</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTent" />
@@ -5781,12 +6153,13 @@ foes at close range.</Description>
 <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTent"/>
-    <DisplayName>Tent</DisplayName>
+    <DisplayName>Linen Tent</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="8" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
+      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
+      <Item Amount="4" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="NomadTent" />
@@ -5801,10 +6174,11 @@ foes at close range.</Description>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-    <DisplayName>Advanced Tent</DisplayName>
+    <DisplayName>Advanced Linen Tent</DisplayName>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentAdv" />
@@ -5814,17 +6188,90 @@ foes at close range.</Description>
 
 <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTentAdv"/>
-    <DisplayName>Advanced Tent</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tent"/>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <DisplayName>Advanced Linen Tent</DisplayName>
+    <Description>A tent is important for any traveler. This tent
+provides a bed, some storage, and a place to change your clothes.</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="WoodenSticks" />
-      <Item Amount="12" Type="InventoryItem" Subtype="ScrapWoodBranches" />
       <Item Amount="1" Type="CubeBlock" Subtype="WoodChest" />
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadTent" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="NomadTentAdv" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Tent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranches" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadTentBranches"/>
+    <DisplayName>Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv2.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
+      <Item Amount="6" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="4" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadTentBranches" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AdvTentBranches_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranchesAdv" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TentBranches"/>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv2.dds</Icon>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Description>A tent is important for any traveler. This tent
+provides a bed, some storage, and a place to change your clothes.</Description>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="CubeBlock" Subtype="WoodChest" />
+      <Item Amount="1" Type="CubeBlock" Subtype="NomadTentBranches" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="TentBranches" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>

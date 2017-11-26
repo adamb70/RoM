@@ -1,11 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <TransparentMaterials>
-    <TransparentMaterial>
-      <Id>
-        <TypeId>TransparentMaterialDefinition</TypeId>
-        <SubtypeId>JamJarGlass</SubtypeId>
-      </Id>      
+  <Definition xsi:type="MyObjectBuilder_TransparentMaterialDefinition">
+    <Id Type="TransparentMaterialDefinition" Subtype="JamJarGlass" />      
       <AlphaMistingEnable>false</AlphaMistingEnable>
       <CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights>
       <Emissivity>0</Emissivity>
@@ -30,9 +26,8 @@
 		<W>0.1</W>
       </Color>
 	  <Reflectivity>0.2</Reflectivity>
-    </TransparentMaterial>
+  </Definition>
+  
+  
     
-    
-    
-  </TransparentMaterials>
 </Definitions>

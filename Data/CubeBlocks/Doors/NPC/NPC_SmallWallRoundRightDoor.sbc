@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Small round wall, right door -->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <DisplayName>DisplayName_Block_RoundRightWoodGateW</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\StoneWallRoundDoorRight.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <BlockPairName>RoundRightDoorW</BlockPairName>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Public>true</Public>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Gate_Round_Right_Frame_W.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseStoneRoundedDoorOfsetRight_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseStoneRoundedDoorOfsetRight_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="0.225304961" StartY="-0.0254869" EndX="-0.0254869461" EndY="1.025487" />
+      <MountPoint Side="Front" StartX="0.352649331" StartY="0.804382145" EndX="0.166183" EndY="1.02026391" />
+      <MountPoint Side="Back" StartX="-0.01907816" StartY="-0.02124238" EndX="0.2403214" EndY="1.02124238" />
+      <MountPoint Side="Left" StartX="0.6002918" StartY="-0.02124238" EndX="1.02124238" EndY="1.02124238" />
+      <MountPoint Side="Right" StartX="1.023753" StartY="-0.0254869" EndX="0.766467869" EndY="1.025487" />
+      <MountPoint Side="Top" StartX="0.774695039" StartY="1.023753" EndX="1.025487" EndY="0.7614404" />
+      <MountPoint Side="Top" StartX="-0.01907816" StartY="0.3997082" EndX="0.28130585" EndY="-0.02124238" />
+      <MountPoint Side="Top" StartX="0.0609443672" StartY="0.7215558" EndX="0.4523283" EndY="0.287818" />
+      <MountPoint Side="Top" StartX="0.281160027" StartY="1.00027144" EndX="0.856465161" EndY="0.547742367" />
+      <MountPoint Side="Bottom" StartX="0.7757623" StartY="-0.0237530228" EndX="1.025487" EndY="0.2362536" />
+      <MountPoint Side="Bottom" StartX="-0.01907816" StartY="0.6002918" EndX="0.28130585" EndY="1.02124238" />
+      <MountPoint Side="Bottom" StartX="0.0609443672" StartY="0.278444141" EndX="0.4523283" EndY="0.712182" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="5" />
+      <Component Tag="Plank" Count ="8" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count ="4" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="8" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BlockGroupName>BlockGroupName_RoundWallsWithDoors</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>NPC_WallStoneRoundWithDoorLeft</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <AvailableInSurvival>false</AvailableInSurvival>
+    <GuiVisible>true</GuiVisible>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Subparts>
+      <Subpart Name="WoodGate_Round_Right" PhysicalMaterial="Wood">
+        <HingePosition x="-0.666" y="0.06" z="0.825"/>
+      </Subpart>
+    </Subparts>
+  </Definition>
+
+  <!--
+      ///Animation Methods\\\
+  QuadraticEaseIn, Out,InOut,OutIn, 
+  QuarticEaseIn, Out,InOut,OutIn, 
+  QuinticEaseIn, Out,InOut,OutIn,
+  SinusoidalEaseIn, Out,InOut,OutIn,
+  ExponentialEaseIn, Out,InOut,OutIn,
+  CircularEaseIn, Out,InOut,OutIn,
+  ElasticEaseIn, Out,InOut,OutIn,
+  BackEaseIn, Out,InOut,OutIn,
+  BounceEaseIn, Out,InOut,OutIn,
+  -->
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <AnimationSequences>
+      <Sequence Name="OpenSequence" WrapMode="Once">
+        <Event Start="0.0" Name="DoorOpening" />
+        <Event Start="0.1" Name="DoorMoving" />
+        <Event Start="1.2" Name="DoorOpened" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="WoodGate_Round_Right" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseInOut" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="CloseSequence" WrapMode="Once">
+        <Event Start="0.0" Name="DoorClosing" />
+        <Event Start="0.1" Name="DoorMoving" />
+        <Event Start="1.2" Name="DoorClosed" />
+
+        <Animation Start="0" End="1.2">
+          <Subpart Name="WoodGate_Round_Right" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseInOut" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <LoadFromModel>true</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_gate_01" Name="Generic" />
+      <UseObject Dummy="detector_gate_02" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SecondaryAction>OpenTerminal</SecondaryAction>
+    <SupportsAccessSettings>true</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Animations>
+      <Animation State="Opening" Animation="OpenSequence" />
+      <Animation State="Closing" Animation="CloseSequence" />
+    </Animations>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <InitialState>Open</InitialState>
+    <States>
+      <State Name="Open">
+        <Transition>Closing</Transition>
+      </State>
+      <State Name="Closing">
+        <Transition>Closed</Transition>
+      </State>
+      <State Name="Closed">
+        <Transition>Opening</Transition>
+      </State>
+      <State Name="Opening">
+        <Transition>Open</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <SoundEvents>
+      <Event Name="DoorOpening" Sound="RegularDoor_Open" />
+      <Event Name="DoorMoving" Sound="RegularDoor_Move" />
+      <Event Name="DoorClosed" Sound="RegularDoor_Close" />
+    </SoundEvents>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Events>
+      <Event Name="DoorClosed" TransitionToState="Closed" />
+      <Event Name="DoorOpened" TransitionToState="Open" />
+    </Events>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Component Type="UseObjectsComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Component Type="SubpartAnimationComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Component Type="EntityStateComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Component Type="StateAnimationComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Component Type="StateUseObjectComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WallStoneRoundWithDoorRight" />
+  </Definition>
+</Definitions>
