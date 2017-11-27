@@ -59,8 +59,8 @@
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Apothocary_Table"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Apothocary_Table"/>
     <CraftingCategories>
       <Category>Apothocary_Table</Category>
     </CraftingCategories>
@@ -86,7 +86,7 @@
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Apothocary_Table" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Apothocary_Table" />
+    <Component Type="CraftingComponentQueued" Subtype="Apothocary_Table" />
     <Component Type="UseObjectsComponent" Subtype="Apothocary_Table" />
     <Component Type="Inventory" Subtype="Apothocary_TableInventory" />
   </Definition>

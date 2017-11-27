@@ -48,8 +48,8 @@ to read from it.
 		  </VoxelPlacement>
 		</Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Tailor_Book"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Tailor_Book"/>
     <CraftingCategories>
       <Category>Tailor_Book</Category>
     </CraftingCategories>
@@ -75,7 +75,7 @@ to read from it.
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Tailor_Book" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Tailor_Book" />
+    <Component Type="CraftingComponentQueued" Subtype="Tailor_Book" />
     <Component Type="UseObjectsComponent" Subtype="Tailor_Book" />
     <Component Type="Inventory" Subtype="Tailor_BookInventory" />
   </Definition>

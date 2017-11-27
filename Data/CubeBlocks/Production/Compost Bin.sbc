@@ -44,8 +44,8 @@
 
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Compost_Bin"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Compost_Bin"/>
     <CraftingCategories>
       <Category>Compost_Bin</Category>
     </CraftingCategories>
@@ -76,7 +76,7 @@
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Compost_Bin" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Compost_Bin" />
+    <Component Type="CraftingComponentQueued" Subtype="Compost_Bin" />
     <Component Type="UseObjectsComponent" Subtype="Compost_Bin" />
     <Component Type="Inventory" Subtype="Compost_BinInventory" />
   </Definition>

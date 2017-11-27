@@ -51,8 +51,8 @@ to read from it.
 
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Fletching_Book"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Fletching_Book"/>
     <CraftingCategories>
       <Category>Fletching_Book</Category>
     </CraftingCategories>
@@ -78,7 +78,7 @@ to read from it.
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Fletching_Book" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Fletching_Book" />
+    <Component Type="CraftingComponentQueued" Subtype="Fletching_Book" />
     <Component Type="UseObjectsComponent" Subtype="Fletching_Book" />
     <Component Type="Inventory" Subtype="Fletching_BookInventory" />
   </Definition>

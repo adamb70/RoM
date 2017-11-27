@@ -59,8 +59,8 @@ or water withering plants.</Description>
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Herbalist_Table"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Herbalist_Table"/>
     <CraftingCategories>
       <Category>Herbalist_Table</Category>
       <Category>Enchanted_Farming_Seeds</Category>
@@ -89,7 +89,7 @@ or water withering plants.</Description>
     <Component Type="UseObjectsComponent" Subtype="Cooking_Table" ForceCreate="true"/>
     <Component Type="Inventory" Subtype="Cooking_TableInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Herbalist_Table" ForceCreate="true"/>
+    <Component Type="CraftingComponentQueued" Subtype="Herbalist_Table" ForceCreate="true"/>
   </Definition>
 
 

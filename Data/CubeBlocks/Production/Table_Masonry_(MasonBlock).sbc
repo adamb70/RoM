@@ -21,8 +21,8 @@ of stone material, including furnaces.</Description>
  
 
   
-   <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Masonry_Table"/>
+   <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Masonry_Table"/>
     <CraftingCategories>
       <Category>Masonry_Table</Category>
     </CraftingCategories>
@@ -51,7 +51,7 @@ of stone material, including furnaces.</Description>
     <Id Type="CubeBlock" Subtype="Masonry_Table" />
     <Component Type="Inventory" Subtype="Masonry_TableInventory"/>
     <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Masonry_Table"/>
+    <Component Type="CraftingComponentQueued" Subtype="Masonry_Table"/>
     <Component Type="UseObjectsComponent" Subtype="Masonry_Table" />
   </Definition>
 </Definitions>

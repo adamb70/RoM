@@ -36,8 +36,8 @@
       </VoxelPlacement>
     </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Langenmosen_Lumber_Market_Stand"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Langenmosen_Lumber_Market_Stand"/>
     <CraftingCategories>
       <Category>Langenmosen_Lumber_Market_Stand</Category>
     </CraftingCategories>
@@ -63,7 +63,7 @@
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Langenmosen_Lumber_Market_Stand" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Langenmosen_Lumber_Market_Stand" />
+    <Component Type="CraftingComponentQueued" Subtype="Langenmosen_Lumber_Market_Stand" />
     <Component Type="UseObjectsComponent" Subtype="Langenmosen_Lumber_Market_Stand" />
     <Component Type="Inventory" Subtype="Langenmosen_Lumber_Market_StandInventory" />
   </Definition>

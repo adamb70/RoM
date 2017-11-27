@@ -69,8 +69,8 @@
   </Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Bookshelf_Profession"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Bookshelf_Profession"/>
     <CraftingCategories>
       <Category>Apothocary_Book</Category>
       <Category>Blacksmithing_Book</Category>
@@ -113,7 +113,7 @@
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Bookshelf_Profession" />
     <Component Type="Inventory" Subtype="Bookshelf_Profession" />
-    <Component Type="CraftingComponent" Subtype="Bookshelf_Profession" />
+    <Component Type="CraftingComponentQueued" Subtype="Bookshelf_Profession" />
     <Component Type="UseObjectsComponent" Subtype="Bookshelf_Profession" />
     <Component Type="InventorySpawnComponent"/>
   </Definition>

@@ -81,8 +81,8 @@
     </UseObjects>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Stove"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Stove"/>
     <CraftingCategories>
       <Category>Cooking_Oven</Category>
       <Category>Cooking_Table</Category>
@@ -115,7 +115,7 @@
     <Id Type="CubeBlock" Subtype="Stove" />
     <Component Type="Inventory" Subtype="StoveInventory" />
     <Component Type="Inventory" Subtype="StoveStorage" />
-    <Component Type="CraftingComponent" Subtype="Stove" />
+    <Component Type="CraftingComponentQueued" Subtype="Stove" />
     <Component Type="InventorySpawnComponent" />
     <Component Type="EntityFXComponent" Subtype="Stove" />
     <Component Type="UseObjectsComponent" Subtype="Stove" />

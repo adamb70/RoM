@@ -1,0 +1,155 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Small_Steam_Engine" />
+    <DisplayName>Small Steam Engine</DisplayName>
+	<Description>Description_Block_WindmillMechanical</Description>
+    <BlockPairName>Small_Steam_Engine</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Mechanical\Mill.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Mechanical\SawmillMechanical.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Mechanical\SawmillMechanical_Construction_1.mwm">
+        <!--<MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>-->
+      </Model> 
+    </BuildProgressModels>
+    <Components>
+      <Component Type="CubeBlock" Subtype="Timber10" Count="8" />
+      <Component Type="CubeBlock" Subtype="TimberRound10" Count="1" />
+      <Component Type="InventoryItem" Subtype="JarClayWithLinseedOil" Count="1" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="JarClayWithLinseedOil" Index="0" />
+    <MaxIntegrity>600</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Top" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Left" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Right" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Back" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Front" StartX="1" StartY="1" EndX="0" EndY="0" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <GuiVisible>true</GuiVisible>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>InVoxel</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+	<!-- Disable compound building for the framed blocks; The unframed ones are designed for compounding. -->
+	<CompoundEnabled>false</CompoundEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockWindmillComponentDefinition">
+    <Id Type="BlockWindmillComponent" Subtype="Small_Steam_Engine" />
+    <MaxPowerOutput>10</MaxPowerOutput>
+    <MaxAltitudeDelta>0</MaxAltitudeDelta>
+    <PowerInterpolation>Linear</PowerInterpolation>
+    <Connection>connection_backward</Connection>
+    <ClockwiseAnimation>cw</ClockwiseAnimation>
+    <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="CubeBlockSubpartComponent" Subtype="Small_Steam_Engine" />
+	<ShowSubpartsWhileBuilding>false</ShowSubpartsWhileBuilding>
+    <Subparts>
+      <Subpart Name="SawbladeFrame" Model="Models\Cubes\large\Mechanical\SawmillMechanical_Arm.mwm" PhysicalMaterial="Wood" HingeBone="subpart_sawblades" RequiresAxialCorrection="true" HasDummy="false" HasPhysics="false" />
+    </Subparts>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="SubpartAnimationComponent" Subtype="Small_Steam_Engine" />
+    <AnimationSequences>
+      <Sequence Name="cw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="SawbladeFrame" Type="Rotation" Axis="Z" From="0" To="0" Method="Linear" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="ccw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="SawbladeFrame" Type="Rotation" Axis="Z" From="0" To="0" Method="Linear" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="Small_Steam_Engine" />
+    <Effects>
+<!-- -->
+      <Effect StartEvent="IsPowered_connection_01" StopEvent="NotPowered_connection_01" Dummy="connection_backward">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalWorking"/>
+      </Effect>
+      <Effect StartEvent="NotWorking_connection_01" StopEvent="Working_connection_01" Dummy="connection_backward">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
+      </Effect>
+<!-- 
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="connection_backward">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
+      </Effect>
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="connection_backward">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Cooking"/>
+      </Effect>
+-->
+    </Effects>
+  </Definition>
+
+<!-- =================== Fuel/Inventory =================== -->
+
+
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Small_Steam_EngineInventory" />
+    <DisplayName>Small Steam Engine</DisplayName>
+    <InventoryName>Small Steam Engine</InventoryName>
+    <MaxItemCount>6</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Small_Steam_Engine"/>
+    <CraftingCategories>
+      <Category>Meals</Category>
+    </CraftingCategories>
+    <CraftingInventory>Small_Steam_EngineInventory</CraftingInventory>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
+    <PowerRequired>All</PowerRequired>
+  </Definition>
+
+<!-- =================== Container Definition =================== -->
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Small_Steam_Engine" />
+    <Component Type="BlockWindmillComponent" Subtype="Small_Steam_Engine" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="Small_Steam_Engine" />
+    <Component Type="SubpartAnimationComponent" Subtype="Small_Steam_Engine" />
+	  <Component Type="EntityFXComponent" Subtype="Small_Steam_Engine" />
+<!-- -->
+    <Component Type="Inventory" Subtype="Fuel_Steam_Engine" />
+    <Component Type="FuelComponent" Subtype="Fire_Steam_Engine" />
+    <Component Type="Inventory" Subtype="Small_Steam_EngineInventory" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="CraftingComponentQueued" Subtype="Small_Steam_Engine" />
+  </Definition>
+</Definitions>

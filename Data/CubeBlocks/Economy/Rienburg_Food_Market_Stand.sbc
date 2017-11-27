@@ -36,8 +36,8 @@
       </VoxelPlacement>
     </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Rienburg_Food_Market_Stand"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Rienburg_Food_Market_Stand"/>
     <CraftingCategories>
       <Category>Rienburg_Food_Market_Stand</Category>
     </CraftingCategories>
@@ -63,7 +63,7 @@
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Rienburg_Food_Market_Stand" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Rienburg_Food_Market_Stand" />
+    <Component Type="CraftingComponentQueued" Subtype="Rienburg_Food_Market_Stand" />
     <Component Type="UseObjectsComponent" Subtype="Rienburg_Food_Market_Stand" />
     <Component Type="Inventory" Subtype="Rienburg_Food_Market_StandInventory" />
   </Definition>

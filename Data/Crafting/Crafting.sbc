@@ -1,10 +1,62 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- =========================================================================================== -->
+				<!-- Mechanical Block Crafting -->
+<!-- =========================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimber10Mechanical" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>DisplayName_LogToTimber</DisplayName>
+    <Category>SawbladesTimber</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="CubeBlock" Subtype="Timber10" />
+    </Results>
+    <CraftingTime Seconds="10"/>
+  </Definition>
+<!-- =========================================================================================== -->
 
 
 
 
 
+
+
+
+
+
+
+
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimber10" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>DisplayName_LogToTimber</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
+    </Results>
+    <CraftingTime Seconds="10"/>
+  </Definition>
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimber10Carpentry_Table" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>DisplayName_LogToTimber</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="CubeBlock" Subtype="Timber10" />
+    </Results>
+    <CraftingTime Seconds="10"/>
+  </Definition>
 <!-- ============================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SimpleTable"/>
@@ -1857,7 +1909,7 @@ this stone plow yields better strength.</Description>
       <DisplayName>Farming: Herbs</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
       <Prerequisites>
@@ -1873,7 +1925,7 @@ this stone plow yields better strength.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagHerbs" />
       <DisplayName>Herb Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
@@ -1909,7 +1961,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagHerbs" />
       <DisplayName>5x Single Herb Seed</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -1927,13 +1979,13 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Herbs_Compost_Farming" />
       <DisplayName>Compost Farming: Herbs</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_Herbs" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_Herbs" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -1946,7 +1998,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagHerbs_Compost" />
       <DisplayName>Herb Seed Bag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
@@ -1984,7 +2036,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagHerbs_Compost" />
       <DisplayName>5x Single Herb Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
       <Category></Category>
@@ -2003,8 +2055,8 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Pumpkin_Farming" />
       <DisplayName>Farming: Pumpkin</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
       <Prerequisites>
@@ -2020,7 +2072,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagPumpkin" />
       <DisplayName>Pumpkin Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
@@ -2056,7 +2108,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagPumpkin" />
       <DisplayName>5x Single Herb Seed</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -2074,13 +2126,13 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Pumpkin_Compost_Farming" />
       <DisplayName>Compost Farming: Pumpkin</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_Pumpkin" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_Pumpkin" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -2093,7 +2145,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagPumpkin_Compost" />
       <DisplayName>Pumpkin Seed Bag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
@@ -2131,7 +2183,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagPumpkin_Compost" />
       <DisplayName>5x Single Pumpkin Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
       <Category></Category>
@@ -2151,7 +2203,7 @@ inorder to plant it again.</Description>
       <DisplayName>Farming: Cabbage</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
       <Prerequisites>
@@ -2167,7 +2219,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagCabbage" />
       <DisplayName>Cabbage Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Cabbage.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
@@ -2203,7 +2255,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagCabbage" />
       <DisplayName>5x Single Cabbage Seed</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Cabbage.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -2221,13 +2273,13 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cabbage_Compost_Farming" />
       <DisplayName>Compost Farming: Cabbage</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_Cabbage" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_Cabbage" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -2240,7 +2292,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagCabbage_Compost" />
       <DisplayName>Cabbage Seed Bag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Cabbage.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
@@ -2278,7 +2330,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagCabbage_Compost" />
       <DisplayName>5x Single Cabbage Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Cabbage.dds</Icon>
       <Category></Category>
@@ -2298,7 +2350,7 @@ inorder to plant it again.</Description>
       <DisplayName>Farming: Flax</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
       <Prerequisites>
@@ -2314,7 +2366,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagFlax" />
       <DisplayName>Flax Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
@@ -2350,7 +2402,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagFlax" />
       <DisplayName>5x Single Flax Seed</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -2368,13 +2420,13 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Flax_Compost_Farming" />
       <DisplayName>Compost Farming: Flax</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_Flax" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_Flax" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -2387,7 +2439,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagFlax_Compost" />
       <DisplayName>Flax Seed Bag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
@@ -2425,7 +2477,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagFlax_Compost" />
       <DisplayName>5x Single Flax Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
       <Category></Category>
@@ -2445,7 +2497,7 @@ inorder to plant it again.</Description>
       <DisplayName>Farming: Wheat</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
       <Prerequisites>
@@ -2461,7 +2513,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagWheat" />
       <DisplayName>Wheat Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
@@ -2497,7 +2549,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagWheat" />
       <DisplayName>5x Single Wheat Seed</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -2515,13 +2567,13 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wheat_Compost_Farming" />
       <DisplayName>Compost Farming: Wheat</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_Wheat" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_Wheat" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -2534,7 +2586,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagWheat_Compost" />
       <DisplayName>Wheat Seed Bag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
@@ -2572,7 +2624,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagWheat_Compost" />
       <DisplayName>5x Single Wheat Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
       <Category></Category>
@@ -2592,7 +2644,7 @@ inorder to plant it again.</Description>
       <DisplayName>Farming: Tree</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -2608,7 +2660,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagTreeSmall" />
       <DisplayName>Tree Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -2644,7 +2696,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagTreeSmall" />
       <DisplayName>5x Single Tree Seed</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -2662,13 +2714,13 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TreeSmall_Compost_Farming" />
       <DisplayName>Compost Farming: Tree</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category></Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_TreeSmall_Seed" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_Seed" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
       </Prerequisites>
       <Results>
@@ -2681,7 +2733,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagTreeSmall_Compost" />
       <DisplayName>Tree Seed Bag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
       <Category></Category>
@@ -2719,7 +2771,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagTreeSmall_Compost" />
       <DisplayName>5x Single Tree Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
       <Category></Category>
@@ -2746,7 +2798,7 @@ mimic this enviornment, enchanted stones
 are required to grow such plants.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Enchanted_Farming_Book_Seeds</Category>
       <Prerequisites>
@@ -2763,7 +2815,7 @@ are required to grow such plants.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagRedCabbage" />
       <DisplayName>Red Cabbage Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
       <Category>Enchanted_Farming_Seeds</Category>
       <Prerequisites>
@@ -2801,7 +2853,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagRedCabbage" />
       <DisplayName>5x Single Red Cabbage Seed</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -2826,13 +2878,13 @@ irradiates onto the surface. Inorder to
 mimic this enviornment, enchanted stones
 are required to grow such plants.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Enchanted_Farming_Book_Seeds_Compost</Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_RedCabbage" />
+        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_RedCabbage" />
         <Item Amount="1" Type="CubeBlock" Subtype="Compost_Bucket" />
         <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Enchanted_StoneOreSmall" />
       </Prerequisites>
@@ -2846,7 +2898,7 @@ are required to grow such plants.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagRedCabbage_Compost" />
       <DisplayName>Red Cabbage Seed Bag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
       <Category>Enchanted_Farming_Seeds_Compost</Category>
@@ -2885,7 +2937,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="x5xSingle_SeedBagRedCabbage_Compost" />
       <DisplayName>5x Single Red Cabbage Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
       <Category></Category>
@@ -2968,7 +3020,7 @@ inorder to plant it again.</Description>
       <DisplayName>Farming: Norden Spalt</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
       <Prerequisites>
@@ -2984,7 +3036,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagNorden_Spalt" />
       <DisplayName>Norden Spalt Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
@@ -3020,7 +3072,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagNorden_Spalt" />
       <DisplayName>5x Single Norden Spalt Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -3038,7 +3090,7 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Spalt_Farming_Compost" />
       <DisplayName>Compost Farming: Norden Spalt</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -3057,7 +3109,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagNorden_Spalt_Compost" />
       <DisplayName>Norden Spalt Seedbag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
@@ -3095,7 +3147,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagNorden_Spalt_Compost" />
       <DisplayName>5x Single Norden Spalt Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
       <Category></Category>
@@ -3114,7 +3166,7 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Barley_Farming" />
       <DisplayName>Farming: Norden Barley</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Farming_Book_Seeds</Category>
@@ -3131,7 +3183,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagNorden_Barley" />
       <DisplayName>Norden Barley Seed Bag</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
       <Category>Farming_Seeds</Category>
       <Prerequisites>
@@ -3167,7 +3219,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagNorden_Barley" />
       <DisplayName>5x Single Norden Barley Seed</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
       <Category></Category>
       <Prerequisites>
@@ -3185,7 +3237,7 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Barley_Farming_Compost" />
       <DisplayName>Compost Farming: Norden Barley</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
@@ -3204,7 +3256,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedBagNorden_Barley_Compost" />
       <DisplayName>Norden Barley Seed Bag (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
       <Category>Farming_Seeds_Compost</Category>
@@ -3242,7 +3294,7 @@ inorder to plant it again.</Description>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagNorden_Barley_Compost" />
       <DisplayName>5x Single Norden Barley Seed (Compost)</DisplayName>
-      <Icon>Textures\GUI\Icons\SeedBagPumpkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
       <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
       <Category></Category>
@@ -3357,7 +3409,7 @@ pine trees to aquire Pristine Sticks))</Description>
       <DisplayName>Carpenter: Wheel</DisplayName>
       <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8"  Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3645,7 +3697,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Small Log Stockpile</DisplayName>
       <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5"  Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3662,7 +3714,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Small Timber Stockpile</DisplayName>
       <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5"  Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3679,7 +3731,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Small Stone Stockpile</DisplayName>
       <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3696,7 +3748,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Small Iron Stockpile</DisplayName>
       <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_StockpileIronSmall" />
@@ -4072,7 +4124,7 @@ is perfect for an axel!</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -5750,7 +5802,7 @@ Most commonly used for the Crafting profession.</Description>
     <DisplayName>DisplayName_Tool_LandscapeStake</DisplayName>
     <Description>Description_Tool_LandscapeStake</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\LandscapingStake.dds</Icon>
-    <Category>Herbalist_Table</Category>
+    <Category>SmallBlocks</Category>
     <Prerequisites>
       <Item Amount="2" Type="InventoryItem" Subtype="Sticks" />
       <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
