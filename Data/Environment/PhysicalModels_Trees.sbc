@@ -56,14 +56,15 @@
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
     <Id Type="TreeDefinition" Subtype="Enchanted_Tree06" />
+    <!-- <Model>Models\Environment\Trees\Pine\PineTree25m.mwm</Model> -->
     <Model>Models\Environment\Trees\EnchantedPineTree25m.mwm</Model>
     <BranchesStartHeight>7.588</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>100</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
+    <CutEffect>WoodCutting</CutEffect>
+    <FallSound>ImpTreeFall</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
-    <MinColorShift Hue="-60" Saturation="0" Value="0" />
+    <MinColorShift Hue="0" Saturation="0" Value="0" />
     <MaxColorShift Hue="0" Saturation="0" Value="0" />
   </Definition>
     
@@ -129,8 +130,8 @@
     <BranchesStartHeight>2.342</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>50</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
+    <CutEffect>WoodCutting</CutEffect>
+    <FallSound>ImpTreeFall</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
     <MinColorShift Hue="0" Saturation="0" Value="0" />
     <MaxColorShift Hue="0" Saturation="0" Value="0" />
@@ -255,12 +256,13 @@
 
   <Definition xsi:type="MyObjectBuilder_TreeDefinition">
     <Id Type="TreeDefinition" Subtype="Enchanted_Tree06_v2" />
+    <!-- <Model>Models\Environment\Trees\Pine\PineTree25m_v2.mwm</Model> -->
     <Model>Models\Environment\Trees\EnchantedPineTree25m_v2.mwm</Model>
     <BranchesStartHeight>7.588</BranchesStartHeight>
     <PhysicalMaterial>Tree</PhysicalMaterial>
     <HitPoints>100</HitPoints>
-    <CutEffect>ChipOff_Wood</CutEffect>
-    <FallSound>ImpTreeFelling</FallSound>
+    <CutEffect>WoodCutting</CutEffect>
+    <FallSound>ImpTreeFall</FallSound>
     <BreakSound>ImpTreeBreak</BreakSound>
     <MinColorShift Hue="0" Saturation="0" Value="0" />
     <MaxColorShift Hue="1" Saturation="0" Value="0" />

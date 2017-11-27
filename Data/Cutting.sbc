@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_TreeCuttingDefinition">
+    <Id Type="TreeCuttingDefinition" Subtype="Enchanted_Tree06" />
+    <EntityId Type="MyObjectBuilder_Tree" Subtype="Enchanted_Tree06" />
+    <ScrapWoodBranchesId Type="InventoryItem" Subtype="BranchesConiferous" />
+    <ScrapWoodId Type="InventoryItem" Subtype="Sticks" />
+    <CuttingPrefabs>
+      <CuttingPrefab>
+        <PhysicalItemId Type="InventoryItem" Subtype="Log" />
+      </CuttingPrefab>
+    </CuttingPrefabs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_TreeCuttingDefinition">
+    <Id Type="TreeCuttingDefinition" Subtype="Enchanted_Tree06_cutdef" />
+    <EntityId Type="MyObjectBuilder_TreeDefinition" Subtype="Enchanted_Tree06" />
+    <ScrapWoodBranchesId Type="InventoryItem" Subtype="BranchesConiferous" />
+    <ScrapWoodId Type="InventoryItem" Subtype="Sticks" />
+    <CuttingPrefabs>
+      <CuttingPrefab>
+        <PhysicalItemId Type="InventoryItem" Subtype="Log" />
+      </CuttingPrefab>
+    </CuttingPrefabs>
+  </Definition>  
+  
+  <Definition xsi:type="MyObjectBuilder_TreeCuttingDefinition">
+    <Id Type="TreeCuttingDefinition" Subtype="Enchanted_Tree06_v2" />
+    <EntityId Type="MyObjectBuilder_Tree" Subtype="Enchanted_Tree06_v2" />
+    <ScrapWoodBranchesId Type="InventoryItem" Subtype="BranchesConiferous" />
+    <ScrapWoodId Type="InventoryItem" Subtype="Sticks" />
+    <CuttingPrefabs>
+      <CuttingPrefab>
+        <PhysicalItemId Type="InventoryItem" Subtype="Log" />
+      </CuttingPrefab>
+    </CuttingPrefabs>
+  </Definition>
+
+</Definitions>
