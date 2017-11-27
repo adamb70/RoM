@@ -57,8 +57,8 @@
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Fletching_Table"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Fletching_Table"/>
     <CraftingCategories>
     <Category>Fletching_Table</Category>
     </CraftingCategories>
@@ -81,7 +81,7 @@
     <Component Type="UseObjectsComponent" Subtype="Fletching_Table" ForceCreate="true"/>
     <Component Type="Inventory" Subtype="Fletching_TableInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Fletching_Table" ForceCreate="true"/>
+    <Component Type="CraftingComponentQueued" Subtype="Fletching_Table" ForceCreate="true"/>
   </Definition>
 
 

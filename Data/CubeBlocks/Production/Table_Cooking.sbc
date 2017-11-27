@@ -59,8 +59,8 @@ water and other foods.</Description>
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Cooking_Table"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Cooking_Table"/>
     <CraftingCategories>
       <Category>Cooking_Table</Category>
     </CraftingCategories>
@@ -88,7 +88,7 @@ water and other foods.</Description>
     <Component Type="UseObjectsComponent" Subtype="Cooking_Table" ForceCreate="true"/>
     <Component Type="Inventory" Subtype="Cooking_TableInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Cooking_Table" ForceCreate="true"/>
+    <Component Type="CraftingComponentQueued" Subtype="Cooking_Table" ForceCreate="true"/>
   </Definition>
 
 

@@ -45,10 +45,10 @@
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Anvil_Blacksmithing"/>
     <DisplayName>Blacksmithing: Anvil</DisplayName>
     <Description>Anvils are the most basic necessity for blacksmiths.</Description>
-      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       	<Icon>Textures\GUI\Icons\Universal\Books\Blacksmith.dds</Icon>
         <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Anvil.dds</Icon>
-      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
     <Category>Blacksmithing_Book</Category>
     <Prerequisites>
       <Item Amount="15" Type="SchematicItem" Subtype="Schematic_IronOre" />
@@ -75,8 +75,8 @@
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Anvil"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Anvil"/>
     <CraftingCategories>
       <Category>Weapons</Category>
       <Category>MetalWorks</Category>
@@ -106,7 +106,7 @@
     <Component Type="UseObjectsComponent" Subtype="Anvil" ForceCreate="true"/>
     <Component Type="Inventory" Subtype="AnvilInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Anvil" ForceCreate="true"/>
+    <Component Type="CraftingComponentQueued" Subtype="Anvil" ForceCreate="true"/>
   </Definition>
 
 </Definitions>

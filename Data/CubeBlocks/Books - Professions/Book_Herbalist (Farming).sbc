@@ -51,8 +51,8 @@ to read from it.
 		</Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Farming_Book"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Farming_Book"/>
     <CraftingCategories>
       <Category>Enchanted_Farming_Book_Seeds</Category>
       <Category>Enchanted_Farming_Book_Seeds_Compost</Category>
@@ -81,7 +81,7 @@ to read from it.
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Farming_Book" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Farming_Book" />
+    <Component Type="CraftingComponentQueued" Subtype="Farming_Book" />
     <Component Type="UseObjectsComponent" Subtype="Farming_Book" />
     <Component Type="Inventory" Subtype="Farming_BookInventory" />
   </Definition>

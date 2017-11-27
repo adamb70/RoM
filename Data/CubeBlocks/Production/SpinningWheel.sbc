@@ -51,7 +51,7 @@
     <Component Type="CubeBlockSubpartComponent" Subtype="SpinningWheel"/>
     <Component Type="Inventory" Subtype="SpinningWheel"/>
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="SpinningWheel"/>
+    <Component Type="CraftingComponentQueued" Subtype="SpinningWheel"/>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -61,8 +61,8 @@
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="SpinningWheel"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="SpinningWheel"/>
     <CraftingCategories>
       <Category>Weaving</Category>
     </CraftingCategories>

@@ -36,8 +36,8 @@
       </VoxelPlacement>
     </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Stone_Well"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Stone_Well"/>
     <CraftingCategories>
       <Category>Stone_Well</Category>
     </CraftingCategories>
@@ -65,6 +65,6 @@
     <Component Type="UseObjectsComponent" Subtype="Stone_Well" ForceCreate="true"/>
     <Component Type="Inventory" Subtype="Stone_WellInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Stone_Well" ForceCreate="true"/>
+    <Component Type="CraftingComponentQueued" Subtype="Stone_Well" ForceCreate="true"/>
   </Definition>
 </Definitions>

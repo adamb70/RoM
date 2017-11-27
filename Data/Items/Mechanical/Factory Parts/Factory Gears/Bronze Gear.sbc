@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Bronze_Gear" />
+    <DisplayName>Gear (Bronze)</DisplayName>
+    <Description>
+"Bronze gears are very ineffcient, but are 
+used to construct Factory Parts."
+</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Mechanical\WoodenCrate.dds</Icon>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Mass>1</Mass>
+    <Model>Models\Cubes\large\Mechanical\SawmillMechanical_Sawblades_Planks.mwm</Model>
+    <MaxStackAmount>100</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bronze_Gear"/>
+    <Icon>Textures\GUI\Icons\Cubes\Mechanical\BronzeenCrate.dds</Icon>
+    <DisplayName>Gear (Bronze)</DisplayName>
+    <Description>
+"Bronze gears are very ineffcient, but are 
+used to construct Factory Parts."
+</Description>
+    <Category>Anvil</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotBronze" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="5" Type="InventoryItem" Subtype="Bronze_Gear" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+</Definitions>

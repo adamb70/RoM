@@ -46,8 +46,8 @@
 
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Fermenting_Vat"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Fermenting_Vat"/>
     <CraftingCategories>
       <Category>Fermenting_Vat</Category>
     </CraftingCategories>
@@ -75,7 +75,7 @@
     <Component Type="UseObjectsComponent" Subtype="Fermenting_Vat" ForceCreate="true"/>
     <Component Type="Inventory" Subtype="Fermenting_VatInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Fermenting_Vat" ForceCreate="true"/>
+    <Component Type="CraftingComponentQueued" Subtype="Fermenting_Vat" ForceCreate="true"/>
   </Definition>
 
 

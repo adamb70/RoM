@@ -50,8 +50,8 @@ to read from it.
 		</Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="LawGovernment_Book"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="LawGovernment_Book"/>
     <CraftingCategories>
       <Category>LawGovernment_Book</Category>
     </CraftingCategories>
@@ -77,7 +77,7 @@ to read from it.
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="LawGovernment_Book" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="LawGovernment_Book" />
+    <Component Type="CraftingComponentQueued" Subtype="LawGovernment_Book" />
     <Component Type="UseObjectsComponent" Subtype="LawGovernment_Book" />
     <Component Type="Inventory" Subtype="LawGovernment_BookInventory" />
   </Definition>

@@ -49,8 +49,8 @@
 		</Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Nomadic_Book"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Nomadic_Book"/>
     <CraftingCategories>
       <Category>Nomadic_Book</Category>
       <Category>Stone_Well_Research</Category>
@@ -77,7 +77,7 @@
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Nomadic_Book" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Nomadic_Book" />
+    <Component Type="CraftingComponentQueued" Subtype="Nomadic_Book" />
     <Component Type="UseObjectsComponent" Subtype="Nomadic_Book" />
     <Component Type="Inventory" Subtype="Nomadic_BookInventory" />
   </Definition>

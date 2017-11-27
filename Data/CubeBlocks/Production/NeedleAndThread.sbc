@@ -54,8 +54,8 @@
   </Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="NeedleThread"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="NeedleThread"/>
     <CraftingCategories>
       <Category>Weaving</Category>
     </CraftingCategories>
@@ -81,7 +81,7 @@
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NeedleThread" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="NeedleThread" />
+    <Component Type="CraftingComponentQueued" Subtype="NeedleThread" />
     <Component Type="UseObjectsComponent" Subtype="NeedleThread" />
     <Component Type="Inventory" Subtype="NeedleThread_Inventory" />
   </Definition>

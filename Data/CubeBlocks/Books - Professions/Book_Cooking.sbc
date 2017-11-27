@@ -51,8 +51,8 @@ to read from it.
 		</Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Cooking_Book"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Cooking_Book"/>
     <CraftingCategories>
       <Category>Cooking_Book</Category>
     </CraftingCategories>
@@ -78,7 +78,7 @@ to read from it.
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Cooking_Book" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Cooking_Book" />
+    <Component Type="CraftingComponentQueued" Subtype="Cooking_Book" />
     <Component Type="UseObjectsComponent" Subtype="Cooking_Book" />
     <Component Type="Inventory" Subtype="Cooking_BookInventory" />
   </Definition>

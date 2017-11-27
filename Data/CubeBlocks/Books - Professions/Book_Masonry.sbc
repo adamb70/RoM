@@ -50,8 +50,8 @@ to read from it.
 		</Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Masonry_Book"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Masonry_Book"/>
     <CraftingCategories>
       <Category>Masonry_Book</Category>
       <Category>Stone_Well_Research</Category>
@@ -78,7 +78,7 @@ to read from it.
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Masonry_Book" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Masonry_Book" />
+    <Component Type="CraftingComponentQueued" Subtype="Masonry_Book" />
     <Component Type="UseObjectsComponent" Subtype="Masonry_Book" />
     <Component Type="Inventory" Subtype="Masonry_BookInventory" />
   </Definition>

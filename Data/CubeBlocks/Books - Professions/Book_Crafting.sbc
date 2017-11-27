@@ -41,8 +41,8 @@ glassblowing, and more.</Description>
 		</Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Crafting_Book"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Crafting_Book"/>
     <CraftingCategories>
       <Category>Crafting_Book</Category>
     </CraftingCategories>
@@ -68,7 +68,7 @@ glassblowing, and more.</Description>
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Crafting_Book" />
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Crafting_Book" />
+    <Component Type="CraftingComponentQueued" Subtype="Crafting_Book" />
     <Component Type="UseObjectsComponent" Subtype="Crafting_Book" />
     <Component Type="Inventory" Subtype="Crafting_BookInventory" />
   </Definition>
