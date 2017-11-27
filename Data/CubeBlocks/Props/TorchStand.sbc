@@ -14,7 +14,7 @@
       <PhysicalMaterial>Iron</PhysicalMaterial>
       <Components>
         <Component Tag="ScrapWood" Count="3" />
-        <Component Type="InventoryItem" Subtype="MetalParts" Count="1" />
+        <Component Type="InventoryItem" Subtype="PartsMetal" Count="1" />
       </Components>
       <CriticalComponent Tag="ScrapWood" Index="0" />
       <MaxIntegrity>150</MaxIntegrity>
@@ -103,7 +103,7 @@
     <Category>Woodcrafting</Category>
     <Prerequisites>
       <Item Amount="3" Tag="ScrapWood" />
-      <Item Amount="1" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Amount="1" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="TorchStand" />

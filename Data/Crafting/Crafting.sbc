@@ -207,7 +207,7 @@
       <Prerequisites>
 		<Item Amount="15" Type="InventoryItem" Subtype="Timber10" />
       <Item Amount="10" Type="InventoryItem" Subtype="IngotIron" />
-		<Item Amount="1" Type="HandItem" Subtype="Hammer" />
+		<Item Amount="1" Type="HandItem" Subtype="HammerIron" />
       </Prerequisites>
       <Results>
 	  
@@ -227,7 +227,7 @@
       <Prerequisites>
       <Item Amount="10" Type="InventoryItem" Subtype="IngotIron" />
         <Item Amount="10" Type="InventoryItem" Subtype="Timber10" />
-        <Item Amount="1" Type="HandItem" Subtype="StoneAxe" />
+        <Item Amount="1" Type="HandItem" Subtype="AxeStone" />
       </Prerequisites>
       <Results>
 	  
@@ -245,7 +245,7 @@
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category></Category>
       <Prerequisites>
-        <Item Amount="30" Type="InventoryItem" Subtype="MetalParts" />
+        <Item Amount="30" Type="InventoryItem" Subtype="PartsMetal" />
         <Item Amount="15" Type="InventoryItem" Subtype="StoneLarge" />
       </Prerequisites>
       <Results>
@@ -290,10 +290,10 @@
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\WoodenClub.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="1" Type="InventoryItem" Subtype="Log" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="HandItem" Subtype="Club" />
+      <Item Amount="1" Type="HandItem" Subtype="ClubWood" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -363,7 +363,7 @@ how to make Iron Crossbow Bolts.</DisplayName>
     </Definition>
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crossbow" />
+      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowSteel" />
       <DisplayName>Iron Crossbow</DisplayName>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\Crossbow.dds</Icon>
       <Category>Fletching_Table</Category>
@@ -373,7 +373,7 @@ how to make Iron Crossbow Bolts.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="HandItem" Subtype="Crossbow" />
+	    <Item Amount="1" Type="HandItem" Subtype="CrossbowSteel" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
@@ -620,7 +620,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Log (13G)</DisplayName>
       <Category>MunKhazar_Lumber_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="10" Type="InventoryItem" Subtype="Log250cm" />
+        <Item Amount="10" Type="InventoryItem" Subtype="Log" />
       </Prerequisites>
       <Results>
 	  
@@ -636,7 +636,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Log (13G)</DisplayName>
       <Category>MunKhazar_Lumber_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+        <Item Amount="1" Type="InventoryItem" Subtype="Log" />
       </Prerequisites>
       <Results>
 	  
@@ -680,7 +680,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Log (13G)</DisplayName>
       <Category>Munik_Lumber_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="10" Type="InventoryItem" Subtype="Log250cm" />
+        <Item Amount="10" Type="InventoryItem" Subtype="Log" />
       </Prerequisites>
       <Results>
 	  
@@ -696,7 +696,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Log (13G)</DisplayName>
       <Category>Munik_Lumber_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+        <Item Amount="1" Type="InventoryItem" Subtype="Log" />
       </Prerequisites>
       <Results>
 	  
@@ -992,7 +992,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Log (13G)</DisplayName>
       <Category>Reyjk_Lumber_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="10" Type="InventoryItem" Subtype="Log250cm" />
+        <Item Amount="10" Type="InventoryItem" Subtype="Log" />
       </Prerequisites>
       <Results>
 	  
@@ -1008,7 +1008,7 @@ a crossbow.</DisplayName>
       <DisplayName>Sell: Log (13G)</DisplayName>
       <Category>Reyjk_Lumber_Market_Stand</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+        <Item Amount="1" Type="InventoryItem" Subtype="Log" />
       </Prerequisites>
       <Results>
 	  
@@ -4191,7 +4191,7 @@ is perfect for an axel!</Description>
     <Prerequisites>
       <Item Amount="4" Tag="ScrapWood" />
       <Item Amount="1" Tag="Timber" />
-      <Item Amount="2" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CogWheelsBlock" Subtype="LockGearBox2" />
@@ -4289,7 +4289,7 @@ is perfect for an axel!</Description>
     <Category>Machinesmith_Table</Category>
     <Prerequisites>
       <Item Amount="1" Tag="Timber" />
-      <Item Amount="2" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="CrankWheel" />
@@ -5453,7 +5453,7 @@ walls by a large amount.</Description>
       <Category>Anvil</Category>
       <Prerequisites>
         <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
-        <Item Amount="1" Type="InventoryItem" Subtype="MetalParts" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PartsMetal" />
       </Prerequisites>
       <Results>
 	  
@@ -5489,7 +5489,7 @@ walls by a large amount.</Description>
       <Category>Anvil</Category>
       <Prerequisites>
         <Item Amount="2" Type="InventoryItem" Subtype="Sticks" />
-        <Item Amount="2" Type="InventoryItem" Subtype="MetalParts" />
+        <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
       </Prerequisites>
       <Results>
 	  
@@ -5544,7 +5544,7 @@ walls by a large amount.</Description>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="HandItem" Subtype="Axe" />
+	    <Item Amount="1" Type="HandItem" Subtype="AxeIron" />
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
@@ -5570,7 +5570,7 @@ at a faster rate then stone axes.</Description>
     </Definition>
 <!-- ========================================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hammer" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HammerIron" />
       <DisplayName>Iron Hammer</DisplayName>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HammerOneHand_Construction.dds</Icon>
       <Category>Anvil</Category>
@@ -5580,7 +5580,7 @@ at a faster rate then stone axes.</Description>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="HandItem" Subtype="Hammer" />
+	    <Item Amount="1" Type="HandItem" Subtype="HammerIron" />
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
@@ -5606,7 +5606,7 @@ at a faster rate then wooden hammers.</Description>
     </Definition>
 <!-- ========================================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Pickaxe" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PickaxeIron" />
       <DisplayName>Iron Pickaxe</DisplayName>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronPickaxe.dds</Icon>
       <Category>Anvil</Category>
@@ -5616,7 +5616,7 @@ at a faster rate then wooden hammers.</Description>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="HandItem" Subtype="Pickaxe" />
+	    <Item Amount="1" Type="HandItem" Subtype="PickaxeIron" />
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
@@ -5641,7 +5641,7 @@ at a faster rate then wooden hammers.</Description>
     </Definition>
 <!-- ========================================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronShovel"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ShovelIron"/>
     <DisplayName>DisplayName_Tool_IronShovel</DisplayName>
     <Description>Description_Tool_IronShovel</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronShovel.dds</Icon>
@@ -5652,7 +5652,7 @@ at a faster rate then wooden hammers.</Description>
       <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="HandItem" Subtype="IronShovel" />
+      <Item Amount="1" Type="HandItem" Subtype="ShovelIron" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -5675,7 +5675,7 @@ at a faster rate then wooden hammers.</Description>
     </Definition>
 <!-- ========================================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Plow" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PlowIron" />
       <DisplayName>Iron Plow</DisplayName>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
       <Category>Anvil</Category>
@@ -5685,7 +5685,7 @@ at a faster rate then wooden hammers.</Description>
       </Prerequisites>
       <Results>
 	  
-	  <Item Amount="1" Type="HandItem" Subtype="Plow" />
+	  <Item Amount="1" Type="HandItem" Subtype="PlowIron" />
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
@@ -5711,7 +5711,7 @@ for a longer time then Stone Plows.</Description>
     </Definition>
 <!-- ========================================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Mace" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClubStudded" />
       <DisplayName>Iron Mace</DisplayName>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
       <Category>Anvil</Category>
@@ -5721,7 +5721,7 @@ for a longer time then Stone Plows.</Description>
       </Prerequisites>
       <Results>
 	  
-	  <Item Amount="1" Type="HandItem" Subtype="Mace" />
+	  <Item Amount="1" Type="HandItem" Subtype="ClubStudded" />
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
@@ -5783,7 +5783,7 @@ Most commonly used for the Crafting profession.</Description>
     </Definition>
 <!-- ========================================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sword" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SwordIron" />
       <DisplayName>Iron Sword</DisplayName>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronSword.dds</Icon>
       <Category>Anvil</Category>
@@ -5792,7 +5792,7 @@ Most commonly used for the Crafting profession.</Description>
       </Prerequisites>
       <Results>
 	  
-	  <Item Amount="1" Type="HandItem" Subtype="Sword" />
+	  <Item Amount="1" Type="HandItem" Subtype="SwordIron" />
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
@@ -5808,7 +5808,7 @@ Most commonly used for the Crafting profession.</Description>
       <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
-      <Item Amount="4" Type="HandItem" Subtype="LandscapeStakeItem" />
+      <Item Amount="4" Type="HandItem" Subtype="LandscapeStake" />
     </Results>
     <CraftingTime Seconds="1.5"/>
   </Definition>
@@ -5844,7 +5844,7 @@ foes at close range.</Description>
       <DisplayName>DisplayName_IronOreToIronIngots</DisplayName>
       <Category>Smelting</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="IronOre" />
+        <Item Amount="3" Type="InventoryItem" Subtype="OreIron" />
       </Prerequisites>
       <Results>
         <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
@@ -5862,7 +5862,7 @@ foes at close range.</Description>
       </Prerequisites>
       <Results>
 	  
-	  <Item Amount="6" Type="InventoryItem" Subtype="MetalParts" />
+	  <Item Amount="6" Type="InventoryItem" Subtype="PartsMetal" />
       </Results>
 	  <CraftingTime Seconds="1"/>
     </Definition>
@@ -6042,7 +6042,7 @@ pine trees to aquire Pristine Sticks))</Description>
 perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="2" Type="InventoryItem" Subtype="Log" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="LongBarricade" />
@@ -6060,7 +6060,7 @@ perfect for an encampment!</Description>
 barricade, perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="1" Type="InventoryItem" Subtype="Log" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="SmallBarricade" />
@@ -6283,7 +6283,7 @@ provides a bed, some storage, and a place to change your clothes.</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
       <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
-      <Item Amount="6" Type="InventoryItem" Subtype="ScrapWoodBranches" />
+      <Item Amount="6" Type="InventoryItem" Subtype="BranchesConiferous" />
       <Item Amount="4" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
