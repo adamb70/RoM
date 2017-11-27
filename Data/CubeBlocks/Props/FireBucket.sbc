@@ -2,7 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CubeBlocks>
     <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id Type="MyObjectBuilder_CubeBlock" Subtype="FireBucket" />
+      <Id Type="MyObjectBuilder_CubeBlock" Subtype="Brazier" />
       <BlockPairName>FireBucket</BlockPairName>
       <DisplayName>DisplayName_Block_FireBucket</DisplayName>
       <Icon>Textures\GUI\Icons\Cubes\FireBucket.dds</Icon>
@@ -43,7 +43,7 @@
   </CubeBlocks>
 
   <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="FireBucket" />
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="Brazier" />
     <InitialState>Off</InitialState>
     <States>
       <State Name="On">
@@ -56,7 +56,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="FireBucket" />
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="Brazier" />
     <Effects>
       <Effect StartEvent="On" StopEvent="Off" Dummy="detector_fire">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
@@ -65,7 +65,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="FireBucket" />
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Brazier" />
     <LoadFromModel>false</LoadFromModel>
     <UseObjects>
       <UseObject Dummy="detector_fire" Name="Generic" />
@@ -73,7 +73,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="FireBucket" />
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="Brazier" />
     <Tooltip>UseObject_DynamicPress</Tooltip>
     <PrimaryAction>Manipulate</PrimaryAction>
     <SupportsAccessSettings>false</SupportsAccessSettings>
@@ -85,7 +85,7 @@
 
   <EntityContainers>
     <Container>
-      <Id Type="CubeBlock" Subtype="FireBucket" />
+      <Id Type="CubeBlock" Subtype="Brazier" />
       <DefaultComponents>
         <Component BuilderType="MyObjectBuilder_EntityStateComponent" SubtypeId="FireBucket" ForceCreate="true"/>
         <Component BuilderType="MyObjectBuilder_EntityFXComponent" SubtypeId="FireBucket" ForceCreate="true"/>
@@ -96,7 +96,7 @@
   </EntityContainers>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FireBucket"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Brazier"/>
     <DisplayName>DisplayName_Block_FireBucket</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\FireBucket.dds</Icon>
     <Category>MetalWorks</Category>
@@ -104,7 +104,7 @@
       <Item Amount="2" Tag="IngotIron" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="FireBucket" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Brazier" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>

@@ -3,7 +3,7 @@
 
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodBarrel"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BarrelWood"/>
     <Icon>Textures\GUI\Icons\Cubes\WoodBarrel.dds</Icon>
     <DisplayName>DisplayName_Block_WoodBarrel</DisplayName>
     <Category>Carpentry_Table</Category>
@@ -11,7 +11,7 @@
       <Item Amount="3" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="WoodBarrel" />
+      <Item Amount="1" Type="CubeBlock" Subtype="BarrelWood" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="SlicedRoofTileSlope_Main" />
+    <Id Type="CubeBlock" Subtype="RoofTile" />
     <DisplayName>DisplayName_Block_RoofTile</DisplayName>
     <BlockPairName>RoofTile</BlockPairName>
     <Public>true</Public>
@@ -128,7 +128,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="SlicedRoofTileCornerSharpIn_Main" />
+    <Id Type="CubeBlock" Subtype="RoofTileCornerInner" />
     <DisplayName>DisplayName_Block_RoofTileInvCorner</DisplayName>
     <BlockPairName>RoofTileInvCorner</BlockPairName>
     <Public>true</Public>
@@ -226,7 +226,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="SlicedRoofTileCornerSharp_Main" />
+    <Id Type="CubeBlock" Subtype="RoofTileCorner" />
     <DisplayName>DisplayName_Block_RoofTileCorner</DisplayName>
     <BlockPairName>RoofTileCorner</BlockPairName>
     <Public>true</Public>
@@ -338,7 +338,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileOddTopWithTop" />
+    <Id Type="CubeBlock" Subtype="RooftopTile" />
     <DisplayName>DisplayName_Block_RoofTileTop</DisplayName>
     <BlockPairName>RoofTileTop</BlockPairName>
     <Public>true</Public>
@@ -548,7 +548,7 @@
   
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileCornerRoundTallMultiBlock" />
+    <Id Type="CubeBlock" Subtype="RoofTileRoundTall" />
     <DisplayName>DisplayName_Block_RoofTileCornerRoundTall_MultiBlock</DisplayName>
     <BlockPairName>RoofTileCornerRoundTall_MultiBlock</BlockPairName>
     <Public>true</Public>
@@ -587,7 +587,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileCornerRoundMain" />
+    <Id Type="CubeBlock" Subtype="RoofTileRoundCorner" />
     <DisplayName>DisplayName_Block_SlicedRoofTileCornerRound</DisplayName>
     <Public>true</Public>
     <Icon>Textures\GUI\Icons\Cubes\RoofTileCornerRound.dds</Icon>
@@ -700,7 +700,7 @@
   
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileOddCross" />
+    <Id Type="CubeBlock" Subtype="RooftopTileCross" />
     <DisplayName>DisplayName_Block_RoofTileTopCross</DisplayName>
     <BlockPairName>RoofTileOddCross</BlockPairName>
     <Public>true</Public>
@@ -775,7 +775,7 @@
   
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileOddCut" />
+    <Id Type="CubeBlock" Subtype="RooftopTileEnd" />
     <DisplayName>DisplayName_Block_RoofTileTopCut</DisplayName>
     <BlockPairName>RoofTileOddCut</BlockPairName>
     <Public>true</Public>
@@ -867,7 +867,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileOddEnd" />
+    <Id Type="CubeBlock" Subtype="RooftopTilePyramid" />
     <DisplayName>DisplayName_Block_RoofTileTopEnd</DisplayName>
     <BlockPairName>RoofTileOddEnd</BlockPairName>
     <Public>true</Public>
@@ -934,7 +934,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileOddT" />
+    <Id Type="CubeBlock" Subtype="RooftopTileT" />
     <DisplayName>DisplayName_Block_RoofTileTopT</DisplayName>
     <BlockPairName>RoofTileOddT</BlockPairName>
     <Public>true</Public>
@@ -1036,7 +1036,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileOddTurn" />
+    <Id Type="CubeBlock" Subtype="RooftopTileTurn" />
     <DisplayName>DisplayName_Block_RoofTileTopTurn</DisplayName>
     <BlockPairName>RoofTileOddTurn</BlockPairName>
     <Public>true</Public>
@@ -1142,7 +1142,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="RoofTileLargeRound_Main" />
+    <Id Type="CubeBlock" Subtype="RoofTileRoundLarge" />
     <DisplayName>DisplayName_Block_RoofTileLargeRound</DisplayName>
     <BlockPairName>RoofTileLargeRound_Main</BlockPairName>
     <Public>true</Public>

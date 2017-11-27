@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="SignPost3x1ArrowOffset" />
+    <Id Type="CubeBlock" Subtype="SignpostArrow3x1Left" />
     <DisplayName>DisplayName_Block_SignPost3x1ArrowOffset</DisplayName>
     <Description>Description_Block_ArrowSign</Description>
     <BlockPairName>SignPost3x1ArrowOffset</BlockPairName>
@@ -77,7 +77,7 @@
     </Definition>
 <!-- -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SignPost3x1ArrowOffset"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SignpostArrow3x1Left"/>
     <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\SignPost3x1ArrowOffset.dds</Icon>
     <DisplayName>DisplayName_Block_ArrowSigns</DisplayName>
@@ -87,7 +87,7 @@
       <Item Amount="1" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="SignPost3x1ArrowOffset" />
+      <Item Amount="1" Type="CubeBlock" Subtype="SignpostArrow3x1Left" />
     </Results>
     <CraftingTime Seconds="2"/>
   </Definition>

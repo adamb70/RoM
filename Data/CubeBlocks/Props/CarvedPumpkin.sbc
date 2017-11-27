@@ -2,7 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CubeBlocks>
     <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id Type="CubeBlock" Subtype="CarvedPumpkin" />
+      <Id Type="CubeBlock" Subtype="PumpkinCarved" />
       <DisplayName>DisplayName_Block_CarvedPumpkin</DisplayName>
       <BlockPairName>CarvedPumpkin</BlockPairName>
       <Icon>Textures\GUI\Icons\Cubes\PumpkinCarved.dds</Icon>
@@ -49,7 +49,7 @@
   </CubeBlocks>
 
   <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="CarvedPumpkin" />
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="PumpkinCarved" />
     <InitialState>On</InitialState>
     <States>
       <State Name="On">
@@ -62,7 +62,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="CarvedPumpkin" />
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="PumpkinCarved" />
     <Effects>
       <Effect StartEvent="On" StopEvent="Off" Dummy="detector_pumpkin">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
@@ -71,7 +71,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="CarvedPumpkin" />
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="PumpkinCarved" />
     <LoadFromModel>false</LoadFromModel>
     <UseObjects>
       <UseObject Dummy="detector_pumpkin" Name="Generic" />
@@ -79,7 +79,7 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="CarvedPumpkin" />
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="PumpkinCarved" />
     <Tooltip>UseObject_DynamicPress</Tooltip>
     <PrimaryAction>Manipulate</PrimaryAction>
     <SupportsAccessSettings>false</SupportsAccessSettings>
@@ -91,7 +91,7 @@
 
   <EntityContainers>
     <Container>
-      <Id Type="CubeBlock" Subtype="CarvedPumpkin" />
+      <Id Type="CubeBlock" Subtype="PumpkinCarved" />
       <DefaultComponents>
         <Component BuilderType="MyObjectBuilder_EntityStateComponent" SubtypeId="CarvedPumpkin" ForceCreate="true"/>
         <Component BuilderType="MyObjectBuilder_EntityFXComponent" SubtypeId="CarvedPumpkin" ForceCreate="true"/>
@@ -102,7 +102,7 @@
   </EntityContainers>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CarvedPumpkin"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PumpkinCarved"/>
     <DisplayName>DisplayName_Block_CarvedPumpkin</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\PumpkinCarved.dds</Icon>
     <Category>SmallBlocks</Category>
@@ -111,7 +111,7 @@
       <Item Amount="1" Type="ConsumableItem" Subtype="Pumpkin" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="CarvedPumpkin" />
+      <Item Amount="1" Type="CubeBlock" Subtype="PumpkinCarved" />
     </Results>
     <CraftingTime Seconds="6"/>
   </Definition>

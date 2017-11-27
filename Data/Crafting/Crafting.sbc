@@ -59,7 +59,7 @@
   </Definition>
 <!-- ============================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SimpleTable"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TableWoodSmall"/>
     <DisplayName>DisplayName_Block_SimpleTable</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\SimpleTable.dds</Icon>
     <Category>Carpentry_Table</Category>
@@ -67,13 +67,13 @@
       <Item Amount="2" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="SimpleTable" />
+      <Item Amount="1" Type="CubeBlock" Subtype="TableWoodSmall" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
 <!-- ============================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileIronSmall"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileOreSmall"/>
     <DisplayName>DisplayName_Block_StockpileIronSmall</DisplayName>
     <Icon>Textures\GUI\Icons\Props\StockpileIronSmall.dds</Icon>
     <Category>Carpentry_Table</Category>
@@ -81,7 +81,7 @@
       <Item Amount="4" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="StockpileIronSmall" />
+      <Item Amount="1" Type="CubeBlock" Subtype="StockpileOreSmall" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -143,7 +143,7 @@
   </Definition>
 <!-- ============================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodenDiningTable"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TableWoodLarge"/>
     <Icon>Textures\GUI\Icons\Props\WoodenDiningTable.dds</Icon>
     <DisplayName>DisplayName_Block_WoodenDiningTable</DisplayName>
     <Category>Carpentry_Table</Category>
@@ -151,13 +151,13 @@
       <Item Amount="3" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="WoodenDiningTable" />
+      <Item Amount="1" Type="CubeBlock" Subtype="TableWoodLarge" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
 <!-- ============================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodenShelf"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ShelfWood"/>
     <Icon>Textures\GUI\Icons\Props\WoodenShelf.dds</Icon>
     <DisplayName>DisplayName_Block_WoodenShelf</DisplayName>
     <Category>Carpentry_Table</Category>
@@ -165,7 +165,7 @@
       <Item Amount="2" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="WoodenShelf" />
+      <Item Amount="1" Type="CubeBlock" Subtype="ShelfWood" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -1223,7 +1223,7 @@ a crossbow.</DisplayName>
       <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Flag10x10" />
+      <Item Amount="1" Type="CubeBlock" Subtype="FlagPersonal10x10" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -1238,14 +1238,14 @@ a crossbow.</DisplayName>
       <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="FlagRed10x10" />
+      <Item Amount="1" Type="CubeBlock" Subtype="FlagHouse10x10" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
   <!-- -->
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Flag10x10" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FlagPersonal10x10" />
       <Icon>Textures\GUI\Icons\Cubes\Flag10x10.dds</Icon>
       <DisplayName>DisplayName_Block_FlagPersonal</DisplayName>
       <Category>Weaving</Category>
@@ -1255,7 +1255,7 @@ a crossbow.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="CubeBlock" Subtype="Flag10x10" />
+	    <Item Amount="1" Type="CubeBlock" Subtype="FlagPersonal10x10" />
 	  </Results>
       <CraftingTime Seconds="3"/>
     </Definition>
@@ -1279,7 +1279,7 @@ a crossbow.</DisplayName>
     
 <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FlagRed10x10" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FlagHouse10x10" />
       <Icon>Textures\GUI\Icons\Cubes\FlagRed10x10.dds</Icon>
       <DisplayName>DisplayName_Block_FlagFaction</DisplayName>
       <Category>Weaving</Category>
@@ -1289,7 +1289,7 @@ a crossbow.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="CubeBlock" Subtype="FlagRed10x10" />
+	    <Item Amount="1" Type="CubeBlock" Subtype="FlagHouse10x10" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
@@ -3419,7 +3419,7 @@ pine trees to aquire Pristine Sticks))</Description>
     </Definition>
 <!-- -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WheelMediumSmall" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WheelWood" />
       <Icon>Textures\GUI\Icons\Cubes\WheelMediumSmall.dds</Icon>
       <DisplayName>DisplayName_Block_Wheel</DisplayName>
       <Category>Carpentry_Table</Category>
@@ -3428,7 +3428,7 @@ pine trees to aquire Pristine Sticks))</Description>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="CubeBlock" Subtype="WheelMediumSmall" />
+	    <Item Amount="1" Type="CubeBlock" Subtype="WheelWood" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
@@ -3505,7 +3505,7 @@ inorder to withstand more .</DisplayName>
     </Definition>
 <!-- -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodChair" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ChairWood" />
       <Icon>Textures\GUI\Icons\Cubes\WoodChair.dds</Icon>
       <DisplayName>DisplayName_Block_WoodChair</DisplayName>
       <Category>Carpentry_Table</Category>
@@ -3514,7 +3514,7 @@ inorder to withstand more .</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="CubeBlock" Subtype="WoodChair" />
+	    <Item Amount="1" Type="CubeBlock" Subtype="ChairWood" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
@@ -4134,7 +4134,7 @@ is perfect for an axel!</Description>
     </Definition>
 <!-- ______________________________________________________________________________________ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CatchBlockSmall2"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CatchBlock"/>
     <Icon>Textures\GUI\Icons\Cubes\CatchBlockSmall.dds</Icon>
     <DisplayName>DisplayName_Block_CatchBlock</DisplayName>
     <Category>Carpentry_Table</Category>
@@ -4143,7 +4143,7 @@ is perfect for an axel!</Description>
       <Item Amount="1" Type="CubeBlock" Subtype="TimberRound10" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CogWheelsBlock" Subtype="CatchBlockSmall2" />
+      <Item Amount="1" Type="CogWheelsBlock" Subtype="CatchBlock" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition> 
@@ -4184,7 +4184,7 @@ is perfect for an axel!</Description>
     </Definition>
 <!-- ______________________________________________________________________________________ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LockGearBox2"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CatchBlockLockable"/>
     <Icon>Textures\GUI\Icons\Cubes\LockCatchBlock.dds</Icon>
     <DisplayName>DisplayName_Block_LockCatchBlock</DisplayName>
     <Category>Machinesmith_Table</Category>
@@ -4194,7 +4194,7 @@ is perfect for an axel!</Description>
       <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CogWheelsBlock" Subtype="LockGearBox2" />
+      <Item Amount="1" Type="CogWheelsBlock" Subtype="CatchBlockLockable" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -4217,7 +4217,7 @@ is perfect for an axel!</Description>
     </Definition>
 <!-- =================================================================================== -->
  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopeDrumAloneSmall"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopeDrum"/>
     <Icon>Textures\GUI\Icons\Cubes\RopeDrumAloneSmall.dds</Icon>
     <DisplayName>DisplayName_Block_RopeDrum</DisplayName>
     <Category>Machinesmith_Table</Category>
@@ -4227,7 +4227,7 @@ is perfect for an axel!</Description>
       <Item Amount="6" Tag="Rope" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="RopeDrumAloneSmall" />
+      <Item Amount="1" Type="CubeBlock" Subtype="RopeDrum" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -4267,17 +4267,17 @@ is perfect for an axel!</Description>
     </Definition>
 <!-- =================================================================================== -->
 <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopePowerSmall"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorsionSpring"/>
     <Icon>Textures\GUI\Icons\Cubes\RopePowerSmall.dds</Icon>
     <DisplayName>DisplayName_Block_RopeTorsionSpring</DisplayName>
     <Category>Machinesmith_Table</Category>
     <Prerequisites>
       <Item Amount="2" Tag="Timber" />
       <Item Amount="4" Tag="Rope" />
-      <Item Amount="2" Type="CogWheelsBlock" Subtype="CatchBlockSmall2" />
+      <Item Amount="2" Type="CogWheelsBlock" Subtype="CatchBlock" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CogWheelsBlock" Subtype="RopePowerSmall" />
+      <Item Amount="1" Type="CogWheelsBlock" Subtype="TorsionSpring" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -5518,7 +5518,7 @@ walls by a large amount.</Description>
     </Definition>
 <!-- ________________________________________________________________________________ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FireBucket"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Brazier"/>
     <DisplayName>DisplayName_Block_FireBucket</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\FireBucket.dds</Icon>
     <Category>Anvil</Category>
@@ -5526,7 +5526,7 @@ walls by a large amount.</Description>
       <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="FireBucket" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Brazier" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
@@ -6111,7 +6111,7 @@ tier foods.</Description>
       <Item Amount="9" Tag="Universal_Stone" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="BonFire" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Bonfire" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>  
@@ -6247,7 +6247,7 @@ tier foods.</Description>
 provides a bed, some storage, and a place to change your clothes.</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Type="CubeBlock" Subtype="WoodChest" />
+      <Item Amount="1" Type="CubeBlock" Subtype="ChestWood" />
       <Item Amount="1" Type="CubeBlock" Subtype="NomadTent" />
     </Prerequisites>
     <Results>
@@ -6319,7 +6319,7 @@ provides a bed, some storage, and a place to change your clothes.</Description>
 provides a bed, some storage, and a place to change your clothes.</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Type="CubeBlock" Subtype="WoodChest" />
+      <Item Amount="1" Type="CubeBlock" Subtype="ChestWood" />
       <Item Amount="1" Type="CubeBlock" Subtype="NomadTentBranches" />
     </Prerequisites>
     <Results>
