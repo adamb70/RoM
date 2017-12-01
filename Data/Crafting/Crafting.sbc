@@ -190,107 +190,18 @@
 
 
 
-
-
-
-
-
-
-    <!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Schematic_AdvancedMechanics" />
-      <DisplayName>DisplayName_Schematic_AdvancedMechanics</DisplayName>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\AdvancedMechanics.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category></Category>
-      <Prerequisites>
-		<Item Amount="15" Type="InventoryItem" Subtype="Timber10" />
-      <Item Amount="10" Type="InventoryItem" Subtype="IngotIron" />
-		<Item Amount="1" Type="HandItem" Subtype="HammerIron" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="AdvancedMechanics" />
-	  </Results>
-      <CraftingTime Seconds="3"/>
-    </Definition>
-
-	<!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Schematic_Mechanics" />
-      <DisplayName>DisplayName_Schematic_Mechanics</DisplayName>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\Mechanics.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category></Category>
-      <Prerequisites>
-      <Item Amount="10" Type="InventoryItem" Subtype="IngotIron" />
-        <Item Amount="10" Type="InventoryItem" Subtype="Timber10" />
-        <Item Amount="1" Type="HandItem" Subtype="AxeStone" />
-      </Prerequisites>
-      <Results>
-	  
-	   <Item Amount="1" Type="SchematicItem" Subtype="Mechanics" />
-	  </Results>
-      <CraftingTime Seconds="3"/>
-    </Definition>
-
-	<!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Schematic_DefensiveStoneWorks" />
-      <DisplayName>DisplayName_Schematic_DefensiveStoneWorks</DisplayName>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\DefensiveStoneWorks.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category></Category>
-      <Prerequisites>
-        <Item Amount="30" Type="InventoryItem" Subtype="PartsMetal" />
-        <Item Amount="15" Type="InventoryItem" Subtype="StoneLarge" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="DefensiveStoneWorks" />
-	  </Results>
-      <CraftingTime Seconds="3"/>
-    </Definition>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- ************************************************************
                        	     Universal Blueprints
        ************************************************************ -->
 
-
-
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wooden_Club" />
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClubWood"/>
     <DisplayName>DisplayName_Weapon_Club</DisplayName>
     <Description>Description_Weapon_Club</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\WoodenClub.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="Log" />
+      <Item Amount="1" Tag="Log" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="HandItem" Subtype="ClubWood" />
@@ -310,73 +221,6 @@
 
 
 <!-- ========================================================================================= -->
-    <!-- stop the vanilla bolts showing in carpenter bench -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowBolt"/>
-    <DisplayName>DisplayName_Ammo_CrossbowQuiver</DisplayName>
-    <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Tag="ScrapWood" />
-      <Item Amount="1" Tag="IngotIron" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="10" Type="ProjectileItem" Subtype="CrossbowBolt" />
-    </Results>
-    <CraftingTime Seconds="1"/>
-   </Definition>
-  
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowQuiver" />
-      <DisplayName>Iron Crossbow Bolts</DisplayName>
-      <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
-      <Category>Fletching_Table</Category>
-      <Prerequisites>
-        <Item Amount="5" Tag="ScrapWood" />
-        <Item Amount="1" Tag="IngotIron" />
-      </Prerequisites>
-      <Results>
-	    <Item Amount="10" Type="ProjectileItem" Subtype="CrossbowBolt_RoM" />
-	  </Results>
-      <CraftingTime Seconds="1"/>
-    </Definition>
-	
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowQuiver_Fletching" />
-      <DisplayName>Fletching: Iron Crossbow Bolts
-
-This knowledge is good for understanding 
-how to make Iron Crossbow Bolts.</DisplayName>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Fletching_Book</Category>
-      <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="Fletching_Schematic_CrossbowQuiver" />
-	  </Results>
-      <CraftingTime Seconds="1"/>
-    </Definition>
-<!-- ========================================================================================= -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowSteel" />
-      <DisplayName>Iron Crossbow</DisplayName>
-      <Icon>Textures\GUI\Icons\ToolsAndWeapons\Crossbow.dds</Icon>
-      <Category>Fletching_Table</Category>
-      <Prerequisites>
-        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
-      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="HandItem" Subtype="CrossbowSteel" />
-	  </Results>
-      <CraftingTime Seconds="1"/>
-    </Definition>
 	
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crossbow_Fletching" />
@@ -429,7 +273,7 @@ a crossbow.</DisplayName>
 
 
 <!-- ========================================================================================= -->
-				General Market
+				<!-- General Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_MunKhazar_General" />
@@ -463,7 +307,7 @@ a crossbow.</DisplayName>
       <CraftingTime Seconds="1"/>
     </Definition>
 <!-- ========================================================================================= -->
-				Food Market
+				<!-- Food Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_WheatStraws_MunKhazar_Food" />
@@ -611,7 +455,7 @@ a crossbow.</DisplayName>
     </Definition>
 
 <!-- ========================================================================================= -->
-				Lumber Market
+				<!-- Lumber Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_MunKhazar_Lumber_10" />
@@ -671,7 +515,7 @@ a crossbow.</DisplayName>
       <CraftingTime Seconds="1"/>
     </Definition>
 <!-- ========================================================================================= -->
-				Lumber Market
+				<!-- Lumber Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Munik_Lumber_10" />
@@ -705,7 +549,7 @@ a crossbow.</DisplayName>
       <CraftingTime Seconds="1"/>
     </Definition>
 <!-- ========================================================================================= -->
-				General Market
+				<!-- General Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Munik_General" />
@@ -779,7 +623,7 @@ a crossbow.</DisplayName>
       <CraftingTime Seconds="1"/>
     </Definition>
 <!-- ========================================================================================= -->
-				Food Market
+				<!-- Food Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_WheatStraws_Rienburg_Food" />
@@ -909,7 +753,7 @@ a crossbow.</DisplayName>
       <CraftingTime Seconds="1"/>
     </Definition>
 <!-- ========================================================================================= -->
-				General Market
+				<!-- General Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Rienburg_General" />
@@ -983,7 +827,7 @@ a crossbow.</DisplayName>
       <CraftingTime Seconds="1"/>
     </Definition>
 <!-- ========================================================================================= -->
-				Lumber Market
+				<!-- Lumber Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Reyjk_Lumber_10" />
@@ -1017,7 +861,7 @@ a crossbow.</DisplayName>
       <CraftingTime Seconds="1"/>
     </Definition>
 <!-- ========================================================================================= -->
-				General Market
+				<!-- General Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Reyjk_General" />

@@ -21,4 +21,19 @@
         <ProjectileType>Bolt</ProjectileType>
       </ProjectileProperties>
     </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowQuiver" />
+      <DisplayName>Iron Crossbow Bolts</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
+      <Category>Fletching_Table</Category>
+      <Prerequisites>
+        <Item Amount="5" Tag="ScrapWood" />
+        <Item Amount="10" Type="InventoryItem" Subtype="PartsMetal" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="10" Type="ProjectileItem" Subtype="CrossbowBolt_RoM" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+    </Definition>
 </Definitions>
