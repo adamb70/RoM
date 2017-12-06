@@ -57,11 +57,9 @@
 	<CompoundEnabled>false</CompoundEnabled>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_BlockWindmillComponentDefinition">
-    <Id Type="BlockWindmillComponent" Subtype="Small_Steam_Engine" />
+  <Definition xsi:type="MyObjectBuilder_FueledMechanicalSourceComponentDefinition">
+    <Id Type="FueledMechanicalSourceComponent" Subtype="Small_Steam_Engine" />
     <MaxPowerOutput>10</MaxPowerOutput>
-    <MaxAltitudeDelta>0</MaxAltitudeDelta>
-    <PowerInterpolation>Linear</PowerInterpolation>
     <Connection>connection_backward</Connection>
     <ClockwiseAnimation>cw</ClockwiseAnimation>
     <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
@@ -141,7 +139,7 @@
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Small_Steam_Engine" />
-    <Component Type="BlockWindmillComponent" Subtype="Small_Steam_Engine" />
+    <Component Type="FueledMechanicalSourceComponent" Subtype="Small_Steam_Engine" />
     <Component Type="CubeBlockSubpartComponent" Subtype="Small_Steam_Engine" />
     <Component Type="SubpartAnimationComponent" Subtype="Small_Steam_Engine" />
 	  <Component Type="EntityFXComponent" Subtype="Small_Steam_Engine" />
