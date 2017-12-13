@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="SawmillMechanical" />
-    <DisplayName>Small Sawmill (Wood)</DisplayName>
+    <Id Type="CubeBlock" Subtype="Small_Fabricator_Iron" />
+    <DisplayName>Small Fabricator (Iron)</DisplayName>
     <Description>
-"The wood sawmill is the least 
-effiecant type of sawmill."
+"The Iron Fabricator is the more 
+effiecant than a Bronze Fabricator."
 </Description>
-    <BlockPairName>SawmillMechanical</BlockPairName>
+    <BlockPairName>SawmillMechanical_Iron</BlockPairName>
     <Public>true</Public>
     <Icon>Textures\GUI\Icons\Cubes\Mechanical\SawmillMechanical.dds</Icon>
     <CubeSize>Large</CubeSize>
@@ -24,9 +24,9 @@ effiecant type of sawmill."
     </BuildProgressModels>
     <Components>
       <Component Type="InventoryItem" Subtype="Small_FactoryKit" Count="1" />
-      <Component Type="InventoryItem" Subtype="Wood_Gear" Count="5" />
+      <Component Type="InventoryItem" Subtype="Iron_Gear" Count="5" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="Wood_Gear" Index="0" />
+    <CriticalComponent Type="InventoryItem" Subtype="Iron_Gear" Index="0" />
     <MaxIntegrity>600</MaxIntegrity>
     <MountPoints>
       <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
@@ -58,68 +58,66 @@ effiecant type of sawmill."
   </Definition>
 <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="SawmillMechanical" />
-    <Component Type="MechanicalSinkComponent" Subtype="SawmillMechanical" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="SawmillMechanical" />
-    <Component Type="SubpartAnimationComponent" Subtype="SawmillMechanical" />
-    <Component Type="EntityFXComponent" Subtype="SawmillMechanical" />
-    <Component Type="Inventory" Subtype="SawmillMechanicalToolheadInventory" />
-    <Component Type="StockpileComponent" Subtype="SawmillMechanicalToolheadVisual" />
-    <Component Type="Inventory" Subtype="SawmillMechanicalInventoryInput" />
-    <Component Type="Inventory" Subtype="SawmillMechanicalInventoryOutput" />
-    <Component Type="CraftingComponentAutonomous" Subtype="SawmillMechanical" />
+    <Id Type="CubeBlock" Subtype="Small_Fabricator_Iron" />
+    <Component Type="MechanicalSinkComponent" Subtype="Small_Fabricator_Iron" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="Small_Fabricator_Iron" />
+    <Component Type="SubpartAnimationComponent" Subtype="Small_Fabricator_Iron" />
+    <Component Type="EntityFXComponent" Subtype="Small_Fabricator_Iron" />
+    <Component Type="Inventory" Subtype="Small_FabricatorToolheadInventory_Iron" />
+    <Component Type="StockpileComponent" Subtype="Small_FabricatorToolheadVisual_Iron" />
+    <Component Type="Inventory" Subtype="Small_FabricatorInventoryInput_Iron" />
+    <Component Type="Inventory" Subtype="Small_FabricatorInventoryOutput_Iron" />
+    <Component Type="CraftingComponentAutonomous" Subtype="Small_Fabricator_Iron" />
     <Component Type="InventorySpawnComponent" />
   </Definition>
 <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="Inventory" Subtype="SawmillMechanicalToolheadInventory" />
+    <Id Type="Inventory" Subtype="Small_FabricatorToolheadInventory_Iron" />
     <DisplayName>DisplayName_InventoryName_Toolhead</DisplayName>
     <MaxItemCount>1</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
     <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="true">
-      <Id Type="ToolheadItem" Subtype="SawbladesTimber" />
-      <Id Type="ToolheadItem" Subtype="SawbladesPlank" />
+      <Id Type="ToolheadItem" Subtype="Small_FactoryKit_Iron_Toolhead" />
     </Constraint>
   </Definition>
 <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_StockpileComponentDefinition">
-    <Id Type="StockpileComponent" Subtype="SawmillMechanicalToolheadVisual" />
+    <Id Type="StockpileComponent" Subtype="Small_FabricatorToolheadVisual_Iron" />
     <SubpartNameFormat>Sawblades</SubpartNameFormat>
     <MaxNumberOfSubparts>1</MaxNumberOfSubparts>
-    <InventoryName>SawmillMechanicalToolheadInventory</InventoryName>
+    <InventoryName>Small_FabricatorToolheadInventory</InventoryName>
   </Definition>
 <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="Inventory" Subtype="SawmillMechanicalInventoryInput" />
+    <Id Type="Inventory" Subtype="Small_FabricatorInventory_IronInput" />
     <DisplayName>Input</DisplayName>
     <MaxItemCount>7</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="Inventory" Subtype="SawmillMechanicalInventoryOutput" />
+    <Id Type="Inventory" Subtype="Small_FabricatorInventory_IronOutput" />
     <DisplayName>Output</DisplayName>
     <MaxItemCount>7</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
 <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingComponentAutonomousDefinition">
-    <Id Type="CraftingComponentAutonomous" Subtype="SawmillMechanical" />
+    <Id Type="CraftingComponentAutonomous" Subtype="Small_Fabricator_Iron" />
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
     <ConstrainInventory>true</ConstrainInventory>
     <ReturnPrerequisitesOnCancel>false</ReturnPrerequisitesOnCancel>
     <PowerRequired>All</PowerRequired>
-    <CraftingInventory>SawmillMechanicalInventoryInput</CraftingInventory>
-    <OutputInventory>SawmillMechanicalInventoryOutput</OutputInventory>
+    <CraftingInventory>Small_FabricatorInventory_IronInput</CraftingInventory>
+    <OutputInventory>Small_FabricatorInventory_IronOutput</OutputInventory>
 
-    <ToolheadInventory>SawmillMechanicalToolheadInventory</ToolheadInventory>
+    <ToolheadInventory>Small_FabricatorToolheadInventory</ToolheadInventory>
     <AcceptedToolheads>
-      <Toolhead Type="ToolheadItem" Subtype="SawbladesTimber" />
-      <Toolhead Type="ToolheadItem" Subtype="SawbladesPlank" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_FactoryKit_Iron_Toolhead" />
     </AcceptedToolheads>
   </Definition>
 <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="CubeBlockSubpartComponent" Subtype="SawmillMechanical" />
+    <Id Type="CubeBlockSubpartComponent" Subtype="Small_Fabricator_Iron" />
 	<ShowSubpartsWhileBuilding>false</ShowSubpartsWhileBuilding>
     <Subparts>
       <Subpart Name="SawbladeFrame" Model="Models\Cubes\large\Mechanical\SawmillMechanical_Arm.mwm" PhysicalMaterial="Wood" HingeBone="subpart_sawblades" RequiresAxialCorrection="true" HasDummy="false" HasPhysics="false" />
@@ -128,7 +126,7 @@ effiecant type of sawmill."
   </Definition>
 <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_MechanicalSinkComponentDefinition">
-    <Id Type="MechanicalSinkComponent" Subtype="SawmillMechanical" />
+    <Id Type="MechanicalSinkComponent" Subtype="Small_Fabricator_Iron" />
     <Connection>connection_backward</Connection>
     <Friction>1</Friction>
     <ClockwiseAnimation>cw</ClockwiseAnimation>
@@ -136,7 +134,7 @@ effiecant type of sawmill."
   </Definition>
 <!-- ================================================================================ -->  
   <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="SubpartAnimationComponent" Subtype="SawmillMechanical" />
+    <Id Type="SubpartAnimationComponent" Subtype="Small_Fabricator_Iron" />
     <AnimationSequences>
       <Sequence Name="cw" WrapMode="Loop">
         <Animation Start="0" End="1.25">
@@ -162,7 +160,7 @@ effiecant type of sawmill."
   </Definition>
 <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="SawmillMechanical" />
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="Small_Fabricator_Iron" />
     <Effects>
       <Effect StartEvent="NotWorking_connection_backward" StopEvent="Working_connection_backward" Dummy="connection_backward">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>

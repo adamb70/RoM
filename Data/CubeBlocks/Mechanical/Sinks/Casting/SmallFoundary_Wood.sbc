@@ -1,0 +1,163 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="SmallFoundary_Stone" />
+    <DisplayName>Small Foundary Stone</DisplayName>
+    <Description>Description_Block_MillstoneMechanical</Description>
+    <BlockPairName>SmallFoundary_Stone</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Mechanical\MillStone.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Mechanical\Millstone.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Mechanical\MechanicalGenericConstruction.mwm">
+        <!--<MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>-->
+      </Model> 
+    </BuildProgressModels>
+    <Components>
+      <Component Type="CubeBlock" Subtype="Timber10" Count="8" />
+      <Component Type="CubeBlock" Subtype="TimberRound10" Count="2" />
+      <Component Type="CubeBlock" Subtype="MillStone" Count="1" />
+      <Component Type="InventoryItem" Subtype="JarClayWithLinseedOil" Count="1" />
+    </Components>
+    <CriticalComponent Type="CubeBlock" Subtype="MillStone" Index="0" />
+    <MaxIntegrity>800</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Top" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Left" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Right" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Back" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Front" StartX="1" StartY="1" EndX="0" EndY="0" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>3</BuildTimeSeconds>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <GuiVisible>true</GuiVisible>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>InVoxel</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+	<!-- Disable compound building for the framed blocks; The unframed ones are designed for compounding. -->
+	<CompoundEnabled>false</CompoundEnabled>
+  </Definition>
+<!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="SmallFoundary_Stone" />
+    <Component Type="MechanicalSinkComponent" Subtype="SmallFoundary_Stone" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="SmallFoundary_Stone" />
+    <Component Type="SubpartAnimationComponent" Subtype="SmallFoundary_Stone" />
+    <Component Type="EntityFXComponent" Subtype="SmallFoundary_Stone" />
+    <Component Type="Inventory" Subtype="SmallFoundary_StoneToolheadInventory" />
+    <Component Type="StockpileComponent" Subtype="SmallFoundary_StoneToolheadVisual" />
+    <Component Type="Inventory" Subtype="SmallFoundary_StoneInventoryInput" />
+    <Component Type="Inventory" Subtype="SmallFoundary_StoneInventoryOutput" />
+    <Component Type="CraftingComponentAutonomous" Subtype="SmallFoundary_Stone" />
+    <Component Type="InventorySpawnComponent" />
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="SmallFoundary_StoneToolheadInventory" />
+    <DisplayName>DisplayName_InventoryName_Toolhead</DisplayName>
+    <MaxItemCount>1</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="true">
+      <Id Type="ToolheadItem" Subtype="MillstoneCoarse" />
+      <Id Type="ToolheadItem" Subtype="MillstoneSmooth" />
+    </Constraint>
+  </Definition>
+<!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_StockpileComponentDefinition">
+    <Id Type="StockpileComponent" Subtype="SmallFoundary_StoneToolheadVisual" />
+    <SubpartNameFormat>RotorShaft</SubpartNameFormat>
+    <MaxNumberOfSubparts>1</MaxNumberOfSubparts>
+    <InventoryName>SmallFoundary_StoneToolheadInventory</InventoryName>
+  </Definition>
+<!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="SmallFoundary_StoneInventoryInput" />
+    <DisplayName>Input</DisplayName>
+    <MaxItemCount>7</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="SmallFoundary_StoneInventoryOutput" />
+    <DisplayName>Output</DisplayName>
+    <MaxItemCount>7</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+<!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentAutonomousDefinition">
+    <Id Type="CraftingComponentAutonomous" Subtype="SmallFoundary_Stone" />
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
+    <ReturnPrerequisitesOnCancel>false</ReturnPrerequisitesOnCancel>
+    <PowerRequired>All</PowerRequired>
+    <CraftingInventory>SmallFoundary_StoneInventoryInput</CraftingInventory>
+    <OutputInventory>SmallFoundary_StoneInventoryOutput</OutputInventory>
+
+    <ToolheadInventory>SmallFoundary_StoneToolheadInventory</ToolheadInventory>
+    <AcceptedToolheads>
+      <Toolhead Type="ToolheadItem" Subtype="MillstoneCoarse" />
+      <Toolhead Type="ToolheadItem" Subtype="MillstoneSmooth" />
+    </AcceptedToolheads>
+  </Definition>
+<!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="CubeBlockSubpartComponent" Subtype="SmallFoundary_Stone" />
+    <Subparts>
+      <Subpart Name="RotorShaft" PhysicalMaterial="Wood" HingeBone="subpart_rotor_center" RequiresAxialCorrection="true" HasDummy="false" HasPhysics="false" />
+    </Subparts>
+  </Definition>
+<!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_MechanicalSinkComponentDefinition">
+    <Id Type="MechanicalSinkComponent" Subtype="SmallFoundary_Stone" />
+    <Connection>connection_up</Connection>
+    <Friction>1</Friction>
+    <ClockwiseAnimation>cw</ClockwiseAnimation>
+    <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
+  </Definition>
+<!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="SubpartAnimationComponent" Subtype="SmallFoundary_Stone" />
+    <AnimationSequences>
+      <Sequence Name="cw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="RotorShaft" Type="Rotation" Axis="Y" From="0" To="0" Method="Linear" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="ccw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="RotorShaft" Type="Rotation" Axis="Y" From="0" To="0" Method="Linear" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+<!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="SmallFoundary_Stone" />
+    <Effects>
+      <Effect StartEvent="NotWorking_connection_up" StopEvent="Working_connection_up" Dummy="connection_up">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
+      </Effect>
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="subpart_rotor_center">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalMilling"/>
+      </Effect>
+    </Effects>
+  </Definition>
+<!-- ================================================================================ -->
+</Definitions>

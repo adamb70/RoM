@@ -93,21 +93,17 @@
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
     <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="Small_Steam_Engine" />
     <Effects>
-<!-- -->
-      <Effect StartEvent="IsPowered_connection_01" StopEvent="NotPowered_connection_01" Dummy="connection_backward">
+
+      <Effect StartEvent="IsPowered_connection_backward" StopEvent="NotPowered_connection_backward" Dummy="connection_backward">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalWorking"/>
       </Effect>
-      <Effect StartEvent="NotWorking_connection_01" StopEvent="Working_connection_01" Dummy="connection_backward">
+      <Effect StartEvent="NotWorking_connection_backward" StopEvent="Working_connection_backward" Dummy="connection_backward">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
       </Effect>
-<!-- 
-      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="connection_backward">
+
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="inventory">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
       </Effect>
-      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="connection_backward">
-        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Cooking"/>
-      </Effect>
--->
     </Effects>
   </Definition>
 
@@ -117,18 +113,17 @@
 
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
     <Id Type="MyObjectBuilder_Inventory" Subtype="Small_Steam_EngineInventory" />
-    <DisplayName>Small Steam Engine</DisplayName>
+    <DisplayName>Storage</DisplayName>
     <InventoryName>Small Steam Engine</InventoryName>
-    <MaxItemCount>6</MaxItemCount>
+    <MaxItemCount>7</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
     <Id Type="CraftingComponentQueued" Subtype="Small_Steam_Engine"/>
     <CraftingCategories>
-      <Category>Meals</Category>
+      <Category></Category>
     </CraftingCategories>
-    <CraftingInventory>Small_Steam_EngineInventory</CraftingInventory>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
     <ConstrainInventory>true</ConstrainInventory>
@@ -145,6 +140,8 @@
 	  <Component Type="EntityFXComponent" Subtype="Small_Steam_Engine" />
 <!-- -->
     <Component Type="Inventory" Subtype="Fuel_Steam_Engine" />
+    <Component Type="Inventory" Subtype="Fuel_Steam_Engine2" />
+    <Component Type="FuelComponent" Subtype="Fire_Steam_Engine2" />
     <Component Type="FuelComponent" Subtype="Fire_Steam_Engine" />
     <Component Type="Inventory" Subtype="Small_Steam_EngineInventory" />
     <Component Type="InventorySpawnComponent" />
