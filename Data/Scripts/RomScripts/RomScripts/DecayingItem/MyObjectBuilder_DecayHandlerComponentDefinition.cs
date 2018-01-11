@@ -1,0 +1,16 @@
+﻿using System;
+using System.ComponentModel;
+using System.Xml.Serialization;
+using VRage.ObjectBuilders;
+using VRage.Game;
+using VRage.ObjectBuilders.Definitions.Inventory;
+
+namespace RomScripts
+{
+    [MyObjectBuilderDefinition]
+    [XmlSerializerAssembly("VRage.Game.XmlSerializers")]
+    public class MyObjectBuilder_DecayHandlerComponentDefinition : MyObjectBuilder_EntityComponentDefinition
+    {
+        public long TickInterval = 1000;
+    }
+}
