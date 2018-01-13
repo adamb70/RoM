@@ -11,6 +11,7 @@ namespace RomScripts
     [XmlSerializerAssembly("VRage.Game.XmlSerializers")]
     public class MyObjectBuilder_DecayHandlerComponentDefinition : MyObjectBuilder_EntityComponentDefinition
     {
-        public long TickInterval = 1000;
+        [XmlElement("TickInterval")]
+        public long? TickInterval;
     }
 }

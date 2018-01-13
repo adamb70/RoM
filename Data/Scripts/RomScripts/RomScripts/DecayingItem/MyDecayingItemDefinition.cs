@@ -19,7 +19,7 @@ namespace RomScripts
             MyObjectBuilder_DecayingItemDefinition ob = (MyObjectBuilder_DecayingItemDefinition)builder;
             if (ob == null) return;
 
-            this.DurabilityLossPerSecond = (ob.DurabilityLossPerSecond ?? 0);
+            this.DurabilityLossPerSecond = ob.DurabilityLossPerSecond ?? 0;
         }
 
         public override MyObjectBuilder_DefinitionBase GetObjectBuilder()

@@ -10,13 +10,13 @@ namespace RomScripts
     [MyDefinitionType(typeof(MyObjectBuilder_DecayHandlerComponentDefinition))]
     public class MyDecayHandlerComponentDefinition : MyEntityComponentDefinition
     {
-        public int TickIntervalMs;
+        public long TickIntervalMs;
 
         protected override void Init(MyObjectBuilder_DefinitionBase builder)
         {
             base.Init(builder);
             MyObjectBuilder_DecayHandlerComponentDefinition ob = (MyObjectBuilder_DecayHandlerComponentDefinition)builder;
-            this.TickIntervalMs = (int)ob.TickInterval;
+            this.TickIntervalMs = ob.TickInterval ?? 10000;
         }
 
         public override MyObjectBuilder_DefinitionBase GetObjectBuilder()

@@ -124,8 +124,8 @@ rate then normal items.</Description>
   </Definition>
   <!-- ================================================================================ -->
   
-  <Definition xsi:type="MyObjectBuilder_DecayingItemDefinition">
-    <Id Type="DecayingItem" Subtype="HeatedMithrilIngot" />
+  <Definition xsi:type="MyObjectBuilder_DurableItemDefinition">
+    <Id Type="DurableItem" Subtype="HeatedMithrilIngot" />
     <DisplayName>Mithril Ingot</DisplayName>
 	  <Description>A very strong, lightweight, material.</Description>
     <Icon>Textures\GUI\Icons\Ingot\MithrilIngotIcon.dds</Icon>
@@ -136,9 +136,9 @@ rate then normal items.</Description>
     </Size>
     <Mass>100</Mass>
     <Model>Models\Ingots\MithrilIngot.mwm</Model>
-    <MaxStackAmount>4</MaxStackAmount>
+    <MaxStackAmount>10</MaxStackAmount>
     <Health>520</Health>
-    <MaxDurability>20</MaxDurability>
+    <MaxDurability>4</MaxDurability>
     <BrokenItem Type="MyObjectBuilder_InventoryItem" Subtype="IngotGold"/>
   </Definition>
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using VRage.Collections;
 using VRage.Game.ObjectBuilders.ComponentSystem;
@@ -28,12 +29,14 @@ namespace RomScripts
         IEnumerable<MyInventoryBase> ComponentInventories = null;
         HashSet<MyInventoryBase> InventoriesWithDecayingItems = new HashSet<MyInventoryBase>();
         bool RegisteredForUpdate = false;
-        long TickInterval = 10000; 
+        long TickInterval;
+        bool ticking = false;
 
 
         public override void Init(MyEntityComponentDefinition definition)
         {
             ComponentDefinition = definition as MyDecayHandlerComponentDefinition;
+            this.TickInterval = ComponentDefinition.TickIntervalMs;
         }
 
         public override void OnAddedToScene()
@@ -52,12 +55,14 @@ namespace RomScripts
 
         private void OnInventoryChanged(MyInventoryBase inventory)
         {
+            if (ticking) return;
+
             ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("updating!", 900, null, Color.Green);
             bool found = false;
             foreach (var item in inventory.Items)
             {
                 // Look for a MyDurableItem in the inventory
-                if (item is MyDurableItem)
+                if (item.GetType() == typeof(MyDurableItem))
                 {
                     // Add inventory to the list
                     InventoriesWithDecayingItems.Add(inventory);
@@ -88,38 +93,67 @@ namespace RomScripts
         private void Tick(long ms)
         {
             ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("TICKING", 900, null, Color.Green);
-            foreach (var inventory in InventoriesWithDecayingItems)
+            foreach (var inventory in InventoriesWithDecayingItems.ToArray< MyInventoryBase>())
             {
+                ticking = true;
 
+                List<MyInventoryItem> durableItems = new List<MyInventoryItem>();
                 foreach (MyInventoryItem item in inventory.Items)
                 {
                     ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("looping items", 900, null, Color.Green);
-                    var decayingItem = item as MyDecayingItem;
+                    var decayingItem = item as MyDurableItem;
                     if (decayingItem == null)
                         continue;
 
-                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(decayingItem.GetDefinition().DurabilityLossPerSecond.ToString(), 900, null, Color.Orange);
-                    decayingItem.Durability -= decayingItem.GetDefinition().DurabilityLossPerSecond;
+                    durableItems.Add(item);
+                }
 
+
+                foreach (var item in durableItems)
+                {
+                    var decayingItem = item as MyDurableItem;
+
+                    decayingItem.Durability -= 1;
                     ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(decayingItem.Durability.ToString(), 900, null, Color.Aqua);
+
                     if (decayingItem.Durability <= 0)
                     {
                         if (MyAPIGateway.Multiplayer.IsServer)
                         {
-                            inventory.Remove(item);
-
-                            if (decayingItem.GetDefinition().BrokenItem.HasValue)
+                            if (item.Amount > 1)
                             {
-                                inventory.AddItems(decayingItem.GetDefinition().BrokenItem.Value, 1);
+                                // Lower stack count
+                                item.Amount -= 1;
+                                // Reset Durability of stack
+                                decayingItem.Durability = decayingItem.GetDefinition().MaxDurability;
+                                if (decayingItem.GetDefinition().BrokenItem.HasValue)
+                                {
+                                    inventory.AddItems(decayingItem.GetDefinition().BrokenItem.Value, 1);
+                                }
                             }
-
-                            // Check if inventory still has DecayingItems
-                            OnInventoryChanged(inventory);
-                            return;
+                            else
+                            {
+                                inventory.Remove(item);
+                                if (decayingItem.GetDefinition().BrokenItem.HasValue)
+                                {
+                                    inventory.AddItems(decayingItem.GetDefinition().BrokenItem.Value, 1);
+                                }
+                            }
                         }
-                        decayingItem.Durability = 0;
+                        else
+                        {
+                            decayingItem.Durability = 0;
+                        }
                     }
+
+                    continue;
+
                 }
+
+
+                // Check if inventory still has DecayingItems
+                ticking = false;
+                OnInventoryChanged(inventory);
 
             }
         }
