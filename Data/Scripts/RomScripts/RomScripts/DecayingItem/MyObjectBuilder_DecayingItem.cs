@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 using VRage.ObjectBuilders;
 using VRage.ObjectBuilders.Inventory;
 
-namespace RomScripts
+namespace RomScripts.DecayingItem
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]

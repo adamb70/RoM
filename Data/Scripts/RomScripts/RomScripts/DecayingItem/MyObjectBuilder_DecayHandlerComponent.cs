@@ -5,7 +5,7 @@ using VRage.Game.ObjectBuilders.ComponentSystem;
 using VRage.ObjectBuilders.Inventory;
 using VRage.Game;
 
-namespace RomScripts
+namespace RomScripts.DecayingItem
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]

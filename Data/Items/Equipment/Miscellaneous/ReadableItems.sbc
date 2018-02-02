@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Definition xsi:type="MyObjectBuilder_TreasureMapItemDefinition">
+		<Id Type="TreasureMapItem" Subtype="ReadableBook" />
+    
+		<DisplayName>Readable Book</DisplayName>
+		<Description>Readable Book
+    Press primary to read, secondary to turn the page</Description>
+		<Icon>Textures\GUI\Icons\TreasureMaps\Map_Background.dds</Icon>
+		<Icon>Textures\GUI\Icons\TreasureMaps\Map_Journeyman.dds</Icon>
+		<Size>
+			<X>0.25</X>
+			<Y>0.25</Y>
+			<Z>0.25</Z>
+		</Size>
+		<Mass>0.018</Mass>
+		<Model>Models\Cubes\small\Scroll.mwm</Model>
+		<MaxStackAmount>1</MaxStackAmount>
+		<PhysicalMaterial>Wood</PhysicalMaterial>
+
+		<Position>
+			<Slot>MainHand</Slot>
+		</Position>
+
+    <Animation>SeedBag</Animation>
+
+		<!-- extra transform on IK dummy in 1st person -->
+		<EquippedTransform>
+			<!-- tool rotation offset from hand -->
+			<Position>
+				<X>0</X>
+				<Y>0.049</Y>
+				<Z>0</Z>
+			</Position>
+			<Orientation>
+				<X>0.707</X>
+				<Y>0</Y>
+				<Z>0.707</Z>
+				<W>0</W>
+			</Orientation>
+		</EquippedTransform>
+		<EquippedTransformFps>
+			<!-- hand IK target offset -->
+			<Position>
+				<X>0.393</X>
+				<Y>-0.368</Y>
+				<Z>-0.362</Z>
+			</Position>
+			<Orientation>
+				<X>0.4951935</X>
+				<Y>0.5476472</Y>
+				<Z>-0.3941949</Z>
+				<W>0.5472659</W>
+			</Orientation>
+		</EquippedTransformFps>
+
+		<!-- Behavior -->
+		<StanceToBehavior>
+			<StanceName>NormalMode</StanceName>
+			<BehaviorId Type="MyObjectBuilder_ReadableItemBehaviorDefinition" Subtype="ReadableBook"/>
+		</StanceToBehavior>
+	</Definition>
+  
+<Definition xsi:type="MyObjectBuilder_ReadableItemBehaviorDefinition">
+  <Id Type="MyObjectBuilder_ReadableItemBehaviorDefinition" Subtype="ReadableBook"/>
+  <Title>Lorem Ipsum</Title>
+  <Pages>
+    <Page>☉☿♃	\u0026</Page>
+    <Page>Donec et efficitur quam. Aliquam at diam et tellus pellentesque bibendum. Nulla ultricies, massa nec imperdiet accumsan, lacus turpis hendrerit velit, eu scelerisque ex enim a felis. Maecenas tristique metus eu risus finibus dapibus. Donec luctus tortor a tempus scelerisque. Etiam est arcu, fermentum ullamcorper erat nec, vestibulum cursus tortor. Sed at pulvinar enim, sit amet fermentum sapien. Vivamus id velit interdum, varius est at, viverra risus. Donec felis lectus, tincidunt sed orci nec, imperdiet vulputate nisi. In consequat sapien nibh, non tempus lectus aliquam eu. Phasellus pretium, quam volutpat viverra aliquam, mi velit dictum nulla, in dictum quam nulla vel enim. Donec quis scelerisque quam, in dictum ante. Curabitur et mauris velit. Donec a arcu feugiat, tincidunt sem quis, bibendum tellus. Nulla quis mollis sem, at commodo dui. Duis quis vulputate erat.
+
+Curabitur eu mi odio. Aenean rutrum et massa quis volutpat. Duis pulvinar ipsum ut fringilla rutrum. Nam nibh neque, molestie nec velit at, tincidunt egestas turpis. Aliquam nec velit eget quam dignissim fringilla. Praesent viverra sollicitudin eleifend. Quisque vestibulum dolor id urna ornare mattis. Nullam nec tempus elit. Praesent vestibulum, turpis ut tincidunt volutpat, odio lacus sodales arcu, eget rhoncus sapien velit vitae enim. Duis velit ligula, tincidunt in nibh ut, gravida convallis lectus.</Page>
+    <Page>Nullam dapibus lobortis nisl, nec congue lorem faucibus sed. Etiam auctor ligula nec leo fermentum tempus. Nulla id vulputate sapien. Suspendisse non libero sollicitudin, auctor lorem quis, viverra ligula. Vivamus semper finibus elit non consequat. Nullam ut leo iaculis, egestas orci sed, varius dui. Aenean ante purus, lacinia eu lacus vitae, vestibulum gravida arcu.
+
+</Page>
+  </Pages>
+</Definition>
+
+</Definitions>

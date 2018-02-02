@@ -15,6 +15,7 @@ using VRage.Network;
 using VRage.Systems;
 using VRageMath;
 using System;
+using System.Linq;
 using VRage.Game.Entity.UseObject;
 using VRage.ModAPI;
 using Sandbox.Game.Components;
@@ -25,8 +26,10 @@ using Medieval.Entities.Components;
 using Medieval.Entities.Components.Crafting;
 using Medieval.MechanicalPower;
 
+using VRage.Game.Entity;
 
-namespace RomScripts
+
+namespace RomScripts.FueledMechanicalSource
 {
     [ReplicatedComponent]
     [MyComponent(typeof(MyObjectBuilder_FueledMechanicalSourceComponent))]
@@ -50,25 +53,51 @@ namespace RomScripts
 
             // Look for power providers
             IEnumerable<IMyPowerProvider> fuel_components = this.Entity.Components.GetComponents<IMyPowerProvider>();
-            foreach (IMyPowerProvider component in fuel_components) {
-                component.PowerStateChanged += new Action<IMyPowerProvider, bool>(this.Power_OnPowerStateChanged);
+
+            int test2 = 0;
+            foreach (IMyPowerProvider component in fuel_components)
+            {
+                test2 += 1;
             }
 
-            // Alternatively, just look for one fuel component?
-            //MyFuelComponent fuel_component = this.Entity.Components.Get<MyFuelComponent>();
-            //fuel_component.PowerStateChanged += new Action<IMyPowerProvider, bool>(this.Power_OnPowerStateChanged);
+
+            ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(test2.ToString(), 3000, null, Color.Red);
 
 
+            if (fuel_components != null)
+            {
+                this.m_powerProviders = fuel_components.ToList<IMyPowerProvider>(); // ignore this IDE error
+                foreach (IMyPowerProvider component in fuel_components)
+                {
+                    component.PowerStateChanged += new Action<IMyPowerProvider, bool>(this.Power_OnPowerStateChanged);
+                }
+            }
+            
             //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Power is set!", 1000, null, Color.Red);
         }
 
 
         private void Power_OnPowerStateChanged(IMyPowerProvider provider, bool state)
         {
-            base.Power = provider.IsPowered ? this.m_definition.MaxPowerOutput : 0;
+            ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Power state changed!", 3000, null, Color.Red);
+
+            TryTurnOnPower();
+            //base.Power = provider.IsPowered ? this.m_definition.MaxPowerOutput : 0;
             this.Group.Recalculate();
         }
 
+        private void TryTurnOnPower()
+        {
+
+            this.m_powerProviders.All((IMyPowerProvider e) => e.IsPowered);
+
+            foreach (IMyPowerProvider provider in m_powerProviders)
+            {
+                ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("new", 3000, null, Color.Red);
+                ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(provider.IsPowered.ToString(), 3000, null, Color.Red);
+            }
+
+        }
 
         // Vanilla altitude calculation
         //private void CalculatePowerOutput()

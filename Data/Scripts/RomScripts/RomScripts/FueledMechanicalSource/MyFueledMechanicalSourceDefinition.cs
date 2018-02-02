@@ -8,7 +8,7 @@ using VRage.Utils;
 using Medieval.Definitions.Tools;
 using Medieval.Definitions.MechanicalPower;
 
-namespace RomScripts
+namespace RomScripts.FueledMechanicalSource
 {
     [MyDefinitionType(typeof(MyObjectBuilder_FueledMechanicalSourceComponentDefinition))]
     public class MyFueledMechanicalSourceComponentDefinition : MyMechanicalSourceComponentDefinition

@@ -19,7 +19,7 @@ using Medieval.ObjectBuilders.Components;
 using Sandbox.Game.Inventory;
 using VRage.Components;
 
-namespace RomScripts
+namespace RomScripts.DecayingItem
 {
     [MyComponent(typeof(MyObjectBuilder_DecayHandlerComponent))]
     public class MyDecayHandlerComponent : MyEntityComponent
