@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="AdvBloomery" />
+    <BlockPairName>Furnace</BlockPairName>
+    <DisplayName>Advanced Bloomery</DisplayName>
+    <Description>Description_Block_Furnace</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="6" y="8" z="6" />
+    <ModelOffset x="0" y="0.03" z="0" />
+    <Model>Models\Cubes\Small\advBloomery.mwm</Model>
+    <!--
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\ClayFurnace_Construction_1.mwm">
+					<MountPointOverrides>
+						<MountPoint Side="Top" Enabled="false" />
+					</MountPointOverrides>
+				</Model>
+			</BuildProgressModels>
+			-->
+    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="18" />
+      <Component Type="InventoryItem" Subtype="Dirt" Count="20" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="Dirt" Index="0" />
+    <Mass>400</Mass>
+    <Volume>4500</Volume>
+    <MaxIntegrity>800</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+    </MountPoints>
+    <ParticleScale>0.22</ParticleScale>
+    <LightRadius Min="6.5" Max="6.5" Default="6.5" />
+    <LightFalloff Min="0.3" Max="0.3" Default="0.3" />
+    <LightIntensity Min="0.3" Max="0.3" Default="0.3" />
+    <PrimarySound>BlockFire</PrimarySound>
+    <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="CraftingRecipeDefinition" Subtype="AdvBloomery"/>
+    <DisplayName>DisplayName_Block_Furnace</DisplayName>
+	<Description>Description_Block_Furnace</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="20" Type="InventoryItem" Subtype="Dirt" />
+      <Item Amount="18" Type="InventoryItem" Subtype="StoneSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="AdvBloomery" />
+    </Results>
+    <CraftingTime Seconds="6"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="EntityFXComponent" Subtype="AdvBloomery" />
+    <Effects>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="fire_dummy">
+        <EffectId Type="EffectDefinition" Subtype="Torch"/>
+      </Effect>
+    </Effects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="UseObjectsComponent" Subtype="AdvBloomery" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="AdvBloomery" />
+    <InventoryName>Furnace</InventoryName>
+    <DisplayName>DisplayName_InventoryName_Crafting</DisplayName>
+    <MaxItemCount>12</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="AdvBloomery"/>
+    <CraftingCategories>
+      <Category>Smelting</Category>
+      <Category>Melting</Category>
+    </CraftingCategories>
+    <CraftingInventory>AdvBloomery</CraftingInventory>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
+    <PowerRequired>All</PowerRequired>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="AdvBloomery" />
+    <Component Type="Inventory" Subtype="AdvBloomery" />
+    <Component Type="CraftingComponentQueued" Subtype="AdvBloomery" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="AdvBloomery" />
+    <Component Type="UseObjectsComponent" Subtype="AdvBloomery" />
+    <Component Type="Inventory" Subtype="Fuel" />
+    <Component Type="FuelComponent" Subtype="Fire" />
+  </Definition>
+</Definitions>

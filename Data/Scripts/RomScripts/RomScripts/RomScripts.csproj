@@ -30,17 +30,46 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MyFueledMechanicalSource.cs" />
-    <Compile Include="MyFueledMechanicalSourceDefinition.cs" />
-    <Compile Include="MyObjectBuilder_FueledMechanicalSource.cs" />
-    <Compile Include="MyObjectBuilder_FueledMechanicalSourceDefinition.cs" />
+    <Compile Include="CraftingRequireSky\MyObjectBuilder_SkyCraftingComponent.cs" />
+    <Compile Include="CraftingRequireSky\MyObjectBuilder_SkyCraftingComponentDefinition.cs" />
+    <Compile Include="CraftingRequireSky\MySkyCraftingComponentDefinition.cs" />
+    <Compile Include="CraftingRequireSky\MySkyCraftingComponent.cs" />
+    <Compile Include="DecayingItem\MyDecayHandlerComponent.cs" />
+    <Compile Include="DecayingItem\MyDecayingItem.cs" />
+    <Compile Include="DecayingItem\MyDecayHandlerComponentDefinition.cs" />
+    <Compile Include="DecayingItem\MyDecayingItemDefinition.cs" />
+    <Compile Include="DecayingItem\MyObjectBuilder_DecayHandlerComponent.cs" />
+    <Compile Include="DecayingItem\MyObjectBuilder_DecayingItem.cs" />
+    <Compile Include="DecayingItem\MyObjectBuilder_DecayHandlerComponentDefinition.cs" />
+    <Compile Include="DecayingItem\MyObjectBuilder_DecayingItemDefinition.cs" />
+    <Compile Include="ReadableItem\MyObjectBuilder_ReadableItemBehaviorDefinition.cs" />
+    <Compile Include="ReadableItem\MyReadableItemBehavior.cs" />
+    <Compile Include="ReadableItem\MyReadableItemBehaviorDefinition.cs" />
+    <Compile Include="RomDamageInformation.cs" />
+    <Compile Include="RomEffectConstants.cs" />
+    <Compile Include="FueledMechanicalSource\MyFueledMechanicalSource.cs" />
+    <Compile Include="FueledMechanicalSource\MyFueledMechanicalSourceDefinition.cs" />
+    <Compile Include="FueledMechanicalSource\MyObjectBuilder_FueledMechanicalSource.cs" />
+    <Compile Include="FueledMechanicalSource\MyObjectBuilder_FueledMechanicalSourceDefinition.cs" />
+    <Compile Include="MyRomStatEffect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RomStatLogic.cs" />
+    <Compile Include="WaterFuelComponent - Copy\MyObjectBuilder_MyWaterFuelComponent2.cs" />
+    <Compile Include="WaterFuelComponent - Copy\MyObjectBuilder_MyWaterFuelComponent2Definition.cs" />
+    <Compile Include="WaterFuelComponent - Copy\MyWaterFuelComponent2.cs" />
+    <Compile Include="WaterFuelComponent - Copy\MyWaterFuelComponent2Definition.cs" />
+    <Compile Include="WaterFuelComponent\MyWaterFuelComponent.cs" />
+    <Compile Include="WaterFuelComponent\MyWaterFuelComponentDefinition.cs" />
+    <Compile Include="WaterFuelComponent\MyObjectBuilder_MyWaterFuelComponent.cs" />
+    <Compile Include="WaterFuelComponent\MyObjectBuilder_MyWaterFuelComponentDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MedievalEngineersModApi">
       <HintPath>F:\SteamLibrary\steamapps\common\MedievalEngineersModSDK\OriginalContent\ModTools\MedievalEngineersModApi.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -136,18 +136,13 @@
     </Scripts>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_QuickEquipComponentDefinition">
-    <Id Type="QuickEquipComponent" Subtype="Humanoid"/>
-    <Item Action="CharacterTorch">
-      <Id Type="EquipmentItem" Subtype="Torch"/>
-    </Item>
-  </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
     <Id Type="Inventory" Subtype="Internal"/>
     <InventoryName>Internal</InventoryName>
 	  <DisplayName>DisplayName_InventoryName_Internal</DisplayName>
     <MaxItemCount>28</MaxItemCount>
+	<InfiniteInCreative>true</InfiniteInCreative>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -155,14 +150,6 @@
     <InventoryName>Internal</InventoryName>
     <DisplayName>DisplayName_InventoryName_Internal</DisplayName>
     <MaxItemCount>14</MaxItemCount>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_MultiComponentDefinition">
-    <Id Type="AreaInventory" Subtype="Ground"/>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_MultiComponentDefinition">
-    <Id Type="AreaInventoryAggregate" Subtype="NearbyInventories"/>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
@@ -173,6 +160,9 @@
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+	<InputInventory>Internal</InputInventory>
+	<OutputInventory>Internal</OutputInventory>
+	<CraftingInventory>ProcessingInventory</CraftingInventory>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_QuestEntityComponentDefinition">
@@ -180,195 +170,5 @@
 	<InitialQuest>Test_Quest</InitialQuest>
   </Definition>
 
-  <!-- Character stances -->
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="CharacterStances" />
-    <InitialState>NormalMode</InitialState>
-    <States>
-      <State Name="NormalMode">
-        <Transition>CombatMode</Transition>
-      </State>
-      <State Name="CombatMode">
-        <Transition>NormalMode</Transition>
-      </State>
-    </States>
-  </Definition>
-  <!-- END OF "Character stances" -->
 
-  <Definition xsi:type="MyObjectBuilder_CharacterHandItemsComponentDefinition">
-    <Id Type="CharacterHandItemsComponent" Subtype="Humanoid"/>
-    <MainHand>MainHand</MainHand>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_InventorySpawnComponentDefinition">
-    <Id Type="InventorySpawnComponent"/>
-    <ContainerDefinition Type="MyObjectBuilder_InventoryBagEntity" Subtype="LootBag"/>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_InventorySpawnComponentDefinition">
-    <Id Type="InventorySpawnComponent" Subtype="CharacterBag" />
-    <ContainerDefinition Type="MyObjectBuilder_InventoryBagEntity" Subtype="CharacterBag"/>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_WaypointComponentDefinition">
-    <Id Type="WaypointComponent" Subtype="Corpse" />
-    <OnlyOwner>true</OnlyOwner>
-	<Waypoint Type="MyObjectBuilder_WaypointDefinition" Subtype="Corpse" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CombatComponentDefinition">
-    <Id Type="CombatComponent" Subtype="Humanoid"/>
-
-    <SwingOrigin>
-      <X>0</X>
-      <Y>1.3</Y>
-      <Z>0</Z>
-    </SwingOrigin>
-
-    <MiddleZoneAngle>60</MiddleZoneAngle>
-    <SideZonesAngle>70</SideZonesAngle>
-    <TopZoneHeight>1</TopZoneHeight>
-
-    <BottomZoneHeight>.9</BottomZoneHeight>
-    <CollisionRadius>.35</CollisionRadius>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CharacterDetectorComponentDefinition">
-    <Id Type="MyObjectBuilder_CharacterShapecastDetectorComponent" Subtype="Default" />
-    <TargetingDistance>3.0</TargetingDistance>
-    <!--Picks up blocks-->
-    <InteractionDistance>3.0</InteractionDistance>
-    <!--Opens Dummies-->
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_TargetingComponentDefinition">
-    <Id Type="MyObjectBuilder_AiDetectorComponent" Subtype="Default" />
-    <TargetingDistance>3.0</TargetingDistance>
-    <TargetingPosition>
-      <X>0</X>
-      <Y>1.5</Y>
-      <Z>0</Z>
-    </TargetingPosition>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CharacterMovementComponentDefinition">
-    <Id Type="MyObjectBuilder_CharacterMovementComponent" Subtype="CharacterMovement" />
-  </Definition>
-   
-  <Definition xsi:type="MyObjectBuilder_FirstPersonCameraComponentDefinition">
-    <Id Type="MyObjectBuilder_FirstPersonCameraComponent" Subtype="DefaultFirstPerson" />
-    <HeadBone>HeadDummy</HeadBone>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ThirdPersonCameraComponentDefinition">
-    <Id Type="MyObjectBuilder_ThirdPersonCameraComponent" Subtype="DefaultThirdPerson" />
-    <MinDistance>0.0</MinDistance>
-    <MaxDistance>15</MaxDistance>
-    <CameraRadius>0.3</CameraRadius>
-    <TargetOffset>
-      <X>0</X>
-      <Y>2.0</Y>
-      <Z>0</Z>
-    </TargetOffset>
-	<UnsafeThreshold>0.6</UnsafeThreshold>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_FirstPersonControllerComponentDefinition">
-    <Id Type="MyObjectBuilder_FirstPersonControllerComponent" Subtype="DefaultFirstPerson" />
-    <IronsightFovMultiplier>0.5</IronsightFovMultiplier>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ThirdPersonControllerComponentDefinition">
-    <Id Type="MyObjectBuilder_ThirdPersonControllerComponent" Subtype="DefaultThirdPerson" />
-    <MinScrollOffset>1.2</MinScrollOffset>
-    <SmoothingZoomCoeff>0.4</SmoothingZoomCoeff>
-    <SmoothingYawCoeff>0.7</SmoothingYawCoeff>
-    <SmoothingPitchCoeff>0.2</SmoothingPitchCoeff>
-    <SmoothingAccYawCoeff>0.75</SmoothingAccYawCoeff>
-    <OffsetAccYawCoeff>0.2</OffsetAccYawCoeff>
-    <CameraRadius>0.2</CameraRadius>
-    <TargetOffsetMinDist>
-      <X>0.0</X>
-      <Y>1.88</Y>
-      <Z>0</Z>
-    </TargetOffsetMinDist>
-    <TargetOffsetMaxDist>
-      <X>0</X>
-      <Y>2.3</Y>
-      <Z>0</Z>
-    </TargetOffsetMaxDist>
-    <UnsafeCapsule>
-      <Start>
-        <X>0</X>
-        <Y>0.3</Y>
-        <Z>0</Z>
-      </Start>
-      <End>
-        <X>0</X>
-        <Y>1.3</Y>
-        <Z>0</Z>
-      </End>
-      <Radius>0.3</Radius>
-    </UnsafeCapsule>
-  </Definition>
-
-  <!-- Character Ragdoll component definiton-->
-  <Definition xsi:type="MyObjectBuilder_RagdollComponentDefinition">
-    <Id Type="RagdollComponent" Subtype="Humanoid" />
-  </Definition>
-
-  <!-- Flight component used in creative mode. -->
-  <Definition xsi:type="MyObjectBuilder_FlightComponentDefinition">
-    <Id Type="FlightComponent" Subtype="FlightDefault" />
-    <MaximumSpeed>100</MaximumSpeed>
-    <Acceleration>50.0</Acceleration>
-    <SlowdownFactor>0.30</SlowdownFactor>
-    <RotationSpeedFactor>0.0025</RotationSpeedFactor>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CharacterDamageComponentDefinition">
-    <Id Type="CharacterDamageComponent" Subtype="Humanoid" />
-    <MinDamageVelocity>12</MinDamageVelocity>
-    <MediumDamageVelocity>13</MediumDamageVelocity>
-    <DeadlyDamageVelocity>16</DeadlyDamageVelocity>
-    <DamageHitObjectMinMass>10</DamageHitObjectMinMass>
-    <DamageHitObjectMinVelocity>8.5</DamageHitObjectMinVelocity>
-    <DamageHitObjectMediumEnergy>100</DamageHitObjectMediumEnergy>
-    <DamageHitObjectSmallEnergy>80</DamageHitObjectSmallEnergy>
-    <DamageHitObjectCriticalEnergy>200</DamageHitObjectCriticalEnergy>
-    <DamageHitObjectDeadlyEnergy>500</DamageHitObjectDeadlyEnergy>
-    <SmallDamage>10</SmallDamage>
-    <MediumDamage>30</MediumDamage>
-    <CriticalDamage>70</CriticalDamage>
-    <DeadlyDamage>10000</DeadlyDamage>
-    <SqueezeDeadlyDamageMass>1000</SqueezeDeadlyDamageMass>
-  </Definition>
-
-  <!-- Corpse component used for respawning and cleanup. -->
-  <Definition xsi:type="MyObjectBuilder_CorpseComponentDefinition">
-    <Id Type="CorpseComponent" Subtype="CharacterCorpse" />
-    <RespawnTime>5</RespawnTime>
-    <LootingTime>30</LootingTime>
-    <BoxShapeScale x="1" y="1" z="0.5"/>
-    <RelativeCenterOfMass x="0" y="0" z="1"/>
-    <RelativeShapeTranslation x="0" y="0" z="0.5"/>
-    <Friction>0.5</Friction>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CharacterPhysicsDefinition">
-    <Id Type="CharacterPhysics" Subtype="Humanoid" />
-
-    <Mass>80</Mass>
-    <MaxImpulse>10000</MaxImpulse>
-    <MaxForce>10000</MaxForce>
-    <MaxSpeedRelativeToShip>10</MaxSpeedRelativeToShip>
-    <MaxSlope>70</MaxSlope>
-
-    <UseCustomSupport>true</UseCustomSupport>
-
-    <CharacterWidth>0.7</CharacterWidth>
-    <CharacterHeight>1.8</CharacterHeight>
-    <CharacterCrouchHeight>0.8</CharacterCrouchHeight>
-  </Definition>
-  
 </Definitions>
