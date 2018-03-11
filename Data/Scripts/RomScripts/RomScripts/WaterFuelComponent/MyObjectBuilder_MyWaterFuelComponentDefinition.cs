@@ -2,6 +2,7 @@
 using System.Xml.Serialization;
 using VRage.Game;
 using VRage.ObjectBuilders;
+using VRage.ObjectBuilders.Definitions;
 using VRage.ObjectBuilders.Definitions.Inventory;
 
 namespace RomScripts.WaterFuelComponent
