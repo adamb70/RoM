@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="SwordBroken"/>
+
+    <!-- Display -->
+
+    <DisplayName>DisplayName_Weapon_BrokenSword</DisplayName>
+    <Description>Description_Weapon_BrokenSword</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\BrokenSword.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Volume>3</Volume>
+    <Model>Models\Weapons\BrokenSword.mwm</Model>
+
+    <PhysicalMaterial>Sword</PhysicalMaterial>
+
+    <Animation>Sword</Animation>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.817</X>
+        <Y>-1.0</Y>
+        <Z>-0.918</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.173</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+    
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <MaxDurability>100</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <!-- Behaviors -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="SwordBroken"/>
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SwordBroken"/>
+
+    <LeftSwing>
+      <Range>1.6</Range>
+      <Damage>15</Damage>
+      <Arc>30</Arc>
+
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <Animation>Attack</Animation>
+      <SwingSoundDelay>0.3</SwingSoundDelay>
+      <SwingSound>ToolSwish</SwingSound>
+    </LeftSwing>
+
+    <RightSwing>
+      <Range>1.6</Range>
+      <Damage>6</Damage>
+      <Arc>30</Arc>
+
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <Animation>Attack</Animation>
+      <SwingSoundDelay>0.3</SwingSoundDelay>
+      <SwingSound>ToolSwish</SwingSound>
+    </RightSwing>
+
+    <ForwardSwing>
+      <Range>1.6</Range>
+      <Damage>6</Damage>
+      <Arc>30</Arc>
+
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <Animation>Attack</Animation>
+      <SwingSoundDelay>0.3</SwingSoundDelay>
+      <SwingSound>ToolSwish</SwingSound>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.1</BlockRaiseTime>
+  </Definition>
+</Definitions>

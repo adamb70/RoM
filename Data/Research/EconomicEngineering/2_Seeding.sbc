@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="EconomicSeeding" />
+    <DisplayName>DisplayName_ResearchNode_EconomicSeeding</DisplayName>
+    <Description>Description_ResearchNode_EconomicSeeding</Description>
+    <Icon>Textures\GUI\Icons\Schematics\Seeding.dds</Icon>
+    <Quest Type="QuestDefinition" Subtype="EconomicSeeding" />
+    <Research Type="ResearchDefinition" Subtype="EconomicSeeding" />
+    <Parent Type="ResearchNodeDefinition" Subtype="EconomicMetalTools" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="EconomicSeeding" />
+
+    <DisplayName>DisplayName_Quest_EconomicSeeding</DisplayName>
+    <Description>Description_Quest_EconomicSeeding</Description>
+    <Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Research</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Failed" SoundCueId="QuestCompleted" />
+
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Completed" SoundCueId="QuestCompleted" />
+
+
+    <Step>
+      <FullDescription>Description_Quest_EconomicSeeding_Step00</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="OR" ActiveDescription="Description_Quest_EconomicSeeding_Step00_Active">
+        <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem"  Subtype="StrawsFlax" Amount="2" >
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="WildFlax" />
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="FarmFlax" />
+        </Condition>
+        <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem"  Subtype="StrawsWheat" Amount="2" >
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="WildWheat" />
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="FarmWheat" />
+        </Condition>
+        <Condition xsi:type="Quest.Conditions.Gather" Type="ConsumableItem"  Subtype="Pumpkin" Amount="2" >
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="WildPumpkin" />
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="FarmPumpkin" />
+        </Condition>
+        <Condition xsi:type="Quest.Conditions.Gather" Type="ConsumableItem"  Subtype="Cabbage" Amount="2" >
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="WildCabbage" />
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="FarmCabbage" />
+        </Condition>
+        <Condition xsi:type="Quest.Conditions.Gather" Type="ConsumableItem"  Subtype="Herbs" Amount="2" >
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="WildHerbs" />
+          <HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="FarmHerbs" />
+        </Condition>
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_EconomicSeeding_Step00_Unlock" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicSeeding_Step01</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Craft" Tag="SeedBag" Amount="1" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicSeeding_Step02</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="OR" ActiveDescription="Description_Quest_EconomicSeeding_Step02_Active" >
+        <Condition xsi:type="Quest.Conditions.Equip" Type="HandItem" Subtype="PlowIron" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Equip" Type="HandItem" Subtype="PlowCopper" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Equip" Type="HandItem" Subtype="PlowBronze" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Equip" Type="HandItem" Subtype="PlowSteel" Amount="1" />
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicSeeding_Step03</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="OR" ActiveDescription="Description_Quest_EconomicSeeding_Step03_Active" >
+        <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem"  Subtype="StrawsFlax" />
+        <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem"  Subtype="StrawsWheat" />
+        <Condition xsi:type="Quest.Conditions.Gather" Type="ConsumableItem"  Subtype="Pumpkin" />
+        <Condition xsi:type="Quest.Conditions.Gather" Type="ConsumableItem"  Subtype="Cabbage" />
+        <Condition xsi:type="Quest.Conditions.Gather" Type="ConsumableItem"  Subtype="Herbs" />
+      </Condition>
+    </Step>
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="EconomicSeeding" />
+    <DisplayName>DisplayName_Research_EconomicSeeding</DisplayName>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicEconomicSeeding"/>
+    <DisplayName>DisplayName_Schematic_EconomicSeeding</DisplayName>
+    <Description>Description_Schematic_EconomicSeeding</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Seeding.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicEconomicSeeding" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicEconomicSeeding" />
+    <DisplayName>DisplayName_Schematic_EconomicSeeding</DisplayName>
+    <Description>Description_Schematic_EconomicSeeding</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Seeding.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="Null" />
+  </Definition>
+</Definitions>

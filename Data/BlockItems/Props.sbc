@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_BlockItemDefinition">
+    <Id Type="BlockItem" Subtype="RopeEnd"/>
+    <Block Type="CubeBlock" Subtype="RopeEnd"/>
+    <MaxStackAmount>5</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockItemDefinition">
+    <Id Type="BlockItem" Subtype="TorchStand"/>
+    <Tag>Torch</Tag>
+    <Block Type="CubeBlock" Subtype="TorchStand"/>
+    <MaxStackAmount>5</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockItemDefinition">
+    <Id Type="BlockItem" Subtype="TorchWall"/>
+    <Tag>Torch</Tag>
+    <Block Type="CubeBlock" Subtype="TorchWall"/>
+    <MaxStackAmount>5</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockItemDefinition">
+    <Id Type="BlockItem" Subtype="Weight"/>
+    <Block Type="CubeBlock" Subtype="Weight"/>
+    <MaxStackAmount>5</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockItemDefinition">
+    <Id Type="BlockItem" Subtype="CrankWheel"/>
+    <Tag>Torch</Tag>
+    <Block Type="CubeBlock" Subtype="CrankWheel"/>
+    <MaxStackAmount>5</MaxStackAmount>
+  </Definition>
+</Definitions>

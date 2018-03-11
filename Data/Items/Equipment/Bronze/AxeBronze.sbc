@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="AxeBronze"/>
+
+    <!-- Display -->
+
+    <DisplayName>DisplayName_Tool_AxeBronze</DisplayName>
+    <Description>Description_Tool_AxeBronze</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\AxeBronze.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\Axe_OneHandBronze.mwm</Model>
+
+    <PhysicalMaterial>Axe</PhysicalMaterial>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>400</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.464</X>
+        <Y>-1.0</Y>
+        <Z>-0.405</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.131</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_TreeCutterToolBehaviorDefinition" Subtype="AxeBronze"/>
+    </StanceToBehavior>
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="GenericToolCombatBehavior"/>
+    </StanceToBehavior>
+    
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeCutterToolBehaviorDefinition">
+    <Id Type="TreeCutterToolBehaviorDefinition" Subtype="AxeBronze"/>
+    <Efficiency>0.6</Efficiency>
+
+    <PrimaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>Cutting</Animation>
+    </PrimaryEffect>
+
+    <PrimaryLogEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>CuttingLog</Animation>
+    </PrimaryLogEffect>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AxeBronze"/>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\AxeBronze.dds</Icon>
+    <DisplayName>DisplayName_Tool_AxeBronze</DisplayName>
+    <Description>Description_Tool_AxeBronze</Description>
+    <Category>Anvil_Bronze</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Timber" />
+      <Item Amount="1" Tag="IngotBronze" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="AxeBronze" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+</Definitions>

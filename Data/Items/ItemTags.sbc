@@ -47,6 +47,19 @@ they grow everywhere within the realm.
   </Definition>
 <!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Pristine_SimpleSoup"/>
+    <DisplayName>Pristine Foods</DisplayName>
+    <Description>
+Can be any of the allowed types of food,
+for example, Pristine Berries are found 
+on berry bushes.
+</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Berries.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
     <Id Type="ItemTagDefinition" Subtype="Pristine_Mushroom"/>
     <DisplayName>Pristine Mushrooms</DisplayName>
     <Description>
@@ -105,6 +118,17 @@ grow everywhere within the realm.
   </Definition>
 <!-- =================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Universal_SimpleSoup"/>
+    <DisplayName>Food</DisplayName>
+    <Description>
+Can be any of the allowed types of foods. 
+Berries are found on berry bushes, they 
+grow everywhere within the realm.
+</Description>
+    <Icon>Textures\GUI\Icons\Consumables\Berries.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
     <Id Type="ItemTagDefinition" Subtype="Universal_Mushroom"/>
     <DisplayName>Mushrooms</DisplayName>
     <Description>
@@ -115,13 +139,42 @@ they grow everywhere within the realm.
       <Icon>Textures\GUI\Icons\Consumables\Mushrooms.dds</Icon>
   </Definition>
 <!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Universal_Brush"/>
+    <DisplayName>Brush</DisplayName>
+    <Description>
+Can be any of the allowed types of Brush.
+Brush are found on Pine Trees and Palm Trees, 
+they grow everywhere within the realm.
+</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ScrapWoodBranches.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Universal_Log"/>
+    <DisplayName>Log</DisplayName>
+    <Description>Can be any type of log.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Universal_Timber"/>
+    <DisplayName>Timber</DisplayName>
+    <Description>Can be any type of log.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
 
+			<!-- Kharidian -->
 
-
-
-
-
-
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="LogPalmtree_Timber"/>
+    <DisplayName>Palm Tree Log</DisplayName>
+    <Description>Can be any type of Palm Tree timber.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
 
 
 <!-- =================================================================== -->
@@ -156,6 +209,13 @@ they grow everywhere within the realm.
 	<Icon>Textures\GUI\Icons\Materials\StoneLarge.dds</Icon>
 	<Icon>Textures\GUI\Icons\Materials\StoneSmall.dds</Icon>
     <Icon>Textures\GUI\Icons\Berries.dds</Icon>
+  </Definition>
+<!-- =================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ItemTagDefinition">
+    <Id Type="ItemTagDefinition" Subtype="Timber"/>
+    <DisplayName>Timber</DisplayName>
+    <Description>Can be any type of log.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
   </Definition>
 <!-- =================================================================== -->
 </Definitions>

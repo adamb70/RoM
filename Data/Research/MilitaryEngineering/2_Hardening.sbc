@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="MilitaryHardening" />
+    <DisplayName>DisplayName_ResearchNode_MilitaryHardening</DisplayName>
+    <Description>Description_ResearchNode_MilitaryHardening</Description>
+    <Icon>Textures\GUI\Icons\Schematics\Hardening.dds</Icon>
+    <Quest Type="QuestDefinition" Subtype="MilitaryHardening" />
+    <Research Type="ResearchDefinition" Subtype="MilitaryHardening" />
+    <!--<Parent Type="ResearchNodeDefinition" Subtype="MilitaryMetalWeapons" />-->
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="MilitaryHardening" />
+
+    <DisplayName>DisplayName_Quest_MilitaryHardening</DisplayName>
+    <Description>Description_Quest_MilitaryHardening</Description>
+    <Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Research</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Failed" SoundCueId="QuestCompleted" />
+
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Completed" SoundCueId="QuestCompleted" />
+
+    <Step>
+      <FullDescription>Description_Quest_MilitaryHardening_Step01</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Timber" Amount="4" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Ingot" Amount="5" />
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_MilitaryHardening_Step01_Complete" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_MilitaryHardening_Step02</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="OR">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="Smithy" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Gather" Type="CubeBlock" Subtype="Smithy" Amount="1" IsHidden="true" />
+      </Condition>
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_MilitaryHardening_Step03</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="IngotCopper" Amount="2" AreaInventory="Included" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="IngotTin" Amount="2" AreaInventory="Included" />  
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_MilitaryHardening_Step04</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="OR">
+        <Condition xsi:type="Quest.Conditions.Craft" Tag="IngotBronze" Amount="4" />
+        <!-- Skip conditions: If you have a bronze ingot then you don't need to craft one -->
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="IngotBronze" Amount="4" IsHidden="true" AreaInventory="Included" />
+      </Condition>
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_MilitaryHardening_Step05</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="OR">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="HandItem" Subtype="SwordBronze" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Gather" Type="HandItem" Subtype="SwordBronze" Amount="1" IsHidden="true" />
+      </Condition>
+    </Step>
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="MilitaryHardening" />
+    <DisplayName>DisplayName_Research_MilitaryHardening</DisplayName>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicMilitaryHardening"/>
+    <DisplayName>DisplayName_Schematic_MilitaryHardening</DisplayName>
+    <Description>Description_Schematic_MilitaryHardening</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Palisades.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollMilitary.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicMilitaryHardening" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicMilitaryHardening" />
+    <DisplayName>DisplayName_Schematic_MilitaryHardening</DisplayName>
+    <Description>Description_Schematic_MilitaryHardening</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Palisades.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollMilitary.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="Null" />
+  </Definition>
+</Definitions>

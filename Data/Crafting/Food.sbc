@@ -347,14 +347,13 @@ Requires a Juicer Stand.</Description>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SoupMushroom" />
-      <DisplayName>DisplayName_Consumables_Mushroom_Soup</DisplayName>
+      <DisplayName>Simple Soup</DisplayName>
       <Description>
 "A simple dish, not very filling..."</Description>
       <Icon>Textures\GUI\Icons\Consumables\Dish_MushroomSoup.dds</Icon>
       <Category>Cooking</Category>
       <Prerequisites>
-        <Item Amount="5" Tag="Universal_Berry" />
-        <Item Amount="2" Tag="Universal_Mushroom" />
+        <Item Amount="2" Tag="Universal_SimpleSoup" />
       </Prerequisites>
       <Results>
 	<Item Amount="1" Type="ConsumableItem" Subtype="SoupMushroom" />
@@ -365,16 +364,15 @@ Requires a Juicer Stand.</Description>
 	<!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />
-      <DisplayName>Cooking: Mushroom Soup</DisplayName>
+      <DisplayName>Cooking: Simple Soup</DisplayName>
     <Description>
 "Anyone can make soup, just toss
 randoms food into a bowl of hot
 water." -Grand Chef Gunter
 
-Mushroom soup and soups in general
-are great for satisfying hunger and
-thirst. Can be cooked on a campfire.
-
+Soup and food in general are great 
+for satisfying hunger and thirst. 
+Can be cooked on a campfire.
 
 ((Hint: Search Redberry Bushes and
 Mushrooms to find Pristine Redberries
@@ -384,8 +382,7 @@ and Pristine Mushrooms.))</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="1" Tag="Pristine_Berry" />
-        <Item Amount="1" Tag="Pristine_Mushroom" />
+        <Item Amount="1" Tag="Pristine_SimpleSoup" />
       </Prerequisites>
       <Results>
 	<Item Amount="1" Type="SchematicItem" Subtype="SoupMushroom_Schematic" />

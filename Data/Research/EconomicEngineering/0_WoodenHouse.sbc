@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="EconomicWoodenHouse" />
+    <DisplayName>DisplayName_ResearchNode_EconomicWoodenHouse</DisplayName>
+    <Description>Description_ResearchNode_EconomicWoodenHouse</Description>
+    <Icon>Textures\GUI\Icons\Schematics\WoodenHouse.dds</Icon>
+    <Quest Type="QuestDefinition" Subtype="EconomicWoodenHouse" />
+    <Research Type="ResearchDefinition" Subtype="EconomicWoodenHouse" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="EconomicWoodenHouse" />
+
+    <DisplayName>DisplayName_Quest_EconomicWoodenHouse</DisplayName>
+    <Description>Description_Quest_EconomicWoodenHouse</Description>
+    <Icon>Textures\Research\Civil\WoodenHouse\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Research</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Failed" SoundCueId="QuestCompleted" />
+
+    <SuccessCondition xsi:type="Quest.Conditions.Composite" Operator="OR">
+      <Condition xsi:type="Quest.Conditions.QuestCompleted" Subtype="CivilianWoodenHouse"/>
+      <Condition xsi:type="Quest.Conditions.QuestCompleted" Subtype="EconomicWoodenHouse"/>
+    </SuccessCondition>
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Completed" SoundCueId="QuestCompleted" />
+
+
+    <Step>
+      <FullDescription>Description_Quest_EconomicWoodenHouse_Step00</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Timber" Amount="24" AreaInventory="Included"/>
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Plank" Amount="30" AreaInventory="Included"/>
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="ScrapWood" Amount="40" AreaInventory="Included"/>
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="HammerBuilding" Amount="1" AreaInventory="Included"/>
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_EconomicWoodenHouse_Step00_Complete" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicWoodenHouse_Step01</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="CubeBlock" Subtype="StairsWood" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.BuildBlock" Type="CubeBlock" Subtype="StairsWood" Amount="1" />
+      </Condition>
+      <Image>Textures\Research\Civil\WoodenHouse\01.png</Image>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_EconomicWoodenHouse_Step01_Complete" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicWoodenHouse_Step02</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="CubeBlock" Subtype="SupportWood" Amount="4" />
+        <Condition xsi:type="Quest.Conditions.BuildBlock" Type="CubeBlock" Subtype="SupportWood" Amount="4" />
+      </Condition>
+      <Image>Textures\Research\Civil\WoodenHouse\02.png</Image>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_EconomicWoodenHouse_Step02_Complete" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicWoodenHouse_Step03</FullDescription>
+	  <ShortDescription>Description_Quest_EconomicWoodenHouse_Step03_Short</ShortDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="CubeBlock" Subtype="FloorWood" Amount="4" />
+        <Condition xsi:type="Quest.Conditions.BuildBlock" Type="CubeBlock" Subtype="FloorWood" Amount="4" />
+      </Condition>
+      <Image>Textures\Research\Civil\WoodenHouse\03.png</Image>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_EconomicWoodenHouse_Step03_Complete" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicWoodenHouse_Step04</FullDescription>
+	  <ShortDescription>Description_Quest_EconomicWoodenHouse_Step04_Short</ShortDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="CubeBlock" Subtype="WallClay" Amount="2" />
+        <Condition xsi:type="Quest.Conditions.BuildBlock" Type="CubeBlock" Subtype="WallClay" Amount="2" />
+      </Condition>
+      <Image>Textures\Research\Civil\WoodenHouse\04.png</Image>
+    </Step>
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="EconomicWoodenHouse" />
+    <DisplayName>DisplayName_Research_EconomicWoodenHouse</DisplayName>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicEconomicWoodenHouse"/>
+    <DisplayName>DisplayName_Schematic_EconomicWoodenHouse</DisplayName>
+    <Description>Description_Schematic_EconomicWoodenHouse</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\WoodenHouse.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicEconomicWoodenHouse" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicEconomicWoodenHouse" />
+    <DisplayName>DisplayName_Schematic_EconomicWoodenHouse</DisplayName>
+    <Description>Description_Schematic_EconomicWoodenHouse</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\WoodenHouse.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="Null" />
+  </Definition>
+</Definitions>

@@ -49,7 +49,7 @@
       <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="Log" />
+      <Item Amount="1" Tag="Universal_Log" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Machinesmith_Table" />
@@ -57,8 +57,8 @@
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Machinesmith_Table"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Machinesmith_Table"/>
     <CraftingCategories>
       <Category>Machinesmith_Table</Category>
     </CraftingCategories>
@@ -86,7 +86,7 @@
     <Component Type="UseObjectsComponent" Subtype="Machinesmith_Table" ForceCreate="true"/>
     <Component Type="Inventory" Subtype="Machinesmith_TableInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Machinesmith_Table" ForceCreate="true"/>
+    <Component Type="CraftingComponentQueued" Subtype="Machinesmith_Table" ForceCreate="true"/>
   </Definition>
 
 

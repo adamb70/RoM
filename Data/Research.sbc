@@ -12,6 +12,11 @@
 	<Entry Type="CraftingRecipeDefinition" Subtype="Bread" />
   </Definition>
 
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Null" />
+    <DisplayName>Null</DisplayName>
+  </Definition>
+
 
 
     <!-- ************************************************************
@@ -495,18 +500,29 @@
 
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
-	<Id Type="ResearchDefinition" Subtype="CrossbowQuiver_Fletching" />
+	<Id Type="ResearchDefinition" Subtype="CrossbowBolt_RoM_Fletching" />
     <DisplayName>Fletching</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowQuiver" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
-	<Id Type="ResearchDefinition" Subtype="Crossbow_Fletching" />
+	<Id Type="ResearchDefinition" Subtype="Wood_Bolts_Fletching" />
     <DisplayName>Fletching</DisplayName>
-    <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowSteel" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wood_Bolts" />
   </Definition>
 <!-- ========================================================================= -->
-
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Crossbow_Fletching" />
+    <DisplayName>Fletching</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowIron" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WoodCrossbow_Fletching" />
+    <DisplayName>Fletching</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowWood" />
+  </Definition>
+<!-- ========================================================================= -->
 
 
 
@@ -532,6 +548,7 @@
 	<Id Type="ResearchDefinition" Subtype="Stone_Well_Masonry" />
     <DisplayName>Masonry</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Well" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Establishing_Encampment_Milestone" />
   </Definition>
 <!-- ========================================================================= -->
   <Definition xsi:type="ResearchDefinition">
@@ -954,8 +971,22 @@
     <Entry Type="CubeBlock" Subtype="ClaimBlockStone" />
   </Definition>
 <!-- ========================================================================= -->
-
-
+				<!-- Ethos -->
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Liberty_Ethos_LawGovernment" />
+    <DisplayName>Civil Liberty</DisplayName>
+    <Entry Type="CubeBlock" Subtype="Tribute_To_Liberty" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Security_Ethos_LawGovernment" />
+    <DisplayName>Civil Security</DisplayName>
+    <Entry Type="CubeBlock" Subtype="Tribute_To_Security" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Signpost3x2_LawGovernment" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SignPost3x1ArrowOffset_LawGovernment" />
+  </Definition>
+<!-- ========================================================================= -->
 
 
 
@@ -1164,6 +1195,7 @@
 
 
 
+
     <!-- Carpenter Crops -->
 
 
@@ -1189,8 +1221,10 @@
     <Entry Type="CraftingRecipeDefinition" Subtype="CrankWheel_Machinesmith" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodBarrel_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="WoodChestLarge_Carpenter" />
-    <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowQuiver_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodCrossbow_Fletching" />
     <Entry Type="CraftingRecipeDefinition" Subtype="Crossbow_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowBolt_RoM_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wood_Bolts_Fletching" />
     <Entry Type="CraftingRecipeDefinition" Subtype="ClaimBlockWood_LawGovernment" />
     <Entry Type="CraftingRecipeDefinition" Subtype="NordicChair_Carpenter" />
     <Entry Type="CraftingRecipeDefinition" Subtype="NorseBed_Carpenter" />
@@ -1278,6 +1312,42 @@
   </Definition>
 
 <!-- ===================================== Kharidian Pristine ==================================== -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Kharidian_Sticks_Carpenter" />
+    <DisplayName>Carpentry</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Compost_Bin_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="BannerWorkstation_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wardrobe_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodChair_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="PalisadeGate_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenGate_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenPortcullisMultiBlock_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenDrawbridge_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="LogToTimberRound10" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blueberry_Kegstand_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Grape_Kegstand_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Juice_Kegstand_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CatchBlockSmall2_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="LockGearBox2_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="RopeDrumAloneSmall_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrankWheel_Machinesmith" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodBarrel_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodChestLarge_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodCrossbow_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Crossbow_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="CrossbowBolt_RoM_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Wood_Bolts_Fletching" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="ClaimBlockWood_LawGovernment" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileLogSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileTimberSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileStoneSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="StockpileIronSmall_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bookshelf_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WeaponRack_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenDiningTable_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodenShelf_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WoodBed_Carpenter" />
+  </Definition>
 
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="SandStoneOreSmall_Masonry" />
@@ -1287,7 +1357,6 @@
   </Definition>
 
 <!-- ====================================  Kharidian Expansion  ===================================== -->
-
   <Definition xsi:type="ResearchDefinition">
 	<Id Type="ResearchDefinition" Subtype="SandStoneWall_Masonry" />
     <DisplayName>Sandstone Masonry</DisplayName>
@@ -1844,9 +1913,57 @@
   </Definition>
 
  
- <!-- ========================================================================= -->
-  
-  <!-- Nomadic research -->
+<!-- ========================================================================= -->
+				<!-- Milestone -->
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Ancestral_Knowledge_Milestone" />
+    <DisplayName>Ancestral Knowledge</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />
+    <DisplayName>Teachings of The Nomad</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="NeedleThread_Carpenter" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Establishing_Encampment_Milestone" />
+    <DisplayName>Establishing Encampment</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Founding_Our_Settlement_Milestone" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Founding_Our_Settlement_Milestone" />
+    <DisplayName>Founding Our Settlement</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Carpentry_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Blacksmithing_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Tailor_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Cooking_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Farming_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Apothocary_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Masonry_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Machinesmith_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_Fletching_Book_Nomadic_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Z_LawGovernment_Book_Nomadic_Book" />
+
+    <Entry Type="CraftingRecipeDefinition" Subtype="WallLog_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WallLogWithWindow_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WallLogWithEntrance_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WallLogSlopeLeft_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WallLogSlopeTop_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="WallLogPillar_Nomadic" />
+  </Definition>
+<!-- ========================================================================= -->
+
+  				<!-- Nomadic research -->
   
 <!-- ========================================================================= -->
   
@@ -1864,6 +1981,7 @@
     <DisplayName>Nomadic Research</DisplayName>
     <Entry Type="CraftingRecipeDefinition" Subtype="Bonfire" />
     <Entry Type="CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />
   </Definition>
   
 <!-- ========================================================================= -->
@@ -1927,4 +2045,125 @@
   </Definition>
   
 <!-- ========================================================================= -->
+				<!-- Log Walls -->
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WallLog_Nomadic" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WallLog" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WallLogWithWindow_Nomadic" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WallLogWithWindow" />
+    <Entry Type="CubeBlock" Subtype="WallLogWithShutters" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WallLogWithEntrance_Nomadic" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WallLogWithEntrance" />
+    <Entry Type="CubeBlock" Subtype="WallLogWithDoor" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WallLogSlopeLeft_Nomadic" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WallLogSlopeLeft" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WallLogSlopeTop_Nomadic" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WallLogSlopeTop" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="WallLogPillar_Nomadic" />
+    <DisplayName>Nomadic Research</DisplayName>
+    <Entry Type="CubeBlock" Subtype="WallLogPillar" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+			<!-- Professions Books -->
+
+
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Carpentry_Book" />
+    <DisplayName>Carpentry Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Carpentry_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Carpentry_Table" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Blacksmithing_Book" />
+    <DisplayName>Blacksmithing Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Blacksmithing_Book" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Tailor_Book" />
+    <DisplayName>Tailor Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Tailor_Book" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Cooking_Book" />
+    <DisplayName>Cooking Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Cooking_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Cooking_Table" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Farming_Book" />
+    <DisplayName>Farming Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Farming_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Herbalist_Table" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Apothocary_Book" />
+    <DisplayName>Apothocary Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Apothocary_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Apothocary_Table" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Masonry_Book" />
+    <DisplayName>Masonry Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Masonry_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Masonry_Table" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Fletching_Book" />
+    <DisplayName>Fletching Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Fletching_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Fletching_Table" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="Machinesmith_Book" />
+    <DisplayName>Machinesmith Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="Machinesmith_Book" />
+    <Entry Type="CraftingRecipeDefinition" Subtype="Machinesmith_Table" />
+  </Definition>
+<!-- ========================================================================= -->
+  <Definition xsi:type="ResearchDefinition">
+	<Id Type="ResearchDefinition" Subtype="LawGovernment_Book" />
+    <DisplayName>Law and Government Profession</DisplayName>
+    <Entry Type="CraftingRecipeDefinition" Subtype="LawGovernment_Book" />
+  </Definition>
+<!-- ========================================================================= -->
+
+
+
+
+
+
 </Definitions>
+
+

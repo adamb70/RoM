@@ -22,6 +22,23 @@
       <SwingSound>ToolSwish</SwingSound>
       <Animation>Attack</Animation>
     </SecondaryEffect>
+
+
+
   </Definition>
-  
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PickaxeCopper"/>
+    <DisplayName>DisplayName_Tool_PickaxeCopper</DisplayName>
+    <Description>Description_Tool_PickaxeCopper</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeCopper.dds</Icon>
+    <Category>Anvil_Copper</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Timber" />
+      <Item Amount="2" Tag="IngotCopper" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="PickaxeCopper" />
+    </Results>
+    <CraftingTime Seconds="2"/>
+  </Definition>
 </Definitions>

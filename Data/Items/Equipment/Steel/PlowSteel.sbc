@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="PlowSteel"/>
+
+    <!-- Display -->
+
+    <DisplayName>DisplayName_Tool_HandPlowSteel</DisplayName>
+    <Description>Description_Tool_HandPlowSteel</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlowSteel.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\PlowSteel.mwm</Model>
+
+    <PhysicalMaterial>Plow</PhysicalMaterial>
+
+    <Animation>Plow</Animation>
+
+    <DummyMapping Name="shovel_dumb_left" AnimationVariable="#shovelleft"/>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>500</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.533</X>
+        <Y>-1.0</Y>
+        <Z>-0.339</Z>
+      </Position>
+      <Orientation>
+        <X>0.2288072</X>
+        <Y>0.6835734</Y>
+        <Z>-0.240634</Z>
+        <W>0.6499768</W>
+      </Orientation>
+    </EquippedTransformFps>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_PlowingToolBehaviorDefinition" Subtype="PlowSteel"/>
+    </StanceToBehavior>
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="GenericToolCombatBehavior"/>
+    </StanceToBehavior>
+    
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_PlowingToolBehaviorDefinition">
+    <Id Type="MyObjectBuilder_PlowingToolBehaviorDefinition" Subtype="PlowSteel"/>
+    <Efficiency>40</Efficiency>
+    <TargetingDistance>4.0</TargetingDistance>
+    <PrimaryEffect>
+      <HitTime>.5</HitTime>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>Plowing</Animation>
+    </PrimaryEffect>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PlowSteel"/>
+    <DisplayName>DisplayName_Tool_HandPlowSteel</DisplayName>
+    <Description>Description_Tool_HandPlowSteel</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlowSteel.dds</Icon>
+    <Category>Anvil_Steel</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Timber" />
+      <Item Amount="1" Tag="IngotSteel" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="PlowSteel" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+</Definitions>

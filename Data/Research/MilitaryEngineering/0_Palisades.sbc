@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="MilitaryPalisades" />
+    <DisplayName>DisplayName_ResearchNode_MilitaryPalisades</DisplayName>
+    <Description>Description_ResearchNode_MilitaryPalisades</Description>
+    <Icon>Textures\GUI\Icons\Schematics\Palisades.dds</Icon>
+    <Quest Type="QuestDefinition" Subtype="MilitaryPalisades" />
+    <Research Type="ResearchDefinition" Subtype="MilitaryPalisades" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="MilitaryPalisades" />
+
+    <DisplayName>DisplayName_Quest_MilitaryPalisades</DisplayName>
+    <Description>Description_Quest_MilitaryPalisades</Description>
+    <Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Research</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Failed" SoundCueId="QuestCompleted" />
+
+
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Completed" SoundCueId="QuestCompleted" />
+
+
+    <Step>
+	  <!-- Don't skip first step of level 0. Introduction text will be added here -->
+      <FullDescription>Description_Quest_Palisades_Step01</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+		<Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="4" AreaInventory="Included"/>
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="ScrapWood" Amount="16" AreaInventory="Included"/>
+	  </Condition>
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_Palisades_Step02</FullDescription>
+	  <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="CubeBlock" Subtype="Palisade" Amount="2"/>
+		<Condition xsi:type="Quest.Conditions.BuildBlock" Type="CubeBlock" Subtype="Palisade" Amount="2"/>
+	  </Condition>
+      <Image>Textures\Research\Military\Palisades\01.png</Image>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" /> 
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_Palisades_Step03</FullDescription>
+	  <ShortDescription>Description_Quest_Palisades_Step03_Short</ShortDescription>
+      <Condition xsi:type="Quest.Conditions.PlaceBlock" Amount="2">
+        <Block Type="CubeBlock" Subtype="PalisadeSpiked" />
+        <Block Type="CubeBlock" Subtype="PalisadeWithBattlementSpiked" />
+      </Condition>
+      <Image>Textures\Research\Military\Palisades\02.png</Image>
+      <Image>Textures\Research\Military\Palisades\03.png</Image>
+    </Step>
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="MilitaryPalisades" />
+    <DisplayName>DisplayName_Research_MilitaryPalisades</DisplayName>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicMilitaryPalisades"/>
+    <DisplayName>DisplayName_Schematic_MilitaryPalisades</DisplayName>
+    <Description>Description_Schematic_MilitaryPalisades</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Palisades.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollMilitary.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicMilitaryPalisades" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicMilitaryPalisades" />
+    <DisplayName>DisplayName_Schematic_MilitaryPalisades</DisplayName>
+    <Description>Description_Schematic_MilitaryPalisades</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Palisades.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollMilitary.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="Null" />
+  </Definition>
+</Definitions>

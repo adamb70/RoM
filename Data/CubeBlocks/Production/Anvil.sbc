@@ -15,9 +15,9 @@
 		  </BuildProgressModels>
 		  <PhysicalMaterial>Rock</PhysicalMaterial>
 		  <Components>
-			<Component Subtype="IngotIron" Count="1" />
+     			 <Component Tag="Ingot" Count="5" />
 		  </Components>
-		  <CriticalComponent Subtype="IngotIron" Index="0" />
+		  <CriticalComponent Tag="Ingot" Index="0" />
 		  <MirroringY>Z</MirroringY>
 		  <MirroringZ>Y</MirroringZ>
 		  <BuildTimeSeconds>6</BuildTimeSeconds>
@@ -81,6 +81,12 @@
       <Category>Weapons</Category>
       <Category>MetalWorks</Category>
       <Category>Anvil</Category>
+      <Category>Anvil_Copper</Category>
+      <Category>Anvil_Bronze</Category>
+      <Category>Anvil_Iron</Category>
+      <Category>Anvil_Steel</Category>
+      <Category>Anvil_Copper_Mechanical</Category>
+      <Category>Anvil_Iron_Mechanical</Category>
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>.75</CraftingSpeedMultiplier>

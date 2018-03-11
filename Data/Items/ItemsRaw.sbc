@@ -1,7 +1,45 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="BranchesConiferous" />
+    <Public>true</Public>
+    <Tag>ScrapWood</Tag>
+    <Tag>Universal_Brush</Tag>
+    <DisplayName>DisplayName_Block_ScrapWoodBranches</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\ScrapWoodBranches.dds</Icon>
+    <Model>Models\Cubes\Small\ScrapWoodBranches.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>6.7</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>15</Health>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="BranchesPalmtree" />
+    <Public>true</Public>
+    <Tag>ScrapWood</Tag>
+    <Tag>Universal_Brush</Tag>
+    <DisplayName>DisplayName_Item_BranchesPalmtree</DisplayName>
+    <Description>Description_Item_BranchesPalmtree</Description>
+    <Icon>Textures\GUI\Icons\Cubes\PalmtreeBranches.dds</Icon>
+    <Model>Models\Cubes\Small\PalmtreeBranches.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>4</Mass>
+    <MaxStackAmount>20</MaxStackAmount>
+    <Health>15</Health>
+  </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="StoneSmall" />
     <Tag>Universal_Stone</Tag>
@@ -24,7 +62,7 @@
     <PhysicalMaterial>Stone</PhysicalMaterial>
     <Mass>6</Mass>
     <MaxStackAmount>10</MaxStackAmount>
-    <Health>10</Health>
+    <Health>30</Health>
   </Definition>
   <!-- =================================================================================== -->
 
@@ -51,7 +89,7 @@
     <PhysicalMaterial>Stone</PhysicalMaterial>
     <Mass>6</Mass>
     <MaxStackAmount>10</MaxStackAmount>
-    <Health>10</Health>
+    <Health>30</Health>
   </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -121,11 +159,37 @@ Used for Glassblowing.</Description>
   </Definition>
   <!-- =================================================================================== -->
 
+<!-- Gov Stuff-->
 
-<!-- Farming Withering -->
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Forign_Market_Contract" />
+    <Public>true</Public>
+    <DisplayName>Forign Market Contract</DisplayName>
+    <Description>Used to contract a merchant to sell goods in your town.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Model>Models\Cubes\small\Scroll.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>6.7</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+  <!-- =================================================================================== -->
 
 
 
+  <!-- =================================================================================== -->
+
+
+				<!-- Farming Withering -->
+
+
+  <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Withering_Pumpkin" />
     <DisplayName>Withering Pumpkin</DisplayName>
@@ -728,12 +792,72 @@ use it as compost for a Compost Bin.</Description>
   <!-- =================================================================================== -->
 
 
+		<!-- Kharidian Steppes  -->
+
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="LogPalmtree" />
+    <Public>true</Public>
+    <Tag>Universal_Log</Tag>
+    <DisplayName>DisplayName_Item_LogPalmtree</DisplayName>
+    <Description>Description_Item_Log</Description>
+    <Icon>Textures\GUI\Icons\Cubes\LogPalm250cm.dds</Icon>
+    <Model>Models\Cubes\Small\LogPalm250cm.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>2.5</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+    </Size>
+    <Mass>161</Mass>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="KharidianSticks" />
+    <Public>true</Public>
+    <Tag>Universal_Stick</Tag>
+    <DisplayName>Palm Tree Sticks</DisplayName>
+    <Description>Wooden sticks from a Palm Tree</Description>
+    <Icon>Textures\GUI\Icons\Cubes\LogPalm250cm.dds</Icon>
+    <Model>Models\Components\WoodenStick.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>2.5</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+    </Size>
+    <Mass>161</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+<!-- =================================================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- =================================================================================== -->
 
 
 		<!-- Enchanted Forest -->
 
 
-
+  <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
     <Tag>Universal_Stick</Tag>
@@ -785,10 +909,10 @@ stones radiate magical essence.</Description>
 
 
 
-
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Enchanted_Log" />
       <Public>true</Public>
+      <Tag>Universal_Log</Tag>
       <DisplayName>Enchanted Log</DisplayName>
 	  <Description>Native to the Elven Grove. Bombardment of magical 
 energy has mutated the local trees. Yielding stronger materials.</Description>
@@ -812,7 +936,7 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
 
 		<!-- Norden Plains -->
 
-
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="PeltDeer" />
     <DisplayName>DisplayName_Item_DeerSkin</DisplayName>
@@ -828,8 +952,27 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
       <MaxStackAmount>5</MaxStackAmount>
       <Health>52</Health>
   </Definition>
-  <!-- =================================================================================== -->
-
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Log" />
+    <Public>true</Public>
+    <Tag>Log</Tag>
+    <Tag>Universal_Log</Tag>
+    <DisplayName>DisplayName_Item_Log</DisplayName>
+    <Description>Description_Item_Log</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+    <Model>Models\Cubes\Small\Log250cm.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>2.5</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+    </Size>
+    <Mass>161</Mass>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Antlers" />
     <DisplayName>DisplayName_Item_Antlers</DisplayName>
@@ -845,13 +988,13 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
       <MaxStackAmount>15</MaxStackAmount>
       <Health>20</Health>
   </Definition>
-  <!-- =================================================================================== -->
+<!-- =================================================================================== -->
 
 
 		<!-- Spider -->
 
 
-
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Venom_Gland" />
       <DisplayName>Venom Gland</DisplayName>

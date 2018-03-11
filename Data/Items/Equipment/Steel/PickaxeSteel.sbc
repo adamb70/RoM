@@ -24,4 +24,20 @@
     </SecondaryEffect>
   </Definition>
   
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PickaxeSteel"/>
+    <DisplayName>DisplayName_Tool_PickaxeSteel</DisplayName>
+    <Description>Description_Tool_PickaxeSteel</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeSteel.dds</Icon>
+    <Category>Anvil_Steel</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Timber" />
+      <Item Amount="2" Tag="IngotSteel" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="PickaxeSteel" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
 </Definitions>

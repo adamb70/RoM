@@ -2,9 +2,27 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
     <Id Type="Inventory" Subtype="Fuel_Steam_Engine"/>
-    <DisplayName>DisplayName_InventoryName_Fuel</DisplayName>
+    <DisplayName>Fuel</DisplayName>
     <MaxItemCount>4</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="Fuel_Steam_Engine2"/>
+    <DisplayName>Boiler</DisplayName>
+    <MaxItemCount>4</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_FuelComponentDefinition">
+    <Id Type="FuelComponent" Subtype="Fire_Steam_Engine2"/>
+    <FuelInventory>Fuel_Steam_Engine2</FuelInventory>
+    <FuelTimes>
+      <Fuel Type="CubeBlock" Subtype="Water_Bucket">
+        <Time Seconds="20" />
+      </Fuel>
+    </FuelTimes>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_FuelComponentDefinition">

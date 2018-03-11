@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Crossbow -->
+
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="LongBow"/>
+
+    <!-- Display -->
+
+    <DisplayName>DisplayName_Weapon_LongBow</DisplayName>
+    <Description>Description_Weapon_LongBow</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\LongBow.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\LongBow.mwm</Model>
+
+    <PhysicalMaterial>Axe</PhysicalMaterial>
+    <!-- TODO -->
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>40</MaxDurability>
+
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+	
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="RangedWeaponBehaviorDefinition" Subtype="LongBow"/>
+    </StanceToBehavior>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LongBow"/>
+    <DisplayName>DisplayName_Weapon_LongBow</DisplayName>
+    <Description>Description_Weapon_LongBow</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\LongBow.dds</Icon>
+    <Category>Fletching_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Timber" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="LongBow" />
+    </Results>
+    <CraftingTime Seconds="15"/>
+  </Definition>
+</Definitions>
