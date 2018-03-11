@@ -1,0 +1,117 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="TransmissionWoodWithFrame" />
+    <DisplayName>DisplayName_Block_TransmissionWoodWithFrame</DisplayName>
+	  <Description>Description_Block_TransmissionWoodWithFrame</Description>
+    <BlockPairName>TransmissionWoodWithFrame</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Mechanical\TransmissionWithFrame.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Mechanical\TransmissionWithFrame.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Mechanical\MechanicalGenericConstruction.mwm">
+        <!--<MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>-->
+      </Model>
+    </BuildProgressModels>
+    <Components>
+      <Component Type="InventoryItem" Subtype="Small_FactoryKit" Count="1" />
+      <Component Type="InventoryItem" Subtype="Wood_Gear" Count="5" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="Wood_Gear" Index="0" />
+    <MaxIntegrity>600</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Top" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Left" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Right" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Back" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Front" StartX="1" StartY="1" EndX="0" EndY="0" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <GuiVisible>false</GuiVisible>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>    
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>InVoxel</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+	<!-- Disable compound building for the framed blocks; The unframed ones are designed for compounding. -->
+	<CompoundEnabled>false</CompoundEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="TransmissionWoodWithFrame" />
+    <Component Type="MechanicalTransmissionComponent" Subtype="TransmissionWoodWithFrame" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="TransmissionWoodWithFrame" />
+    <Component Type="SubpartAnimationComponent" Subtype="TransmissionWoodWithFrame" />
+    <Component Type="EntityFXComponent" Subtype="TransmissionWoodWithFrame" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="CubeBlockSubpartComponent" Subtype="TransmissionWoodWithFrame" />
+	<ShowSubpartsWhileBuilding>false</ShowSubpartsWhileBuilding>
+    <Subparts>
+      <Subpart Name="RotorShaft" Model="Models\Cubes\large\Mechanical\Transmission_Subpart.mwm" PhysicalMaterial="Wood" HingeBone="rotor_center" RequiresAxialCorrection="true" HasDummy="false" HasPhysics="false" />
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MechanicalTransmissionComponentDefinition">
+    <Id Type="MechanicalTransmissionComponent" Subtype="TransmissionWoodWithFrame" />
+    <Connection>connection_forward</Connection>
+    <Connection>connection_backward</Connection>
+    <ClockwiseAnimation>cw</ClockwiseAnimation>
+    <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="SubpartAnimationComponent" Subtype="TransmissionWoodWithFrame" />
+    <AnimationSequences>
+      <Sequence Name="cw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="RotorShaft" Type="Rotation" Axis="Z" From="0" To="-360" Method="Linear" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="ccw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="RotorShaft" Type="Rotation" Axis="Z" From="0" To="360" Method="Linear" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="TransmissionWoodWithFrame" />
+    <Effects>
+      <Effect StartEvent="IsPowered_connection_forward" StopEvent="NotPowered_connection_forward" Dummy="connection_forward">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalWorking"/>
+      </Effect>
+      <Effect StartEvent="IsPowered_connection_backward" StopEvent="NotPowered_connection_backward" Dummy="connection_backward">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalWorking"/>
+      </Effect>
+      <Effect StartEvent="NotWorking_connection_forward" StopEvent="Working_connection_forward" Dummy="connection_forward">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
+      </Effect>
+      <Effect StartEvent="NotWorking_connection_backward" StopEvent="Working_connection_backward" Dummy="connection_backward">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
+      </Effect>
+    </Effects>
+  </Definition>
+
+</Definitions>

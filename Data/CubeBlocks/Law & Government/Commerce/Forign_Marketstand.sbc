@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Forign_Marketstand" />
+    <DisplayName>Forign Marketstand</DisplayName>
+    <Description>Invite a forign merchant to sell general items from a marketstand. The merchant requires a payment inorder to keep the store running. If taxes are not payed, the merchant and marketstand will leave.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\LawGovernment\forign_market_stand.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\KingStatue_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count="20" />
+      <Component Type="InventoryItem" Subtype="Forign_Market_Contract" Count="1" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="Forign_Market_Contract" Index="0" />
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <UseModelIntersection>true</UseModelIntersection>
+    <NavigationDefinition>NoEntry</NavigationDefinition>
+    <Mass>500</Mass>
+    <Points>200</Points>
+    <MaxIntegrity>300</MaxIntegrity>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <CompoundEnabled>false</CompoundEnabled>
+  </Definition>
+
+<!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Forign_Marketstand" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="claim"/>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Forign_MarketstandInventory" />
+    <InventoryName>Inventory</InventoryName>
+    <DisplayName>Inventory</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Forign_Marketstand" />
+    <Component Type="ClaimBlockComponent" Subtype="ClaimBlockWood" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="Inventory" Subtype="Forign_MarketstandInventory" ForceCreate="true"/>
+    <Component Type="InventorySpawnComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="Forign_Marketstand" ForceCreate="true"/>
+    <Component Type="ClaimBlockRespawnComponent" />
+  </Definition>
+</Definitions>

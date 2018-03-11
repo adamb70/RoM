@@ -9,7 +9,7 @@
     <DisplayName>DisplayName_LogToTimber</DisplayName>
     <Category>SawbladesTimber</Category>
     <Prerequisites>
-      <Item Amount="1" Tag="Log" />
+      <Item Amount="1" Tag="Universal_Log" />
     </Prerequisites>
     <Results>
       <Item Amount="4" Type="CubeBlock" Subtype="Timber10" />
@@ -17,18 +17,121 @@
     <CraftingTime Seconds="10"/>
   </Definition>
 <!-- =========================================================================================== -->
-
-
-
-
-
-
-
-
-
-
-
-
+				<!-- Kharidian Lumber -->
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToWoodenSticks"/>
+    <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
+    <DisplayName>Chop Into Sticks</DisplayName>
+    <Category>Kharidian_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="15" Type="InventoryItem" Subtype="KharidianSticks" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToTimberRound" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberRound.dds</Icon>
+    <DisplayName>Round Palm Timber</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="LogPalmtree_TimberRound10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToTimberRound_CraftingTable" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberRound.dds</Icon>
+    <DisplayName>Round Palm Timber</DisplayName>
+    <Category>Kharidian_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="CubeBlock" Subtype="LogPalmtree_TimberRound10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToTimber10" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>Round Palm Timber</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="LogPalmtree_Timber10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToTimber10Carpentry_Table" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>Round Palm Timber</DisplayName>
+    <Category>Kharidian_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="CubeBlock" Subtype="LogPalmtree_Timber10" />
+    </Results>
+    <CraftingTime Seconds="5" />
+  </Definition>
+<!-- ============================================================================================ -->
+				<!-- Norden Lumber -->
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToWoodenSticks"/>
+    <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
+    <DisplayName>DisplayName_LogToWoodenSticks</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="15" Type="InventoryItem" Subtype="Sticks" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimberRound" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberRound.dds</Icon>
+    <DisplayName>Round Timber</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="TimberRound10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+<!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimberRound_CraftingTable" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberRound.dds</Icon>
+    <DisplayName>Round Timber</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="CubeBlock" Subtype="TimberRound10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
 <!-- ============================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimber10" />
@@ -41,7 +144,7 @@
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
     </Results>
-    <CraftingTime Seconds="10"/>
+    <CraftingTime Seconds="5"/>
   </Definition>
 <!-- ============================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -55,8 +158,10 @@
     <Results>
       <Item Amount="2" Type="CubeBlock" Subtype="Timber10" />
     </Results>
-    <CraftingTime Seconds="10"/>
+    <CraftingTime Seconds="5"/>
   </Definition>
+<!-- ============================================================================================ -->
+					<!-- Things -->
 <!-- ============================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TableWoodSmall"/>
@@ -64,7 +169,7 @@
     <Icon>Textures\GUI\Icons\Cubes\SimpleTable.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="2" Tag="Timber" />
+      <Item Amount="2" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="TableWoodSmall" />
@@ -78,7 +183,7 @@
     <Icon>Textures\GUI\Icons\Props\StockpileIronSmall.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
+      <Item Amount="4" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="StockpileOreSmall" />
@@ -92,7 +197,7 @@
     <Icon>Textures\GUI\Icons\Props\StockpileLogSmall.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
+      <Item Amount="4" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Subtype="StockpileLogSmall" Type="CubeBlock"/>
@@ -106,7 +211,7 @@
     <Icon>Textures\GUI\Icons\Props\StockpileOreSmall.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
+      <Item Amount="4" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="StockpileStoneSmall" />
@@ -120,7 +225,7 @@
     <Icon>Textures\GUI\Icons\Props\StockpileTimberSmall.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
+      <Item Amount="4" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="StockpileTimberSmall" />
@@ -134,7 +239,7 @@
     <DisplayName>DisplayName_Block_WeaponRack</DisplayName>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
+      <Item Amount="4" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="WeaponRack" />
@@ -148,7 +253,7 @@
     <DisplayName>DisplayName_Block_WoodenDiningTable</DisplayName>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="3" Tag="Timber" />
+      <Item Amount="3" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="TableWoodLarge" />
@@ -162,7 +267,7 @@
     <DisplayName>DisplayName_Block_WoodenShelf</DisplayName>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="2" Tag="Timber" />
+      <Item Amount="2" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="ShelfWood" />
@@ -176,7 +281,7 @@
     <DisplayName>DisplayName_Bookshelf</DisplayName>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
+      <Item Amount="4" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Bookshelf" />
@@ -199,9 +304,9 @@
     <DisplayName>DisplayName_Weapon_Club</DisplayName>
     <Description>Description_Weapon_Club</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\WoodenClub.dds</Icon>
-    <Category>Carpentry_Table</Category>
+    <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Tag="Log" />
+        <Item Amount="1" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="HandItem" Subtype="ClubWood" />
@@ -218,33 +323,128 @@
 
 
 
-
-
 <!-- ========================================================================================= -->
-	
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowBolt_RoM_Fletching" />
+      <DisplayName>Fletching: Iron Bolts
+
+This knowledge is good for
+understanding how to make
+a iron crossbow.</DisplayName>
+    <Description>Iron Bolts are a type of ammuniton for crossbows. Iron Bolt have better peircing than Bronze Bolt</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Fletching_Book</Category>
+      <Prerequisites>
+        <Item Amount="2" Tag="Pristine_Stick" />
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Fletching_Schematic_CrossbowBolt_RoM" />
+	  </Results>
+      <CraftingTime Seconds="2"/>
+    </Definition>
+<!-- ============================================ -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowQuiver" />
+      <DisplayName>Iron Bolts</DisplayName>
+    <Description>Iron Bolts are a type of ammuniton for crossbows. Iron Bolt have better peircing than Bronze Bolt</Description>
+      <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
+      <Category>Fletching_Table</Category>
+      <Prerequisites>
+        <Item Amount="5" Tag="Universal_Stick" />
+        <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="15" Type="ProjectileItem" Subtype="CrossbowBolt_RoM" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wood_Bolts_Fletching" />
+      <DisplayName>Fletching: Wood Bolts
+
+This knowledge is good for
+understanding how to make
+a wood crossbow.</DisplayName>
+    <Description>Wood Bolts are a type of ammuniton for crossbows. Wood Bolt are the least effective ammuniton type.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="4" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Fletching_Schematic_Wood_Bolts" />
+	  </Results>
+      <CraftingTime Seconds="2"/>
+    </Definition>
+<!-- ============================================ -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wood_Bolts" />
+      <DisplayName>Wood Bolts</DisplayName>
+    <Description>Wood Bolts are a type of ammuniton for crossbows. Wood Bolt are the least effective ammuniton type.</Description>
+      <Icon>Textures\GUI\Icons\ammo\Crossbow_Quiver.dds</Icon>
+      <Category>SmallBlocks</Category>
+      <Prerequisites>
+        <Item Amount="10" Tag="Universal_Stick" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="15" Type="ProjectileItem" Subtype="Wood_Bolts" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- ========================================================================================= -->
+					<!-- Crossbows -->
+<!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crossbow_Fletching" />
       <DisplayName>Fletching: Crossbow
 
 This knowledge is good for
 understanding how to make
-a crossbow.</DisplayName>
+a iron crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\Crossbow.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Fletching_Book</Category>
       <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_IronOre" />
+        <Item Amount="4" Tag="Pristine_Stick" />
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
       </Prerequisites>
       <Results>
 	  
 	    <Item Amount="1" Type="SchematicItem" Subtype="Fletching_Schematic_Crossbow" />
 	  </Results>
-      <CraftingTime Seconds="1"/>
+      <CraftingTime Seconds="2"/>
     </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WoodCrossbow_Fletching" />
+      <DisplayName>Fletching: Wood Crossbow
 
-
+This knowledge is good for
+understanding how to make
+a wood crossbow.</DisplayName>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\CrossbowWood.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="8" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Fletching_Schematic_WoodCrossbow" />
+	  </Results>
+      <CraftingTime Seconds="2"/>
+    </Definition>
+<!-- ========================================================================================= -->
 
 
 
@@ -947,8 +1147,8 @@ a crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Materials\LinenString.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Linen String</DisplayName>
-      <Category>Tailor_Book</Category>
+      <DisplayName>Tailoring: Linen String</DisplayName>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
         <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
       </Prerequisites>
@@ -1161,9 +1361,9 @@ a crossbow.</DisplayName>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bandage" />
-      <DisplayName>DisplayName_Consumables_Bandage</DisplayName>
+      <DisplayName>Simple Bandage</DisplayName>
       <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-      <Category>Apothocary_Table</Category>
+      <Category>SmallBlocks</Category>
       <Prerequisites>
         <Item Amount="2" Type="ConsumableItem" Subtype="Herbs" />
         <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
@@ -1178,11 +1378,11 @@ a crossbow.</DisplayName>
 	<!-- =================================================================================== -->	
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bandage_Apothocary" />
-      <DisplayName>Apothocary: Bandage</DisplayName>
+      <DisplayName>Apothocary: Simple Bandage</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Apothocary_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
         <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Herbs" />
       </Prerequisites>
@@ -1401,9 +1601,9 @@ a crossbow.</DisplayName>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Unwritten_Book" />
       <DisplayName>Unwritten Book</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\book.dds</Icon>
-      <Category>Book_Cooking</Category>
+      <Category>Compost_Bin</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1432,7 +1632,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\Carpentry_icon.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1440,8 +1640,36 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Carpentry_Book_Nomadic_Book" />
+      <DisplayName>Carpentry Profession</DisplayName>
+    <Description>
+"The Carpenter bends trees to it's will. Wood is
+the medium from which the Carpenter crafts many
+things. From tools, to furniture. The Carpenter 
+is required for any settlement." 
 
-	<!-- =================================================================================== -->
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Carpentry_icon.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Blacksmithing_Book" />
       <DisplayName>Blacksmithing Book</DisplayName>
@@ -1459,7 +1687,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\Blacksmith.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1467,8 +1695,35 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Blacksmithing_Book_Nomadic_Book" />
+      <DisplayName>Blacksmithing Profession</DisplayName>
+    <Description>
+"From rock, to metal. The Blacksmith crafts the mighty
+swords and tools for war, but are just as needed within
+the hometown.
 
-	<!-- =================================================================================== -->
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Blacksmith.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tailor_Book" />
       <DisplayName>Tailor Book</DisplayName>
@@ -1485,7 +1740,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\Tailor.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1493,8 +1748,34 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
-
-	<!-- =================================================================================== -->
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Tailor_Book_Nomadic_Book" />
+      <DisplayName>Tailor Profession</DisplayName>
+    <Description>
+"Linen, the canvas of the Tailor. They weave the war
+banners and interior decoration of many homes."
+ 
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Tailor.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Tailor_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cooking_Book" />
       <DisplayName>Cooking Book</DisplayName>
@@ -1513,7 +1794,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1521,8 +1802,36 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Cooking_Book_Nomadic_Book" />
+      <DisplayName>Cooking Profession</DisplayName>
+    <Description>
+"The chef does not simply prepare food, but will cook
+up entire feasts. Nothing restores a town's mood better
+then the skilled cooking of a chef. Matched by none, 
+they search the whole realm for the best ingrediants." 
 
-	<!-- =================================================================================== -->
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Cooking_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Farming_Book" />
       <DisplayName>Farming Book</DisplayName>
@@ -1541,7 +1850,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\Farm.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1549,8 +1858,36 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Farming_Book_Nomadic_Book" />
+      <DisplayName>Farming Profession</DisplayName>
+    <Description>
+"Farming, the art of sculpting land into bountiful 
+harvests. Patiant, Studious, and Wise. Farmers are 
+the most important people when it comes to supporting
+a town's population."
 
-	<!-- =================================================================================== -->
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Farm.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Farming_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Apothocary_Book" />
       <DisplayName>Apothocary Book</DisplayName>
@@ -1569,7 +1906,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\Apothacary_icon.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1577,8 +1914,36 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Apothocary_Book_Nomadic_Book" />
+      <DisplayName>Apothocary Profession</DisplayName>
+    <Description>
+"The science of plants, and the properties that can
+be extracted from them. The Apothocary, seen as an
+angel when healing the sick, and the devil in times
+of war when they poison entire towns."
 
-	<!-- =================================================================================== -->
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Apothacary_icon.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Apothocary_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Book" />
       <DisplayName>Masonry Book</DisplayName>
@@ -1596,7 +1961,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\Masonry.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1604,8 +1969,35 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Masonry_Book_Nomadic_Book" />
+      <DisplayName>Masonry Profession</DisplayName>
+    <Description>
+"Masonry, the art of transforming raw earth into
+beautiful structures. The earth is but clay yet
+to be shaped."
 
-	<!-- =================================================================================== -->
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Masonry.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Machinesmith_Book" />
       <DisplayName>Machinesmith Book</DisplayName>
@@ -1623,7 +2015,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\Machinesmith.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1631,8 +2023,35 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Machinesmith_Book_Nomadic_Book" />
+      <DisplayName>Machinesmith Profession</DisplayName>
+    <Description>
+"The machinesmith, master of mechanical knowledge. 
+They craft mighty the seige equipment and the harvestors
+that reap the fields." 
 
-	<!-- =================================================================================== -->
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Machinesmith.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Machinesmith_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Fletching_Book" />
       <DisplayName>Fletching Book</DisplayName>
@@ -1647,10 +2066,10 @@ As you find new pristine ingredients, research will
 be available to unlocked. Place this book on a surface 
 to read from it.
 </Description>
-      <Icon>Textures\GUI\Icons\Universal\book.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Fletching.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1658,7 +2077,35 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
-	<!-- =================================================================================== -->
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Fletching_Book_Nomadic_Book" />
+      <DisplayName>Fletching Profession</DisplayName>
+    <Description>
+"Fletching wood into bows and arrows. Important for
+times of war, and times of hunting. Those who prefer
+the bow, take the time to learn fletching."
+
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\Fletching.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Fletching_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LawGovernment_Book" />
       <DisplayName>Law and Government Book</DisplayName>
@@ -1676,7 +2123,7 @@ to read from it.
       <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
       <Category>Book_Cooking</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
+        <Item Amount="1" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -1684,6 +2131,35 @@ to read from it.
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+<!-- ======================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_LawGovernment_Book_Nomadic_Book" />
+      <DisplayName>Law and Government Profession</DisplayName>
+    <Description>
+"Government is the essential tool of any leader.
+How such a government is set up though, is the 
+fundamental question for any settlement."
+
+This book teaches how to rule and manage a kingdom,
+with research related to Law and Government. As you 
+find new pristine ingredients, research will be 
+available to unlocked. Place this book on a surface 
+to read from it.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Professions</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Book_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
 
 
 
@@ -1691,9 +2167,123 @@ to read from it.
 
 
 
+<!-- =================================================================================== -->
 
+				<!-- Law and Government -->
+
+<!-- =================================================================================== -->
+
+				      <!-- Ethos -->
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Liberty_Ethos_LawGovernment_Book" />
+      <DisplayName>Liberty Ethos</DisplayName>
+    <Description>
+"The end of law is not to abolish or restrain, but 
+to preserve and enlarge freedom. For in all the 
+states of created beings capable of law, where 
+there is no law, there is no freedom." - Locke
+
+A Liberty Ethos will focus on the civil liberties,
+including liberty of speech, commerce, and privacy.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Ethos</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Liberty_Ethos_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Security_Ethos_LawGovernment_Book" />
+      <DisplayName>Security Ethos</DisplayName>
+    <Description>
+"Unless your government is respectable, foreigners 
+will invade your rights; and to maintain tranquillity, 
+it must be respectable - even to observe neutrality, 
+you must have a strong government." - Hamilton
+
+A Security Ethos will focus on the civil security,
+including security of boarders, law, and order.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Ethos</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Security_Ethos_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Forign_Marketstand_LawGovernment_Book" />
+      <DisplayName>Forign Markets</DisplayName>
+    <Description>
+Invite a forign merchant to sell general items 
+from a marketstand. The merchant requires a 
+payment inorder to keep the store running. If 
+taxes are not payed, the merchant and 
+marketstand will leave.
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Ethos</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Forign_Marketstand_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Town_Stockpile_LawGovernment_Book" />
+      <DisplayName>Town Stockpile</DisplayName>
+    <Description>
+The Town Stockpile serves as a central hub of 
+storage within the town. Requires taxes, but 
+will claim the land. Will hold almost 
+anything, and a lot of it!
+</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Ethos</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Town_Stockpile_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
+
+
+
+
+
+<!-- =================================================================================== -->
 
   			  <!--Farming-->
+
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LandscapeStake_Farming" />
@@ -1701,11 +2291,10 @@ to read from it.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\LandscapingStake.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>Farming_Book_Seeds</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="6" Tag="Pristine_Stick" />
         <Item Amount="3" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Flax" />
       </Prerequisites>
       <Results>
 	  
@@ -1720,8 +2309,8 @@ to read from it.
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
       <Category>Herbalist_Table</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
-        <Item Amount="1" Type="InventoryItem" Subtype="StoneSmall" />
+        <Item Amount="3" Tag="Universal_Stick" />
+        <Item Amount="1" Tag="Universal_Stone" />
       </Prerequisites>
       <Results>
 	  
@@ -3220,7 +3809,7 @@ pine trees to aquire Pristine Sticks))</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="6" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="6" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3235,8 +3824,8 @@ pine trees to aquire Pristine Sticks))</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bin_Icon.dds</Icon>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="1" Tag="Universal_Timber" />
+        <Item Amount="4" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3268,7 +3857,7 @@ pine trees to aquire Pristine Sticks))</Description>
       <DisplayName>DisplayName_Block_Wheel</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="2" Type="CubeBlock" Subtype="Timber10" />
+        <Item Amount="2" Tag="Universal_Timber" />
       </Prerequisites>
       <Results>
 	  
@@ -3288,7 +3877,7 @@ A wheel reinforced with iron nails
 inorder to withstand more .</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
         <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
       </Prerequisites>
       <Results>
@@ -3304,7 +3893,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Reinforced Wheel</DisplayName>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="2" Type="CubeBlock" Subtype="Timber10" />
+        <Item Amount="2" Tag="Universal_Timber" />
         <Item Amount="12" Type="InventoryItem" Subtype="Iron_Nails" />
       </Prerequisites>
       <Results>
@@ -3322,7 +3911,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Tailor: Banner Workstation</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3336,7 +3925,7 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\WoodChair.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <DisplayName>Carpenter: Wood Chair</DisplayName>
+      <DisplayName>Carpenter: Dwarven Chair</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
         <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
@@ -3351,8 +3940,8 @@ inorder to withstand more .</DisplayName>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ChairWood" />
       <Icon>Textures\GUI\Icons\Cubes\WoodChair.dds</Icon>
-      <DisplayName>DisplayName_Block_WoodChair</DisplayName>
-      <Category>Carpentry_Table</Category>
+      <DisplayName>Dwarven Chair</DisplayName>
+      <Category>Dwarven_Carpentry_Table</Category>
       <Prerequisites>
         <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
@@ -3371,7 +3960,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wood Barrel</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3388,7 +3977,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Large Chest</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3405,7 +3994,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Crate</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="20" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3422,7 +4011,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Shelf</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3439,7 +4028,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Dining Table</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="18" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="18" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3454,9 +4043,9 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Props\WeaponRack.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <DisplayName>Carpenter: Weapon Rack</DisplayName>
-      <Category>Carpentry_Book</Category>
+      <Category>Nomadic_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="2" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3473,7 +4062,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Bookshelf</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3490,7 +4079,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpentry: Large Log Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3507,7 +4096,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpentry: Large Timber Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3524,7 +4113,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpentry: Large Stone Stockpile</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="7" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3608,7 +4197,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wardrobe</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="4" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_Wardrobe" />
@@ -3624,7 +4213,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Bed</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3641,7 +4230,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Wooden Gate</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="45" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="25" Tag="Pristine_Stick" />
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -3659,7 +4248,7 @@ inorder to withstand more .</DisplayName>
       <DisplayName>Carpenter: Palisade Gate</DisplayName>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="63" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="45" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3693,7 +4282,7 @@ inorder to withstand more .</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="20" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3743,9 +4332,9 @@ open Spalt Lager Kegs.</DisplayName>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand" />  
       <DisplayName>Spalt Lager Kegstand</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
-      <Category>Carpentry_Table</Category>
+      <Category>Norden_Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
+        <Item Amount="1" Tag="Universal_Timber" />
         <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
       </Prerequisites>
       <Results>
@@ -3763,7 +4352,7 @@ open Spalt Lager Kegs.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Carpentry_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3778,8 +4367,8 @@ open Spalt Lager Kegs.</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="1" Tag="Universal_Timber" />
+        <Item Amount="4" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3799,7 +4388,7 @@ produce Grabe Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category></Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3814,8 +4403,8 @@ produce Grabe Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="1" Tag="Universal_Timber" />
+        <Item Amount="4" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3835,7 +4424,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category></Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3850,8 +4439,8 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
       <Category>Carpentry_Table</Category>
       <Prerequisites>
-        <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-        <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="1" Tag="Universal_Timber" />
+        <Item Amount="4" Tag="Universal_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3875,7 +4464,7 @@ produce Blue Berry Juice.</DisplayName>
       <DisplayName>Machinesmith: Wooden Portcullis</DisplayName>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="115" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="60" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3892,7 +4481,7 @@ produce Blue Berry Juice.</DisplayName>
       <DisplayName>Machinesmith: Wooden Draw bridge</DisplayName>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="115" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="60" Tag="Pristine_Stick" />
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_IronOre" />
       </Prerequisites>
@@ -3912,7 +4501,7 @@ produce Blue Berry Juice.</DisplayName>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
         <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
-        <Item Amount="30" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="30" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3929,7 +4518,7 @@ produce Blue Berry Juice.</DisplayName>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="35" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="30" Tag="Pristine_Stick" />
         <Item Amount="12" Type="SchematicItem" Subtype="Schematic_IronOre" />
       </Prerequisites>
       <Results>
@@ -3948,7 +4537,7 @@ produce Blue Berry Juice.</DisplayName>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_IronOre" />
-        <Item Amount="35" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="30" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -3983,8 +4572,7 @@ is perfect for an axel!</Description>
     <DisplayName>DisplayName_Block_CatchBlock</DisplayName>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-      <Item Amount="1" Type="CubeBlock" Subtype="TimberRound10" />
+      <Item Amount="2" Tag="Universal_Timber" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CogWheelsBlock" Subtype="CatchBlock" />
@@ -4018,7 +4606,7 @@ is perfect for an axel!</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -4034,7 +4622,7 @@ is perfect for an axel!</Description>
     <Category>Machinesmith_Table</Category>
     <Prerequisites>
       <Item Amount="4" Tag="ScrapWood" />
-      <Item Amount="1" Tag="Timber" />
+      <Item Amount="1" Tag="Universal_Timber" />
       <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
@@ -4066,8 +4654,7 @@ is perfect for an axel!</Description>
     <DisplayName>DisplayName_Block_RopeDrum</DisplayName>
     <Category>Machinesmith_Table</Category>
     <Prerequisites>
-      <Item Amount="1" Type="CubeBlock" Subtype="Timber10" />
-      <Item Amount="1" Type="CubeBlock" Subtype="TimberRound10" />
+      <Item Amount="2" Tag="Universal_Timber" />
       <Item Amount="6" Tag="Rope" />
     </Prerequisites>
     <Results>
@@ -4084,7 +4671,7 @@ is perfect for an axel!</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -4116,7 +4703,7 @@ is perfect for an axel!</Description>
     <DisplayName>DisplayName_Block_RopeTorsionSpring</DisplayName>
     <Category>Machinesmith_Table</Category>
     <Prerequisites>
-      <Item Amount="2" Tag="Timber" />
+      <Item Amount="2" Tag="Universal_Timber" />
       <Item Amount="4" Tag="Rope" />
       <Item Amount="2" Type="CogWheelsBlock" Subtype="CatchBlock" />
     </Prerequisites>
@@ -4132,7 +4719,7 @@ is perfect for an axel!</Description>
     <DisplayName>DisplayName_Block_TurnWheelCross</DisplayName>
     <Category>Machinesmith_Table</Category>
     <Prerequisites>
-      <Item Amount="1" Tag="Timber" />
+      <Item Amount="1" Tag="Universal_Timber" />
       <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
@@ -4150,7 +4737,7 @@ is perfect for an axel!</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -4184,7 +4771,7 @@ is perfect for an axel!</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Machinesmith_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -4209,7 +4796,7 @@ is perfect for an axel!</Description>
       <DisplayName>Masonry: Stone Arch</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4226,7 +4813,7 @@ is perfect for an axel!</Description>
       <DisplayName>Masonry: Stone Cube</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Tag="Pristine_Stick" />
         <Item Amount="12" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4276,7 +4863,7 @@ this stone axe yields better strength.</Description>
       <DisplayName>Masonry: Stone Door</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4293,7 +4880,7 @@ this stone axe yields better strength.</Description>
       <DisplayName>Masonry: Stone Wall Door</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4338,7 +4925,7 @@ or Barley Malt.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="20" Tag="Pristine_Stick" />
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4389,7 +4976,7 @@ A well provides water, which can be used to
 fill empty buckets.
 </Description>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
-      <Category>Masonry_Table</Category>
+      <Category>SmallBlocks</Category>
       <Prerequisites>
         <Item Amount="3" Tag="Universal_Stone" />
         <Item Amount="2" Tag="Universal_Stick" />
@@ -4409,7 +4996,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Wall</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4427,7 +5014,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4445,7 +5032,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Wall Arch</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="2" Tag="Pristine_Stick" />
         <Item Amount="12" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4463,7 +5050,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="12" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="12" Tag="Pristine_Stick" />
         <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4481,7 +5068,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="14" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="14" Tag="Pristine_Stick" />
         <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4499,7 +5086,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="13" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="13" Tag="Pristine_Stick" />
         <Item Amount="25" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4517,7 +5104,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="4" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4535,7 +5122,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="2" Tag="Pristine_Stick" />
         <Item Amount="6" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4553,7 +5140,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4571,7 +5158,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="6" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4589,7 +5176,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
         <Item Amount="24" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4607,7 +5194,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="1" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="1" Tag="Pristine_Stick" />
         <Item Amount="4" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4625,7 +5212,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Wall Arch</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4642,7 +5229,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Stairs</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
         <Item Amount="10" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4659,7 +5246,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Spiral Stairs</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
         <Item Amount="11" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4676,7 +5263,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Spiral Stairs</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
         <Item Amount="11" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4693,7 +5280,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Corner Stairs</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
         <Item Amount="11" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4710,7 +5297,7 @@ fill empty buckets.
       <DisplayName>Masonry: Rounded Stone Block</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4727,7 +5314,7 @@ fill empty buckets.
       <DisplayName>Masonry: Large Rounded Stone Block</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="15" Tag="Pristine_Stick" />
         <Item Amount="30" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4744,7 +5331,7 @@ fill empty buckets.
       <DisplayName>Masonry: Rounded Stone Wall</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="4" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4761,7 +5348,7 @@ fill empty buckets.
       <DisplayName>Masonry: Rounded Stone Window</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="8" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4778,7 +5365,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Slope</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="2" Tag="Pristine_Stick" />
         <Item Amount="7" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4795,7 +5382,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Slope Corner</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="2" Tag="Pristine_Stick" />
         <Item Amount="6" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4812,7 +5399,7 @@ fill empty buckets.
       <DisplayName>Masonry: Large Stone Slope</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="4" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4829,7 +5416,7 @@ fill empty buckets.
       <DisplayName>Masonry: Round Interior Door</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4846,7 +5433,7 @@ fill empty buckets.
       <DisplayName>Masonry: Round Interior Wall</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
         <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4863,7 +5450,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Arch Ceiling</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="5" Tag="Pristine_Stick" />
         <Item Amount="10" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4880,7 +5467,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Wall Slope</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="6" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4897,7 +5484,7 @@ fill empty buckets.
       <DisplayName>Masonry: Large Round Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Tag="Pristine_Stick" />
         <Item Amount="35" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4914,7 +5501,7 @@ fill empty buckets.
       <DisplayName>Masonry: Round Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="15" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="15" Tag="Pristine_Stick" />
         <Item Amount="26" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4931,7 +5518,7 @@ fill empty buckets.
       <DisplayName>Masonry: Straight Stone Machicolations</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="11" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="11" Tag="Pristine_Stick" />
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4948,7 +5535,7 @@ fill empty buckets.
       <DisplayName>Masonry: Small Round Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Tag="Pristine_Stick" />
         <Item Amount="22" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4965,7 +5552,7 @@ fill empty buckets.
       <DisplayName>Masonry: Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="8" Tag="Pristine_Stick" />
         <Item Amount="13" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4982,7 +5569,7 @@ fill empty buckets.
       <DisplayName>Masonry: Diagonal Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="10" Tag="Pristine_Stick" />
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -4999,7 +5586,7 @@ fill empty buckets.
       <DisplayName>Masonry: Large Round Stone Ledges</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Tag="Pristine_Stick" />
         <Item Amount="28" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -5016,7 +5603,7 @@ fill empty buckets.
       <DisplayName>Masonry: Tile Roof Tops</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="20" Tag="Pristine_Stick" />
         <Item Amount="12" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -5033,7 +5620,7 @@ fill empty buckets.
       <DisplayName>Masonry: Tile Roofs</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="25" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="25" Tag="Pristine_Stick" />
         <Item Amount="20" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -5050,7 +5637,7 @@ fill empty buckets.
       <DisplayName>Masonry: Tile Roof Cone</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="25" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="25" Tag="Pristine_Stick" />
         <Item Amount="17" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -5073,7 +5660,7 @@ fill empty buckets.
       <DisplayName>Masonry: Sandstone Wall</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -5091,7 +5678,7 @@ fill empty buckets.
       <DisplayName>Masonry: Sandstone Door</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -5108,7 +5695,7 @@ fill empty buckets.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="9" Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -5126,7 +5713,7 @@ fill empty buckets.
       <DisplayName>Masonry: Sandstone Cube</DisplayName>
       <Category>Masonry_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="12" Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
       </Prerequisites>
       <Results>
@@ -5164,7 +5751,7 @@ and construct them faster.</Description>
       <Prerequisites>
         <Item Amount="25" Type="SchematicItem" Subtype="Schematic_IronOre" />
         <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
-        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="16" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -5280,7 +5867,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Blacksmithing_Book</Category>
       <Prerequisites>
-        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Tag="Pristine_Stick" />
         <Item Amount="1" Type="SchematicItem" Subtype="Schematic_IronOre" />
       </Prerequisites>
       <Results>
@@ -5296,7 +5883,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="3" Tag="Universal_Stick" />
         <Item Amount="1" Type="InventoryItem" Subtype="PartsMetal" />
       </Prerequisites>
       <Results>
@@ -5316,7 +5903,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Blacksmithing_Book</Category>
       <Prerequisites>
-        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="2" Tag="Pristine_Stick" />
         <Item Amount="1" Type="SchematicItem" Subtype="Schematic_IronOre" />
       </Prerequisites>
       <Results>
@@ -5332,7 +5919,7 @@ walls by a large amount.</Description>
       <Icon>Textures\GUI\Icons\Cubes\WallTorch.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="2" Tag="Universal_Stick" />
         <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
       </Prerequisites>
       <Results>
@@ -5383,7 +5970,7 @@ walls by a large amount.</Description>
       <DisplayName>Iron Axe</DisplayName> 
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="2" Tag="Universal_Stick" />
       <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
@@ -5419,7 +6006,7 @@ at a faster rate then stone axes.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HammerIron.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="2" Tag="Universal_Stick" />
       <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
@@ -5455,7 +6042,7 @@ at a faster rate then wooden hammers.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronPickaxe.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="2" Tag="Universal_Stick" />
       <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
@@ -5491,8 +6078,7 @@ at a faster rate then wooden hammers.</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronShovel.dds</Icon>
     <Category>Anvil</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="ScrapWood" />
-      <Item Amount="1" Tag="Timber" />
+        <Item Amount="3" Tag="Universal_Stick" />
       <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
@@ -5524,7 +6110,7 @@ at a faster rate then wooden hammers.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="3" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="3" Tag="Universal_Stick" />
       <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
@@ -5560,7 +6146,7 @@ for a longer time then Stone Plows.</Description>
       <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
       <Category>Anvil</Category>
       <Prerequisites>
-        <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="3" Tag="Universal_Stick" />
       <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
       </Prerequisites>
       <Results>
@@ -5648,7 +6234,7 @@ Most commonly used for the Crafting profession.</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\LandscapingStake.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="Sticks" />
+        <Item Amount="2" Tag="Universal_Stick" />
       <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
     </Prerequisites>
     <Results>
@@ -5824,7 +6410,7 @@ foes at close range.</Description>
 <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Nomadic_Book" />
-    <DisplayName>Basic Survival Guide</DisplayName>
+    <DisplayName>Ways of The Nomad</DisplayName>
     <Description>
     "The realm poses many dangers, but just
     as many opportunities. Mastering survial
@@ -5861,14 +6447,10 @@ break through." -Jarl Aksel, Siege of Reyjk
 
 Learning this will unlock construction 
 of wooden barricades, perfect for an 
-encampment. This is essential!
-
-
-((Hint: Search small trees and small
-pine trees to aquire Pristine Sticks))</Description>
+encampment. This is essential!</Description>
     <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="1" Tag="Pristine_Stick" />
+      <Item Amount="2" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" />
@@ -5886,7 +6468,7 @@ pine trees to aquire Pristine Sticks))</Description>
 perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="Log" />
+      <Item Amount="10" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="LongBarricade" />
@@ -5904,7 +6486,7 @@ perfect for an encampment!</Description>
 barricade, perfect for an encampment!</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="1" Type="InventoryItem" Subtype="Log" />
+      <Item Amount="10" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="SmallBarricade" />
@@ -6002,8 +6584,7 @@ tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\FenceGate.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="8" Tag="Timber" />
-      <Item Amount="5" Tag="Universal_Stick" />
+      <Item Amount="10" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="MyObjectBuilder_CubeBlock" Subtype="FenceGate" />
@@ -6019,7 +6600,7 @@ tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="8" Tag="Universal_Stick" />
+      <Item Amount="4"  Tag="Universal_Brush" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
@@ -6127,7 +6708,7 @@ provides a bed, some storage, and a place to change your clothes.</Description>
     <Category>SmallBlocks</Category>
     <Prerequisites>
       <Item Amount="1" Type="CubeBlock" Subtype="NomadBed" />
-      <Item Amount="6" Type="InventoryItem" Subtype="BranchesConiferous" />
+      <Item Amount="6" Tag="Universal_Brush" />
       <Item Amount="4" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
@@ -6173,4 +6754,282 @@ provides a bed, some storage, and a place to change your clothes.</Description>
   </Definition>
   
 <!-- =================================================================================== -->
+
+				      <!-- Log Walls -->
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLog_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLog.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLog</DisplayName>
+    <Description></Description>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLog" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogWithWindow_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLogWithWindow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLogWithWindow</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogWithWindow" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogWithEntrance_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLogWithEntrance.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLogWithEntrance</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogWithEntrance" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogSlopeLeft_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallWoodLogSlopeLeft.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Log Sloped Wall</DisplayName>
+    <Description></Description>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogSlopeLeft" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogSlopeTop_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallWoodLogSlopeTop.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLogSlopeTop</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogSlopeTop" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogPillar_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallWoodLogCorner.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLogPillar</DisplayName>
+    <Description></Description>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogPillar" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+
+
+				      <!-- Norden Walls -->
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClay_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLog.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Wall.dds</Icon>
+    <DisplayName>Norden Wall</DisplayName>
+    <Description></Description>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClay" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClayWithWindow_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLogWithWindow.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Window.dds</Icon>
+    <DisplayName>Norden Window</DisplayName>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClayWithWindow" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClayWithEntrance_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Door.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Norden Door</DisplayName>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClayWithEntrance" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClaySlope_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\House Half Timber Triangle.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Norden Sloped Wall</DisplayName>
+    <Description></Description>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClaySlope" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClaySlopeTop_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallWoodLogSlopeTop.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\HouseTimberTriangleOdd.dds</Icon>
+    <DisplayName>Norden Triangle Wall</DisplayName>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClaySlopeTop" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- =================================================================================== -->
+				      <!-- Milsestone -->
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />
+      <DisplayName>Ancestral Knowledge</DisplayName>
+    <Description>
+"Ancestral knowledge passed down through generations,
+it is now the time to make sure of it."
+
+Begins the Research Tree...
+</Description>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Category>Milestone</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Ancestral_Knowledge_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />
+      <DisplayName>Teachings of The Nomad</DisplayName>
+    <Description>
+"Migration is a daily part of life, and 
+inventing the wheel will make life much 
+easier."
+
+...researches carts...
+</Description>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Category>Milestone</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Teachings_Of_The_Nomad_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Establishing_Encampment_Milestone" />
+      <DisplayName>Establish The Encampment</DisplayName>
+    <Description>
+"Establishing the Encampment guarantees our
+safty when traveling abroad or claiming new
+land."
+</Description>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Category>Milestone</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Establishing_Encampment_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Founding_Our_Settlement_Milestone" />
+      <DisplayName>Founding Our Settlement</DisplayName>
+    <Description>
+"We stake our claim into the ground,
+declaring our sovergnty."
+
+...researches Settlements.
+</Description>
+      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+      <Category>Milestone</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Founding_Our_Settlement_Schematic" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
+<!-- =================================================================================== -->
+
 </Definitions>

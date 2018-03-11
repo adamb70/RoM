@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="ClubStudded"/>
+
+    <!-- Display -->
+
+    <DisplayName>DisplayName_Weapon_Mace</DisplayName>
+    <Description>Description_Weapon_Mace</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Volume>3</Volume>
+    <Model>Models\Weapons\Mace.mwm</Model>
+
+    <PhysicalMaterial>Mace</PhysicalMaterial>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <MaxDurability>200</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.464</X>
+        <Y>-1.0</Y>
+        <Z>-0.455</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.131</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+
+    <!-- Behaviors -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="ClubStudded"/>
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="ClubStudded"/>
+
+    <LeftSwing>
+      <Range>1.8</Range>
+      <Damage>20</Damage>
+      <Arc>30</Arc>
+
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <Animation>Attack</Animation>
+      <SwingSoundDelay>0.3</SwingSoundDelay>
+      <SwingSound>ToolSwish</SwingSound>
+    </LeftSwing>
+
+    <RightSwing>
+      <Range>1.8</Range>
+      <Damage>16</Damage>
+      <Arc>30</Arc>
+
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <Animation>Attack</Animation>
+      <SwingSoundDelay>0.3</SwingSoundDelay>
+      <SwingSound>ToolSwish</SwingSound>
+    </RightSwing>
+
+    <ForwardSwing>
+      <Range>1.8</Range>
+      <Damage>16</Damage>
+      <Arc>30</Arc>
+
+      <HitTime>.6</HitTime>
+      <AnimationTime>1</AnimationTime>
+      <Animation>Attack</Animation>
+      <SwingSoundDelay>0.3</SwingSoundDelay>
+      <SwingSound>ToolSwish</SwingSound>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.1</BlockRaiseTime>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClubStudded"/>
+    <DisplayName>DisplayName_Weapon_Mace</DisplayName>
+    <Description>Description_Weapon_Mace</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
+    <Category>Anvil_Iron</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Timber" />
+      <Item Amount="1" Tag="Ingot" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="ClubStudded" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+</Definitions>

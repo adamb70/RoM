@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="MilitaryStoneGates" />
+    <DisplayName>DisplayName_ResearchNode_MilitaryStoneGates</DisplayName>
+    <Description>Description_ResearchNode_MilitaryStoneGates</Description>
+    <Icon>Textures\GUI\Icons\Schematics\StoneGates.dds</Icon>
+    <Quest Type="QuestDefinition" Subtype="MilitaryStoneGates" />
+    <Research Type="ResearchDefinition" Subtype="MilitaryStoneGates" />
+    <Parent Type="ResearchNodeDefinition" Subtype="MilitaryStoneWalls" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="MilitaryStoneGates" />
+
+    <DisplayName>DisplayName_Quest_MilitaryStoneGates</DisplayName>
+    <Description>Description_Quest_MilitaryStoneGates</Description>
+    <Icon>Textures\Research\Military\GateStone\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Research</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Failed" SoundCueId="QuestCompleted" />
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Completed" SoundCueId="QuestCompleted" />
+
+    <Step>
+      <FullDescription>Description_Quest_MilitaryStoneGates_Step01</FullDescription>
+	  <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem" Subtype="StoneLarge" Amount="6" AreaInventory="Included"/>
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="ScrapWood" Amount="15" AreaInventory="Included"/>
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Timber" Amount="30" AreaInventory="Included"/>
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Plank" Amount="20" AreaInventory="Included"/>
+        <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem" Subtype="PartsMetal" Amount="40" AreaInventory="Included"/>
+	  </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_MilitaryStoneGates_Step01_Unlock" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+	  <!-- It's just place a gate. The condition already explains that -->
+      <!-- <FullDescription>Description_Quest_MilitaryStoneGates_Step02</FullDescription> -->
+      <Condition xsi:type="Quest.Conditions.PlaceBlock" Amount="1">
+        <Block Type="CubeBlock" Subtype="PortcullisWoodWithPillarsStone" />
+        <Block Type="CubeBlock" Subtype="DrawbridgeWoodWithArchStone" />
+      </Condition>
+      <Image>Textures\Research\Military\GateStone\01.png</Image>
+      <Image>Textures\Research\Military\GateStone\02.png</Image>
+    </Step>
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="MilitaryStoneGates" />
+    <DisplayName>DisplayName_Research_MilitaryStoneGates</DisplayName>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicMilitaryStoneGates"/>
+    <DisplayName>DisplayName_Schematic_MilitaryStoneGates</DisplayName>
+    <Description>Description_Schematic_MilitaryStoneGates</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\StoneGates.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollMilitary.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicMilitaryStoneGates" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicMilitaryStoneGates" />
+    <DisplayName>DisplayName_Schematic_MilitaryStoneGates</DisplayName>
+    <Description>Description_Schematic_MilitaryStoneGates</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\StoneGates.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollMilitary.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="Null" />
+  </Definition>
+</Definitions>

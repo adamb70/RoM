@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="EconomicMilling" />
+    <DisplayName>DisplayName_ResearchNode_EconomicMilling</DisplayName>
+    <Description>Description_ResearchNode_EconomicMilling</Description>
+    <Icon>Textures\GUI\Icons\Schematics\Milling.dds</Icon>
+    <Quest Type="QuestDefinition" Subtype="EconomicMilling" />
+    <Research Type="ResearchDefinition" Subtype="EconomicMilling" />
+    <Parent Type="ResearchNodeDefinition" Subtype="EconomicSeeding" />
+    <Parent Type="ResearchNodeDefinition" Subtype="EconomicFineCeramics" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="EconomicMilling" />
+
+    <DisplayName>DisplayName_Quest_EconomicMilling</DisplayName>
+    <Description>Description_Quest_EconomicMilling</Description>
+    <Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Research</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Failed" SoundCueId="QuestCompleted" />
+
+
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Completed" SoundCueId="QuestCompleted" />
+
+
+
+    <Step>
+      <FullDescription>Description_Quest_EconomicMilling_Step00</FullDescription>
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Timber" Amount="5" AreaInventory="Included" />
+
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_EconomicMilling_Step00_Complete" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicMilling_Step01</FullDescription>
+          <Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="MillStone" Amount="1" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicMilling_Step02</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem" Subtype="StrawsWheat" Amount="8" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicMilling_Step03</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="OR">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="InventoryItem" Subtype="FlourWheat" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem" Subtype="FlourWheat" Amount="1" IsHidden="true" />
+      </Condition>
+    </Step>
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="EconomicMilling" />
+    <DisplayName>DisplayName_Research_EconomicMilling</DisplayName>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicEconomicMilling"/>
+    <DisplayName>DisplayName_Schematic_EconomicMilling</DisplayName>
+    <Description>Description_Schematic_EconomicMilling</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Milling.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicEconomicMilling" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicEconomicMilling" />
+    <DisplayName>DisplayName_Schematic_EconomicMilling</DisplayName>
+    <Description>Description_Schematic_EconomicMilling</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Milling.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="Null" />
+  </Definition>
+</Definitions>

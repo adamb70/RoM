@@ -4,30 +4,70 @@
   <!-- Barbarian Loot -->
   <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
 	  <Id Type="LootTableDefinition" Subtype="BarbarianBagContent" />
-	  <Rolls>2</Rolls>
+	  <Rolls>3</Rolls>
 
-    <Item Type="ConsumableItem" Subtype="Berries" Weight="2.5" Amount="8" />
-    <Item Type="ConsumableItem" Subtype="Mushrooms" Weight="2.5" Amount="8" />
-    <Item Type="ConsumableItem" Subtype="Roots" Weight="2.5" Amount="8" />
-    <Item Type="ConsumableItem" Subtype="Herbs" Weight="2.5" Amount="5" />    
-    <Item Type="ConsumableItem" Subtype="Goulash" Weight="1" Amount="1" />
-    <Item Type="ConsumableItem" Subtype="SoupMushroom" Weight="2" Amount="2" />
-    <Item Type="ConsumableItem" Subtype="Salad" Weight="2" Amount="2" />
-    <Item Type="ConsumableItem" Subtype="SteakWithMushrooms" Weight="2" Amount="2" />
-    <Item Type="ConsumableItem" Subtype="RootsWithShrooms" Weight="2" Amount="2" />    
-    <Item Type="ConsumableItem" Subtype="Bandage" Weight="3" Amount="5" />
+<!-- Normal Drops -->
+    <Item Type="ConsumableItem" Subtype="Berries" 				Weight="70" 	Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Mushrooms" 				Weight="70" 	Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Roots" 				Weight="70" 	Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Herbs" 				Weight="70" 	Amount="5" />    
+    <Item Type="ConsumableItem" Subtype="Goulash" 				Weight="45" 	Amount="1" />
+    <Item Type="ConsumableItem" Subtype="SoupMushroom" 				Weight="60" 	Amount="2" />
+    <Item Type="ConsumableItem" Subtype="Salad" 				Weight="60" 	Amount="2" />
+    <Item Type="ConsumableItem" Subtype="SteakWithMushrooms" 			Weight="60" 	Amount="2" />
+    <Item Type="ConsumableItem" Subtype="RootsWithShrooms" 			Weight="60" 	Amount="2" />    
+    <Item Type="ConsumableItem" Subtype="Bandage" 				Weight="60" 	Amount="2" />
 
-    <Item Type="HandItem" Subtype="HammerWood" Weight="1" />
-    <Item Type="HandItem" Subtype="PickaxeCopper" Weight="1" />
-    <Item Type="HandItem" Subtype="AxeCopper" Weight="1" />
+    <Item Type="HandItem" Subtype="HammerWood" 					Weight="45" />
+    <Item Type="HandItem" Subtype="PickaxeCopper" 				Weight="45" />
+    <Item Type="HandItem" Subtype="AxeCopper" 					Weight="45" />
+    <Item Type="EquipmentItem" Subtype="Torch" 					Weight="60" />
 
-    <Item Type="EquipmentItem" Subtype="Torch" Weight="2" />
+    <Item Type="InventoryItem" Subtype="Gold_Coins" 				Weight="30" 	Amount="75" />
 
-    <Item Type="CubeBlock" Subtype="Skull" AlwaysDrops="true" IsUnique="true" />
-	<Item Type="LootTableDefinition" Subtype="MapPieces" Weight="1" />
-	<Item Type="LootTableDefinition" Subtype="Map" Weight="0.1" />
 
-	<Item Weight="1" />
+<!-- Always Drop -->
+    <Item Type="CubeBlock" Subtype="Skull" 					AlwaysDrops="true" IsUnique="true" />
+    <Item Type="ConsumableItem" Subtype="Bones" 				AlwaysDrops="true" IsUnique="true" />
+
+	<Item Weight="100" />
+  </Definition>
+
+
+  <!-- Apothecary Barbarian Loot -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+	  <Id Type="LootTableDefinition" Subtype="ApothecaryBarbarianBagContent" />
+	  <Rolls>3</Rolls>
+<!-- Normal Drops -->
+    <Item Type="ConsumableItem" Subtype="Berries" 					Weight="30" 	Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Mushrooms" 					Weight="30" 	Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Roots" 					Weight="30" 	Amount="8" />
+    <Item Type="ConsumableItem" Subtype="Herbs" 					Weight="30" 	Amount="5" />     
+    <Item Type="ConsumableItem" Subtype="Bandage" 					Weight="70" 	Amount="4" />
+    <Item Type="ConsumableItem" Subtype="Minor_Potion_Strength" 			Weight="50" 	Amount="2" />
+
+
+    <Item Type="InventoryItem" Subtype="Gold_Coins" 					Weight="30" 	Amount="75" />
+
+<!-- Always Drop -->
+    <Item Type="CubeBlock" Subtype="Skull" 						AlwaysDrops="true" IsUnique="true" />
+    <Item Type="ConsumableItem" Subtype="Bones" 					AlwaysDrops="true" IsUnique="true" />
+
+<!-- Pristines -->
+    <Item Type="SchematicItem" Subtype="Schematic_Berries" 				Weight="5" 	Amount="3" />
+    <Item Type="SchematicItem" Subtype="Schematic_Cabbage" 				Weight="5" 	Amount="3" />
+    <Item Type="SchematicItem" Subtype="Schematic_Mushrooms" 				Weight="5" 	Amount="3" />
+    <Item Type="SchematicItem" Subtype="Schematic_Herbs" 				Weight="5" 	Amount="3" />
+    <Item Type="SchematicItem" Subtype="Schematic_Norden_Spalt" 			Weight="5" 	Amount="3" />
+    <Item Type="SchematicItem" Subtype="Schematic_Norden_Roots" 			Weight="5" 	Amount="3" />
+    <Item Type="SchematicItem" Subtype="Schematic_Norden_Barley" 			Weight="5" 	Amount="3" />
+
+<!-- Schematics -->
+    <Item Type="SchematicItem" Subtype="Schematic_Minor_Potion_Strength" 		Weight="1" 	Amount="1" />
+    <Item Type="SchematicItem" Subtype="Bandage_Schematic" 				Weight="2.5" 	Amount="1" />
+
+<!-- -->
+	<Item Weight="100" />
   </Definition>
 
   <!-- Guaranteed at least 2 meat -->
@@ -43,24 +83,16 @@
   <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
 	  <Id Type="LootTableDefinition" Subtype="RoMBuckBagContent" />
 	  <Rolls>2</Rolls>
-	  <!-- AlwaysDrops and IsUnique both true, doesn't count against rolls -->
+	  <!-- *** AlwaysDrops and IsUnique both true, doesn't count against rolls *** -->
 	  <Item Type="InventoryItem" Subtype="Antlers" AlwaysDrops="true" IsUnique="true" />
 	  <Item Type="ConsumableItem" Subtype="Meat" AlwaysDrops="true" IsUnique="true" />
-	  <!-- The rest does count against rolls -->
+	  <!-- *** The rest does count against rolls  *** -->
 	  <Item Type="ConsumableItem" Subtype="Meat" Weight="2" />
 	  <Item Type="InventoryItem" Subtype="PeltDeer" Weight="1.5" />
 	  <Item Weight="2" />
   </Definition>
 
-  <!-- Stone pile -->
-  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
-    <Id Type="LootTableDefinition" Subtype="StonePile" />
-    <Rolls>1</Rolls>
-    <Item Type="InventoryItem" Subtype="StoneSmall" Amount="2" AlwaysDrops="true" IsUnique="true" />
-    <Item Type="InventoryItem" Subtype="StoneSmall" Amount="1" Weight="50" />
 
-    <Item Weight="42" />
-  </Definition>
   
   <!-- Large SandStone -->
   <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
@@ -70,5 +102,256 @@
 
     <Item Weight="42" />
   </Definition>
-  
+
+
+<!-- ========================================================================================================================================== -->
+				   			 <!--  Growable Enviornments  -->
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Herbs" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Herbs" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Herbs" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="CrimsonThristle" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="CrimsonThristle" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_CrimsonThristle" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Pumpkin" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Pumpkin" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Pumpkin" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Berries" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Berries" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Berries" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Blue_Berry" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Blue_Berry" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Blue_Berry" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Mushrooms" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Mushrooms" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Mushrooms" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="HighlandCaps" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="HighlandCaps" 			AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_HighlandCaps" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="DeadmanMushroom" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="DeadmanMushroom" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_DeadmanMushroom" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Norden_Spalt" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Norden_Spalt" 			AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Norden_Spalt" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Norden_Roots" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Norden_Roots" 			AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Norden_Roots" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Norden_Barley" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Norden_Barley" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Norden_Barley" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="SingleIronOre" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="OreIron" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_IronOre" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="StonePile" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="StoneSmall" 			AlwaysDrops="true" IsUnique="true" />	Amount="3" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_StoneOreSmall" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="SingleStone" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="StoneSmall" 			AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_StoneOreSmall" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="SingleSandStone" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="SandStoneOreSmall" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_SandStoneOreSmall" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Enchanted_StonePile" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="Enchanted_StoneOreSmall" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Enchanted_StoneOreSmall" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Enchanted_SingleStone" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="Enchanted_StoneOreSmall" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Enchanted_StoneOreSmall" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Roots" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Roots" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Roots" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Cabbage" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="Cabbage" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Cabbage" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="RedCabbage" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="RedCabbage" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_RedCabbage" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="StrawsFlax" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="StrawsFlax" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Flax" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="StrawsWheat" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="StrawsWheat" 			AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Wheat" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="FruitsOpuntia" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="FruitsOpuntia" 		AlwaysDrops="true" IsUnique="true" />	Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_FruitsOpuntia" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+
+
+
+
+
+				   			 <!--  Tree Enviornments  -->
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Sticks" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="Sticks" 				AlwaysDrops="true" IsUnique="true" />	Amount="2" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_TreeSmall_WoodenSticks" 	Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ===================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="PineCone" />
+  	<Rolls>1</Rolls>
+	  <Item Type="ConsumableItem"	Subtype="TreeSmall_Seed" 			Weight="80" />	 			Amount="1" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_TreeSmall_Seed" 		Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="KharidianSticks" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="KharidianSticks" 			AlwaysDrops="true" IsUnique="true" />	Amount="2" />
+	  <!-- Roughly 20% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Kharidian_Sticks" 		Weight="20" />	 			Amount="1" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+
+
+
+
+
+
 </Definitions>

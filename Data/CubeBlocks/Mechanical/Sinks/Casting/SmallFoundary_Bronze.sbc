@@ -3,10 +3,12 @@
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="SmallFoundary_Bronze" />
     <DisplayName>Small Foundary Bronze</DisplayName>
-    <Description>Description_Block_MillstoneMechanical</Description>
+    <Description>This Bronze Foundary castes molten ore into 
+manufactured goods.</Description>
     <BlockPairName>SmallFoundary_Bronze</BlockPairName>
     <Public>true</Public>
     <Icon>Textures\GUI\Icons\Cubes\Mechanical\MillStone.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\IngotBronze.dds</Icon>
     <CubeSize>Large</CubeSize>
     <BlockTopology>TriangleMesh</BlockTopology>
     <Size x="1" y="1" z="1" />
@@ -20,12 +22,10 @@
       </Model> 
     </BuildProgressModels>
     <Components>
-      <Component Type="CubeBlock" Subtype="Timber10" Count="8" />
-      <Component Type="CubeBlock" Subtype="TimberRound10" Count="2" />
-      <Component Type="CubeBlock" Subtype="MillStone" Count="1" />
-      <Component Type="InventoryItem" Subtype="JarClayWithLinseedOil" Count="1" />
+      <Component Type="InventoryItem" Subtype="Small_FactoryKit" Count="1" />
+      <Component Type="InventoryItem" Subtype="Wood_Gear" Count="5" />
     </Components>
-    <CriticalComponent Type="CubeBlock" Subtype="MillStone" Index="0" />
+    <CriticalComponent Type="InventoryItem" Subtype="Wood_Gear" Index="0" />
     <MaxIntegrity>800</MaxIntegrity>
     <MountPoints>
       <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
@@ -76,8 +76,13 @@
     <MaxItemCount>1</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
     <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="true">
-      <Id Type="ToolheadItem" Subtype="MillstoneCoarse" />
-      <Id Type="ToolheadItem" Subtype="MillstoneSmooth" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_Bronze_Gear_Bronze_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_BronzeAxe_Bronze_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_HammerBronze_Bronze_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_PickaxeBronze_Bronze_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_PlowBronze_Bronze_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_SwordBronze_Bronze_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_ShovelBronze_Bronze_Toolhead" />
     </Constraint>
   </Definition>
 <!-- ================================================================================ -->
@@ -112,8 +117,13 @@
 
     <ToolheadInventory>SmallFoundary_BronzeToolheadInventory</ToolheadInventory>
     <AcceptedToolheads>
-      <Toolhead Type="ToolheadItem" Subtype="MillstoneCoarse" />
-      <Toolhead Type="ToolheadItem" Subtype="MillstoneSmooth" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_Bronze_Gear_Bronze_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_BronzeAxe_Bronze_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_HammerBronze_Bronze_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_PickaxeBronze_Bronze_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_PlowBronze_Bronze_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_SwordBronze_Bronze_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_ShovelBronze_Bronze_Toolhead" />
     </AcceptedToolheads>
   </Definition>
 <!-- ================================================================================ -->

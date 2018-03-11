@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="VR.EI.BotCollection">
+    <Id Type="MyObjectBuilder_BotCollectionDefinition" Subtype="Deer" />
+    <Bot Probability="1">
+      <Id Type="MyObjectBuilder_AnimalBot" Subtype="NormalDeer"/>
+    </Bot>
+    <Bot Probability="1">
+      <Id Type="MyObjectBuilder_AnimalBot" Subtype="NormalBuck"/>
+    </Bot>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.BotCollection">
+    <Id Type="MyObjectBuilder_BotCollectionDefinition" Subtype="DeerNothern" />
+    <Bot Probability="1">
+      <Id Type="MyObjectBuilder_AnimalBot" Subtype="NormalBuck"/>
+    </Bot>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.BotCollection">
+    <Id Type="MyObjectBuilder_BotCollectionDefinition" Subtype="Barbarian" />
+    <Bot Probability=".1">
+      <Id Type="MyObjectBuilder_HumanoidBot" Subtype="BrokenSwordBarbarian"/>
+    </Bot>
+    <Bot Probability="0.4">
+      <Id Type="MyObjectBuilder_HumanoidBot" Subtype="NormalBarbarian"/>
+    </Bot>    
+    <Bot Probability="0.4">
+      <Id Type="MyObjectBuilder_HumanoidBot" Subtype="ApothecaryBarbarian"/>
+    </Bot>    
+    <Bot Probability="0.4">
+      <Id Type="MyObjectBuilder_HumanoidBot" Subtype="SwordBarbarian"/>
+    </Bot>
+  </Definition>
+</Definitions>

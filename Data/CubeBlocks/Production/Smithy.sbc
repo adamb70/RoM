@@ -20,8 +20,8 @@
     </BuildProgressModels>
     <PhysicalMaterial>Rock</PhysicalMaterial>
     <Components>
-      <Component Tag="Log" Count="1" />
-      <Component Tag="Timber" Count="4" />
+      <Component Tag="Universal_Log" Count="1" />
+      <Component Tag="Universal_Timber" Count="4" />
       <Component Tag="Ingot" Count="5" />
     </Components>
     <CriticalComponent Tag="Ingot" Index="0" />
@@ -52,9 +52,9 @@
     <Icon>Textures\GUI\Icons\Cubes\Smithy.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
-      <Item Amount="5" Tag="Ingot" />
-      <Item Amount="1" Tag="Log" />
+      <Item Amount="4" Tag="Universal_Timber" />
+      <Item Amount="1" Type="CubeBlock" Subtype="Anvil" />
+      <Item Amount="1" Tag="Universal_Log" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Smithy" />

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="HumbleBeginnings" />
+	
+	<DisplayName>DisplayName_Quest_HumbleBeginnings</DisplayName>
+	<Description>Description_Quest_HumbleBeginnings</Description>
+	<Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+	<Tag>Tutorial</Tag>
+	
+	<IsAbandonable>true</IsAbandonable>
+	<IsRepeatable>false</IsRepeatable>
+
+	
+
+	<Step>
+		<FullDescription>Description_Quest_HumbleBeginnings_Step01</FullDescription>
+		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+			<Condition xsi:type="Quest.Conditions.Gather" Tag="ScrapWood" Amount="3" />
+			<Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem" Subtype="StoneSmall" Amount="1">
+				<HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="SingleStone" />
+				<HighlightedEnvironmentItem Type="GatherableDefinition" Subtype="StonePile" />
+			</Condition>
+		</Condition>
+		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+	</Step>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="SettlingDown" />
+	
+	<DisplayName>DisplayName_Quest_SettlingDown</DisplayName>
+	<Description>Description_Quest_SettlingDown</Description>
+	<Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+	<Tag>Tutorial</Tag>
+	
+	<IsAbandonable>true</IsAbandonable>
+	<IsRepeatable>false</IsRepeatable>
+	
+	<!-- In case of abandon, unlock research -->
+
+	<Step>
+		<FullDescription>Description_Quest_SettlingDown_Step01</FullDescription>
+		<Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="1" />
+		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+	</Step>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="SpringCleaning" />
+	
+	<DisplayName>DisplayName_Quest_SpringCleaning</DisplayName>
+	<Description>Description_Quest_SpringCleaning</Description>
+	<Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+	<Tag>Tutorial</Tag>
+	
+	<IsAbandonable>true</IsAbandonable>
+	<IsRepeatable>false</IsRepeatable>
+	
+
+
+	<Step>
+		<FullDescription>Description_Quest_SpringCleaning_Step01</FullDescription>
+		<Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="1" />
+		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+	</Step>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="BrighterTomorrow" />
+	
+	<DisplayName>DisplayName_Quest_BrighterTomorrow</DisplayName>
+	<Description>Description_Quest_BrighterTomorrow</Description>
+	<Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+	<Tag>Tutorial</Tag>
+	
+	<IsAbandonable>true</IsAbandonable>
+	<IsRepeatable>false</IsRepeatable>
+	
+
+
+	<Step>
+		<FullDescription>Description_Quest_BrighterTomorrow_Step01</FullDescription>
+		<Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="1" />
+	</Step>
+  </Definition>
+</Definitions>

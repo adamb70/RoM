@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Crossbow -->
+
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="CrossbowWood"/>
+
+    <!-- Display -->
+
+    <DisplayName>DisplayName_Weapon_CrossbowWood</DisplayName>
+    <Description>Description_Weapon_CrossbowWood</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\CrossbowWood.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\CrossbowWood.mwm</Model>
+
+    <PhysicalMaterial>Axe</PhysicalMaterial>
+    <!-- TODO -->
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>40</MaxDurability>
+
+    <Position>
+	  <Slot>GhostHand</Slot>
+      <Slot>MainHand</Slot>
+      <Slot>OffHand</Slot>
+    </Position>
+	
+	<Animation>crossbow</Animation>
+	<EquippedTransformFps>
+	  <Position>
+	    <X>0.08</X>
+		<Y>-0.16</Y>
+		<Z>-0.05</Z>
+	  </Position>
+	  <Orientation>
+	    <X>0</X>
+		<Y>0.7071</Y>
+		<Z>0.7071</Z>
+		<W>0</W>
+	  </Orientation>
+	</EquippedTransformFps>
+	<DummyMapping Name="crossbow_dumb_right" AnimationVariable="#crossbowright"/>
+	<DummyMapping Name="crossbow_dumb_left" AnimationVariable="#crossbowleft"/>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="RangedWeaponBehaviorDefinition" Subtype="CrossbowWood"/>
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_RangedWeaponBehaviorDefinition">
+    <Id Type="RangedWeaponBehaviorDefinition" Subtype="CrossbowWood"/>
+    <Projectile Type="ProjectileItem" Subtype="Wood_Bolts"/>
+    <Projectile Type="ProjectileItem" Subtype="CrossbowBolt_RoM"/>
+
+    <ShootTime>70</ShootTime>
+    <ReloadTime>5000</ReloadTime>
+    <ShootSoundName>ToolCrossbShot</ShootSoundName>
+    <ReloadSoundName>ToolCrossbReload</ReloadSoundName>
+	<ShootAnimation>shoot</ShootAnimation>
+	<ModelReadyToShoot>Models\Weapons\CrossbowWood_loaded.mwm</ModelReadyToShoot>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowWood"/>
+    <DisplayName>DisplayName_Weapon_CrossbowWood</DisplayName>
+    <Description>Description_Weapon_CrossbowWood</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\CrossbowWood.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Timber" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="CrossbowWood" />
+    </Results>
+    <CraftingTime Seconds="15"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CrossbowWoodSmithy"/>
+    <DisplayName>DisplayName_Weapon_CrossbowWood</DisplayName>
+    <Description>Description_Weapon_CrossbowWood</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\CrossbowWood.dds</Icon>
+    <Category>Sm</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Timber" />
+      <Item Amount="2" Tag="Plank" />
+      <Item Amount="4" Type="InventoryItem" Subtype="PartsMetal" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="CrossbowWood" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+</Definitions>

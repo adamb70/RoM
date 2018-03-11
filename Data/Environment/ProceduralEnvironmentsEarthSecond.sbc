@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- NEW PLANET ENVIRONMENT-->
+
+  <Definition xsi:type="MyObjectBuilder_ProceduralWorldEnvironment">
+    <Id>
+      <TypeId>MyObjectBuilder_ProceduralWorldEnvironment</TypeId>
+      <SubtypeId>SecondEarthEnvironment</SubtypeId>
+    </Id>
+
+    <!-- Maximum lod until sectors are synchronized -->
+    <MaxSyncLod>1</MaxSyncLod>
+    <SectorSize>40</SectorSize>
+
+    <ScanningMethod>Random</ScanningMethod>
+
+    <ItemTypes Type="MyObjectBuilder_EnvironmentItemTypesDefinition" Subtype="Default"/>
+    
+    <!-- Bots spawning-->
+
+    <ItemGroup Density=".014" Name="Bots" LodStart="1" LodEnd="1">
+
+      <Mapping>
+        <Latitude Min="-85" Max="-65"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.3"/>
+      </Mapping>
+
+      <Mapping>
+        <Latitude Min="-65" Max="-55"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.25"/>
+        <Item Type="Bot" Subtype="DeerNothern" Density="0.3"/>
+      </Mapping>
+
+      <Mapping>
+        <Latitude Min="-55" Max="-45"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.02"/>
+        <Item Type="Bot" Subtype="Deer" Density="0.7"/>
+        <Item Type="Bot" Subtype="DeerNothern" Density="0.2"/>
+      </Mapping>
+
+      <Mapping>
+        <Latitude Min="-45" Max="-35"/>
+        <Item Type="Bot" Subtype="Deer" Density="0.9"/>
+      </Mapping>
+
+      <Mapping>
+        <Latitude Min="-35" Max="-25"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.02"/>
+        <Item Type="Bot" Subtype="Deer" Density="0.6"/>
+      </Mapping>
+
+      <Mapping>
+        <Latitude Min="-25" Max="-20"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.1"/>
+        <Item Type="Bot" Subtype="Deer" Density="0.3"/>
+      </Mapping>
+
+      <Mapping>
+        <Latitude Min="-20" Max="-5"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.25"/>
+      </Mapping>
+
+      <Mapping>
+        <Latitude Min="-5" Max="5"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.1"/>
+      </Mapping>
+      
+      <Mapping>
+        <Latitude Min="5" Max="20"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.25"/>
+      </Mapping>
+      
+      <Mapping>
+        <Latitude Min="20" Max="25"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.1"/>
+        <Item Type="Bot" Subtype="Deer" Density="0.3"/>
+      </Mapping>
+      
+      <Mapping>
+        <Latitude Min="25" Max="35"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.02"/>
+        <Item Type="Bot" Subtype="Deer" Density="0.6"/>
+      </Mapping>
+      
+      <Mapping>
+        <Latitude Min="35" Max="45"/>
+        <Item Type="Bot" Subtype="Deer" Density="0.9"/>
+      </Mapping>
+      
+      <Mapping>
+        <Latitude Min="45" Max="55"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.02"/>
+        <Item Type="Bot" Subtype="Deer" Density="0.7"/>
+        <Item Type="Bot" Subtype="DeerNothern" Density="0.2"/>
+      </Mapping>
+      
+      <Mapping>
+        <Latitude Min="55" Max="65"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.25"/>
+        <Item Type="Bot" Subtype="DeerNothern" Density="0.3"/>
+      </Mapping>
+      
+      <Mapping>
+        <Latitude Min="65" Max="85"/>
+        <Item Type="Bot" Subtype="Barbarian" Density="0.3"/>
+      </Mapping>
+    </ItemGroup>
+
+    <!-- New Biomes -->
+    
+    <!-- Arctic belt (snow) -->
+
+    <ItemGroup Density=".004" Name="ArcticSnowyStones" LodStart="0" LodEnd="0">
+      <Mapping>
+        <Biome>130</Biome>
+        <Material>Snow</Material>
+        <Height Min="0" Max="0.5"/>
+        <Slope Min="0" Max="15"/>
+        
+        <Item Type="Gatherable" Subtype="StoneLargeSnowy" Density="1"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".075" Name="ArcticSnowyTrees" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>135</Biome>
+        <Material>Snow</Material>
+        <Height Min="0" Max="0.3"/>
+        <Slope Min="0" Max="30"/>
+
+        <Item Type="Tree" Subtype="TreePine4mSnowy" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine10Snowy" Density="0.4"/>
+        <Item Type="Tree" Subtype="TreePine15Snowy" Density="0.65"/>
+        <Item Type="Tree" Subtype="TreePine175Snowy" Density="0.55"/>
+      </Mapping>
+      
+      <Mapping>
+        <Biome>135</Biome>
+        <Material>Snow</Material>
+        <Height Min="30" Max="0.5"/>
+        <Slope Min="0" Max="20"/>
+        
+        <Item Type="Tree" Subtype="TreePine4mSnowy" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine10Snowy" Density="0.65"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <!-- Subarctic belt (tundras) -->
+    
+    <ItemGroup Density=".055" Name="Tundra" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>140</Biome>
+        <Material>Woods_grass</Material>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.07"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.025"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.005"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.12"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.018"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.023"/>
+        <Item Type="Gatherable" Subtype="Roots" Density="0.015"/>
+
+      </Mapping>
+      
+      <Mapping>
+        <Material>Rocks_grass</Material>
+
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.12"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.1"/> 
+      </Mapping>
+      
+      <Mapping>      
+      <Biome>148</Biome>
+        <Item Type="Static" Subtype="Fern" Density="0.25" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.04"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.12"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".12" Name="TundraSpruces" LodStart="-1" LodEnd="0">    
+      <Mapping>
+        <Biome>145</Biome>
+        <Material>Woods_grass</Material>
+        <Material>Rocks_grass</Material>
+        <Height Min="0" Max="0.5"/>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.6"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.35"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.25"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.035"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.18"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.015"/>
+      </Mapping>
+
+      <Mapping>
+        <Biome>145</Biome>
+        <Material>Rocks_grass</Material>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.2"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.18"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.015"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".095" Name="TundraForest" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>142</Biome>
+        <Material>Woods</Material>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.55"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.35"/>
+        <Item Type="Tree" Subtype="TreePine15" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine175" Density="0.15"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.25"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.15"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.12"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.18"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".055" Name="TundraForestMountains" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>142</Biome>
+        <Biome>145</Biome>
+        <Material>Snow</Material>
+        <Height Min="0.3" Max="0.4"/>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.35"/>
+        <Item Type="Tree" Subtype="TreePine4mSnowy" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.35"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="StoneLargeSnowy" Density="0.1"/>
+      </Mapping>
+      <Mapping>
+        <Biome>142</Biome>
+        <Biome>145</Biome>
+        <Material>Snow</Material>
+        <Height Min="0.4" Max="0.7"/>
+
+        <Item Type="Tree" Subtype="TreePine4mSnowy" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine10Snowy" Density="0.3"/>
+        <Item Type="Tree" Subtype="TreePine15Snowy" Density="0.05"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <!-- Temperate belt (forests) -->
+
+    <!-- Northern hemisphere -->
+    <ItemGroup Density=".07" Name="ForestBorealNorthHemisphere" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>150</Biome>
+        <Material>Woods</Material>
+        <Latitude Min="35" Max="75"/>
+        <Height Min="0" Max="0.4"/>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.2"/>
+        <Item Type="Tree" Subtype="TreePine15" Density="0.35"/>
+        <Item Type="Tree" Subtype="TreePine175" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine225" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine25" Density="0.05"/>
+        <Item Type="Static" Subtype="Fern" Density="0.08" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.08"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.12"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.18"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".065" Name="ForestWarmNorthHemisphere" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>150</Biome>
+        <Material>Woods</Material>
+        <Latitude Min="5" Max="35"/>
+        <Height Min="0" Max="0.4"/>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.05"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.1"/>
+        <Item Type="Tree" Subtype="TreePine15" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine175" Density="0.1"/>
+        <Item Type="Tree" Subtype="TreePine225" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine25" Density="0.08"/>
+        <Item Type="Tree" Subtype="LindenSapling" Density="0.05"/>
+        <Item Type="Tree" Subtype="TreePine10Southern" Density="0.1"/>
+        <Item Type="Tree" Subtype="TreePine15Southern" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine175Southern" Density="0.1"/>
+        <Item Type="Static" Subtype="Fern" Density="0.25" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.07"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.15"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.18"/>
+      </Mapping>
+    </ItemGroup>
+
+    <!-- Southern Hemisphere -->
+    <ItemGroup Density=".07" Name="ForestBorealSouthHemisphere" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>150</Biome>
+        <Material>Woods</Material>
+        <Latitude Min="-75" Max="-35"/>
+        <Height Min="0" Max="0.4"/>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.2"/>
+        <Item Type="Tree" Subtype="TreePine15" Density="0.35"/>
+        <Item Type="Tree" Subtype="TreePine175" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine225" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine25" Density="0.05"/>
+        <Item Type="Static" Subtype="Fern" Density="0.08" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.08"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.12"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.18"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".065" Name="ForestWarmSouthHemisphere" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>150</Biome>
+        <Material>Woods</Material>
+        <Latitude Min="-35" Max="-5"/>
+        <Height Min="0" Max="0.4"/>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.05"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.1"/>
+        <Item Type="Tree" Subtype="TreePine15" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine175" Density="0.1"/>
+        <Item Type="Tree" Subtype="TreePine225" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine25" Density="0.08"/>
+        <Item Type="Tree" Subtype="LindenSapling" Density="0.05"/>
+        <Item Type="Tree" Subtype="TreePine10Southern" Density="0.1"/>
+        <Item Type="Tree" Subtype="TreePine15Southern" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine175Southern" Density="0.1"/>
+        <Item Type="Static" Subtype="Fern" Density="0.25" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.07"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.15"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.18"/>
+      </Mapping>
+    </ItemGroup>    
+    <!-- Hemispheres: END -->
+    
+    <ItemGroup Density=".06" Name="ForestOuter" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>153</Biome>
+        <Biome>150</Biome>
+        <Material>Woods_grass</Material>
+        <Height Min="0" Max="0.4"/>
+        <Slope Min="0" Max="30"/>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.2"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.4"/>
+        <Item Type="Tree" Subtype="TreePine15" Density="0.2"/>
+        <Item Type="Tree" Subtype="TreePine175" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePine225" Density="0.015"/>
+        <Item Type="Static" Subtype="Fern" Density="0.25" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.25"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.035"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.15"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".075" Name="ForestOuterMountains" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>153</Biome>
+        <Biome>150</Biome>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_grass</Material>
+        <Material>Grass</Material>
+        <Height Min="0.3" Max="0.45"/>
+
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePine10" Density="0.17"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.07"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="StoneLarge" Density="0.05"/>
+      </Mapping>
+      <Mapping>
+        <Biome>153</Biome>
+        <Biome>150</Biome>
+        <Material>Rocks_grass</Material>
+        <Material>Woods_grass</Material>
+        <Height Min="0.45" Max="0.55"/>
+        
+        <Item Type="Tree" Subtype="TreePine4m" Density="0.15"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="HighlandCaps" Density="0.005"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="StoneLarge" Density="0.05"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".008" Name="ForestGrass" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>154</Biome>
+        <Material>Grass</Material>
+
+        <Item Type="Gatherable" Subtype="WildWheat" Density="0.04"/>
+        <Item Type="Gatherable" Subtype="WildFlax" Density="0.06"/>
+        <Item Type="Gatherable" Subtype="WildCabbage" Density="0.0005"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.12"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.18"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".03" Name="ForestRavines" LodStart="0" LodEnd="0">
+      <Mapping>
+        <Biome>155</Biome>
+        <Material>Woods</Material>
+        <Material>Woods_grass</Material>
+        <Material>Grass</Material>
+
+        <Item Type="Static" Subtype="Fern" Density="0.1" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="Blue_Berry" Density="0.07"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.02"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.022"/>
+        <Item Type="Gatherable" Subtype="StoneLarge" Density="0.2"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <!-- Subtropic belt (steppes) -->
+
+    <ItemGroup Density=".15" Name="Steppe" LodStart="-1" LodEnd="0">
+      <Mapping>
+        <Biome>160</Biome>
+        <Material>Grass</Material>
+        <Item Type="Gatherable" Subtype="WildFlax" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.005"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+        <Item Type="Gatherable" Subtype="Roots" Density="0.005"/>
+      </Mapping>
+      <Mapping>
+        <Biome>160</Biome>
+        <Material>SteppeYellowGrass</Material>
+
+        <Item Type="Gatherable" Subtype="WildWheat" Density="0.007"/>
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.005"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.01"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+        <Item Type="Gatherable" Subtype="Roots" Density="0.002"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".2" Name="SteppeBushes" LodStart="-1" LodEnd="0">      
+      <Mapping>        
+        <Biome>164</Biome>
+        <Material>Woods_needles</Material>
+        <Material>SteppeYellowGrass</Material>
+
+        <Item Type="Tree" Subtype="LindenSapling" Density="0.05"/>
+        <Item Type="Tree" Subtype="TreePine10Southern" Density="0.06"/>
+        <Item Type="Tree" Subtype="TreePine15Southern" Density="0.1"/>
+        <Item Type="Tree" Subtype="TreePine175Southern" Density="0.04"/>
+        <Item Type="Gatherable" Subtype="Berries" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+      </Mapping>
+      <Mapping>
+        <Biome>165</Biome>
+        <Material>SteppeYellowGrass</Material>
+        <Material>Grass</Material>
+        <Item Type="Gatherable" Subtype="WildCabbage" Density="0.01"/>
+        <Item Type="Gatherable" Subtype="WildFlax" Density="0.03"/>
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.02"/>
+        <Item Type="Gatherable" Subtype="Berries" Density="0.25"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <!-- Equatorial belt (deserts, karst area) -->
+
+    <ItemGroup Density=".06" Name="Karst" LodStart="-1" LodEnd="0">
+      <Mapping>
+        <Biome>190</Biome>
+        <Material>Woods_needles</Material>
+
+        <Item Type="Gatherable" Subtype="WildPumpkin" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="WildCabbage" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.1"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+        
+        <Item Type="Bot" Subtype="Deer" Density="0.2"/>
+      </Mapping>
+      <Mapping>
+        <Biome>190</Biome>
+        <Material>Grass</Material>
+
+        <Item Type="Gatherable" Subtype="WildPumpkin" Density="0.005"/>
+        <Item Type="Gatherable" Subtype="WildCabbage" Density="0.001"/>
+        <Item Type="Gatherable" Subtype="WildFlax" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.015"/>
+        <Item Type="Gatherable" Subtype="Herbs" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.02"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.05"/> 
+
+        <Item Type="Bot" Subtype="Deer" Density="0.2"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".24" Name="KarstForest" LodStart="-1" LodEnd="0">
+      <Mapping>
+        <Biome>192</Biome>
+        <Material>Woods_needles</Material>
+        <Material>Grass</Material>
+        <Material>Woods_grass</Material>
+        <Height Min="0" Max="0.5"/>
+
+        <Item Type="Tree" Subtype="TreePalmTreeSapling" Density="0.05"/>
+        <Item Type="Tree" Subtype="TreePalmTree250" Density="0.05"/>
+        <Item Type="Tree" Subtype="TreePalmTree500" Density="0.1"/>
+        <Item Type="Tree" Subtype="TreePalmTree750" Density="0.17"/>
+        <Item Type="Tree" Subtype="TreePalmTree1000" Density="0.08"/>
+        
+        <Item Type="Static" Subtype="FernKarst" Density="0.05" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+        <Item Type="Gatherable" Subtype="Berries" Density="0.1"/>
+
+        <Item Type="Bot" Subtype="Deer" Density="0.5"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".12" Name="KarstBushes" LodStart="-1" LodEnd="0">
+      <Mapping>
+        <Biome>191</Biome>
+        <Biome>193</Biome>
+        <Material>Grass</Material>
+        <Item Type="Static" Subtype="FernKarst" Density="0.05" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="WildFlax" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="Berries" Density="0.17"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+        <Item Type="Gatherable" Subtype="Roots" Density="0.01"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".11" Name="KarstDesertTransitionBushes" LodStart="-1" LodEnd="0">
+      <Mapping>
+        <Biome>185</Biome>
+        <Material>Grass</Material>
+        <Material>Woods_needles</Material>
+        
+        <Item Type="Static" Subtype="FernKarst" Density="0.05" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="DriedBush" Density="0.3"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.002"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.005"/> 
+        <Item Type="Gatherable" Subtype="Opuntia" Density="0.07"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".02" Name="RockyDesert" LodStart="-1" LodEnd="0">
+      <Mapping>
+        <Biome>180</Biome>
+        <Material>SandGrass</Material>
+        
+        <Item Type="Gatherable" Subtype="Roots" Density="0.2"/>
+        <Item Type="Gatherable" Subtype="Opuntia" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="DriedBush" Density="0.3"/>
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.1"/>
+
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.2"/> 
+        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.1"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.5"/> 
+      </Mapping>
+      <Mapping>
+        <Biome>180</Biome>
+        <Material>Sand</Material>
+
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.2"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.5"/> 
+        <!--<Item Type="Boulder" Subtype="BoulderSandstone" Density="0.001"/>-->
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".1" Name="RockyDesertBushes" LodStart="-1" LodEnd="0">      
+      <Mapping>
+        <Biome>185</Biome>
+        <Material>SandGrass</Material>
+        <Material>Sand</Material>
+
+        <Item Type="Gatherable" Subtype="DriedBush" Density="0.2"/>
+        <Item Type="Gatherable" Subtype="Opuntia" Density="0.025"/>
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.15"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.2"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.5"/> 
+        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.1"/> 
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".01" Name="SandDesert" LodStart="-1" LodEnd="0">
+      <Mapping>
+        <Biome>170</Biome>
+        <Material>Sand</Material>
+        <Height Min="0" Max="0.22"/>
+        <Slope Min="0" Max="2"/>
+
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.4"/>
+        <Item Type="Gatherable" Subtype="DriedBush" Density="0.15"/>
+        <Item Type="Gatherable" Subtype="Opuntia" Density="0.03"/>
+        <Item Type="Gatherable" Subtype="Roots" Density="0.03"/>
+
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.2"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.5"/> 
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".04" Name="SandDesertFloraPatches" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>195</Biome>
+        <Material>Sand</Material>
+        <Material>SandGrass</Material>
+        <Height Min="0" Max="0.25"/>
+        <Slope Min="0" Max="10"/>
+
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.4"/>
+        <Item Type="Gatherable" Subtype="DriedBush" Density="0.12"/>
+        <Item Type="Gatherable" Subtype="Opuntia" Density="0.03"/>
+        <Item Type="Gatherable" Subtype="Roots" Density="0.03"/>
+
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.2"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.5"/> 
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".22" Name="SandDesertOasis" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>175</Biome>
+        <Material>SandGrassGreen</Material>
+
+        <Item Type="Tree" Subtype="TreePalmTree250" Density="0.15"/>
+        <Item Type="Tree" Subtype="TreePalmTree500" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePalmTree750" Density="0.25"/>
+        <Item Type="Tree" Subtype="TreePalmTree1000" Density="0.15"/>
+        
+        <Item Type="Gatherable" Subtype="WildFlaxDesert" Density="0.4"/>
+        <Item Type="Static" Subtype="FernKarst" Density="0.35" MaxRoll="35"/>
+        <Item Type="Gatherable" Subtype="Berries" Density="0.17"/>
+        <Item Type="Gatherable" Subtype="Opuntia" Density="0.08"/>
+
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.2"/> 
+        <Item Type="Gatherable" Subtype="SingleSandStone" Density="0.5"/> 
+      </Mapping>
+    </ItemGroup>
+    
+    <!-- Global settings -->
+    
+    <ItemGroup Density=".25" Name="FarmablesPatches" LodStart="0" LodEnd="0">
+      <Mapping>        
+        <Biome>167</Biome>
+        <Material>Grass</Material>
+        <Material>Woods_needles</Material>
+
+        <Item Type="Gatherable" Subtype="WildFlax" Density="1"/>
+      </Mapping>
+      
+      <Mapping>        
+        <Biome>169</Biome>
+        <Material>Grass</Material>
+        <Material>Woods_needles</Material>
+
+        <Item Type="Gatherable" Subtype="WildCabbage" Density="0.85"/>
+        <Item Type="Gatherable" Subtype="WildPumpkin" Density="0.005"/>
+      </Mapping>
+      
+      <Mapping>    
+        <Biome>167</Biome>    
+        <Biome>169</Biome>
+        <Material>SteppeYellowGrass</Material>
+
+        <Item Type="Gatherable" Subtype="WildWheat" Density="1"/>
+      </Mapping>
+      
+      <Mapping>        
+        <Biome>197</Biome>
+        <Material>Grass</Material>
+        <Material>Woods_needles</Material>
+
+        <Item Type="Gatherable" Subtype="WildPumpkin" Density="0.65"/>
+        <Item Type="Static" Subtype="FernKarst" Density="0.05" MaxRoll="35"/>
+      </Mapping>
+      
+      <Mapping>        
+        <Biome>199</Biome>
+        <Material>Grass</Material>
+        <Material>Woods_needles</Material>
+
+        <Item Type="Gatherable" Subtype="WildCabbage" Density="0.95"/>
+        <Item Type="Static" Subtype="FernKarst" Density="0.05" MaxRoll="35"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".05" Name="MountainsScree" LodStart="0" LodEnd="0">
+      <Mapping>
+        <Material>Rocks_grass</Material>
+        <Slope Min="0" Max="30"/>
+
+        <Item Type="Gatherable" Subtype="StoneLarge" Density="0.4"/>
+        <Item Type="Gatherable" Subtype="StonePile" Density="0.05"/>
+        <Item Type="Gatherable" Subtype="SingleStone" Density="0.6"/>
+        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.1"/> 
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".01" Name="LargeStones" LodStart="0" LodEnd="0">
+      <Mapping>
+        <Material>Rocks_grass</Material>
+        <Height Min="0" Max="0.6"/>
+        <Slope Min="0" Max="15"/>
+
+        <Item Type="Gatherable" Subtype="StoneLarge" Density="1"/>
+        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.1"/> 
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".007" Name="RoadSide" LodStart="0" LodEnd="0">
+      <Mapping>
+        <Biome>250</Biome>
+        <Material>Grass</Material>
+        <Material>Woods</Material>
+        <Material>Woods_grass</Material>
+        <Material>Woods_needles</Material>
+        <Material>Rocks_grass</Material>
+        <Material>SteppeYellowGrass</Material>
+
+        <Item Type="Gatherable" Subtype="SingleStone" Density="1"/>
+      </Mapping>
+      <Mapping>
+        <Biome>250</Biome>
+        <Material>Sand</Material>
+        <Material>SandGrass</Material>
+        <Material>SandGrassGreen</Material>
+
+        <Item Type="Gatherable" Subtype="SandStoneSmall" Density="1"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <!-- Ore deposits indicators -->
+
+    <ItemGroup Density=".05" Name="SilverDepositPieces" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>244</Biome>
+        <Material>Snow</Material>
+        <Material>Grass</Material>
+        <Material>SteppeYellowGrass</Material>
+        <Material>SandGrass</Material>
+        <Material>SandGrassGreen</Material>
+        <Material>Woods</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>IronOre_PoorYield</Material>
+        <Material>Sand</Material>
+        <Material>Sandstone</Material>
+        <Material>Stone</Material>
+        <Material>Limestone</Material>
+        <Material>Rocks_grass</Material>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Gatherable" Subtype="PieceSilver" Density="1"/>
+      </Mapping>
+    </ItemGroup>
+      
+    <ItemGroup Density=".1" Name="SilverDepositPiecesArctic" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>244</Biome>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Gatherable" Subtype="PieceSilver" Density="1"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".02" Name="GoldDepositPieces" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>245</Biome>
+        <Material>Snow</Material>
+        <Material>Grass</Material>
+        <Material>SteppeYellowGrass</Material>
+        <Material>SandGrass</Material>
+        <Material>SandGrassGreen</Material>
+        <Material>Woods</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>IronOre_PoorYield</Material>
+        <Material>Sand</Material>
+        <Material>Sandstone</Material>
+        <Material>Stone</Material>
+        <Material>Limestone</Material>
+        <Material>Rocks_grass</Material>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Gatherable" Subtype="PieceGold" Density="1"/>
+      </Mapping>
+    </ItemGroup>
+    
+    <ItemGroup Density=".07" Name="GoldDepositPieces" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Material>Snow</Material>
+        <Biome>245</Biome>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Gatherable" Subtype="PieceGold" Density="1"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".05" Name="IronDepositPieces" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>240</Biome>
+        <Material>Snow</Material>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Gatherable" Subtype="PieceIron" Density="1"/>
+        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.1"/> 
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".05" Name="IronDepositPieces" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>241</Biome>
+        <Material>Snow</Material>
+        <Material>Grass</Material>
+        <Material>SteppeYellowGrass</Material>
+        <Material>SandGrass</Material>
+        <Material>SandGrassGreen</Material>
+        <Material>Woods</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>IronOre_PoorYield</Material>
+        <Material>Sand</Material>
+        <Material>Sandstone</Material>
+        <Material>Stone</Material>
+        <Material>Limestone</Material>
+        <Material>Rocks_grass</Material>
+        <Material>IronOre_PoorYield</Material>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Gatherable" Subtype="PieceIron" Density="1"/>
+        <Item Type="Gatherable" Subtype="SingleIronOre" Density="0.1"/> 
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".05" Name="CopperDepositPieces" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>242</Biome>
+        <Material>Snow</Material>
+        <Material>Grass</Material>
+        <Material>SteppeYellowGrass</Material>
+        <Material>SandGrass</Material>
+        <Material>SandGrassGreen</Material>
+        <Material>Woods</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>IronOre_PoorYield</Material>
+        <Material>Sand</Material>
+        <Material>Sandstone</Material>
+        <Material>Stone</Material>
+        <Material>Limestone</Material>
+        <Material>Rocks_grass</Material>
+        <Material>CopperOre</Material>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Gatherable" Subtype="PieceCopper" Density="1"/>
+      </Mapping>
+    </ItemGroup>
+
+    <ItemGroup Density=".05" Name="TinDepositPieces" LodStart="-1" LodEnd="1">
+      <Mapping>
+        <Biome>243</Biome>
+        <Material>Snow</Material>
+        <Material>Grass</Material>
+        <Material>SteppeYellowGrass</Material>
+        <Material>SandGrass</Material>
+        <Material>SandGrassGreen</Material>
+        <Material>Woods</Material>
+        <Material>Woods_needles</Material>
+        <Material>Woods_grass</Material>
+        <Material>IronOre_PoorYield</Material>
+        <Material>Sand</Material>
+        <Material>Sandstone</Material>
+        <Material>Stone</Material>
+        <Material>Limestone</Material>
+        <Material>Rocks_grass</Material>
+        <Material>TinOre</Material>
+        <Slope Min="0" Max="35"/>
+
+        <Item Type="Gatherable" Subtype="PieceTin" Density="1"/>
+      </Mapping>
+    </ItemGroup>
+  </Definition>
+</Definitions>

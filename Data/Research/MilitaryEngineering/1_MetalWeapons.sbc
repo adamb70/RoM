@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="MilitaryMetalWeapons" />
+    <DisplayName>DisplayName_ResearchNode_MilitaryMetalWeapons</DisplayName>
+    <Description>Description_ResearchNode_MilitaryMetalWeapons</Description>
+    <Icon>Textures\GUI\Icons\Schematics\MetalWeapons.dds</Icon>
+    <Quest Type="QuestDefinition" Subtype="MilitaryMetalWeapons" />
+    <Research Type="ResearchDefinition" Subtype="MilitaryMetalWeapons" />
+    <Parent Type="ResearchNodeDefinition" Subtype="MilitarySmelting" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="MilitaryMetalWeapons" />
+
+    <DisplayName>DisplayName_Quest_MilitaryMetalWeapons</DisplayName>
+    <Description>Description_Quest_MilitaryMetalWeapons</Description>
+    <Icon>Textures\Research\Military\MetalWeapons\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Research</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Failed" SoundCueId="QuestCompleted" />
+
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Completed" SoundCueId="QuestCompleted" />
+
+    <Step>
+      <FullDescription>Description_Quest_MilitaryMetalWeapons_Step01</FullDescription>
+          <Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="1" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_MilitaryMetalWeapons_Step01_Unlock" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_MilitaryMetalWeapons_Step02</FullDescription>
+          <Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="Smithy" Amount="1" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_MilitaryMetalWeapons_Step03</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Timber" Amount="2" AreaInventory="Included" />
+        <Condition xsi:type="Quest.Conditions.Composite" Operator="OR" ActiveDescription="Description_Quest_MilitaryMetalWeapons_Step03_Active" CompletedDescription="Description_Quest_MilitaryMetalWeapons_Step03_Complete">
+          <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem" Subtype="IngotCopper" Amount="1" AreaInventory="Included" />
+          <Condition xsi:type="Quest.Conditions.Gather" Type="InventoryItem" Subtype="IngotIron" Amount="1" AreaInventory="Included" />
+  		</Condition>
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_MilitaryMetalWeapons_Step04</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="OR">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="HandItem" Subtype="ClubStudded" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Gather" Type="HandItem" Subtype="ClubStudded" Amount="1" />
+      </Condition>
+      <Image>Textures\Research\Military\MetalWeapons\01.png</Image>
+    </Step>
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="MilitaryMetalWeapons" />
+    <DisplayName>DisplayName_Research_MilitaryMetalWeapons</DisplayName>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicMilitaryMetalWeapons"/>
+    <DisplayName>DisplayName_Schematic_MilitaryMetalWeapons</DisplayName>
+    <Description>Description_Schematic_MilitaryMetalWeapons</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\MetalWeapons.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollMilitary.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicMilitaryMetalWeapons" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicMilitaryMetalWeapons" />
+    <DisplayName>DisplayName_Schematic_MilitaryMetalWeapons</DisplayName>
+    <Description>Description_Schematic_MilitaryMetalWeapons</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\MetalWeapons.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollMilitary.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="Null" />
+  </Definition>
+</Definitions>

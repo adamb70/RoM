@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Public_Fountain" />
+      <BlockPairName>Public Fountain</BlockPairName>
+      <DisplayName>Public Fountain</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
+      <Public>true</Public>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Universal\Masonry\stone_well.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Type="InventoryItem" Subtype="StoneSmall" Count ="3" />
+      </Components>
+      <CriticalComponent Type="InventoryItem" Subtype="StoneSmall" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Mass>10</Mass>
+      <AvailableInSurvival>true</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+    </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Public_Fountain"/>
+    <CraftingCategories>
+      <Category>Public_Fountain</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Public_Fountain" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Public_FountainInventory" />
+    <InventoryName>Public_FountainInventory</InventoryName>
+    <DisplayName>Public Fountain</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Public_Fountain" />
+    <Component Type="ClaimBlockComponent" Subtype="ClaimBlockWood" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="ClaimBlockRespawnComponent" />
+    <Component Type="UseObjectsComponent" Subtype="Public_Fountain" ForceCreate="true"/>
+    <Component Type="Inventory" Subtype="Public_FountainInventory" ForceCreate="true"/>
+    <Component Type="InventorySpawnComponent"/>
+    <Component Type="CraftingComponentQueued" Subtype="Public_Fountain" ForceCreate="true"/>
+  </Definition>
+</Definitions>

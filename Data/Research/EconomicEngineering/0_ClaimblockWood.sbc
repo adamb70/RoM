@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="EconomicClaimblockWood" />
+    <DisplayName>DisplayName_ResearchNode_EconomicClaimblockWood</DisplayName>
+    <Description>Description_ResearchNode_EconomicClaimblockWood</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ClaimblockWood.dds</Icon>
+    <Quest Type="QuestDefinition" Subtype="EconomicClaimblockWood" />
+    <Research Type="ResearchDefinition" Subtype="CivilianClaimblockWood" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestDefinition">
+    <Id Type="QuestDefinition" Subtype="EconomicClaimblockWood" />
+
+    <DisplayName>DisplayName_Quest_EconomicClaimblockWood</DisplayName>
+    <Description>Description_Quest_EconomicClaimblockWood</Description>
+    <Icon>Textures\Research\Civil\ClaimblockWood\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Research</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Failed" SoundCueId="QuestCompleted" />
+
+      <Condition xsi:type="Quest.Conditions.QuestCompleted" Subtype="EconomicClaimblockWood"/>
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_ResearchQuest_Completed" SoundCueId="QuestCompleted" />
+
+    <Step>
+	  <!-- Don't skip first step of level 0. Introduction text will be added here -->
+      <FullDescription>Description_Quest_EconomicClaimblockWood_Step01</FullDescription>
+	  <ShortDescription>Description_Quest_EconomicClaimblockWood_Step01_Short</ShortDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="ScrapWood" Amount="4" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Timber" Amount="12" />
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicClaimblockWood_Step02</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="CubeBlock" Subtype="ClaimBlockWood" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.BuildBlock" Type="CubeBlock" Subtype="ClaimBlockWood" Amount="1" />
+      </Condition>
+      <Image>Textures\Research\Civil\ClaimblockWood\01.png</Image>
+    </Step>
+    <Step>
+      <FullDescription>Description_Quest_EconomicClaimblockWood_Step03</FullDescription>
+	  <ShortDescription>Description_Quest_EconomicClaimblockWood_Step03_Short</ShortDescription>
+      <Condition xsi:type="Quest.Conditions.EntityInteraction" Type="CubeBlock" Subtype="ClaimBlockWood" />
+    </Step>
+    <!-- TODO: add ClaimBlock explanation -->
+  </Definition>
+
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="EconomicClaimblockWood" />
+    <DisplayName>DisplayName_Research_EconomicClaimblockWood</DisplayName>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Copy="Append">
+	<CopyFrom Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicBase" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SchematicEconomicClaimblockWood"/>
+    <DisplayName>DisplayName_Schematic_EconomicClaimblockWood</DisplayName>
+    <Description>Description_Schematic_EconomicClaimblockWood</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Carpentry.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="SchematicEconomicClaimblockWood" />
+    </Results>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition" Copy="Append">
+	<CopyFrom Type="SchematicItem" Subtype="SchematicBase" />
+    <Id Type="SchematicItem" Subtype="SchematicEconomicClaimblockWood" />
+    <DisplayName>DisplayName_Schematic_EconomicClaimblockWood</DisplayName>
+    <Description>Description_Schematic_EconomicClaimblockWood</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\Carpentry.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\OverlayScrollEconomic.dds</Icon>
+	<Research Type="ResearchDefinition" Subtype="Null" />
+  </Definition>
+</Definitions>
