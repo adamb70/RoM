@@ -8,7 +8,7 @@ using VRage.Utils;
 
 namespace RomScripts
 {
-    internal class RomStatLogic
+    public class RomStatLogic
     {
         [ProtoContract]
         public struct MyStatAction

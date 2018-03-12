@@ -16,7 +16,7 @@ using VRageMath;
 namespace RomScripts
 {
     [MyStatLogicDescriptor("RomStatEffect")]
-    internal class MyRomStatEffect : RomStatLogic
+    public class MyRomStatEffect : RomStatLogic
     {
         public static MyStringHash HealthId = MyStringHash.GetOrCompute("Health");
 

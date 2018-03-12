@@ -6,7 +6,7 @@ namespace RomScripts
     /// <summary>
     /// This structure contains all information about damage being done.
     /// </summary>
-    internal struct RomDamageInformation
+    public struct RomDamageInformation
     {
         public bool IsDeformation;
 

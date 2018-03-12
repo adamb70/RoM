@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 namespace RomScripts
 {
     [System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, Size = 1)]
-    internal struct RomEffectConstants
+    public struct RomEffectConstants
     {
         public static float HealthTick = 1f;
 
