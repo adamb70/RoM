@@ -9,7 +9,7 @@ namespace RomScripts.WaterFuelComponent
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]
-    internal class MyObjectBuilder_WaterFuelComponentDefinition : MyObjectBuilder_EntityComponentDefinition
+    public class MyObjectBuilder_WaterFuelComponentDefinition : MyObjectBuilder_EntityComponentDefinition
     { 
         public class FuelTimeDef
         {
