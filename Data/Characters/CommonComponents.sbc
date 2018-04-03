@@ -90,50 +90,25 @@
     </Effect>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_MedievalCharacterUseComponentDefinition">
-    <Id Type="MyObjectBuilder_MedievalCharacterUseComponent" Subtype="CharacterUse" />
-    <TapDuration>300</TapDuration>
-  </Definition>
-  
+
+
   <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
-    <Id Type="MyObjectBuilder_CharacterStatComponent" Subtype="RoMStats" />
-    <Stats>
-      <Stat>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Health</SubtypeId>
-      </Stat>
-      <Stat>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Stamina</SubtypeId>
-      </Stat>
-      <Stat>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Food</SubtypeId>
-      </Stat>
-      <Stat>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Fury</SubtypeId>
-      </Stat>
-      <Stat>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Mood</SubtypeId>
-      </Stat>
-      <Stat>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Alcohol</SubtypeId>
-      </Stat>
-      <Stat>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Poison</SubtypeId>
-      </Stat>
-      <Stat>
-        <TypeId>MyObjectBuilder_EntityStat</TypeId>
-        <SubtypeId>Thirst</SubtypeId>
-      </Stat>	  
-    </Stats>
-    <Scripts>
-      <Script>MedievalStatEffect</Script>
-    </Scripts>
+    <Id Type="MyObjectBuilder_EntityStatComponent" Subtype="RoMStats" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Health" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Stamina" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Food" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Thirst" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Fury" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Alcohol" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Poison" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Mood" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Vigor" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorGain" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorLoss" />
+    <Effect Type="VigorEffect" Subtype="Vigor" />
+    <Effect Type="HealthEffect" Subtype="HealthRegen" />
+    <Effect Type="StaminaEffect" Subtype="StaminaRegen" />
+    <Effect Type="HungerEffect" Subtype="HungerDegen" />
   </Definition>
 
   
