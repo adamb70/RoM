@@ -29,6 +29,19 @@
     </Constraint>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_DecayHandlerComponentDefinition">
+    <Id Type="DecayHandlerComponent" Subtype="DecayHandler"/>
+    <TickInterval>10000</TickInterval>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="ChestWood" />
+    <Component Type="UseObjectsComponent" Subtype="ChestWood" />
+    <Component Type="Inventory" Subtype="WoodChestInventory" />
+    <Component Type="InventorySpawnComponent"/>
+    
+    <Component Type="DecayHandlerComponent" Subtype="DecayHandler" />
+  </Definition>
 
 
 </Definitions>

@@ -6,11 +6,12 @@
     <!-- Copy from base character. -->
     <CopyFrom Type="EntityBase" Subtype="Humanoid"/>
     
-    <Component Type="InventorySpawnComponent" Subtype="CharacterBag" />
+    <!-- <Component Type="InventorySpawnComponent" Subtype="CharacterBag" /> -->
 
     <Component Type="CharacterControllerComponent" />
 
     <Component Type="CraftingComponentQueued" Subtype="Humanoid"/>
+    <Component Type="Inventory" Subtype="ProcessingInventory"/>
 
     <Component Type="EntityStatComponent" Subtype="RoMStats"/>
 
