@@ -73,6 +73,8 @@
     <Minimum>0</Minimum>
     <Maximum>10</Maximum>
   </Definition>
+  
+  
 <!-- ===================================================================================== -->
 				<!-- RoM -->
 <!-- ===================================================================================== -->
@@ -80,7 +82,7 @@
     <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Mood" />
     <DisplayName>Mood</DisplayName>
     <Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
-    <Initial>100</Initial>
+    <Initial>50</Initial>
     <Minimum>0</Minimum>
     <Maximum>100</Maximum>
   </Definition>
@@ -89,8 +91,8 @@
     <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Fury" />
     <DisplayName>Fury</DisplayName>
     <Description>This determines your Fury. You gain fury from attacking people or animals, once you've reached enough fury you can use a special attack depending on the weapon.</Description>
-    <Initial>1</Initial>
-    <Minimum>1</Minimum>
+    <Initial>0</Initial>
+    <Minimum>0</Minimum>
     <Maximum>100</Maximum>
   </Definition>
 <!-- ===================================================================================== -->
@@ -107,8 +109,8 @@
   <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
     <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Alcohol" />
     <DisplayName>Alcohol</DisplayName>
-    <Description>This determines how much Alcohol you have had. Being too drunk will cause your character to have alcohal poisoning.</Description>
-    <Initial>100</Initial>
+    <Description>This determines how much Alcohol you have had. Being too drunk will cause your character to have alcohol poisoning.</Description>
+    <Initial>0</Initial>
     <Minimum>0</Minimum>
     <Maximum>100</Maximum>
     <ClampToMaximum>false</ClampToMaximum>
@@ -118,7 +120,7 @@
     <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Poison" />
     <DisplayName>Poison</DisplayName>
     <Description>This determines how Poisoned you are.</Description>
-    <Initial>100</Initial>
+    <Initial>0</Initial>
     <Minimum>0</Minimum>
     <Maximum>100</Maximum>
     <ClampToMaximum>true</ClampToMaximum>

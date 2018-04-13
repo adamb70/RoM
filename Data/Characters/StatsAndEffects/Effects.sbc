@@ -14,7 +14,12 @@
 
   <!-- Stamina: Start -->
   <Definition xsi:type="MyObjectBuilder_StaminaEffectDefinition">
+    <!-- This is needed to stop the vanilla effect from working instead of the custom one -->
     <Id Type="StaminaEffect" Subtype="StaminaRegen" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_RomStaminaEffectDefinition">
+    <Id Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <Category>DefaultStaminaRegen</Category>
     <Public>false</Public>
     <LostOnReset>false</LostOnReset>
@@ -24,6 +29,8 @@
     <RestingTime Seconds="3" />
     <RestingEffect Type="StatEffectAffectorEffect" Subtype="Resting" />
     <StaminaToFoodRatio>0.02</StaminaToFoodRatio>
+    <!-- For each 1 stamina regained, this amount of food/thirst will be consumed -->
+    <StaminaToThirstRatio>0.04</StaminaToThirstRatio>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
@@ -33,7 +40,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Exhausted.png</Icon>
     <EffectType>Negative</EffectType>
-    <AffectedStatEffect Type="StaminaEffect" Subtype="StaminaRegen" />
+    <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <RegenMultiplier>-100</RegenMultiplier>
     <Duration Seconds="5" />
   </Definition>
@@ -46,7 +53,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Resting.png</Icon>
 	  <EffectType>Positive</EffectType>
-    <AffectedStatEffect Type="StaminaEffect" Subtype="StaminaRegen" />
+    <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <RegenMultiplier>100</RegenMultiplier>
   </Definition>
   <!-- Stamina: End -->
@@ -96,7 +103,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
     <EffectType>Negative</EffectType>
-    <AffectedStatEffect Type="StaminaEffect" Subtype="StaminaRegen" />
+    <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <RegenMultiplier>-50</RegenMultiplier>
   </Definition>
   
@@ -196,7 +203,7 @@
 	  <AffectedMaxStat>Stamina</AffectedMaxStat>
 	  <AffectedMaxStat>Food</AffectedMaxStat>
 	  <AffectedRegen Type="HealthEffect" Subtype="HealthRegen" />
-	  <AffectedRegen Type="StaminaEffect" Subtype="StaminaRegen" />
+	  <AffectedRegen Type="RomStaminaEffect" Subtype="StaminaRegen" />
 	  <AffectedTool>HammerBuilding</AffectedTool>
 	  <AffectedTool>AxeCutting</AffectedTool>
 	  <AffectedTool>Shovel</AffectedTool>
@@ -315,5 +322,131 @@
     <Duration Seconds="5" />
   </Definition>
   <!-- Damage effects: End -->
+  
+  
+  
+  
+  
+  
+    <!-- Thirst: Start -->
+  <Definition xsi:type="MyObjectBuilder_ThirstEffectDefinition">
+    <Id Type="ThirstEffect" Subtype="ThirstDegen" />
+    <Category>DefaultThirstDegen</Category>
+    <Public>false</Public>
+    <LostOnReset>false</LostOnReset>
+    <Stat>Thirst</Stat>
+    <RegenPerSecond>-0.01</RegenPerSecond>
+    <ThirstyEffect Type="EntityEffect" Subtype="Thirsty" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
+    <Id Type="EntityEffect" Subtype="Thirsty" />
+    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
+    <Description>Description_StatusEffect_Hungry</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Category>Thirst</Category>
+  </Definition>
+
+  <!-- Thirst: End -->
+  
+  
+  <!-- Mood: Start -->
+  <Definition xsi:type="MyObjectBuilder_MoodEffectDefinition">
+    <Id Type="MoodEffect" Subtype="MoodRegen" />
+    <Category>DefaultMoodDegen</Category>
+    <Public>false</Public>
+    <LostOnReset>false</LostOnReset>
+    <Stat>Mood</Stat>
+    <!-- Regen per second moves towards limit, regardless if limit is above or below -->
+    <RegenPerSecond>0.05</RegenPerSecond>
+    <RegenLimit>50</RegenLimit>
+    <HappyEffect Type="EntityEffect" Subtype="Happy" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
+    <Id Type="EntityEffect" Subtype="Happy" />
+    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
+    <Description>Description_StatusEffect_Hungry</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Category>Mood</Category>
+  </Definition>
+  
+  <!-- Mood: End -->
+  
+  
+  <!-- Fury: Start -->
+  <Definition xsi:type="MyObjectBuilder_FuryEffectDefinition">
+    <Id Type="FuryEffect" Subtype="FuryDegen" />
+    <Category>DefaultThirstDegen</Category>
+    <Public>false</Public>
+    <LostOnReset>false</LostOnReset>
+    <Stat>Fury</Stat>
+    <RegenPerSecond>-0.1</RegenPerSecond>
+    <RageEffect Type="EntityEffect" Subtype="Rage" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
+    <Id Type="EntityEffect" Subtype="Rage" />
+    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
+    <Description>Description_StatusEffect_Hungry</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Category>Fury</Category>
+  </Definition>
+
+  <!-- Fury: End -->
+  
+  
+  <!-- Alcohol: Start -->
+  <Definition xsi:type="MyObjectBuilder_AlcoholEffectDefinition">
+    <Id Type="AlcoholEffect" Subtype="AlcoholDegen" />
+    <Category>DefaultThirstDegen</Category>
+    <Public>false</Public>
+    <LostOnReset>false</LostOnReset>
+    <Stat>Alcohol</Stat>
+    <RegenPerSecond>-0.5</RegenPerSecond>
+    <DrunkEffect Type="EntityEffect" Subtype="Drunk" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
+    <Id Type="EntityEffect" Subtype="Drunk" />
+    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
+    <Description>Description_StatusEffect_Hungry</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Category>Alcohol</Category>
+  </Definition>
+
+  <!-- Alcohol: End -->
+  
+  
+  <!-- Poison: Start -->
+  <Definition xsi:type="MyObjectBuilder_PoisonEffectDefinition">
+    <Id Type="PoisonEffect" Subtype="PoisonDegen" />
+    <Category>DefaultThirstDegen</Category>
+    <Public>false</Public>
+    <LostOnReset>false</LostOnReset>
+    <Stat>Poison</Stat>
+    <RegenPerSecond>-0.5</RegenPerSecond>
+    <PoisonedEffect Type="EntityEffect" Subtype="Poisoned" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
+    <Id Type="EntityEffect" Subtype="Poisoned" />
+    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
+    <Description>Description_StatusEffect_Hungry</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Category>Poison</Category>
+  </Definition>
+
+  <!-- Poison: End -->
 
 </Definitions>

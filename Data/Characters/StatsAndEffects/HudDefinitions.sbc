@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <!--Definition for Cube Builder Component (Building cubes)-->
-  <Definition xsi:type="MyObjectBuilder_HudDefinition">
-    <Id Type="MyObjectBuilder_HudDefinition" Subtype="Default" />
-  </Definition>
+
 <!-- ================================================================================== -->  
   <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
 	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Health" />
@@ -100,14 +97,8 @@
 		<StatId>Fury</StatId>
 		<BackgroundColor Hex="#FF8725" />
 		<ForegroundColor Hex="#FF8725" />
-		<CriticalValue>0</CriticalValue>
+		<CriticalValue>70</CriticalValue>
 	</MainStat>
-	<GainStat>
-		<StatId>VigorGain</StatId>
-		<ClampedStatId>Vigor</ClampedStatId>
-		<BackgroundColor R="255" G="255" B="255" A="255" />
-		<ForegroundColor R="255" G="255" B="255" A="255" />
-	</GainStat>
 	<Notches RelativeAtValue="250" Interval="25" />
 	<Arrows Scale="0.03" />
 	<Scale>1</Scale>
