@@ -87,6 +87,7 @@
       <Animation>Attack</Animation>
 	  <SwingSoundDelay>0.3</SwingSoundDelay>
       <SwingSound>ToolSwish</SwingSound>
+	  <StaminaCost>7</StaminaCost>
     </LeftSwing>
 
     <RightSwing>
@@ -99,6 +100,7 @@
       <Animation>Attack</Animation>
 	  <SwingSoundDelay>0.3</SwingSoundDelay>
       <SwingSound>ToolSwish</SwingSound>
+	  <StaminaCost>7</StaminaCost>
     </RightSwing>
 
     <ForwardSwing>
@@ -111,6 +113,7 @@
       <Animation>Attack</Animation>
 	  <SwingSoundDelay>0.3</SwingSoundDelay>
       <SwingSound>ToolSwish</SwingSound>
+	  <StaminaCost>7</StaminaCost>
     </ForwardSwing>
 
     <CanBlock>true</CanBlock>
@@ -118,6 +121,8 @@
 
     <BlockAnimation>block_idle</BlockAnimation>
     <BlockRaiseTime>.1</BlockRaiseTime>
+	<BlockStaminaCost>10</BlockStaminaCost>
+	<BlockEffect Type="BlockEffect" Subtype="Blocking" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
