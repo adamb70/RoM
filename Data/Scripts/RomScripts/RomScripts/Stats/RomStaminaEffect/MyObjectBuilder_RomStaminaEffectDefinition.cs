@@ -4,7 +4,7 @@ using VRage.ObjectBuilders;
 using VRage.ObjectBuilders.Components.Entity.Stats.Definitions;
 using VRage.ObjectBuilders.Definitions;
 
-namespace RomScripts.StaminaEffect
+namespace RomScripts.RomStaminaEffect
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]

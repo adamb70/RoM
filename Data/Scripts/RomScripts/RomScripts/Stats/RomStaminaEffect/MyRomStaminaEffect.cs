@@ -19,7 +19,7 @@ using VRage.Session;
 using RomScripts.StatExtensions;
 
 
-namespace RomScripts.StaminaEffect
+namespace RomScripts.RomStaminaEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_RomStaminaEffect))]
     public class MyRomStaminaEffect : MyEntityStatEffect

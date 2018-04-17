@@ -61,6 +61,11 @@
   <!-- Hunger: Start -->
   <Definition xsi:type="MyObjectBuilder_HungerEffectDefinition">
     <Id Type="HungerEffect" Subtype="HungerDegen" />
+    <!-- Using this to remove the vanilla effect -->
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_RomHungerEffectDefinition">
+    <Id Type="RomHungerEffect" Subtype="HungerDegen" />
     <Category>DefaultHungerDegen</Category>
     <Public>false</Public>
     <LostOnReset>false</LostOnReset>
@@ -69,6 +74,7 @@
     <StarvationEffect Type="CompositeEntityEffect" Subtype="Starvation" />
     <HungryEffect Type="EntityEffect" Subtype="Hungry" />
     <WellFedEffect Type="EntityEffect" Subtype="WellFed" />
+    <OverstuffedEffect Type="EntityEffect" Subtype="WellFed" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
@@ -141,7 +147,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Cozy.png</Icon>
     <EffectType>Positive</EffectType>
-    <AffectedStatEffect Type="HungerEffect" Subtype="HungerDegen" />
+    <AffectedStatEffect Type="RomHungerEffect" Subtype="HungerDegen" />
     <RegenMultiplier>-50</RegenMultiplier>
   </Definition>
 
@@ -152,7 +158,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Cozy.png</Icon>
     <EffectType>Positive</EffectType>
-    <AffectedStatEffect Type="HungerEffect" Subtype="HungerDegen" />
+    <AffectedStatEffect Type="RomHungerEffect" Subtype="HungerDegen" />
     <RegenMultiplier>-50</RegenMultiplier>
     <Duration Minutes="5" />
   </Definition>
@@ -363,6 +369,7 @@
     <RegenPerSecond>0.025</RegenPerSecond>
     <RegenLimit>50</RegenLimit>
     <HappyEffect Type="EntityEffect" Subtype="Happy" />
+    <UnhappyEffect Type="EntityEffect" Subtype="Happy" />
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
