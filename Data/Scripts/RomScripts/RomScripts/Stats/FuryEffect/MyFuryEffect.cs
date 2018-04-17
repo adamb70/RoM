@@ -58,7 +58,7 @@ namespace RomScripts.FuryEffect
             int num = (int)furyValue;
             MyFuryEffectDefinition myFuryEffectDefinition = base.Definition as MyFuryEffectDefinition;
 
-            if (num >= 70)
+            if (num >= 90)
             {
                 if (myFuryEffectDefinition.RageEffect.HasValue)
                 {
