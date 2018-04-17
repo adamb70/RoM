@@ -87,6 +87,7 @@
       <Animation>Attack</Animation>
       <SwingSound>ToolSwish</SwingSound>
 	  <StatCost Stat="Stamina" Cost="7" />
+	  <StatCost Stat="Fury" Cost="-1" />
     </LeftSwing>
 
     <RightSwing>
@@ -99,6 +100,7 @@
       <Animation>Attack</Animation>
       <SwingSound>ToolSwish</SwingSound>
 	  <StatCost Stat="Stamina" Cost="7" />
+	  <StatCost Stat="Fury" Cost="-1" />
     </RightSwing>
 
     <ForwardSwing>
@@ -111,6 +113,7 @@
       <Animation>Attack</Animation>
       <SwingSound>ToolSwish</SwingSound>
 	  <StatCost Stat="Stamina" Cost="7" />
+	  <StatCost Stat="Fury" Cost="-1" />
     </ForwardSwing>
 
     <CanBlock>true</CanBlock>
@@ -118,7 +121,7 @@
 
     <BlockAnimation>block_idle</BlockAnimation>
     <BlockRaiseTime>.1</BlockRaiseTime>
-	<BlockStaminaCost>10</BlockStaminaCost>
+	<BlockCost Stat="Stamina" Cost="10" />
 	<BlockEffect Type="BlockEffect" Subtype="Blocking" />
   </Definition>
 
