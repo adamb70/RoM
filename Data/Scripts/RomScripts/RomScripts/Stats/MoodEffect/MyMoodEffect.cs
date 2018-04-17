@@ -119,6 +119,14 @@ namespace RomScripts.MoodEffect
                 }
                 return null;
             }
+            else if (num <= 25)
+            {
+                if (myMoodEffectDefinition.HappyEffect.HasValue)
+                {
+                    return myMoodEffectDefinition.UnhappyEffect;
+                }
+                return null;
+            }
             else
             {
                 return null;

@@ -14,5 +14,7 @@ namespace RomScripts.MoodEffect
         /// If blank, will try to maintain WellFedEffect instead.
         /// </summary>
         public SerializableDefinitionId? HappyEffect;
+
+        public SerializableDefinitionId? UnhappyEffect;
     }
 }

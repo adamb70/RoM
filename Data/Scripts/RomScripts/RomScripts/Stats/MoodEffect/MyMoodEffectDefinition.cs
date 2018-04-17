@@ -19,7 +19,13 @@ namespace RomScripts.MoodEffect
             get;
             private set;
         }
-        
+
+        public MyDefinitionId? UnhappyEffect
+        {
+            get;
+            private set;
+        }
+
 
         protected override void Init(MyObjectBuilder_DefinitionBase builder)
         {
@@ -30,6 +36,11 @@ namespace RomScripts.MoodEffect
             if (myObjectBuilder_MoodEffectDefinition.HappyEffect.HasValue)
             {
                 this.HappyEffect = new MyDefinitionId?(myObjectBuilder_MoodEffectDefinition.HappyEffect.Value);
+            }
+            this.UnhappyEffect = null;
+            if (myObjectBuilder_MoodEffectDefinition.UnhappyEffect.HasValue)
+            {
+                this.UnhappyEffect = new MyDefinitionId?(myObjectBuilder_MoodEffectDefinition.UnhappyEffect.Value);
             }
 
         }

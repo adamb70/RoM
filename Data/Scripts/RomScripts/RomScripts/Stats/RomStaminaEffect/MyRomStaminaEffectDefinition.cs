@@ -4,7 +4,7 @@ using System;
 using VRage.Game;
 using VRage.Game.Definitions;
 
-namespace RomScripts.StaminaEffect
+namespace RomScripts.RomStaminaEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_RomStaminaEffectDefinition))]
     public class MyRomStaminaEffectDefinition : MyEntityStatEffectDefinition
