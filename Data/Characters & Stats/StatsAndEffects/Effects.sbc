@@ -72,9 +72,9 @@
     <Stat>Food</Stat>
     <RegenPerSecond>-0.02</RegenPerSecond>
     <StarvationEffect Type="CompositeEntityEffect" Subtype="Starvation" />
-    <HungryEffect Type="EntityEffect" Subtype="Hungry" />
-    <WellFedEffect Type="EntityEffect" Subtype="WellFed" />
-    <OverstuffedEffect Type="EntityEffect" Subtype="WellFed" />
+    <HungryEffect Type="CompositeEntityEffect" Subtype="Hungry" />
+    <WellFedEffect Type="CompositeEntityEffect" Subtype="WellFed" />
+    <OverstuffedEffect Type="CompositeEntityEffect" Subtype="Overstuffed" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
@@ -163,8 +163,8 @@
     <Duration Minutes="5" />
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
-    <Id Type="EntityEffect" Subtype="Hungry" />
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Hungry" />
     <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
     <Description>Description_StatusEffect_Hungry</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
@@ -173,15 +173,24 @@
 	<Category>Hunger</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
-    <Id Type="EntityEffect" Subtype="WellFed" />
-    <DisplayName>DisplayName_StatusEffect_WellFed</DisplayName>
-    <Description>Description_StatusEffect_WellFed</Description>
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="WellFed" />
+    <DisplayName>Well Fed!</DisplayName>
+    <Description>You feel content and happy with a full belly!</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Hungry.png</Icon>
     <EffectType>Positive</EffectType>
     <Category>Hunger</Category>
-	<Public>false</Public>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Overstuffed" />
+    <DisplayName>Overstuffed!</DisplayName>
+    <Description>You've eaten too much! You're tired, work less efficiently, and regenerate stamina slower.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Hungry.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Category>Hunger</Category>
   </Definition>
   <!-- Hunger: End -->
 
@@ -342,11 +351,11 @@
     <LostOnReset>false</LostOnReset>
     <Stat>Thirst</Stat>
     <RegenPerSecond>-0.01</RegenPerSecond>
-    <ThirstyEffect Type="EntityEffect" Subtype="Thirsty" />
+    <ThirstyEffect Type="CompositeEntityEffect" Subtype="Thirsty" />
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
-    <Id Type="EntityEffect" Subtype="Thirsty" />
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Thirsty" />
     <DisplayName>Thirsty!</DisplayName>
     <Description>You are thirsty, your stamina will regenerate much slower.</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
@@ -368,17 +377,27 @@
     <!-- Regen per second moves towards limit, regardless if limit is above or below -->
     <RegenPerSecond>0.025</RegenPerSecond>
     <RegenLimit>50</RegenLimit>
-    <HappyEffect Type="EntityEffect" Subtype="Happy" />
-    <UnhappyEffect Type="EntityEffect" Subtype="Happy" />
+    <HappyEffect Type="CompositeEntityEffect" Subtype="Happy" />
+    <UnhappyEffect Type="CompositeEntityEffect" Subtype="UnHappy" />
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
-    <Id Type="EntityEffect" Subtype="Happy" />
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Happy" />
     <DisplayName>Happy!</DisplayName>
     <Description>While happy, your moral will increase. High moral will lead to better combat performance.</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
     <EffectType>Positive</EffectType>
+    <Category>Mood</Category>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="UnHappy" />
+    <DisplayName>Unhappy!</DisplayName>
+    <Description>While unhappy, your moral will decrease and you refuse to do labor! Low moral will lead to worse combat performance.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+    <EffectType>Negative</EffectType>
     <Category>Mood</Category>
   </Definition>
   
@@ -393,11 +412,11 @@
     <LostOnReset>false</LostOnReset>
     <Stat>Fury</Stat>
     <RegenPerSecond>-0.1</RegenPerSecond>
-    <RageEffect Type="EntityEffect" Subtype="Rage" />
+    <RageEffect Type="CompositeEntityEffect" Subtype="Rage" />
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
-    <Id Type="EntityEffect" Subtype="Rage" />
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Rage" />
     <DisplayName>Rage!</DisplayName>
     <Description>With high fury stored up, your stamina regenerates slightly faster.</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>

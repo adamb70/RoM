@@ -88,7 +88,9 @@
   <Definition xsi:type="MyObjectBuilder_TreeCutterToolBehaviorDefinition">
     <Id Type="TreeCutterToolBehaviorDefinition" Subtype="AxeBronze"/>
     <Efficiency>0.6</Efficiency>
-	<ActionStaminaCost>2.5</ActionStaminaCost>
+	<Cost Stat="Mood" Cost="0.25" />
+	<Cost Stat="Stamina" Cost="2.5" />
+
     <PrimaryEffect>
       <HitTime>.6</HitTime>
       <AnimationTime>1</AnimationTime>

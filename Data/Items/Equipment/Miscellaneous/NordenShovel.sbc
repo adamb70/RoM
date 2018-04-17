@@ -72,7 +72,9 @@
 
   <Definition xsi:type="MyObjectBuilder_DiggerToolBehaviorDefinition">
     <Id Type="DiggerToolBehaviorDefinition" Subtype="ShovelNorden"/>
-	<ActionStaminaCost>2.5</ActionStaminaCost>
+	<Cost Stat="Mood" Cost="0.25" />
+	<Cost Stat="Stamina" Cost="2.5" />
+
     <YieldMultiplier>1.0</YieldMultiplier>
     <TargettingDistance>3</TargettingDistance>
     <MiningRadius>0.5</MiningRadius>

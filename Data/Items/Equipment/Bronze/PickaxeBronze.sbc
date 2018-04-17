@@ -4,7 +4,9 @@
   <Definition xsi:type="MyObjectBuilder_MinerToolBehaviorDefinition">
     <Id Type="MinerToolBehaviorDefinition" Subtype="PickaxeBronze"/>
     <Efficiency>3.3</Efficiency>
-	<ActionStaminaCost>2.5</ActionStaminaCost>
+	<Cost Stat="Mood" Cost="0.25" />
+	<Cost Stat="Stamina" Cost="2.5" />
+
     <YieldMultiplier>1.0</YieldMultiplier>
     <MiningDistance>3</MiningDistance>
     <MiningRadius>0.25</MiningRadius>

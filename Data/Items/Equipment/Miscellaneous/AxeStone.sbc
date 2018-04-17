@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<!-- ================================================================================================= -->
   <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
-    <Id Type="HandItem" Subtype="Enchanted_StoneAxe"/>
+    <Id Type="HandItem" Subtype="AxeStone"/>
 
     <!-- Display -->
 
-    <DisplayName>Enchanted Stone Axe</DisplayName>
-    <Description>Materials native to the Elven Grove, 
-this stone axe yields better strength.</Description>
+    <DisplayName>DisplayName_Tool_StoneAxe</DisplayName>
+    <Description>Description_Tool_StoneAxe</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\StoneAxe.dds</Icon>
+	<Tag>AxeCutting</Tag>
     <Size>
       <X>1.2</X>
       <Y>0.6</Y>
@@ -25,7 +24,7 @@ this stone axe yields better strength.</Description>
     <!-- Equipment -->
     <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
 
-    <MaxDurability>300</MaxDurability>
+    <MaxDurability>80</MaxDurability>
 
     <Position>
       <Slot>MainHand</Slot>
@@ -34,7 +33,7 @@ this stone axe yields better strength.</Description>
     <Position>
       <Slot>OffHand</Slot>
     </Position>
-    
+
     <!-- extra transform on IK dummy in 1st person -->
     <EquippedTransform>
       <!-- tool rotation offset from hand -->
@@ -77,33 +76,49 @@ this stone axe yields better strength.</Description>
     <!-- Behavior -->
     <StanceToBehavior>
       <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_TreeCutterToolBehaviorDefinition" Subtype="AxeEnchanted"/>
+      <BehaviorId Type="MyObjectBuilder_TreeCutterToolBehaviorDefinition" Subtype="AxeStone"/>
     </StanceToBehavior>
     <StanceToBehavior>
       <StanceName>CombatMode</StanceName>
       <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="GenericToolCombatBehavior"/>
     </StanceToBehavior>
+    
   </Definition>
-<!-- ================================================================================================= -->
+  
   <Definition xsi:type="MyObjectBuilder_TreeCutterToolBehaviorDefinition">
-    <Id Type="TreeCutterToolBehaviorDefinition" Subtype="AxeEnchanted"/>
+    <Id Type="TreeCutterToolBehaviorDefinition" Subtype="AxeStone"/>
     <Efficiency>0.3</Efficiency>
 	<Cost Stat="Mood" Cost="0.25" />
 	<Cost Stat="Stamina" Cost="2.5" />
 
     <PrimaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Sound>Swing</Sound>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
       <Animation>Cutting</Animation>
     </PrimaryEffect>
 
     <PrimaryLogEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Sound>Swing</Sound>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
       <Animation>CuttingLog</Animation>
     </PrimaryLogEffect>
   </Definition>
-<!-- ================================================================================================= -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AxeStone"/>
+    <DisplayName>DisplayName_Tool_StoneAxe</DisplayName>
+    <Description>Description_Tool_StoneAxe</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\StoneAxe.dds</Icon>
+    <Category>Tools</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="ScrapWood" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StoneSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="AxeStone" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
 </Definitions>
