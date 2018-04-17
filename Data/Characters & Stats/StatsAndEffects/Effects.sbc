@@ -341,10 +341,10 @@
 
   <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
     <Id Type="EntityEffect" Subtype="Thirsty" />
-    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
-    <Description>Description_StatusEffect_Hungry</Description>
+    <DisplayName>Thirsty!</DisplayName>
+    <Description>You are thirsty, your stamina will regenerate much slower.</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\StatBars\Thirst_Icon.png</Icon>
     <EffectType>Negative</EffectType>
     <Category>Thirst</Category>
   </Definition>
@@ -360,18 +360,18 @@
     <LostOnReset>false</LostOnReset>
     <Stat>Mood</Stat>
     <!-- Regen per second moves towards limit, regardless if limit is above or below -->
-    <RegenPerSecond>0.05</RegenPerSecond>
+    <RegenPerSecond>0.025</RegenPerSecond>
     <RegenLimit>50</RegenLimit>
     <HappyEffect Type="EntityEffect" Subtype="Happy" />
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
     <Id Type="EntityEffect" Subtype="Happy" />
-    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
-    <Description>Description_StatusEffect_Hungry</Description>
+    <DisplayName>Happy!</DisplayName>
+    <Description>While happy, your moral will increase. High moral will lead to better combat performance.</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
-    <EffectType>Negative</EffectType>
+    <Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+    <EffectType>Positive</EffectType>
     <Category>Mood</Category>
   </Definition>
   
@@ -391,11 +391,11 @@
   
   <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
     <Id Type="EntityEffect" Subtype="Rage" />
-    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
-    <Description>Description_StatusEffect_Hungry</Description>
+    <DisplayName>Rage!</DisplayName>
+    <Description>With high fury stored up, your stamina regenerates slightly faster.</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
-    <EffectType>Negative</EffectType>
+    <Icon>Textures\HUD\StatsAndEffects\StatBars\Fury_Icon.png</Icon>
+    <EffectType>Positive</EffectType>
     <Category>Fury</Category>
   </Definition>
 
@@ -415,8 +415,8 @@
   
   <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
     <Id Type="EntityEffect" Subtype="Drunk" />
-    <DisplayName>DisplayName_StatusEffect_Hungry</DisplayName>
-    <Description>Description_StatusEffect_Hungry</Description>
+    <DisplayName>Drunk!</DisplayName>
+    <Description>You're drunk, which raises your mood. Dont drink too much, or you'll get alcohal poisoning!</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
     <EffectType>Negative</EffectType>
