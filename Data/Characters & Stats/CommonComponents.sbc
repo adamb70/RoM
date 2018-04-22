@@ -90,7 +90,10 @@
     </Effect>
   </Definition>
   
-
+  <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStatComponent" Subtype="AnimalStats" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Health10" />
+  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
     <Id Type="MyObjectBuilder_EntityStatComponent" Subtype="RoMStats" />
