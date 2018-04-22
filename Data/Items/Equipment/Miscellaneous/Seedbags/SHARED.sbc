@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition">
+    <Id Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    <Tag>SeedBag</Tag>
+    <Public>false</Public>
+
+    <!-- Display -->
+    <DisplayName>DisplayName_Tool_SeedBagPumpkin</DisplayName>
+    <Description>Description_Tool_SeedBag</Description>
+    
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\SeedBag_Pumpkin.mwm</Model>
+
+    <PhysicalMaterial>SeedBag</PhysicalMaterial>
+
+    <Animation>SeedBag</Animation>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>10</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Position>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0.2</Z>
+      </Position>
+      <Orientation>
+        <X>0.707</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>-0.707</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.360</X>
+        <Y>-0.258</Y>
+        <Z>-0.339</Z>
+      </Position>
+      <Orientation>
+        <X>0.3001874</X>
+        <Y>0.6298291</Y>
+        <Z>-0.2882942</Z>
+        <W>0.6558119</W>
+      </Orientation>
+    </EquippedTransformFps>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmFlax_Compost</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+  
+  
+  
+  <!-- ============================== Behavior ============================== -->
+
+  
+  
+  <Definition xsi:type="MyObjectBuilder_RomSeedingToolBehaviorDefinition">
+    <Id Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    <Efficiency>2</Efficiency>
+    <Cost Stat="Stamina" Cost="2.5" />
+	
+    <TargetingDistance>2.0</TargetingDistance>
+    <PrimaryEffect>
+      <HitTime>.3</HitTime>
+      <AnimationTime>1.4</AnimationTime>
+      <Animation>Seeding</Animation>
+    </PrimaryEffect>
+    
+    <!-- <MinAltitudePercentage>25</MinAltitudePercentage> -->
+    <!-- <MaxAltitudePercentage>80</MaxAltitudePercentage> -->
+    
+    <!-- <MaxNorthPercentage>75</MaxNorthPercentage> -->
+    <!-- <MinNorthPercentage>25</MinNorthPercentage> -->
+  </Definition>
+  
+</Definitions>

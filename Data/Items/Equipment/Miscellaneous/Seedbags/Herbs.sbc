@@ -6,68 +6,29 @@
   <!-- Compost -->
 
   
-  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
     <Id Type="SeedBagHandItem" Subtype="SeedBagHerbs_Compost"/>
-		<Tag>SeedBag</Tag>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    
     <DisplayName>Herbs Seed Bag (Compost)</DisplayName>
     <Description>Description_Tool_SeedBag</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
     <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
+    
     <Model>Models\Weapons\SeedBag_Herbs.mwm</Model>
-    <PhysicalMaterial>SeedBag</PhysicalMaterial>
-		<Animation>SeedBag</Animation>
+    
     <MaxStackAmount>1</MaxStackAmount>
-<!-- Equipment -->
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
     <MaxDurability>25</MaxDurability>
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-    <Position>
-      <Slot>OffHand</Slot>
-    </Position>
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Position>
-        <X>-0.074</X>
-        <Y>0.007</Y>
-        <Z>0.215</Z>
-      </Position>
-      <Orientation>
-        <X>-0.6394914</X>
-        <Y>-0.5225991</Y>
-        <Z>0.3265881</Z>
-        <W>0.4596533</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.360</X>
-        <Y>-0.258</Y>
-        <Z>-0.339</Z>
-      </Position>
-      <Orientation>
-        <X>0.3001874</X>
-        <Y>0.6298291</Y>
-        <Z>-0.2882942</Z>
-        <W>0.6558119</W>
-      </Orientation>
-    </EquippedTransformFps>
-<!-- Behavior -->
+    
+    <!-- Behavior -->
     <StanceToBehavior>
       <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_SeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
     </StanceToBehavior>
-<!-- Seed bag definition -->
+    <!-- Seed bag definition -->
     <GrowableDefinitionId>
       <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
       <SubtypeId>FarmHerbs_Compost</SubtypeId>
@@ -78,67 +39,28 @@
   <!-- Single Seed bag -->
   
   
-  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
     <Id Type="SeedBagHandItem" Subtype="Single_SeedBagHerbs"/>
-		<Tag>SeedBag</Tag>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    
     <DisplayName>DisplayName_Tool_SeedBagHerbs</DisplayName>
     <Description>Description_Tool_SeedBag</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
     <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
+    
     <Model>Models\Weapons\SeedBag_Herbs.mwm</Model>
-    <PhysicalMaterial>SeedBag</PhysicalMaterial>
-		<Animation>SeedBag</Animation>
+    
     <MaxStackAmount>1</MaxStackAmount>
-<!-- Equipment -->
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
     <MaxDurability>5</MaxDurability>
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-    <Position>
-      <Slot>OffHand</Slot>
-    </Position>
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Position>
-        <X>-0.074</X>
-        <Y>0.007</Y>
-        <Z>0.215</Z>
-      </Position>
-      <Orientation>
-        <X>-0.6394914</X>
-        <Y>-0.5225991</Y>
-        <Z>0.3265881</Z>
-        <W>0.4596533</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.360</X>
-        <Y>-0.258</Y>
-        <Z>-0.339</Z>
-      </Position>
-      <Orientation>
-        <X>0.3001874</X>
-        <Y>0.6298291</Y>
-        <Z>-0.2882942</Z>
-        <W>0.6558119</W>
-      </Orientation>
-    </EquippedTransformFps>
-<!-- Behavior -->
+    
+    <!-- Behavior -->
     <StanceToBehavior>
       <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_SeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
     </StanceToBehavior>
-<!-- Seed bag definition -->
+    <!-- Seed bag definition -->
     <GrowableDefinitionId>
       <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
       <SubtypeId>Single_FarmHerbs</SubtypeId>
@@ -149,68 +71,29 @@
   <!-- Single Compost seed bag -->
   
   
-  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
     <Id Type="SeedBagHandItem" Subtype="Single_SeedBagHerbs_Compost"/>
-		<Tag>SeedBag</Tag>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    
     <DisplayName>Herbs Seed Bag (Compost)</DisplayName>
     <Description>Description_Tool_SeedBag</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
     <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
+    
     <Model>Models\Weapons\SeedBag_Herbs.mwm</Model>
-    <PhysicalMaterial>SeedBag</PhysicalMaterial>
-		<Animation>SeedBag</Animation>
+    
     <MaxStackAmount>1</MaxStackAmount>
-<!-- Equipment -->
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
     <MaxDurability>5</MaxDurability>
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-    <Position>
-      <Slot>OffHand</Slot>
-    </Position>
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Position>
-        <X>-0.074</X>
-        <Y>0.007</Y>
-        <Z>0.215</Z>
-      </Position>
-      <Orientation>
-        <X>-0.6394914</X>
-        <Y>-0.5225991</Y>
-        <Z>0.3265881</Z>
-        <W>0.4596533</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.360</X>
-        <Y>-0.258</Y>
-        <Z>-0.339</Z>
-      </Position>
-      <Orientation>
-        <X>0.3001874</X>
-        <Y>0.6298291</Y>
-        <Z>-0.2882942</Z>
-        <W>0.6558119</W>
-      </Orientation>
-    </EquippedTransformFps>
-<!-- Behavior -->
+    
+    <!-- Behavior -->
     <StanceToBehavior>
       <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_SeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
     </StanceToBehavior>
-<!-- Seed bag definition -->
+    <!-- Seed bag definition -->
     <GrowableDefinitionId>
       <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
       <SubtypeId>Single_FarmHerbs_Compost</SubtypeId>

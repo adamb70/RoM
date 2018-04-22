@@ -8,7 +8,6 @@ using ObjectBuilders.Definitions.Tools;
 using Sandbox.Game.EntityComponents;
 
 namespace RomScripts.ReadableItem
-
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]
