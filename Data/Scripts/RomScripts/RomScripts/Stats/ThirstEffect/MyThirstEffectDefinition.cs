@@ -19,7 +19,12 @@ namespace RomScripts.ThirstEffect
             get;
             private set;
         }
-        
+
+        public MyDefinitionId? DehydrationEffect
+        {
+            get;
+            private set;
+        }
 
         protected override void Init(MyObjectBuilder_DefinitionBase builder)
         {
@@ -30,6 +35,10 @@ namespace RomScripts.ThirstEffect
             if (myObjectBuilder_ThirstEffectDefinition.ThirstyEffect.HasValue)
             {
                 this.ThirstyEffect = new MyDefinitionId?(myObjectBuilder_ThirstEffectDefinition.ThirstyEffect.Value);
+            }
+            if (myObjectBuilder_ThirstEffectDefinition.DehydrationEffect.HasValue)
+            {
+                this.DehydrationEffect = new MyDefinitionId?(myObjectBuilder_ThirstEffectDefinition.DehydrationEffect.Value);
             }
 
         }

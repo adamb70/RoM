@@ -41,6 +41,7 @@
     <DisplayName>DisplayName_Stat_Food</DisplayName>
     <Description>Description_Stat_Food</Description>
     <Initial>100</Initial>
+    <Default>10</Default>
     <Minimum>0</Minimum>
     <Maximum>100</Maximum>
     <ClampToMaximum>false</ClampToMaximum>
@@ -92,6 +93,7 @@
     <DisplayName>Fury</DisplayName>
     <Description>This determines your Fury. You gain fury from attacking people or animals, once you've reached enough fury you can use a special attack depending on the weapon.</Description>
     <Initial>0</Initial>
+    <Default>0</Default>
     <Minimum>0</Minimum>
     <Maximum>100</Maximum>
   </Definition>
@@ -101,9 +103,10 @@
     <DisplayName>Thirst</DisplayName>
     <Description>This determines how thirsty of you are.</Description>
     <Initial>100</Initial>
+    <Default>10</Default>
     <Minimum>0</Minimum>
     <Maximum>100</Maximum>
-    <ClampToMaximum>false</ClampToMaximum>
+    <ClampToMaximum>true</ClampToMaximum>
   </Definition>
 <!-- ===================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">

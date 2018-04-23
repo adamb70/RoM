@@ -14,5 +14,7 @@ namespace RomScripts.ThirstEffect
         /// If blank, will try to maintain WellFedEffect instead.
         /// </summary>
         public SerializableDefinitionId? ThirstyEffect;
+
+        public SerializableDefinitionId? DehydrationEffect;
     }
 }

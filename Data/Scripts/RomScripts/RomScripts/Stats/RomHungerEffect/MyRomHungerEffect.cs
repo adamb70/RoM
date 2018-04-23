@@ -62,11 +62,19 @@ namespace RomScripts.RomHungerEffect
             MyRomHungerEffectDefinition myHungerEffectDefinition = base.Definition as MyRomHungerEffectDefinition;
             if (num >= 125)
             {
-                return myHungerEffectDefinition.OverstuffedEffect;
+                if (myHungerEffectDefinition.OverstuffedEffect.HasValue)
+                {
+                    return myHungerEffectDefinition.OverstuffedEffect;
+                }
+                return null;
             }
             if (num >= 30)
             {
-                return myHungerEffectDefinition.WellFedEffect;
+                if (myHungerEffectDefinition.WellFedEffect.HasValue)
+                {
+                    return myHungerEffectDefinition.WellFedEffect;
+                }
+                return null;
             }
             if (num >= 1)
             {

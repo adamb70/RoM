@@ -152,6 +152,20 @@
     <Id Type="QuestEntityComponent" Subtype="Humanoid" />
 	<InitialQuest>Test_Quest</InitialQuest>
   </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_DeathComponentDefinition" Copy="Append">
+    <Id Type="DeathComponent" Subtype="PlayerDeath" />
+    <CopyFrom Type="DeathComponent" Subtype="CharacterDeath" />
+    <RespawnCost>20</RespawnCost>
+    <!--
+    The cost is paid by these stats in the order they are added here.
+    If one stat does not have enough, the next stat is used for the remainder, etc.
+    The player will always spawn, regardless of whether or not they can afford the respawn cost.
+    -->
+    <RespawnCostStat>Mood</RespawnCostStat>
+    <RespawnCostStat>Vigor</RespawnCostStat>
+    <RespawnCostStat>Stamina</RespawnCostStat>
+  </Definition>
 
 
 </Definitions>

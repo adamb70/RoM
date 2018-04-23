@@ -58,7 +58,12 @@ namespace RomScripts.ThirstEffect
             int num = (int)thirstValue;
             MyThirstEffectDefinition myThirstEffectDefinition = base.Definition as MyThirstEffectDefinition;
 
-            if (num <= 30)
+            if (num >= 30)
+            {
+                // sufficiently hydrated
+                return null;
+            }
+            if (num >= 1)
             {
                 if (myThirstEffectDefinition.ThirstyEffect.HasValue)
                 {
@@ -68,6 +73,14 @@ namespace RomScripts.ThirstEffect
             }
             else
             {
+                if (myThirstEffectDefinition.DehydrationEffect.HasValue)
+                {
+                    return myThirstEffectDefinition.DehydrationEffect;
+                }
+                if (myThirstEffectDefinition.ThirstyEffect.HasValue)
+                {
+                    return myThirstEffectDefinition.ThirstyEffect;
+                }
                 return null;
             }
         }
