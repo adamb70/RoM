@@ -17,6 +17,7 @@
   <Definition xsi:type="MyObjectBuilder_StaminaEffectDefinition">
     <!-- This is needed to stop the vanilla effect from working instead of the custom one -->
     <Id Type="StaminaEffect" Subtype="StaminaRegen" />
+    <Enabled>false</Enabled>
   </Definition>
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_RomStaminaEffectDefinition">
@@ -64,6 +65,7 @@
   <Definition xsi:type="MyObjectBuilder_HungerEffectDefinition">
     <Id Type="HungerEffect" Subtype="HungerDegen" />
     <!-- Using this to remove the vanilla effect -->
+    <Enabled>false</Enabled>
   </Definition>
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_RomHungerEffectDefinition">
@@ -73,16 +75,24 @@
     <LostOnReset>false</LostOnReset>
     <Stat>Food</Stat>
     <RegenPerSecond>-0.02</RegenPerSecond>
-    <StarvationEffect Type="CompositeEntityEffect" Subtype="Starvation" />
-    <HungryEffect Type="CompositeEntityEffect" Subtype="Hungry" />
-    <WellFedEffect Type="CompositeEntityEffect" Subtype="WellFed" />
-    <OverstuffedEffect Type="CompositeEntityEffect" Subtype="Overstuffed" />
+    <Trigger Threshold="125">
+      <Effect Type="CompositeEntityEffect" Subtype="Overstuffed" />
+    </Trigger>
+    <Trigger Threshold="30">
+      <Effect Type="CompositeEntityEffect" Subtype="WellFed" />
+    </Trigger>
+    <Trigger Threshold="1">
+      <Effect Type="CompositeEntityEffect" Subtype="Hungry" />
+    </Trigger>
+    <Trigger Threshold="0" CueId="Hunger">
+      <Effect Type="CompositeEntityEffect" Subtype="Starvation" />
+    </Trigger>
   </Definition>
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
     <Id Type="CompositeEntityEffect" Subtype="Starvation" />
     <DisplayName>DisplayName_StatusEffect_Starvation</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
+    <Description>You are starving to death!</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
     <EffectType>Negative</EffectType>
@@ -96,10 +106,7 @@
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
     <Id Type="StatEffectAffectorEffect" Subtype="StarvationHealth" />
-    <DisplayName>DisplayName_StatusEffect_Starvation</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
     <AffectedStatEffect Type="HealthEffect" Subtype="HealthRegen" />
     <RegenMultiplier>-600</RegenMultiplier>
@@ -107,10 +114,7 @@
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="StarvationStamina2" />
-    <DisplayName>DisplayName_StatusEffect_Starvation</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
 	  <Stat>Stamina</Stat>
     <RegenPerSecond>0</RegenPerSecond>
@@ -119,10 +123,7 @@
   
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
     <Id Type="StatEffectAffectorEffect" Subtype="StarvationStamina" />
-    <DisplayName>DisplayName_StatusEffect_Starvation</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
     <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <RegenMultiplier>-100</RegenMultiplier>
@@ -130,10 +131,7 @@
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="StarvationVigor" />
-    <DisplayName>DisplayName_StatusEffect_Starvation</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
 	  <Stat>Vigor</Stat>
     <RegenPerSecond>-0.01</RegenPerSecond>
@@ -142,16 +140,13 @@
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
     <Id Type="ToolEfficiencyEffect" Subtype="StarvationToolMultiplier" />
-    <DisplayName>DisplayName_StatusEffect_Starvation</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
-	<AffectedTool>HammerBuilding</AffectedTool>
-	<AffectedTool>AxeCutting</AffectedTool>
-	<AffectedTool>Shovel</AffectedTool>
-	<AffectedTool>Pickaxe</AffectedTool>
-	<AffectedTool>MeleeWeapon</AffectedTool>
+    <AffectedTool>HammerBuilding</AffectedTool>
+    <AffectedTool>AxeCutting</AffectedTool>
+    <AffectedTool>Shovel</AffectedTool>
+    <AffectedTool>Pickaxe</AffectedTool>
+    <AffectedTool>MeleeWeapon</AffectedTool>
     <Multiplier Style="Additive" Value="-0.2" />
   </Definition>
 <!-- ======================================================================== -->
@@ -221,25 +216,19 @@
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
     <Id Type="ToolEfficiencyEffect" Subtype="OverstuffedToolMultiplier" />
-    <DisplayName>Overstuffed!</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
-	<AffectedTool>HammerBuilding</AffectedTool>
-	<AffectedTool>AxeCutting</AffectedTool>
-	<AffectedTool>Shovel</AffectedTool>
-	<AffectedTool>Pickaxe</AffectedTool>
-	<AffectedTool>MeleeWeapon</AffectedTool>
+    <AffectedTool>HammerBuilding</AffectedTool>
+    <AffectedTool>AxeCutting</AffectedTool>
+    <AffectedTool>Shovel</AffectedTool>
+    <AffectedTool>Pickaxe</AffectedTool>
+    <AffectedTool>MeleeWeapon</AffectedTool>
     <Multiplier Style="Additive" Value="-0.2" />
   </Definition>
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
     <Id Type="StatEffectAffectorEffect" Subtype="OverstuffedStamina" />
-    <DisplayName>Overstuffed Stamina!</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
     <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <RegenMultiplier>-80</RegenMultiplier>
@@ -247,10 +236,7 @@
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
     <Id Type="StatEffectAffectorEffect" Subtype="OverstuffedHunger" />
-    <DisplayName>Overstuffed Hunger!</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
     <AffectedStatEffect Type="RomHungerEffect" Subtype="HungerDegen" />
     <RegenMultiplier>350</RegenMultiplier>
@@ -331,7 +317,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Blocking.png</Icon>
     <EffectType>Neutral</EffectType>
-	<CostIncrease>90</CostIncrease>
+    <CostIncrease>90</CostIncrease>
     <Stat>Stamina</Stat>
     <RegenPerSecond>-7</RegenPerSecond>
     <RegenLimit>0</RegenLimit>
@@ -346,7 +332,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Bleeding.png</Icon>
     <EffectType>Negative</EffectType>
-	<DamageType>Bleeding</DamageType>
+    <DamageType>Bleeding</DamageType>
     <Amount>10</Amount>
     <Duration Seconds="5" />
   </Definition>
@@ -358,7 +344,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Poisoned.png</Icon>
     <EffectType>Negative</EffectType>
-	<DamageType>Poison</DamageType>
+    <DamageType>Poison</DamageType>
     <Amount>10</Amount>
     <Duration Seconds="5" />
   </Definition>
@@ -370,7 +356,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Poisoned.png</Icon>
     <EffectType>Negative</EffectType>
-	<DamageType>Poison</DamageType>
+    <DamageType>Poison</DamageType>
     <Amount>1</Amount>
     <Duration Seconds="5" />
   </Definition>
@@ -384,7 +370,7 @@
     <EffectType>Negative</EffectType>
     <ActivationEvent>Burning_Activate</ActivationEvent>
     <DeactivationEvent>Burning_Deactivate</DeactivationEvent>
-	<DamageType>Burning</DamageType>
+    <DamageType>Burning</DamageType>
     <Amount>5</Amount>
   </Definition>
 <!-- ======================================================================== -->
@@ -397,7 +383,7 @@
     <EffectType>Negative</EffectType>
     <ActivationEvent>Burning_Activate</ActivationEvent>
     <DeactivationEvent>Burning_Deactivate</DeactivationEvent>
-	<DamageType>Burning</DamageType>
+    <DamageType>Burning</DamageType>
     <Amount>5</Amount>
     <Duration Seconds="5" />
   </Definition>
@@ -435,10 +421,7 @@
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
     <Id Type="StatEffectAffectorEffect" Subtype="ThirstyStamina" />
-    <DisplayName>Thirsty Stamina!</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\StatBars\Thirst_Icon.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
     <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <RegenMultiplier>-70</RegenMultiplier>
@@ -446,10 +429,7 @@
   <!-- === -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
     <Id Type="StatEffectAffectorEffect" Subtype="DehydrationHealth" />
-    <DisplayName>Dehydrated!</DisplayName>
-    <Description>You are dying, you need to find some water or berries!</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\StatBars\Thirst_Icon.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
     <Category>Thirst</Category>
     <AffectedStatEffect Type="HealthEffect" Subtype="HealthRegen" />
@@ -486,15 +466,12 @@
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
     <Id Type="ToolEfficiencyEffect" Subtype="HappyToolMultiplier" />
-    <DisplayName>Happy!</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
+    <Public>false</Public>
     <EffectType>Positive</EffectType>
-	<AffectedTool>HammerBuilding</AffectedTool>
-	<AffectedTool>AxeCutting</AffectedTool>
-	<AffectedTool>Shovel</AffectedTool>
-	<AffectedTool>Pickaxe</AffectedTool>
+    <AffectedTool>HammerBuilding</AffectedTool>
+    <AffectedTool>AxeCutting</AffectedTool>
+    <AffectedTool>Shovel</AffectedTool>
+    <AffectedTool>Pickaxe</AffectedTool>
     <Multiplier Style="Additive" Value="0.1" />
   </Definition>
 <!-- ======================================================================== -->
@@ -513,15 +490,12 @@
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
     <Id Type="ToolEfficiencyEffect" Subtype="UnhappyToolMultiplier" />
-    <DisplayName>Unhappy!</DisplayName>
-    <Description>Description_StatusEffect_Starvation</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Starvation.png</Icon>
+    <Public>false</Public>
     <EffectType>Negative</EffectType>
-	<AffectedTool>HammerBuilding</AffectedTool>
-	<AffectedTool>AxeCutting</AffectedTool>
-	<AffectedTool>Shovel</AffectedTool>
-	<AffectedTool>Pickaxe</AffectedTool>
+    <AffectedTool>HammerBuilding</AffectedTool>
+    <AffectedTool>AxeCutting</AffectedTool>
+    <AffectedTool>Shovel</AffectedTool>
+    <AffectedTool>Pickaxe</AffectedTool>
     <Multiplier Style="Additive" Value="-0.1" />
   </Definition>
 <!-- ===================================================================================================================== -->
@@ -551,10 +525,7 @@
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
     <Id Type="StatEffectAffectorEffect" Subtype="EnragedStamina" />
-    <DisplayName>Enraged Stamina!</DisplayName>
-    <Description></Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\StatBars\Fury_Icon.png</Icon>
+    <Public>false</Public>
     <EffectType>Positive</EffectType>
     <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <RegenMultiplier>50</RegenMultiplier>
@@ -562,10 +533,7 @@
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
     <Id Type="ToolEfficiencyEffect" Subtype="EnragedToolMultiplier" />
-    <DisplayName>Enraged!</DisplayName>
-    <Description></Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\StatBars\Fury_Icon.png</Icon>
+    <Public>false</Public>
     <EffectType>Positive</EffectType>
     <AffectedTool>MeleeWeapon</AffectedTool>
     <Multiplier Style="Additive" Value="0.2" />
@@ -586,7 +554,7 @@
   <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">
     <Id Type="EntityEffect" Subtype="Drunk" />
     <DisplayName>Drunk!</DisplayName>
-    <Description>You're drunk, which raises your mood. Dont drink too much, or you'll get alcohal poisoning!</Description>
+    <Description>You're drunk, which raises your mood. Don't drink too much, or you'll get alcohol poisoning!</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
     <EffectType>Negative</EffectType>

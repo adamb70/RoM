@@ -55,73 +55,33 @@ namespace RomScripts.RomHungerEffect
             }
             base.Deactivate();
         }
-
-        private MyDefinitionId? GetAppropriateHungerEffect(float hungerValue)
-        {
-            int num = (int)hungerValue;
-            MyRomHungerEffectDefinition myHungerEffectDefinition = base.Definition as MyRomHungerEffectDefinition;
-            if (num >= 125)
-            {
-                if (myHungerEffectDefinition.OverstuffedEffect.HasValue)
-                {
-                    return myHungerEffectDefinition.OverstuffedEffect;
-                }
-                return null;
-            }
-            if (num >= 30)
-            {
-                if (myHungerEffectDefinition.WellFedEffect.HasValue)
-                {
-                    return myHungerEffectDefinition.WellFedEffect;
-                }
-                return null;
-            }
-            if (num >= 1)
-            {
-                if (myHungerEffectDefinition.HungryEffect.HasValue)
-                {
-                    return myHungerEffectDefinition.HungryEffect;
-                }
-                return null;
-            }
-            else
-            {
-                if (myHungerEffectDefinition.StarvationEffect.HasValue)
-                {
-                    return myHungerEffectDefinition.StarvationEffect;
-                }
-                if (myHungerEffectDefinition.HungryEffect.HasValue)
-                {
-                    return myHungerEffectDefinition.HungryEffect;
-                }
-                return null;
-            }
-        }
-
+        
         private void hungerStat_OnValueChanged(MyEntityStat stat, float oldValue, float newValue)
         {
-            MyDefinitionId? appropriateHungerEffect = this.GetAppropriateHungerEffect(newValue);
-            if (appropriateHungerEffect.HasValue)
+            MyRomHungerEffectDefinition myRomHungerEffectDefinition = base.Definition as MyRomHungerEffectDefinition;
+            int num = 0;
+            MyDefinitionId? myDefinitionId = null;
+            foreach (MyRomHungerEffectDefinition.Trigger current in myRomHungerEffectDefinition.Triggers)
             {
-                if (!base.Owner.HasEffect(appropriateHungerEffect.Value))
+                if (current.Threshold >= num && (float)current.Threshold < newValue)
                 {
-                    base.Owner.AddEffect(appropriateHungerEffect.Value, 0L);
+                    if (current.Effect.HasValue)
+                    {
+                        myDefinitionId = current.Effect;
+                    }
+                    num = current.Threshold;
                 }
+                //if (oldValue >= (float)current.Threshold && newValue < (float)current.Threshold && !current.CueId.IsNull)
+                //{
+                //    MyGuiAudio.PlaySound(current.CueId);
+                //}
             }
-            else
+            if (myDefinitionId.HasValue && !base.Owner.HasEffect(myDefinitionId.Value))
             {
-                MyEntityEffectDefinition arg_41_0 = base.Definition;
-                MyStringHash orCompute = MyStringHash.GetOrCompute("Hunger");
-                if (base.Owner.HasEffect(orCompute))
-                {
-                    base.Owner.RemoveEffect(orCompute);
-                }
+                base.Owner.AddEffect(myDefinitionId.Value, 0L);
             }
-            //if ((oldValue >= 50f && newValue < 50f) || (oldValue >= 25f && newValue < 25f) || (oldValue >= 20f && newValue < 20f) || (oldValue >= 15f && newValue < 15f) || (oldValue >= 10f && newValue < 10f) || (oldValue >= 5f && newValue < 5f))
-            //{
-            //    MyCueId soundId = new MyCueId("Hunger");
-            //    MyGuiAudio.PlaySound(soundId);
-            //}
         }
+
+
     }
 }

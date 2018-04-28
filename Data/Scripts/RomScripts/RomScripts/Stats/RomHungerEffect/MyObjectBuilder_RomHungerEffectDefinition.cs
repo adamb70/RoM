@@ -28,5 +28,32 @@ namespace RomScripts.RomHungerEffect
         public SerializableDefinitionId? StarvationEffect;
 
         public SerializableDefinitionId? OverstuffedEffect;
+
+
+        public class Trigger
+        {
+            /// <summary>
+            /// At which value does this trigger fire?
+            /// </summary>
+            [XmlAttribute]
+            public int Threshold;
+
+            /// <summary>
+            /// Is there a matching sound effect?
+            /// </summary>
+            [XmlAttribute]
+            public string CueId;
+
+            /// <summary>
+            /// Is there a matching effect?
+            /// </summary>
+            public SerializableDefinitionId? Effect;
+        }
+
+        [XmlElement("Trigger")]
+        public MyObjectBuilder_RomHungerEffectDefinition.Trigger[] Triggers;
+
+
+
     }
 }

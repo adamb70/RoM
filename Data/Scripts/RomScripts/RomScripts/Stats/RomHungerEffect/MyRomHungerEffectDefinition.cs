@@ -3,6 +3,9 @@ using Sandbox.Definitions.Components.Entity.Stats.Effects;
 using System;
 using VRage.Game;
 using VRage.Game.Definitions;
+using System.Collections.Generic;
+using VRage.Audio;
+using VRage.ObjectBuilders;
 
 namespace RomScripts.RomHungerEffect
 {
@@ -45,30 +48,57 @@ namespace RomScripts.RomHungerEffect
             private set;
         }
 
+        public class Trigger
+        {
+            /// <summary>
+            /// At which value does this trigger fire?
+            /// </summary>
+            public int Threshold;
+
+            /// <summary>
+            /// Is there a matching sound effect?
+            /// </summary>
+            //public MyCueId CueId;
+
+            /// <summary>
+            /// Is there a matching effect?
+            /// </summary>
+            public MyDefinitionId? Effect;
+        }
+
+        private System.Collections.Generic.List<MyRomHungerEffectDefinition.Trigger> m_triggers = new System.Collections.Generic.List<MyRomHungerEffectDefinition.Trigger>();
+
+        public IReadOnlyList<MyRomHungerEffectDefinition.Trigger> Triggers
+        {
+            get
+            {
+                return this.m_triggers;
+            }
+        }
+
         protected override void Init(MyObjectBuilder_DefinitionBase builder)
         {
             base.Init(builder);
             MyObjectBuilder_RomHungerEffectDefinition myObjectBuilder_RomHungerEffectDefinition = builder as MyObjectBuilder_RomHungerEffectDefinition;
-            this.WellFedEffect = null;
-            if (myObjectBuilder_RomHungerEffectDefinition.WellFedEffect.HasValue)
+            this.m_triggers.Clear();
+            
+            if (myObjectBuilder_RomHungerEffectDefinition.Triggers != null)
             {
-                this.WellFedEffect = new MyDefinitionId?(myObjectBuilder_RomHungerEffectDefinition.WellFedEffect.Value);
+                MyObjectBuilder_RomHungerEffectDefinition.Trigger[] triggers = myObjectBuilder_RomHungerEffectDefinition.Triggers;
+                for (int i = 0; i < triggers.Length; i++)
+                {
+                    MyObjectBuilder_RomHungerEffectDefinition.Trigger ob_trigger = triggers[i];
+                    MyRomHungerEffectDefinition.Trigger new_trigger = new MyRomHungerEffectDefinition.Trigger();
+                    new_trigger.Threshold = ob_trigger.Threshold;
+                    //new_trigger.CueId = new MyCueId(trigger_ob.CueId);
+                    SerializableDefinitionId? effect = ob_trigger.Effect;
+                    new_trigger.Effect = (effect.HasValue ? new MyDefinitionId?(effect.GetValueOrDefault()) : null);
+                    this.m_triggers.Add(new_trigger);
+                }
             }
-            this.HungryEffect = null;
-            if (myObjectBuilder_RomHungerEffectDefinition.HungryEffect.HasValue)
-            {
-                this.HungryEffect = new MyDefinitionId?(myObjectBuilder_RomHungerEffectDefinition.HungryEffect.Value);
-            }
-            this.StarvationEffect = null;
-            if (myObjectBuilder_RomHungerEffectDefinition.StarvationEffect.HasValue)
-            {
-                this.StarvationEffect = new MyDefinitionId?(myObjectBuilder_RomHungerEffectDefinition.StarvationEffect.Value);
-            }
-            this.OverstuffedEffect = null;
-            if (myObjectBuilder_RomHungerEffectDefinition.OverstuffedEffect.HasValue)
-            {
-                this.OverstuffedEffect = new MyDefinitionId?(myObjectBuilder_RomHungerEffectDefinition.OverstuffedEffect.Value);
-            }
+            this.m_triggers.Sort((MyRomHungerEffectDefinition.Trigger x, MyRomHungerEffectDefinition.Trigger y) => x.Threshold.CompareTo(y.Threshold));
         }
+
     }
+    
 }
