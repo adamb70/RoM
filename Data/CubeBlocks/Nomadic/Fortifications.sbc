@@ -1,0 +1,78 @@
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- long barricade -->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="LongBarricade" />
+    <DisplayName>Long Barricade</DisplayName>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\LongBarricade.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="8" y="6" z="8" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\LongBarricade.mwm</Model>
+    <Components>
+      <Component Tag="Timber" Count="10" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MaxIntegrity>150</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <UseModelIntersection>true</UseModelIntersection>
+    <Mass>300</Mass>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+  
+  <!-- small barricade -->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="SmallBarricade" />
+    <DisplayName>Small Barricade</DisplayName>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\SmallBarricade.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="7" y="7" z="7" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\SmallBarricade.mwm</Model>
+    <Components>
+      <Component Tag="Timber" Count="3" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MaxIntegrity>150</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <GuiVisible>false</GuiVisible>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <UseModelIntersection>true</UseModelIntersection>
+    <Mass>150</Mass>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+  
+</Definitions>

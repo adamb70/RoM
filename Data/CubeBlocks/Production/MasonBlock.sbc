@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Masonry_Table" />
+    <BlockPairName>Masonry_Table</BlockPairName>
+    <DisplayName>Masonry Block</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\MasonBlock.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="4" y="4" z="4" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\MasonBlock.mwm</Model>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count="10" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MaxIntegrity>200</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="4" EndY="4" />
+    </MountPoints>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Mass>10</Mass>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+</Definitions>

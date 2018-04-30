@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Tent" />
+    <BlockPairName>NomadTentAdv</BlockPairName>
+    <DisplayName>Advanced Linen Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="7" y="6" z="7" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\NomadTentAdv.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Tag="Timber" Count="4" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MaxIntegrity>300</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Points>40</Points>
+    <Mass>20</Mass>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityBannerComponentDefinition">
+    <Id Type="MyObjectBuilder_BoundBannerComponent" Subtype="NomadTentAdvBanner" />
+    <Material>BannerFlag</Material>
+    <Type>Player</Type>
+  </Definition>
+ 
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NomadTentAdv" />
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+      <UseObject Dummy="detector_ownership" Name="ownership"/>
+      <UseObject Dummy="detector_respawn" Name="respawn"/>
+      <UseObject Dummy="detector_wardrobe" Name="wardrobe"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="TentInventory" />
+    <MaxItemCount>14</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="false">
+      <Id Type="InventoryItem" Subtype="Log" />
+      <Id Type="InventoryItem" Subtype="StoneLarge" />
+      <Id Type="CubeBlock" Subtype="Timber10" />
+      <Id Type="CubeBlock" Subtype="TimberRound10" />
+    </Constraint>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Tent" />
+    <Component Type="Inventory" Subtype="TentInventory" />
+    <Component Type="RespawnComponent" />
+    <Component Type="BindableRespawnComponent" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="BoundBannerComponent" Subtype="NomadTentAdvBanner" />
+    <Component Type="UseObjectsComponent" Subtype="NomadTentAdv" />
+    <Component Type="InventorySpawnComponent"/>
+  </Definition>
+  
+  
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="TentBranches" />
+    <BlockPairName>NomadTentAdv</BlockPairName>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv2.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="7" y="6" z="7" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Small\NomadTentAdv2.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Components>
+      <Component Tag="Timber" Count="4" />
+    </Components>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MaxIntegrity>300</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Points>40</Points>
+    <Mass>20</Mass>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="TentBranches" />
+    <Component Type="Inventory" Subtype="TentInventory" />
+    <Component Type="RespawnComponent" />
+    <Component Type="BindableRespawnComponent" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="UseObjectsComponent" Subtype="NomadTentAdv" />
+    <Component Type="InventorySpawnComponent"/>
+  </Definition>
+</Definitions>

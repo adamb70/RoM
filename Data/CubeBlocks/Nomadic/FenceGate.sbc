@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Wooden Gate-->
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="FenceGate" />
+    <DisplayName>Fence Gate</DisplayName>
+    <Public>true</Public>
+    <GuiVisible>true</GuiVisible>
+    <Icon>Textures\GUI\Icons\Cubes\FenceGate.dds</Icon>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="10" y="6" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Doors\FenceGateFrame.mwm</Model>
+    <Mass>8000</Mass>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\Doors\FenceGateFrame.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="6" />
+      <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="6" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      <MountPoint Side="Bottom" StartX="9" StartY="0" EndX="10" EndY="1" />
+      <MountPoint Side="Top" StartX="9" StartY="0" EndX="10" EndY="1" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <Components>
+      <Component Tag="ScrapWood" Count="15" />
+      <Component Tag="Timber" Count ="12" />
+      <Component Type="InventoryItem" Subtype="Log" Count ="2" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="8" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>1000</MaxIntegrity>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Volumetric</PlacementMode>
+        <MaxAllowed>0.25</MaxAllowed>
+        <MinAllowed>0.1</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="FenceGate" />
+    <Subparts>
+      <Subpart Name="FenceGateLeft" PhysicalMaterial="Wood" HingeBone="FenceGateLeft_Pin" RequiresAxialCorrection="false" HasDummy="false" />
+      <Subpart Name="FenceGateRight" PhysicalMaterial="Wood" HingeBone="FenceGateRight_Pin" RequiresAxialCorrection="false" HasDummy="false" />
+    </Subparts>
+  </Definition>
+
+  <!--
+        ///Animation Methods\\\
+    QuadraticEaseIn, Out,InOut,OutIn, 
+    QuarticEaseIn, Out,InOut,OutIn, 
+    QuinticEaseIn, Out,InOut,OutIn,
+    SinusoidalEaseIn, Out,InOut,OutIn,
+    ExponentialEaseIn, Out,InOut,OutIn,
+    CircularEaseIn, Out,InOut,OutIn,
+    ElasticEaseIn, Out,InOut,OutIn,
+    BackEaseIn, Out,InOut,OutIn,
+    BounceEaseIn, Out,InOut,OutIn
+   -->
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="FenceGate" />
+    <AnimationSequences>
+      <Sequence Name="OpenSequence" WrapMode="Once">
+        <Event Start="0.1" Name="DoorOpening" />
+        <Event Start="0.2" Name="DoorMoving" />
+        <Event Start="2.2" Name="DoorOpened" />
+
+        <Animation Start="0" End="2.2">
+          <Subpart Name="FenceGateRight" Type="Rotation" Axis="Y" From="93" To="0" Method="QuadraticEaseInOut" />
+          <Subpart Name="FenceGateLeft" Type="Rotation" Axis="Y" From="-93" To="0" Method="QuadraticEaseInOut" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="CloseSequence" WrapMode="Once">
+        <Event Start="0.1" Name="DoorClosing" />
+        <Event Start="0.2" Name="DoorMoving" />
+        <Event Start="2.2" Name="DoorClosed" />
+
+        <Animation Start="0" End="2.2">
+          <Subpart Name="FenceGateRight" Type="Rotation" Axis="Y" From="0" To="93" Method="QuadraticEaseInOut" />
+          <Subpart Name="FenceGateLeft" Type="Rotation" Axis="Y" From="0" To="-93" Method="QuadraticEaseInOut" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="FenceGate" />
+    <LoadFromModel>true</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_gate_01" Name="Generic" />
+      <UseObject Dummy="detector_gate_02" Name="Generic" />
+      <UseObject Dummy="detector_gate_03" Name="Generic" />
+      <UseObject Dummy="detector_gate_04" Name="Generic" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
+    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="FenceGate" />
+    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
+    <PrimaryAction>Manipulate</PrimaryAction>
+    <SecondaryAction>OpenTerminal</SecondaryAction>
+    <SupportsAccessSettings>true</SupportsAccessSettings>
+    <UseObjectTransitionTriggers>
+      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_04" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
+      <Trigger Dummy="detector_gate_04" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
+    </UseObjectTransitionTriggers>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
+    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="FenceGate" />
+    <Animations>
+      <Animation State="Opening" Animation="OpenSequence" />
+      <Animation State="Closing" Animation="CloseSequence" />
+    </Animations>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="FenceGate" />
+    <InitialState>Open</InitialState>
+    <States>
+      <State Name="Open">
+        <Transition>Closing</Transition>
+      </State>
+      <State Name="Closing">
+        <Transition>Closed</Transition>
+      </State>
+      <State Name="Closed">
+        <Transition>Opening</Transition>
+      </State>
+      <State Name="Opening">
+        <Transition>Open</Transition>
+      </State>
+    </States>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="FenceGate" />
+    <SoundEvents>
+      <Event Name="DoorMoving" Sound="RegularDoor_Move" />
+    </SoundEvents>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
+    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="FenceGate" />
+    <Events>
+      <Event Name="DoorClosed" TransitionToState="Closed" />
+      <Event Name="DoorOpened" TransitionToState="Open" />
+    </Events>
+  </Definition>
+
+  <Sounds>
+    <Sound>
+      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="DoorOpen" />
+      <Category>IMP</Category>
+      <MaxDistance>30</MaxDistance>
+      <Volume>0.6</Volume>
+      <Loopable>false</Loopable>
+      <Waves>
+        <Wave Type="D3">
+          <Start>Audio\HUD\HudPlaceBlock01.wav</Start>
+        </Wave>
+      </Waves>
+    </Sound>
+  </Sounds>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="FenceGate" />
+    <Component Type="MedievalGridOwnershipComponent"/>
+    <Component Type="AccessPermissionComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="FenceGate" />
+    <Component Type="SubpartAnimationComponent" Subtype="FenceGate" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="FenceGate" />
+    <Component Type="EntityStateComponent" Subtype="FenceGate" />
+    <Component Type="StateAnimationComponent" Subtype="FenceGate" />
+    <Component Type="StateUseObjectComponent" Subtype="FenceGate" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="FenceGate" />
+    <Component Type="AnimationEventSoundComponent" Subtype="FenceGate" />
+  </Definition>
+</Definitions>
