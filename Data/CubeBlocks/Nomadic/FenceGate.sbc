@@ -64,8 +64,9 @@
   <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
     <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="FenceGate" />
     <Subparts>
-      <Subpart Name="FenceGateLeft" PhysicalMaterial="Wood" HingeBone="FenceGateLeft_Pin" RequiresAxialCorrection="false" HasDummy="false" />
-      <Subpart Name="FenceGateRight" PhysicalMaterial="Wood" HingeBone="FenceGateRight_Pin" RequiresAxialCorrection="false" HasDummy="false" />
+      <Subpart Name="FenceGateLeft" Model="Models\Cubes\Doors\FenceGateLeft.mwm" PhysicalMaterial="Wood" HingeBone="FenceGateLeft_Pin" RequiresAxialCorrection="false" HasDummy="false" />
+      
+      <Subpart Name="FenceGateRight" Model="Models\Cubes\Doors\FenceGateRight.mwm" PhysicalMaterial="Wood" HingeBone="FenceGateRight_Pin" RequiresAxialCorrection="false" HasDummy="false" />
     </Subparts>
   </Definition>
 
