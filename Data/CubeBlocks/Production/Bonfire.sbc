@@ -43,10 +43,13 @@
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire"/>
     <DisplayName>DisplayName_Block_BonFire</DisplayName>
+    <Description>The Campfire is the simplest way to cook 
+      food with, though it's limited to lower
+      tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
-    <Category>Personal</Category>
+    <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="9" Type="InventoryItem" Subtype="StoneSmall" />
+      <Item Amount="9" Tag="Universal_Stone" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Bonfire" />

@@ -77,8 +77,8 @@ or water withering plants.</Description>
 
 
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Cooking_TableInventory" />
-    <InventoryName>Cooking_TableInventory</InventoryName>
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Herbalist_TableInventory" />
+    <InventoryName>Herbalist_TableInventory</InventoryName>
     <DisplayName>Cooking_Table</DisplayName>
     <MaxItemCount>14</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
@@ -87,7 +87,7 @@ or water withering plants.</Description>
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Herbalist_Table" />
     <Component Type="UseObjectsComponent" Subtype="Cooking_Table" ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="Cooking_TableInventory" ForceCreate="true"/>
+    <Component Type="Inventory" Subtype="Herbalist_TableInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
     <Component Type="CraftingComponentQueued" Subtype="Herbalist_Table" ForceCreate="true"/>
   </Definition>

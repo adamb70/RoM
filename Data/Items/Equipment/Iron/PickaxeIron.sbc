@@ -33,14 +33,14 @@
     <DisplayName>DisplayName_Tool_Pickaxe</DisplayName>
     <Description>Description_Tool_Pickaxe</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeIron.dds</Icon>
-    <Category>Anvil_Iron</Category>
+    <Category>Anvil</Category>
     <Prerequisites>
-      <Item Amount="1" Tag="Timber" />
-      <Item Amount="2" Tag="IngotIron" />
+      <Item Amount="2" Tag="Universal_Stick" />
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="HandItem" Subtype="PickaxeIron" />
     </Results>
-    <CraftingTime Seconds="1"/>
+    <CraftingTime Seconds="15"/>
   </Definition>
 </Definitions>

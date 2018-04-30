@@ -100,15 +100,15 @@
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchStand"/>
     <DisplayName>DisplayName_Block_TorchStand</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
-    <Category>Woodcrafting</Category>
+      <Category>Anvil</Category>
     <Prerequisites>
-      <Item Amount="3" Tag="ScrapWood" />
-      <Item Amount="1" Type="InventoryItem" Subtype="PartsMetal" />
+        <Item Amount="3" Tag="Universal_Stick" />
+        <Item Amount="1" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="TorchStand" />
     </Results>
-    <CraftingTime Seconds="1"/>
+    <CraftingTime Seconds="1.5"/>
   </Definition>
 
 </Definitions>

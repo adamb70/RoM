@@ -125,18 +125,17 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClubStudded"/>
-    <DisplayName>DisplayName_Weapon_Mace</DisplayName>
-    <Description>Description_Weapon_Mace</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
-    <Category>Anvil_Iron</Category>
-    <Prerequisites>
-      <Item Amount="2" Tag="Timber" />
-      <Item Amount="1" Tag="Ingot" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Type="HandItem" Subtype="ClubStudded" />
-    </Results>
-    <CraftingTime Seconds="1"/>
-  </Definition>
+      <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClubStudded" />
+      <DisplayName>Iron Mace</DisplayName>
+      <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
+      <Category>Anvil</Category>
+      <Prerequisites>
+        <Item Amount="3" Tag="Universal_Stick" />
+        <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="HandItem" Subtype="ClubStudded" />
+      </Results>
+      <CraftingTime Seconds="15"/>
+    </Definition>
 </Definitions>

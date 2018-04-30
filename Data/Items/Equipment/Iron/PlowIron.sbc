@@ -91,14 +91,14 @@
     <DisplayName>DisplayName_Tool_HandPlow</DisplayName>
     <Description>Description_Tool_HandPlow</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
-    <Category>Anvil_Iron</Category>
+    <Category>Anvil</Category>
     <Prerequisites>
-      <Item Amount="2" Tag="Timber" />
-      <Item Amount="1" Tag="IngotIron" />
+      <Item Amount="3" Tag="Universal_Stick" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="HandItem" Subtype="PlowIron" />
     </Results>
-    <CraftingTime Seconds="1"/>
+    <CraftingTime Seconds="15"/>
   </Definition>
 </Definitions>

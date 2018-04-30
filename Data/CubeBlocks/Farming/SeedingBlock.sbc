@@ -1,24 +1,9 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition" Copy="Merge">
     <Id Type="CubeBlock" Subtype="SeedingBlock" />
     <DisplayName>DisplayName_Block_SeedingBlock</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\SeederBlock.dds</Icon>
-    <BlockPairName>SeedingBlock</BlockPairName>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="3" y="3" z="8" />
-    <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\small\SeederBlock.mwm</Model>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <MountPoints>
-      <MountPoint Side="Front" StartX="0.0" StartY="3.0" EndX="3.0" EndY="2.0" Default="true" />
-      <MountPoint Side="Back" StartX="0.0" StartY="3.0" EndX="3.0" EndY="2.0" />
-      <MountPoint Side="Left" StartX="0.0" StartY="3.0" EndX="8.0" EndY="2.0" />
-      <MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="8.0" EndY="2.0" />
-    </MountPoints>
     <CriticalComponent Tag="Timber" Index="0" />
     <Components>
       <Component Tag="ScrapWood" Count="5" />
@@ -32,31 +17,6 @@
     <Direction>Vertical</Direction>
     <Rotation>Both</Rotation>
     <GuiVisible>true</GuiVisible>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="SeedingBlock" />
-    <Component Type="UseObjectsComponent" Subtype="SeedingBlock" />
-    <Component Type="SeedingComponent" Subtype="SeedingBlock" />
-    <Component Type="Inventory" Subtype="SeedingBlock" />
-    <Component Type="InventorySpawnComponent"/>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="SeedingBlock" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_SeedingComponentDefinition">
-    <Id Type="MyObjectBuilder_SeedingComponent" Subtype="SeedingBlock" />
-    <SeedingCooldownInSeconds>.5</SeedingCooldownInSeconds>
-    <SeedingOffsets>
-      <Offset x="0" y="0" z="-0.51"/>
-      <Offset x="0" y="0" z="0.51"/>
-    </SeedingOffsets>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">

@@ -1162,32 +1162,12 @@ a wood crossbow.</DisplayName>
     <!-- Stop vanilla rope showing -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BasicRope"/>
-    <DisplayName>DisplayName_Rope_Basic</DisplayName>
-    <Description>Description_Rope_Basic</Description>
-    <Icon>Textures\GUI\Icons\cubes\BasicRope.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="5" Type="HandItem" Subtype="Rope" />
-    </Results>
-    <CraftingTime Seconds="1"/>
+    <Enabled>false</Enabled>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RopeTearable"/>
-    <DisplayName>DisplayName_Rope_TearableRope</DisplayName>
-    <Description>Description_Rope_TearableRope</Description>
-    <Icon>Textures\GUI\Icons\cubes\TearableRope.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="5" Type="HandItem" Subtype="RopeTearable" />
-    </Results>
-    <CraftingTime Seconds="1"/>
+    <Enabled>false</Enabled>
   </Definition>
   <!-- -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1259,32 +1239,12 @@ a wood crossbow.</DisplayName>
     <!-- Stop Vanilla flags showing -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PersonalFlag"/>
-    <Icon>Textures\GUI\Icons\Cubes\Flag10x10.dds</Icon>
-    <DisplayName>DisplayName_Block_FlagPersonal</DisplayName>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="1" Tag="ScrapWood" />
-      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="FlagPersonal10x10" />
-    </Results>
-    <CraftingTime Seconds="1"/>
+    <Enabled>false</Enabled>
   </Definition>
     
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FactionFlag"/>
-    <Icon>Textures\GUI\Icons\Cubes\FlagRed10x10.dds</Icon>
-    <DisplayName>DisplayName_Block_FlagFaction</DisplayName>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="1" Tag="ScrapWood" />
-      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="FlagHouse10x10" />
-    </Results>
-    <CraftingTime Seconds="1"/>
+    <Enabled>false</Enabled>
   </Definition>
   <!-- -->
   
@@ -1497,7 +1457,7 @@ a wood crossbow.</DisplayName>
       </Prerequisites>
       <Results>
 	  
-	    <Item Amount="1" Type="InventoryItem" Subtype="Unfiltered Alcohol" />
+	    <Item Amount="1" Type="InventoryItem" Subtype="Unfiltered_Alcohol" />
       </Results>
 	  <CraftingTime Seconds="4"/>
     </Definition>
@@ -1508,7 +1468,7 @@ a wood crossbow.</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
       <Category>Fermenting_Vat</Category>
       <Prerequisites>
-        <Item Amount="1" Type="InventoryItem" Subtype="Unfiltered Alcohol" />
+        <Item Amount="1" Type="InventoryItem" Subtype="Unfiltered_Alcohol" />
       </Prerequisites>
       <Results>
 	  
@@ -1594,23 +1554,6 @@ a wood crossbow.</DisplayName>
 
   			  <!-- Books -->
 
-
-
-	<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Unwritten_Book" />
-      <DisplayName>Unwritten Book</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\book.dds</Icon>
-      <Category>Compost_Bin</Category>
-      <Prerequisites>
-        <Item Amount="1" Tag="Universal_Stick" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="InventoryItem" Subtype="Unwritten_Book" />
-      </Results>
-	  <CraftingTime Seconds="1.5"/>
-    </Definition>
 
 
 	<!-- =================================================================================== -->
@@ -4309,7 +4252,8 @@ inorder to withstand more .</DisplayName>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand_Carpenter" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand_Carpenter
+    " />
       <DisplayName>Carpenter: Spalt Lager Kegstand
 
 Allows you to store and
@@ -5801,28 +5745,6 @@ cooking recipes.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stove" />
-	  <DisplayName>Stove</DisplayName>
-    <Description>An upgraded version of the Bonfire,
-allows you to craft higher tier items
-and construct them faster. Contains an
-oven, used for baking bread and other
-cooking recipes.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\cooking\stove.dds</Icon>
-      <Category>Anvil</Category>
-	  <Prerequisites>
-      <Item Amount="9" Type="InventoryItem" Subtype="IngotIron" />
-	  </Prerequisites>
-	  <Results>
-		 
-		<Item Amount="1" Type="CubeBlock" Subtype="Stove" />
-      </Results>
-	  <CraftingTime Seconds="3"/>
-	</Definition>
-
-<!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Nails_Blacksmithing" />
       <DisplayName>Blacksmithing: Iron Nails</DisplayName>
 
@@ -5876,22 +5798,6 @@ walls by a large amount.</Description>
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
-<!-- ________________________________________________________________________________ -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchStand" />
-      <DisplayName>DisplayName_Block_TorchStand</DisplayName>
-      <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
-      <Category>Anvil</Category>
-      <Prerequisites>
-        <Item Amount="3" Tag="Universal_Stick" />
-        <Item Amount="1" Type="InventoryItem" Subtype="PartsMetal" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="CubeBlock" Subtype="TorchStand" />
-      </Results>
-	  <CraftingTime Seconds="1.5"/>
-    </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchWall_Blacksmithing" />
@@ -5912,22 +5818,6 @@ walls by a large amount.</Description>
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
-<!-- ________________________________________________________________________________ -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchWall" />
-      <DisplayName>DisplayName_Block_TorchWall</DisplayName>
-      <Icon>Textures\GUI\Icons\Cubes\WallTorch.dds</Icon>
-      <Category>Anvil</Category>
-      <Prerequisites>
-        <Item Amount="2" Tag="Universal_Stick" />
-        <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="CubeBlock" Subtype="TorchWall" />
-      </Results>
-	  <CraftingTime Seconds="1.5"/>
-    </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FireBucket_Blacksmithing" />
@@ -5947,20 +5837,6 @@ walls by a large amount.</Description>
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
-<!-- ________________________________________________________________________________ -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Brazier"/>
-    <DisplayName>DisplayName_Block_FireBucket</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\FireBucket.dds</Icon>
-    <Category>Anvil</Category>
-    <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Brazier" />
-    </Results>
-    <CraftingTime Seconds="1"/>
-  </Definition>
 <!-- ========================================================================================================== -->
 					<!-- Tools -->
 <!-- =================================================================================== -->
@@ -5999,22 +5875,6 @@ at a faster rate then stone axes.</Description>
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
-<!-- ========================================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HammerIron" />
-      <DisplayName>Iron Hammer</DisplayName>
-      <Icon>Textures\GUI\Icons\ToolsAndWeapons\HammerIron.dds</Icon>
-      <Category>Anvil</Category>
-      <Prerequisites>
-        <Item Amount="2" Tag="Universal_Stick" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="HandItem" Subtype="HammerIron" />
-      </Results>
-	  <CraftingTime Seconds="15"/>
-    </Definition>
 <!-- ________________________________________________________________________________ -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Hammer_Blacksmithing" />
@@ -6034,22 +5894,6 @@ at a faster rate then wooden hammers.</Description>
 	    <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Hammer" />
       </Results>
 	  <CraftingTime Seconds="3"/>
-    </Definition>
-<!-- ========================================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PickaxeIron" />
-      <DisplayName>Iron Pickaxe</DisplayName>
-      <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronPickaxe.dds</Icon>
-      <Category>Anvil</Category>
-      <Prerequisites>
-        <Item Amount="2" Tag="Universal_Stick" />
-      <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="HandItem" Subtype="PickaxeIron" />
-      </Results>
-	  <CraftingTime Seconds="15"/>
     </Definition>
 <!-- ________________________________________________________________________________ -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -6103,22 +5947,6 @@ at a faster rate then wooden hammers.</Description>
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>
-<!-- ========================================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PlowIron" />
-      <DisplayName>Iron Plow</DisplayName>
-      <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
-      <Category>Anvil</Category>
-      <Prerequisites>
-        <Item Amount="3" Tag="Universal_Stick" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
-      </Prerequisites>
-      <Results>
-	  
-	  <Item Amount="1" Type="HandItem" Subtype="PlowIron" />
-      </Results>
-	  <CraftingTime Seconds="15"/>
-    </Definition>
 <!-- ________________________________________________________________________________ -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Plow_Blacksmithing" />
@@ -6140,22 +5968,7 @@ for a longer time then Stone Plows.</Description>
 	  <CraftingTime Seconds="3"/>
     </Definition>
 <!-- ========================================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClubStudded" />
-      <DisplayName>Iron Mace</DisplayName>
-      <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
-      <Category>Anvil</Category>
-      <Prerequisites>
-        <Item Amount="3" Tag="Universal_Stick" />
-      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
-      </Prerequisites>
-      <Results>
-	  
-	  <Item Amount="1" Type="HandItem" Subtype="ClubStudded" />
-      </Results>
-	  <CraftingTime Seconds="15"/>
-    </Definition>
-<!-- ________________________________________________________________________________ -->
+    
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Mace_Blacksmithing" />
       <DisplayName>Blacksmithing: Iron Mace</DisplayName>
@@ -6210,21 +6023,6 @@ Most commonly used for the Crafting profession.</Description>
 	  <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_GlassblowingPipe" />
       </Results>
 	  <CraftingTime Seconds="1"/>
-    </Definition>
-<!-- ========================================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SwordIron" />
-      <DisplayName>Iron Sword</DisplayName>
-      <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronSword.dds</Icon>
-      <Category>Anvil</Category>
-      <Prerequisites>
-        <Item Amount="2" Type="InventoryItem" Subtype="IngotIron" />
-      </Prerequisites>
-      <Results>
-	  
-	  <Item Amount="1" Type="HandItem" Subtype="SwordIron" />
-      </Results>
-	  <CraftingTime Seconds="15"/>
     </Definition>
  <!-- ========================================================================================================== -->   
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -6524,23 +6322,6 @@ to aquire Pristine Stones))</Description>
     <CraftingTime Seconds="3"/>
   </Definition>
 
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire"/>
-    <DisplayName>DisplayName_Block_BonFire</DisplayName>
-    <Description>The Campfire is the simplist way to cook 
-food with, though it's limited to lower
-tier foods.</Description>
-    <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
-    <Category>SmallBlocks</Category>
-    <Prerequisites>
-      <Item Amount="9" Tag="Universal_Stone" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Bonfire" />
-    </Results>
-    <CraftingTime Seconds="3"/>
-  </Definition>  
 <!-- =================================================================================== -->  
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -6587,7 +6368,7 @@ tier foods.</Description>
       <Item Amount="10" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="MyObjectBuilder_CubeBlock" Subtype="FenceGate" />
+      <Item Amount="1" Type="CubeBlock" Subtype="FenceGate" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
