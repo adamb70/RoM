@@ -3,7 +3,7 @@
   <!--Wooden PortCullisMultiblock-->
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="NPC_PortcullisWoodWithPillarsStone" />
-    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <DisplayName>NPC Wooden Portcullis</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -47,7 +47,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WoodenPortcullis_1" />
-    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <DisplayName>NPC Wooden Portcullis</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Public>false</Public>
     <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
@@ -102,7 +102,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_2" />
-    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <DisplayName>NPC Wooden Portcullis</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Public>false</Public>
     <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
@@ -156,7 +156,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_3" />
-    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <DisplayName>NPC Wooden Portcullis</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Public>false</Public>
     <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
@@ -208,7 +208,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_4" />
-    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <DisplayName>NPC Wooden Portcullis</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Public>false</Public>
     <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
@@ -260,7 +260,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_5" />
-    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <DisplayName>NPC Wooden Portcullis</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Public>false</Public>
     <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
@@ -312,7 +312,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_6" />
-    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <DisplayName>NPC Wooden Portcullis</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Public>false</Public>
     <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
@@ -364,7 +364,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_IronPart" />
-    <DisplayName>DisplayName_Block_WoodenPortcullisMultiBlock</DisplayName>
+    <DisplayName>NPC Wooden Portcullis</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Public>false</Public>
     <Icon>Textures\GUI\Icons\Cubes\Portcullis.dds</Icon>
@@ -396,139 +396,17 @@
     <AvailableInSurvival>false</AvailableInSurvival>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Subparts>
-      <Subpart Name="PortcullisDoor" PhysicalMaterial="Wood">
-        <HingePosition x="-1.25" y="-1.05" z="-0.44"/>
-      </Subpart>
-    </Subparts>
-  </Definition>
 
-  <!--
-        ///Animation Methods\\\
-    QuadraticEaseIn, Out,InOut,OutIn, 
-    QuarticEaseIn, Out,InOut,OutIn, 
-    QuinticEaseIn, Out,InOut,OutIn,
-    SinusoidalEaseIn, Out,InOut,OutIn,
-    ExponentialEaseIn, Out,InOut,OutIn,
-    CircularEaseIn, Out,InOut,OutIn,
-    ElasticEaseIn, Out,InOut,OutIn,
-    BackEaseIn, Out,InOut,OutIn,
-    BounceEaseIn, Out,InOut,OutIn,
-   -->
-
-  <!--<OpeningSequences>
-    <Sequence Speed="1.06" OpenDelay="0" CloseDelay="2" Move="Slide" MaxSlide="0.265" ClosingSpeedMult="0.5">
-      <Id ="
-"=" y" /"/>
-    </Sequence>
-    <Sequence Speed="3.56" OpenDelay="0.25" CloseDelay="1" Move="Slide" MaxSlide="0.89" ClosingSpeedMult="0.25">
-      <Id ="
-"=" y" /"/>
-    </Sequence>
-    <Sequence Speed="6.96" OpenDelay="0.5" CloseDelay="0" Move="Slide" MaxSlide="1.74" ClosingSpeedMult="0.25">
-      <Id ="
-"=" y" /"/>
-    </Sequence>
-  </OpeningSequences>-->
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <AnimationSequences>
-      <Sequence Name="OpenSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorOpening" />
-        <Event Start="2.5" Name="DoorOpened" />
-
-        <Animation Start="0" End="2.5">
-          <Subpart Name="PortcullisDoor" Type="Translation" Axis="Y" From="-2.895" To="0" Method="Linear" />
-        </Animation>
-      </Sequence>
-      <Sequence Name="CloseSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorClosing" />
-        <Event Start="1.2" Name="DoorClosed" />
-
-        <Animation Start="0" End="1.0">
-          <Subpart Name="PortcullisDoor" Type="Translation" Axis="Y" From="0" To="-2.895" Method="QuarticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Animations>
-      <Animation State="Opening" Animation="OpenSequence" />
-      <Animation State="Closing" Animation="CloseSequence" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <SoundEvents>
-      <Event Name="DoorClosed" Sound="DoorOpen" />
-    </SoundEvents>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WoodenPortcullis_1" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Component Type="EntityStateComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WoodenPortcullis_1" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WoodenPortcullis_1" />
+    <Component Type="UseObjectsComponent" Subtype="WoodenPortcullis_1" />
+    <Component Type="SubpartAnimationComponent" Subtype="WoodenPortcullis_1" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WoodenPortcullis_1" />
+    <Component Type="EntityStateComponent" Subtype="WoodenPortcullis_1" />
+    <Component Type="StateAnimationComponent" Subtype="WoodenPortcullis_1" />
+    <Component Type="StateUseObjectComponent" Subtype="WoodenPortcullis_1" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WoodenPortcullis_1" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WoodenPortcullis_1" />
   </Definition>
 </Definitions>

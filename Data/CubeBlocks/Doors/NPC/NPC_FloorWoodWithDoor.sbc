@@ -2,7 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="CubeBlock" Subtype="NPC_FloorWoodWithDoor" />
-    <DisplayName>DisplayName_Block_WoodenCeilingDoor</DisplayName>
+    <DisplayName>NPC Wooden Trapdoor</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Doors\WoodenCeilingDoor.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -54,108 +54,14 @@
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_FloorWoodWithDoor" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Component Type="EntityStateComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_FloorWoodWithDoor" />
+    <Component Type="UseObjectsComponent" Subtype="FloorWoodWithDoor" />
+    <Component Type="SubpartAnimationComponent" Subtype="FloorWoodWithDoor" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="FloorWoodWithDoor" />
+    <Component Type="EntityStateComponent" Subtype="FloorWoodWithDoor" />
+    <Component Type="StateAnimationComponent" Subtype="FloorWoodWithDoor" />
+    <Component Type="StateUseObjectComponent" Subtype="FloorWoodWithDoor" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="FloorWoodWithDoor" />
+    <Component Type="AnimationEventSoundComponent" Subtype="FloorWoodWithDoor" />
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_FloorWoodWithDoor" />
-	<ShowSubpartsWhileBuilding>false</ShowSubpartsWhileBuilding>
-    <Subparts>
-      <Subpart Name="WoodenCeilingDoor_Door" PhysicalMaterial="Wood" HingeBone="WoodenCeilingDoor_Door_Pin" />
-    </Subparts>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <AnimationSequences>
-      <Sequence Name="Opening" WrapMode="Once">
-        <Event Start="0.1" Name="OpeningEvent" />
-        <Event Start="0.5" Name="OpenedEvent" />
-
-        <Animation Start="0.0" End="0.5">
-          <Subpart Name="WoodenCeilingDoor_Door" Type="Rotation" Axis="X" From="0" To="100" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-
-      <Sequence Name="Closing" WrapMode="Once">
-        <Event Start="0.1" Name="ClosingEvent" />
-        <Event Start="0.5" Name="ClosedEvent" />
-
-        <Animation Start="0.0" End="0.5">
-          <Subpart Name="WoodenCeilingDoor_Door" Type="Rotation" Axis="X" From="100" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate01" Name="Generic" />
-      <UseObject Dummy="detector_gate02" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Tooltip>UseObject_DynamicPress</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate01" From="Closed" To="Opening" ActionName="Action_Open" />
-      <Trigger Dummy="detector_gate02" From="Opened" To="Closing" ActionName="Action_Close" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Animations>
-      <Animation State="Opening" Animation="Opening" />
-      <Animation State="Closing" Animation="Closing" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <InitialState>Closed</InitialState>
-    <States>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Opened">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Opened</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <Events>
-      <Event Name="OpenedEvent" TransitionToState="Opened" />
-      <Event Name="ClosedEvent" TransitionToState="Closed" />
-    </Events>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_FloorWoodWithDoor" />
-    <SoundEvents>
-      <Event Name="OpeningEvent" Sound="RegularDoor_Move" />
-      <Event Name="Opened" Sound="RegularDoor_Open" />
-      <Event Name="ClosingEvent" Sound="RegularDoor_Move" />
-      <Event Name="Closed" Sound="RegularDoor_Close" />
-    </SoundEvents>
-  </Definition>
 </Definitions>

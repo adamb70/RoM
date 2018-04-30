@@ -3,7 +3,7 @@
   <!--Small wall with door, straight-->
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WallStoneWithDoor" />
-    <DisplayName>DisplayName_Block_SmallWoodenGateW</DisplayName>
+    <DisplayName>NPC Wall With Door</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\StoneWallRoundDoor.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -62,134 +62,15 @@
     <GuiVisible>true</GuiVisible>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Subparts>
-      <Subpart Name="WoodGate" PhysicalMaterial="Wood">
-        <HingePosition x="0.445" y="-0.117" z="-0.766"/>
-      </Subpart>
-    </Subparts>
-  </Definition>
-
-  <!--
-      ///Animation Methods\\\
-  QuadraticEaseIn, Out,InOut,OutIn, 
-  QuarticEaseIn, Out,InOut,OutIn, 
-  QuinticEaseIn, Out,InOut,OutIn,
-  SinusoidalEaseIn, Out,InOut,OutIn,
-  ExponentialEaseIn, Out,InOut,OutIn,
-  CircularEaseIn, Out,InOut,OutIn,
-  ElasticEaseIn, Out,InOut,OutIn,
-  BackEaseIn, Out,InOut,OutIn,
-  BounceEaseIn, Out,InOut,OutIn,
-  -->
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WallStoneWithDoor" />
-    <AnimationSequences>
-      <Sequence Name="OpenSequence" WrapMode="Once">
-        <Event Start="0.0" Name="DoorOpening" />
-        <Event Start="0.1" Name="DoorMoving" />
-        <Event Start="1.2" Name="DoorOpened" />
-
-        <Animation Start="0" End="1.2">
-          <Subpart Name="WoodGate" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseInOut" />
-        </Animation>
-      </Sequence>
-      <Sequence Name="CloseSequence" WrapMode="Once">
-        <Event Start="0.0" Name="DoorClosing" />
-        <Event Start="0.1" Name="DoorMoving" />
-        <Event Start="1.2" Name="DoorClosed" />
-
-        <Animation Start="0" End="1.2">
-          <Subpart Name="WoodGate" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseInOut" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WallStoneWithDoor" />
-    <LoadFromModel>true</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-      <UseObject Dummy="detector_gate_03" Name="Generic" />
-      <UseObject Dummy="detector_gate_04" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_04" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_04" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Animations>
-      <Animation State="Opening" Animation="OpenSequence" />
-      <Animation State="Closing" Animation="CloseSequence" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WallStoneWithDoor" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WallStoneWithDoor" />
-    <SoundEvents>
-      <Event Name="DoorOpening" Sound="RegularDoor_Open" />
-      <Event Name="DoorMoving" Sound="RegularDoor_Move" />
-      <Event Name="DoorClosed" Sound="RegularDoor_Close" />
-    </SoundEvents>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
-
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WallStoneWithDoor" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Component Type="EntityStateComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WallStoneWithDoor" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WallStoneWithDoor" />
+    <Component Type="UseObjectsComponent" Subtype="WallStoneWithDoor" />
+    <Component Type="SubpartAnimationComponent" Subtype="WallStoneWithDoor" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WallStoneWithDoor" />
+    <Component Type="EntityStateComponent" Subtype="WallStoneWithDoor" />
+    <Component Type="StateAnimationComponent" Subtype="WallStoneWithDoor" />
+    <Component Type="StateUseObjectComponent" Subtype="WallStoneWithDoor" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WallStoneWithDoor" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WallStoneWithDoor" />
   </Definition>
 </Definitions>

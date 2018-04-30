@@ -3,7 +3,7 @@
   <!--plank door, straight-->
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WallClayWithDoor" />
-    <DisplayName>DisplayName_Block_PlankDoorW</DisplayName>
+    <DisplayName>NPC Half-timber Wall With Door</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\PlankDoor.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -51,116 +51,15 @@
     <GuiVisible>true</GuiVisible>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WallClayWithDoor" />
-    <Subparts>
-      <Subpart Name="PlankGate" PhysicalMaterial="Wood">
-        <HingePosition x="0.4985" y="0" z="-0.99"/>
-      </Subpart>
-    </Subparts>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WallClayWithDoor" />
-    <AnimationSequences>
-      <Sequence Name="Open" WrapMode="Once">
-        <Event Start="0.0" Name="DoorOpening" />
-        <Event Start="0.1" Name="DoorMoving" />
-        <Event Start="1.2" Name="DoorOpened" />
-
-        <Animation Start="0" End="1.2">
-          <Subpart Name="PlankGate" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-
-      <Sequence Name="Close" WrapMode="Once">
-        <Event Start="0.0" Name="DoorClosing" />
-        <Event Start="0.1" Name="DoorMoving" />
-        <Event Start="1.2" Name="DoorClosed" />
-
-        <Animation Start="0" End="1.2">
-          <Subpart Name="PlankGate" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WallClayWithDoor" />
-    <LoadFromModel>true</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WallClayWithDoor" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WallClayWithDoor" />
-    <Animations>
-      <Animation State="Opening" Animation="Open" />
-      <Animation State="Closing" Animation="Close" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WallClayWithDoor" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WallClayWithDoor" />
-    <SoundEvents>
-      <Event Name="DoorOpening" Sound="RegularDoor_Open" />
-      <Event Name="DoorMoving" Sound="RegularDoor_Move" />
-      <Event Name="DoorClosed" Sound="RegularDoor_Close" />
-    </SoundEvents>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WallClayWithDoor" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
-
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WallClayWithDoor" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_WallClayWithDoor" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_WallClayWithDoor" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WallClayWithDoor" />
-    <Component Type="EntityStateComponent" Subtype="NPC_WallClayWithDoor" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_WallClayWithDoor" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_WallClayWithDoor" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WallClayWithDoor" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WallClayWithDoor" />
+    <Component Type="UseObjectsComponent" Subtype="WallClayWithDoor" />
+    <Component Type="SubpartAnimationComponent" Subtype="WallClayWithDoor" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WallClayWithDoor" />
+    <Component Type="EntityStateComponent" Subtype="WallClayWithDoor" />
+    <Component Type="StateAnimationComponent" Subtype="WallClayWithDoor" />
+    <Component Type="StateUseObjectComponent" Subtype="WallClayWithDoor" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WallClayWithDoor" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WallClayWithDoor" />
   </Definition>
 </Definitions>

@@ -3,7 +3,7 @@
   <!--Drawbridge-->
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <DisplayName>DisplayName_Block_WoodenDrawBridge</DisplayName>
+    <DisplayName>NPC Wooden Drawbridge</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\DrawBridge.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -57,143 +57,17 @@
     </VoxelPlacement>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Subparts>
-      <Subpart Name="DrawBridge_WoodenPart" PhysicalMaterial="Wood">
-        <HingePosition x="0.0" y="-2.3" z="0.9"/>
-      </Subpart>
-    </Subparts>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <AnimationSequences>
-      <Sequence Name="Open" WrapMode="Once">
-        <Event Start="0.2" Name="DoorOpening" />
-        <Event Start="4" Name="DoorOpened" />
-
-        <Animation Start="0" End="4">
-          <Subpart Name="DrawBridge_WoodenPart" Type="Rotation" Axis="X" From="88" To="0" Method="QuarticEaseIn" />
-        </Animation>
-      </Sequence>
-
-      <Sequence Name="Close" WrapMode="Once">
-        <Event Start="0.2" Name="DoorClosing" />
-        <Event Start="10" Name="DoorClosed" />
-
-        <Animation Start="0" End="10">
-          <Subpart Name="DrawBridge_WoodenPart" Type="Rotation" Axis="X" From="0" To="88" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-      <UseObject Dummy="detector_gate_03" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Animations>
-      <Animation State="Opening" Animation="Open" />
-      <Animation State="Closing" Animation="Close" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <SoundEvents>
-      <Event Name="DoorClosed" Sound="DoorOpen" />
-    </SoundEvents>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityRopeComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityRopeComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <RopeConnections>
-      <Connection From="DrawBridge_WoodenPart:detector_fakerope_01" To="detector_fakerope_01">
-        <RopeDefinition Type="RopeDefinition" Subtype="BasicRope"/>
-      </Connection>
-      <Connection From="DrawBridge_WoodenPart:detector_fakerope_02" To="detector_fakerope_02">
-        <RopeDefinition Type="RopeDefinition" Subtype="BasicRope"/>
-      </Connection>
-    </RopeConnections>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
-
-  <Sounds>
-    <Sound>
-      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="DoorOpen" />
-      <Category>IMP</Category>
-      <MaxDistance>30</MaxDistance>
-      <Volume>0.6</Volume>
-      <Loopable>false</Loopable>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\HUD\HudPlaceBlock01.wav</Start>
-        </Wave>
-      </Waves>
-    </Sound>
-  </Sounds>
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="EntityStateComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
-    <Component Type="EntityRopeComponent" Subtype="NPC_DrawbridgeWoodWithArchStone" />
+    <Component Type="UseObjectsComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="SubpartAnimationComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="EntityStateComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="StateAnimationComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="StateUseObjectComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="AnimationEventSoundComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="EntityRopeComponent" Subtype="DrawbridgeWoodWithArchStone" />
   </Definition>
 </Definitions>

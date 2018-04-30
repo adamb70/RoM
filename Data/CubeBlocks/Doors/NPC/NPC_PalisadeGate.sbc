@@ -3,7 +3,7 @@
   <!--Wooden Gate-->
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_GateWoodWithRoofWood" />
-    <DisplayName>DisplayName_Block_PalisadeGate</DisplayName>
+    <DisplayName>NPC Palisade Gate</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\PalisadeGate.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -66,146 +66,15 @@
     </VoxelPlacement>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Subparts>
-      <Subpart Name="PalisadeGateLargeLeft" PhysicalMaterial="Wood" HingeBone="PalisadeGateLargeLeft_Pin" RequiresAxialCorrection="false" HasDummy="false" />
-      <Subpart Name="PalisadeGateLargeRight" PhysicalMaterial="Wood" HingeBone="PalisadeGateLargeRight_Pin" RequiresAxialCorrection="false" HasDummy="false" />
-    </Subparts>
-  </Definition>
-
-  <!--
-        ///Animation Methods\\\
-    QuadraticEaseIn, Out,InOut,OutIn, 
-    QuarticEaseIn, Out,InOut,OutIn, 
-    QuinticEaseIn, Out,InOut,OutIn,
-    SinusoidalEaseIn, Out,InOut,OutIn,
-    ExponentialEaseIn, Out,InOut,OutIn,
-    CircularEaseIn, Out,InOut,OutIn,
-    ElasticEaseIn, Out,InOut,OutIn,
-    BackEaseIn, Out,InOut,OutIn,
-    BounceEaseIn, Out,InOut,OutIn
-   -->
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <AnimationSequences>
-      <Sequence Name="OpenSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorOpening" />
-        <Event Start="2.2" Name="DoorOpened" />
-
-        <Animation Start="0" End="2.2">
-          <Subpart Name="PalisadeGateLargeRight" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseInOut" />
-          <Subpart Name="PalisadeGateLargeLeft" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseInOut" />
-        </Animation>
-      </Sequence>
-      <Sequence Name="CloseSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorClosing" />
-        <Event Start="2.2" Name="DoorClosed" />
-
-        <Animation Start="0" End="2.2">
-          <Subpart Name="PalisadeGateLargeRight" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseInOut" />
-          <Subpart Name="PalisadeGateLargeLeft" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseInOut" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <LoadFromModel>true</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-      <UseObject Dummy="detector_gate_03" Name="Generic" />
-      <UseObject Dummy="detector_gate_04" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_04" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_04" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Animations>
-      <Animation State="Opening" Animation="OpenSequence" />
-      <Animation State="Closing" Animation="CloseSequence" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <SoundEvents>
-      <Event Name="DoorClosed" Sound="DoorOpen" />
-    </SoundEvents>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
-
-  <Sounds>
-    <Sound>
-      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="DoorOpen" />
-      <Category>IMP</Category>
-      <MaxDistance>30</MaxDistance>
-      <Volume>0.6</Volume>
-      <Loopable>false</Loopable>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\HUD\HudPlaceBlock01.wav</Start>
-        </Wave>
-      </Waves>
-    </Sound>
-  </Sounds>
-
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_GateWoodWithRoofWood" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Component Type="EntityStateComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_GateWoodWithRoofWood" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_GateWoodWithRoofWood" />
+    <Component Type="UseObjectsComponent" Subtype="GateWoodWithRoofWood" />
+    <Component Type="SubpartAnimationComponent" Subtype="GateWoodWithRoofWood" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="GateWoodWithRoofWood" />
+    <Component Type="EntityStateComponent" Subtype="GateWoodWithRoofWood" />
+    <Component Type="StateAnimationComponent" Subtype="GateWoodWithRoofWood" />
+    <Component Type="StateUseObjectComponent" Subtype="GateWoodWithRoofWood" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="GateWoodWithRoofWood" />
+    <Component Type="AnimationEventSoundComponent" Subtype="GateWoodWithRoofWood" />
   </Definition>
 </Definitions>

@@ -3,7 +3,7 @@
   <!--Shutters-->
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WallClayWithShutters" />
-    <DisplayName>DisplayName_Block_WoodenFlatShutters</DisplayName>
+    <DisplayName>NPC Half-timber With Shutters</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\PlankShutter.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -55,7 +55,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WallStoneRoundWithShutters" />
-    <DisplayName>DisplayName_Block_WoodenRoundRoundShutters</DisplayName>
+    <DisplayName>NPC Round Wall With Shutters</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\WoodShutterRound.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -108,7 +108,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WallStoneWithShutters" />
-    <DisplayName>DisplayName_Block_WoodenRoundShutters</DisplayName>
+    <DisplayName>NPC Wall With Shutters</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\WoodShutter.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -159,404 +159,40 @@
     <GuiVisible>true</GuiVisible>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WallClayWithShutters" />
-    <Subparts>
-      <Subpart Name="PlankShutter" PhysicalMaterial="Wood">
-        <HingePosition x="0.525" y="-0.248" z="-1.285"/>
-      </Subpart>
-      <Subpart Name="PlankShutterLock" PhysicalMaterial="Wood">
-        <HingePosition x="-0.447" y="0.265" z="-1.188"/>
-      </Subpart>
-    </Subparts>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WallClayWithShutters" />
-    <AnimationSequences>
-      <Sequence Name="Open" WrapMode="Once">
-        <Event Start="0.2" Name="DoorOpening" />
-        <Event Start="1.6" Name="DoorOpened" />
-
-        <Animation Start="0" End="0.4">
-          <Subpart Name="PlankShutterLock" Type="Rotation" Axis="Z" From="120" To="0" Method="QuarticEaseOut" />
-        </Animation>
-        <Animation Start="0.4" End="1.6">
-          <Subpart Name="PlankShutter" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-
-      <Sequence Name="Close" WrapMode="Once">
-        <Event Start="0.2" Name="DoorClosing" />
-        <Event Start="1.6" Name="DoorClosed" />
-
-        <Animation Start="0" End="1.2">
-          <Subpart Name="PlankShutter" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="1.2" End="1.6">
-          <Subpart Name="PlankShutterLock" Type="Rotation" Axis="Z" From="0" To="120" Method="QuarticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WallClayWithShutters" />
-    <LoadFromModel>true</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WallClayWithShutters" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WallClayWithShutters" />
-    <Animations>
-      <Animation State="Opening" Animation="Open" />
-      <Animation State="Closing" Animation="Close" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WallClayWithShutters" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WallClayWithShutters" />
-    <SoundEvents>
-      <Event Name="DoorClosed" Sound="DoorOpen" />
-    </SoundEvents>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WallClayWithShutters" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
-
-  <Sounds>
-    <Sound>
-      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="DoorOpen" />
-      <Category>IMP</Category>
-      <MaxDistance>30</MaxDistance>
-      <Volume>0.6</Volume>
-      <Loopable>false</Loopable>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\HUD\HudPlaceBlock01.wav</Start>
-        </Wave>
-      </Waves>
-    </Sound>
-  </Sounds>
-
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WallClayWithShutters" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_WallClayWithShutters" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_WallClayWithShutters" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WallClayWithShutters" />
-    <Component Type="EntityStateComponent" Subtype="NPC_WallClayWithShutters" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_WallClayWithShutters" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_WallClayWithShutters" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WallClayWithShutters" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WallClayWithShutters" />
+    <Component Type="UseObjectsComponent" Subtype="WallClayWithShutters" />
+    <Component Type="SubpartAnimationComponent" Subtype="WallClayWithShutters" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WallClayWithShutters" />
+    <Component Type="EntityStateComponent" Subtype="WallClayWithShutters" />
+    <Component Type="StateAnimationComponent" Subtype="WallClayWithShutters" />
+    <Component Type="StateUseObjectComponent" Subtype="WallClayWithShutters" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WallClayWithShutters" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WallClayWithShutters" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WallStoneWithShutters" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Component Type="EntityStateComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WallStoneWithShutters" />
+    <Component Type="UseObjectsComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="SubpartAnimationComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="EntityStateComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="StateAnimationComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="StateUseObjectComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WallStoneWithShutters" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Component Type="EntityStateComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WallStoneRoundWithShutters" />
+    <Component Type="UseObjectsComponent" Subtype="WallStoneRoundWithShutters" />
+    <Component Type="SubpartAnimationComponent" Subtype="WallStoneRoundWithShutters" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WallStoneRoundWithShutters" />
+    <Component Type="EntityStateComponent" Subtype="WallStoneRoundWithShutters" />
+    <Component Type="StateAnimationComponent" Subtype="WallStoneRoundWithShutters" />
+    <Component Type="StateUseObjectComponent" Subtype="WallStoneRoundWithShutters" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WallStoneRoundWithShutters" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WallStoneRoundWithShutters" />
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Subparts>
-      <Subpart Name="WoodShutterR" PhysicalMaterial="Wood">
-        <HingePosition x="0.28617" y="0.24878" z="-0.782774"/>
-      </Subpart>
-      <Subpart Name="WoodShutterL" PhysicalMaterial="Wood">
-        <HingePosition x="-0.2881" y="0.24878" z="-0.782774"/>
-      </Subpart>
-      <Subpart Name="WoodShutterLock" PhysicalMaterial="Wood">
-        <HingePosition x="0.2881" y="0.24878" z="-0.782774"/>
-      </Subpart>
-    </Subparts>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WallStoneWithShutters" />
-    <AnimationSequences>
-      <Sequence Name="OpenSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorOpening" />
-        <Event Start="2" Name="DoorOpened" />
-
-        <Animation Start="0" End="0.8">
-          <!-- Initialize rotations -->
-          <Subpart Name="WoodShutterLock" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterR" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterL" Type="Rotation" Axis="Y" From="90" To="90" Method="QuadraticEaseIn" />
-
-          <Subpart Name="WoodShutterLock" Type="Translation" Axis="X" From="-0.07" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="0.8" End="2">
-          <Subpart Name="WoodShutterR" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterL" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterLock" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-      <Sequence Name="CloseSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorClosing" />
-        <Event Start="2" Name="DoorClosed" />
-
-        <Animation Start="0" End="1.2">
-          <Subpart Name="WoodShutterR" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterL" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterLock" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="1.2" End="2">
-          <Subpart Name="WoodShutterLock" Type="Translation" Axis="X" From="0" To="-0.07" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WallStoneWithShutters" />
-    <LoadFromModel>true</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-      <UseObject Dummy="detector_gate_03" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Animations>
-      <Animation State="Opening" Animation="OpenSequence" />
-      <Animation State="Closing" Animation="CloseSequence" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WallStoneWithShutters" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WallStoneWithShutters" />
-    <SoundEvents>
-      <Event Name="DoorClosed" Sound="DoorOpen" />
-    </SoundEvents>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WallStoneWithShutters" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Subparts>
-      <Subpart Name="WoodShutterRoundR" PhysicalMaterial="Wood">
-        <HingePosition x="0.1701" y="0.13165" z="-0.41562"/>
-      </Subpart>
-      <Subpart Name="WoodShutterRoundL" PhysicalMaterial="Wood">
-        <HingePosition x="-0.432" y="0.13165" z="0.186"/>
-      </Subpart>
-      <Subpart Name="WoodShutterRoundLock" PhysicalMaterial="Wood">
-        <HingePosition x="0.1701" y="0.13165" z="-0.41562"/>
-      </Subpart>
-    </Subparts>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <AnimationSequences>
-      <Sequence Name="OpenSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorOpening" />
-        <Event Start="2" Name="DoorOpened" />
-
-        <Animation Start="0" End="0.8">
-          <!-- Initialize rotations -->
-          <Subpart Name="WoodShutterRoundLock" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundR" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundL" Type="Rotation" Axis="Y" From="90" To="90" Method="QuadraticEaseIn" />
-
-          <Subpart Name="WoodShutterRoundLock" Type="Translation" Axis="X" From="-0.07" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLock" Type="Translation" Axis="Z" From="0.07" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="0.8" End="2">
-          <Subpart Name="WoodShutterRoundR" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundL" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLock" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-      <Sequence Name="CloseSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorClosing" />
-        <Event Start="2" Name="DoorClosed" />
-
-        <Animation Start="0" End="1.2">
-          <Subpart Name="WoodShutterRoundR" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundL" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLock" Type="Rotation"  Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="1.2" End="2">
-          <Subpart Name="WoodShutterRoundLock" Type="Translation" Axis="X" From="0" To="-0.07" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLock" Type="Translation" Axis="Z" From="0" To="0.07" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <LoadFromModel>true</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-      <UseObject Dummy="detector_gate_03" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Animations>
-      <Animation State="Opening" Animation="OpenSequence" />
-      <Animation State="Closing" Animation="CloseSequence" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WallStoneRoundWithShutters" />
-    <SoundEvents>
-      <Event Name="DoorClosed" Sound="DoorOpen" />
-    </SoundEvents>
-  </Definition>
 </Definitions>

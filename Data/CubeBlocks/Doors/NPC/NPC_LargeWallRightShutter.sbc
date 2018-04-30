@@ -2,7 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
     <Id Type="MyObjectBuilder_CubeBlock" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <DisplayName>DisplayName_Block_Shutters</DisplayName>
+    <DisplayName>NPC Shutters</DisplayName>
     <Description>Interactable by everyone, even on claims.</Description>
     <Icon>Textures\GUI\Icons\Cubes\WoodShutterRound.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
@@ -52,165 +52,15 @@
     <AvailableInSurvival>false</AvailableInSurvival>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Subparts>
-      <Subpart Name="WoodShutterRoundLargeR" PhysicalMaterial="Wood">
-        <HingePosition x="-0.0854" y="0.1318" z="-0.5114"/>
-      </Subpart>
-      <Subpart Name="WoodShutterRoundLargeL" PhysicalMaterial="Wood">
-        <HingePosition x="-0.8744" y="0.1318" z="-0.2002"/>
-      </Subpart>
-      <Subpart Name="WoodShutterRoundLargeLock" PhysicalMaterial="Wood">
-        <HingePosition x="-0.0854" y="0.1318" z="-0.5114"/>
-      </Subpart>
-    </Subparts>
-  </Definition>
-
-  <!--
-        ///Animation Methods\\\
-    QuadraticEaseIn, Out,InOut,OutIn, 
-    QuarticEaseIn, Out,InOut,OutIn, 
-    QuinticEaseIn, Out,InOut,OutIn,
-    SinusoidalEaseIn, Out,InOut,OutIn,
-    ExponentialEaseIn, Out,InOut,OutIn,
-    CircularEaseIn, Out,InOut,OutIn,
-    ElasticEaseIn, Out,InOut,OutIn,
-    BackEaseIn, Out,InOut,OutIn,
-    BounceEaseIn, Out,InOut,OutIn,
-    -->
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <AnimationSequences>
-      <Sequence Name="OpenSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorOpening" />
-        <Event Start="2.0" Name="DoorOpened" />
-
-        <Animation Start="0" End="0.8">
-          <!-- Initialize rotations -->
-          <Subpart Name="WoodShutterRoundLargeR" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLargeL" Type="Rotation" Axis="Y" From="90" To="90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLargeLock" Type="Rotation" Axis="Y" From="-90" To="-90" Method="QuadraticEaseIn" />
-
-          <Subpart Name="WoodShutterRoundLargeLock" Type="Translation" Axis="X" From="-0.16" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLargeLock" Type="Translation" Axis="Z" From="0.06" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="0.8" End="2.0">
-          <Subpart Name="WoodShutterRoundLargeR" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLargeL" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLargeLock" Type="Rotation" Axis="Y" From="-90" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-      <Sequence Name="CloseSequence" WrapMode="Once">
-        <Event Start="0.2" Name="DoorClosing" />
-        <Event Start="2.0" Name="DoorClosed" />
-
-        <Animation Start="0" End="1.2">
-          <Subpart Name="WoodShutterRoundLargeR" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLargeL" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLargeLock" Type="Rotation" Axis="Y" From="0" To="-90" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="1.2" End="2.0">
-          <Subpart Name="WoodShutterRoundLargeLock" Type="Translation" Axis="X" From="0" To="-0.16" Method="QuadraticEaseIn" />
-          <Subpart Name="WoodShutterRoundLargeLock" Type="Translation" Axis="Z" From="0" To="0.06" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <LoadFromModel>true</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_gate_01" Name="Generic" />
-      <UseObject Dummy="detector_gate_02" Name="Generic" />
-      <UseObject Dummy="detector_gate_03" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Tooltip>UseObject_DynamicPressAndHold</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SecondaryAction>OpenTerminal</SecondaryAction>
-    <SupportsAccessSettings>true</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_gate_01" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_01" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_02" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Open" To="Closing" ActionName="Action_Close" SecondaryActionName="Action_Configure" />
-      <Trigger Dummy="detector_gate_03" From="Closed" To="Opening" ActionName="Action_Open" SecondaryActionName="Action_Configure" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Animations>
-      <Animation State="Opening" Animation="OpenSequence" />
-      <Animation State="Closing" Animation="CloseSequence" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <InitialState>Open</InitialState>
-    <States>
-      <State Name="Open">
-        <Transition>Closing</Transition>
-      </State>
-      <State Name="Closing">
-        <Transition>Closed</Transition>
-      </State>
-      <State Name="Closed">
-        <Transition>Opening</Transition>
-      </State>
-      <State Name="Opening">
-        <Transition>Open</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventSoundComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventSoundComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <SoundEvents>
-      <Event Name="DoorClosed" Sound="DoorOpen" />
-    </SoundEvents>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Events>
-      <Event Name="DoorClosed" TransitionToState="Closed" />
-      <Event Name="DoorOpened" TransitionToState="Open" />
-    </Events>
-  </Definition>
-
-  <Sounds>
-    <Sound>
-      <Id Type="MyObjectBuilder_AudioDefinition" Subtype="DoorOpen" />
-      <Category>IMP</Category>
-      <MaxDistance>30</MaxDistance>
-      <Volume>0.6</Volume>
-      <Loopable>false</Loopable>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\HUD\HudPlaceBlock01.wav</Start>
-        </Wave>
-      </Waves>
-    </Sound>
-  </Sounds>
-
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Component Type="UseObjectsComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Component Type="SubpartAnimationComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Component Type="EntityStateComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Component Type="StateAnimationComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Component Type="StateUseObjectComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
-    <Component Type="AnimationEventSoundComponent" Subtype="NPC_WoodenRoundLargeRightShutters" />
+    <Component Type="UseObjectsComponent" Subtype="WoodenRoundLargeRightShutters" />
+    <Component Type="SubpartAnimationComponent" Subtype="WoodenRoundLargeRightShutters" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WoodenRoundLargeRightShutters" />
+    <Component Type="EntityStateComponent" Subtype="WoodenRoundLargeRightShutters" />
+    <Component Type="StateAnimationComponent" Subtype="WoodenRoundLargeRightShutters" />
+    <Component Type="StateUseObjectComponent" Subtype="WoodenRoundLargeRightShutters" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WoodenRoundLargeRightShutters" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WoodenRoundLargeRightShutters" />
   </Definition>
 </Definitions>
