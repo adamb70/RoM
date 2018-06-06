@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+      <Id Type="CubeBlock" Subtype="FishPlatter" />
+      <DisplayName>Fish Platter</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\FishPlatter.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Small\FishPlatter.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Components>
+        <Component Type="InventoryItem" Subtype="Sticks" Count="1" />
+        <Component Type="InventoryItem" Subtype="StoneSmall" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Sticks" Index="0" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Mass>4</Mass>
+      <AvailableInSurvival>false</AvailableInSurvival>
+      <VoxelPlacement>
+        <StaticMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>Both</PlacementMode>
+          <MaxAllowed>1</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+  </Definition>
+
+
+</Definitions>

@@ -887,6 +887,99 @@ declaring our sovergnty."
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
+    
+    
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_NordicChair" />
+      <Public>true</Public>
+      <DisplayName>Norden Chair Manuscript</DisplayName>
+      <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Norden Chair. This 
+      knowledge would be valuable for a Carpenter.
+      </Description>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NordicChair.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>NordicChair_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+    
+    
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_NorseBed" />
+      <Public>true</Public>
+      <DisplayName>Norden Bed Manuscript</DisplayName>
+      <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Norden Bed. This 
+      knowledge would be valuable for a Carpenter.
+      </Description>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NorseBed.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>NorseBed_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+    
+    
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_NordicThrone" />
+      <Public>true</Public>
+      <DisplayName>Norden Throne Manuscript</DisplayName>
+      <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Norden Throne. This 
+      knowledge would be valuable for a Carpenter.
+      </Description>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NordicThrone.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>NordicThrone_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
 
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
@@ -8644,8 +8737,158 @@ the process for crafting a needle and thread.</Description>
 <!-- ===================================================================================  -->
 
 
-
-
+<!-- Elven Furniture -->
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenChair" />
+      <Public>true</Public>
+      <DisplayName>Elven Chair Manuscript</DisplayName>
+      <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Elven Chair. This 
+      knowledge would be valuable for a Carpenter.
+      </Description>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenChair.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>ElvenChair_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenBed" />
+      <Public>true</Public>
+      <DisplayName>Elven Bed Manuscript</DisplayName>
+      <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Elven Bed. This 
+      knowledge would be valuable for a Carpenter.
+      </Description>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenBed.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>ElvenBed_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenThrone" />
+      <Public>true</Public>
+      <DisplayName>Elven Throne Manuscript</DisplayName>
+      <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Elven Throne. This 
+      knowledge would be valuable for a Carpenter.
+      </Description>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenThrone.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>ElvenThrone_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpentry_Schematic_WallLogPillar" />
+      <Public>true</Public>
+      <DisplayName>Elven Table Manuscript</DisplayName>
+      <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Elven Table. This 
+      knowledge would be valuable for a Carpenter.
+      </Description>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElfTable.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>ElfTable_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenWindow" />
+      <Public>true</Public>
+      <DisplayName>Elven Window Manuscript</DisplayName>
+      <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Elven Window. This 
+      knowledge would be valuable for a Carpenter.
+      </Description>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenWindow.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>PlayEat</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>ElvenWindow_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
 
 
 

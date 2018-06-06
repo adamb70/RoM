@@ -6813,4 +6813,293 @@ declaring our sovergnty."
     </Definition>
 <!-- =================================================================================== -->
 
+
+
+<!-- Norden furniture -->
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NordicChair_Carpenter" />
+      <DisplayName>Carpenter: Norden Chair</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NordicChair.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Category>Norden_Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_NordicChair" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NordicChair" />    
+      <DisplayName>Norden Chair</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\NordicChair.dds</Icon>
+        <Category>Norden_Carpentry_Table</Category>
+	<Prerequisites>
+	 <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="NordicChair" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NorseBed_Carpenter" />
+      <DisplayName>Carpenter: Norden Bed</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NorseBed.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Category>Norden_Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_NorseBed" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NorseBed" />    
+      <DisplayName>Norden Bed</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\NorseBed.dds</Icon>
+        <Category>Norden_Carpentry_Table</Category>
+	<Prerequisites>
+	  <Item Amount="8" Type="InventoryItem" Subtype="Sticks" />
+	  <Item Amount="3" Type="InventoryItem" Subtype="StringLinen" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="NorseBed" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NordicThrone_Carpenter" />
+      <DisplayName>Carpenter: Norden Throne</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\NordicThrone.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Category>Norden_Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Flax" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_NordicThrone" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NordicThrone" />    
+      <DisplayName>Norden Throne</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\NordicThrone.dds</Icon>
+        <Category>Norden_Carpentry_Table</Category>
+	<Prerequisites>
+	  <Item Amount="12" Type="InventoryItem" Subtype="Sticks" />
+	  <Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="NordicThrone" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+<!-- =================================================================================== -->
+
+
+<!-- Elven Crafting -->
+
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenChair_Carpenter" />
+      <DisplayName>Carpenter: Elven Chair</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenChair.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Category>Elven_Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="5" Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenChair" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenChair" />    
+      <DisplayName>Elven Chair</DisplayName>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenChair.dds</Icon>
+        <Category>Elven_Carpentry_Table</Category>
+	<Prerequisites>
+	 <Item Amount="5" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="ElvenChair" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenBed_Carpenter" />
+      <DisplayName>Carpenter: Elven Bed</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenBed.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Category>Elven_Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="10" Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks" />
+	<Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenBed" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenBed" />    
+      <DisplayName>Elven Bed</DisplayName>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenBed.dds</Icon>
+        <Category>Elven_Carpentry_Table</Category>
+	<Prerequisites>
+	  <Item Amount="10" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+	  <Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="ElvenBed" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenThrone_Carpenter" />
+      <DisplayName>Carpenter: Elven Throne</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenThrone.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Category>Elven_Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks" />
+	<Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenThrone" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenThrone" />    
+      <DisplayName>Elven Throne</DisplayName>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenThrone.dds</Icon>
+        <Category>Elven_Carpentry_Table</Category>
+	<Prerequisites>
+	  <Item Amount="4" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+	  <Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="ElvenThrone" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElfTable_Carpenter" />
+      <DisplayName>Carpenter: Elven Table</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElfTable.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Category>Elven_Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_ElfTable" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElfTable" />    
+      <DisplayName>Elven Table</DisplayName>
+	<Icon>Textures\GUI\Icons\Cubes\ElfTable.dds</Icon>
+        <Category>Elven_Carpentry_Table</Category>
+	<Prerequisites>
+	  <Item Amount="3" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="ElfTable" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElfTableBlue" />    
+      <DisplayName>Elven Table Blue</DisplayName>
+	<Icon>Textures\GUI\Icons\Cubes\ElfTableBlue.dds</Icon>
+        <Category>Elven_Carpentry_Table</Category>
+	<Prerequisites>
+	  <Item Amount="3" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+    <Item Amount="3" Type="ConsumableItem" Subtype="Blue_Berry" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="ElfTableBlue" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElfTableRed" />    
+      <DisplayName>Elven Table Red</DisplayName>
+	<Icon>Textures\GUI\Icons\Cubes\ElfTableRed.dds</Icon>
+        <Category>Elven_Carpentry_Table</Category>
+	<Prerequisites>
+	  <Item Amount="3" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+    <Item Amount="3" Type="ConsumableItem" Subtype="Berries" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="ElfTableRed" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenWindow_Carpenter" />
+      <DisplayName>Carpenter: Elven Window</DisplayName>
+      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenWindow.dds</Icon>
+      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+      <Category>Elven_Carpentry_Book</Category>
+      <Prerequisites>
+        <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenWindow" />
+      </Results>
+      <CraftingTime Seconds="3"/>
+  </Definition>
+<!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenWindow" />    
+      <DisplayName>Elven Window</DisplayName>
+	<Icon>Textures\GUI\Icons\Cubes\ElvenWindow.dds</Icon>
+        <Category>Elven_Carpentry_Table</Category>
+	<Prerequisites>
+	  <Item Amount="3" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+	</Prerequisites>
+        <Results>
+	 <Item Amount="1" Type="CubeBlock" Subtype="ElvenWindow" />
+        </Results>
+        <CraftingTime Seconds="3"/>
+   </Definition>
+<!-- =================================================================================== -->
+
+
 </Definitions>

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="BrickWallWindow" />
+    <DisplayName>Sandstone Wall Window</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\BrickWall.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\BrickWindow.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfStoneWindow_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="0.4324" />
+      <MountPoint Side="Front" StartX="1.03082955" StartY="0.3675671" EndX="0.6060295" EndY="0.8323671" />
+      <MountPoint Side="Front" StartX="0.3943618" StartY="0.367567152" EndX="-0.0304383039" EndY="0.8323671" />
+      <MountPoint Side="Front" StartX="1.0324" StartY="0.767772853" EndX="-0.032400012" EndY="1.03257287" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="-0.03239999" EndX="0.232400045" EndY="0.4324" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="0.3675671" EndX="0.232400045" EndY="0.8323671" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="0.767772853" EndX="0.232400045" EndY="1.03257287" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="-0.03239999" EndX="0.76759994" EndY="0.4324" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="0.367567152" EndX="0.76759994" EndY="0.8323671" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="0.767772853" EndX="0.76759994" EndY="1.03257287" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.0324" EndX="1.0324" EndY="0.76759994" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.0324000381" EndX="1.0324" EndY="0.232400045" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="3" />
+      <Component Type="InventoryItem" Subtype="LargeSandStone" Count ="3" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeSandStone" Index="0" />
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <BuildMaterial>Stone</BuildMaterial>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <GeneratedBlocks>
+      <GeneratedBlock>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>GeneratedSandstoneWallEdgeLeft</SubtypeId>
+      </GeneratedBlock>
+    </GeneratedBlocks>
+    <MaxIntegrity>4900</MaxIntegrity>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+    <BlockVariants>
+    </BlockVariants>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="BrickWallWindowShutter" />
+    <DisplayName>Sandstone Wall Window Shutters</DisplayName>
+    <Icon>Textures\GUI\Icons\cubes\BrickWall.dds</Icon>
+    <Public>true</Public>
+    <CubeSize>Large</CubeSize>
+    <GuiVisible>false</GuiVisible>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\BrickWindowShutter.mwm</Model>
+    <CriticalComponent Tag="Timber" Index="0" />
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfStoneWindow_Construction_1.mwm">
+      </Model>
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="0.4324" />
+      <MountPoint Side="Front" StartX="1.03082955" StartY="0.3675671" EndX="0.6060295" EndY="0.8323671" />
+      <MountPoint Side="Front" StartX="0.3943618" StartY="0.367567152" EndX="-0.0304383039" EndY="0.8323671" />
+      <MountPoint Side="Front" StartX="1.0324" StartY="0.767772853" EndX="-0.032400012" EndY="1.03257287" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="-0.03239999" EndX="0.232400045" EndY="0.4324" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="0.3675671" EndX="0.232400045" EndY="0.8323671" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="0.767772853" EndX="0.232400045" EndY="1.03257287" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="-0.03239999" EndX="0.76759994" EndY="0.4324" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="0.367567152" EndX="0.76759994" EndY="0.8323671" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="0.767772853" EndX="0.76759994" EndY="1.03257287" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.0324" EndX="1.0324" EndY="0.76759994" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.0324000381" EndX="1.0324" EndY="0.232400045" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="3" />
+      <Component Type="InventoryItem" Subtype="LargeSandStone" Count ="3" />
+      <Component Tag="Timber" Count ="2" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="4" />
+    </Components>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <BuildType>Wall</BuildType>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <GuiVisible>false</GuiVisible>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="BrickWallWindowShutter" />
+    <Component Type="MedievalGridOwnershipComponent"/>
+    <Component Type="AccessPermissionComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="SubpartAnimationComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="EntityStateComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="StateAnimationComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="StateUseObjectComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="AnimationEventSoundComponent" Subtype="WallStoneWithShutters" />
+  </Definition>
+</Definitions>

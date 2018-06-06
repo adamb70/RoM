@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="BrickWall" />
+    <DisplayName>Sandstone Wall</DisplayName>
+    <BlockPairName>BrickWall</BlockPairName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\BrickWall.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\SandStoneWall.mwm</Model>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.03239994" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Left" StartX="-0.0324000381" StartY="-0.03239994" EndX="0.232400015" EndY="1.0324" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="-0.03239994" EndX="0.7676" EndY="1.0324" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.03239989" EndX="1.0324" EndY="0.76759994" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="0.232399985" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\HouseHalfStoneWall_Construction_1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+      <!--<Model BuildPercentUpperBound="0.75" File="Models\Cubes\large\HouseHalfStoneWall_Construction_2.mwm">
+          <MountPointOverrides>
+            <MountPoint Side="Top" Enabled="false" />
+          </MountPointOverrides>
+        </Model>-->
+    </BuildProgressModels>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="3" />
+      <Component Type="InventoryItem" Subtype="LargeSandStone" Count ="3" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="LargeSandStone" Index="0" />
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <BuildType>Wall</BuildType>
+    <BuildMaterial>Stone</BuildMaterial>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <UseModelIntersection>true</UseModelIntersection>
+    <GeneratedBlocks>
+      <GeneratedBlock>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>GeneratedSandstoneWallEdgeLeft</SubtypeId>
+      </GeneratedBlock>
+    </GeneratedBlocks>
+    <MaxIntegrity>5000</MaxIntegrity>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+  </Definition>
+
+
+</Definitions>
