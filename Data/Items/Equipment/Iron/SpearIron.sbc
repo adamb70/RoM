@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
-    <Id Type="HandItem" Subtype="SteelSpear_Small"/>
+    <Id Type="HandItem" Subtype="SpearIron"/>
 
     <!-- Display -->
 
-    <DisplayName>Steel Spear</DisplayName>
-    <Description>Steel Spear</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SteelSpear_Small.dds</Icon>
+    <DisplayName>Iron Spear</DisplayName>
+    <Description>Iron Spear</Description>
+	<Tag>Spear</Tag>
+    <Icon>Textures\GUI\Icons\Cubes\IronSpear_Small.dds</Icon>
     <Size>
       <X>1.2</X>
       <Y>0.6</Y>
       <Z>0.3</Z>
     </Size>
     <Mass>0.5</Mass>
-    <Model>Models\Weapons\SteelSpear_Small.mwm</Model>
+    <Model>Models\IronSpear_Small.mwm</Model>
 
     <PhysicalMaterial>Sword</PhysicalMaterial>
 
@@ -74,36 +75,36 @@
     <!-- Behaviors -->
     <StanceToBehavior>
       <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="SteelSpear_Small"/>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="SpearIron"/>
     </StanceToBehavior>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
-    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SteelSpear_Small"/>
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SpearIron"/>
 
     <LeftSwing>
       <Range>2.0</Range>
-      <Damage>35</Damage>
+      <Damage>25</Damage>
       <Arc>30</Arc>
 
       <HitTime>.4</HitTime>
       <AnimationTime>0.9</AnimationTime>
-      <Animation>Attack</Animation>
+      <Animation>Cutting</Animation>
       <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="12" />
+	  <StatCost Stat="Stamina" Cost="10" />
 	  <StatCost Stat="Fury" Cost="-1" />
     </LeftSwing>
 
     <RightSwing>
       <Range>2.0</Range>
-      <Damage>35</Damage>
+      <Damage>25</Damage>
       <Arc>30</Arc>
 
       <HitTime>.6</HitTime>
       <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
+      <Animation>Cutting</Animation>
       <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="12" />
+	  <StatCost Stat="Stamina" Cost="10" />
 	  <StatCost Stat="Fury" Cost="-1" />
     </RightSwing>
 
@@ -130,17 +131,17 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SteelSpear_Small"/>
-    <DisplayName>Steel Spear</DisplayName>
-    <Description>Steel Spear</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SteelSpear_Small.dds</Icon>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SpearIron"/>
+    <DisplayName>Iron Spear</DisplayName>
+    <Description>Iron Spear</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronSpear_Small.dds</Icon>
     <Category>AdvancedWeapons</Category>
     <Prerequisites>
       <Item Amount="4" Type="InventoryItem" Subtype="StripsLeather" />
-      <Item Amount="5" Tag="IngotSteel" />
+      <Item Amount="5" Tag="IngotIron" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="HandItem" Subtype="SteelSpear_Small" />
+      <Item Amount="1" Type="HandItem" Subtype="SpearIron" />
     </Results>
     <CraftingTime Seconds="5"/>
   </Definition>
