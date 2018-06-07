@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-  <!--
+<!-- ============================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_MovementSpeedEffectDefinition">
     <Id Type="MovementSpeedEffect" Subtype="Slowdown" />
-    <DisplayName>DisplayName_StatusEffect_Slowdown</DisplayName>
-    <Description>Description_StatusEffect_Slowdown</Description>
+    <DisplayName>Heavy Weapon</DisplayName>
+    <Description>The heavy weight of your weapon slows you down.</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Sprint.png</Icon>
     <EffectType>Negative</EffectType>
-	<Multiplier Style="Multiplicative" Value="0.5" />
+	<Multiplier Style="Multiplicative" Value="0.8" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EquipmentItemEffectDefinition">
@@ -18,6 +17,22 @@
 	<EquipEffect Type="MovementSpeedEffect" Subtype="Slowdown" Operation="Add" />
 	<UnequipEffect Type="MovementSpeedEffect" Subtype="Slowdown" Operation="Remove" />
   </Definition>
-  -->
+<!-- ============================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_MovementSpeedEffectDefinition">
+    <Id Type="MovementSpeedEffect" Subtype="Slowdown_Spear" />
+    <DisplayName>Heavy Weapon</DisplayName>
+    <Description>The heavy weight of your weapon slows you down.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Sprint.png</Icon>
+    <EffectType>Negative</EffectType>
+	<Multiplier Style="Multiplicative" Value="0.8" />
+  </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_EquipmentItemEffectDefinition">
+    <Id Type="EquipmentItemEffectDefinition" Subtype="Spear" />
+	<Item Tag="Spear" />
+	<EquipEffect Type="MovementSpeedEffect" Subtype="Slowdown_Spear" Operation="Add" />
+	<UnequipEffect Type="MovementSpeedEffect" Subtype="Slowdown_Spear" Operation="Remove" />
+  </Definition>
+<!-- ============================================================================================== -->
 </Definitions>
