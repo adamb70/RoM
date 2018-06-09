@@ -24,4 +24,26 @@ rate then normal items.</Description>
   </Definition>
 <!-- =================================================================================== -->
 
+<!-- Gov Stuff-->
+
+<!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Forign_Market_Contract" />
+    <Public>true</Public>
+    <DisplayName>Forign Market Contract</DisplayName>
+    <Description>Used to contract a merchant to sell goods in your town.</Description>
+    <Icon>Textures\GUI\Icons\TreasureMaps\Map_Piece01_Background.dds</Icon>
+    <Model>Models\Cubes\small\Scroll.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+<!-- =================================================================================== -->
+
 </Definitions>

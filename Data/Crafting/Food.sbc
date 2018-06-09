@@ -353,7 +353,8 @@ Requires a Juicer Stand.</Description>
       <Icon>Textures\GUI\Icons\Consumables\Dish_MushroomSoup.dds</Icon>
       <Category>Cooking</Category>
       <Prerequisites>
-        <Item Amount="2" Tag="Universal_SimpleSoup" />
+        <Item Amount="6" Tag="Universal_SimpleSoup" />
+        <Item Amount="1" Type="CubeBlock" Subtype="Water_Bowl" />
       </Prerequisites>
       <Results>
 	<Item Amount="1" Type="ConsumableItem" Subtype="SoupMushroom" />
@@ -397,6 +398,7 @@ and Pristine Mushrooms.))</Description>
       <Category>Cooking</Category>
       <Prerequisites>
         <Item Amount="5" Type="ConsumableItem" Subtype="HighlandCaps" />
+        <Item Amount="1" Type="CubeBlock" Subtype="Water_Bowl" />
       </Prerequisites>
       <Results>
 	<Item Amount="1" Type="ConsumableItem" Subtype="HighlandCapsSoup" />

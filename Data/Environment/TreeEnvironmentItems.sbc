@@ -1,6 +1,649 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
+  <!-- Bushes -->
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelBranchlessSnowy" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>BushSmall</NextStep>
+        <TimeToNextStep Hours="2"/>
+      </GrowthStep>
+      <GrowthStep Name="BushSmall" StartingProbability="0.25">
+        <ModelCollectionSubtypeId>HazelSmallBranchlessSnowy</ModelCollectionSubtypeId>
+        <NextStep>BushMedium</NextStep>
+        <TimeToNextStep Hours="4"/>
+        <Actions>
+          <Action Name="Gather" NextStep ="Dead">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="BushMedium" StartingProbability="0.35">
+        <ModelCollectionSubtypeId>HazelMediumBranchlessSnowy</ModelCollectionSubtypeId>
+        <NextStep>BushFull</NextStep>
+        <TimeToNextStep Hours="16"/>
+        <Actions>
+          <Action Name="Gather" NextStep ="Dead">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="BushFull" StartingProbability="0.35">
+        <ModelCollectionSubtypeId>HazelLargeBranchlessSnowy</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Dead">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>2</Min>
+            <Max>3</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+
+  <!-- Large bushes -->
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelLarge" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="4"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelSmall" StartingProbability="0.15">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="6"/>
+        <ModelCollectionSubtypeId>HazelSmall</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.5">
+        <ModelCollectionSubtypeId>HazelLarge</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelLessBranches" StartingProbability="0.3">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="3"/>
+        <ModelCollectionSubtypeId>HazelLarge_v2</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelBranchless" StartingProbability="0.0">
+        <NextStep>HazelLessBranches</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>HazelLargeBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelMedium" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="4"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelSmall" StartingProbability="0.15">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="6"/>
+        <ModelCollectionSubtypeId>HazelSmall</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.5">
+        <ModelCollectionSubtypeId>HazelMedium</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelLessBranches" StartingProbability="0.3">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="3"/>
+        <ModelCollectionSubtypeId>HazelMedium_v2</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelBranchless" StartingProbability="0.0">
+        <NextStep>HazelLessBranches</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>HazelMediumBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelSmall" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="2"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.95">
+        <ModelCollectionSubtypeId>HazelSmall</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="1"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelLargeSteppe" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="4"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelSmall" StartingProbability="0.15">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="6"/>
+        <ModelCollectionSubtypeId>HazelSmallSteppe</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.5">
+        <ModelCollectionSubtypeId>HazelLargeSteppe</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelLessBranches" StartingProbability="0.3">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="3"/>
+        <ModelCollectionSubtypeId>HazelLargeSteppe_v2</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelBranchless" StartingProbability="0.0">
+        <NextStep>HazelLessBranches</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>HazelLargeBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelMediumSteppe" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="4"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelSmall" StartingProbability="0.15">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="6"/>
+        <ModelCollectionSubtypeId>HazelSmallSteppe</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.5">
+        <ModelCollectionSubtypeId>HazelMediumSteppe</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelLessBranches" StartingProbability="0.3">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="3"/>
+        <ModelCollectionSubtypeId>HazelMediumSteppe_v2</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelBranchless" StartingProbability="0.0">
+        <NextStep>HazelLessBranches</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>HazelMediumBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelSmallSteppe" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="2"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.95">
+        <ModelCollectionSubtypeId>HazelSmallSteppe</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="1"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelLargeKarst" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="4"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelSmall" StartingProbability="0.15">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="6"/>
+        <ModelCollectionSubtypeId>HazelSmallKarst</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.5">
+        <ModelCollectionSubtypeId>HazelLargeKarst</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelLessBranches" StartingProbability="0.3">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="3"/>
+        <ModelCollectionSubtypeId>HazelLargeKarst_v2</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelBranchless" StartingProbability="0.0">
+        <NextStep>HazelLessBranches</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>HazelLargeBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelMediumKarst" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="4"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelSmall" StartingProbability="0.15">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="6"/>
+        <ModelCollectionSubtypeId>HazelSmallKarst</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.5">
+        <ModelCollectionSubtypeId>HazelMediumKarst</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelLessBranches" StartingProbability="0.3">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="3"/>
+        <ModelCollectionSubtypeId>HazelMediumKarst_v2</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="HazelBranchless">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelBranchless" StartingProbability="0.0">
+        <NextStep>HazelLessBranches</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>HazelMediumBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="2"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelSmallKarst" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="2"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.95">
+        <ModelCollectionSubtypeId>HazelSmallKarst</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="1"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelLargeBranchless" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="8"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelSmall" StartingProbability="0.15">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="6"/>
+        <ModelCollectionSubtypeId>HazelSmallBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>HazelLargeBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="4"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="HazelMediumBranchless" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.05">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="8"/>
+      </GrowthStep>
+      <GrowthStep Name="HazelSmall" StartingProbability="0.15">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="6"/>
+        <ModelCollectionSubtypeId>HazelSmallBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.8">
+        <ModelCollectionSubtypeId>HazelMediumBranchless</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep ="Roots">
+            <Id Type="LootTableDefinition" Subtype="Sticks"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0.0">
+        <NextStep>HazelSmall</NextStep>
+        <TimeToNextStep Hours="4"/>
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Type="ConsumableItem" Subtype="Roots"/>
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+
+
+
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="TreePine4m" />
     <GrowthSteps>
@@ -96,7 +739,7 @@
         <ModelCollectionSubtypeId>TreeSmall</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="Enchanted_WoodenSticks"/>
+            <Id Type="LootTableDefinition" Subtype="Enchanted_WoodenSticks"/>
             <Min>1</Min>
             <Max>4</Max>
           </Action>
@@ -826,7 +1469,7 @@
         <TimeToNextStepInHours>3</TimeToNextStepInHours>
         <Actions>
           <Action Name="Gather">
-            <Id Type="InventoryItem" Subtype="Enchanted_WoodenSticks"/>
+            <Id Type="LootTableDefinition" Subtype="Enchanted_WoodenSticks"/>
             <Min>1</Min>
             <Max>4</Max>
           </Action>

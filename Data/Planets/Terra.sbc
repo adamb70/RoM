@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <Definition xsi:type="MyObjectBuilder_PlanetAreaOwnershipComponentDefinition">
+    <Id Type="MyObjectBuilder_PlanetAreaOwnershipComponent" Subtype="Terra" />
+    <OwnedAreaSets>
+      <AreaSet FactionTag="KRBG" Name="City of Langenmosen">
+        <PermissionSet Type="MyObjectBuilder_PermissionSetDefinition" Subtype="Langenmosen"/>
+
+        <Area Side="Forward" X="19" Y="49"/>
+
+      </AreaSet>
+    </OwnedAreaSets>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_PlanetAreaUpkeepComponentDefinition">
+    <Id Type="MyObjectBuilder_PlanetAreaUpkeepComponent" Subtype="Terra" />
+    <TaxFreeFactions>
+      <FactionTag>BARB</FactionTag>
+      <FactionTag>ENGI</FactionTag>
+      <FactionTag>KMKZ</FactionTag>
+      <FactionTag>KDMD</FactionTag>
+      <FactionTag>VOLS</FactionTag>
+      <FactionTag>CRMS</FactionTag>
+      <FactionTag>SUDC</FactionTag>
+    </TaxFreeFactions>
+    <DefaultPrepaidTax>60</DefaultPrepaidTax>
+  </Definition>
+
+
+
+  
+  
+</Definitions>

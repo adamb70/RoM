@@ -645,7 +645,7 @@ marketstand will leave.
       <UseSound>ResearchSound</UseSound>
       <Research>
         <TypeId>ResearchDefinition</TypeId>
-        <SubtypeId>Forign_Marketstand_LawGovernment</SubtypeId>
+        <SubtypeId>Forign_Marketstand_Liberty_Ethos_LawGovernment</SubtypeId>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -3609,6 +3609,36 @@ would be valuable for a Carpenter.
       <Research>
         <TypeId>ResearchDefinition</TypeId>
         <SubtypeId>Empty_Bucket_Carpenter</SubtypeId>
+      </Research>
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bowl" />
+      <Public>true</Public>
+      <DisplayName>Wooden Bowl Manuscript</DisplayName>
+      <Description>
+As you examine the manuscript, you notice 
+diagrams and written instructions explaining
+the process for crafting a Wooden Bowl. This knowledge
+would be valuable for a Chef.
+</Description>
+     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>ResearchSound</UseSound>
+      <Research>
+        <TypeId>ResearchDefinition</TypeId>
+        <SubtypeId>Empty_Bowl_Carpenter</SubtypeId>
       </Research>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -8114,12 +8144,11 @@ This knowledge would be valuable for Masonry.</Description>
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
       <Id Type="SchematicItem" Subtype="Nomadic_Schematic_Bonfire" />
       <Public>true</Public>
-      <DisplayName>Bonfire Manuscript</DisplayName>
+      <DisplayName>Campfire Manuscript</DisplayName>
 
       <Description>As you examine the manuscript, you notice 
 diagrams and written instructions explaining
-the process for constructing a long barricade. 
-This knowledge would be valuable for Masonry.</Description>
+the process for making campfires.</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
       <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>

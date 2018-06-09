@@ -160,6 +160,34 @@
     </Results>
     <CraftingTime Seconds="5"/>
   </Definition>
+<!-- =========================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimberDiagonal10" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberDiagonal1_10_10.dds</Icon>
+    <DisplayName>DisplayName_Block_LogToTimberDiagonal</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="TimberDiagonal10" />
+    </Results>
+    <CraftingTime Seconds="10"/>
+  </Definition>
+<!-- =========================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimberDiagonal10_CraftingTable" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberDiagonal1_10_10.dds</Icon>
+    <DisplayName>DisplayName_Block_LogToTimberDiagonal</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="CubeBlock" Subtype="TimberDiagonal10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
 <!-- ============================================================================================ -->
 					<!-- Things -->
 <!-- ============================================================================================ -->
@@ -478,7 +506,7 @@ a wood crossbow.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_MunKhazar_General" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
-      <Icon>Textures\GUI\Icons\InventoryItem\DeerSkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\DeerSkin.dds</Icon>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>MunKhazar_General_Market_Stand</Category>
       <Prerequisites>
@@ -503,6 +531,22 @@ a wood crossbow.</DisplayName>
       <Results>
 	  
 	    <Item Amount="1" Type="CubeBlock" Subtype="Sand_Bucket" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Forign_Market_Contract_MunKhazar_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\TreasureMaps\Map_Piece01_Background.dds</Icon>
+      <DisplayName>Buy: Forign Market Contract (2000G)</DisplayName>
+      <Category>MunKhazar_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="2000" Type="InventoryItem" Subtype="Gold_Coins" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="InventoryItem" Subtype="Forign_Market_Contract" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
@@ -752,9 +796,25 @@ a wood crossbow.</DisplayName>
 				<!-- General Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Forign_Market_Contract_Munik_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\TreasureMaps\Map_Piece01_Background.dds</Icon>
+      <DisplayName>Buy: Forign Market Contract (2000G)</DisplayName>
+      <Category>Munik_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="2000" Type="InventoryItem" Subtype="Gold_Coins" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="InventoryItem" Subtype="Forign_Market_Contract" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Munik_General" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
-      <Icon>Textures\GUI\Icons\InventoryItem\DeerSkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\DeerSkin.dds</Icon>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>Munik_General_Market_Stand</Category>
       <Prerequisites>
@@ -770,7 +830,7 @@ a wood crossbow.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerAntlers_Munik_General" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
-      <Icon>Textures\GUI\Icons\InventoryItem\Antlers.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\Antlers.dds</Icon>
       <DisplayName>Sell: Deer Antlers (35G)</DisplayName>
       <Category>Munik_General_Market_Stand</Category>
       <Prerequisites>
@@ -956,9 +1016,25 @@ a wood crossbow.</DisplayName>
 				<!-- General Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Forign_Market_Contract_Rienburg_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\TreasureMaps\Map_Piece01_Background.dds</Icon>
+      <DisplayName>Buy: Forign Market Contract (2000G)</DisplayName>
+      <Category>Rienburg_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="2000" Type="InventoryItem" Subtype="Gold_Coins" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="InventoryItem" Subtype="Forign_Market_Contract" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Rienburg_General" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
-      <Icon>Textures\GUI\Icons\InventoryItem\DeerSkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\DeerSkin.dds</Icon>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>Rienburg_General_Market_Stand</Category>
       <Prerequisites>
@@ -974,7 +1050,7 @@ a wood crossbow.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerAntlers_Rienburg_General" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
-      <Icon>Textures\GUI\Icons\InventoryItem\Antlers.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\Antlers.dds</Icon>
       <DisplayName>Sell: Deer Antlers (35G)</DisplayName>
       <Category>Rienburg_General_Market_Stand</Category>
       <Prerequisites>
@@ -1064,9 +1140,25 @@ a wood crossbow.</DisplayName>
 				<!-- General Market -->
 <!-- ========================================================================================= -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Forign_Market_Contract_Reyjk_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\TreasureMaps\Map_Piece01_Background.dds</Icon>
+      <DisplayName>Buy: Forign Market Contract (2000G)</DisplayName>
+      <Category>Reyjk_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="2000" Type="InventoryItem" Subtype="Gold_Coins" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="InventoryItem" Subtype="Forign_Market_Contract" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Reyjk_General" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
-      <Icon>Textures\GUI\Icons\InventoryItem\DeerSkin.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\DeerSkin.dds</Icon>
       <DisplayName>Sell: Deer Hide (25G)</DisplayName>
       <Category>Reyjk_General_Market_Stand</Category>
       <Prerequisites>
@@ -1082,7 +1174,7 @@ a wood crossbow.</DisplayName>
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerAntlers_Reyjk_General" />
       <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
-      <Icon>Textures\GUI\Icons\InventoryItem\Antlers.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\Antlers.dds</Icon>
       <DisplayName>Sell: Deer Antlers (35G)</DisplayName>
       <Category>Reyjk_General_Market_Stand</Category>
       <Prerequisites>
@@ -1112,8 +1204,127 @@ a wood crossbow.</DisplayName>
     </Definition>
 <!-- ========================================================================================= -->
 
+  			  <!-- Shops / Market / Economey | City of Langenmosen -->
 
 
+
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Bread_Langenmosen_Bakery" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\baked_bread.dds</Icon>
+      <DisplayName>Sell: Bread (15GP)</DisplayName>
+      <Category>Langenmosen_Food_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="ConsumableItem" Subtype="Bread" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="15" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+				<!-- Lumber Market -->
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Langenmosen_Lumber_10" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>Langenmosen_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="10" Type="InventoryItem" Subtype="Log" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="130" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+    
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Logs_Langenmosen_Lumber" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
+      <DisplayName>Sell: Log (13G)</DisplayName>
+      <Category>Langenmosen_Lumber_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Log" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="13" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+				<!-- General Market -->
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Forign_Market_Contract_Langenmosen_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\TreasureMaps\Map_Piece01_Background.dds</Icon>
+      <DisplayName>Buy: Forign Market Contract (2000G)</DisplayName>
+      <Category>Langenmosen_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="2000" Type="InventoryItem" Subtype="Gold_Coins" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="InventoryItem" Subtype="Forign_Market_Contract" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Langenmosen_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\DeerSkin.dds</Icon>
+      <DisplayName>Sell: Deer Hide (25G)</DisplayName>
+      <Category>Langenmosen_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="PeltDeer" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="25" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerAntlers_Langenmosen_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\Antlers.dds</Icon>
+      <DisplayName>Sell: Deer Antlers (35G)</DisplayName>
+      <Category>Langenmosen_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="InventoryItem" Subtype="Antlers" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="35" Type="InventoryItem" Subtype="Gold_Coins" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Buy_Sand_Bucket_Langenmosen_General" />
+      <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Farming\Sand_Bucket.dds</Icon>
+      <DisplayName>Buy: Bucket of Sand (2G)</DisplayName>
+      <Category>Langenmosen_General_Market_Stand</Category>
+      <Prerequisites>
+        <Item Amount="2" Type="InventoryItem" Subtype="Gold_Coins" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="CubeBlock" Subtype="Sand_Bucket" />
+	  </Results>
+      <CraftingTime Seconds="1"/>
+    </Definition>
+<!-- ========================================================================================= -->
 
 <!-- =================================================================================== -->
 
@@ -2126,7 +2337,7 @@ to read from it.
 "The end of law is not to abolish or restrain, but 
 to preserve and enlarge freedom. For in all the 
 states of created beings capable of law, where 
-there is no law, there is no freedom." - Locke
+there is no law, there is no freedom."
 
 A Liberty Ethos will focus on the civil liberties,
 including liberty of speech, commerce, and privacy.
@@ -2136,7 +2347,7 @@ including liberty of speech, commerce, and privacy.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Ethos</Category>
       <Prerequisites>
-        <Item Amount="1" Tag="Pristine_Stick" />
+        <Item Amount="15" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -2152,7 +2363,7 @@ including liberty of speech, commerce, and privacy.
 "Unless your government is respectable, foreigners 
 will invade your rights; and to maintain tranquillity, 
 it must be respectable - even to observe neutrality, 
-you must have a strong government." - Hamilton
+you must have a strong government."
 
 A Security Ethos will focus on the civil security,
 including security of boarders, law, and order.
@@ -2162,7 +2373,7 @@ including security of boarders, law, and order.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Ethos</Category>
       <Prerequisites>
-        <Item Amount="1" Tag="Pristine_Stick" />
+        <Item Amount="15" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -2186,7 +2397,7 @@ marketstand will leave.
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Category>Ethos</Category>
       <Prerequisites>
-        <Item Amount="1" Tag="Pristine_Stick" />
+        <Item Amount="5" Tag="Pristine_Stick" />
       </Prerequisites>
       <Results>
 	  
@@ -2198,6 +2409,7 @@ marketstand will leave.
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Town_Stockpile_LawGovernment_Book" />
       <DisplayName>Town Stockpile</DisplayName>
+      <Public>false</Public>
     <Description>
 The Town Stockpile serves as a central hub of 
 storage within the town. Requires taxes, but 
@@ -3375,6 +3587,22 @@ inorder to plant it again.</Description>
       </Results>
 	  <CraftingTime Seconds="1.5"/>
     </Definition>
+
+<!-- -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Water_Bowl" />   
+      <DisplayName>Fill Empty Bowl</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
+      <Category>Stone_Well</Category>
+      <Prerequisites>
+        <Item Amount="1" Type="CubeBlock" Subtype="Empty_Bowl" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="CubeBlock" Subtype="Water_Bowl" />
+      </Results>
+	  <CraftingTime Seconds="1.5"/>
+    </Definition>
 <!-- -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Milk_Bucket" />    
@@ -3740,6 +3968,49 @@ pine trees to aquire Pristine Sticks))</Description>
       <Results>
 	  
 	    <Item Amount="1" Type="CubeBlock" Subtype="Empty_Bucket" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bowl_Carpenter" />
+      <DisplayName>Cooking Essentials: Wooden Bowl</DisplayName>
+      <Description>
+
+
+An empty bowl can be filled with 
+liquids and solids. Most commonly
+water from a well. Used in many soups
+
+
+((Hint: Search small trees and small
+pine trees to aquire Pristine Sticks))</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Category>Nomadic_Book</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Pristine_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bowl" />
+      </Results>
+	  <CraftingTime Seconds="3"/>
+    </Definition>
+<!-- -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bowl" />    
+      <DisplayName>Empty Bowl</DisplayName>
+      <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
+      <Category>Carpentry_Table</Category>
+      <Prerequisites>
+        <Item Amount="1" Tag="Universal_Stick" />
+      </Prerequisites>
+      <Results>
+	  
+	    <Item Amount="1" Type="CubeBlock" Subtype="Empty_Bowl" />
       </Results>
 	  <CraftingTime Seconds="3"/>
     </Definition>

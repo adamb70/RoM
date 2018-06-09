@@ -36,13 +36,24 @@
 	<SuccessAction xsi:type="Quest.Actions.StartQuest" Subtype="Establishing_Encampment" />
 
 	<Step>
-	<FullDescription>A traveller without a home, the way of the nomad. The realm holds great possibilities for those who can survive. Even more for those who master it.</FullDescription>
+		<FullDescription>A traveller without a home, the way of the nomad. The realm holds great possibilities for those who can survive. Even more for those who master it.</FullDescription>
 		<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="1" />
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
-		<FullDescription>The Ways of The Nomad is an ancient text, with knowledge from many generations. Learning as much as possible from it will aid in survival.</FullDescription>
+		<FullDescription>The Ways of The Nomad is an ancient text, with knowledge from many generations. Learning as much as possible from it, and it will aid you in survival.</FullDescription>
 			<Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="Nomadic_Book" Amount="1" />
+		<Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
+		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+	</Step>
+	<Step>
+		<FullDescription>It's important to gather pristine materials inorder to conduct research to discover new technologies. Look in the nearby forest for pristine items.</FullDescription>
+		<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="1" />
+		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+	</Step>
+	<Step>
+		<FullDescription>Learn from your ancestors, discover their knowledge in the Ways of The Nomad book.</FullDescription>
+			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Ancestral_Knowledge_Schematic" Amount="1" />
 		<Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
@@ -70,12 +81,23 @@
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
+		<FullDescription>Gather additional pristine items to prepare for the next step of knowledge.</FullDescription>
+		<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="1" />
+		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+	</Step>
+	<Step>
+		<FullDescription>Migration is a daily part of life, and inventing the wheel will make life much easier. Research the Teachings of the Nomad.</FullDescription>
+			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Teachings_Of_The_Nomad_Schematic" Amount="1" />
+		<Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
+		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+	</Step>
+	<Step>
 		<FullDescription>Finally, gather the last bits needed to construct a well. While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
 		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
 			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="3" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="2" />
 			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="3" />
+			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="3" />
+			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="3" />
 		</Condition>
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>

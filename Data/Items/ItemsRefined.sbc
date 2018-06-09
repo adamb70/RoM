@@ -26,6 +26,7 @@ structures. Nails are not required</Description>
 
 
 
+
 <!-- Misc -->
 
 
@@ -69,8 +70,19 @@ structures. Nails are not required</Description>
       <Health>200</Health>
   </Definition>
   <!-- =================================================================================== -->
-
-
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToPlankCarpentry" />
+    <DisplayName>Cut Planks</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\Plank.dds</Icon>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="15" Type="CubeBlock" Subtype="Plank10" />
+    </Results>
+    <CraftingTime Seconds="2.0"/>
+  </Definition>
   <!-- =================================================================================== -->
 
   
