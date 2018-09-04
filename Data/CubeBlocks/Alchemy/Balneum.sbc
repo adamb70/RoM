@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Balneum" />
+    <BlockPairName>SmithingStation</BlockPairName>
+    <DisplayName>Balneum</DisplayName>
+    <Description>Brews extracts</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemybalneum.dds</Icon>
+    <Public>true</Public>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="2" y="2" z="2" />
+    <ModelOffset x="0" y="-0.04" z="0" />
+    <Model>Models\Alchemy\Cubeblocks\AlchemyBalneum.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Smithy_Construction1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="IngotCopper" Count="2" />
+      <Component Type="InventoryItem" Subtype="Clay" Count="8" />
+    </Components>
+    <CriticalComponent Tag="Ingot" Index="0" />
+    <MaxIntegrity>1200</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>400</Mass>
+    <Volume>135</Volume>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Balneum"/>
+    <DisplayName>Balneum</DisplayName>
+    <Description>Balneum</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemybalneum.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotCopper" />
+      <Item Amount="8" Type="InventoryItem" Subtype="Clay" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Balneum" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Balneum"/>
+    <CraftingCategories>
+      <Category>Balneum</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
+    <InputInventory>CraftingInventory</InputInventory>
+    <OutputInventory>CraftingInventory</OutputInventory>
+    <CraftingInventory>ProcessingInventory</CraftingInventory>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="UseObjectsComponent" Subtype="Balneum" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="EntityFXComponent" Subtype="Balneum" />
+    <Effects>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_inventory">
+        <EffectId Type="EffectDefinition" Subtype="Cauldron"/>
+      </Effect>
+    </Effects>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Balneum" />
+    <Component Type="Inventory" Subtype="CraftingInventory"/>
+    <Component Type="Inventory" Subtype="ProcessingInventory"/>
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="Balneum" />
+    <Component Type="CraftingComponentQueued" Subtype="Balneum"/>
+    <Component Type="UseObjectsComponent" Subtype="Balneum" />
+    <Component Type="Inventory" Subtype="Fuel" />
+    <Component Type="FuelComponent" Subtype="Fire" />
+  </Definition>
+  
+</Definitions>

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="Cauldron" />
+    <BlockPairName>SmithingStation</BlockPairName>
+    <DisplayName>Cauldron</DisplayName>
+    <Description>Brews extracts</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemycauldron.dds</Icon>
+    <Public>true</Public>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="5" y="4" z="5" />
+    <ModelOffset x="0" y="-0.02" z="0" />
+    <Model>Models\Alchemy\Cubeblocks\AlchemyCauldron.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Smithy_Construction1.mwm">
+        <MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>
+      </Model>
+    </BuildProgressModels>
+    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="IngotIron" Count="8" />
+      <Component Tag="Universal_Log" Count="2" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="IngotIron" Index="0" />
+    <MaxIntegrity>1200</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>800</Mass>
+    <Volume>135</Volume>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cauldron"/>
+    <DisplayName>Cauldron</DisplayName>
+    <Description>Cauldron</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemycauldron.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="8" Type="InventoryItem" Subtype="IngotIron" />
+      <Item Amount="2" Tag="Universal_Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="Cauldron" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Cauldron"/>
+    <CraftingCategories>
+      <Category>Cauldron</Category>
+    </CraftingCategories>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
+    <InputInventory>CraftingInventory</InputInventory>
+    <OutputInventory>CraftingInventory</OutputInventory>
+    <CraftingInventory>ProcessingInventory</CraftingInventory>
+    <PowerRequired>All</PowerRequired>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="UseObjectsComponent" Subtype="Cauldron" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_furnace" Name="inventory" />
+    </UseObjects>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="EntityFXComponent" Subtype="Cauldron" />
+    <Effects>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_inventory">
+        <EffectId Type="EffectDefinition" Subtype="Cauldron"/>
+      </Effect>
+    </Effects>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="Cauldron" />
+    <Component Type="Inventory" Subtype="CraftingInventory"/>
+    <Component Type="Inventory" Subtype="ProcessingInventory"/>
+    <Component Type="CraftingComponentQueued" Subtype="Cauldron"/>
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="Cauldron" />
+    <Component Type="UseObjectsComponent" Subtype="Cauldron" />
+    <Component Type="Inventory" Subtype="Fuel" />
+    <Component Type="FuelComponent" Subtype="Fire" />
+  </Definition>
+  
+</Definitions>

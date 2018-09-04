@@ -139,6 +139,42 @@ Used for Glassblowing.</Description>
   </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Bitumus_Soil" />
+    <Public>true</Public>
+    <DisplayName>Bitumus Soil</DisplayName>
+    <Description>Bitumus Soil.</Description>
+    <Icon>Textures\GUI\Icons\Materials\Sand.dds</Icon>
+    <Size>
+      <X>0.2</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+    </Size>
+    <Model>Models\Components\DirtBag.mwm</Model>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Mass>6</Mass>
+    <MaxStackAmount>100</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Pitch" />
+    <Public>true</Public>
+    <DisplayName>Pitch</DisplayName>
+    <Description>Pitch</Description>
+    <Icon>Textures\GUI\Icons\Materials\Sand.dds</Icon>
+    <Size>
+      <X>0.2</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+    </Size>
+    <Model>Models\Components\DirtBag.mwm</Model>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Mass>6</Mass>
+    <MaxStackAmount>100</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Sticks" />
     <Tag>Universal_Stick</Tag>
     <Public>true</Public>
@@ -1238,6 +1274,60 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
     <Health>70</Health>
   </Definition>
   <!-- ================================================================================ -->
-
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Ennerite_Raw" />
+    <Tag>Ore</Tag>
+    <DisplayName>Ennerite</DisplayName>
+    <Description>Raw Ennerite</Description>
+    <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>220</Mass>
+    <Model>Models\Environment\Rocks\IronOre.mwm</Model>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <MaxStackAmount>6</MaxStackAmount>
+    <Health>70</Health>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Cinnabar_Raw" />
+    <Tag>Ore</Tag>
+    <DisplayName>Cinnabar</DisplayName>
+    <Description>Raw Cinnabar</Description>
+    <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>220</Mass>
+    <Model>Models\Environment\Rocks\IronOre.mwm</Model>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <MaxStackAmount>6</MaxStackAmount>
+    <Health>70</Health>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Limestone" />
+    <Tag>Ore</Tag>
+    <DisplayName>Limestone</DisplayName>
+    <Description>Raw Limestone</Description>
+    <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>220</Mass>
+    <Model>Models\Environment\Rocks\IronOre.mwm</Model>
+    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <MaxStackAmount>6</MaxStackAmount>
+    <Health>70</Health>
+  </Definition>
+  <!-- ================================================================================ -->
 
 </Definitions>

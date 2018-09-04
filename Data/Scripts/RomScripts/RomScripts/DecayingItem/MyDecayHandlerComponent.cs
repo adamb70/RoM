@@ -18,6 +18,8 @@ using Sandbox.Game.EntityComponents;
 using Medieval.ObjectBuilders.Components;
 using Sandbox.Game.Inventory;
 using VRage.Components;
+using Medieval.Inventory;
+
 
 namespace RomScripts.DecayingItem
 {
@@ -30,6 +32,7 @@ namespace RomScripts.DecayingItem
         HashSet<MyInventoryBase> InventoriesWithDecayingItems = new HashSet<MyInventoryBase>();
         bool RegisteredForUpdate = false;
         long TickInterval;
+        MyInventoryBase OutputInventory;
         bool ticking = false;
 
 
@@ -44,12 +47,14 @@ namespace RomScripts.DecayingItem
             base.OnAddedToScene();
             if (ComponentDefinition == null) return;
 
+            this.OutputInventory = Entity.Components.Get<MyInventoryBase>(ComponentDefinition.OutputInventory);
+            
             ComponentInventories = Entity.Components.GetComponents<MyInventoryBase>();
             foreach (MyInventoryBase inv in ComponentInventories)
             {
                 inv.ContentsChanged += new System.Action<MyInventoryBase>(this.OnInventoryChanged);
 
-                ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(inv.ItemCount.ToString(), 3000, null, Color.Red);
+                //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(inv.ItemCount.ToString(), 3000, null, Color.Red);
             }
         }
 
@@ -57,7 +62,7 @@ namespace RomScripts.DecayingItem
         {
             if (ticking) return;
 
-            ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("updating!", 900, null, Color.Green);
+            //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("updating!", 900, null, Color.Green);
             bool found = false;
             foreach (var item in inventory.Items)
             {
@@ -100,7 +105,7 @@ namespace RomScripts.DecayingItem
                 List<MyInventoryItem> durableItems = new List<MyInventoryItem>();
                 foreach (MyInventoryItem item in inventory.Items)
                 {
-                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("looping items", 900, null, Color.Green);
+                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("looping items", 900, null, Color.Green);
                     var decayingItem = item as MyDurableItem;
                     if (decayingItem == null)
                         continue;
@@ -114,7 +119,7 @@ namespace RomScripts.DecayingItem
                     var decayingItem = item as MyDurableItem;
 
                     decayingItem.Durability -= 1;
-                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(decayingItem.Durability.ToString(), 900, null, Color.Aqua);
+                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(decayingItem.Durability.ToString(), 900, null, Color.Aqua);
 
                     if (decayingItem.Durability <= 0)
                     {
@@ -126,15 +131,19 @@ namespace RomScripts.DecayingItem
                                 item.Amount -= 1;
                                 // Reset Durability of stack
                                 decayingItem.Durability = decayingItem.GetDefinition().MaxDurability;
-                                if (decayingItem.GetDefinition().BrokenItem.HasValue)
-                                {
-                                    inventory.AddItems(decayingItem.GetDefinition().BrokenItem.Value, 1);
-                                }
                             }
                             else
                             {
                                 inventory.Remove(item);
-                                if (decayingItem.GetDefinition().BrokenItem.HasValue)
+                            }
+
+                            if (decayingItem.GetDefinition().BrokenItem.HasValue)
+                            {
+                                if (this.OutputInventory != null)
+                                {
+                                    this.OutputInventory.AddItems(decayingItem.GetDefinition().BrokenItem.Value, 1);
+                                }
+                                else
                                 {
                                     inventory.AddItems(decayingItem.GetDefinition().BrokenItem.Value, 1);
                                 }

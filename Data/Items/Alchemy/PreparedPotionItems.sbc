@@ -1,0 +1,1636 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Althea_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Althea Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Althea_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Althea Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Althea_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Althea_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Althea_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Althea Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Althea_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Althea_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Althea_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Althea Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Althea_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Althea_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Amaranth_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Amaranth Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Amaranth_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Amaranth Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Amaranth_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Amaranth_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Amaranth_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Amaranth Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Amaranth_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Amaranth_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Amaranth_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Amaranth Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Amaranth_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Amaranth_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Angelica_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Angelica Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Angelica_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Angelica Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Angelica_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Angelica_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Angelica_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Angelica Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Angelica_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Angelica_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Angelica_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Angelica Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Angelica_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Angelica_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Belladonna_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Belladonna Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Belladonna_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Belladonna Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Belladonna_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Belladonna_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Belladonna_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Belladonna Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Belladonna_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Belladonna_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Belladonna_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Belladonna Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Belladonna_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Belladonna_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Broom_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Broom Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Broom_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Broom Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Broom_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Broom_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Broom_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Broom Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Broom_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Broom_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Broom_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Broom Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Broom_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Broom_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Castor_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Castor Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Castor_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Castor Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Castor_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Castor_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Castor_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Castor Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Castor_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Castor_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Castor_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Castor Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Castor_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Castor_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Crimson_Thristle_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Crimson Thristle Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Crimson_Thristle_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Crimson Thristle Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Crimson_Thristle_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Crimson_Thristle_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Crimson_Thristle_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Crimson Thristle Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Crimson_Thristle_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Crimson_Thristle_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Crimson_Thristle_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Crimson Thristle Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Crimson_Thristle_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Crimson_Thristle_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Crocus_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Crocus Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Crocus_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Crocus Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Crocus_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Crocus_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Crocus_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Crocus Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Crocus_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Crocus_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Crocus_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Crocus Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Crocus_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Crocus_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Cloud_Funnel_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Cloud Funnel Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Cloud_Funnel_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Cloud Funnel Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Cloud_Funnel_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Cloud_Funnel_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Cloud_Funnel_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Cloud Funnel Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Cloud_Funnel_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Cloud_Funnel_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Cloud_Funnel_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Cloud Funnel Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Cloud_Funnel_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Cloud_Funnel_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Gilliflower_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Gilliflower Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Gilliflower_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Gilliflower Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Gilliflower_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Gilliflower_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Gilliflower_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Gilliflower Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Gilliflower_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Gilliflower_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Gilliflower_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Gilliflower Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Gilliflower_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Gilliflower_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Glasswort_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Glasswort Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Glasswort_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Glasswort Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Glasswort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Glasswort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Glasswort_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Glasswort Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Glasswort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Glasswort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Glasswort_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Glasswort Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Glasswort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Glasswort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Luceat_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Luceat Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Luceat_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Luceat Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Luceat_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Luceat_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Luceat_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Luceat Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Luceat_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Luceat_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Luceat_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Luceat Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Luceat_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Luceat_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Concordia_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Concordia Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Concordia_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Concordia Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Concordia_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Concordia_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Concordia_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Concordia Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Concordia_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Concordia_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Concordia_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Concordia Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Concordia_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Concordia_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Hellebore_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Hellebore Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hellebore_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hellebore Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hellebore_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hellebore_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hellebore_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hellebore Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hellebore_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hellebore_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hellebore_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hellebore Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hellebore_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hellebore_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Hemlock_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Hemlock Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hemlock_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hemlock Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hemlock_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hemlock_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hemlock_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hemlock Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hemlock_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hemlock_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hemlock_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hemlock Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hemlock_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hemlock_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Hoppan_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Hoppan Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hoppan_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hoppan Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hoppan_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hoppan_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hoppan_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hoppan Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hoppan_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hoppan_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Hoppan_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Hoppan Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Hoppan_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Hoppan_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Rock_Lichen_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Rock Lichen Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Rock_Lichen_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Rock Lichen Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Rock_Lichen_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Rock_Lichen_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Rock_Lichen_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Rock Lichen Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Rock_Lichen_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Rock_Lichen_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Rock_Lichen_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Rock Lichen Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Rock_Lichen_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Rock_Lichen_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Mugwort_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Mugwort Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Mugwort_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Mugwort Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Mugwort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Mugwort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Mugwort_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Mugwort Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Mugwort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Mugwort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Mugwort_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Mugwort Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Mugwort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Mugwort_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Rock_Willow_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Rock Willow Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Rock_Willow_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Rock Willow Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Rock_Willow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Rock_Willow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Rock_Willow_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Rock Willow Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Rock_Willow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Rock_Willow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Rock_Willow_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Rock Willow Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Rock_Willow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Rock_Willow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Sage_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Sage Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Sage_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Sage Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Sage_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Sage_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Sage_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Sage Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Sage_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Sage_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Sage_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Sage Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Sage_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Sage_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Spalt_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Spalt Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Spalt_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Spalt Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Spalt_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Spalt_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Spalt_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Spalt Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Spalt_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Spalt_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Spalt_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Spalt Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Spalt_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Spalt_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Wormwood_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Wormwood Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Wormwood_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Wormwood Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Wormwood_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Wormwood_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Wormwood_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Wormwood Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Wormwood_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Wormwood_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Wormwood_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Wormwood Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Balneum</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Wormwood_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Wormwood_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Prepd_Yarrow_Essence" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Prepd Yarrow Essence</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Yarrow_Essence" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Yarrow Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Yarrow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Cinquefoil_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Yarrow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Yarrow_Essence_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Yarrow Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Alembic</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Yarrow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Knotweed_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Yarrow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Prepd_Yarrow_Essence_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Prepd Yarrow Essence</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Yarrow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Vervain_Essence" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Prepd_Yarrow_Essence" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+    <HiddenWithoutPrereqs>true</HiddenWithoutPrereqs>
+  </Definition>
+</Definitions>
+

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="AlchemyFurnace" />
+    <BlockPairName>SmithingStation</BlockPairName>
+    <DisplayName>Alchemy Furnace</DisplayName>
+	<Description>Description_Block_Furnace</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemyfurnace.dds</Icon>
+    <CubeSize>Small</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="6" y="7" z="3" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Alchemy\Cubeblocks\alchemyFurnace.mwm</Model>
+    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="IngotCopper" Count="18" />
+      <Component Tag="Universal_Log" Count="1" />
+      <Component Type="InventoryItem" Subtype="IngotIron" Count="8" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="IngotIron" Index="0" />
+    <Mass>800</Mass>
+    <Volume>4500</Volume>
+    <MaxIntegrity>800</MaxIntegrity>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+    </MountPoints>
+    <ParticleScale>0.22</ParticleScale>
+    <LightRadius Min="6.5" Max="6.5" Default="6.5" />
+    <LightFalloff Min="0.3" Max="0.3" Default="0.3" />
+    <LightIntensity Min="0.3" Max="0.3" Default="0.3" />
+    <PrimarySound>BlockFire</PrimarySound>
+    <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
+    <AvailableInSurvival>true</AvailableInSurvival>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="CraftingRecipeDefinition" Subtype="AlchemyFurnace"/>
+    <DisplayName>DisplayName_Block_Furnace</DisplayName>
+	<Description>Description_Block_Furnace</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="18" Type="InventoryItem" Subtype="IngotCopper" />
+      <Item Amount="8" Type="InventoryItem" Subtype="IngotIron" />
+      <Item Amount="1" Tag="Universal_Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="CubeBlock" Subtype="AlchemyFurnace" />
+    </Results>
+    <CraftingTime Seconds="6"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="EntityFXComponent" Subtype="AlchemyFurnace" />
+    <Effects>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="FurnaceFire">
+        <EffectId Type="EffectDefinition" Subtype="Torch"/>
+      </Effect>
+    </Effects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="UseObjectsComponent" Subtype="AlchemyFurnace" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_furnace" Name="inventory" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="AlchemyFurnace" />
+    <InventoryName>Furnace</InventoryName>
+    <DisplayName>DisplayName_InventoryName_Crafting</DisplayName>
+    <MaxItemCount>12</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="AlchemyFurnace"/>
+    <CraftingCategories>
+      <Category>Alchemy_Furnace</Category>
+      <Category>Alembic_Imbue</Category>
+    </CraftingCategories>
+	<InputInventory>AlchemyFurnace</InputInventory>
+	<OutputInventory>AlchemyFurnace</OutputInventory>
+	<CraftingInventory>ProcessingInventory</CraftingInventory>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>false</ConstrainInventory>
+    <PowerRequired>All</PowerRequired>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="AlchemyFurnace" />
+    <Component Type="Inventory" Subtype="AlchemyFurnace" />
+    <Component Type="Inventory" Subtype="ProcessingInventory" />
+    <Component Type="CraftingComponentQueued" Subtype="AlchemyFurnace" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="AlchemyFurnace" />
+    <Component Type="UseObjectsComponent" Subtype="AlchemyFurnace" />
+    <Component Type="Inventory" Subtype="Fuel" />
+    <Component Type="FuelComponent" Subtype="Fire" />
+  </Definition>
+</Definitions>

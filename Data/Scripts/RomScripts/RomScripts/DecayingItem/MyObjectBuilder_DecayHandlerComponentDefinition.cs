@@ -13,5 +13,8 @@ namespace RomScripts.DecayingItem
     {
         [XmlElement("TickInterval")]
         public long? TickInterval;
+
+        [XmlElement("OutputInventory")]
+        public string OutputInventory;
     }
 }
