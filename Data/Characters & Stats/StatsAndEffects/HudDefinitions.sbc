@@ -125,4 +125,52 @@
 	<Scale>1</Scale>
   </Definition>
 <!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Vigor" />
+	<DisplayName>Vigor</DisplayName>
+	<Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+	<MainStat>
+		<StatId>Vigor</StatId>
+		<BackgroundColor Hex="#FFFF00" />
+		<ForegroundColor Hex="#FFFF00" />
+		<CriticalValue>30</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="250" Interval="25" />
+	<Arrows Scale="0.03" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="VigorGain" />
+	<DisplayName>VigorGain</DisplayName>
+	<Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+	<MainStat>
+		<StatId>VigorGain</StatId>
+		<BackgroundColor Hex="#FFFF00" />
+		<ForegroundColor Hex="#FFFF00" />
+		<CriticalValue>0</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="10" Interval="1" />
+	<Arrows Scale="0.03" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="VigorLoss" />
+	<DisplayName>VigorLoss</DisplayName>
+	<Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+	<MainStat>
+		<StatId>VigorLoss</StatId>
+		<BackgroundColor Hex="#FFFF00" />
+		<ForegroundColor Hex="#FFFF00" />
+		<CriticalValue>0</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="10" Interval="1" />
+	<Arrows Scale="0.03" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
 </Definitions>

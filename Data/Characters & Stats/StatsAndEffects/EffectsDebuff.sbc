@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- Character Debuffs - applied in combat -->
+  
+  <!-- Stun -->  
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Stun" />
+    <DisplayName>DisplayName_StatusEffect_Stun</DisplayName>
+    <Description>Description_StatusEffect_Stun</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Stun.png</Icon>
+    <ActivationMode>Ignore</ActivationMode>
+    <EffectType>Negative</EffectType>
+    <Duration Seconds="2" />
+    <ActivationSound RemoveOnDeactivate="true">HudStun</ActivationSound>
+    <Effect Type="MovementSpeedEffect" Subtype="StunSlowdown" />
+    <Effect Type="ToolEfficiencyEffect" Subtype="StunDisarm" />
+    <Effect Type="AnimationEffect" Subtype="StunAnimation" />
+    <Effect Type="PreventionEffect" Subtype="StunResist" IsSeparate="true" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
+    <Id Type="ToolEfficiencyEffect" Subtype="StunDisarm" />
+    <Public>true</Public>
+    <EffectType>Negative</EffectType>
+    <AffectedTool>HammerBuilding</AffectedTool>
+    <AffectedTool>AxeCutting</AffectedTool>
+    <AffectedTool>Shovel</AffectedTool>
+    <AffectedTool>Pickaxe</AffectedTool>
+    <AffectedTool>WeaponMelee</AffectedTool>
+    <Multiplier Style="Multiplicative" Value="0.0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MovementSpeedEffectDefinition">
+    <Id Type="MovementSpeedEffect" Subtype="StunSlowdown" />
+    <Public>false</Public>
+    <EffectType>Neutral</EffectType>
+    <ForwardMultiplier Style="Multiplicative" Value="0.0" />
+    <BackwardMultiplier Style="Multiplicative" Value="0.0" />
+    <StrafingMultiplier Style="Multiplicative" Value="0.0" />
+    <CanJump>false</CanJump>
+    <CanSprint>false</CanSprint>
+    <CanCrouch>false</CanCrouch>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AnimationEffectDefinition">
+    <Id Type="AnimationEffect" Subtype="StunAnimation" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <Variable>is_stunned</Variable>
+    <ActivationValue>1</ActivationValue>
+    <DeactivationValue>0</DeactivationValue>
+    <ActivationTrigger>trigger_stun</ActivationTrigger>
+    <DeactivationTrigger></DeactivationTrigger>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_PreventionEffectDefinition">
+    <Id Type="PreventionEffect" Subtype="StunResist" />
+    <DisplayName>DisplayName_StatusEffect_StunResist</DisplayName>
+    <Description>Description_StatusEffect_StunResist</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\ArmWoundLeft.png</Icon>
+    <EffectType>Positive</EffectType>
+    <Public>false</Public>
+    <ActivationMode>Ignore</ActivationMode>
+    <Duration Seconds="5" />
+    <PreventedEffect Type="CompositeEntityEffect" Subtype="Stun" />
+  </Definition>
+  
+  <!-- Wounds -->
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="ArmWoundLeft" />
+    <Public>true</Public>
+    <DisplayName>DisplayName_StatusEffect_ArmWoundLeft</DisplayName>
+    <Description>Description_StatusEffect_ArmWoundLeft</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\ArmWoundLeft.png</Icon>
+    <Category>ArmWoundLeft</Category>
+    <EffectType>Negative</EffectType>
+    <Effect Type="RangedWeaponModifierEffect" Subtype="ArmWoundLeftAccuracy" />
+    <Effect Type="OperationTriggerEffect" Subtype="ArmWoundLeftBlocking" />
+    <Duration Seconds="10" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_RangedWeaponModifierEffectDefinition">
+    <Id Type="RangedWeaponModifierEffect" Subtype="ArmWoundLeftAccuracy" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <AccuracyMultiplier Style="Multiplicative" Value="0.5" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="ArmWoundLeftBlocking" />
+    <Deactivation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Remove" />
+    <Added>
+      <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
+      <Operation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Add" />
+    </Added>
+    <Removed>
+      <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
+      <Operation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Remove" />
+    </Removed>
+    <Duration Seconds="10" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="ArmWoundRight" />
+    <Public>true</Public>
+    <DisplayName>DisplayName_StatusEffect_ArmWoundRight</DisplayName>
+    <Description>Description_StatusEffect_ArmWoundRight</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\ArmWoundRight.png</Icon>
+    <Category>ArmWoundRight</Category>
+    <EffectType>Negative</EffectType>
+    <Effect Type="RangedWeaponModifierEffect" Subtype="ArmWoundLeftAccuracy" />
+    <Effect Type="ToolEfficiencyEffect" Subtype="ArmWoundRightSlowdown" />
+    <Duration Seconds="10" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_RangedWeaponModifierEffectDefinition">
+    <Id Type="RangedWeaponModifierEffect" Subtype="ArmWoundRightReload" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <ReloadSpeedMultiplier Style="Multiplicative" Value="1.5" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
+    <Id Type="ToolEfficiencyEffect" Subtype="ArmWoundRightSlowdown" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <AffectedTool>HammerBuilding</AffectedTool>
+    <AffectedTool>AxeCutting</AffectedTool>
+    <AffectedTool>Shovel</AffectedTool>
+    <AffectedTool>Pickaxe</AffectedTool>
+    <AffectedTool>WeaponMelee</AffectedTool>
+    <Multiplier Style="Multiplicative" Value="0.7" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
+    <Id Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" />
+    <Public>false</Public>
+    <EffectType>Neutral</EffectType>
+    <Stat>Stamina</Stat>
+    <RegenPerSecond>-6</RegenPerSecond>
+    <RegenLimit>0</RegenLimit>
+  </Definition>
+
+</Definitions>

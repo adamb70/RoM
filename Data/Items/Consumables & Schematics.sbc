@@ -7224,6 +7224,11 @@ would be valuable for a Chef.
       <Id Type="ConsumableItem" Subtype="Bandage" />
       <Public>true</Public>
       <DisplayName>Simple Bandage</DisplayName>
+      <Description>
+	A Simple Bandage, crafted by an Apothocary.
+	This will stop bleeding and heal minor 
+	wounds.
+      </Description>
       <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
       <Size>
         <X>0.1</X>
@@ -7234,9 +7239,8 @@ would be valuable for a Chef.
       <Model>Models\Consumables\Bandage.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
-      <Stats>
-        <Stat Name="Health" Value="25" Time="5" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="BuffBandage" />
+	  <Effect Category="Bleeding" Operation="Remove" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7329,6 +7333,11 @@ or Chef.
 	  <Tag>Drink</Tag>
       <Public>true</Public>
       <DisplayName>Minor Strength Potion</DisplayName>
+      <Description>
+	Prepared by an Apothocary the Minor 
+	Strength Potion gives a temporary surge
+	of stamina to whoever drinks it.
+      </Description>
       <Icon>Textures\GUI\Icons\Universal\Apothocary\potion_strength.dds</Icon>
       <Size>
         <X>0.3</X>
@@ -7340,9 +7349,7 @@ or Chef.
       <Model>Models\Universal\potion_strength.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
-      <Stats>
-        <Stat Name="Stamina" Value="2" Time="90" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Minor_Potion_Strength" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->

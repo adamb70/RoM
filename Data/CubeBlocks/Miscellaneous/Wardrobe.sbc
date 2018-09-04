@@ -13,7 +13,6 @@
     <PhysicalMaterial>Wood</PhysicalMaterial>
     <Components>
       <Component Tag="Plank" Count="8" />
-      <Component Type="InventoryItem" Subtype="PartsMetal" Count="8" />
     </Components>
     <CriticalComponent Tag="Plank" Index="0" />
     <MaxIntegrity>1300</MaxIntegrity>
@@ -43,7 +42,6 @@
     <Category>Carpentry_Table</Category>
     <Prerequisites>
       <Item Amount="8" Tag="Plank" />
-      <Item Amount="8" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="CubeBlock" Subtype="Wardrobe" />

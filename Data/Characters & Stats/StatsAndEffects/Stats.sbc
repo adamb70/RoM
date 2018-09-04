@@ -34,6 +34,7 @@
     <Initial>100</Initial>
     <Minimum>0</Minimum>
     <Maximum>100</Maximum>
+    <ClampToMaximum>true</ClampToMaximum>
   </Definition>
 <!-- ===================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
@@ -52,9 +53,10 @@
     <DisplayName>DisplayName_Stat_Vigor</DisplayName>
     <Description>Description_Stat_Vigor</Description>
     <Initial>100</Initial>
-    <Minimum>75</Minimum>
+    <Minimum>20</Minimum>
     <Maximum>150</Maximum>
 	<IgnoreLock>true</IgnoreLock>
+    <ClampToMaximum>false</ClampToMaximum>
   </Definition>
 <!-- ===================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">

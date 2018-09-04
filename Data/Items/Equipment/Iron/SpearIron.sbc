@@ -80,69 +80,99 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
-    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SpearIron"/>
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SpearIron" />
 
     <LeftSwing>
-      <Range>2.0</Range>
-      <Damage>25</Damage>
-      <Arc>30</Arc>
+      <Range>2.3</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
 
-      <HitTime>.4</HitTime>
-      <AnimationTime>0.9</AnimationTime>
-      <Animation>Cutting</Animation>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="10" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="12" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="12" MaximumDamage="15" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </LeftSwing>
 
     <RightSwing>
-      <Range>2.0</Range>
-      <Damage>25</Damage>
-      <Arc>30</Arc>
+      <Range>2.3</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
 
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Cutting</Animation>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="10" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="12" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="12" MaximumDamage="15" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </RightSwing>
 
     <ForwardSwing>
-      <Range>3.0</Range>
-      <Damage>35</Damage>
-      <Arc>30</Arc>
+      <Range>2.3</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
 
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
       <Animation>Attack</Animation>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="15" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="12" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="12" MaximumDamage="15" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </ForwardSwing>
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
 
-    <BlockAnimation>block_idle</BlockAnimation>
-    <BlockRaiseTime>.07</BlockRaiseTime>
-	<BlockCost Stat="Stamina" Cost="15" />
-	<BlockEffect Type="BlockEffect" Subtype="Blocking" />
-  </Definition>
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SpearIron"/>
-    <DisplayName>Iron Spear</DisplayName>
-    <Description>Iron Spear</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronSpear_Small.dds</Icon>
-    <Category>AdvancedWeapons</Category>
-    <Prerequisites>
-      <Item Amount="4" Type="InventoryItem" Subtype="StripsLeather" />
-      <Item Amount="5" Tag="IngotIron" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Type="HandItem" Subtype="SpearIron" />
-    </Results>
-    <CraftingTime Seconds="5"/>
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+
+    <ImmediateLocking>false</ImmediateLocking>
   </Definition>
 </Definitions>

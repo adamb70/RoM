@@ -74,57 +74,104 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
-    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="ClubWood"/>
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="ClubWood" />
 
     <LeftSwing>
       <Range>1.6</Range>
-      <Damage>16</Damage>
-      <Arc>30</Arc>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
 
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
       <Animation>Attack</Animation>
-      <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <SwingSound>ToolSwishBlunt</SwingSound>
+
+      <LightAttack MinimumDamage="10">
+        <StatCost Stat="Stamina" Cost="10" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.6"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="10" MaximumDamage="20" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Fury" Cost="25" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.7"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.6"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </LeftSwing>
 
     <RightSwing>
       <Range>1.6</Range>
-      <Damage>12</Damage>
-      <Arc>30</Arc>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
 
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
       <Animation>Attack</Animation>
-      <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <SwingSound>ToolSwishBlunt</SwingSound>
+
+      <LightAttack MinimumDamage="10">
+        <StatCost Stat="Stamina" Cost="10" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.6"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="10" MaximumDamage="20" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Fury" Cost="25" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.7"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.6"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </RightSwing>
 
     <ForwardSwing>
       <Range>1.6</Range>
-      <Damage>12</Damage>
-      <Arc>30</Arc>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
 
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
       <Animation>Attack</Animation>
-      <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <SwingSound>ToolSwishBlunt</SwingSound>
+
+      <LightAttack MinimumDamage="20">
+        <StatCost Stat="Stamina" Cost="15" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.8"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="CompositeEntityEffect" Subtype="Stun" Chance="0.20"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="20" MaximumDamage="40" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Fury" Cost="25" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="CompositeEntityEffect" Subtype="Stun" Chance="0.75"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </ForwardSwing>
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
 
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
+
     <BlockAnimation>block_idle</BlockAnimation>
-    <BlockRaiseTime>.1</BlockRaiseTime>
-	<BlockCost Stat="Stamina" Cost="10" />
-	<BlockEffect Type="BlockEffect" Subtype="Blocking" />
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
   </Definition>
   
 </Definitions>

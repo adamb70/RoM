@@ -5,11 +5,13 @@
     <Id Type="HealthEffect" Subtype="HealthRegen" />
     <Category>DefaultHealthRegen</Category>
     <Public>false</Public>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Health.png</Icon>
     <LostOnReset>false</LostOnReset>
     <Stat>Health</Stat>
     <RegenPerSecond>0.2</RegenPerSecond>
     <HealthToFoodRatio>0.5</HealthToFoodRatio>
-	  <RegenCooldown Seconds="5" />
+    <RegenCooldown Seconds="5" />
   </Definition>
 <!-- ===================================================================================================================== -->
  						 <!-- Stamina: Start -->
@@ -24,27 +26,54 @@
     <Id Type="RomStaminaEffect" Subtype="StaminaRegen" />
     <Category>DefaultStaminaRegen</Category>
     <Public>false</Public>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Stamina.png</Icon>
     <LostOnReset>false</LostOnReset>
     <Stat>Stamina</Stat>
-    <RegenPerSecond>4</RegenPerSecond>
-    <ExhaustionEffect Type="StatEffectAffectorEffect" Subtype="Exhausted" />
-    <RestingTime Seconds="3" />
+    <RegenPerSecond>2</RegenPerSecond>
+    <ExhaustionThreshold>10</ExhaustionThreshold>
+    <ExhaustionEffect Type="CompositeEntityEffect" Subtype="Exhausted" />
+    <RestingTime Seconds="10" />
     <RestingEffect Type="StatEffectAffectorEffect" Subtype="Resting" />
     <StaminaToFoodRatio>0.02</StaminaToFoodRatio>
     <!-- For each 1 stamina regained, this amount of food/thirst will be consumed -->
     <StaminaToThirstRatio>0.04</StaminaToThirstRatio>
   </Definition>
 <!-- ======================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
-    <Id Type="StatEffectAffectorEffect" Subtype="Exhausted" />
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Exhausted" />
     <DisplayName>DisplayName_StatusEffect_Exhausted</DisplayName>
     <Description>Description_StatusEffect_Exhausted</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Exhausted.png</Icon>
     <EffectType>Negative</EffectType>
-    <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
-    <RegenMultiplier>-100</RegenMultiplier>
-    <Duration Seconds="5" />
+    <Duration Seconds="10" />
+    <Effect Type="StatEffectAffectorEffect" Subtype="ExhaustedDrain" />
+    <Effect Type="OperationTriggerEffect" Subtype="ExhaustedRecover" />
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
+    <Id Type="StatEffectAffectorEffect" Subtype="ExhaustedDrain" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <ActivationEvent>Exhausted</ActivationEvent>
+    <AffectedStatEffect Type="StaminaEffect" Subtype="StaminaRegen" />
+    <RegenMultiplier>-500</RegenMultiplier>
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="ExhaustedRecover" /> 
+    <Public>false</Public>
+    <Activation Type="CompositeEntityEffect" Subtype="Blocking" Operation="Remove" />
+    <Deactivation Type="EntityStatEffect" Subtype="ExhaustedRecoverGain" Operation="Add" />
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="ExhaustedRecoverGain" />
+    <Public>false</Public>
+    <Stat>Stamina</Stat>
+    <AddedValue>10</AddedValue>
+    <Duration Seconds="0" />
   </Definition>
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
@@ -56,7 +85,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Resting.png</Icon>
 	  <EffectType>Positive</EffectType>
     <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
-    <RegenMultiplier>100</RegenMultiplier>
+    <RegenMultiplier>500</RegenMultiplier>
   </Definition>
   <!-- Stamina: End -->
 <!-- ===================================================================================================================== -->
@@ -72,6 +101,8 @@
     <Id Type="RomHungerEffect" Subtype="HungerDegen" />
     <Category>DefaultHungerDegen</Category>
     <Public>false</Public>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Hungry.png</Icon>
     <LostOnReset>false</LostOnReset>
     <Stat>Food</Stat>
     <RegenPerSecond>-0.02</RegenPerSecond>
@@ -263,10 +294,7 @@
 	  <VigorGainedSound>VigorGain</VigorGainedSound>
 	  <VigorLostSound></VigorLostSound>
 	  <!-- Affected stats, regens and multipliers -->
-	  <AffectedMaxStat>Health</AffectedMaxStat>
 	  <AffectedMaxStat>Stamina</AffectedMaxStat>
-	  <AffectedMaxStat>Food</AffectedMaxStat>
-	  <AffectedRegen Type="HealthEffect" Subtype="HealthRegen" />
 	  <AffectedRegen Type="RomStaminaEffect" Subtype="StaminaRegen" />
 	  <AffectedTool>HammerBuilding</AffectedTool>
 	  <AffectedTool>AxeCutting</AffectedTool>
@@ -296,18 +324,32 @@
 <!-- ======================================================================== -->
   			<!-- Blocking / Sprinting -->
 <!-- ======================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Sprint" />
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Sprint" />
+    <Public>false</Public>
     <DisplayName>DisplayName_StatusEffect_Sprint</DisplayName>
     <Description>Description_StatusEffect_Sprint</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Sprint.png</Icon>
     <EffectType>Neutral</EffectType>
-    <Public>false</Public>
+    <Duration Seconds="0.1" />
+    <Effect Type="EntityStatEffect" Subtype="Sprint" />
+    <!--<Effect Type="FOVEffect" Subtype="SprintFOV" />-->
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Sprint" />
     <Stat>Stamina</Stat>
     <RegenPerSecond>-6</RegenPerSecond>
     <RegenLimit>0</RegenLimit>
-    <Duration Seconds="0.1" />
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_FOVEffectDefinition">
+    <Id Type="FOVEffect" Subtype="SprintFOV" />
+    <FirstPersonFOVMultiplier>1.15</FirstPersonFOVMultiplier>
+    <ThirdPersonFOVMultiplier>1.15</ThirdPersonFOVMultiplier>
+    <IntroDuration Seconds="5.0" />
+    <OutroDuration Seconds="2.2" />
   </Definition>
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_BlockEffectDefinition">
@@ -521,6 +563,9 @@
     <Category>Fury</Category>
     <Effect Type="ToolEfficiencyEffect" Subtype="EnragedToolMultiplier" />
     <Effect Type="StatEffectAffectorEffect" Subtype="EnragedStamina" />
+    <Effect Type="ScaledAudioEffect" Subtype="AdrenalineSound" />
+    <Effect Type="ScaledFOVEffect" Subtype="AdrenalineFOV" />
+    <Effect Type="CompositeEntityEffect" Subtype="Vigor_Drain" />
   </Definition>
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
@@ -528,7 +573,7 @@
     <Public>false</Public>
     <EffectType>Positive</EffectType>
     <AffectedStatEffect Type="RomStaminaEffect" Subtype="StaminaRegen" />
-    <RegenMultiplier>50</RegenMultiplier>
+    <RegenMultiplier>100</RegenMultiplier>
   </Definition>
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
@@ -536,7 +581,22 @@
     <Public>false</Public>
     <EffectType>Positive</EffectType>
     <AffectedTool>MeleeWeapon</AffectedTool>
-    <Multiplier Style="Additive" Value="0.2" />
+    <Multiplier Style="Additive" Value="0.5" />
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Vigor_Drain" />
+    <Public>false</Public>
+    <Effect Type="ExponentialStatEffect" Subtype="Vigor_Drain" />
+  </Definition>
+  <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
+    <Id Type="ExponentialStatEffect" Subtype="Vigor_Drain" />
+    <Public>false</Public>
+    <EffectType>Neutral</EffectType>
+    <Stat>VigorGain</Stat>
+    <RegenPerSecond>2</RegenPerSecond>
+    <RegenLimit>6</RegenLimit>
   </Definition>
 <!-- ===================================================================================================================== -->
   						<!-- Alcohol: Start -->
