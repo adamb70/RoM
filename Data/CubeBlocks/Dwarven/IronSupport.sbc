@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="IronWalkSupport" />
+    <DisplayName>IronWalkSupport</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Dwarven\IronWalkSupport.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\Dwarven\IronWalkSupport_Large.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\Large\Dwarven\IronWalkSupport_Large_Constr1.mwm">
+      </Model>
+    </BuildProgressModels>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <BuildType>Cube</BuildType>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Components>      
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="12" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
+    <RandomRotation>true</RandomRotation>
+    <CompoundTemplates>
+      <Template>Cube</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>41000</MaxIntegrity>
+    <NavigationDefinition>Default</NavigationDefinition>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="IronSupportRailng" />
+    <DisplayName>IronSupportRailng</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Dwarven\IronSupportRailing.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\Dwarven\IronSupportRailng_Large.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <GuiVisible>true</GuiVisible>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <BuildType>Cube</BuildType>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Components>      
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="3" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
+    <RandomRotation>true</RandomRotation>
+    <CompoundTemplates>
+      <Template>Cube</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>21000</MaxIntegrity>
+    <NavigationDefinition>Default</NavigationDefinition>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="IronWalkPlanks" />
+    <DisplayName>IronWalkPlanks</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Dwarven\IronWalkPlanks.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\Dwarven\IronWalkPlanks_Large.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <GuiVisible>false</GuiVisible>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <BuildType>Cube</BuildType>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Components>      
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="4" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
+    <RandomRotation>true</RandomRotation>
+    <CompoundTemplates>
+      <Template>Cube</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>21000</MaxIntegrity>
+    <NavigationDefinition>Default</NavigationDefinition>
+    <BuildProgressToPlaceGeneratedBlocks>0.5</BuildProgressToPlaceGeneratedBlocks>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="IronWalkPlanksUpper" />
+    <DisplayName>IronWalkPlanksUpper</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Dwarven\IronWalkPlanks.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\Dwarven\IronWalkPlanksUpper_Large.mwm</Model>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="4" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <UseModelIntersection>true</UseModelIntersection>
+    <CompoundTemplates>
+      <Template>Universal</Template>
+    </CompoundTemplates>
+    <MaxIntegrity>12500</MaxIntegrity>
+    <NavigationDefinition>Default</NavigationDefinition>
+    <BlockGroupName>IronWalks</BlockGroupName>
+    <BlockVariants>
+      <BlockVariant>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>IronWalkPlanks</SubtypeId>
+      </BlockVariant>
+    </BlockVariants>
+  </Definition>
+
+</Definitions>

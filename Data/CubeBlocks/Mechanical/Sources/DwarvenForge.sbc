@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="MyObjectBuilder_CubeBlock" Subtype="DwarvenForge" />
+    <DisplayName>Dwarven Forge</DisplayName>
+    <Description>Dwarven Forge</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Mechanical\DwarvenForge.dds</Icon>
+    <BlockPairName>DwarvenForge</BlockPairName>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <CubeSize>Large</CubeSize>
+    <Public>true</Public>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="2" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\Large\Mechanical\DwarvenFurnace\DwarvenForge_Large.mwm</Model>
+    <BuildProgressModels>
+      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\Large\Mechanical\DwarvenFurnace\DwarvenForge_Large_Constr1.mwm">
+        <!--<MountPointOverrides>
+          <MountPoint Side="Top" Enabled="false" />
+        </MountPointOverrides>-->
+      </Model>
+    </BuildProgressModels>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
+    <Components>
+      <Component Tag="Log" Count ="1" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="20" />
+    </Components>
+    <MaxIntegrity>400</MaxIntegrity>
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>Volumetric</PlacementMode>
+        <MaxAllowed>0.5</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>
+    <GuiVisible>true</GuiVisible>
+    <Mass>50</Mass>
+    <Volume>267.5</Volume>
+  </Definition>
+  
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="DwarvenForge" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory" />
+    </UseObjects>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="DwarvenForge"/>
+    <CraftingCategories>
+      <Category>Smelting</Category>
+    </CraftingCategories>
+    <InputInventory>DwarvenForgeInputInventory</InputInventory>
+    <OutputInventory>DwarvenForgeOutputInventory</OutputInventory>
+    <CraftingInventory>ProcessingInventory</CraftingInventory>
+    <ProductionQueueSize>4</ProductionQueueSize>
+    <CraftingSpeedMultiplier>0.5</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
+    <PowerRequired>All</PowerRequired>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="DwarvenForgeOutputInventory" />
+    <DisplayName>DwarvenForgeOutput</DisplayName>
+    <InventoryName>DwarvenForgeOutputInventory</InventoryName>
+    <MaxItemCount>12</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="DwarvenForgeInputInventory" />
+    <DisplayName>DwarvenForgeInput</DisplayName>
+    <InventoryName>DwarvenForgeInputInventory</InventoryName>
+    <MaxItemCount>12</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="DwarvenForge" />
+    <Component Type="FueledMechanicalSourceComponent" Subtype="DwarvenForge" />
+    <Component Type="FuelComponent" Subtype="Fire" />
+    <Component Type="Inventory" Subtype="Fuel" />
+    
+    <Component Type="SubpartAnimationComponent" Subtype="DwarvenForge"/>
+    <Component Type="CubeBlockSubpartComponent" Subtype="DwarvenForge" />  
+    <Component Type="Inventory" Subtype="DwarvenForgeInputInventory" />
+    <Component Type="Inventory" Subtype="DwarvenForgeOutputInventory" />
+    <Component Type="Inventory" Subtype="ProcessingInventory" />
+    <Component Type="CraftingComponentQueued" Subtype="DwarvenForge" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="UseObjectsComponent" Subtype="DwarvenForge" />
+    <Component Type="EntityFXComponent" Subtype="DwarvenForge" />
+  </Definition>
+
+  
+  <Definition xsi:type="MyObjectBuilder_FueledMechanicalSourceComponentDefinition">
+    <Id Type="FueledMechanicalSourceComponent" Subtype="DwarvenForge" />
+    <MaxPowerOutput>10</MaxPowerOutput>
+    <Connection>connection_01</Connection>
+    <ClockwiseAnimation>cw</ClockwiseAnimation>
+    <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
+  </Definition>
+  
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="CubeBlockSubpartComponent" Subtype="DwarvenForge" />
+    <ShowSubpartsWhileBuilding>false</ShowSubpartsWhileBuilding>
+    <Subparts>
+      <Subpart Name="DwarvenForge" Model="Models\Cubes\Large\Mechanical\DwarvenFurnace\DwarvenGear_Small.mwm" HingeBone="dwarven_gear" PhysicalMaterial="Wood" HasPhysics="false"/>
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="SubpartAnimationComponent" Subtype="DwarvenForge" />
+    <AnimationSequences>
+      <Sequence Name="cw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="DwarvenForge" Type="Rotation" Axis="X" From="0" To="360" Method="Linear" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="ccw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="DwarvenForge" Type="Rotation" Axis="X" From="0" To="-360" Method="Linear" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="DwarvenForge" />
+    <Effects>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_inventory">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
+      </Effect>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="connection_01">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalWorking"/>
+      </Effect>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="SawmillMechanical_particle_emitter">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="SawmillMechanical"/>
+      </Effect>
+    </Effects>
+  </Definition>
+
+   
+  
+</Definitions>

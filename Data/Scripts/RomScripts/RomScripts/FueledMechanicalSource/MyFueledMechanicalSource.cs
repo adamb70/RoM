@@ -53,17 +53,7 @@ namespace RomScripts.FueledMechanicalSource
 
             // Look for power providers
             IEnumerable<IMyPowerProvider> fuel_components = this.Entity.Components.GetComponents<IMyPowerProvider>();
-
-            int test2 = 0;
-            foreach (IMyPowerProvider component in fuel_components)
-            {
-                test2 += 1;
-            }
-
-
-            ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(test2.ToString(), 3000, null, Color.Red);
-
-
+            
             if (fuel_components != null)
             {
                 this.m_powerProviders = fuel_components.ToList<IMyPowerProvider>(); // ignore this IDE error
@@ -72,6 +62,11 @@ namespace RomScripts.FueledMechanicalSource
                     component.PowerStateChanged += new Action<IMyPowerProvider, bool>(this.Power_OnPowerStateChanged);
                 }
             }
+
+            if (this.Group != null)
+            {
+                this.Group.Recalculate();
+            }
             
             //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Power is set!", 1000, null, Color.Red);
         }
@@ -79,11 +74,18 @@ namespace RomScripts.FueledMechanicalSource
 
         private void Power_OnPowerStateChanged(IMyPowerProvider provider, bool state)
         {
-            ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Power state changed!", 3000, null, Color.Red);
+            if (!MyAPIGateway.Multiplayer?.IsServer ?? false)
+            {
+                return;
+            }
 
+            //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Power state changed!", 3000, null, Color.Red);
             TryTurnOnPower();
             //base.Power = provider.IsPowered ? this.m_definition.MaxPowerOutput : 0;
-            this.Group.Recalculate();
+            if (this.Group != null)
+            {
+                this.Group.Recalculate();
+            }
         }
 
         private void TryTurnOnPower()
@@ -93,57 +95,20 @@ namespace RomScripts.FueledMechanicalSource
 
             foreach (IMyPowerProvider provider in m_powerProviders)
             {
-                ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("new", 3000, null, Color.Red);
-                ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(provider.IsPowered.ToString(), 3000, null, Color.Red);
+                //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(provider.ToString(), 3000, null, Color.Red);
+                //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(provider.IsPowered.ToString(), 3000, null, Color.Red);
+
+                if (provider.IsPowered)
+                {
+                    base.Power = this.m_definition.MaxPowerOutput;
+                    return;
+                }
             }
+
+            // If no provider has power. Might want to add other checks if we ever need to handle combinations of multiple providers
+            base.Power = 0;
 
         }
 
-        // Vanilla altitude calculation
-        //private void CalculatePowerOutput()
-        //{
-        //    int power = base.Power;
-        //    base.Power = 0;
-        //    if (this.m_definition == null)
-        //    {
-        //        return;
-        //    }
-        //    if (this.m_definition.MaxAltitudeDelta <= 0f)
-        //    {
-        //        base.Power = this.m_definition.MaxPowerOutput;
-        //        if (power != base.Power && this.Group != null)
-        //        {
-        //            this.Group.Recalculate();
-        //        }
-        //        return;
-        //    }
-        //    Vector3D translation = this.Block.WorldMatrix.Translation;
-        //    MyPlanet closestPlanet = MyGamePruningStructure.GetClosestPlanet(translation);
-        //    if (closestPlanet == null)
-        //    {
-        //        if (power != base.Power && this.Group != null)
-        //        {
-        //            this.Group.Recalculate();
-        //        }
-        //        return;
-        //    }
-        //    double num = (closestPlanet.GetClosestSurfacePointGlobal(ref translation) - closestPlanet.WorldMatrix.Translation).LengthSquared();
-        //    double num2 = (translation - closestPlanet.WorldMatrix.Translation).LengthSquared();
-        //    if (num >= num2)
-        //    {
-        //        if (power != base.Power && this.Group != null)
-        //        {
-        //            this.Group.Recalculate();
-        //        }
-        //        return;
-        //    }
-        //    float time = (float)(translation - closestPlanet.GetClosestSurfacePointGlobal(ref translation) - closestPlanet.WorldMatrix.Translation).Length();
-        //    float num3 = global::System.Math.Min(1f, InterpolationEquationsF.Interpolate(this.m_definition.PowerInterpolation, time, 0f, 1f, this.m_definition.MaxAltitudeDelta, null));
-        //    base.Power = (int)global::System.Math.Floor((double)((float)this.m_definition.MaxPowerOutput * num3));
-        //    if (power != base.Power && this.Group != null)
-        //    {
-        //        this.Group.Recalculate();
-        //    }
-        //}
     }
 }
