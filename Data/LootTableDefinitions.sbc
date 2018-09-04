@@ -332,9 +332,18 @@
     <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
   <Id Type="LootTableDefinition" Subtype="PineCone" />
   	<Rolls>1</Rolls>
-	  <Item Type="ConsumableItem"	Subtype="TreeSmall_Seed" Weight="80" />
+	  <Item Type="ConsumableItem"	Subtype="TreeSmall_Seed" Weight="75" />
 	  <!-- Roughly 25% Probability for Pristine -->
 	  <Item Type="SchematicItem"	Subtype="Schematic_TreeSmall_Seed" Weight="25" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ========================================================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="Hazel_Small_Sticks" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="Sticks" Amount="1" AlwaysDrops="true" IsUnique="true" />
+	  <!-- Roughly 25% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_TreeSmall_WoodenSticks" Weight="25" />
 	<Item Weight="100" />
   </Definition>
 <!-- ========================================================================================================================================== -->

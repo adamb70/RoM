@@ -1,234 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
-    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="GenericToolCombatBehavior"/>
-
-    <LeftSwing>
-      <Range>1.8</Range>
-      <Damage>8</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </LeftSwing>
-
-    <RightSwing>
-      <Range>1.8</Range>
-      <Damage>8</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </RightSwing>
-
-    <ForwardSwing>
-      <Range>1.8</Range>
-      <Damage>8</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </ForwardSwing>
-
-    <CanBlock>true</CanBlock>
-    <HardnessLimited>true</HardnessLimited>
-
-    <BlockAnimation>block_idle</BlockAnimation>
-    <BlockRaiseTime>.1</BlockRaiseTime>
-	<BlockCost Stat="Stamina" Cost="10" />
-	<BlockEffect Type="BlockEffect" Subtype="Blocking" />
-  </Definition>
+<!-- =============================================================================================== -->
 
 <!-- =============================================================================================== -->
 
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
-    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="ShovelIron"/>
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="ShovelNorden" />
 
     <LeftSwing>
-      <Range>1.8</Range>
-      <Damage>8</Damage>
-      <Arc>30</Arc>
+      <Range>2.0</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
 
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
       <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="14" MaximumDamage="18" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </LeftSwing>
 
     <RightSwing>
-      <Range>1.8</Range>
-      <Damage>8</Damage>
-      <Arc>30</Arc>
+      <Range>2.0</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
 
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
       <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="14" MaximumDamage="18" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </RightSwing>
 
     <ForwardSwing>
-      <Range>1.8</Range>
-      <Damage>8</Damage>
-      <Arc>30</Arc>
+      <Range>2.0</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
 
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
       <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="14" MaximumDamage="18" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </ChargedAttack>
     </ForwardSwing>
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
 
-    <BlockAnimation>block_idle</BlockAnimation>
-    <BlockRaiseTime>.1</BlockRaiseTime>
-	<BlockCost Stat="Stamina" Cost="10" />
-	<BlockEffect Type="BlockEffect" Subtype="Blocking" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
-    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="ShovelWood"/>
-
-    <LeftSwing>
-      <Range>1.8</Range>
-      <Damage>6</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </LeftSwing>
-
-    <RightSwing>
-      <Range>1.8</Range>
-      <Damage>6</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </RightSwing>
-
-    <ForwardSwing>
-      <Range>1.8</Range>
-      <Damage>6</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </ForwardSwing>
-
-    <CanBlock>true</CanBlock>
-    <HardnessLimited>true</HardnessLimited>
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 
     <BlockAnimation>block_idle</BlockAnimation>
-    <BlockRaiseTime>.1</BlockRaiseTime>
-	<BlockCost Stat="Stamina" Cost="10" />
-	<BlockEffect Type="BlockEffect" Subtype="Blocking" />
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+
+    <ImmediateLocking>false</ImmediateLocking>
   </Definition>
 
-<!-- =============================================================================================== -->
-
-  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
-    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="ShovelNorden"/>
-
-    <LeftSwing>
-      <Range>1.8</Range>
-      <Damage>12</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </LeftSwing>
-
-    <RightSwing>
-      <Range>1.8</Range>
-      <Damage>12</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </RightSwing>
-
-    <ForwardSwing>
-      <Range>1.8</Range>
-      <Damage>12</Damage>
-      <Arc>30</Arc>
-
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <Animation>Attack</Animation>
-	  
-	  <SwingSoundDelay>0.3</SwingSoundDelay>
-      <SwingSound>ToolSwish</SwingSound>
-	  <StatCost Stat="Stamina" Cost="7" />
-	  <StatCost Stat="Fury" Cost="-1" />
-    </ForwardSwing>
-
-    <CanBlock>true</CanBlock>
-    <HardnessLimited>true</HardnessLimited>
-
-    <BlockAnimation>block_idle</BlockAnimation>
-    <BlockRaiseTime>.1</BlockRaiseTime>
-	<BlockCost Stat="Stamina" Cost="10" />
-	<BlockEffect Type="BlockEffect" Subtype="Blocking" />
-  </Definition>
 </Definitions>

@@ -1,29 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
-    <Id Type="HandItem" Subtype="SwordIron"/>
+    <Id Type="HandItem" Subtype="MaceIronFlangedEngraved" />
 
     <!-- Display -->
 
-    <DisplayName>DisplayName_Weapon_Sword</DisplayName>
-    <Description>Description_Weapon_Sword</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SwordIron.dds</Icon>
+    <DisplayName>DisplayName_Weapon_MaceIronFlangedEngraved</DisplayName>
+    <Description>Description_Weapon_MaceIronFlangedEngraved</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\MaceIronFlanged.dds</Icon>
+    <Tag>WeaponMelee</Tag>
     <Size>
       <X>1.2</X>
       <Y>0.6</Y>
       <Z>0.3</Z>
     </Size>
     <Mass>0.5</Mass>
-    <Model>Models\Weapons\Sword.mwm</Model>
+    <Volume>3</Volume>
+    <Model>Models\Weapons\FlangedMace_Engraved.mwm</Model>
 
-    <PhysicalMaterial>Sword</PhysicalMaterial>
-
+    <PhysicalMaterial>Mace</PhysicalMaterial>
+    
     <Animation>Sword</Animation>
 
     <MaxStackAmount>1</MaxStackAmount>
 
-    <MaxDurability>200</MaxDurability>
+    <MaxDurability>300</MaxDurability>
 
+    <BrokenItem Type="MyObjectBuilder_InventoryItem" Subtype="MaceIronFlangedEngravedBroken" />
     <Position>
       <Slot>MainHand</Slot>
     </Position>
@@ -70,12 +73,32 @@
     <!-- Behaviors -->
     <StanceToBehavior>
       <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="SwordIron"/>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="MaceIronFlangedEngraved" />
     </StanceToBehavior>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="MaceIronFlangedEngravedBroken" />
+    <Public>true</Public>
+    <DisplayName>DisplayName_Item_MaceIronFlangedEngravedBroken</DisplayName>
+    <Description>Description_Item_MaceIronFlangedEngravedBroken</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\MaceIronFlanged.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Broken.dds</Icon>
+    <Model>Models\Weapons\FlangedMace_Engraved.mwm</Model>
+    <PhysicalMaterial>Hammer</PhysicalMaterial>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>5</Mass>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Health>50</Health>
+  </Definition>
+
+
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
-    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SwordIron" />
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="MaceIronFlangedEngraved" />
 
     <LeftSwing>
       <Range>1.6</Range>
@@ -83,27 +106,24 @@
       <EndArc>20</EndArc>
 
       <Animation>Attack</Animation>
-      <SwingSound>ToolSwishSword</SwingSound>
-      
-      <LightAttack MinimumDamage="26">
-        <StatCost Stat="Stamina" Cost="15" />
+      <SwingSound>ToolSwishBlunt</SwingSound>
+
+      <LightAttack MinimumDamage="15">
+        <StatCost Stat="Stamina" Cost="10" />
         <StatCost Stat="Fury" Cost="-3" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.6"/>
         </AppliedEffect>
       </LightAttack>
 
-      <ChargedAttack MinimumDamage="26" MaximumDamage="52" AttackMultipleTargets="true">
-        <StatCost Stat="Fury" Cost="25" />
+      <ChargedAttack MinimumDamage="15" MaximumDamage="30" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Fury" Cost="35" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.7"/>
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
           <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.7"/>
-        </AppliedEffect>
-        <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.6"/>
         </AppliedEffect>
       </ChargedAttack>
     </LeftSwing>
@@ -114,27 +134,24 @@
       <EndArc>-20</EndArc>
 
       <Animation>Attack</Animation>
-      <SwingSound>ToolSwishSword</SwingSound>
-      
-      <LightAttack MinimumDamage="26">
-        <StatCost Stat="Stamina" Cost="15" />
+      <SwingSound>ToolSwishBlunt</SwingSound>
+
+      <LightAttack MinimumDamage="10">
+        <StatCost Stat="Stamina" Cost="10" />
         <StatCost Stat="Fury" Cost="-3" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.6"/>
         </AppliedEffect>
       </LightAttack>
 
-      <ChargedAttack MinimumDamage="26" MaximumDamage="52" AttackMultipleTargets="true">
-        <StatCost Stat="Fury" Cost="25" />
+      <ChargedAttack MinimumDamage="15" MaximumDamage="30" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Fury" Cost="35" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.7"/>
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
           <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.7"/>
-        </AppliedEffect>
-        <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.6"/>
         </AppliedEffect>
       </ChargedAttack>
     </RightSwing>
@@ -145,27 +162,27 @@
       <EndArc>20</EndArc>
 
       <Animation>Attack</Animation>
-      <SwingSound>ToolSwishSword</SwingSound>
-      
-      <LightAttack MinimumDamage="20">
+      <SwingSound>ToolSwishBlunt</SwingSound>
+
+      <LightAttack MinimumDamage="25">
         <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="-3" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.8"/>
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.3"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Stun" Chance="0.25"/>
         </AppliedEffect>
       </LightAttack>
 
-      <ChargedAttack MinimumDamage="20" MaximumDamage="40" AttackMultipleTargets="true">
-        <StatCost Stat="Fury" Cost="25" />
+      <ChargedAttack MinimumDamage="25" MaximumDamage="50" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Fury" Cost="35" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.6"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Stun" Chance="0.80"/>
         </AppliedEffect>
       </ChargedAttack>
     </ForwardSwing>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="BuffBandage" />
+    <DisplayName>Simple Bandage</DisplayName>
+    <Description>Description_Effects_Bandage</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Health</Stat>
+	<RegenPerSecond>2.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>true</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Minor_Potion_Strength" />
+    <DisplayName>Minor Strength Potion</DisplayName>
+    <Description>Prepared by an Apothocary the Minor Strength Potion gives a temporary surge of stamina to whoever drinks it.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Apothocary\potion_strength.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Stamina</Stat>
+	<RegenPerSecond>15</RegenPerSecond>
+	<Duration Seconds="2" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+</Definitions>
