@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_ItemRendererMappingDefinition">
+    <Id Type="MyObjectBuilder_ItemRendererMappingDefinition" Subtype="Default" />
+    <Mappings>
+      <Mapping Type="MyObjectBuilder_InventoryItem" Renderer="InventoryItem" />
+      <Mapping Type="MyObjectBuilder_HandItem" Subtype="LandscapeStake" Renderer="InventoryItem" />
+      <Mapping Type="MyObjectBuilder_HandItem" Subtype="Rope" Renderer="InventoryItem" />
+      <Mapping Type="MyObjectBuilder_HandItem" Subtype="RopeTearable" Renderer="InventoryItem" />
+      <Mapping Type="MyObjectBuilder_CubeBlock" Renderer="InventoryItem" />
+      <Mapping Type="MyObjectBuilder_ToolheadItem" Renderer="DurableItem" />
+      <Mapping Type="MyObjectBuilder_EquipmentItem" Renderer="EquipmentItem" />
+      <Mapping Type="MyObjectBuilder_TreasureMapItem" Renderer="InventoryItem" />
+      
+      
+      <Mapping Type="MyObjectBuilder_DurableItem" Renderer="DurableItem" />
+    </Mappings>
+  </Definition>
+  
+</Definitions>

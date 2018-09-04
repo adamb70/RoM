@@ -61,9 +61,16 @@ namespace Romscripts.SeedingToolBehavior
         public float? MaxNorthPercentage;
         public float? MinNorthPercentage;
 
+        private MySeedBagHandItem m_seedBag;
+        private MyFarmingSystem m_farmingSystem;
 
         public override void Init(MyEntity holder, MyHandItem item, MyHandItemBehaviorDefinition definition)
         {
+            this.m_seedBag = (item as MySeedBagHandItem);
+            if (this.m_seedBag == null)
+            {
+                MyLog.Default.Error("Hand item have to be of type 'MySeedBagHandItem' in order to work with seeding tool behavior");
+            }
             base.Init(holder, item, definition);
 
             var ob = (MyRomSeedingToolBehaviorDefinition)definition;
@@ -71,6 +78,8 @@ namespace Romscripts.SeedingToolBehavior
             this.MaxAltitudePercentage = ob.MaxAltitudePercentage;
             this.MaxNorthPercentage = ob.MaxNorthPercentage;
             this.MinNorthPercentage = ob.MinNorthPercentage;
+
+            this.m_farmingSystem = VRage.Session.MySession.Static.Components.Get<MyFarmingSystem>();
         }
 
 
@@ -172,6 +181,15 @@ namespace Romscripts.SeedingToolBehavior
             }
 
             return true;
+        }
+
+
+        protected override void Hit()
+        {
+            if (this.m_farmingSystem.Plant(this.Holder, this.Target.Position, this.Target.Normal, this.m_seedBag.GetDefinition().GrowableDefinitionId, this.m_seedBag.GetDefinition().Id) == MyFarmingSystem.PlantingCheckResult.PlantingOk)
+            {
+                this.UpdateDurability(-1);
+            }
         }
 
     }

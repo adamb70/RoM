@@ -71,18 +71,18 @@ namespace RomScripts.ReadableItem
         }
 
 
-        public override void StartAction(MyHandItemActionEnum action)
+        public override MyHandItemBehaviorBase.StartActionResponse StartAction(MyHandItemActionEnum action)
         {
             if (MySession.Static.IsDedicated)
             {
-                return;
+                return MyHandItemBehaviorBase.StartActionResponse.Unhandled;
             }
             switch (action)
             {
                 case MyHandItemActionEnum.Primary:
                     this.ShowMessage();
                     EndAction(action);
-                    return;
+                    return MyHandItemBehaviorBase.StartActionResponse.Handled;
                 case MyHandItemActionEnum.Secondary:
                     if (current_page + 1 >= total_pages)
                     {
@@ -94,12 +94,12 @@ namespace RomScripts.ReadableItem
                         current_page += 1;
                         ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("You turn to page " + (current_page + 1).ToString() + "/" + total_pages.ToString(), 1500, null, Color.White);
                     }
-                    return;
+                    return MyHandItemBehaviorBase.StartActionResponse.Handled;
                 default:
-                    return;
+                    return MyHandItemBehaviorBase.StartActionResponse.Unhandled;
             }
         }
-        
+
         // Called when the tool is equipped.
         public override void Activate()
         {
@@ -111,7 +111,7 @@ namespace RomScripts.ReadableItem
         {
             base.Deactivate();
         }
-        
+
         protected void ShowMessage()
         {
             if (!MySession.Static.IsServer)
@@ -127,11 +127,11 @@ namespace RomScripts.ReadableItem
             EndAction(MyHandItemActionEnum.Primary); // Doesn't actually seem to work...
             return;
         }
-        
+
     }
 
 
-    
+
 
 }
 

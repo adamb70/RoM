@@ -1,20 +1,108 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <!-- Overridden to change mining definition -->
-  <Definition xsi:type="MyObjectBuilder_MinerToolBehaviorDefinition">
-    <Id Type="MinerToolBehaviorDefinition" Subtype="PickaxeSteel"/>
-    <Efficiency>3.5</Efficiency>
+
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="PickaxeSteelTEST"/>
+
+    <!-- Display -->
+    <DisplayName>test pick</DisplayName>
+    <Description>Description_Tool_PickaxeSteel</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeSteel.dds</Icon>
+	<Tag>Pickaxe</Tag>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\PickaxeSteel_OneHand.mwm</Model>
+
+    <PhysicalMaterial>PickAxe</PhysicalMaterial>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>1500</MaxDurability>
+
+    <BrokenItem Type="MyObjectBuilder_InventoryItem" Subtype="PickaxeSteelBroken"/>
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.464</X>
+        <Y>-1.0</Y>
+        <Z>-0.455</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.131</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomMinerToolBehaviorDefinition" Subtype="PickaxeSteelTEST"/>
+    </StanceToBehavior>
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="GenericToolCombatBehavior"/>
+    </StanceToBehavior>
+    
+  </Definition>
+  
+  
+  <Definition xsi:type="MyObjectBuilder_RomMinerToolBehaviorDefinition">
+    <Id Type="RomMinerToolBehaviorDefinition" Subtype="PickaxeSteelTEST"/>
+    <Efficiency>800</Efficiency>
 	<Cost Stat="Mood" Cost="0.25" />
 	<Cost Stat="Stamina" Cost="2.5" />
 
     <YieldMultiplier>1.0</YieldMultiplier>
     <MiningDistance>3</MiningDistance>
     <MiningRadius>0.3</MiningRadius>
-    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Steel_Pickaxe"/>
+    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Pickaxe"/>
+    
+    <MiningLootTable Type="MyObjectBuilder_VoxelMiningLootTableDefinition" Subtype="Pickaxe"/>
     
     <PrimaryEffect>
-      <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
+      <HitTime>.1</HitTime>
+      <AnimationTime>0.1</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
       <Animation>Mining</Animation>
     </PrimaryEffect>
@@ -25,6 +113,21 @@
       <SwingSound>ToolSwish</SwingSound>
       <Animation>Attack</Animation>
     </SecondaryEffect>
+  </Definition>
+  
+   
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningLootTableDefinition">
+    <Id Type="VoxelMiningLootTableDefinition" Subtype="Pickaxe" />
+    
+    <Entry VoxelMaterial="Grass" Volume="128" Rolls="2">
+      <MinedItem Type="InventoryItem" Subtype="OreGold" Weight="0.001" Amount="1" />
+      <MinedItem Type="ConsumableItem" Subtype="Roots" Weight="1" Amount="2" />
+    </Entry>
+    
+    <Entry VoxelMaterial="IronOre_RegularYield" Volume="256" Rolls="1">
+      <MinedItem Type="SchematicItem" Subtype="Schematic_IronOre" Amount="1" Weight="0.01"/>
+      <MinedItem Weight="100"/>
+    </Entry>
   </Definition>
   
 
@@ -39,7 +142,7 @@
       <Item Amount="2" Tag="IngotSteel" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="HandItem" Subtype="PickaxeSteel" />
+      <Item Amount="1" Type="HandItem" Subtype="PickaxeSteelTEST" />
     </Results>
     <CraftingTime Seconds="4"/>
   </Definition>

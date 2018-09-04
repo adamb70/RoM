@@ -204,7 +204,7 @@ Requires a Juicer Stand.</Description>
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Grape_Juice" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Grape_Juice_Crafting" />
       <DisplayName>Grape Juice</DisplayName>
     <Description>Very Refreshing!</Description>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Juice.dds</Icon>
@@ -340,7 +340,7 @@ Requires a Juicer Stand.</Description>
         <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Cabbage" />
       </Prerequisites>
       <Results>
-	<Item Amount="1" Type="SchematicItem" Subtype="Goulash" />
+      <Item Amount="1" Type="SchematicItem" Subtype="Goulash" />
 	  </Results>
       <CraftingTime Seconds="1"/>
     </Definition>
