@@ -38,13 +38,16 @@
     </Definition>
 
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Dairy_Cow"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
+    <Id Type="CraftingComponentQueued" Subtype="Dairy_Cow"/>
     <CraftingCategories>
       <Category>Dairy_Cow</Category>
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <InputInventory>Dairy_CowInventory</InputInventory>
+    <OutputInventory>Dairy_CowInventory</OutputInventory>
+    <CraftingInventory>ProcessingInventory</CraftingInventory>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
@@ -64,10 +67,11 @@
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Dairy_Cow" />
-    <Component Type="InventorySpawnComponent" />
     <Component Type="CraftingComponent" Subtype="Dairy_Cow" />
     <Component Type="UseObjectsComponent" Subtype="Dairy_Cow" />
     <Component Type="Inventory" Subtype="Dairy_CowInventory" />
+    <Component Type="Inventory" Subtype="ProcessingInventory" />
+    <Component Type="InventorySpawnComponent" />
   </Definition>
 
 

@@ -364,75 +364,7 @@
     <RegenPerSecond>-7</RegenPerSecond>
     <RegenLimit>0</RegenLimit>
   </Definition>
-<!-- ===================================================================================================================== -->
-  					<!-- Damage effects: Start -->
-<!-- ===================================================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
-    <Id Type="DamageOverTimeEffect" Subtype="Bleeding" />
-    <DisplayName>DisplayName_StatusEffect_Bleeding</DisplayName>
-    <Description>Description_StatusEffect_Bleeding</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Bleeding.png</Icon>
-    <EffectType>Negative</EffectType>
-    <DamageType>Bleeding</DamageType>
-    <Amount>10</Amount>
-    <Duration Seconds="5" />
-  </Definition>
-<!-- ======================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
-    <Id Type="DamageOverTimeEffect" Subtype="Poisoned" />
-    <DisplayName>DisplayName_StatusEffect_Poisoned</DisplayName>
-    <Description>Description_StatusEffect_Poisoned</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Poisoned.png</Icon>
-    <EffectType>Negative</EffectType>
-    <DamageType>Poison</DamageType>
-    <Amount>10</Amount>
-    <Duration Seconds="5" />
-  </Definition>
-<!-- ======================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
-    <Id Type="DamageOverTimeEffect" Subtype="PoisonedLight" />
-    <DisplayName>DisplayName_StatusEffect_Poisoned</DisplayName>
-    <Description>Description_StatusEffect_Poisoned</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Poisoned.png</Icon>
-    <EffectType>Negative</EffectType>
-    <DamageType>Poison</DamageType>
-    <Amount>1</Amount>
-    <Duration Seconds="5" />
-  </Definition>
-<!-- ======================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
-    <Id Type="DamageOverTimeEffect" Subtype="BurningInFireplace" />
-    <DisplayName>DisplayName_StatusEffect_Burning</DisplayName>
-    <Description>Description_StatusEffect_Burning</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Burning.png</Icon>
-    <EffectType>Negative</EffectType>
-    <ActivationEvent>Burning_Activate</ActivationEvent>
-    <DeactivationEvent>Burning_Deactivate</DeactivationEvent>
-    <DamageType>Burning</DamageType>
-    <Amount>5</Amount>
-  </Definition>
-<!-- ======================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
-    <Id Type="DamageOverTimeEffect" Subtype="Burning" />
-    <DisplayName>DisplayName_StatusEffect_Burning</DisplayName>
-    <Description>Description_StatusEffect_Burning</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Burning.png</Icon>
-    <EffectType>Negative</EffectType>
-    <ActivationEvent>Burning_Activate</ActivationEvent>
-    <DeactivationEvent>Burning_Deactivate</DeactivationEvent>
-    <DamageType>Burning</DamageType>
-    <Amount>5</Amount>
-    <Duration Seconds="5" />
-  </Definition>
-<!-- ======================================================================== -->
-  <!-- Damage effects: End -->
-<!-- ======================================================================== -->
-  
+
   
   
   

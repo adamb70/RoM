@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
   <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
-    <Id Type="HandItem" Subtype="PickaxeSteelTEST"/>
+    <Id Type="HandItem" Subtype="PickaxeSteel" />
 
     <!-- Display -->
-    <DisplayName>test pick</DisplayName>
+    <DisplayName>DisplayName_Tool_PickaxeSteel</DisplayName>
     <Description>Description_Tool_PickaxeSteel</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeSteel.dds</Icon>
 	<Tag>Pickaxe</Tag>
@@ -22,11 +21,11 @@
     <MaxStackAmount>1</MaxStackAmount>
 
     <!-- Equipment -->
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid" />
 
     <MaxDurability>1500</MaxDurability>
 
-    <BrokenItem Type="MyObjectBuilder_InventoryItem" Subtype="PickaxeSteelBroken"/>
+    <BrokenItem Type="MyObjectBuilder_InventoryItem" Subtype="PickaxeSteelBroken" />
     <Position>
       <Slot>MainHand</Slot>
     </Position>
@@ -77,60 +76,58 @@
     <!-- Behavior -->
     <StanceToBehavior>
       <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_RomMinerToolBehaviorDefinition" Subtype="PickaxeSteelTEST"/>
+      <BehaviorId Type="MyObjectBuilder_MinerToolBehaviorDefinition" Subtype="PickaxeSteel" />
     </StanceToBehavior>
     <StanceToBehavior>
       <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="GenericToolCombatBehavior"/>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="PickaxeSteel" />
     </StanceToBehavior>
     
   </Definition>
-  
-  
-  <Definition xsi:type="MyObjectBuilder_RomMinerToolBehaviorDefinition">
-    <Id Type="RomMinerToolBehaviorDefinition" Subtype="PickaxeSteelTEST"/>
-    <Efficiency>800</Efficiency>
-	<Cost Stat="Mood" Cost="0.25" />
-	<Cost Stat="Stamina" Cost="2.5" />
 
-    <YieldMultiplier>1.0</YieldMultiplier>
-    <MiningDistance>3</MiningDistance>
-    <MiningRadius>0.3</MiningRadius>
-    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Pickaxe"/>
-    
-    <MiningLootTable Type="MyObjectBuilder_VoxelMiningLootTableDefinition" Subtype="Pickaxe"/>
-    
+    <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="PickaxeSteelBroken" />
+    <Public>true</Public>
+    <DisplayName>DisplayName_Item_PickaxeSteelBroken</DisplayName>
+    <Description>Description_Item_PickaxeSteelBroken</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeSteel.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Broken.dds</Icon>
+    <Model>Models\Weapons\PickaxeSteel_OneHand.mwm</Model>
+    <PhysicalMaterial>Hammer</PhysicalMaterial>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>5</Mass>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Health>50</Health>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MinerToolBehaviorDefinition">
+    <Id Type="MinerToolBehaviorDefinition" Subtype="PickaxeSteel" />
+    <Efficiency>4.5</Efficiency>
+	<Cost Stat="Stamina" Cost="2.5" />
+	
+    <YieldMultiplier>1.5</YieldMultiplier>
+    <MiningDistance>5</MiningDistance>
+    <MiningRadius>0.5</MiningRadius>
+    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Pickaxe" />
+
     <PrimaryEffect>
-      <HitTime>.1</HitTime>
-      <AnimationTime>0.1</AnimationTime>
+      <HitTime>.6</HitTime>
+      <AnimationTime>0.9</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
       <Animation>Mining</Animation>
     </PrimaryEffect>
 
     <SecondaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
+      <AnimationTime>0.9</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
-      <Animation>Attack</Animation>
+      <Animation>Mining</Animation>
     </SecondaryEffect>
   </Definition>
-  
-   
-  <Definition xsi:type="MyObjectBuilder_VoxelMiningLootTableDefinition">
-    <Id Type="VoxelMiningLootTableDefinition" Subtype="Pickaxe" />
-    
-    <Entry VoxelMaterial="Grass" Volume="128" Rolls="2">
-      <MinedItem Type="InventoryItem" Subtype="OreGold" Weight="0.001" Amount="1" />
-      <MinedItem Type="ConsumableItem" Subtype="Roots" Weight="1" Amount="2" />
-    </Entry>
-    
-    <Entry VoxelMaterial="IronOre_RegularYield" Volume="256" Rolls="1">
-      <MinedItem Type="SchematicItem" Subtype="Schematic_IronOre" Amount="1" Weight="0.01"/>
-      <MinedItem Weight="100"/>
-    </Entry>
-  </Definition>
-  
-
 
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
     <Id Type="MeleeWeaponBehaviorDefinition" Subtype="PickaxeSteel" />
@@ -145,23 +142,21 @@
 
       <LightAttack MinimumDamage="22">
         <StatCost Stat="Stamina" Cost="12" />
-        <StatCost Stat="Fury" Cost="-3" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
       </LightAttack>
 
       <ChargedAttack MinimumDamage="22" MaximumDamage="28" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="16" />
-        <StatCost Stat="Fury" Cost="10" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
-          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3"/>
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3" />
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2"/>
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2" />
         </AppliedEffect>
       </ChargedAttack>
     </LeftSwing>
@@ -176,23 +171,21 @@
 
       <LightAttack MinimumDamage="22">
         <StatCost Stat="Stamina" Cost="12" />
-        <StatCost Stat="Fury" Cost="-3" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
       </LightAttack>
 
       <ChargedAttack MinimumDamage="22" MaximumDamage="28" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="16" />
-        <StatCost Stat="Fury" Cost="10" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
-          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3" />
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2"/>
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2" />
         </AppliedEffect>
       </ChargedAttack>
     </RightSwing>
@@ -207,20 +200,18 @@
 
       <LightAttack MinimumDamage="22">
         <StatCost Stat="Stamina" Cost="12" />
-        <StatCost Stat="Fury" Cost="-3" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
       </LightAttack>
 
       <ChargedAttack MinimumDamage="22" MaximumDamage="28" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="16" />
-        <StatCost Stat="Fury" Cost="10" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
-          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2"/>
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2" />
         </AppliedEffect>
       </ChargedAttack>
     </ForwardSwing>
@@ -239,18 +230,19 @@
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PickaxeSteel"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PickaxeSteel" />
     <DisplayName>DisplayName_Tool_PickaxeSteel</DisplayName>
     <Description>Description_Tool_PickaxeSteel</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeSteel.dds</Icon>
-    <Category>Anvil_Steel</Category>
+    <Category>AdvancedWeapons</Category>
     <Prerequisites>
-      <Item Amount="1" Tag="Timber" />
-      <Item Amount="2" Tag="IngotSteel" />
+      <Item Tag="Timber" Amount="1" />
+      <Item Tag="IngotSteel" Amount="2" />
+      <Item Type="InventoryItem" Subtype="JarClayWithLinseedOil" Amount="1" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="HandItem" Subtype="PickaxeSteelTEST" />
+      <Item Amount="1" Type="HandItem" Subtype="PickaxeSteel" />
     </Results>
-    <CraftingTime Seconds="4"/>
+    <CraftingTime Seconds="4" />
   </Definition>
 </Definitions>
