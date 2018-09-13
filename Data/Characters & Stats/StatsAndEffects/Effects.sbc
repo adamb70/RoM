@@ -282,7 +282,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Vigor.png</Icon>
     <Public>false</Public>
-	  <LostOnReset>false</LostOnReset>
+	  <LostOnReset>true</LostOnReset>
 	  <Stat>Vigor</Stat>
 	  <!-- Manage vigor gain/loss -->
 	  <GainStat>VigorGain</GainStat>
@@ -340,7 +340,7 @@
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Sprint" />
     <Stat>Stamina</Stat>
-    <RegenPerSecond>-6</RegenPerSecond>
+    <RegenPerSecond>-3</RegenPerSecond>
     <RegenLimit>0</RegenLimit>
   </Definition>
 <!-- ======================================================================== -->
@@ -361,7 +361,7 @@
     <EffectType>Neutral</EffectType>
     <CostIncrease>90</CostIncrease>
     <Stat>Stamina</Stat>
-    <RegenPerSecond>-7</RegenPerSecond>
+    <RegenPerSecond>-3</RegenPerSecond>
     <RegenLimit>0</RegenLimit>
   </Definition>
 
@@ -493,11 +493,10 @@
     <Icon>Textures\HUD\StatsAndEffects\StatBars\Fury_Icon.png</Icon>
     <EffectType>Positive</EffectType>
     <Category>Fury</Category>
-    <Effect Type="ToolEfficiencyEffect" Subtype="EnragedToolMultiplier" />
     <Effect Type="StatEffectAffectorEffect" Subtype="EnragedStamina" />
-    <Effect Type="ScaledAudioEffect" Subtype="AdrenalineSound" />
-    <Effect Type="ScaledFOVEffect" Subtype="AdrenalineFOV" />
-    <Effect Type="CompositeEntityEffect" Subtype="Vigor_Drain" />
+    <Effect Type="ScaledToolEfficiencyEffect" Subtype="FurySpeedBoost" />
+    <Effect Type="ScaledAudioEffect" Subtype="FurySound" />
+    <Effect Type="ScaledFOVEffect" Subtype="FuryFOV" />
   </Definition>
 <!-- === -->
   <Definition xsi:type="MyObjectBuilder_StatEffectAffectorEffectDefinition">
@@ -508,27 +507,37 @@
     <RegenMultiplier>100</RegenMultiplier>
   </Definition>
 <!-- === -->
-  <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
-    <Id Type="ToolEfficiencyEffect" Subtype="EnragedToolMultiplier" />
+<Definition xsi:type="MyObjectBuilder_ScaledToolEfficiencyEffectDefinition">
+    <Id Type="ScaledToolEfficiencyEffect" Subtype="FurySpeedBoost" />
     <Public>false</Public>
-    <EffectType>Positive</EffectType>
-    <AffectedTool>MeleeWeapon</AffectedTool>
-    <Multiplier Style="Additive" Value="0.5" />
+    <Stat>Fury</Stat>
+    <AffectedTool>HammerBuilding</AffectedTool>
+    <AffectedTool>AxeCutting</AffectedTool>
+    <AffectedTool>Shovel</AffectedTool>
+    <AffectedTool>Pickaxe</AffectedTool>
+    <AffectedTool>WeaponMelee</AffectedTool>
+    <EfficiencyMin>1.0</EfficiencyMin>
+    <EfficiencyMax>1.2</EfficiencyMax>
+    <Exponential>false</Exponential>
   </Definition>
-
-
-  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
-    <Id Type="CompositeEntityEffect" Subtype="Vigor_Drain" />
+<!-- === -->
+<Definition xsi:type="MyObjectBuilder_ScaledFOVEffectDefinition">
+    <Id Type="ScaledFOVEffect" Subtype="FuryFOV" />
     <Public>false</Public>
-    <Effect Type="ExponentialStatEffect" Subtype="Vigor_Drain" />
+    <Stat>Fury</Stat>
+    <FOVMin>1.0</FOVMin>
+    <FOVMax>1.15</FOVMax>
+    <Exponential>false</Exponential>
   </Definition>
-  <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
-    <Id Type="ExponentialStatEffect" Subtype="Vigor_Drain" />
+<!-- === -->
+<Definition xsi:type="MyObjectBuilder_ScaledAudioEffectDefinition">
+    <Id Type="ScaledAudioEffect" Subtype="FurySound" />
     <Public>false</Public>
-    <EffectType>Neutral</EffectType>
-    <Stat>VigorGain</Stat>
-    <RegenPerSecond>2</RegenPerSecond>
-    <RegenLimit>6</RegenLimit>
+    <Stat>Fury</Stat>
+    <AudioCue>HudAdrenalineLoop</AudioCue>
+    <VolumeMin>0</VolumeMin>
+    <VolumeMax>0.4</VolumeMax>
+    <Exponential>true</Exponential>
   </Definition>
 <!-- ===================================================================================================================== -->
   						<!-- Alcohol: Start -->
