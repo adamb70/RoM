@@ -3,11 +3,11 @@ using System.Xml.Serialization;
 using VRage.ObjectBuilders;
 using VRage.ObjectBuilders.Components.Entity.Stats.Definitions;
 
-namespace RomScripts.RomHungerEffect
+namespace RomScripts.RomDeathEffect
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]
-    public class MyObjectBuilder_RomHungerEffectDefinition : MyObjectBuilder_EntityStatEffectDefinition
+    public class MyObjectBuilder_RomDeathEffectDefinition : MyObjectBuilder_EntityStatEffectDefinition
     {
         public class Trigger
         {
@@ -30,7 +30,7 @@ namespace RomScripts.RomHungerEffect
         }
 
         [XmlElement("Trigger")]
-        public MyObjectBuilder_RomHungerEffectDefinition.Trigger[] Triggers;
+        public MyObjectBuilder_RomDeathEffectDefinition.Trigger[] Triggers;
 
 
 

@@ -571,7 +571,9 @@
     <LostOnReset>false</LostOnReset>
     <Stat>Poison</Stat>
     <RegenPerSecond>-0.5</RegenPerSecond>
-    <PoisonedEffect Type="EntityEffect" Subtype="Poisoned" />
+    <Trigger Threshold="50">
+      <Effect Type="EntityEffect" Subtype="Poisoned" />
+    </Trigger>
   </Definition>
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityEffectDefinition">

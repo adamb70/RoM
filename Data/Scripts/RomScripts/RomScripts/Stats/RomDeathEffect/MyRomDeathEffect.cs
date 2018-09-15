@@ -16,12 +16,12 @@ using VRage.Game.ModAPI;
 using VRageMath;
 using RomScripts.StatExtensions;
 
-namespace RomScripts.PoisonEffect
+namespace RomScripts.RomDeathEffect
 {
-    [MyEntityEffect(typeof(MyObjectBuilder_PoisonEffect))]
-    public class MyPoisonEffect : MyEntityStatEffect
+    [MyEntityEffect(typeof(MyObjectBuilder_RomDeathEffect))]
+    public class MyRomDeathEffect : MyEntityStatEffect
     {
-        private MyEntityStat m_poisonStat;
+        private MyEntityStat m_DeathStat;
 
         public override void Activate(MyEntityStatComponent owner)
         {
@@ -30,39 +30,38 @@ namespace RomScripts.PoisonEffect
             {
                 return;
             }
-            MyPoisonEffectDefinition myPoisonEffectDefinition = base.Definition as MyPoisonEffectDefinition;
-            if (!owner.TryGetStat(myPoisonEffectDefinition.Stat, out this.m_poisonStat))
+            MyRomDeathEffectDefinition myRomDeathEffectDefinition = base.Definition as MyRomDeathEffectDefinition;
+            if (!owner.TryGetStat(myRomDeathEffectDefinition.Stat, out this.m_DeathStat))
             {
-                this.m_poisonStat = owner.GetPoison();
+                this.m_DeathStat = owner.GetFood();
             }
-            
-            if (this.m_poisonStat == null)
+            if (this.m_DeathStat == null)
             {
-                MyLog.Default.Error("Poison effect '{0}' applied to an entity '{1}' without poison stat!", new object[]
+                MyLog.Default.Error("Death effect '{0}' applied to an entity '{1}' without source stat!", new object[]
                 {
                     base.Definition.Id,
                     base.Owner.Entity.Definition.Id
                 });
                 return;
             }
-            this.m_poisonStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.poisonStat_OnValueChanged);
+            this.m_DeathStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.DeathStat_OnValueChanged);
         }
 
         public override void Deactivate()
         {
-            if (this.m_poisonStat != null)
+            if (this.m_DeathStat != null)
             {
-                this.m_poisonStat.OnValueChanged -= new MyEntityStat.ValueChangedDelegate(this.poisonStat_OnValueChanged);
+                this.m_DeathStat.OnValueChanged -= new MyEntityStat.ValueChangedDelegate(this.DeathStat_OnValueChanged);
             }
             base.Deactivate();
         }
         
-        private void poisonStat_OnValueChanged(MyEntityStat stat, float oldValue, float newValue)
+        private void DeathStat_OnValueChanged(MyEntityStat stat, float oldValue, float newValue)
         {
-            MyPoisonEffectDefinition myPoisonEffectDefinition = base.Definition as MyPoisonEffectDefinition;
+            MyRomDeathEffectDefinition myRomDeathEffectDefinition = base.Definition as MyRomDeathEffectDefinition;
             int num = 0;
             MyDefinitionId? myDefinitionId = null;
-            foreach (MyPoisonEffectDefinition.Trigger current in myPoisonEffectDefinition.Triggers)
+            foreach (MyRomDeathEffectDefinition.Trigger current in myRomDeathEffectDefinition.Triggers)
             {
                 if (current.Threshold >= num && (float)current.Threshold < newValue)
                 {
@@ -82,5 +81,7 @@ namespace RomScripts.PoisonEffect
                 base.Owner.AddEffect(myDefinitionId.Value, 0L);
             }
         }
+
+
     }
 }

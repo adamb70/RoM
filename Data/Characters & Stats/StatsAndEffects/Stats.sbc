@@ -131,7 +131,17 @@
     <ClampToMaximum>true</ClampToMaximum>
   </Definition>
 <!-- ===================================================================================== -->
-
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Death" />
+    <DisplayName>Death</DisplayName>
+    <Description>Death</Description>
+    <Default>0</Default>
+    <Initial>0</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+    <ClampToMaximum>true</ClampToMaximum>
+    <IgnoreLock>true</IgnoreLock>
+  </Definition>
 
 
 

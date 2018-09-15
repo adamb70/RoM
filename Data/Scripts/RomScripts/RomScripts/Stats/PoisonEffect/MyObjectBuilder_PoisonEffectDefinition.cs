@@ -9,10 +9,28 @@ namespace RomScripts.PoisonEffect
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]
     public class MyObjectBuilder_PoisonEffectDefinition : MyObjectBuilder_EntityStatEffectDefinition
     {
-        /// <summary>
-        /// Effect that is activated when poison level gets at or over 50.
-        /// If blank, will try to maintain WellFedEffect instead.
-        /// </summary>
-        public SerializableDefinitionId? PoisonedEffect;
+        public class Trigger
+        {
+            /// <summary>
+            /// At which value does this trigger fire?
+            /// </summary>
+            [XmlAttribute]
+            public int Threshold;
+
+            /// <summary>
+            /// Is there a matching sound effect?
+            /// </summary>
+            [XmlAttribute]
+            public string CueId;
+
+            /// <summary>
+            /// Is there a matching effect?
+            /// </summary>
+            public SerializableDefinitionId? Effect;
+        }
+
+        [XmlElement("Trigger")]
+        public MyObjectBuilder_PoisonEffectDefinition.Trigger[] Triggers;
+
     }
 }

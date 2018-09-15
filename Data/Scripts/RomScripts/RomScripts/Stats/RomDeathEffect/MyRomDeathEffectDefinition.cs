@@ -7,11 +7,12 @@ using System.Collections.Generic;
 using VRage.Audio;
 using VRage.ObjectBuilders;
 
-namespace RomScripts.RomHungerEffect
+namespace RomScripts.RomDeathEffect
 {
-    [MyDefinitionType(typeof(MyObjectBuilder_RomHungerEffectDefinition))]
-    public class MyRomHungerEffectDefinition : MyEntityStatEffectDefinition
+    [MyDefinitionType(typeof(MyObjectBuilder_RomDeathEffectDefinition))]
+    public class MyRomDeathEffectDefinition : MyEntityStatEffectDefinition
     {
+
         public class Trigger
         {
             /// <summary>
@@ -30,9 +31,9 @@ namespace RomScripts.RomHungerEffect
             public MyDefinitionId? Effect;
         }
 
-        private System.Collections.Generic.List<MyRomHungerEffectDefinition.Trigger> m_triggers = new System.Collections.Generic.List<MyRomHungerEffectDefinition.Trigger>();
+        private System.Collections.Generic.List<MyRomDeathEffectDefinition.Trigger> m_triggers = new System.Collections.Generic.List<MyRomDeathEffectDefinition.Trigger>();
 
-        public IReadOnlyList<MyRomHungerEffectDefinition.Trigger> Triggers
+        public IReadOnlyList<MyRomDeathEffectDefinition.Trigger> Triggers
         {
             get
             {
@@ -43,16 +44,16 @@ namespace RomScripts.RomHungerEffect
         protected override void Init(MyObjectBuilder_DefinitionBase builder)
         {
             base.Init(builder);
-            MyObjectBuilder_RomHungerEffectDefinition myObjectBuilder_RomHungerEffectDefinition = builder as MyObjectBuilder_RomHungerEffectDefinition;
+            MyObjectBuilder_RomDeathEffectDefinition myObjectBuilder_RomDeathEffectDefinition = builder as MyObjectBuilder_RomDeathEffectDefinition;
             this.m_triggers.Clear();
             
-            if (myObjectBuilder_RomHungerEffectDefinition.Triggers != null)
+            if (myObjectBuilder_RomDeathEffectDefinition.Triggers != null)
             {
-                MyObjectBuilder_RomHungerEffectDefinition.Trigger[] triggers = myObjectBuilder_RomHungerEffectDefinition.Triggers;
+                MyObjectBuilder_RomDeathEffectDefinition.Trigger[] triggers = myObjectBuilder_RomDeathEffectDefinition.Triggers;
                 for (int i = 0; i < triggers.Length; i++)
                 {
-                    MyObjectBuilder_RomHungerEffectDefinition.Trigger ob_trigger = triggers[i];
-                    MyRomHungerEffectDefinition.Trigger new_trigger = new MyRomHungerEffectDefinition.Trigger();
+                    MyObjectBuilder_RomDeathEffectDefinition.Trigger ob_trigger = triggers[i];
+                    MyRomDeathEffectDefinition.Trigger new_trigger = new MyRomDeathEffectDefinition.Trigger();
                     new_trigger.Threshold = ob_trigger.Threshold;
                     //new_trigger.CueId = new MyCueId(trigger_ob.CueId);
                     SerializableDefinitionId? effect = ob_trigger.Effect;
@@ -60,7 +61,7 @@ namespace RomScripts.RomHungerEffect
                     this.m_triggers.Add(new_trigger);
                 }
             }
-            this.m_triggers.Sort((MyRomHungerEffectDefinition.Trigger x, MyRomHungerEffectDefinition.Trigger y) => x.Threshold.CompareTo(y.Threshold));
+            this.m_triggers.Sort((MyRomDeathEffectDefinition.Trigger x, MyRomDeathEffectDefinition.Trigger y) => x.Threshold.CompareTo(y.Threshold));
         }
 
     }
