@@ -34,7 +34,7 @@
   <!-- Bleeding - applied by sharp weapons -->
   <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
     <Id Type="DamageOverTimeEffect" Subtype="BleedingShort" />
-    <DisplayName>DisplayName_StatusEffect_Bleeding</DisplayName>
+    <DisplayName>Small Cut</DisplayName>
     <Description>Description_StatusEffect_Bleeding</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Bleeding.png</Icon>
@@ -45,13 +45,13 @@
     <ActivationEvent>Bleeding_Activate</ActivationEvent>
     <DeactivationEvent>Bleeding_Deactivate</DeactivationEvent>
     <Amount>2</Amount>
-    <Interval Seconds="2" />
-    <Duration Seconds="10" />
+    <Interval Seconds="1" />
+    <Duration Seconds="30" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
     <Id Type="DamageOverTimeEffect" Subtype="BleedingLong" />
-    <DisplayName>DisplayName_StatusEffect_Bleeding</DisplayName>
+    <DisplayName>Deep Cut</DisplayName>
     <Description>Description_StatusEffect_Bleeding</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Bleeding.png</Icon>
@@ -62,8 +62,8 @@
     <ActivationEvent>Bleeding_Activate</ActivationEvent>
     <DeactivationEvent>Bleeding_Deactivate</DeactivationEvent>
     <Amount>2</Amount>
-    <Interval Seconds="2" />
-    <Duration Seconds="20" />
+    <Interval Seconds="1" />
+    <Duration Seconds="60" />
   </Definition>
   
   <!-- Elemental damage effects -->

@@ -90,16 +90,19 @@
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.6"/>
         </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmBrokenRight" Chance="0.05"/>
+        </AppliedEffect>
       </LightAttack>
 
       <ChargedAttack MinimumDamage="10" MaximumDamage="20" AttackMultipleTargets="true">
-        <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="25" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.7"/>
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
-          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.6"/>
+          <Effect Type="CompositeEntityEffect" Subtype="ArmBrokenRight" Chance="0.1"/>
         </AppliedEffect>
       </ChargedAttack>
     </LeftSwing>
@@ -118,16 +121,19 @@
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.6"/>
         </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmBrokenLeft" Chance="0.05"/>
+        </AppliedEffect>
       </LightAttack>
 
       <ChargedAttack MinimumDamage="10" MaximumDamage="20" AttackMultipleTargets="true">
-        <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="25" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="0.7"/>
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
-          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.6"/>
+          <Effect Type="CompositeEntityEffect" Subtype="ArmBrokenLeft" Chance="0.1"/>
         </AppliedEffect>
       </ChargedAttack>
     </RightSwing>
@@ -152,7 +158,7 @@
       </LightAttack>
 
       <ChargedAttack MinimumDamage="20" MaximumDamage="40" AttackMultipleTargets="true">
-        <StatCost Stat="Stamina" Cost="50" />
+        <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="25" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>

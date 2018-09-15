@@ -13,15 +13,9 @@
 		<ForegroundColor Hex="#d64047" />
 		<CriticalValue>30</CriticalValue>>
 	</MainStat>
-	<GainStat>
-		<StatId>VigorGain</StatId>
-		<ClampedStatId>Vigor</ClampedStatId>
-		<BackgroundColor R="255" G="255" B="255" A="255" />
-		<ForegroundColor R="255" G="255" B="255" A="255" />
-	</GainStat>
 	<Notches RelativeAtValue="250" Interval="25" />
 	<Arrows Scale="0.03" />
-	<Scale>2</Scale>
+	<Scale>4</Scale>
   </Definition>
 <!-- ================================================================================== -->  
   <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
@@ -36,12 +30,12 @@
 		<CriticalValue>15</CriticalValue>
 	</MainStat>
 	<GainStat>
-		<StatId>VigorGain</StatId>
+		<StatId>Vigor</StatId>
 		<ClampedStatId>Vigor</ClampedStatId>
 		<BackgroundColor R="255" G="255" B="255" A="255" />
 		<ForegroundColor R="255" G="255" B="255" A="255" />
 	</GainStat>
-	<Notches RelativeAtValue="250" Interval="25" />
+	<Notches RelativeAtValue="500" Interval="50" />
 	<Arrows Scale="0.03" />
 	<Scale>2</Scale>
   </Definition>
@@ -56,12 +50,6 @@
 		<BackgroundColor Hex="#43ba0b" />
 		<ForegroundColor Hex="#6bd642" />
 	</MainStat>
-	<GainStat>
-		<StatId>VigorGain</StatId>
-		<ClampedStatId>Vigor</ClampedStatId>
-		<BackgroundColor R="255" G="255" B="255" A="255" />
-		<ForegroundColor R="255" G="255" B="255" A="255" />
-	</GainStat>
 	<Notches RelativeAtValue="250" Interval="25" />
 	<Arrows Scale="0.0009" />
 	<Scale>1</Scale>
@@ -77,12 +65,6 @@
 		<BackgroundColor Hex="#4696FF" />
 		<ForegroundColor Hex="#4696FF" />
 	</MainStat>
-	<GainStat>
-		<StatId>VigorGain</StatId>
-		<ClampedStatId>Vigor</ClampedStatId>
-		<BackgroundColor R="255" G="255" B="255" A="255" />
-		<ForegroundColor R="255" G="255" B="255" A="255" />
-	</GainStat>
 	<Notches RelativeAtValue="250" Interval="25" />
 	<Arrows Scale="0.0009" />
 	<Scale>1</Scale>
@@ -114,17 +96,11 @@
 		<ForegroundColor Hex="#FFFF00" />
 		<CriticalValue>30</CriticalValue>>
 	</MainStat>
-	<GainStat>
-		<StatId>VigorGain</StatId>
-		<ClampedStatId>Vigor</ClampedStatId>
-		<BackgroundColor R="255" G="255" B="255" A="255" />
-		<ForegroundColor R="255" G="255" B="255" A="255" />
-	</GainStat>
 	<Notches RelativeAtValue="250" Interval="25" />
 	<Arrows Scale="0.03" />
 	<Scale>1</Scale>
   </Definition>
-<!-- ================================================================================== 
+<!-- ================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
 	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Vigor" />
 	<DisplayName>Vigor</DisplayName>
@@ -136,11 +112,11 @@
 		<ForegroundColor Hex="#FFFF00" />
 		<CriticalValue>30</CriticalValue>>
 	</MainStat>
-	<Notches RelativeAtValue="250" Interval="25" />
+	<Notches RelativeAtValue="250" Interval="50" />
 	<Arrows Scale="0.03" />
 	<Scale>1</Scale>
   </Definition>
- ================================================================================== 
+<!-- ================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
 	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="VigorGain" />
 	<DisplayName>VigorGain</DisplayName>
@@ -156,7 +132,7 @@
 	<Arrows Scale="0.03" />
 	<Scale>1</Scale>
   </Definition>
- ================================================================================== 
+<!-- ================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
 	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="VigorLoss" />
 	<DisplayName>VigorLoss</DisplayName>
@@ -172,5 +148,5 @@
 	<Arrows Scale="0.03" />
 	<Scale>1</Scale>
   </Definition>
- ================================================================================== -->
+<!-- ================================================================================== -->
 </Definitions>

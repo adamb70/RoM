@@ -12,6 +12,18 @@
     <RegenPerSecond>0.2</RegenPerSecond>
     <HealthToFoodRatio>0.5</HealthToFoodRatio>
     <RegenCooldown Seconds="5" />
+    <ExhaustionThreshold>30</ExhaustionThreshold>
+    <ExhaustionEffect Type="ScaledAudioEffect" Subtype="CriticalHealthSound" />
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ScaledAudioEffectDefinition">
+    <Id Type="ScaledAudioEffect" Subtype="CriticalHealthSound" />
+    <Public>false</Public>
+    <Stat>Health</Stat>
+    <AudioCue>HudAdrenalineLoop</AudioCue>
+    <VolumeMin>0</VolumeMin>
+    <VolumeMax>0.4</VolumeMax>
+    <Exponential>true</Exponential>
   </Definition>
 <!-- ===================================================================================================================== -->
  						 <!-- Stamina: Start -->
@@ -282,7 +294,7 @@
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
     <Icon>Textures\HUD\StatsAndEffects\Vigor.png</Icon>
     <Public>false</Public>
-	  <LostOnReset>true</LostOnReset>
+	  <LostOnReset>false</LostOnReset>
 	  <Stat>Vigor</Stat>
 	  <!-- Manage vigor gain/loss -->
 	  <GainStat>VigorGain</GainStat>
@@ -295,6 +307,7 @@
 	  <VigorLostSound></VigorLostSound>
 	  <!-- Affected stats, regens and multipliers -->
 	  <AffectedMaxStat>Stamina</AffectedMaxStat>
+<!-- 
 	  <AffectedRegen Type="RomStaminaEffect" Subtype="StaminaRegen" />
 	  <AffectedTool>HammerBuilding</AffectedTool>
 	  <AffectedTool>AxeCutting</AffectedTool>
@@ -302,6 +315,7 @@
 	  <AffectedTool>Pickaxe</AffectedTool>
 	  <AffectedTool>MeleeWeapon</AffectedTool>
 	  <ToolSpeedMultiplier Style="Additive" Value="0.5" />
+-->
   </Definition>
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
@@ -495,7 +509,6 @@
     <Category>Fury</Category>
     <Effect Type="StatEffectAffectorEffect" Subtype="EnragedStamina" />
     <Effect Type="ScaledToolEfficiencyEffect" Subtype="FurySpeedBoost" />
-    <Effect Type="ScaledAudioEffect" Subtype="FurySound" />
     <Effect Type="ScaledFOVEffect" Subtype="FuryFOV" />
   </Definition>
 <!-- === -->
@@ -530,15 +543,6 @@
     <Exponential>false</Exponential>
   </Definition>
 <!-- === -->
-<Definition xsi:type="MyObjectBuilder_ScaledAudioEffectDefinition">
-    <Id Type="ScaledAudioEffect" Subtype="FurySound" />
-    <Public>false</Public>
-    <Stat>Fury</Stat>
-    <AudioCue>HudAdrenalineLoop</AudioCue>
-    <VolumeMin>0</VolumeMin>
-    <VolumeMax>0.4</VolumeMax>
-    <Exponential>true</Exponential>
-  </Definition>
 <!-- ===================================================================================================================== -->
   						<!-- Alcohol: Start -->
 <!-- ===================================================================================================================== -->
