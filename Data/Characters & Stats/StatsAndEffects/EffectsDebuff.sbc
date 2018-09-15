@@ -80,7 +80,7 @@
     <EffectType>Negative</EffectType>
     <Effect Type="RangedWeaponModifierEffect" Subtype="ArmWoundLeftAccuracy" />
     <Effect Type="OperationTriggerEffect" Subtype="ArmWoundLeftBlocking" />
-    <Duration Seconds="10" />
+    <Duration Seconds="15" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_RangedWeaponModifierEffectDefinition">
@@ -93,15 +93,18 @@
   <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
     <Id Type="OperationTriggerEffect" Subtype="ArmWoundLeftBlocking" />
     <Deactivation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Remove" />
+    <Deactivation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Remove" />
     <Added>
       <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
       <Operation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Add" />
+      <Operation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Add" />
     </Added>
     <Removed>
       <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
       <Operation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Remove" />
+      <Operation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Remove" />
     </Removed>
-    <Duration Seconds="10" />
+    <Duration Seconds="15" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
@@ -115,7 +118,20 @@
     <EffectType>Negative</EffectType>
     <Effect Type="RangedWeaponModifierEffect" Subtype="ArmWoundLeftAccuracy" />
     <Effect Type="ToolEfficiencyEffect" Subtype="ArmWoundRightSlowdown" />
-    <Duration Seconds="10" />
+    <Effect Type="OperationTriggerEffect" Subtype="ArmWoundRightVigor" />
+    <Duration Seconds="15" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="ArmWoundRightVigor" />
+    <Deactivation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Remove" />
+    <Added>
+      <Operation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Add" />
+    </Added>
+    <Removed>
+      <Operation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Remove" />
+    </Removed>
+    <Duration Seconds="15" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_RangedWeaponModifierEffectDefinition">
@@ -144,6 +160,119 @@
     <Stat>Stamina</Stat>
     <RegenPerSecond>-6</RegenPerSecond>
     <RegenLimit>0</RegenLimit>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
+    <Id Type="ExponentialStatEffect" Subtype="VigorWoundDrain" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <Stat>Stamina</Stat>
+    <RegenPerSecond>-10</RegenPerSecond>
+    <RegenLimit>50</RegenLimit>
+  </Definition>
+
+
+  <!-- Broken -->
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="ArmBrokenLeft" />
+    <Public>true</Public>
+    <DisplayName>Broken Left Arm</DisplayName>
+    <Description>Serious damage has been done to your left arm.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\ArmBrokenLeft.png</Icon>
+    <Category>ArmBrokenLeft</Category>
+    <EffectType>Negative</EffectType>
+    <Effect Type="RangedWeaponModifierEffect" Subtype="ArmBrokenLeftAccuracy" />
+    <Effect Type="OperationTriggerEffect" Subtype="ArmBrokenLeftBlocking" />
+    <Duration Seconds="180" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_RangedWeaponModifierEffectDefinition">
+    <Id Type="RangedWeaponModifierEffect" Subtype="ArmBrokenLeftAccuracy" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <AccuracyMultiplier Style="Multiplicative" Value="0.5" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="ArmBrokenLeftBlocking" />
+    <Deactivation Type="ExponentialStatEffect" Subtype="BlockingBrokenDrain" Operation="Remove" />
+    <Deactivation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Remove" />
+    <Added>
+      <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
+      <Operation Type="ExponentialStatEffect" Subtype="BlockingBrokenDrain" Operation="Add" />
+      <Operation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Add" />
+    </Added>
+    <Removed>
+      <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
+      <Operation Type="ExponentialStatEffect" Subtype="BlockingBrokenDrain" Operation="Remove" />
+      <Operation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Remove" />
+    </Removed>
+    <Duration Seconds="180" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="ArmBrokenRight" />
+    <Public>true</Public>
+    <DisplayName>Broken Right Arm</DisplayName>
+    <Description>Serious damage has been done to your left arm.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\ArmBrokenRight.png</Icon>
+    <Category>ArmBrokenRight</Category>
+    <EffectType>Negative</EffectType>
+    <Effect Type="RangedWeaponModifierEffect" Subtype="ArmBrokenLeftAccuracy" />
+    <Effect Type="ToolEfficiencyEffect" Subtype="ArmBrokenRightSlowdown" />
+    <Effect Type="OperationTriggerEffect" Subtype="ArmBrokenRightVigor" />
+    <Duration Seconds="180" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="ArmBrokenRightVigor" />
+    <Deactivation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Remove" />
+    <Added>
+      <Operation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Add" />
+    </Added>
+    <Removed>
+      <Operation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Remove" />
+    </Removed>
+    <Duration Seconds="180" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_RangedWeaponModifierEffectDefinition">
+    <Id Type="RangedWeaponModifierEffect" Subtype="ArmBrokenRightReload" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <ReloadSpeedMultiplier Style="Multiplicative" Value="1.5" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
+    <Id Type="ToolEfficiencyEffect" Subtype="ArmBrokenRightSlowdown" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <AffectedTool>HammerBuilding</AffectedTool>
+    <AffectedTool>AxeCutting</AffectedTool>
+    <AffectedTool>Shovel</AffectedTool>
+    <AffectedTool>Pickaxe</AffectedTool>
+    <AffectedTool>WeaponMelee</AffectedTool>
+    <Multiplier Style="Multiplicative" Value="0.7" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
+    <Id Type="ExponentialStatEffect" Subtype="BlockingBrokenDrain" />
+    <Public>false</Public>
+    <EffectType>Neutral</EffectType>
+    <Stat>Stamina</Stat>
+    <RegenPerSecond>-6</RegenPerSecond>
+    <RegenLimit>0</RegenLimit>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
+    <Id Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <Stat>Vigor</Stat>
+    <RegenPerSecond>-10</RegenPerSecond>
+    <RegenLimit>50</RegenLimit>
   </Definition>
 
 </Definitions>
