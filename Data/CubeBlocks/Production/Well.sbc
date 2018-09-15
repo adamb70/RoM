@@ -6,6 +6,7 @@
       <BlockPairName>Stone_Well</BlockPairName>
       <DisplayName>Stone Well</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
+      <Description>Fills empty buckets with water. Will not work on dry or rocky ground.</Description>
       <Public>true</Public>
       <CubeSize>Small</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
@@ -43,8 +44,10 @@
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ConstrainInventory>true</ConstrainInventory>
+    <PowerRequired>All</PowerRequired>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
     <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Stone_Well" />
     <UseObjects>
@@ -59,12 +62,52 @@
     <MaxItemCount>14</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Stone_Well" />
     <Component Type="UseObjectsComponent" Subtype="Stone_Well" ForceCreate="true"/>
     <Component Type="Inventory" Subtype="Stone_WellInventory" ForceCreate="true"/>
     <Component Type="InventorySpawnComponent"/>
     <Component Type="CraftingComponentQueued" Subtype="Stone_Well" ForceCreate="true"/>
+    <Component Type="EquiVoxelPowerComponent" Subtype="Stone_Well" />
+  </Definition>
+  
+    
+  <Definition xsi:type="MyObjectBuilder_EquiVoxelPowerComponentDefinition">
+    <Id Type="MyObjectBuilder_EquiVoxelPowerComponent" Subtype="Stone_Well" />
+    <!-- radius, in meters, to scan -->
+    <ScanRadius>2</ScanRadius>
+    <!-- an additional radius that reduces the amount of spam a moving item will cause.  You can exclude this and use the default value. -->
+    <ScanMargin>1</ScanMargin>
+    <!-- Counting mode.  Surface makes the Amount material values ~Surface Area in m^2.  Volume makes the Amount material values in m^3 -->
+    <Mode>Surface</Mode>
+    <!-- When a change occurs nearby the component enters a "disturbed" mode until it has been this long since the last change -->
+    <DisturbedTime Seconds="2"/>
+    <!-- If this is false then the component is always unpowered when in the "disturbed" mode.  If true it just continues in its state before the disturbance -->
+    <PoweredWhenDisturbed>false</PoweredWhenDisturbed>
+    <!-- Query LoD.  Resolution = 2 ^ (LoD + 1) meters. -->
+    <LevelOfDetail>1</LevelOfDetail>
+    <!-- Print the counts and state transitions as messages.  Only useful for development, exclude (false) in published mods -->
+    <DebugMode>false</DebugMode>
+    <!-- AND = all requirements must be satisfied.  OR = any requirement must be satisfied -->
+    <Operator>OR</Operator>
+    <Materials>
+      <!-- Amount is the comparison value in (m^2 or m^3) depending on Mode -->
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Grass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Dirt" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="DirtSteppe" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="PlantedSoil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="PlowedSoil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SandGrass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SandGrassGreen" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Soil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SteppeYellowGrass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_grass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_needles" Amount="10" />
+      
+      <!-- LessThan inverts the comparison, and gives true if there is less than the given amount -->
+      <!-- <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Snow" Amount="1" LessThan="true" /> -->
+    </Materials>
   </Definition>
 </Definitions>

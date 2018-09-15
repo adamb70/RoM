@@ -3576,6 +3576,7 @@ inorder to plant it again.</Description>
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Water_Bucket_Fill" />   
       <DisplayName>Fill Empty Bucket</DisplayName>
+      <Description>Fills and empty bucket with water from the well. Will only work if the well is on grass or dirt.</Description>
       <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
       <Category>Stone_Well</Category>
       <Prerequisites>
@@ -3593,6 +3594,7 @@ inorder to plant it again.</Description>
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Water_Bowl" />   
       <DisplayName>Fill Empty Bowl</DisplayName>
       <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
+      <Description>Fills and empty bowl with water from the well. Will only work if the well is on grass or dirt.</Description>
       <Category>Stone_Well</Category>
       <Prerequisites>
         <Item Amount="1" Type="CubeBlock" Subtype="Empty_Bowl" />
