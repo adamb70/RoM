@@ -7,10 +7,31 @@
     <DisplayName>DisplayName_Research_Tutorial</DisplayName>
   </Definition>
 <!-- ============================================================== -->
+  <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
+    <DisplayName>Nomadic Technology</DisplayName>
+    <!-- All this research will be unlocked instantly if the player abandons the intro quest -->
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Nomadic_Book" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Schematic_Stone_Well" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />
+    
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AdvTentBranches_Nomadic" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tent_Nomadic" />
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AdvTent_Nomadic" />
+  </Definition>
+
 
 
   <Definition xsi:type="MyObjectBuilder_QuestDefinition">
-    <Id Type="QuestDefinition" Subtype="Test_Quest" />
+    <Id Type="QuestDefinition" Subtype="RoM_Intro" />
 	
 	<DisplayName>Ways of The Nomad</DisplayName>
 	<Description>A traveller without a home, the way of the nomad. The realm holds great possibilities for those who can survive. Even more for those who master it.</Description>
@@ -20,16 +41,21 @@
 	<IsAbandonable>true</IsAbandonable>
 	<IsRepeatable>false</IsRepeatable>
 	
+	<!-- unlocks all the research if quest is abandoned -->
+	<FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
+
 	<SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
-	<SuccessAction xsi:type="Quest.Actions.StartQuest" Subtype="Establishing_Encampment" />
+  <SuccessAction xsi:type="Quest.Actions.StartQuest" Subtype="Establishing_Encampment" />
 
 	<Step>
 		<FullDescription>A traveller without a home, the way of the nomad. The realm holds great possibilities for those who can survive. Even more for those who master it.</FullDescription>
 		<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="1" />
+    
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Nomadic_Book" />   
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
-		<FullDescription>The Ways of The Nomad is an ancient text, with knowledge from many generations. Learning as much as possible from it, and it will aid you in survival.</FullDescription>
+		<FullDescription>The Ways of The Nomad is an ancient text, with knowledge from many generations. Learn as much as possible from it, and it will aid you in survival.</FullDescription>
 			<Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="Nomadic_Book" Amount="1" />
 		<Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
@@ -37,6 +63,8 @@
 	<Step>
 		<FullDescription>It's important to gather pristine materials inorder to conduct research to discover new technologies. Look in the nearby forest for pristine items.</FullDescription>
 		<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="1" />
+    
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />   
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
@@ -56,6 +84,9 @@
 			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Berry" Amount="2" />
 		</Condition>
 
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />   
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />   
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />   
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
@@ -71,6 +102,7 @@
 	<Step>
 		<FullDescription>Gather additional pristine items to prepare for the next step of knowledge.</FullDescription>
 		<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="1" />
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />  
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
@@ -87,6 +119,8 @@
 			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="3" />
 			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="3" />
 		</Condition>
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
@@ -103,11 +137,6 @@
 
 
 
-
-
-
-
-
   <Definition xsi:type="MyObjectBuilder_QuestDefinition">
     <Id Type="QuestDefinition" Subtype="Establishing_Encampment" />
 	
@@ -118,8 +147,8 @@
 	
 	<IsAbandonable>true</IsAbandonable>
 	<IsRepeatable>false</IsRepeatable>
-	
-
+  
+	<FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
 	<SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
 
 	<Step>
@@ -128,6 +157,8 @@
 			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="6" />
 			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="5" />
 		</Condition>
+    
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
@@ -138,6 +169,9 @@
 			<Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="ClaimTotem" Amount="1" />
 			<Condition xsi:type="Quest.Conditions.PlaceBlock" Type="CubeBlock" Subtype="ClaimTotem" Amount="1" />
 		</Condition>
+    
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
 	<Step>
@@ -146,6 +180,7 @@
 			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" Amount="1" />
 			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_FenceGate" Amount="1" />
 		</Condition>
+    <Action xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
 		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
 	</Step>
   </Definition>
