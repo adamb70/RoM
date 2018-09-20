@@ -5,7 +5,7 @@
 
     <!-- Display -->
     <DisplayName>Test pickaxe</DisplayName>
-    <Description>Description_Tool_PickaxeSteel</Description>
+    <Description>Loottable pickaxe. 10% chance of dropping gold ingot when mining grass, 90% for iron.</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeSteel.dds</Icon>
 	<Tag>Pickaxe</Tag>
     <Size>
@@ -91,11 +91,11 @@
     <Efficiency>4.5</Efficiency>
     <Cost Stat="Stamina" Cost="2.5" />
 	
-    <YieldMultiplier>1.5</YieldMultiplier>
+    <YieldMultiplier>1</YieldMultiplier>
     <MiningDistance>5</MiningDistance>
     <MiningRadius>0.5</MiningRadius>
-    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Pickaxe" />
-    <MiningLootTable Type="MyObjectBuilder_VoxelMiningLootTableDefinition" Subtype="Pickaxe"/>
+    <!-- Custom MiningLootTable definition slot. -->
+    <MiningLootTable Type="MyObjectBuilder_VoxelMiningLootTableDefinition" Subtype="PickaxeSteelTEST"/>
 
     <PrimaryEffect>
       <HitTime>.6</HitTime>
@@ -111,5 +111,26 @@
       <Animation>Mining</Animation>
     </SecondaryEffect>
   </Definition>
+  
+  
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningLootTableDefinition">
+    <Id Type="VoxelMiningLootTableDefinition" Subtype="PickaxeSteelTEST" />
+    
+    <Entry VoxelMaterial="Grass" Volume="64" Rolls="1">
+      <MinedItem Type="InventoryItem" Subtype="IngotGold" Amount="1" Weight="1"  IsUnique="true"/>
+      <MinedItem Type="InventoryItem" Subtype="IngotIron" Amount="1" Weight="9"  IsUnique="true"/>
+    </Entry>
+    
+    <Entry VoxelMaterial="COGMithril" Volume="256" Rolls="1">
+      <MinedItem Type="InventoryItem" Subtype="IngotGold" Amount="1" Weight="1"  IsUnique="false"/>
+      <!-- use empty item as padding -->
+      <MinedItem Amount="1" Weight="19"  IsUnique="false"/> 
+      <!-- items with AlwaysDrops="true" will be handled just like vanilla ore mining and will be ignored for loot rolls -->
+      <MinedItem Type="InventoryItem" Subtype="MithrilOre" Amount="1" Weight="1"  IsUnique="true" AlwaysDrops="true"/>
+    </Entry>
+    
+  </Definition>
+  
+  
 
 </Definitions>

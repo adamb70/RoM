@@ -63,7 +63,8 @@ namespace RomScripts.VoxelMining
         }
 
         public System.Collections.Generic.Dictionary<int, MyVoxelMiningLootTableDefinition.MiningEntry> MiningEntries = new System.Collections.Generic.Dictionary<int, MyVoxelMiningLootTableDefinition.MiningEntry>();
-        
+        public Dictionary<int, MyVoxelMiningDefinition.MiningEntry> VanillaMiningEntries = new Dictionary<int, MyVoxelMiningDefinition.MiningEntry>();
+
         protected override void Init(MyObjectBuilder_DefinitionBase builder)
         {
             base.Init(builder);
@@ -75,6 +76,7 @@ namespace RomScripts.VoxelMining
             foreach (MyObjectBuilder_VoxelMiningLootTableDefinition.MiningDef current in ob.Entries)
             {
                 System.Collections.Generic.List<MyVoxelMiningLootTableDefinition.MinedItem> minedItemList = new System.Collections.Generic.List<MyVoxelMiningLootTableDefinition.MinedItem>();
+                Dictionary<MyDefinitionId, int> dictionary = new Dictionary<MyDefinitionId, int>();
                 System.Collections.Generic.List<MyObjectBuilder_VoxelMiningLootTableDefinition.MinedItem> minedItems = current.MinedItems;
                 if (minedItems != null)
                 {
@@ -93,6 +95,26 @@ namespace RomScripts.VoxelMining
                         minedItemData.Weight = current2.Weight;
 
                         minedItemList.Add(minedItemData);
+
+                        /////////////// Build a vanilla dictionary too
+                        if (current2.AlwaysDrops) {
+                            MyObjectBuilderType type;
+                            try
+                            {
+                                type = MyObjectBuilderType.Parse(current2.Type);
+                            }
+                            catch (Exception)
+                            {
+                                MyLog.Default.Error("Can not parse defined builder type {0}", new object[]
+                                {
+                                    current2.Type
+                                });
+                                continue;
+                            }
+                            MyDefinitionId key = new MyDefinitionId(type, MyStringHash.GetOrCompute(current2.Subtype));
+                            dictionary[key] = current2.Amount;
+                        }
+
                     }
                 }
                 int volume;
@@ -121,8 +143,22 @@ namespace RomScripts.VoxelMining
                         Rolls = current.Rolls
                         
                     };
+
+                    // Create vanilla mining entries to be handled by the custom behaviour
+                    this.VanillaMiningEntries[(int)myVoxelMaterialDefinition.Index] = new MyVoxelMiningDefinition.MiningEntry
+                    {
+                        MinedItems = dictionary,
+                        Volume = volume
+                    };
                 }
             }
+        }
+
+        public static explicit operator MyVoxelMiningDefinition(MyVoxelMiningLootTableDefinition def)
+        {
+            var mining_def = new MyVoxelMiningDefinition();
+            mining_def.MiningEntries = def.VanillaMiningEntries;
+            return mining_def;
         }
     }
 

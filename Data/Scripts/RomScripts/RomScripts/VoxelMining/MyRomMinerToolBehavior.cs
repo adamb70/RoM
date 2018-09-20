@@ -38,6 +38,7 @@ using VRage.Game.ModAPI;
 using VRage.Collections;
 using VRage.ObjectBuilders.Definitions.Inventory;
 using VRage.Library.Utils;
+using VRage.Definitions.Inventory;
 
 namespace RomScripts.VoxelMining
 {
@@ -55,6 +56,7 @@ namespace RomScripts.VoxelMining
 
             MyRomMinerToolBehaviorDefinition MyRomMinerToolBehaviorDefinition = (MyRomMinerToolBehaviorDefinition)definition;
             this.m_oreMiningLootTableDefinition = MyDefinitionManager.Get<MyVoxelMiningLootTableDefinition>(MyRomMinerToolBehaviorDefinition.MiningLootTable);
+            base.m_oreMiningDefinition = (MyVoxelMiningDefinition)MyDefinitionManager.Get<MyVoxelMiningLootTableDefinition>(MyRomMinerToolBehaviorDefinition.MiningLootTable);
         }
 
 
@@ -91,7 +93,7 @@ namespace RomScripts.VoxelMining
                 {
                     if (this.Holder == MySession.Static.PlayerEntity)
                     {
-                         this.GenerateLoot(voxelMaterial.Index);
+                        this.GenerateLoot(voxelMaterial.Index);
                     }
                 }
             }
@@ -116,7 +118,8 @@ namespace RomScripts.VoxelMining
                 {
                     if (current.AlwaysDrops && current.ItemDefinition.HasValue)
                     {
-                        this.AddItemsFuzzy(this.m_holdersInventory, current.ItemDefinition.Value, current.Amount);
+                        // The "AlwaysDrop" items are being handled by the base method in the vanilla way, don't add them to the inventory again.
+                        //this.AddItemsFuzzy(this.m_holdersInventory, current.ItemDefinition.Value, current.Amount);
 
                         if (current.IsUnique)
                         {
