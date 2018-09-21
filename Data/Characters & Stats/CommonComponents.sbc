@@ -108,6 +108,7 @@
 	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Vigor" />
 	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorGain" />
 	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorLoss" />
+	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Death" />
     <Effect Type="VigorEffect" Subtype="Vigor" />
     <Effect Type="HealthEffect" Subtype="HealthRegen" />
     <Effect Type="RomStaminaEffect" Subtype="StaminaRegen" />
@@ -117,6 +118,7 @@
     <Effect Type="FuryEffect" Subtype="FuryDegen" />
     <Effect Type="AlcoholEffect" Subtype="AlcoholDegen" />
     <Effect Type="PoisonEffect" Subtype="PoisonDegen" />
+    <Effect Type="RomDeathEffect" Subtype="DeathDegen" />
   </Definition>
 
   
@@ -156,7 +158,7 @@
   <Definition xsi:type="MyObjectBuilder_DeathComponentDefinition" Copy="Append">
     <Id Type="DeathComponent" Subtype="PlayerDeath" />
     <CopyFrom Type="DeathComponent" Subtype="CharacterDeath" />
-    <RespawnCost>-50</RespawnCost>
+    <RespawnCost>-60</RespawnCost>
     <!--
     The cost is paid by these stats in the order they are added here.
     If one stat does not have enough, the next stat is used for the remainder, etc.

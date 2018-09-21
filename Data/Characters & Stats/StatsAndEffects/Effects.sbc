@@ -590,6 +590,47 @@
     <Category>Poison</Category>
   </Definition>
 <!-- ===================================================================================================================== -->
-
-
+ 						 <!-- Death: Start -->
+<!-- ===================================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_RomDeathEffectDefinition">
+    <Id Type="RomDeathEffect" Subtype="DeathDegen" />
+    <Category>DefaultDeathRegen</Category>
+    <Public>false</Public>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Stamina.png</Icon>
+    <LostOnReset>false</LostOnReset>
+    <Stat>Death</Stat>
+    <RegenPerSecond>-1</RegenPerSecond>
+    <Trigger Threshold="1">
+      <Effect Type="CompositeEntityEffect" Subtype="Death" />
+    </Trigger>
+    <!-- trigger death effect above 1, trigger not dead below 1 -->
+    <Trigger Threshold="0">
+      <Effect Type="CompositeEntityEffect" Subtype="NotDead" />
+    </Trigger>
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Death" />
+    <DisplayName>Death!</DisplayName>
+    <Description>You died.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\VeryHungry.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Category>Death</Category>
+    <Effect Type="StatEffectAffectorEffect" Subtype="ExhaustedDrain" />
+    <Effect Type="OperationTriggerEffect" Subtype="ExhaustedRecover" />
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="NotDead" />
+    <Public>false</Public>
+    <DisplayName>Not dead</DisplayName>
+    <Description>congratulations!</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Hungry.png</Icon>
+    <EffectType>Positive</EffectType>
+    <Category>Death</Category>
+  </Definition>
+<!-- ======================================================================== -->
 </Definitions>

@@ -149,4 +149,19 @@
 	<Scale>1</Scale>
   </Definition>
 <!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Death" />
+	<DisplayName>Death</DisplayName>
+	<Description>death</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Health.png</Icon>
+	<MainStat>
+		<StatId>Death</StatId>
+		<BackgroundColor Hex="#ffffff" />
+		<ForegroundColor Hex="#ffffff" />
+		<CriticalValue>30</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="60" Interval="1" />
+	<Arrows Scale="0.03" />
+	<Scale>4</Scale>
+  </Definition>
 </Definitions>
