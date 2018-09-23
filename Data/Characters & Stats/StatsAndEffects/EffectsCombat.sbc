@@ -1,48 +1,6 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <!-- Combat Mode -->
-  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
-    <Id Type="CompositeEntityEffect" Subtype="DaggerMode" />
-    <Public>false</Public>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Combat.png</Icon>
-    <EffectType>Neutral</EffectType>
-    <Category>DaggerMode</Category>
-		<IsSerialized>false</IsSerialized>
-    <Effect Type="MovementSpeedEffect" Subtype="DaggerSlowdown" />
-    <Effect Type="ToolEfficiencyEffect" Subtype="DaggerToolMultiplier" />
-    <Effect Type="AnimationEffect" Subtype="DaggerAnimation" />
-  </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_MovementSpeedEffectDefinition">
-    <Id Type="MovementSpeedEffect" Subtype="DaggerSlowdown" />
-    <Public>false</Public>
-    <EffectType>Neutral</EffectType>
-    <SupportedState>Run</SupportedState>
-    <BackwardMultiplier Style="Multiplicative" Value="0.5" />
-    <StrafingMultiplier Style="Multiplicative" Value="0.75" />
-    <CanWalk>false</CanWalk>
-    <CanSprint>true</CanSprint>
-    <CanJump>true</CanJump>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
-    <Id Type="ToolEfficiencyEffect" Subtype="DaggerToolMultiplier" />
-    <Public>false</Public>
-    <EffectType>Negative</EffectType>
-    <AffectedTool>Weapon_Dagger</AffectedTool>
-    <EfficiencyMin>10</EfficiencyMin>
-    <EfficiencyMax>11</EfficiencyMax>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEffectDefinition">
-    <Id Type="AnimationEffect" Subtype="DaggerAnimation" />
-    <Public>false</Public>
-    <EffectType>Negative</EffectType>
-    <Variable>in_combat</Variable>
-    <ActivationValue>1</ActivationValue>
-    <DeactivationValue>0</DeactivationValue>
-  </Definition>
 
 
 
@@ -83,6 +41,8 @@
     <AffectedTool>Shovel</AffectedTool>
     <AffectedTool>Pickaxe</AffectedTool>
     <AffectedTool>WeaponMelee</AffectedTool>
+    <AffectedTool>Weapon_Dagger</AffectedTool>
+    <AffectedTool>Spear</AffectedTool>
     <Multiplier Style="Multiplicative" Value="1.0" />
   </Definition>
 
