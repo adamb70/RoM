@@ -80,6 +80,7 @@
     <EffectType>Negative</EffectType>
     <Effect Type="RangedWeaponModifierEffect" Subtype="ArmWoundLeftAccuracy" />
     <Effect Type="OperationTriggerEffect" Subtype="ArmWoundLeftBlocking" />
+    <Effect Type="OperationTriggerEffect" Subtype="ArmWoundLeftVigor" />
     <Duration Seconds="15" />
   </Definition>
 
@@ -93,15 +94,24 @@
   <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
     <Id Type="OperationTriggerEffect" Subtype="ArmWoundLeftBlocking" />
     <Deactivation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Remove" />
-    <Deactivation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Remove" />
     <Added>
       <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
       <Operation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Add" />
-      <Operation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Add" />
     </Added>
     <Removed>
       <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
       <Operation Type="ExponentialStatEffect" Subtype="BlockingWoundDrain" Operation="Remove" />
+    </Removed>
+    <Duration Seconds="15" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="ArmWoundLeftVigor" />
+    <Deactivation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Remove" />
+    <Added>
+      <Operation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Add" />
+    </Added>
+    <Removed>
       <Operation Type="ExponentialStatEffect" Subtype="VigorWoundDrain" Operation="Remove" />
     </Removed>
     <Duration Seconds="15" />
@@ -184,6 +194,7 @@
     <EffectType>Negative</EffectType>
     <Effect Type="RangedWeaponModifierEffect" Subtype="ArmBrokenLeftAccuracy" />
     <Effect Type="OperationTriggerEffect" Subtype="ArmBrokenLeftBlocking" />
+    <Effect Type="OperationTriggerEffect" Subtype="ArmBrokenLeftVigor" />
     <Duration Seconds="180" />
   </Definition>
 
@@ -197,15 +208,24 @@
   <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
     <Id Type="OperationTriggerEffect" Subtype="ArmBrokenLeftBlocking" />
     <Deactivation Type="ExponentialStatEffect" Subtype="BlockingBrokenDrain" Operation="Remove" />
-    <Deactivation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Remove" />
     <Added>
       <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
       <Operation Type="ExponentialStatEffect" Subtype="BlockingBrokenDrain" Operation="Add" />
-      <Operation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Add" />
     </Added>
     <Removed>
       <EffectId Type="CompositeEntityEffect" Subtype="Blocking" />
       <Operation Type="ExponentialStatEffect" Subtype="BlockingBrokenDrain" Operation="Remove" />
+    </Removed>
+    <Duration Seconds="180" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="ArmBrokenLeftVigor" />
+    <Deactivation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Remove" />
+    <Added>
+      <Operation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Add" />
+    </Added>
+    <Removed>
       <Operation Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" Operation="Remove" />
     </Removed>
     <Duration Seconds="180" />
@@ -268,7 +288,8 @@
 
   <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
     <Id Type="ExponentialStatEffect" Subtype="VigorBrokenDrain" />
-    <Public>false</Public>
+    <DisplayName>VIGOR DRAIN</DisplayName>
+    <Public>true</Public>
     <EffectType>Negative</EffectType>
     <Stat>Vigor</Stat>
     <RegenPerSecond>-10</RegenPerSecond>
