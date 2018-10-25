@@ -90,24 +90,14 @@ namespace RomScripts.FueledMechanicalSource
 
         private void TryTurnOnPower()
         {
-
-            this.m_powerProviders.All((IMyPowerProvider e) => e.IsPowered);
-
-            foreach (IMyPowerProvider provider in m_powerProviders)
+            if (this.m_powerProviders.All((IMyPowerProvider e) => e.IsPowered))
             {
-                //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(provider.ToString(), 3000, null, Color.Red);
-                //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(provider.IsPowered.ToString(), 3000, null, Color.Red);
-
-                if (provider.IsPowered)
-                {
-                    base.Power = this.m_definition.MaxPowerOutput;
-                    return;
-                }
+                // If all providers have power, turn on.
+                base.Power = this.m_definition.MaxPowerOutput;
+            } else
+            {
+                base.Power = 0;
             }
-
-            // If no provider has power. Might want to add other checks if we ever need to handle combinations of multiple providers
-            base.Power = 0;
-
         }
 
     }
