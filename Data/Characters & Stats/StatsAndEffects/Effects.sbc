@@ -348,6 +348,7 @@
     <EffectType>Neutral</EffectType>
     <Duration Seconds="0.1" />
     <Effect Type="EntityStatEffect" Subtype="Sprint" />
+    <Effect Type="ExponentialStatEffect" Subtype="Sprint_Fitness" />
     <!--<Effect Type="FOVEffect" Subtype="SprintFOV" />-->
   </Definition>
 <!-- ======================================================================== -->
@@ -356,6 +357,15 @@
     <Stat>Stamina</Stat>
     <RegenPerSecond>-3</RegenPerSecond>
     <RegenLimit>0</RegenLimit>
+  </Definition>
+<!-- ======================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
+    <Id Type="ExponentialStatEffect" Subtype="Sprint_Fitness" />
+    <Public>false</Public>
+    <EffectType>Neutral</EffectType>
+    <Stat>Vigor</Stat>
+    <RegenPerSecond>.03</RegenPerSecond>
+    <RegenLimit>250</RegenLimit>
   </Definition>
 <!-- ======================================================================== -->
   <Definition xsi:type="MyObjectBuilder_FOVEffectDefinition">

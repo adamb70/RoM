@@ -2,6 +2,93 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
+
+<!-- -->
+    <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id Type="ConsumableItem" Subtype="Debug00001" />
+      <Public>true</Public>
+      <DisplayName>Debug Potion 1</DisplayName>
+      <Description>
+	For Tests Only
+      </Description>
+      <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Consumables\Bandage.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>1</MaxStackAmount>
+	  <Effect Type="CompositeEntityEffect" Subtype="ArmBrokenLeft" />
+      <UseSound>PlayEat</UseSound>
+    </Definition>
+<!-- -->
+    <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id Type="ConsumableItem" Subtype="Debug00002" />
+      <Public>true</Public>
+      <DisplayName>Debug Potion 2</DisplayName>
+      <Description>
+	For Tests Only
+      </Description>
+      <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Consumables\Bandage.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>1</MaxStackAmount>
+	  <Effect Type="CompositeEntityEffect" Subtype="ArmBrokenRight" />
+      <UseSound>PlayEat</UseSound>
+    </Definition>
+<!-- -->
+    <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id Type="ConsumableItem" Subtype="Debug00003" />
+      <Public>true</Public>
+      <DisplayName>Debug Potion 3</DisplayName>
+      <Description>
+	For Tests Only
+      </Description>
+      <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Consumables\Bandage.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>1</MaxStackAmount>
+	  <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" />
+      <UseSound>PlayEat</UseSound>
+    </Definition>
+<!-- -->
+    <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id Type="ConsumableItem" Subtype="Debug00004" />
+      <Public>true</Public>
+      <DisplayName>Debug Potion 4</DisplayName>
+      <Description>
+	For Tests Only
+      </Description>
+      <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+      <Size>
+        <X>0.1</X>
+        <Y>0.1</Y>
+        <Z>0.1</Z>
+      </Size>
+      <Mass>0.25</Mass>
+      <Model>Models\Consumables\Bandage.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>1</MaxStackAmount>
+	  <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" />
+      <UseSound>PlayEat</UseSound>
+    </Definition>
+<!-- -->
+
     <!-- ************************************************************
                       	   Universal Components
        ************************************************************ -->
@@ -26,9 +113,7 @@ can often bring comfort in troubling times.
       <Mass>0.5</Mass>
       <Model>Models\Universal\RS_Bones.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
-      <Stats>
-        <Stat Name="Mood" Value="5" Time="600" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Bones_Mood" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 
@@ -61,11 +146,9 @@ can often bring comfort in troubling times.
       <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>5</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="3" Time="3" />
-        <Stat Name="Mood" Value="10" Time="1" />
-        <Stat Name="Thirst" Value="60" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Kharidian_Jellab_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Kharidian_Jellab_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Kharidian_Jellab_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 
@@ -89,11 +172,9 @@ can often bring comfort in troubling times.
       <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>5</MaxStackAmount>
-      <Stats>
-        <Stat Name="Alcohol" Value=".1169" Time="600" />
-        <Stat Name="Mood" Value=".033" Time="600" />
-        <Stat Name="Thirst" Value="40" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Beer_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Beer_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Beer_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 
@@ -117,12 +198,9 @@ can often bring comfort in troubling times.
       <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>5</MaxStackAmount>
-      <Stats>
-        <Stat Name="Alcohol" Value=".066" Time="600" />
-        <Stat Name="Mood" Value=".05" Time="600" />
-        <Stat Name="Mood" Value="5" Time="1" />
-        <Stat Name="Thirst" Value="40" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Dwarven_Beer_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Dwarven_Beer_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Dwarven_Beer_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 
@@ -142,10 +220,6 @@ can often bring comfort in troubling times.
       <Model>Models\Consumables\Mushrooms.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="0.5" Time="1" />
-      </Stats>
       <UseSound>PlayEat</UseSound>
     </Definition>
 
@@ -1243,12 +1317,10 @@ declaring our sovergnty."
       <Model>Models\Consumables\Berries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>10</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="2" Time="1" />
-        <Stat Name="Mood" Value="-6" Time="1" />
-        <Stat Name="Stamina" Value="-0.1" Time="60" />
-        <Stat Name="Poison" Value=".1" Time="60" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="SpiderEggs_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="SpiderEggs_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="SpiderEggs_Vigor" />
+	  <Effect Type="EntityStatEffect" Subtype="SpiderEggs_Poison" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1299,10 +1371,9 @@ or Chef.
       <Model>Models\Consumables\Berries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>10</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="6" Time="1" />
-        <Stat Name="Mood" Value="2" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="SpiderLeg_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="SpiderLeg_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="SpiderLeg_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1355,11 +1426,10 @@ or Chef.
       <Model>Models\Consumables\Berries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="0.2" Time="1" />
-        <Stat Name="Thirst" Value="4" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Berries_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Berries_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Berries_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Berries_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1413,10 +1483,9 @@ or Chef.
       <Model>Models\Consumables\Berries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
-      <Stats>
-        <Stat Name="Mood" Value="4" Time="1" />
-        <Stat Name="Thirst" Value="20" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Berry_Juice_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Berry_Juice_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Berry_Juice_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1460,9 +1529,7 @@ or Chef.
       <Model>Models\Consumables\Berries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
-      <Stats>
-        <Stat Name="Thirst" Value="20" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Jug_Of_Water_Thirst" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- =================================================================================== -->
@@ -1481,11 +1548,10 @@ or Chef.
       <Model>Models\Consumables\Berries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="2" Time="1" />
-        <Stat Name="Thirst" Value="2" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Grape_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Grape_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Grape_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Grape_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1536,10 +1602,9 @@ or Chef.
       <Model>Models\Consumables\Berries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
-      <Stats>
-        <Stat Name="Mood" Value="4" Time="1" />
-        <Stat Name="Thirst" Value="20" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Grape_Juice_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Grape_Juice_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Grape_Juice_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1585,11 +1650,10 @@ or Chef.
       <Model>Models\Consumables\BlueBerries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="0.2" Time="1" />
-        <Stat Name="Thirst" Value="4" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1643,10 +1707,9 @@ or Chef.
       <Model>Models\Consumables\BlueBerries.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
-      <Stats>
-        <Stat Name="Mood" Value="4" Time="1" />
-        <Stat Name="Thirst" Value="20" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Juice_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Juice_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Juice_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1691,10 +1754,9 @@ or Chef.
       <Model>Models\Consumables\CabbageHead.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>15</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="1" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Cabbage_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Cabbage_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Cabbage_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1809,10 +1871,9 @@ or Chef.
       <Model>Models\Consumables\RedCabbageHead.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>15</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="10" Time="1" />
-        <Stat Name="Mood" Value="3" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="RedCabbage_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="RedCabbage_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="RedCabbage_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -1926,10 +1987,9 @@ or Chef.
       <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>10</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="15" Time="1" />
-        <Stat Name="Mood" Value="3" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Pumpkin_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Pumpkin_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Pumpkin_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2043,10 +2103,9 @@ or Chef.
       <Model>Models\Consumables\Mushrooms.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="2.5" Time="1" />
-        <Stat Name="Mood" Value="1" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Mushrooms_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Mushrooms_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Mushrooms_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2100,10 +2159,9 @@ or Chef.
       <Model>Models\Consumables\Mushrooms.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="2.5" Time="1" />
-        <Stat Name="Mood" Value="1" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="HighlandCaps_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="HighlandCaps_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="HighlandCaps_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2155,12 +2213,10 @@ or Chef.
       <Model>Models\Consumables\DeathMushrooms.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="1.5" Time="1" />
-        <Stat Name="Mood" Value="-20" Time="1" />
-        <Stat Name="Poison" Value="2" Time="10" />
-        <Stat Name="Fury" Value="1.25" Time="20" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="DeadmanMushroom_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="DeadmanMushroom_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="DeadmanMushroom_Vigor" />
+	  <Effect Type="EntityStatEffect" Subtype="DeadmanMushroom_Poison" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2210,10 +2266,6 @@ or Chef.
       <Model>Models\Consumables\DeathMushrooms.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="1.5" Time="1" />
-        <Stat Name="Mood" Value="-5" Time="1" />
-      </Stats>
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2263,10 +2315,9 @@ perfect specimen for an Apothocary.
       <Model>Models\Consumables\Herbs.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="0.5" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Herbs_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Herbs_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Herbs_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2380,11 +2431,9 @@ or Chef.
       <Model>Models\Consumables\HealingPlant.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="2" Time="1" />
-        <Stat Name="Health" Value="10" Time="10" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="CrimsonThristle_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="CrimsonThristle_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="CrimsonThristle_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2497,10 +2546,9 @@ or Chef.
       <Model>Models\Universal\Farming\norden_spalt_item.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>15</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="-1" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Spalt_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Spalt_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Spalt_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2550,11 +2598,10 @@ perfect specimen for an Chef.
       <Model>Models\Consumables\WoodenRoot.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>15</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="-1" Time="1" />
-        <Stat Name="Stamina" Value="1" Time="10" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Roots_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Roots_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Roots_Vigor" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Roots_Stamina" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2667,10 +2714,9 @@ perfect specimen for an Apothocary.
       <Model>Models\Universal\Farming\norden_barley_item.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>15</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="-1" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -2720,10 +2766,9 @@ perfect specimen for a Chef.
       <Model>Models\Consumables\WoodenRoot.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>15</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="3" />
-        <Stat Name="Mood" Value="-1" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -3023,10 +3068,9 @@ or Chef.
       <Model>Models\Consumables\PineCone.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="1" Time="1" />
-        <Stat Name="Mood" Value="-1" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="TreeSmall_Seed_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="TreeSmall_Seed_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="TreeSmall_Seed_Vigor" />
       <UseSound>PineCone</UseSound>
     </Definition>
 <!-- -->
@@ -3142,10 +3186,11 @@ or Chef.
     <Model>Models\Consumables\FruitsOpuntia.mwm</Model>
     <PhysicalMaterial>None</PhysicalMaterial>
     <MaxStackAmount>20</MaxStackAmount>
-    <Stats>
-      <Stat Name="Food" Value="1" Time="1" />
-      <Stat Name="Stamina" Value="5" Time="5" />
-    </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Vigor" />
+	  <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Stamina" />
     <UseSound>PlayEat</UseSound>
   </Definition>
 <!-- -->
@@ -3259,10 +3304,9 @@ Apothocary, or Chef.
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>6</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="6" Time="1" />
-        <Stat Name="Mood" Value="3" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Vigor" />
       <UseSound>PineCone</UseSound>
     </Definition>
 <!-- =================================================================================== -->
@@ -6948,10 +6992,9 @@ knowledge would be valuable for Blacksmithing.
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>16</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="50" Time="1" />
-        <Stat Name="Mood" Value="25" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Bread_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Bread_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Bread_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7030,10 +7073,9 @@ would be valuable for a Chef.
       <Mass>0.5</Mass>
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
-      <Stats>
-        <Stat Name="Food" Value="90" Time="1" />
-        <Stat Name="Mood" Value="50" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="RedBerryPie_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="RedBerryPie_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="RedBerryPie_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7081,9 +7123,9 @@ would be valuable for a Chef.
       <Mass>0.5</Mass>
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
-      <Stats>
-        <Stat Name="Food" Value="125" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Baked_Cake_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Baked_Cake_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Baked_Cake_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7131,10 +7173,10 @@ would be valuable for a Chef.
       <Mass>0.5</Mass>
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
-      <Stats>
-        <Stat Name="Food" Value="7.5" Time="1" />
-        <Stat Name="Stamina" Value="25" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Chocolate_Bar_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Chocolate_Bar_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Chocolate_Bar_Vigor" />
+	  <Effect Type="EntityStatEffect" Subtype="Chocolate_Bar_Stamina" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7182,11 +7224,10 @@ would be valuable for a Chef.
       <Mass>0.5</Mass>
       <Model>Models\Consumables\Bread.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
-      <Stats>
-        <Stat Name="Food" Value="125" Time="1" />
-        <Stat Name="Mood" Value="100" Time="1" />
-        <Stat Name="Stamina" Value="50" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Vigor" />
+	  <Effect Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Stamina" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7241,6 +7282,10 @@ would be valuable for a Chef.
       <MaxStackAmount>1</MaxStackAmount>
 	  <Effect Type="EntityStatEffect" Subtype="BuffBandage" />
 	  <Effect Category="Bleeding" Operation="Remove" />
+	  <Effect Category="ArmWoundLeft" Operation="Remove" />
+	  <Effect Category="ArmWoundRight" Operation="Remove" />
+	  <Effect Category="ArmBrokenLeft" Operation="Remove" />
+	  <Effect Category="ArmBrokenRight" Operation="Remove" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7289,10 +7334,9 @@ would be valuable for a Chef.
       <Model>Models\Consumables\WoodenRoot.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="0.5" Time="1" />
-        <Stat Name="Mood" Value="0.5" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Roots_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Roots_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Roots_Vigor" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7349,7 +7393,7 @@ or Chef.
       <Model>Models\Universal\potion_strength.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
-	  <Effect Type="EntityStatEffect" Subtype="Minor_Potion_Strength" />
+	  <Effect Type="EntityStatEffect" Subtype="BuffBandage" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7399,11 +7443,9 @@ or Chef.
       <Model>Models\Consumables\MeatRoasted.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="60" Time="1" />
-        <Stat Name="Stamina" Value="3" Time="3" />
-        <Stat Name="Mood" Value="55" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="MeatRoasted_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="MeatRoasted_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="MeatRoasted_Vigor" />
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7424,12 +7466,10 @@ or Chef.
       <Model>Models\Consumables\Meat.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="45" Time="1" />
-        <Stat Name="Stamina" Value="1" Time="5" />
-        <Stat Name="Mood" Value="-10" Time="1" />
-        <Stat Name="Poison" Value="1" Time="10" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Meat_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Meat_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Meat_Vigor" />
+	  <Effect Type="EntityStatEffect" Subtype="Meat_Poison" />
       <UseSound>PlayEat</UseSound>
     </Definition>
 <!-- -->
@@ -7479,12 +7519,9 @@ perfect specimen for an Apothocary or Chef.
       <Model>Models\Consumables\MedievalDish.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="150" Time="1" />
-        <Stat Name="Stamina" Value="25" Time="4" />
-        <Stat Name="Mood" Value="45" Time="1" />
-        <Stat Name="Thirst" Value="3" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Goulash_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Goulash_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Goulash_Vigor" />
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7536,11 +7573,10 @@ would be valuable for a Chef.</Description>
       <Model>Models\Consumables\MedievalDish.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="20" Time="1" />
-        <Stat Name="Mood" Value="5" Time="1" />
-        <Stat Name="Thirst" Value="40" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="SoupMushroom_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="SoupMushroom_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="SoupMushroom_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="SoupMushroom_Vigor" />
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7590,12 +7626,10 @@ knowledge would be valuable for a Chef.</Description>
       <Model>Models\Consumables\MedievalDish.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="20" Time="1" />
-        <Stat Name="Stamina" Value="7" Time="8" />
-        <Stat Name="Mood" Value="5" Time="1" />
-        <Stat Name="Thirst" Value="40" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="HighlandCapsSoup_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="HighlandCapsSoup_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="HighlandCapsSoup_Thirst" />
+	  <Effect Type="EntityStatEffect" Subtype="HighlandCapsSoup_Vigor" />
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7645,13 +7679,10 @@ knowledge would be valuable for a Chef.</Description>
       <Model>Models\Consumables\MedievalDish.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>1</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="2" Time="1" />
-        <Stat Name="Stamina" Value="7" Time="8" />
-        <Stat Name="Mood" Value="15" Time="1" />
-        <Stat Name="Thirst" Value="40" Time="1" />
-        <Stat Name="Health" Value="20" Time="5" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="CrimsonThristleTea_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="CrimsonThristleTea_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="CrimsonThristleTea_Vigor" />
+	  <Effect Type="EntityStatEffect" Subtype="CrimsonThristleTea_Stamina" />
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7701,11 +7732,9 @@ This knowledge would be valuable for a Chef.</Description>
       <Model>Models\Consumables\MedievalDish.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="40" Time="1" />
-        <Stat Name="Mood" Value="10" Time="1" />
-        <Stat Name="Thirst" Value="3" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="Salad_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="Salad_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="Salad_Vigor" />
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7755,12 +7784,9 @@ would be valuable for a Chef.</Description>
       <Model>Models\Consumables\MedievalDish.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="120" Time="1" />
-        <Stat Name="Stamina" Value="5" Time="6" />
-        <Stat Name="Mood" Value="40" Time="1" />
-        <Stat Name="Thirst" Value="3" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="SteakWithMushrooms_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="SteakWithMushrooms_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="SteakWithMushrooms_Vigor" />
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -7810,12 +7836,9 @@ knowledge would be valuable for a Chef.</Description>
       <Model>Models\Consumables\MedievalDish.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
       <MaxStackAmount>30</MaxStackAmount>
-      <Stats>
-        <Stat Name="Food" Value="40" Time="1" />
-        <Stat Name="Stamina" Value="5" Time="12" />
-        <Stat Name="Mood" Value="10" Time="1" />
-        <Stat Name="Thirst" Value="3" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="RootsWithShrooms_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="RootsWithShrooms_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="RootsWithShrooms_Vigor" />
       <UseSound>PlayEat</UseSound>
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
@@ -8396,11 +8419,9 @@ the process for cooking red berry preserve.</Description>
       <Mass>0.5</Mass>
       <Model>Models\Consumables\JamJar.mwm</Model>
       <PhysicalMaterial>None</PhysicalMaterial>
-      <Stats>
-        <Stat Name="Food" Value="8" Time="1" />
-        <Stat Name="Mood" Value="4" Time="1" />
-        <Stat Name="Thirst" Value="4" Time="1" />
-      </Stats>
+	  <Effect Type="EntityStatEffect" Subtype="BerryPreserve_Mood" />
+	  <Effect Type="EntityStatEffect" Subtype="BerryPreserve_Food" />
+	  <Effect Type="EntityStatEffect" Subtype="BerryPreserve_Vigor" />
       <UseSound>PlayEat</UseSound>
   </Definition> 
 

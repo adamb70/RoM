@@ -93,6 +93,7 @@
       <LightAttack MinimumDamage="12" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="14" />
         <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
         </AppliedEffect>
@@ -106,6 +107,9 @@
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
           <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmBrokenRight" Chance="0.1"/>
         </AppliedEffect>
       </ChargedAttack>
     </LeftSwing>
@@ -121,6 +125,7 @@
       <LightAttack MinimumDamage="12" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="14" />
         <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
         </AppliedEffect>
@@ -134,6 +139,9 @@
         </AppliedEffect>
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
           <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmBrokenRight" Chance="0.1"/>
         </AppliedEffect>
       </ChargedAttack>
     </RightSwing>
@@ -149,6 +157,7 @@
       <LightAttack MinimumDamage="12" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="14" />
         <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
         </AppliedEffect>

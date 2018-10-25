@@ -88,23 +88,27 @@
       <LightAttack MinimumDamage="26">
         <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
         </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.1"/>
+        </AppliedEffect> 
       </LightAttack>
 
       <ChargedAttack MinimumDamage="26" MaximumDamage="52" AttackMultipleTargets="true">
         <StatCost Stat="Fury" Cost="25" />
         <StatCost Stat="Stamina" Cost="20" />
- <!--       <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
-        </AppliedEffect> -->
+        </AppliedEffect> 
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
-          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="1"/>
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3"/>
         </AppliedEffect>
-   <!--     <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.6"/>
-        </AppliedEffect> -->
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingLong" Chance="0.4"/>
+        </AppliedEffect> 
       </ChargedAttack>
     </LeftSwing>
 
@@ -119,8 +123,12 @@
       <LightAttack MinimumDamage="26">
         <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.1"/>
         </AppliedEffect>
       </LightAttack>
 
@@ -131,10 +139,10 @@
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
         </AppliedEffect> -->
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
-          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="1"/>
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
         </AppliedEffect>
        <!-- <AppliedEffect Affectee="Target" ContactType="Hit">
-          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.6"/>
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingLong" Chance="0.4"/>
         </AppliedEffect> -->
       </ChargedAttack>
     </RightSwing>
@@ -150,6 +158,7 @@
       <LightAttack MinimumDamage="20">
         <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
         </AppliedEffect>

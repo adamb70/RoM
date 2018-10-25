@@ -1,0 +1,109 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
+    <Id Type="CubeBlock" Subtype="TransmissionWater" />
+    <DisplayName>Transmission Water</DisplayName>
+	  <Description>Transmission Water</Description>
+    <BlockPairName>TransmissionWater</BlockPairName>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Mechanical\Transmission.dds</Icon>
+    <CubeSize>Large</CubeSize>
+    <BlockTopology>TriangleMesh</BlockTopology>
+    <Size x="1" y="1" z="1" />
+    <ModelOffset x="0" y="0" z="0" />
+    <Model>Models\Cubes\large\Mechanical\Test_WaterPipe.mwm</Model>
+    <Components>
+      <Component Type="InventoryItem" Subtype="Small_FactoryKit" Count="1" />
+      <Component Type="InventoryItem" Subtype="Wood_Gear" Count="5" />
+    </Components>
+    <CriticalComponent Type="InventoryItem" Subtype="Wood_Gear" Index="0" />
+    <MaxIntegrity>300</MaxIntegrity>
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0.4" StartY="0.4" EndX="0.6" EndY="0.6" />
+      <MountPoint Side="Front" StartX="0.4" StartY="0.4" EndX="0.6" EndY="0.6" />
+    </MountPoints>
+    <MirroringY>Z</MirroringY>
+    <MirroringZ>Y</MirroringZ>
+    <BuildTimeSeconds>6</BuildTimeSeconds>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <GuiVisible>true</GuiVisible>
+    <Direction>Horizontal</Direction>
+    <Rotation>Vertical</Rotation>    
+    <VoxelPlacement>
+      <StaticMode>
+        <PlacementMode>Both</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </StaticMode>
+      <DynamicMode>
+        <PlacementMode>None</PlacementMode>
+        <MaxAllowed>1</MaxAllowed>
+        <MinAllowed>0</MinAllowed>
+      </DynamicMode>
+    </VoxelPlacement>
+    <BlockGroupName>BlockGroupName_Transmissions</BlockGroupName>
+    <BlockVariants>
+    </BlockVariants>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="CubeBlock" Subtype="TransmissionWater" />
+    <Component Type="MechanicalTransmissionComponent" Subtype="TransmissionWater" />
+    <Component Type="CubeBlockSubpartComponent" Subtype="TransmissionWater" />
+    <Component Type="SubpartAnimationComponent" Subtype="TransmissionWater" />
+    <Component Type="EntityFXComponent" Subtype="TransmissionWater" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
+    <Id Type="CubeBlockSubpartComponent" Subtype="TransmissionWater" />
+    <Subparts>
+      <Subpart Name="RotorShaftRight" Model="Models\Cubes\large\Mechanical\CogWoodRight_subpart.mwm" PhysicalMaterial="Wood" HingeBone="rotor_pin_right" RequiresAxialCorrection="true" HasDummy="false" HasPhysics="false" />
+      <Subpart Name="RotorShaftForward" Model="Models\Cubes\large\Mechanical\CogWoodForward_subpart.mwm" PhysicalMaterial="Wood" HingeBone="rotor_pin_forward" RequiresAxialCorrection="true" HasDummy="false" HasPhysics="false" />
+    </Subparts>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MechanicalTransmissionComponentDefinition">
+    <Id Type="MechanicalTransmissionComponent" Subtype="TransmissionWater" />
+    <Connection>Angular_1</Connection>
+    <Connection>Angular_2</Connection>
+    <ClockwiseAnimation>cw</ClockwiseAnimation>
+    <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
+    <Id Type="SubpartAnimationComponent" Subtype="TransmissionWater" />
+    <AnimationSequences>
+      <Sequence Name="cw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="RotorShaftForward" Type="Rotation" Axis="X" From="11" To="371" Method="Linear" />
+          <Subpart Name="RotorShaftRight" Type="Rotation" Axis="Z" From="-360" To="0" Method="Linear" />
+        </Animation>
+      </Sequence>
+      <Sequence Name="ccw" WrapMode="Loop">
+        <Animation Start="0" End="5">
+          <Subpart Name="RotorShaftForward" Type="Rotation" Axis="X" From="0" To="-360" Method="Linear" />
+          <Subpart Name="RotorShaftRight" Type="Rotation" Axis="Z" From="371" To="11" Method="Linear" />
+        </Animation>
+      </Sequence>
+    </AnimationSequences>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="TransmissionWater" />
+    <Effects>
+      <Effect StartEvent="IsPowered_connection_forward" StopEvent="NotPowered_connection_forward" Dummy="Angular_1">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalWorking"/>
+      </Effect>
+      <Effect StartEvent="IsPowered_connection_backward" StopEvent="NotPowered_connection_backward" Dummy="Angular_2">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalWorking"/>
+      </Effect>
+      <Effect StartEvent="NotWorking_connection_forward" StopEvent="Working_connection_forward" Dummy="Angular_1">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
+      </Effect>
+      <Effect StartEvent="NotWorking_connection_backward" StopEvent="Working_connection_backward" Dummy="Angular_2">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
+      </Effect>
+    </Effects>
+  </Definition>
+
+</Definitions>

@@ -91,6 +91,7 @@
       <LightAttack MinimumDamage="5" AttackMultipleTargets="false">
         <StatCost Stat="Stamina" Cost="7" />
 	<StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
@@ -136,6 +137,7 @@
       <LightAttack MinimumDamage="5" AttackMultipleTargets="false">
         <StatCost Stat="Stamina" Cost="7" />
 	<StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
@@ -181,6 +183,7 @@
       <LightAttack MinimumDamage="5">
         <StatCost Stat="Stamina" Cost="7" />
 	<StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>

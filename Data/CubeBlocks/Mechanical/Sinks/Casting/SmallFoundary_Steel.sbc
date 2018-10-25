@@ -6,14 +6,14 @@
     <Description>This Steel Foundary castes molten ore into 
 manufactured goods.</Description>
     <BlockPairName>SmallFoundary_Steel</BlockPairName>
-    <Public>false</Public>
+    <Public>true</Public>
     <Icon>Textures\GUI\Icons\Cubes\Mechanical\MillStone.dds</Icon>
-    <Icon>Textures\GUI\Icons\Materials\IngotSteel.dds</Icon>
     <CubeSize>Large</CubeSize>
     <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="1" y="1" z="1" />
+    <Size x="1" y="5" z="1" />
     <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\large\Mechanical\Millstone.mwm</Model>
+    <Model>Models\Cubes\large\Mechanical\Foundary\Foundary.mwm</Model>
+    <Icon>Textures\GUI\Icons\Materials\IngotSteel.dds</Icon>
     <BuildProgressModels>
       <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Mechanical\MechanicalGenericConstruction.mwm">
         <!--<MountPointOverrides>
@@ -28,12 +28,12 @@ manufactured goods.</Description>
     <CriticalComponent Type="InventoryItem" Subtype="Wood_Gear" Index="0" />
     <MaxIntegrity>800</MaxIntegrity>
     <MountPoints>
-      <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
-      <MountPoint Side="Top" StartX="1" StartY="1" EndX="0" EndY="0" />
-      <MountPoint Side="Left" StartX="1" StartY="1" EndX="0" EndY="0" />
-      <MountPoint Side="Right" StartX="1" StartY="1" EndX="0" EndY="0" />
-      <MountPoint Side="Back" StartX="1" StartY="1" EndX="0" EndY="0" />
-      <MountPoint Side="Front" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Bottom" StartX="1" StartY="5" EndX="0" EndY="0" />
+      <MountPoint Side="Top" StartX="1" StartY="5" EndX="0" EndY="0" />
+      <MountPoint Side="Left" StartX="1" StartY="5" EndX="0" EndY="0" />
+      <MountPoint Side="Right" StartX="1" StartY="5" EndX="0" EndY="0" />
+      <MountPoint Side="Back" StartX="1" StartY="5" EndX="0" EndY="0" />
+      <MountPoint Side="Front" StartX="1" StartY="5" EndX="0" EndY="0" />
     </MountPoints>
     <MirroringY>Z</MirroringY>
     <MirroringZ>Y</MirroringZ>
@@ -55,7 +55,16 @@ manufactured goods.</Description>
 	<!-- Disable compound building for the framed blocks; The unframed ones are designed for compounding. -->
 	<CompoundEnabled>false</CompoundEnabled>
   </Definition>
-<!-- ================================================================================ -->
+
+
+<!-- =================== Fuel/Inventory =================== -->
+
+
+
+
+
+
+<!-- =================== Container Definition =================== -->
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="SmallFoundary_Steel" />
     <Component Type="MechanicalSinkComponent" Subtype="SmallFoundary_Steel" />
@@ -66,6 +75,8 @@ manufactured goods.</Description>
     <Component Type="StockpileComponent" Subtype="SmallFoundary_SteelToolheadVisual" />
     <Component Type="Inventory" Subtype="SmallFoundary_SteelInventoryInput" />
     <Component Type="Inventory" Subtype="SmallFoundary_SteelInventoryOutput" />
+    <Component Type="Inventory" Subtype="Fuel_Steam_Engine" />
+    <Component Type="FuelComponent" Subtype="Fire_Steam_Engine" />
     <Component Type="CraftingComponentAutonomous" Subtype="SmallFoundary_Steel" />
     <Component Type="InventorySpawnComponent" />
   </Definition>
@@ -76,13 +87,16 @@ manufactured goods.</Description>
     <MaxItemCount>1</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
     <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="true">
+      <Id Type="ToolheadItem" Subtype="Small_Casting_HammerIron_Steel_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_IronAxe_Steel_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_PlowIron_Steel_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_PickaxeIron_Steel_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_ShovelIron_Steel_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_SwordIron_Steel_Toolhead" />
       <Id Type="ToolheadItem" Subtype="Small_Casting_Steel_Gear_Steel_Toolhead" />
-      <Id Type="ToolheadItem" Subtype="Small_Casting_SteelAxe_Steel_Toolhead" />
-      <Id Type="ToolheadItem" Subtype="Small_Casting_HammerSteel_Steel_Toolhead" />
-      <Id Type="ToolheadItem" Subtype="Small_Casting_PickaxeSteel_Steel_Toolhead" />
-      <Id Type="ToolheadItem" Subtype="Small_Casting_PlowSteel_Steel_Toolhead" />
-      <Id Type="ToolheadItem" Subtype="Small_Casting_SwordSteel_Steel_Toolhead" />
-      <Id Type="ToolheadItem" Subtype="Small_Casting_ShovelSteel_Steel_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_Iron_Nails_Steel_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_RailSpike_Steel_Toolhead" />
+      <Id Type="ToolheadItem" Subtype="Small_Casting_RailSteel_Steel_Toolhead" />
     </Constraint>
   </Definition>
 <!-- ================================================================================ -->
@@ -117,13 +131,16 @@ manufactured goods.</Description>
 
     <ToolheadInventory>SmallFoundary_SteelToolheadInventory</ToolheadInventory>
     <AcceptedToolheads>
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_HammerIron_Steel_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_IronAxe_Steel_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_PlowIron_Steel_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_PickaxeIron_Steel_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_ShovelIron_Steel_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_SwordIron_Steel_Toolhead" />
       <Toolhead Type="ToolheadItem" Subtype="Small_Casting_Steel_Gear_Steel_Toolhead" />
-      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_SteelAxe_Steel_Toolhead" />
-      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_HammerSteel_Steel_Toolhead" />
-      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_PickaxeSteel_Steel_Toolhead" />
-      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_PlowSteel_Steel_Toolhead" />
-      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_SwordSteel_Steel_Toolhead" />
-      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_ShovelSteel_Steel_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_Iron_Nails_Steel_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_RailSpike_Steel_Toolhead" />
+      <Toolhead Type="ToolheadItem" Subtype="Small_Casting_RailSteel_Steel_Toolhead" />
     </AcceptedToolheads>
   </Definition>
 <!-- ================================================================================ -->
@@ -166,6 +183,9 @@ manufactured goods.</Description>
       </Effect>
       <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="subpart_rotor_center">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalMilling"/>
+      </Effect>
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_inventory">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
       </Effect>
     </Effects>
   </Definition>
