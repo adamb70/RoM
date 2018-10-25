@@ -108,16 +108,6 @@
 
 <!-- =================== Fuel/Inventory =================== -->
 
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Small_Steam_EngineInventory" />
-    <DisplayName>Storage</DisplayName>
-    <InventoryName>Small Steam Engine</InventoryName>
-    <MaxItemCount>7</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-  </Definition>
-
   <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
     <Id Type="CraftingComponentQueued" Subtype="Small_Steam_Engine"/>
     <CraftingCategories>
@@ -125,24 +115,63 @@
     </CraftingCategories>
     <ProductionQueueSize>4</ProductionQueueSize>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-    <ConstrainInventory>true</ConstrainInventory>
+    <CraftingInventory>ProcessingInventory</CraftingInventory>
+    <ConstrainInventory>false</ConstrainInventory>
     <PowerRequired>All</PowerRequired>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_EquiVoxelPowerComponentDefinition">
+    <Id Type="MyObjectBuilder_EquiVoxelPowerComponent" Subtype="Steam_Engine" />
+    <!-- radius, in meters, to scan -->
+    <ScanRadius>2</ScanRadius>
+    <!-- an additional radius that reduces the amount of spam a moving item will cause.  You can exclude this and use the default value. -->
+    <ScanMargin>1</ScanMargin>
+    <!-- Counting mode.  Surface makes the Amount material values ~Surface Area in m^2.  Volume makes the Amount material values in m^3 -->
+    <Mode>Surface</Mode>
+    <!-- When a change occurs nearby the component enters a "disturbed" mode until it has been this long since the last change -->
+    <DisturbedTime Seconds="2"/>
+    <!-- If this is false then the component is always unpowered when in the "disturbed" mode.  If true it just continues in its state before the disturbance -->
+    <PoweredWhenDisturbed>false</PoweredWhenDisturbed>
+    <!-- Query LoD.  Resolution = 2 ^ (LoD + 1) meters. -->
+    <LevelOfDetail>1</LevelOfDetail>
+    <!-- Print the counts and state transitions as messages.  Only useful for development, exclude (false) in published mods -->
+    <DebugMode>false</DebugMode>
+    <!-- AND = all requirements must be satisfied.  OR = any requirement must be satisfied -->
+    <Operator>OR</Operator>
+    <Materials>
+      <!-- Amount is the comparison value in (m^2 or m^3) depending on Mode -->
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Grass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Dirt" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="DirtSteppe" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="PlantedSoil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="PlowedSoil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SandGrass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SandGrassGreen" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Soil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SteppeYellowGrass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_grass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_needles" Amount="10" />
+      
+      <!-- LessThan inverts the comparison, and gives true if there is less than the given amount -->
+      <!-- <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Snow" Amount="1" LessThan="true" /> -->
+    </Materials>
+  </Definition>
 <!-- =================== Container Definition =================== -->
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
     <Id Type="CubeBlock" Subtype="Small_Steam_Engine" />
     <Component Type="FueledMechanicalSourceComponent" Subtype="Small_Steam_Engine" />
+    <Component Type="Inventory" Subtype="Fuel" />
+    <Component Type="FuelComponent" Subtype="Fire" />
+    <!-- <Component Type="Inventory" Subtype="Fuel_Steam_Engine2" /> -->
+    <!-- <Component Type="FuelComponent" Subtype="Fire_Steam_Engine2" /> -->
+    <Component Type="EquiVoxelPowerComponent" Subtype="Steam_Engine" />
+    
+    <Component Type="Inventory" Subtype="ProcessingInventory" />
     <Component Type="CubeBlockSubpartComponent" Subtype="Small_Steam_Engine" />
     <Component Type="SubpartAnimationComponent" Subtype="Small_Steam_Engine" />
 	  <Component Type="EntityFXComponent" Subtype="Small_Steam_Engine" />
-<!-- -->
-    <Component Type="Inventory" Subtype="Fuel_Steam_Engine2" />
-    <Component Type="Inventory" Subtype="Fuel_Steam_Engine" />
-    <Component Type="FuelComponent" Subtype="Fire_Steam_Engine2" />
-    <Component Type="FuelComponent" Subtype="Fire_Steam_Engine" />
-    <Component Type="Inventory" Subtype="Small_Steam_EngineInventory" />
     <Component Type="InventorySpawnComponent" />
     <Component Type="CraftingComponentQueued" Subtype="Small_Steam_Engine" />
   </Definition>
