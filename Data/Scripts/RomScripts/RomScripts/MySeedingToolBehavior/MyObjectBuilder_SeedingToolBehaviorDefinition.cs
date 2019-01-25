@@ -3,23 +3,32 @@ using System.Xml.Serialization;
 using VRage.ObjectBuilders;
 using VRage.ObjectBuilders.Components.Entity.Stats.Definitions;
 using ObjectBuilders.Definitions.Tools;
+using VRage.ObjectBuilder.Merging;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Romscripts.SeedingToolBehavior
 {
     [MyObjectBuilderDefinition]
-    [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]
+    [XmlSerializerAssembly("VRage.Game.XmlSerializers")]
     public class MyObjectBuilder_RomSeedingToolBehaviorDefinition : MyObjectBuilder_SeedingToolBehaviorDefinition
     {
-        [XmlElement("MinAltitudePercentage")]
-        public float? MinAltitudePercentage;
+        public class Limit
+        {
+            [XmlAttribute]
+            public float Lower;
 
-        [XmlElement("MaxAltitudePercentage")]
-        public float? MaxAltitudePercentage;
+            [XmlAttribute]
+            public float Upper;
+        }
 
-        [XmlElement("MaxNorthPercentage")]
-        public float? MaxNorthPercentage;
+        public List<Limit> AltitudeLimits;
+        
+        public List<Limit> LatitudeLimits;
+        
+        public List<Limit> LongitudeLimits;
 
-        [XmlElement("MinNorthPercentage")]
-        public float? MinNorthPercentage;
+        [DefaultValue(false)]
+        public bool Debug;
     }
 }

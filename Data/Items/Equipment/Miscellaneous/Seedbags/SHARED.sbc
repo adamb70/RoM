@@ -98,11 +98,41 @@
       <Animation>Seeding</Animation>
     </PrimaryEffect>
     
-    <!-- <MinAltitudePercentage>25</MinAltitudePercentage> -->
-    <!-- <MaxAltitudePercentage>80</MaxAltitudePercentage> -->
+    <!-- Limit planting to specific zones -->
+    <!-- Each axis can have multiple limits, and will succeed if ANY match -->
+    <!-- 
     
-    <!-- <MaxNorthPercentage>75</MaxNorthPercentage> -->
-    <!-- <MinNorthPercentage>25</MinNorthPercentage> -->
+    position (0,0) is in middle of fareon (front face of planet)
+    Due to curvature of planet, corners of fareon are 35deg lat, but middle is 45deg lat as expected.
+    
+         35,-45     45,0     35,45
+            ====================
+            |                  |
+            |      Fareon      |
+            |                  |
+       0,-45|       0,0        |0,45
+            |                  |
+            |                  |
+            |                  |
+            ====================
+         -35,-45    -45,0    -35,45
+    
+    -->
+    
+    <AltitudeLimits>
+      <Limit Lower="-20" Upper="500"/> <!-- highest altitude terrain possible -->
+    </AltitudeLimits>
+    <LatitudeLimits>      
+      <Limit Lower="-45" Upper="-3"/><!-- Kharidian Area -->
+    </LatitudeLimits> 
+    <LongitudeLimits>      
+      <Limit Lower="10" Upper="45"/><!-- Kharidian Area -->
+    </LongitudeLimits>
+    
+    <!-- Show position info when trying to plant seed -->
+    <Debug>true</Debug>
   </Definition>
+  
+  
   
 </Definitions>

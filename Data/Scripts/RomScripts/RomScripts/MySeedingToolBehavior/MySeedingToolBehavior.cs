@@ -45,6 +45,7 @@ using VRage.Game.Components.Session;
 using VRage.Game.Voxels;
 using VRage.Network;
 using VRage.Voxels;
+using Sandbox.Game.SessionComponents;
 
 using Sandbox.Game.Entities;
 
@@ -56,13 +57,14 @@ namespace Romscripts.SeedingToolBehavior
     [MyHandItemBehavior(typeof(MyObjectBuilder_RomSeedingToolBehaviorDefinition), true)]
     public class MyRomSeedingToolBehavior : MySeedingToolBehavior
     {
-        public float? MinAltitudePercentage;
-        public float? MaxAltitudePercentage;
-        public float? MaxNorthPercentage;
-        public float? MinNorthPercentage;
+        public List<MyRomSeedingToolBehaviorDefinition.Limit> AltitudeLimits;
+        public List<MyRomSeedingToolBehaviorDefinition.Limit> LatitudeLimits;
+        public List<MyRomSeedingToolBehaviorDefinition.Limit> LongitudeLimits;
 
         private MySeedBagHandItem m_seedBag;
         private MyFarmingSystem m_farmingSystem;
+
+        public bool Debug;
 
         public override void Init(MyEntity holder, MyHandItem item, MyHandItemBehaviorDefinition definition)
         {
@@ -73,13 +75,14 @@ namespace Romscripts.SeedingToolBehavior
             }
             base.Init(holder, item, definition);
 
+
             var ob = (MyRomSeedingToolBehaviorDefinition)definition;
-            this.MinAltitudePercentage = ob.MinAltitudePercentage;
-            this.MaxAltitudePercentage = ob.MaxAltitudePercentage;
-            this.MaxNorthPercentage = ob.MaxNorthPercentage;
-            this.MinNorthPercentage = ob.MinNorthPercentage;
+            this.AltitudeLimits = ob.AltitudeLimits;
+            this.LatitudeLimits = ob.LatitudeLimits;
+            this.LongitudeLimits = ob.LongitudeLimits;
 
             this.m_farmingSystem = VRage.Session.MySession.Static.Components.Get<MyFarmingSystem>();
+            this.Debug = ob.Debug;
         }
 
 
@@ -109,77 +112,79 @@ namespace Romscripts.SeedingToolBehavior
                 }
             }
 
-            // latitude limit
-            if (this.MaxNorthPercentage != null || this.MinNorthPercentage != null)
+            if (this.AltitudeLimits.Count > 0 || this.LatitudeLimits.Count > 0 || this.LongitudeLimits.Count > 0)
             {
-                MyPlanetAreasComponent areas_component = planet.Components.Get<MyPlanetAreasComponent>();
+                MySectorWeatherComponent weather = VRage.Session.MySession.Static.Components.Get<MySectorWeatherComponent>();
+                SolarObservation obs = weather.CreateSolarObservation(VRage.Session.MySession.Static.ElapsedGameTime, position);
 
-                if (areas_component != null)
+                if (Debug)
                 {
-                    long areaID = areas_component.GetArea(position);
+                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(obs.ToString(), 3000, null, Color.Azure);
+                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Biome: " + obs.Biome.ToString(), 3000, null, Color.Gold);
+                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Altitude: " + obs.Altitude.ToString(), 3000, null, Color.Gold);
+                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Lat: " + obs.Latitude.ToString(), 3000, null, Color.Gold);
+                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Long: " + obs.Longitude.ToString(), 3000, null, Color.Gold);
+                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Dist to Surface: " + obs.DistanceToSurface.ToString(), 3000, null, Color.Gold);
+                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Solar Elev: " + obs.SolarElevation.ToString(), 3000, null, Color.Gold);
+                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Solar Alt: " + obs.SolarAltitude.ToString(), 3000, null, Color.Gold);
+                }
 
-                    //string Kingdom; string Region; string Area;
-                    //MyPlanetAreasComponent.UnpackAreaId(areaID, out Kingdom, out Region, out Area);
-                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(Kingdom, 3000, null, Color.Gold);
-                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(Region, 3000, null, Color.Teal);
-                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(Area, 3000, null, Color.Orange);
-
-
-                    //kingdom (face) ids: fareon=0, bar hadur=1, levos=2, rintel=3 umbril=4, darios=5
-                    //                    front     back         left     right    up        down
-
-                    int face;
-                    int x;
-                    int y;
-                    MyPlanetAreasComponent.UnpackAreaId(areaID, out face, out x, out y);
-                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(x.ToString() + " across", 3000, null, Color.Teal);
-                    //(IMyUtilities)MyAPIUtilities.Static).ShowNotification(y.ToString() + " down", 3000, null, Color.Orange);
-                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Face: " + face.ToString(), 3000, null, Color.Gold);
-
-                    float percent_north = (areas_component.AreaCount - (float)y) / areas_component.AreaCount * 100f;
-                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Percent North: " + percent_north.ToString(), 3000, null, Color.HotPink);
-                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("max North: " + this.MaxNorthPercentage.ToString(), 3000, null, Color.HotPink);
-                    //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("min North: " + this.MinNorthPercentage.ToString(), 3000, null, Color.HotPink);
-
-                    if (face < 4)  // If face is Up or Down, ignore for now. Will implement when needed. (north and south are abnormal on those faces)
+                if (this.AltitudeLimits.Count != 0)
+                {
+                    int flag = 0;
+                    foreach (MyRomSeedingToolBehaviorDefinition.Limit lim in this.AltitudeLimits)
                     {
-                        if (this.MaxNorthPercentage != null && percent_north > this.MaxNorthPercentage) // too far north
+                        if (obs.Altitude >= lim.Lower && obs.Altitude <= lim.Upper)
                         {
-                            ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Cannot be planted this far north!", 2000, null, Color.Red);
-                            return false;
-                        }
-                        if (this.MinNorthPercentage != null && percent_north < this.MinNorthPercentage) // too far south
-                        {
-                            ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Cannot be planted this far south!", 2000, null, Color.Red);
-                            return false;
+                            flag += 1;
+                            break;
                         }
                     }
+                    if (flag == 0)
+                    {
+                        ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Cannot be planted at this altitude!", 2000, null, Color.Red);
+                        return false;
+                    }
                 }
-            }
-
-
-            // altitude limit
-            if (this.MaxAltitudePercentage != null || this.MinAltitudePercentage != null)
-            {
-                double distance_from_center = (position - planet.GetPosition()).Length();
-                double altitude = distance_from_center - planet.MinimumRadius;
-                double altitude_percentage = altitude / (planet.MaximumRadius - planet.MinimumRadius) * 100;
-
-                //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Altitude: " + altitude.ToString(), 3000, null, Color.HotPink);
-                //((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Altitude %: " + altitude_percentage.ToString(), 3000, null, Color.HotPink);
                 
-                if (this.MinAltitudePercentage != null && altitude_percentage < this.MinAltitudePercentage) // too low down
+                if (this.LatitudeLimits.Count != 0)
                 {
-                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Cannot be planted this low down!", 2000, null, Color.Red);
-                    return false;
+                    int flag = 0;
+                    foreach (MyRomSeedingToolBehaviorDefinition.Limit lim in this.LatitudeLimits)
+                    {
+                        if (obs.Latitude >= lim.Lower && obs.Latitude <= lim.Upper)
+                        {
+                            flag += 1;
+                            break;
+                        }
+                    }
+                    if (flag == 0)
+                    {
+                        ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Cannot be planted at this latitude!", 2000, null, Color.Red);
+                        return false;
+                    }
                 }
-                if (this.MaxAltitudePercentage != null && altitude_percentage > this.MaxAltitudePercentage) // too high up
-                {
-                    ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Cannot be planted this high up!", 2000, null, Color.Red);
-                    return false;
-                }
-            }
 
+                if (this.LongitudeLimits.Count != 0)
+                {
+                    int flag = 0;
+                    foreach (MyRomSeedingToolBehaviorDefinition.Limit lim in this.LongitudeLimits)
+                    {
+                        if (obs.Longitude >= lim.Lower && obs.Longitude <= lim.Upper)
+                        {
+                            flag += 1;
+                            break;
+                        }
+                    }
+                    if (flag == 0)
+                    {
+                        ((IMyUtilities)MyAPIUtilities.Static).ShowNotification("Cannot be planted at this longitude!", 2000, null, Color.Red);
+                        return false;
+                    }
+                }
+                
+            }
+            
             return true;
         }
 

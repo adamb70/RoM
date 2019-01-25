@@ -18,100 +18,25 @@
     <Id Type="VoxelMaterialDefinition" Subtype="COGSalt" />
     <PhysicalMaterialName>Rock</PhysicalMaterialName>
     <ParticleEffect>Collision_Meteor</ParticleEffect>
-    <SpecularPower>8</SpecularPower>
-    <SpecularShininess>0.23</SpecularShininess>
+    <SpecularPower>1</SpecularPower>
+    <SpecularShininess>0.1</SpecularShininess>
 
     <ColorMetalXZnY>Textures\Voxels\COGSnow_cm.dds</ColorMetalXZnY>
     <NormalGlossXZnY>Textures\Voxels\COGSnow_ng.dds</NormalGlossXZnY>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id Type="VoxelMaterialDefinition" Subtype="COGMithril" />
+    <Id Type="VoxelMaterialDefinition" Subtype="Mithril_Ore" />
     <PhysicalMaterialName>Rock</PhysicalMaterialName>
     <ParticleEffect>Collision_Meteor</ParticleEffect>
-    <SpecularPower>8</SpecularPower>
-    <SpecularShininess>0.23</SpecularShininess>
+    <SpecularPower>1</SpecularPower>
+    <SpecularShininess>0.1</SpecularShininess>
 
     <ColorMetalXZnY>Textures\Voxels\Mithril2_cm.dds</ColorMetalXZnY>
     <NormalGlossXZnY>Textures\Voxels\Rocks_ng.dds</NormalGlossXZnY>
     <ExtXZnY>Textures\Voxels\Rocks_add.dds</ExtXZnY>
   </Definition>
-   
-  <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>Future_Nordic_Ore</SubtypeId>			<!--Place holder ore for if new ores get added ie. copper. will show as regular stone but wont drop ore.-->
-    </Id>
-    <PhysicalMaterialName>Rock</PhysicalMaterialName>
-    <ParticleEffect>Collision_Meteor</ParticleEffect>
-    <SpecularPower>8</SpecularPower>
-    <SpecularShininess>0.23</SpecularShininess>
-
-    <ColorMetalXZnY>Textures\Voxels\Rocks_cm.dds</ColorMetalXZnY>
-    <NormalGlossXZnY>Textures\Voxels\Rocks_ng.dds</NormalGlossXZnY>
-    <ExtXZnY>Textures\Voxels\Rocks_add.dds</ExtXZnY>
-  </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>Future_Desert_Ore</SubtypeId>			<!--Place holder ore for if new ores get added ie. copper. will show as regular stone but wont drop ore.-->
-    </Id>
-    <PhysicalMaterialName>Rock</PhysicalMaterialName>
-    <ParticleEffect>Collision_Meteor</ParticleEffect>
-    <SpecularPower>8</SpecularPower>
-    <SpecularShininess>0.23</SpecularShininess>
-
-    <ColorMetalXZnY>Textures\Voxels\Rocks_cm.dds</ColorMetalXZnY>
-    <NormalGlossXZnY>Textures\Voxels\Rocks_ng.dds</NormalGlossXZnY>
-    <ExtXZnY>Textures\Voxels\Rocks_add.dds</ExtXZnY>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>Future_Mountain_Ore</SubtypeId>			<!--Place holder ore for if new ores get addedie. copper. will show as regular stone but wont drop ore.-->
-    </Id>
-    <PhysicalMaterialName>Rock</PhysicalMaterialName>
-    <ParticleEffect>Collision_Meteor</ParticleEffect>
-    <SpecularPower>8</SpecularPower>
-    <SpecularShininess>0.23</SpecularShininess>
-
-    <ColorMetalXZnY>Textures\Voxels\Rocks_cm.dds</ColorMetalXZnY>
-    <NormalGlossXZnY>Textures\Voxels\Rocks_ng.dds</NormalGlossXZnY>
-    <ExtXZnY>Textures\Voxels\Rocks_add.dds</ExtXZnY>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
-    <Id>
-      <TypeId>VoxelMaterialDefinition</TypeId>
-      <SubtypeId>place_holder_ore_04</SubtypeId>			<!--Place holder ore for if new ores get added ie. copper. will show as regular stone but wont drop ore.-->
-    </Id>
-    <PhysicalMaterialName>Rock</PhysicalMaterialName>
-    <ParticleEffect>Collision_Meteor</ParticleEffect>
-    <SpecularPower>8</SpecularPower>
-    <SpecularShininess>0.23</SpecularShininess>
-
-    <ColorMetalXZnY>Textures\Voxels\Rocks_cm.dds</ColorMetalXZnY>
-    <NormalGlossXZnY>Textures\Voxels\Rocks_ng.dds</NormalGlossXZnY>
-    <ExtXZnY>Textures\Voxels\Rocks_add.dds</ExtXZnY>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition"><!--This is a fake ore used for changing the color of the elf forest-->
-    <Id Type="VoxelMaterialDefinition" Subtype="COG_FakeOre" />
-    <PhysicalMaterialName>Enchanted_Soil</PhysicalMaterialName>
-    <ParticleEffect>Collision_Meteor</ParticleEffect>
-    <SpecularPower>24</SpecularPower>
-    <SpecularShininess>0.498</SpecularShininess>
-
-    <ColorMetalXZnY>Textures\Voxels\Rocks_cm.dds</ColorMetalXZnY>
-    <NormalGlossXZnY>Textures\Voxels\Rocks_ng.dds</NormalGlossXZnY>
-    <ExtXZnY>Textures\Voxels\Rocks_add.dds</ExtXZnY>
-  </Definition>
-  
-
-  
-	
 	</Definitions>
 	
 	
