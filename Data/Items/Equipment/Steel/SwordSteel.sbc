@@ -1,77 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
     <Id Type="HandItem" Subtype="SwordSteel"/>
 
-    <!-- Display -->
-
-    <DisplayName>DisplayName_Weapon_SwordSteel</DisplayName>
-    <Description>Description_Weapon_SwordSteel</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SwordSteel.dds</Icon>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
-    <Model>Models\Weapons\SwordSteel.mwm</Model>
-
-    <PhysicalMaterial>Sword</PhysicalMaterial>
-
-    <Animation>Sword</Animation>
-
-    <MaxStackAmount>1</MaxStackAmount>
-
     <MaxDurability>600</MaxDurability>
-
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Orientation>
-        <X>0</X>
-        <Y>0</Y>
-        <Z>0</Z>
-        <W>1</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.464</X>
-        <Y>-1.0</Y>
-        <Z>-0.505</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFps>
-    <EquippedTransformFpsCrouch>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.285</X>
-        <Y>-0.334</Y>
-        <Z>-0.131</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFpsCrouch>
-
-    <!-- Behaviors -->
-    <StanceToBehavior>
-      <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="SwordSteel"/>
-    </StanceToBehavior>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
@@ -172,6 +104,7 @@
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Sword</WeaponMaterial>
 
     <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 

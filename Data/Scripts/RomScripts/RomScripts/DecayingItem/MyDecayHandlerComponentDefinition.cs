@@ -6,7 +6,7 @@ using VRage.ObjectBuilders.Definitions.Inventory;
 using Sandbox.Definitions.Inventory;
 using VRage.Utils;
 
-namespace RomScripts.DecayingItem
+namespace RomScripts76561197972467544.DecayingItem
 {
     [MyDefinitionType(typeof(MyObjectBuilder_DecayHandlerComponentDefinition))]
     public class MyDecayHandlerComponentDefinition : MyEntityComponentDefinition

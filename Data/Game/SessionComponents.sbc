@@ -49,7 +49,7 @@
     <Research Type="ResearchDefinition" Subtype="ClaimBlock_LawGovernment"/>
     <Research Type="ResearchDefinition" Subtype="Liberty_Ethos_LawGovernment"/>
     <Research Type="ResearchDefinition" Subtype="Security_Ethos_LawGovernment"/>
-    <Research Type="ResearchDefinition" Subtype="Forign_Marketstand_Liberty_Ethos_LawGovernment"/>
+    <Research Type="ResearchDefinition" Subtype="Foreign_Marketstand_Liberty_Ethos_LawGovernment"/>
 
 
 <!-- Tailor -->
@@ -107,7 +107,6 @@
 
 
 <!-- Fletching -->
-    <Research Type="ResearchDefinition" Subtype="CrossbowQuiver_Fletching"/>
     <Research Type="ResearchDefinition" Subtype="Crossbow_Fletching"/>
 
 <!-- Masonry -->
@@ -211,7 +210,7 @@
     <Research Type="ResearchDefinition" Subtype="Wheat_Herblore"/>
     <Research Type="ResearchDefinition" Subtype="Meat_Herblore"/>
     <Research Type="ResearchDefinition" Subtype="Roots_Herblore"/>
-    <Research Type="ResearchDefinition" Subtype="TreeSmall_Seed_Herblore"/>
+    <Research Type="ResearchDefinition" Subtype="Pinecone_Herblore"/>
     <Research Type="ResearchDefinition" Subtype="Norden_Spalt_Herblore"/>
     <Research Type="ResearchDefinition" Subtype="Norden_Roots_Herblore"/>
     <Research Type="ResearchDefinition" Subtype="Norden_Barley_Herblore"/>
@@ -235,9 +234,9 @@
     <Research Type="ResearchDefinition" Subtype="Berry_Cooking"/>
     <Research Type="ResearchDefinition" Subtype="Grape_Cooking"/>
     <Research Type="ResearchDefinition" Subtype="Blue_Berry_Cooking"/>
-    <Research Type="ResearchDefinition" Subtype="Berry_Juice_Cooking"/>
-    <Research Type="ResearchDefinition" Subtype="Grape_Juice_Cooking"/>
-    <Research Type="ResearchDefinition" Subtype="Blue_Berry_Juice_Cooking"/>
+    <Research Type="ResearchDefinition" Subtype="Juice_Berry_Cooking"/>
+    <Research Type="ResearchDefinition" Subtype="Juice_Grape_Cooking"/>
+    <Research Type="ResearchDefinition" Subtype="Juice_Berry_Blue_Cooking"/>
     <Research Type="ResearchDefinition" Subtype="Dough_Cooking"/>
     <Research Type="ResearchDefinition" Subtype="RedBerryPie_Cooking"/>
 
@@ -249,7 +248,7 @@
     <Research Type="ResearchDefinition" Subtype="RedCabbage_Farming"/>
     <Research Type="ResearchDefinition" Subtype="Flax_Farming"/>
     <Research Type="ResearchDefinition" Subtype="Wheat_Farming"/>
-    <Research Type="ResearchDefinition" Subtype="TreeSmall_Seed_Farming"/>
+    <Research Type="ResearchDefinition" Subtype="Pinecone_Farming"/>
     <Research Type="ResearchDefinition" Subtype="Norden_Spalt_Farming"/>
     <Research Type="ResearchDefinition" Subtype="Norden_Barley_Farming"/>
     <Research Type="ResearchDefinition" Subtype="LandscapeStake_Farming"/>
@@ -260,7 +259,7 @@
     <Research Type="ResearchDefinition" Subtype="RedCabbage_Farming_Compost"/>
     <Research Type="ResearchDefinition" Subtype="Flax_Farming_Compost"/>
     <Research Type="ResearchDefinition" Subtype="Wheat_Farming_Compost"/>
-    <Research Type="ResearchDefinition" Subtype="TreeSmall_Seed_Farming_Compost"/>
+    <Research Type="ResearchDefinition" Subtype="Pinecone_Farming_Compost"/>
     <Research Type="ResearchDefinition" Subtype="Norden_Spalt_Farming_Compost"/>
     <Research Type="ResearchDefinition" Subtype="Norden_Barley_Farming_Compost"/>
   </Definition>  
@@ -271,7 +270,7 @@
 
 
 
-  <Definition xsi:type="MyObjectBuilder_AreaUpkeepSystemDefinition">
+  <Definition xsi:type="MyObjectBuilder_AreaUpkeepSystemDefinition" Merge="Append">
     <Id Type="MyObjectBuilder_AreaUpkeepSystemDefinition" Subtype="Default" />
     <TimeUnitInMinutes>1</TimeUnitInMinutes>
     <PointsPerTimeUnit>1</PointsPerTimeUnit>
@@ -280,141 +279,6 @@
     <NotifyOwnersAllies>true</NotifyOwnersAllies>
     <NotifyAtPercentage>0.00595238095</NotifyAtPercentage>
     <PointsPerResource>
-      <!-- Items used to pay taxes-->
-      <!-- Consumables -->
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Berries" Value="20"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Pumpkin" Value="30"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Mushrooms" Value="25"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Herbs" Value="20"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Bandage" Value="40"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Roots" Value="10"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="MeatRoasted" Value="60"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Meat" Value="50"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Goulash" Value="240"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="SoupMushroom" Value="100"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Salad" Value="120"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="SteakWithMushrooms" Value="210"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="RootsWithShrooms" Value="100"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Cabbage" Value="20"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="Bread" Value="29"/>
-      <Entry TypeId="MyObjectBuilder_ConsumableItem" SubtypeId="FruitsOpuntia" Value="40"/>
-      <!-- Components -->
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="ScrapWood" Value="10"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="BranchesConiferous" Value="10"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Sticks" Value="4"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Charcoal" Value="50"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Ink" Value="110"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Vellum" Value="50"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="OreCopper" Value="20"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="IngotCopper" Value="120"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="OreTin" Value="20"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="IngotTin" Value="120"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="IngotBronze" Value="260"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="OreIron" Value="40"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="IngotIron" Value="240"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="IngotSteel" Value="400"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="OreSilver" Value="80"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="IngotSilver" Value="480"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="OreGold" Value="100"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="IngotGold" Value="600"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="StoneSmall" Value="5"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="StoneLarge" Value="20"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Log" Value="60"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="PartsMetal" Value="29"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="StrawsFlax" Value="20"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="StringLinen" Value="48"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Cloth" Value="150"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="FlourWheat" Value="96"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="StrawsWheat" Value="20"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Rope" Value="105"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="PeltDeer" Value="130"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Antlers" Value="200"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="StripsLeather" Value="40"/>
-      
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber10" Value="15"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber10" Value="15"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound10" Value="15"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound10" Value="15"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberDiagonal10" Value="15"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberDiagonal10" Value="15"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Plank10" Value="5"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Plank10" Value="5"/>
-      <!-- Items forbidden to pay taxes with -->
-      <!-- Schematics-->
-      <Entry TypeId="MyObjectBuilder_SchematicItem" Value="0"/>
-      <!-- Tools-->
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="PickAxe" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_EquipmentItem" SubtypeId="HandTorchItem" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="Hammer" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="WoodenMallet" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="Mace" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="Axe" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="Crossbow" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="Sword" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="StoneAxe" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="Plow" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="SeedBagPumpkin" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="SeedBagCabbage" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_HandItem" SubtypeId="SeedBagFlax" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_ProjectileItem" SubtypeId="CrossbowBolt" Value="0"/>
-      <!-- Small Grid Blocks-->
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber2" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber3" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber4" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber5" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber6" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber7" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber8" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Timber9" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound2" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound3" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound4" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound5" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound6" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound7" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound8" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberRound9" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TimberDiagonal5" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="WoodBed" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="WoodBarrel" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="WoodTable" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="WoodChest" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="WoodChestLarge" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TorchStand" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="FireBucket" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="WheelMediumSmall" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TurnCrossSmall" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="RopeEndingSmall" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="RopeReleaseSmall" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="WindMillBlade" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="CatapultProjectileM" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="CatapultProjectile" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="RopeDrumAloneSmall" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Weight" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="CatchBlockSmall2" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="LockGearBox2" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="LockableDrumSmall" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="LockableDrumSmall" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="RopePowerSmall" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="WoodChair" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Flag10x10" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Flag10x10" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="FlagRed10x10" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="FlagRed10x10" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="HarvesterBlock" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="SeederBlock" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="PlowBlock" Value="0"/>
-      
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TorchOfTheAncestors" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="TorchOfTheAncestors" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Skull" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_CubeBlock" SubtypeId="ImpaledSkull" Value="0"/>
-      <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="CarvedPumpkin" Value="0"/>
-      
-      
-      
-      
       
       <!-- ====================== RoM ===================== -->
       <Entry TypeId="MyObjectBuilder_InventoryItem" SubtypeId="Enchanted_WoodenSticks" Value="5"/>
@@ -444,18 +308,16 @@
     <PlantedMaterial>PlantedSoil</PlantedMaterial>
     <ExhaustedMaterial>ExhaustedSoil</ExhaustedMaterial>
     <PlowableMaterials>
-
       <Material>Grass</Material>
-      <!-- <Material>COGSteppeYellowGrass</Material> -->
+      <Material>SteppeYellowGrass</Material>
       <Material>Woods_needles</Material>
       <Material>Woods_grass</Material>
+      <Material>Woods</Material>
       <Material>Soil</Material>
+      <Material>DirtSteppe</Material>
       <Material>PlowedSoil</Material>
       <Material>PlantedSoil</Material>
       <Material>ExhaustedSoil</Material>
-      
-      <!-- <Material>COGSteppeYellowGrass</Material> -->
-
     </PlowableMaterials>
     <PlantableMaterials>
       <Material>PlowedSoil</Material>

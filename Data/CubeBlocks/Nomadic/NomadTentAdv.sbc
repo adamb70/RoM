@@ -1,47 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Tent" />
-    <BlockPairName>NomadTentAdv</BlockPairName>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Tent" />
+    <Rotation>All</Rotation>
     <DisplayName>Advanced Linen Tent</DisplayName>
+    <Description>Advanced Linen Tent</Description>
     <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="7" y="6" z="7" />
-    <ModelOffset x="0" y="0" z="0" />
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="-3" z="-3" />
+      <Max x="4" y="3" z="4" />
+    </BoundingBox>
     <Model>Models\Cubes\Small\NomadTentAdv.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <Components>
-      <Component Tag="Timber" Count="4" />
+      <Component Type="Block" Subtype="Tent" Count="1" />
     </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
-    <MaxIntegrity>300</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Points>40</Points>
-    <Mass>20</Mass>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_EntityBannerComponentDefinition">
-    <Id Type="MyObjectBuilder_BoundBannerComponent" Subtype="NomadTentAdvBanner" />
-    <Material>BannerFlag</Material>
-    <Type>Player</Type>
-  </Definition>
- 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
     <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NomadTentAdv" />
     <UseObjects>
@@ -56,71 +35,121 @@
     <Id Type="MyObjectBuilder_Inventory" Subtype="TentInventory" />
     <MaxItemCount>14</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="false">
-      <Id Type="InventoryItem" Subtype="Log" />
-      <Id Type="InventoryItem" Subtype="StoneLarge" />
-      <Id Type="CubeBlock" Subtype="Timber10" />
-      <Id Type="CubeBlock" Subtype="TimberRound10" />
-    </Constraint>
+    <Constraint Type="ItemTypeConstraint" Subtype="BlacklistLargeObjectsItems" />
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Tent" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Tent" />
-    <Component Type="Inventory" Subtype="TentInventory" />
-    <Component Type="RespawnComponent" />
     <Component Type="BindableRespawnComponent" />
     <Component Type="EntityOwnershipComponent" />
-    <Component Type="BoundBannerComponent" Subtype="NomadTentAdvBanner" />
+    <Component Type="BoundBannerComponent" Subtype="WoodenBedBanner" />
     <Component Type="UseObjectsComponent" Subtype="NomadTentAdv" />
     <Component Type="InventorySpawnComponent"/>
   </Definition>
-  
-  
-  
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="TentBranches" />
-    <BlockPairName>NomadTentAdv</BlockPairName>
+
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tent"/>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <DisplayName>Advanced Linen Tent</DisplayName>
+    <Description>A tent is important for any traveler. This tent provides a bed, some storage, and a place to change your clothes.</Description>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="ChestWood" />
+      <Item Amount="1" Type="Block" Subtype="NomadTent" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Tent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AdvTent_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Advanced Linen Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentAdv" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="TentBranches" />
+    <Rotation>All</Rotation>
     <DisplayName>Advanced Tent</DisplayName>
+    <Description>Advanced Tent</Description>
     <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv2.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="7" y="6" z="7" />
-    <ModelOffset x="0" y="0" z="0" />
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="-3" z="-3" />
+      <Max x="4" y="3" z="4" />
+    </BoundingBox>
     <Model>Models\Cubes\Small\NomadTentAdv2.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <Components>
-      <Component Tag="Timber" Count="4" />
+      <Component Type="Block" Subtype="TentBranches" Count="1" />
     </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
-    <MaxIntegrity>300</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Points>40</Points>
-    <Mass>20</Mass>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
   </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="TentBranches" />
-    <Component Type="Inventory" Subtype="TentInventory" />
-    <Component Type="RespawnComponent" />
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="TentBranches" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
     <Component Type="BindableRespawnComponent" />
     <Component Type="EntityOwnershipComponent" />
     <Component Type="UseObjectsComponent" Subtype="NomadTentAdv" />
     <Component Type="InventorySpawnComponent"/>
   </Definition>
+
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TentBranches"/>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv2.dds</Icon>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Description>A tent is important for any traveler. This tent provides a bed, some storage, and a place to change your clothes.</Description>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="ChestWood" />
+      <Item Amount="1" Type="Block" Subtype="NomadTentBranches" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="TentBranches" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AdvTentBranches_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Advanced Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranchesAdv" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
 </Definitions>

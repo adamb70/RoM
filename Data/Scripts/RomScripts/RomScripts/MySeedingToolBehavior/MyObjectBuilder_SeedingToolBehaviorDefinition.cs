@@ -7,7 +7,7 @@ using VRage.ObjectBuilder.Merging;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace Romscripts.SeedingToolBehavior
+namespace RomScripts76561197972467544.SeedingToolBehavior
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("VRage.Game.XmlSerializers")]

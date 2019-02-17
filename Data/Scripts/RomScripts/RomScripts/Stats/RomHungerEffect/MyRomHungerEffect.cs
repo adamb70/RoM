@@ -9,14 +9,14 @@ using Sandbox.Game.Multiplayer;
 using System;
 using VRage.Audio;
 using VRage.Game;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Utils;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
 using VRageMath;
-using RomScripts.StatExtensions;
+using RomScripts76561197972467544.StatExtensions;
 
-namespace RomScripts.RomHungerEffect
+namespace RomScripts76561197972467544.RomHungerEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_RomHungerEffect))]
     public class MyRomHungerEffect : MyEntityStatEffect
@@ -37,11 +37,11 @@ namespace RomScripts.RomHungerEffect
             }
             if (this.m_hungerStat == null)
             {
-                MyLog.Default.Error("Hunger effect '{0}' applied to an entity '{1}' without source stat!", new object[]
-                {
-                    base.Definition.Id,
-                    base.Owner.Entity.Definition.Id
-                });
+                //MyLog.Default.Error("Hunger effect '{0}' applied to an entity '{1}' without source stat!", new object[]
+                //{
+                //    base.Definition.Id,
+                //    base.Owner.Entity.Definition.Id
+                //});
                 return;
             }
             this.m_hungerStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.hungerStat_OnValueChanged);

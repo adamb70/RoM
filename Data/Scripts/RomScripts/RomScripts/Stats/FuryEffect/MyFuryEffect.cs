@@ -9,14 +9,14 @@ using Sandbox.Game.Multiplayer;
 using System;
 using VRage.Audio;
 using VRage.Game;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Utils;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
 using VRageMath;
-using RomScripts.StatExtensions;
+using RomScripts76561197972467544.StatExtensions;
 
-namespace RomScripts.FuryEffect
+namespace RomScripts76561197972467544.FuryEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_FuryEffect))]
     public class MyFuryEffect : MyEntityStatEffect
@@ -34,11 +34,11 @@ namespace RomScripts.FuryEffect
             this.m_furyStat = owner.GetFury();
             if (this.m_furyStat == null)
             {
-                MyLog.Default.Error("Fury effect '{0}' applied to an entity '{1}' without fury stat!", new object[]
-                {
-                    base.Definition.Id,
-                    base.Owner.Entity.Definition.Id
-                });
+                //MyLog.Default.Error("Fury effect '{0}' applied to an entity '{1}' without fury stat!", new object[]
+                //{
+                //    base.Definition.Id,
+                //    base.Owner.Entity.Definition.Id
+                //});
                 return;
             }
             this.m_furyStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.furyStat_OnValueChanged);

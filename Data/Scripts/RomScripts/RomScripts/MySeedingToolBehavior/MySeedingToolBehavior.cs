@@ -15,7 +15,7 @@ using VRage.Components;
 using VRage.Game;
 using VRage.Game.Entity;
 using VRage.GUI.Crosshair;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Systems;
 using VRage.Utils;
 using VRageMath;
@@ -47,9 +47,7 @@ using VRage.Network;
 using VRage.Voxels;
 using Sandbox.Game.SessionComponents;
 
-using Sandbox.Game.Entities;
-
-namespace Romscripts.SeedingToolBehavior
+namespace RomScripts76561197972467544.SeedingToolBehavior
 {
     /// <summary>
     /// Seeding behavior for farming.
@@ -69,10 +67,10 @@ namespace Romscripts.SeedingToolBehavior
         public override void Init(MyEntity holder, MyHandItem item, MyHandItemBehaviorDefinition definition)
         {
             this.m_seedBag = (item as MySeedBagHandItem);
-            if (this.m_seedBag == null)
-            {
-                MyLog.Default.Error("Hand item have to be of type 'MySeedBagHandItem' in order to work with seeding tool behavior");
-            }
+            //if (this.m_seedBag == null)
+            //{
+            //    MyLog.Default.Error("Hand item have to be of type 'MySeedBagHandItem' in order to work with seeding tool behavior");
+            //}
             base.Init(holder, item, definition);
 
 
@@ -88,11 +86,6 @@ namespace Romscripts.SeedingToolBehavior
 
         protected override bool Start(MyHandItemActionEnum action)
         {
-            if (action != MyHandItemActionEnum.Primary)
-            {
-                return false;
-            }
-            
             if (base.Start(action) == true)
             {
                 return this.IsPlantable(this.Target.Position, this.Target.Normal, null);
@@ -105,7 +98,7 @@ namespace Romscripts.SeedingToolBehavior
         {
             if (planet == null)
             {
-                planet = MyGamePruningStructure.GetClosestPlanet(position);
+                planet = MyGamePruningStructureSandbox.GetClosestPlanet(position);
                 if (planet == null)
                 {
                     return false;
@@ -187,15 +180,6 @@ namespace Romscripts.SeedingToolBehavior
             
             return true;
         }
-
-
-        protected override void Hit()
-        {
-            if (this.m_farmingSystem.Plant(this.Holder, this.Target.Position, this.Target.Normal, this.m_seedBag.GetDefinition().GrowableDefinitionId, this.m_seedBag.GetDefinition().Id) == MyFarmingSystem.PlantingCheckResult.PlantingOk)
-            {
-                this.UpdateDurability(-1);
-            }
-        }
-
+        
     }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_ItemTypeConstraint">
+    <Id Type="ItemTypeConstraint" Subtype="BlacklistLargeObjectsItems" />
+    <Whitelist>false</Whitelist>
+    <Item Type="InventoryItem" Subtype="StoneLarge" />
+      <Id Type="InventoryItem" Subtype="LargeSandStone" />
+    <Item Type="Block" Subtype="Timber10" />
+    <Item Type="Block" Subtype="TimberRound10" />
+    <Item Type="Block" Subtype="TimberDiagonal10" />
+    <Item Type="Block" Subtype="Plank10" />
+    <Item Type="Block" Subtype="LogPalmtree_Timber10" />
+    <Item Type="Block" Subtype="LogPalmtree_TimberRound10" />
+    <Item Type="Block" Subtype="LogPalmtree_TimberDiagonal10" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ItemTagConstraint">
+    <Id Type="ItemTagConstraint" Subtype="BlacklistLargeObjectsTags" />
+    <Whitelist>false</Whitelist>
+    <Tag>Log</Tag>
+  </Definition>
+  
+</Definitions>

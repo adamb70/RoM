@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="SandstoneWall" />
+    <DisplayName>Sandstone Wall</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\kharidian\SandstoneWall.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\Large\Kharidian\SandStoneWall.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\StoneBlocks\WallStone_V1_C1.mwm" />
+    </BuildProgressModels>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="3" />
+      <Component Type="InventoryItem" Subtype="LargeSandStone" Count ="3" />
+    </Components>
+    <Rotation>YAxis</Rotation>
+    <UseModelIntersection>false</UseModelIntersection>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="SandstoneWallWithWindow" />
+    <DisplayName>Sandstone Window</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\kharidian\SandstoneWall.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\Large\Kharidian\SandstoneWindow.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\StoneBlocks\WallStoneWindow_V1_C1.mwm" />
+    </BuildProgressModels>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="5" />
+    </Components>
+    <UseModelIntersection>false</UseModelIntersection>
+    <Rotation>YAxis</Rotation>
+    <Visible>false</Visible>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+
+</Definitions>

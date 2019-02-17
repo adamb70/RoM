@@ -21,7 +21,7 @@ using VRage.Components;
 using Medieval.Inventory;
 
 
-namespace RomScripts.DecayingItem
+namespace RomScripts76561197972467544.DecayingItem
 {
     [MyComponent(typeof(MyObjectBuilder_DecayHandlerComponent))]
     public class MyDecayHandlerComponent : MyEntityComponent
@@ -81,12 +81,12 @@ namespace RomScripts.DecayingItem
                 InventoriesWithDecayingItems.Remove(inventory);
             }
 
-            if (InventoriesWithDecayingItems.Count > 0 && !RegisteredForUpdate)
+            if (InventoriesWithDecayingItems.Count() > 0 && !RegisteredForUpdate)
             {
                 RegisteredForUpdate = true;
                 MyUpdateComponent.Static.AddForUpdate(Tick, this.TickInterval);
             }
-            else if (InventoriesWithDecayingItems.Count == 0)
+            else if (InventoriesWithDecayingItems.Count() == 0)
             {
                 MyUpdateComponent.Static.RemoveFromUpdate(Tick);
                 RegisteredForUpdate = false;

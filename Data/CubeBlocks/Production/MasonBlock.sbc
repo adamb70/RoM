@@ -1,41 +1,42 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Masonry_Table" />
-    <BlockPairName>Masonry_Table</BlockPairName>
-    <DisplayName>Masonry Block</DisplayName>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Masonry_Table" />
+    <Rotation>All</Rotation>
+    <DisplayName>Masonry Table</DisplayName>
     <Icon>Textures\GUI\Icons\Cubes\MasonBlock.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="4" y="4" z="4" />
-    <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\Small\MasonBlock.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-2" y="-2" z="-2" />
+      <Max x="2" y="2" z="2" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\advBloomery.mwm</Model>
+    <PhysicalMaterial>StoneSoft</PhysicalMaterial>
     <Components>
-      <Component Type="InventoryItem" Subtype="StoneLarge" Count="10" />
+      <Component Type="Block" Subtype="Masonry_Table" Count="1" />
     </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
-    <MaxIntegrity>200</MaxIntegrity>
-    <MountPoints>
-      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="4" EndY="4" />
-    </MountPoints>
-    <Direction>Horizontal</Direction>
-    <Rotation>Vertical</Rotation>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Mass>10</Mass>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
+    <Volume>135</Volume>
+    <Mass>130</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Table"/>
+    <DisplayName>Masonry Block</DisplayName>
+    <Description>This is an essential for masonry and crafting things out of stone material, including furnaces.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\Masonry.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\MasonBlock.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Universal_Stone" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Masonry_Table" />
+    </Results>
+    <CraftingTime Seconds="3"/>
   </Definition>
 
 </Definitions>

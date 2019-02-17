@@ -1,153 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_MedievalCharacterPickupComponentDefinition">
-    <Id Type="MyObjectBuilder_MedievalCharacterPickupComponent" Subtype="RoMCharacterPickup" />
-    <Wheel X="0.5" Y="0.45" Texture="Textures\GUI\Icons\ProgressCircle128.dds" Size="128" Scale="1.0" RadPerSecond="4.28"/>
+  <Definition xsi:type="MyObjectBuilder_MedievalCharacterPickupComponentDefinition" Merge="Append">
+    <Id Type="MyObjectBuilder_MedievalCharacterPickupComponent" Subtype="CharacterPickup" />
+    
     <PickableItems>
-      <!-- ==================================== Vanilla ==================================== -->
       <!--5s Pickup Time-->
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="WoodTable" PickupTime="5"/>
-      <!--2s Pickup Time-->
-      <Item TypeId="MyObjectBuilder_CubeBlock" PickupTime="2"/>
-      <Item TypeId="MyObjectBuilder_CogWheelsBlock" PickupTime="2"/>
-      <!--1s Pickup Time-->
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber10" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber9" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber8" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber7" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber6" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber5" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber4" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber3" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber2" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Timber1" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound10" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound9" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound8" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound7" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound6" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound5" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound4" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound3" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound2" PickupTime="1"/>
-      <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="TimberRound1" PickupTime="1"/>
-
-      <Item TypeId="HandItem" SubtypeId="LandscapeStakeItem" PickupTime="1"/>
-      
-      <!-- =================================== /Vanilla ====================================== -->
-      
-      
-      <!-- ==================================== RoM Stuff ==================================== -->
-      <!--5s Pickup Time-->
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Cooking_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Scribe_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Apothocary_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Herbalist_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Masonry_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Machinesmith_Table" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Stove" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Compost_Bin" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Stone_Well" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Norden_Ale_Kegstand" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Juice_Kegstand" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Grape_Kegstand" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Blueberry_Kegstand" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Anvil" PickupTime="5"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="ClaimTotem" PickupTime="5"/>
-      <!-- ============ -->
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Cooking_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Scribe_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Apothocary_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Herbalist_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Masonry_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Machinesmith_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Stove" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Compost_Bin" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Stone_Well" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Norden_Ale_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Juice_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Grape_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Blueberry_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Anvil" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="ClaimTotem" PickupTime="5"/>
       <!--3s Pickup Time-->
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Carpentry_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Blacksmithing_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Tailor_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Cooking_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Farming_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Apothocary_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Masonry_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Machinesmith_Book" PickupTime="3"/>
-        <Item TypeId="MyObjectBuilder_CubeBlock" SubtypeId="Nomadic_Book" PickupTime="3"/>
-      <!-- ============ -->
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Carpentry_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Blacksmithing_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Tailor_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Cooking_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Farming_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Apothocary_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Masonry_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Machinesmith_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Nomadic_Book" PickupTime="3"/>
       <!--2s Pickup Time-->
-      
-      <!-- ============ -->
       <!--1s Pickup Time-->
-      
-      <!-- ============ -->
-
       <!--Instant Pickup-->
     </PickableItems>
     <!--<ToolBlacklist>
       <Tool TypeId="MyObjectBuilder_CubePlacer"/>
     </ToolBlacklist>-->
-    
-    <DefaultEffect Type="MyObjectBuilder_ParticleEffectDefinition" Subtype="PickupObject" />
-    <Effect>
-      <ItemType Type="MyObjectBuilder_GatherableDefinition" />
-      <Effect Type="MyObjectBuilder_ParticleEffectDefinition" Subtype="PickupEnvironmentItem" />
-    </Effect>
-    <Effect>
-      <ItemType Type="MyObjectBuilder_EntityBase" Subtype="Gatherable" />
-      <Effect Type="MyObjectBuilder_ParticleEffectDefinition" Subtype="PickupEnvironmentItem" />
-    </Effect>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStatComponent" Subtype="AnimalStats" />
-    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Health10" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStatComponent" Subtype="RoMStats" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Health" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Stamina" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Food" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Thirst" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Fury" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Alcohol" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Poison" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Mood" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Vigor" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorGain" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorLoss" />
-	<Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Death" />
-    <Effect Type="VigorEffect" Subtype="Vigor" />
-    <Effect Type="HealthEffect" Subtype="HealthRegen" />
-    <Effect Type="RomStaminaEffect" Subtype="StaminaRegen" />
-    <Effect Type="RomHungerEffect" Subtype="HungerDegen" />
-    <Effect Type="ThirstEffect" Subtype="ThirstDegen" />
-    <Effect Type="MoodEffect" Subtype="MoodRegen" />
-    <Effect Type="FuryEffect" Subtype="FuryDegen" />
-    <Effect Type="AlcoholEffect" Subtype="AlcoholDegen" />
-    <Effect Type="PoisonEffect" Subtype="PoisonDegen" />
-    <Effect Type="RomDeathEffect" Subtype="DeathDegen" />
-  </Definition>
-
-  
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition" Merge="Append">
     <Id Type="Inventory" Subtype="Internal"/>
-    <InventoryName>Internal</InventoryName>
-	  <DisplayName>DisplayName_InventoryName_Internal</DisplayName>
     <MaxItemCount>28</MaxItemCount>
-	<InfiniteInCreative>true</InfiniteInCreative>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition" Merge="Append">
     <Id Type="Inventory" Subtype="Animal"/>
-    <InventoryName>Internal</InventoryName>
-    <DisplayName>DisplayName_InventoryName_Internal</DisplayName>
     <MaxItemCount>14</MaxItemCount>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="Humanoid" />
-    <CraftingCategories>
-      <Category>Tools</Category>
-      <Category>SmallBlocks</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
-    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-	<InputInventory>Internal</InputInventory>
-	<OutputInventory>Internal</OutputInventory>
-	<CraftingInventory>ProcessingInventory</CraftingInventory>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_QuestEntityComponentDefinition">
@@ -167,5 +66,30 @@
     <RespawnCostStat>Death</RespawnCostStat>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStatComponent" Subtype="RoMStats" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Health" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Stamina" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Food" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Thirst" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Fury" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Alcohol" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Poison" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Mood" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Vigor" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorGain" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorLoss" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Death" />
+    <Effect Type="VigorEffect" Subtype="Vigor" />
+    <Effect Type="RomHealthEffect" Subtype="HealthRegen" />
+    <Effect Type="RomStaminaEffect" Subtype="StaminaRegen" />
+    <Effect Type="RomHungerEffect" Subtype="HungerDegen" />
+    <Effect Type="ThirstEffect" Subtype="ThirstDegen" />
+    <Effect Type="MoodEffect" Subtype="MoodRegen" />
+    <Effect Type="FuryEffect" Subtype="FuryDegen" />
+    <Effect Type="AlcoholEffect" Subtype="AlcoholDegen" />
+    <Effect Type="PoisonEffect" Subtype="PoisonDegen" />
+    <Effect Type="RomDeathEffect" Subtype="DeathDegen" />
+  </Definition>
 
 </Definitions>

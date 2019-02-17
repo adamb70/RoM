@@ -7,7 +7,7 @@ using VRage.ObjectBuilders.Definitions.Equipment;
 using ObjectBuilders.Definitions.Tools;
 using Sandbox.Game.EntityComponents;
 
-namespace RomScripts.ReadableItem
+namespace RomScripts76561197972467544.ReadableItem
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]

@@ -20,7 +20,6 @@ using VRage.Game.Entity.UseObject;
 using VRage.ModAPI;
 using Sandbox.Game.Components;
 using VRage.Utils;
-using Sandbox.Game.Entities.Blocks;
 using Sandbox.Game.EntityComponents;
 using Medieval.Entities.Components;
 using Medieval.Entities.Components.Crafting;
@@ -29,7 +28,7 @@ using Medieval.MechanicalPower;
 using VRage.Game.Entity;
 
 
-namespace RomScripts.FueledMechanicalSource
+namespace RomScripts76561197972467544.FueledMechanicalSource
 {
     [ReplicatedComponent]
     [MyComponent(typeof(MyObjectBuilder_FueledMechanicalSourceComponent))]

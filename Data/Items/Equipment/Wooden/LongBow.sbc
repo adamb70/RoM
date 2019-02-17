@@ -18,7 +18,7 @@
     <Mass>0.5</Mass>
     <Model>Models\Weapons\LongBow.mwm</Model>
 
-    <PhysicalMaterial>Axe</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <!-- TODO -->
 
     <MaxStackAmount>1</MaxStackAmount>
@@ -38,6 +38,25 @@
       <StanceName>CombatMode</StanceName>
       <BehaviorId Type="RangedWeaponBehaviorDefinition" Subtype="LongBow"/>
     </StanceToBehavior>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_RangedWeaponBehaviorDefinition">
+    <Id Type="RangedWeaponBehaviorDefinition" Subtype="LongBow" />
+    <Projectile Type="ProjectileItem" Subtype="CrossbowBolt" />
+
+    <ReloadTime>1</ReloadTime>
+    <ReloadCost Stat="Stamina" Cost="0" />
+
+    <ShootTime>0</ShootTime>
+    <ShootVelocity>75</ShootVelocity>
+
+    <ShootSoundName>ToolCrossbShot</ShootSoundName>
+    <ReloadSoundName>ToolCrossbReload</ReloadSoundName>
+    <ShootAnimation>shoot</ShootAnimation>
+    <ModelReadyToShoot>Models\Weapons\CrossbowSteel_loaded.mwm</ModelReadyToShoot>
+    
+    <IronsightEffect Type="CompositeEntityEffect" Subtype="Ironsight" />
+    <ReloadEffect Type="CompositeEntityEffect" Subtype="CrossbowReload" />
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">

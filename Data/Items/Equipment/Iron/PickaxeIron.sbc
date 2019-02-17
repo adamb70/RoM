@@ -4,26 +4,27 @@
   <Definition xsi:type="MyObjectBuilder_MinerToolBehaviorDefinition">
     <Id Type="MinerToolBehaviorDefinition" Subtype="PickaxeIron"/>
     <Efficiency>3.3</Efficiency>
-	<Cost Stat="Mood" Cost="0.25" />
-	<Cost Stat="Stamina" Cost="2.5" />
+    <Cost Stat="Mood" Cost="0.25" />
+    <Cost Stat="Stamina" Cost="2.5" />
+    <ToolheadMaterial>Pickaxe</ToolheadMaterial>
 
     <YieldMultiplier>1.0</YieldMultiplier>
     <MiningDistance>3</MiningDistance>
-    <MiningRadius>0.25</MiningRadius>
+    <MiningRadius>0.4</MiningRadius>
     <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Iron_Pickaxe"/>
 
     <PrimaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
+      <AnimationTime>0.9</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
       <Animation>Mining</Animation>
     </PrimaryEffect>
 
     <SecondaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
+      <AnimationTime>0.9</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
-      <Animation>Attack</Animation>
+      <Animation>Mining</Animation>
     </SecondaryEffect>
   </Definition>
 
@@ -141,6 +142,7 @@
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Pickaxe</WeaponMaterial>
 
     <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 

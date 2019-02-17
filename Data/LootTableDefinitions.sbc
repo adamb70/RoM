@@ -26,7 +26,7 @@
 
 
 <!-- Always Drop -->
-    <Item Type="CubeBlock" Subtype="Skull" AlwaysDrops="true" IsUnique="true" />
+    <Item Type="Block" Subtype="Skull" AlwaysDrops="true" IsUnique="true" />
     <Item Type="ConsumableItem" Subtype="Bones" AlwaysDrops="true" IsUnique="true" />
 
 	<Item Weight="100" />
@@ -43,13 +43,12 @@
     <Item Type="ConsumableItem" Subtype="Roots" Weight="30" Amount="8" />
     <Item Type="ConsumableItem" Subtype="Herbs" Weight="30" Amount="5" />     
     <Item Type="ConsumableItem" Subtype="Bandage" Weight="70" Amount="4" />
-    <Item Type="ConsumableItem" Subtype="Minor_Potion_Strength" Weight="50" Amount="2" />
 
 
     <Item Type="InventoryItem" Subtype="Gold_Coins" Weight="30" Amount="75" />
 
 <!-- Always Drop -->
-    <Item Type="CubeBlock" Subtype="Skull" AlwaysDrops="true" IsUnique="true" />
+    <Item Type="Block" Subtype="Skull" AlwaysDrops="true" IsUnique="true" />
     <Item Type="ConsumableItem" Subtype="Bones" AlwaysDrops="true" IsUnique="true" />
 
 <!-- Pristines -->
@@ -62,7 +61,6 @@
     <Item Type="SchematicItem" Subtype="Schematic_Norden_Barley" Weight="5" Amount="3" />
 
 <!-- Schematics -->
-    <Item Type="SchematicItem" Subtype="Schematic_Minor_Potion_Strength" Weight="1" Amount="1" />
     <Item Type="SchematicItem" Subtype="Bandage_Schematic" Weight="2.5" Amount="1" />
 
 <!-- -->
@@ -71,24 +69,27 @@
 
   <!-- Guaranteed at least 2 meat -->
   <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
-	  <Id Type="LootTableDefinition" Subtype="RoMDoeBagContent" />
+	  <Id Type="LootTableDefinition" Subtype="DoeBagContent" />
 	  <Rolls>2</Rolls>
 	  <Item Type="ConsumableItem" Subtype="Meat" Amount="1" AlwaysDrops="true" IsUnique="true" />
-	  <Item Type="InventoryItem" Subtype="PeltDeer" Weight="1.5" />
-	  <Item Weight="2" />
+    <Item Type="Block" Subtype="PeltDeer" Amount="1" AlwaysDrops="true" IsUnique="true" />
+	  <Item Type="ConsumableItem" Subtype="Meat" Weight="3" />
+    <Item Type="ConsumableItem" Subtype="Meat" Weight="1" />
+	  <Item Weight="5" />
   </Definition>
   
   <!-- Guaranteed exactly 1 antler and at least 1 meat -->
   <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
-	  <Id Type="LootTableDefinition" Subtype="RoMBuckBagContent" />
+	  <Id Type="LootTableDefinition" Subtype="BuckBagContent" />
 	  <Rolls>2</Rolls>
 	  <!-- *** AlwaysDrops and IsUnique both true, doesn't count against rolls *** -->
 	  <Item Type="InventoryItem" Subtype="Antlers" AlwaysDrops="true" IsUnique="true" />
 	  <Item Type="ConsumableItem" Subtype="Meat" AlwaysDrops="true" IsUnique="true" />
+    <Item Type="Block" Subtype="PeltDeer" Amount="1" AlwaysDrops="true" IsUnique="true" />
 	  <!-- *** The rest does count against rolls  *** -->
-	  <Item Type="ConsumableItem" Subtype="Meat" Weight="2" />
-	  <Item Type="InventoryItem" Subtype="PeltDeer" Weight="1.5" />
-	  <Item Weight="2" />
+    <Item Type="ConsumableItem" Subtype="Meat" Weight="3" />
+    <Item Type="ConsumableItem" Subtype="Meat" Weight="1" />
+	  <Item Weight="5" />
   </Definition>
 
 
@@ -332,9 +333,9 @@
     <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
   <Id Type="LootTableDefinition" Subtype="PineCone" />
   	<Rolls>1</Rolls>
-	  <Item Type="ConsumableItem"	Subtype="TreeSmall_Seed" Weight="75" />
+	  <Item Type="ConsumableItem"	Subtype="Pinecone" Weight="75" />
 	  <!-- Roughly 25% Probability for Pristine -->
-	  <Item Type="SchematicItem"	Subtype="Schematic_TreeSmall_Seed" Weight="25" />
+	  <Item Type="SchematicItem"	Subtype="Schematic_Pinecone" Weight="25" />
 	<Item Weight="100" />
   </Definition>
 <!-- ========================================================================================================================================== -->

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Bandage" />
+    <Public>true</Public>
+    <DisplayName>Simple Bandage</DisplayName>
+    <Description>
+	A Simple Bandage, crafted by an Apothocary.
+	This will stop bleeding and heal minor 
+	wounds.
+    </Description>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <Model>Models\Consumables\Bandage.mwm</Model>
+    <PhysicalMaterial>Cloth</PhysicalMaterial>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="BuffBandage" />
+    <Effect Category="Bleeding" Operation="Remove" />
+    <Effect Category="ArmWoundLeft" Operation="Remove" />
+    <Effect Category="ArmWoundRight" Operation="Remove" />
+    <Effect Category="ArmBrokenLeft" Operation="Remove" />
+    <Effect Category="ArmBrokenRight" Operation="Remove" />
+    <UseSound>PlayBandaging</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bandage" />
+    <DisplayName>Simple Bandage</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="ConsumableItem" Subtype="Herbs" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="Bandage" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bandage_Apothocary" />
+    <DisplayName>Apothocary: Simple Bandage</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Herbs" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Bandage_Schematic" />
+    </Results>
+    <CraftingTime Seconds="2"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+    <Id Type="SchematicItem" Subtype="Bandage_Schematic" />
+    <Public>true</Public>
+    <DisplayName>Simple Bandage Manuscript</DisplayName>
+    <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for a Simple Bandage. This knowledge
+      would be valuable for an Apothocary.
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Cubes\small\Scroll.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>10</MaxStackAmount>
+    <UseSound>ResearchSound</UseSound>
+    <Research Type="ResearchDefinition" Subtype="Bandage_Apothocary" />
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+
+  
+
+
+</Definitions>

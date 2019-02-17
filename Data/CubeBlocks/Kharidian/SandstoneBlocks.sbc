@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="SandstoneCube" />
+    <DisplayName>Sandstone Cube</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\cubes\kharidian\SandstoneCube.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\Large\Kharidian\SandStoneCube.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\StoneBlocks\CubeStone_V1_C1.mwm" />
+    </BuildProgressModels>
+    <MountpointRule>FromModel</MountpointRule>
+    <Rotation>YAxis</Rotation>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="10" />
+      <Component Type="InventoryItem" Subtype="LargeSandStone" Count ="12" />
+    </Components>
+    <RandomRotation>true</RandomRotation>
+    <NavigationDefinition>Default</NavigationDefinition>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <MaxIntegrity>600</MaxIntegrity>
+    <UseModelIntersection>false</UseModelIntersection>
+  </Definition>
+
+</Definitions>

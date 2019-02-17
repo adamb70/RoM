@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using VRage.Audio;
 using VRage.ObjectBuilders;
 
-namespace RomScripts.PoisonEffect
+namespace RomScripts76561197972467544.PoisonEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_PoisonEffectDefinition))]
     public class MyPoisonEffectDefinition : MyEntityStatEffectDefinition

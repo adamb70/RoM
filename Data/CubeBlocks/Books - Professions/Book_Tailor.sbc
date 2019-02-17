@@ -1,82 +1,128 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Tailor_Book" />
-      <BlockPairName>Tailor_Book</BlockPairName>
-      <DisplayName>Tailor Book</DisplayName>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Tailor_Book" />
+    <Rotation>All</Rotation>
+    <DisplayName>Tailor Book</DisplayName>
     <Description>
 "Linen, the canvas of the Tailor. They weave the war
 banners and interior decoration of many homes."
- 
+
 This book is used to record the potential ingredients 
 you discover as you explore the Realm of Mistvalin. 
 As you find new pristine ingredients, research will 
 be available to unlocked. Place this book on a surface 
 to read from it.
-</Description>
-      <Icon>Textures\GUI\Icons\Universal\Books\Tailor.dds</Icon>
-      <Model>Models\Universal\book_tailoring.mwm</Model>
-		  <CubeSize>Small</CubeSize>
-		  <BlockTopology>TriangleMesh</BlockTopology>
-      		  <Size x="2" y="1" z="2" />
-		  <ModelOffset x="0" y="0" z="0" />
-		  <PhysicalMaterial>Wood</PhysicalMaterial>
-		  <Components>
-			<Component Subtype="Timber10" Count="1" />
-		  </Components>
-		  <CriticalComponent Subtype="Timber10" Index="0" />
-	  <MountPoints>
-        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="1" />
-      </MountPoints>
-	  <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-		  <BuildTimeSeconds>6</BuildTimeSeconds>
-		  <Mass>1</Mass>
-		  <AvailableInSurvival>true</AvailableInSurvival>
-		  <VoxelPlacement>
-			<StaticMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</StaticMode>
-			<DynamicMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</DynamicMode>
-		  </VoxelPlacement>
-		</Definition>
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\Tailor.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
+    <Model>Models\Universal\book_tailoring.mwm</Model>
+    <PhysicalMaterial>Paper</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Tailor_Book" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="Tailor_Book"/>
-    <CraftingCategories>
-      <Category>Tailor_Book</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="TailorBookCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Research</CraftString>
+    <CraftingString>Researching Queue</CraftingString>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Tailor_Book" />
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory"/>
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="TailorBookScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="TailorBookCrafting" />
+    <QueueSize>4</QueueSize>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Tailor_BookInventory" />
-    <InventoryName>Tailor_BookInventory</InventoryName>
-    <DisplayName>Tailor_Book</DisplayName>
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="TailorBookRecipes" />
+    <Category>Tailor_Book</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Tailor_Book" />
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Tailor_Book" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="TailorBookCrafting" />
+    <Component Type="CraftingScheduler" Subtype="TailorBookScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="TailorBookRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponentQueued" Subtype="Tailor_Book" />
-    <Component Type="UseObjectsComponent" Subtype="Tailor_Book" />
-    <Component Type="Inventory" Subtype="Tailor_BookInventory" />
   </Definition>
+
+
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tailor_Book" />
+    <DisplayName>Tailor Book</DisplayName>
+    <Description>
+"Linen, the canvas of the Tailor. They weave the war
+banners and interior decoration of many homes."
+
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\Tailor.dds</Icon>
+    <Category>Book_Cooking</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Tailor_Book" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_Tailor_Book_Nomadic_Book" />
+    <DisplayName>Tailor Profession</DisplayName>
+    <Description>
+"Linen, the canvas of the Tailor. They weave the war
+banners and interior decoration of many homes."
+
+This book is used to record the potential ingredients 
+you discover as you explore the Realm of Mistvalin. 
+As you find new pristine ingredients, research will 
+be available to unlocked. Place this book on a surface 
+to read from it.
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\Tailor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Professions</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Tailor_Book_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
 </Definitions>

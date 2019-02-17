@@ -27,7 +27,7 @@
 //using VRage.ModAPI;
 //using VRageMath;
 
-//namespace RomScripts
+//namespace RomScripts76561197972467544
 //{
 //    [ReplicatedComponent]
 //    [MyComponent(typeof(MyObjectBuilder_WaterFuelComponent2))]

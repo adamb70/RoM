@@ -7,17 +7,17 @@
 
     <DisplayName>Wooden Spear</DisplayName>
     <Description>Wooden Spear</Description>
-	<Tag>Spear</Tag>
+    <Tag>Spear</Tag>
     <Icon>Textures\GUI\Icons\Cubes\WoodenSpear_Small.dds</Icon>
     <Size>
       <X>1.2</X>
       <Y>0.6</Y>
       <Z>0.3</Z>
     </Size>
-    <Mass>0.5</Mass>
+    <Mass>5</Mass>
     <Model>Models\WoodenSpear_Small.mwm</Model>
 
-    <PhysicalMaterial>Sword</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
 
     <Animation>shovel</Animation>
 
@@ -165,6 +165,7 @@
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>ClubWood</WeaponMaterial>
 
     <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 

@@ -1,80 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
     <Id Type="HandItem" Subtype="MaceIronFlangedEngraved" />
 
-    <!-- Display -->
-
-    <DisplayName>DisplayName_Weapon_MaceIronFlangedEngraved</DisplayName>
-    <Description>Description_Weapon_MaceIronFlangedEngraved</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\MaceIronFlanged.dds</Icon>
-    <Tag>WeaponMelee</Tag>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
-    <Volume>3</Volume>
-    <Model>Models\Weapons\FlangedMace_Engraved.mwm</Model>
-
-    <PhysicalMaterial>Mace</PhysicalMaterial>
-    
-    <Animation>Sword</Animation>
-
-    <MaxStackAmount>1</MaxStackAmount>
-
     <MaxDurability>300</MaxDurability>
-
-    <BrokenItem Type="MyObjectBuilder_InventoryItem" Subtype="MaceIronFlangedEngravedBroken" />
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Orientation>
-        <X>0</X>
-        <Y>0</Y>
-        <Z>0</Z>
-        <W>1</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.464</X>
-        <Y>-1.0</Y>
-        <Z>-0.505</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFps>
-    <EquippedTransformFpsCrouch>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.285</X>
-        <Y>-0.334</Y>
-        <Z>-0.131</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFpsCrouch>
-
-    <!-- Behaviors -->
-    <StanceToBehavior>
-      <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="MaceIronFlangedEngraved" />
-    </StanceToBehavior>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -210,6 +139,7 @@
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Mace</WeaponMaterial>
 
     <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 

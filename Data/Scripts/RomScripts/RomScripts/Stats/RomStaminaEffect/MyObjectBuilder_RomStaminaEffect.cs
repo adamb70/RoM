@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 using VRage.ObjectBuilders;
 using VRage.ObjectBuilders.Components.Entity.Stats;
 
-namespace RomScripts.RomStaminaEffect
+namespace RomScripts76561197972467544.RomStaminaEffect
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]

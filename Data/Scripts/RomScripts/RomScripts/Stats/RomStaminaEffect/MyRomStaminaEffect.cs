@@ -9,17 +9,17 @@ using Sandbox.Game.Multiplayer;
 using System;
 using VRage.Audio;
 using VRage.Game;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Utils;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
 using VRageMath;
 using VRage.Game.Components;
 using VRage.Session;
-using RomScripts.StatExtensions;
+using RomScripts76561197972467544.StatExtensions;
 
 
-namespace RomScripts.RomStaminaEffect
+namespace RomScripts76561197972467544.RomStaminaEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_RomStaminaEffect))]
     public class MyRomStaminaEffect : MyEntityStatEffect
@@ -44,18 +44,18 @@ namespace RomScripts.RomStaminaEffect
             {
                 this.m_staminaStat = owner.GetRomStamina();
             }
-            if (this.m_staminaStat == null)
-            {
-                MyLog.Default.Error("Stamina effect '{0}' applied to an entity '{1}' without source stat!", new object[]
-                {
-                    base.Definition.Id,
-                    base.Owner.Entity.Definition.Id
-                });
-                return;
-            }
-            this.m_staminaStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.OnStaminaChanged);
-            this.m_positionComp = base.Owner.Entity.PositionComp;
-            this.m_positionComp.OnPositionChanged += new System.Action<MyPositionComponentBase>(this.OnPositionChanged);
+			if (this.m_staminaStat == null)
+			{
+				//MyLog.Default.Error("Stamina effect '{0}' applied to an entity '{1}' without source stat!", new object[]
+				//{
+				//	base.Definition.Id,
+				//	base.Owner.Entity.Definition.Id
+				//});
+				return;
+			}
+			this.m_staminaStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.OnStaminaChanged);
+			this.m_positionComp = base.Owner.Entity.PositionComp;
+			this.m_positionComp.OnPositionChanged += new Action<MyPositionComponentBase>(this.OnPositionChanged);
         }
 
         public override void Deactivate()
@@ -76,8 +76,7 @@ namespace RomScripts.RomStaminaEffect
         public override void Tick(float timeSinceUpdate)
         {
             MyRomStaminaEffectDefinition myRomStaminaEffectDefinition = base.Definition as MyRomStaminaEffectDefinition;
-            System.TimeSpan t = MySession.Static.ElapsedGameTime - this.m_lastMovedTime;
-            if (t > myRomStaminaEffectDefinition.RestingTime)
+            if (MySession.Static.ElapsedGameTime - this.m_lastMovedTime > myRomStaminaEffectDefinition.RestingTime)
             {
                 if (!base.Owner.HasEffect(myRomStaminaEffectDefinition.RestingEffect))
                 {
@@ -126,9 +125,9 @@ namespace RomScripts.RomStaminaEffect
             {
                 this.m_lastMovedTime = MySession.Static.ElapsedGameTime;
             }
-            if (newValue <= 0f && oldValue > 0f)
+            MyRomStaminaEffectDefinition myStaminaEffectDefinition = base.Definition as MyRomStaminaEffectDefinition;
+            if (newValue < myStaminaEffectDefinition.ExhaustionThreshold && oldValue >= myStaminaEffectDefinition.ExhaustionThreshold)
             {
-                MyRomStaminaEffectDefinition myStaminaEffectDefinition = base.Definition as MyRomStaminaEffectDefinition;
                 base.Owner.AddEffect(myStaminaEffectDefinition.ExhaustionEffect, 0L);
             }
         }

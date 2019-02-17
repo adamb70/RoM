@@ -1,42 +1,5 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="PlowBlock" />
-    <DisplayName>DisplayName_Block_PlowBlock</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\PlowBlock.dds</Icon>
-    <BlockPairName>PlowBlock</BlockPairName>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="2" y="3" z="8" />
-    <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\small\PlowBlockChassis.mwm</Model>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <MountPoints>
-      <MountPoint Side="Front" StartX="0.0" StartY="1.0" EndX="2.0" EndY="3.0" Default="true" />
-      <MountPoint Side="Back" StartX="0.0" StartY="1.0" EndX="2.0" EndY="3.0" />
-      <MountPoint Side="Left" StartX="0.0" StartY="1.0" EndX="8.0" EndY="3.0" />
-      <MountPoint Side="Right" StartX="0.0" StartY="1.0" EndX="8.0" EndY="3.0" />
-      <!--<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0" />
-        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="8.0" />
-        <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="8.0" EndY="3.0" />
-        <MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="3.0" EndY="8.0" />-->
-    </MountPoints>
-    <CriticalComponent Type="InventoryItem" Subtype="PartsMetal" Index="0" />
-    <Components>
-      <Component Tag="ScrapWood" Count="5" />
-      <Component Tag="Timber" Count ="8" />
-      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="60" />
-    </Components>
-    <MaxIntegrity>4000</MaxIntegrity>
-    <Mass>400</Mass>
-    <Volume>1125</Volume>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Direction>Vertical</Direction>
-    <Rotation>Both</Rotation>
-    <GuiVisible>true</GuiVisible>
-  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PlowBlock"/>
@@ -49,7 +12,7 @@
       <Item Amount="60" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="PlowBlock" />
+      <Item Amount="1" Type="Block" Subtype="PlowBlock" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>

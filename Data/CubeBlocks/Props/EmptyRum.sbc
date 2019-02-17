@@ -1,37 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id Type="CubeBlock" Subtype="EmptyRum" />
-      <DisplayName>Empty Rum</DisplayName>
-      <Icon>Textures\GUI\Icons\Cubes\EmptyRum.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\Small\EmptyRum.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Type="InventoryItem" Subtype="StrawsFlax" Count="1" />
-        <Component Type="InventoryItem" Subtype="Dirt" Count="3" />
-      </Components>
-      <CriticalComponent Subtype="Sticks" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>4</Mass>
-      <AvailableInSurvival>false</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="EmptyRum" />
+    <DisplayName>Empty Rum</DisplayName>
+    <Description>Empty Rum</Description>
+    <Icon>Textures\GUI\Icons\Cubes\EmptyRum.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="1" y="2" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\EmptyRum.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="EmptyRum" Count="1" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <Rotation>All</Rotation>
+    <Visible>false</Visible>
+    <MaxIntegrity>800</MaxIntegrity>
+    <Mass>1</Mass>
   </Definition>
 
 </Definitions>

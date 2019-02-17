@@ -30,7 +30,7 @@ using Sandbox.Game.EntityComponents.Character;
 
 
 
-namespace RomScripts.ReadableItem
+namespace RomScripts76561197972467544.ReadableItem
 {
     [MyHandItemBehavior(typeof(MyObjectBuilder_ReadableItemBehaviorDefinition))]
     // The StaticEventOwner attribute is for multiplayer purposes.

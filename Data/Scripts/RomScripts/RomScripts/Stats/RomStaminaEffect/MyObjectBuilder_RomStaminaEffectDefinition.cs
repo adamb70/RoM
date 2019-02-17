@@ -4,7 +4,7 @@ using VRage.ObjectBuilders;
 using VRage.ObjectBuilders.Components.Entity.Stats.Definitions;
 using VRage.ObjectBuilders.Definitions;
 
-namespace RomScripts.RomStaminaEffect
+namespace RomScripts76561197972467544.RomStaminaEffect
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]
@@ -25,5 +25,10 @@ namespace RomScripts.RomStaminaEffect
         /// The ratio of thirst consumed for every 1 stamina regenerated.
         /// </summary>
         public float? StaminaToThirstRatio;
+
+        /// <summary>
+		/// The stamina threshold that has to be crossed for exhaustion to trigger.
+		/// </summary>
+		public float? ExhaustionThreshold;
     }
 }

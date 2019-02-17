@@ -1,72 +1,72 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Rienburg_Bakery_Market_Stand" />
-      <BlockPairName>Rienburg_Bakery_Market_Stand</BlockPairName>
-      <DisplayName>Rienburg Bakery Market Stand</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
-      <Icon>Textures\GUI\Icons\NPC.dds</Icon>
-      <Public>true</Public>
-      <CubeSize>Large</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Economey\market_stand.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="Timber10" Count="1" />
-      </Components>
-      <CriticalComponent Subtype="Timber10" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>false</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="Rienburg_Bakery_Market_Stand"/>
-    <CraftingCategories>
-      <Category>Rienburg_Bakery_Market_Stand</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Rienburg_Bakery_Market_Stand" />
+    <DisplayName>Rienburg Bakery Market Stand</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Universal\Economy\market_stand.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\KingStatue_Construction_1.mwm" />
+    </BuildProgressModels>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Tag="Timber" Count="10" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+    </MountPoints>
+    <Rotation>YAxis</Rotation>
+    <UseModelIntersection>false</UseModelIntersection>
+    <NavigationDefinition>NoEntry</NavigationDefinition>
+    <CompoundEnabled>false</CompoundEnabled>
+    <MaxIntegrity>1200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="RienburgBakeryMarketStandCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Purchase</CraftString>
+    <CraftingString>Purchasing Queue</CraftingString>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Rienburg_Bakery_Market_Stand" />
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory"/>
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="RienburgBakeryMarketStandScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="RienburgBakeryMarketStandCrafting" />
+    <QueueSize>4</QueueSize>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Rienburg_Bakery_Market_StandInventory" />
-    <InventoryName>Rienburg_Bakery_Market_StandInventory</InventoryName>
-    <DisplayName>Rienburg_Bakery_Market_Stand</DisplayName>
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="RienburgBakeryMarketStandRecipes" />
+    <Category>Rienburg_Bakery_Market_Stand</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Rienburg_Bakery_Market_Stand" />
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Rienburg_Bakery_Market_Stand" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="RienburgBakeryMarketStandCrafting" />
+    <Component Type="CraftingScheduler" Subtype="RienburgBakeryMarketStandScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="RienburgBakeryMarketStandRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponentQueued" Subtype="Rienburg_Bakery_Market_Stand" />
-    <Component Type="UseObjectsComponent" Subtype="Rienburg_Bakery_Market_Stand" />
-    <Component Type="Inventory" Subtype="Rienburg_Bakery_Market_StandInventory" />
   </Definition>
-
 
 </Definitions>

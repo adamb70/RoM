@@ -1,94 +1,82 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Scribe_Table" />
-      <BlockPairName>Scribe_Table</BlockPairName>
-      <DisplayName>Scribe's Table</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Book.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
-		  <CubeSize>Small</CubeSize>
-		  <BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="6" y="3" z="3" />
-		  <ModelOffset x="0" y="0" z="0" />
-		  <Model>Models\Cubes\Small\WoodTable.mwm</Model>
-		  <PhysicalMaterial>Wood</PhysicalMaterial>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Scribe_Table" />
+    <DisplayName>Scribe's Table</DisplayName>
+    <Description>Scribe's Table</Description>
+    <Icon>Textures\GUI\Icons\Universal\Book.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="0" z="-2" />
+      <Max x="3" y="3" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\WoodTable.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
     <Components>
-      <Component Tag="Timber" Count="1" />
+      <Component Type="Block" Subtype="Scribe_Table" Count="1" />
     </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
-    <MaxIntegrity>200</MaxIntegrity>
-	  <MountPoints>
-        <MountPoint Side="Top" StartX="0" StartY="0" EndX="6" EndY="3" />
-        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="6" EndY="3" />
-      </MountPoints>
-	  <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-		  <BuildTimeSeconds>6</BuildTimeSeconds>
-		  <Mass>10</Mass>
-		  <AvailableInSurvival>true</AvailableInSurvival>
-		  <VoxelPlacement>
-			<StaticMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</StaticMode>
-			<DynamicMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</DynamicMode>
-		  </VoxelPlacement>
-		</Definition>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="6" EndY="3" />
+    </MountPoints>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>160</MaxIntegrity>
+  </Definition>
+
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Scribe_Table"/>
     <DisplayName>Scribe's Table</DisplayName>
-
-<Description>This is an essential for learning any profession.
-The scribe table will allow you to write books to
-record discoveries of pristine items.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Book.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
+    <Description>This is an essential for learning any profession. The scribe table will allow you to write books to record discoveries of pristine items.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Book.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
       <Item Amount="1" Tag="Universal_Log" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Scribe_Table" />
+      <Item Amount="1" Type="Block" Subtype="Scribe_Table" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="Scribe_Table"/>
-    <CraftingCategories>
-      <Category>Book_Cooking</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="ScribeTableCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Scribe_Table" />
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory"/>
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="ScribeTableScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="ScribeTableCrafting" />
+    <QueueSize>14</QueueSize>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Scribe_TableInventory" />
-    <InventoryName>Scribe_TableInventory</InventoryName>
-    <DisplayName>Scribe_Table</DisplayName>
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="ScribeTableRecipes" />
+    <Category>Book_Cooking</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Scribe_Table" />
-    <Component Type="UseObjectsComponent" Subtype="Scribe_Table" ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="Scribe_TableInventory" ForceCreate="true"/>
-    <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponentQueued" Subtype="Scribe_Table" ForceCreate="true"/>
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Scribe_Table" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    <Component Type="CraftingComponent" Subtype="ScribeTableCrafting" />
+    <Component Type="CraftingScheduler" Subtype="ScribeTableScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="ScribeTableRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="TableCrafting" />
   </Definition>
 
 

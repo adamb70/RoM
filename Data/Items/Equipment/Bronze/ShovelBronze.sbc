@@ -1,103 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
- 
-  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
     <Id Type="HandItem" Subtype="ShovelBronze"/>
 
-    <!-- Display -->
-    <DisplayName>DisplayName_Tool_ShovelBronze</DisplayName>
-    <Description>Description_Tool_ShovelBronze</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\ShovelBronze.dds</Icon>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
-    <Model>Models\Weapons\BronzeShovel.mwm</Model>
-
-    <PhysicalMaterial>IronShovel</PhysicalMaterial>
-
-    <Animation>shovel</Animation>
-
-    <DummyMapping Name="shovel_dumb_left" AnimationVariable="#shovelleft"/>
-
-    <MaxStackAmount>1</MaxStackAmount>
-
-    <!-- Equipment -->
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
-
     <MaxDurability>400</MaxDurability>
-
-    <Position>
-      <Slot>MainHand</Slot>
-      <Slot>OffHand</Slot>
-    </Position>
-
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Orientation>
-        <X>0</X>
-        <Y>0</Y>
-        <Z>0</Z>
-        <W>1</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.533</X>
-        <Y>-1.0</Y>
-        <Z>-0.339</Z>
-      </Position>
-      <Orientation>
-        <X>0.2288072</X>
-        <Y>0.6835734</Y>
-        <Z>-0.240634</Z>
-        <W>0.6499768</W>
-      </Orientation>
-    </EquippedTransformFps>
-
-    <!-- Behavior -->
-    <StanceToBehavior>
-      <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_DiggerToolBehaviorDefinition" Subtype="ShovelBronze"/>
-    </StanceToBehavior>
-    <StanceToBehavior>
-      <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="ShovelBronze"/>
-    </StanceToBehavior>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_DiggerToolBehaviorDefinition">
     <Id Type="DiggerToolBehaviorDefinition" Subtype="ShovelBronze"/>
-	<Cost Stat="Mood" Cost="0.25" />
-	<Cost Stat="Stamina" Cost="2.5" />
+    <Cost Stat="Mood" Cost="0.25" />
+    <Cost Stat="Stamina" Cost="2.5" />
+    <ToolheadMaterial>ShovelMetal</ToolheadMaterial>
+    <ToolheadMaterialFill>ShovelFill</ToolheadMaterialFill>
 
     <YieldMultiplier>1.0</YieldMultiplier>
-    <TargettingDistance>3</TargettingDistance>
-    <MiningRadius>0.5</MiningRadius>
-    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Shovel"/>
+    <TargetingDistance>3</TargetingDistance>
+    <MiningRadius>0.7</MiningRadius>
+    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Shovel" />
 
-    <SourceItem Type="InventoryItem" Subtype="Dirt"/>
+    <SourceItem Type="InventoryItem" Subtype="Dirt" />
     <FillMaterial>Soil</FillMaterial>
-    <FillRadius>0.5</FillRadius>
+    <FillRadius>0.7</FillRadius>
 
-    <DirtId Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Dirt"/>
+    <DirtId Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Dirt" />
     <FillVolume>64</FillVolume>
 
     <PrimaryEffect>
-      <HitTime>.6</HitTime>
-      <AnimationTime>1.151</AnimationTime>
-      <SwingSound>ToolSwish</SwingSound>
+      <HitTime>.5</HitTime>
+      <AnimationTime>1.2</AnimationTime>
       <Animation>Digging</Animation>
     </PrimaryEffect>
 
     <SecondaryEffect>
-      <HitTime>.6</HitTime>
-      <AnimationTime>1.151</AnimationTime>
-      <SwingSound>ToolSwish</SwingSound>
+      <HitTime>.5</HitTime>
+      <AnimationTime>1.2</AnimationTime>
       <Animation>Filling</Animation>
     </SecondaryEffect>
   </Definition>
@@ -191,6 +128,7 @@
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Axe</WeaponMaterial>
 
     <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 

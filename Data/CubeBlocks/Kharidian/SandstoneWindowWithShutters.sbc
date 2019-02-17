@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="SandstoneWallWithShutters" /> 
+    <DisplayName>Sandstone Window With Shutters</DisplayName>
+    <Icon>Textures\GUI\Icons\cubes\kharidian\SandstoneWall.dds</Icon>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Model>Models\Cubes\Large\Kharidian\SandstoneWindowShutter.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\Large\StoneBlocks\WallStoneWindowShutters_V1_C1.mwm" />
+    </BuildProgressModels>
+    <UseModelIntersection>false</UseModelIntersection>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Visible>false</Visible>
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Type="InventoryItem" Subtype="LargeSandStone" Count ="5" />
+      <Component Tag="Timber" Count="2" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count="4" />
+    </Components>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="SandstoneWallWithShutters" />
+    <CopyFrom Type="Block" Subtype="DefaultShuttersContainer" />
+    <Component Type="ModelAttachmentComponent" Subtype="SandstoneWallWithShutters" />
+    <Component Type="AttachmentAnimationComponent" Subtype="SandstoneWallWithShutters" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ModelAttachmentComponentDefinition">
+    <Id Type="ModelAttachmentComponent" Subtype="SandstoneWallWithShutters" />
+    <Attachment Name="RoundShutterRight" Bone="WallWoodStoneWithWindowR_Pin">
+      <Rotation x="0" y="90" z="0" />
+      <DefaultEntity Type="EntityBase" Subtype="ShuttersWoodRoundRight" />
+    </Attachment>
+    <Attachment Name="RoundShutterLeft" Bone="WallWoodStoneWithWindowL_Pin">
+      <Rotation x="0" y="90" z="0" />
+      <DefaultEntity Type="EntityBase" Subtype="ShuttersWoodRoundLeft" />
+    </Attachment>
+    <Attachment Name="RoundShutterLock" Bone="WallWoodStoneWithWindowLock_Pin">
+      <Position x="0" y="-0.1" z="0" />
+      <Rotation x="0" y="90" z="0" />
+      <DefaultEntity Type="EntityBase" Subtype="ShuttersLockWoodRound" />
+    </Attachment>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_AttachmentAnimationComponentDefinition">
+    <Id Type="AttachmentAnimationComponent" Subtype="SandstoneWallWithShutters" />
+    <Sequence Name="Open" WrapMode="Once">
+      <Event Time="0.0" Name="ShuttersOpening" />
+      <Event Time="0.4" Name="DoorMoving" />
+      <Event Time="1.6" Name="ShuttersOpened" />
+
+      <Animation AttachmentPoint="RoundShutterRight">
+        <Key Time="0">
+          <OrientationEuler x="-90" y="0" z="0" />
+        </Key>
+        <Key Time="0.4">
+          <Interpolation Method="QuadraticEaseIn" />
+          <OrientationEuler x="-90" y="0" z="0" />
+        </Key>
+        <Key Time="1.6">
+          <OrientationEuler x="0" y="0" z="0" />
+        </Key>
+      </Animation>
+      <Animation AttachmentPoint="RoundShutterLeft">
+        <Key Time="0">
+          <OrientationEuler x="90" y="0" z="0" />
+        </Key>
+        <Key Time="0.4">
+          <Interpolation Method="QuadraticEaseIn" />
+          <OrientationEuler x="90" y="0" z="0" />
+        </Key>
+        <Key Time="1.6">
+          <OrientationEuler x="0" y="0" z="0" />
+        </Key>
+      </Animation>
+      <Animation AttachmentPoint="RoundShutterLock">
+        <Key Time="0">
+          <Interpolation Method="QuarticEaseOut" />
+          <Position x="-0.08" y="0" z="0" />
+          <OrientationEuler x="-90" y="0" z="0" />
+        </Key>
+        <Key Time="0.4">
+          <Interpolation Method="QuadraticEaseIn" />
+          <OrientationEuler x="-90" y="0" z="0" />
+        </Key>
+        <Key Time="1.6">
+          <OrientationEuler x="0" y="0" z="0" />
+        </Key>
+      </Animation>
+    </Sequence>
+    <Sequence Name="Close" WrapMode="Once">
+      <Event Time="0.0" Name="ShuttersClosing" />
+      <Event Time="0.1" Name="DoorMoving" />
+      <Event Time="1.2" Name="ShuttersClosed" />
+
+      <Animation AttachmentPoint="RoundShutterRight">
+        <Key Time="0">
+          <Interpolation Method="QuadraticEaseIn" />
+          <OrientationEuler x="0" y="0" z="0" />
+        </Key>
+        <Key Time="1.2">
+          <OrientationEuler x="-90" y="0" z="0" />
+        </Key>
+      </Animation>
+      <Animation AttachmentPoint="RoundShutterLeft">
+        <Key Time="0">
+          <Interpolation Method="QuadraticEaseIn" />
+          <OrientationEuler x="0" y="0" z="0" />
+        </Key>
+        <Key Time="1.2">
+          <OrientationEuler x="90" y="0" z="0" />
+        </Key>
+      </Animation>
+      <Animation AttachmentPoint="RoundShutterLock">
+        <Key Time="0">
+          <Interpolation Method="QuadraticEaseIn" />
+          <OrientationEuler x="0" y="0" z="0" />
+        </Key>
+        <Key Time="1.2">
+          <Interpolation Method="QuarticEaseIn" />
+          <OrientationEuler x="-90" y="0" z="0" />
+        </Key>
+        <Key Time="1.6">
+          <Position x="-0.08" y="0" z="0" />
+          <OrientationEuler x="-90" y="0" z="0" />
+        </Key>
+      </Animation>
+    </Sequence>
+  </Definition>
+
+</Definitions>

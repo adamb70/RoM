@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Chocolate_Bar" />
+    <Tag>Dish</Tag>
+    <Public>true</Public>
+    <DisplayName>Chocolate Bar</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\chocolate_bar.dds</Icon>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Consumables\Bread.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <Effect Type="EntityStatEffect" Subtype="Chocolate_Bar_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Chocolate_Bar_Food" />
+    <Effect Type="EntityStatEffect" Subtype="Chocolate_Bar_Vigor" />
+    <Effect Type="EntityStatEffect" Subtype="Chocolate_Bar_Stamina" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+    <Id Type="SchematicItem" Subtype="Chocolate_Bar_Schematic" />
+    <Public>true</Public>
+    <DisplayName>Chocolate Bar Manuscript</DisplayName>
+    <Description>As you examine the manuscript, you notice diagrams and written instructions explaining the process for Making a Chocolate Bar. This knowledge would be valuable for a Chef.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\chocolate_bar.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Cubes\small\Scroll.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>10</MaxStackAmount>
+    <UseSound>ResearchSound</UseSound>
+    <Research Type="ResearchDefinition" Subtype="Chocolate_Bar_Cooking" />
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+
+
+</Definitions>

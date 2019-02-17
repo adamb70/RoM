@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="WineGlass" />
+    <Rotation>All</Rotation>
+    <DisplayName>Wine Glass</DisplayName>
+    <Description>Wine Glass</Description>
+    <Icon>Textures\GUI\Icons\Cubes\WineGlass.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\WineGlass.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="WineGlass" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+</Definitions>

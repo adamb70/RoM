@@ -7,19 +7,22 @@
     <DisplayName>Krieg Schaufeln</DisplayName>
     <Description>A barbarian's War Shovel...</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\ShovelIron.dds</Icon>
+    <Tag>Shovel</Tag>
+    <Tag>ToolLong</Tag>
     <Size>
       <X>1.2</X>
       <Y>0.6</Y>
       <Z>0.3</Z>
     </Size>
-    <Mass>0.5</Mass>
     <Model>Models\Weapons\IronShovel.mwm</Model>
 
-    <PhysicalMaterial>IronShovel</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Mass>5</Mass>
 
-    <Animation>Sword</Animation>
+    <Animation>shovel</Animation>
 
-    <DummyMapping Name="shovel_dumb_left" AnimationVariable="#shovelleft"/>
+    <DummyMapping Name="shovel_dumb_left" AnimationVariable="#shovelleft" />
+    <DummyMapping Name="shovel_dumb_left_female" AnimationVariable="#shovelleftfemale" />
 
     <MaxStackAmount>1</MaxStackAmount>
 
@@ -61,45 +64,142 @@
     <!-- Behavior -->
     <StanceToBehavior>
       <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_DiggerToolBehaviorDefinition" Subtype="ShovelIron"/>
+      <BehaviorId Type="MyObjectBuilder_DiggerToolBehaviorDefinition" Subtype="ShovelNorden"/>
     </StanceToBehavior>
     <StanceToBehavior>
       <StanceName>CombatMode</StanceName>
       <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="ShovelNorden"/>
     </StanceToBehavior>
-    
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_DiggerToolBehaviorDefinition">
     <Id Type="DiggerToolBehaviorDefinition" Subtype="ShovelNorden"/>
     <Cost Stat="Mood" Cost="0.25" />
     <Cost Stat="Stamina" Cost="2.5" />
-	  <StatCost Stat="Fury" Cost="-3" />
+    <StatCost Stat="Fury" Cost="-3" />
+    <ToolheadMaterial>ShovelMetal</ToolheadMaterial>
+    <ToolheadMaterialFill>ShovelFill</ToolheadMaterialFill>
 
     <YieldMultiplier>1.0</YieldMultiplier>
-    <TargettingDistance>3</TargettingDistance>
+    <TargetingDistance>3</TargetingDistance>
     <MiningRadius>0.5</MiningRadius>
-    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Shovel"/>
+    <Mining Type="MyObjectBuilder_VoxelMiningDefinition" Subtype="Shovel" />
 
-    <SourceItem Type="InventoryItem" Subtype="Dirt"/>
+    <SourceItem Type="InventoryItem" Subtype="Dirt" />
     <FillMaterial>Soil</FillMaterial>
     <FillRadius>0.5</FillRadius>
 
-    <DirtId Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Dirt"/>
+    <DirtId Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Dirt" />
     <FillVolume>64</FillVolume>
 
     <PrimaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1.151</AnimationTime>
-      <SwingSound>ToolSwish</SwingSound>
+      <AnimationTime>1.2</AnimationTime>
       <Animation>Digging</Animation>
     </PrimaryEffect>
 
     <SecondaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1.151</AnimationTime>
-      <SwingSound>ToolSwish</SwingSound>
+      <AnimationTime>1.2</AnimationTime>
       <Animation>Filling</Animation>
     </SecondaryEffect>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="ShovelNorden" />
+
+    <LeftSwing>
+      <Range>2.0</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="14" MaximumDamage="18" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </LeftSwing>
+
+    <RightSwing>
+      <Range>2.0</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="14" MaximumDamage="18" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </RightSwing>
+
+    <ForwardSwing>
+      <Range>2.0</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishHeavy</SwingSound>
+
+      <LightAttack MinimumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="14" />
+        <StatCost Stat="Fury" Cost="-1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="14" MaximumDamage="18" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="18" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>ClubWood</WeaponMaterial>
+
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+
+    <ImmediateLocking>false</ImmediateLocking>
   </Definition>
 </Definitions>

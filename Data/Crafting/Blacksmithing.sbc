@@ -1,0 +1,506 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmithingStation_Blacksmithing" />
+    <DisplayName>Blacksmithing: Smithing Station</DisplayName>
+    <Description>An upgraded version of the anvil,
+allows you to craft higher tier items
+and construct them faster.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\Blacksmithing.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Smithy.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="25" Type="SchematicItem" Subtype="Schematic_IronOre" />
+      <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      <Item Amount="16" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_SmithingStation" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronSmithing_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Smelting</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_IronSmithing" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stove_Blacksmithing" />
+    <DisplayName>Blacksmithing: Stove</DisplayName>
+
+    <Description>An upgraded version of the Bonfire,
+allows you to craft higher tier items
+and construct them faster. Contains an
+oven, used for baking bread and other
+cooking recipes.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\cooking\stove.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="45" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Stove" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Nails_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Nails</DisplayName>
+
+    <Description>Nails are used to strengthen wood
+walls by a large amount.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Blacksmithing\iron_nails.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Nails" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Nails" />
+    <DisplayName>Iron Nails</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Blacksmithing\iron_nails.dds</Icon>
+    <Category>Anvil</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="12" Type="InventoryItem" Subtype="Iron_Nails" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchStand_Blacksmithing" />
+    <DisplayName>Blacksmithing: Torch Stand</DisplayName>
+
+    <Description>Used as a light source.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_TorchStand" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchWall_Blacksmithing" />
+    <DisplayName>Blacksmithing: Torch Wall</DisplayName>
+
+    <Description>Used as a light source.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallTorch.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_TorchWall" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FireBucket_Blacksmithing" />
+    <DisplayName>Blacksmithing: Fire Bucket</DisplayName>
+
+    <Description>Used as a light source.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\FireBucket.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="10" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_FireBucket" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- ========================================================================================================== -->
+  <!-- Tools -->
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronAxe" />
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronAxe.dds</Icon>
+    <DisplayName>Iron Axe</DisplayName> 
+    <Category>Anvil</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Universal_Stick" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="HandItem" Subtype="AxeIron" />
+    </Results>
+    <CraftingTime Seconds="15"/>
+  </Definition>
+  <!-- ________________________________________________________________________________ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Axe_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Axe</DisplayName>
+
+    <Description>Axes are used to cut down trees
+at a faster rate then stone axes.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronAxe.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Axe" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- ________________________________________________________________________________ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Hammer_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Hammer</DisplayName>
+
+    <Description>Hammers are used to build structers
+at a faster rate then wooden hammers.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\HammerIron.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Hammer" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- ________________________________________________________________________________ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_PickAxe_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Pickaxe</DisplayName>
+
+    <Description>Pickaxes are used to mine ore.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronPickaxe.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="10" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_PickAxe" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- ========================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ShovelIron"/>
+    <DisplayName>DisplayName_Tool_IronShovel</DisplayName>
+    <Description>Description_Tool_IronShovel</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronShovel.dds</Icon>
+    <Category>Anvil</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Universal_Stick" />
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="ShovelIron" />
+    </Results>
+    <CraftingTime Seconds="15"/>
+  </Definition>
+  <!-- ________________________________________________________________________________ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Shovel_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Shovel</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronShovel.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_IronShovel" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- ________________________________________________________________________________ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Plow_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Plow</DisplayName>
+
+    <Description>Iron Plows are used to plow fields
+for a longer time then Stone Plows.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Plow" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- ========================================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Mace_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Mace</DisplayName>
+
+    <Description>Iron Maces are used to fight
+foes at close range.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Mace.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Mace" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- ========================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="GlassblowingPipe" />
+    <DisplayName>Glassblowing Pipe</DisplayName>
+    <Description>Glassblowing Pipes are used to for the crafting glass objects.
+Most commonly used for the Crafting profession.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Crafting\GlassblowingPipe.dds</Icon>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="3" Type="InventoryItem" Subtype="IngotIron" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="HandItem" Subtype="GlassblowingPipe" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+  <!-- ========================================================================================================== -->   
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LandscapeStake"/>
+    <DisplayName>DisplayName_Tool_LandscapeStake</DisplayName>
+    <Description>Description_Tool_LandscapeStake</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\LandscapingStake.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Universal_Stick" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="HandItem" Subtype="LandscapeStake" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <!-- EXAMPLE HOW TO ADD SPECIFIC PROGRESS SOUND FOR CRAFTING ITEM <ProgressBarSoundCue>HudErrorMessage</ProgressBarSoundCue> -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Iron_Sword_Blacksmithing" />
+    <DisplayName>Blacksmithing: Iron Sword</DisplayName>
+
+    <Description>Iron Swords are used to fight
+foes at close range.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\IronSword.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Blacksmithing_Book</Category>
+    <Prerequisites>
+      <Item Amount="10" Type="SchematicItem" Subtype="Schematic_IronOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Blacksmithing_Schematic_Iron_Sword" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- ========================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronOreToIronIngots" />
+    <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+    <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
+    <DisplayName>DisplayName_IronOreToIronIngots</DisplayName>
+    <Category>Smelting</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="InventoryItem" Subtype="OreIron" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- ========================================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronIngotToMetalParts" />
+    <Icon>Textures\GUI\Icons\Materials\MetalParts.dds</Icon>
+    <DisplayName>DisplayName_IronIngotToMetalParts</DisplayName>
+    <Category>Smelting</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="6" Type="InventoryItem" Subtype="PartsMetal" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <!--Ores/Nuggets-->
+
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SaltNuggetsToOre" />
+    <Icon>Textures\GUI\Icons\SaltOreIcon.dds</Icon>
+    <DisplayName>Combine salt nuggets into ore</DisplayName>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="10" Type="InventoryItem" Subtype="SaltNugget" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="InventoryItem" Subtype="SaltOre" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CoalNuggetsToOre" />
+    <Icon>Textures\GUI\Icons\CoalOreIcon.dds</Icon>
+    <DisplayName>Combine coal nuggets into ore</DisplayName>
+    <Category>Masonry_Table</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="InventoryItem" Subtype="CoalNugget" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="InventoryItem" Subtype="CoalOre" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="GoldNuggetsToGoldIngots" />
+    <Icon>Textures\GUI\Icons\GoldNuggetIcon.dds</Icon>
+    <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
+    <DisplayName>Smelt gold nuggets to ingots</DisplayName>
+    <Category>Smelting</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="InventoryItem" Subtype="GoldNugget" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotGold" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="GoldOreToGoldIngots" />
+    <Icon>Textures\GUI\Icons\Materials\OreGold.dds</Icon>
+    <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
+    <DisplayName>Smelt gold ore to ingots</DisplayName>
+    <Category>Smelting</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="InventoryItem" Subtype="OreGold" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotGold" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MithrilOreToMithrilIngots" />
+    <Icon>Textures\GUI\Icons\MithrilOreIcon.dds</Icon>
+    <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
+    <DisplayName>Smelt mithril ore to ingots</DisplayName>
+    <Category>Smelting</Category>
+    <Prerequisites>
+      <Item Amount="4" Type="InventoryItem" Subtype="MithrilOre" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="InventoryItem" Subtype="MithrilIngot" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="IronNuggetsToIronIngots" />
+    <Icon>Textures\GUI\Icons\IronNuggetIcon.dds</Icon>
+    <Icon>Textures\GUI\Icons\SmeltIcon.dds</Icon>
+    <DisplayName>Smelt Iron Nuggets</DisplayName>
+    <Category>Smelting</Category>
+    <Prerequisites>
+      <Item Amount="16" Type="InventoryItem" Subtype="IronNugget" />
+    </Prerequisites>
+    <Results>	  
+      <Item Amount="1" Type="InventoryItem" Subtype="IngotIron" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+
+
+
+</Definitions>

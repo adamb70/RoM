@@ -4,7 +4,7 @@ using System;
 using VRage.Game;
 using VRage.Game.Definitions;
 
-namespace RomScripts.RomStaminaEffect
+namespace RomScripts76561197972467544.RomStaminaEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_RomStaminaEffectDefinition))]
     public class MyRomStaminaEffectDefinition : MyEntityStatEffectDefinition
@@ -45,7 +45,15 @@ namespace RomScripts.RomStaminaEffect
             get;
             private set;
         }
-        
+
+        /// <summary>
+        /// The stamina threshold that has to be crossed for exhaustion to trigger.
+        /// </summary>
+        public float ExhaustionThreshold
+        {
+            get;
+            private set;
+        }
 
         protected override void Init(MyObjectBuilder_DefinitionBase builder)
         {
@@ -68,6 +76,7 @@ namespace RomScripts.RomStaminaEffect
             {
                 this.StaminaToThirstRatio = myObjectBuilder_StaminaEffectDefinition.StaminaToThirstRatio.Value;
             }
+            this.ExhaustionThreshold = (myObjectBuilder_StaminaEffectDefinition.ExhaustionThreshold ?? 0f);
         }
     }
 }

@@ -9,14 +9,14 @@ using Sandbox.Game.Multiplayer;
 using System;
 using VRage.Audio;
 using VRage.Game;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Utils;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
 using VRageMath;
-using RomScripts.StatExtensions;
+using RomScripts76561197972467544.StatExtensions;
 
-namespace RomScripts.MoodEffect
+namespace RomScripts76561197972467544.MoodEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_MoodEffect))]
     public class MyMoodEffect : MyEntityStatEffect
@@ -35,11 +35,11 @@ namespace RomScripts.MoodEffect
             this.m_moodStat = owner.GetMood();
             if (this.m_moodStat == null)
             {
-                MyLog.Default.Error("Mood effect '{0}' applied to an entity '{1}' without mood stat!", new object[]
-                {
-                    base.Definition.Id,
-                    base.Owner.Entity.Definition.Id
-                });
+                //MyLog.Default.Error("Mood effect '{0}' applied to an entity '{1}' without mood stat!", new object[]
+                //{
+                //    base.Definition.Id,
+                //    base.Owner.Entity.Definition.Id
+                //});
                 return;
             }
             this.m_moodStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.moodStat_OnValueChanged);

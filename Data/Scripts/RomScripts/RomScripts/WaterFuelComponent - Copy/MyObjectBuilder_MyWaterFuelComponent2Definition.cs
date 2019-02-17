@@ -4,7 +4,7 @@
 //using VRage.ObjectBuilders;
 //using VRage.ObjectBuilders.Definitions.Inventory;
 
-//namespace RomScripts
+//namespace RomScripts76561197972467544
 //{
 //    [MyObjectBuilderDefinition]
 //    [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]

@@ -1,114 +1,20 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <CubeBlocks>
-    <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id Type="MyObjectBuilder_CubeBlock" Subtype="TorchStand" />
-      <BlockPairName>TorchStand</BlockPairName>
-      <DisplayName>DisplayName_Block_TorchStand</DisplayName>
-      <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="6" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\Small\TorchStand.mwm</Model>
-      <PhysicalMaterial>Iron</PhysicalMaterial>
-      <Components>
-        <Component Tag="ScrapWood" Count="3" />
-        <Component Type="InventoryItem" Subtype="PartsMetal" Count="1" />
-      </Components>
-      <CriticalComponent Tag="ScrapWood" Index="0" />
-      <MaxIntegrity>150</MaxIntegrity>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <Direction>Both</Direction>
-      <Rotation>Vertical</Rotation>
-      <MountPoints>
-        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
-      </MountPoints>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>4</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
-  </CubeBlocks>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="TorchStand" />
-    <InitialState>Off</InitialState>
-    <States>
-      <State Name="On">
-        <Transition>Off</Transition>
-      </State>
-      <State Name="Off">
-        <Transition>On</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="TorchStand" />
-    <Effects>
-      <Effect StartEvent="On" StopEvent="Off" Dummy="detector_fire">
-        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
-      </Effect>
-    </Effects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="TorchStand" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_fire" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="TorchStand" />
-    <Tooltip>UseObject_DynamicPress</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SupportsAccessSettings>false</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_fire" From="On" To="Off" ActionName="ActionHint_DouseFire" />
-      <Trigger Dummy="detector_fire" From="Off" To="On" ActionName="ActionHint_LightFire" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <EntityContainers>
-    <Container>
-      <Id Type="CubeBlock" Subtype="TorchStand" />
-      <DefaultComponents>
-        <Component BuilderType="MyObjectBuilder_EntityStateComponent" SubtypeId="TorchStand" ForceCreate="true"/>
-        <Component BuilderType="MyObjectBuilder_EntityFXComponent" SubtypeId="TorchStand" ForceCreate="true"/>
-        <Component BuilderType="MyObjectBuilder_UseObjectsComponent" SubtypeId="TorchStand" ForceCreate="true"/>
-        <Component BuilderType="MyObjectBuilder_StateUseObjectComponent" SubtypeId="TorchStand" ForceCreate="true"/>
-      </DefaultComponents>
-    </Container>
-  </EntityContainers>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchStand"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchStand" />
     <DisplayName>DisplayName_Block_TorchStand</DisplayName>
+    <Description>Description_Block_TorchStand</Description>
     <Icon>Textures\GUI\Icons\Cubes\TorchStand.dds</Icon>
-      <Category>Anvil</Category>
+    <Category>Anvil</Category>
     <Prerequisites>
-        <Item Amount="3" Tag="Universal_Stick" />
-        <Item Amount="1" Type="InventoryItem" Subtype="PartsMetal" />
+      <Item Amount="3" Tag="Universal_Stick" />
+      <Item Amount="1" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="TorchStand" />
+      <Item Amount="1" Type="Block" Subtype="TorchStand" />
     </Results>
-    <CraftingTime Seconds="1.5"/>
+    <CraftingTime Seconds="2" />
   </Definition>
 
 </Definitions>

@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 using VRage.ObjectBuilders;
 using VRage.ObjectBuilders.Components.Entity.Stats.Definitions;
 
-namespace RomScripts.RomDeathEffect
+namespace RomScripts76561197972467544.RomDeathEffect
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]

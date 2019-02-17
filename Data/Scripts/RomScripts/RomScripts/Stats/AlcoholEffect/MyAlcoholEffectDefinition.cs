@@ -4,7 +4,7 @@ using System;
 using VRage.Game;
 using VRage.Game.Definitions;
 
-namespace RomScripts.AlcoholEffect
+namespace RomScripts76561197972467544.AlcoholEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_AlcoholEffectDefinition))]
     public class MyAlcoholEffectDefinition : MyEntityStatEffectDefinition

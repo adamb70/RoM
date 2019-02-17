@@ -5,7 +5,7 @@ using VRage.ObjectBuilders.Definitions.Equipment;
 using ObjectBuilders.Definitions.Tools;
 using System.ComponentModel;
 
-namespace RomScripts.VoxelMining
+namespace RomScripts76561197972467544.VoxelMining
 {
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]
     [MyObjectBuilderDefinition(null)]

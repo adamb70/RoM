@@ -4,7 +4,7 @@ using System;
 using VRage.Game;
 using VRage.Game.Definitions;
 
-namespace RomScripts.ThirstEffect
+namespace RomScripts76561197972467544.ThirstEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_ThirstEffectDefinition))]
     public class MyThirstEffectDefinition : MyEntityStatEffectDefinition

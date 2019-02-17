@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Empty_Bowl" />
+    <Rotation>All</Rotation>
+    <DisplayName>Empty Bowl</DisplayName>
+    <Description>Empty Wooden Bowl</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Consumables\SaladBowl.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Empty_Bowl" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>1</Mass>
+    <MaxIntegrity>60</MaxIntegrity>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bowl_Carpenter" />
+    <DisplayName>Cooking Essentials: Wooden Bowl</DisplayName>
+    <Description>
+    An empty bowl can be filled with 
+    liquids and solids. Most commonly
+    water from a well. Used in many soups
+
+
+    ((Hint: Search small trees and small
+    pine trees to aquire Pristine Sticks))
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bowl" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bowl" />    
+    <DisplayName>Empty Bowl</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Empty_Bowl" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Water_Bowl" />
+    <Rotation>All</Rotation>
+    <DisplayName>Water Bowl</DisplayName>
+    <Description>Water Bowl</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Consumables\SaladBowl.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Water_Bowl" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>1</Mass>
+    <MaxIntegrity>60</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Water_Bowl" />   
+    <DisplayName>Fill Empty Bowl</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
+    <Description>Fills and empty bowl with water from the well. Will only work if the well is on grass or dirt.</Description>
+    <Category>Stone_Well</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="Empty_Bowl" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Water_Bowl" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+</Definitions>

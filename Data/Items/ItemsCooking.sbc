@@ -1,22 +1,6 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="UncookedRedBerryPie" />
-      <Public>true</Public>
-      <DisplayName>Uncooked Red Berry Pie</DisplayName>
-	  <Description>Description_Item_UncookedRedBerryPie</Description>
-      <Icon>Textures\GUI\Icons\Universal\Cooking\uncooked_redberry_pie.dds</Icon>
-      <Model>Models\Consumables\Bread.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.3</X>
-        <Y>0.1</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.1</Mass>
-      <MaxStackAmount>10</MaxStackAmount>
-      <Health>50</Health>
-  </Definition>
+  
   <!-- =================================================================================== -->
 
 
@@ -60,24 +44,7 @@
   <!-- =================================================================================== -->
 
 
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Dough" />
-      <Public>true</Public>
-      <DisplayName>Dough</DisplayName>
-	  <Description>Used as the basic cooking ingrediant
-for most pasteries and breads.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Cooking\dough.dds</Icon>
-      <Model>Models\Consumables\Bread.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.3</X>
-        <Y>0.1</Y>
-        <Z>0.3</Z>
-      </Size>
-      <Mass>0.1</Mass>
-      <MaxStackAmount>16</MaxStackAmount>
-      <Health>50</Health>
-  </Definition>
+  
 
   
   

@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-
-
-
-
-
   <!-- Combat Mode -->
   <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
     <Id Type="CompositeEntityEffect" Subtype="CombatMode" />
@@ -56,6 +51,8 @@
     <AffectedTool>Shovel</AffectedTool>
     <AffectedTool>Pickaxe</AffectedTool>
     <AffectedTool>WeaponMelee</AffectedTool>
+    <AffectedTool>Weapon_Dagger</AffectedTool>
+    <AffectedTool>Spear</AffectedTool>
     <PrimaryActionMultiplier Style="Multiplicative" Value="0" />
     <Duration Seconds="1" />
   </Definition>
@@ -138,123 +135,4 @@
     <CanCrouch>false</CanCrouch>
   </Definition>
   
-  <!-- =================================== Adrenaline =================================== -->
-  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
-    <Id Type="CompositeEntityEffect" Subtype="AdrenalineFX" />
-    <Public>false</Public>
-    <DisplayName>DisplayName_StatusEffect_Adrenaline</DisplayName>
-    <Description>Description_StatusEffect_Adrenaline</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Combat.png</Icon>
-    <EffectType>Positive</EffectType>
-    <LostOnReset>false</LostOnReset>
-    <Effect Type="ScaledToolEfficiencyEffect" Subtype="AdrenalineSpeedBoost" />
-    <Effect Type="ScaledAudioEffect" Subtype="AdrenalineSound" />
-    <Effect Type="ScaledFOVEffect" Subtype="AdrenalineFOV" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ExponentialStatEffectDefinition">
-    <Id Type="ExponentialStatEffect" Subtype="AdrenalineDegen" />
-    <DisplayName>DisplayName_StatusEffect_AdrenalineDegen</DisplayName>
-    <Description>Description_StatusEffect_AdrenalineDegen</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\HUD\StatsAndEffects\Combat.png</Icon>
-    <EffectType>Negative</EffectType>
-    <Category>DefaultAdrenalineDegen</Category>
-    <Public>false</Public>
-    <Stat>Adrenaline</Stat>
-    <CostIncrease>90</CostIncrease>
-    <RegenPerSecond>-3.0</RegenPerSecond>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ScaledToolEfficiencyEffectDefinition">
-    <Id Type="ScaledToolEfficiencyEffect" Subtype="AdrenalineSpeedBoost" />
-    <Public>false</Public>
-    <Stat>Adrenaline</Stat>
-    <AffectedTool>HammerBuilding</AffectedTool>
-    <AffectedTool>AxeCutting</AffectedTool>
-    <AffectedTool>Shovel</AffectedTool>
-    <AffectedTool>Pickaxe</AffectedTool>
-    <AffectedTool>WeaponMelee</AffectedTool>
-    <EfficiencyMin>1.0</EfficiencyMin>
-    <EfficiencyMax>1.2</EfficiencyMax>
-    <Exponential>false</Exponential>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
-    <Id Type="CompositeEntityEffect" Subtype="AdrenalineGainAttack" />
-    <Public>false</Public>
-    <Category>DefaultAdrenalineGain</Category>
-    <Effect Type="EntityStatEffect" Subtype="AdrenalineGain1" />
-    <Effect Type="OperationTriggerEffect" Subtype="AdrenalineDrainDelay" />
-    <Duration Seconds="1" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
-    <Id Type="CompositeEntityEffect" Subtype="AdrenalineGainBlock" />
-    <Public>false</Public>
-    <Category>DefaultAdrenalineGain</Category>
-    <Effect Type="EntityStatEffect" Subtype="AdrenalineGain2" />
-    <Effect Type="OperationTriggerEffect" Subtype="AdrenalineDrainDelay" />
-    <Duration Seconds="1" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
-    <Id Type="CompositeEntityEffect" Subtype="AdrenalineGainHit" />
-    <Public>false</Public>
-    <Category>DefaultAdrenalineGain</Category>
-    <Effect Type="EntityStatEffect" Subtype="AdrenalineGain1" />
-    <Effect Type="OperationTriggerEffect" Subtype="AdrenalineDrainDelay" />
-    <Duration Seconds="1" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="AdrenalineGain1" />
-    <Category>DefaultAdrenalineGain</Category>
-    <Public>false</Public>
-    <LostOnReset>false</LostOnReset>
-    <Stat>Adrenaline</Stat>
-    <RegenPerSecond>10.0</RegenPerSecond>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="AdrenalineGain2" />
-    <Category>DefaultAdrenalineGain</Category>
-    <Public>false</Public>
-    <LostOnReset>false</LostOnReset>
-    <Stat>Adrenaline</Stat>
-    <RegenPerSecond>20.0</RegenPerSecond>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ScaledAudioEffectDefinition">
-    <Id Type="ScaledAudioEffect" Subtype="AdrenalineSound" />
-    <Public>false</Public>
-    <Stat>Adrenaline</Stat>
-    <AudioCue>HudAdrenalineLoop</AudioCue>
-    <VolumeMin>0</VolumeMin>
-    <VolumeMax>0.4</VolumeMax>
-    <Exponential>true</Exponential>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ScaledFOVEffectDefinition">
-    <Id Type="ScaledFOVEffect" Subtype="AdrenalineFOV" />
-    <Public>false</Public>
-    <Stat>Adrenaline</Stat>
-    <FOVMin>1.0</FOVMin>
-    <FOVMax>1.15</FOVMax>
-    <Exponential>false</Exponential>
-  </Definition>
-
-
-
-  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
-    <Id Type="OperationTriggerEffect" Subtype="AdrenalineDrainDelay" />
-    <Public>false</Public>
-    <!-- Activation effects -->
-    <Activation Type="ExponentialStatEffect" Subtype="AdrenalineDegen" Operation="Remove" />
-    <Activation Type="ExponentialStatEffect" Subtype="AdrenalineDegen" Operation="Add">
-      <Delay Seconds="1.5" />
-    </Activation>
-  </Definition>
-
 </Definitions>

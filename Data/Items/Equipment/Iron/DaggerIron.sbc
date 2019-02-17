@@ -15,7 +15,7 @@
       <Z>0.3</Z>
     </Size>
     <Mass>0.5</Mass>
-    <Model>Models\DwarfDagger_Small.mwm</Model>
+    <Model>Models\Weapons\DwarfDagger_Small.mwm</Model>
 
     <PhysicalMaterial>Sword</PhysicalMaterial>
 
@@ -76,6 +76,25 @@
     </StanceToBehavior>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="DwarfDaggerBroken" />
+    <Public>true</Public>
+    <DisplayName>Dwarf Dagger Broken</DisplayName>
+    <Description>Iron Dwarf Dagger Broken</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\DwarfDagger.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Broken.dds</Icon>
+    <Model>Models\Weapons\DwarfDaggerBroken_Small.mwm</Model>
+    <PhysicalMaterial>Hammer</PhysicalMaterial>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>5</Mass>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Health>50</Health>
+  </Definition>
+
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
     <Id Type="MeleeWeaponBehaviorDefinition" Subtype="DwarfDagger" />
 
@@ -87,10 +106,10 @@
 
       <Animation>Attack</Animation>
       <SwingSound>ToolSwishSword</SwingSound>
-      
+
       <LightAttack MinimumDamage="5" AttackMultipleTargets="false">
         <StatCost Stat="Stamina" Cost="7" />
-	<StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Fury" Cost="-3" />
         <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
@@ -108,7 +127,7 @@
 
       <ChargedAttack MinimumDamage="5" MaximumDamage="10" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="10" />
-	<StatCost Stat="Fury" Cost="18" />
+        <StatCost Stat="Fury" Cost="18" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
@@ -133,10 +152,10 @@
 
       <Animation>Attack</Animation>
       <SwingSound>ToolSwishSword</SwingSound>
-      
+
       <LightAttack MinimumDamage="5" AttackMultipleTargets="false">
         <StatCost Stat="Stamina" Cost="7" />
-	<StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Fury" Cost="-3" />
         <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
@@ -154,7 +173,7 @@
 
       <ChargedAttack MinimumDamage="5" MaximumDamage="10" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="10" />
-	<StatCost Stat="Fury" Cost="18" />
+        <StatCost Stat="Fury" Cost="18" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
@@ -179,10 +198,10 @@
 
       <Animation>Attack</Animation>
       <SwingSound>ToolSwishSword</SwingSound>
-      
+
       <LightAttack MinimumDamage="5">
         <StatCost Stat="Stamina" Cost="7" />
-	<StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Fury" Cost="-3" />
         <StatCost Stat="Vigor" Cost="-.1" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
@@ -197,7 +216,7 @@
 
       <ChargedAttack MinimumDamage="5" MaximumDamage="10" AttackMultipleTargets="true">
         <StatCost Stat="Stamina" Cost="10" />
-	<StatCost Stat="Fury" Cost="18" />
+        <StatCost Stat="Fury" Cost="18" />
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
         </AppliedEffect>
@@ -243,7 +262,7 @@
 
     <!-- Display -->
 
-    <GuiVisible>false</GuiVisible>
+    <Visible>false</Visible>
     <DisplayName>Dwarf Dagger Broken</DisplayName>
     <Description>Iron Dwarf Dagger Broken</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\DwarfDagger.dds</Icon>

@@ -1,41 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="MixingBarrel" />
-    <BlockPairName>SmithingStation</BlockPairName>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="MixingBarrel" />
+    <Rotation>All</Rotation>
     <DisplayName>Mixing Barrel</DisplayName>
-    <Description>Mixes things together</Description>
+	  <Description>Mixes things together</Description>
     <Icon>Textures\GUI\Icons\Cubes\WoodBarrel.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="3" y="4" z="3" />
-    <ModelOffset x="0" y="0" z="0" />
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="0" z="-1" />
+      <Max x="2" y="4" z="2" />
+    </BoundingBox>
     <Model>Models\Cubes\Small\WoodBarrel.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-	<Mass>10</Mass>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <Components>
-      <Component Tag="Plank" Count="6" />
-      <Component Type="InventoryItem" Subtype="PartsMetal" Count="2" />
+      <Component Type="Block" Subtype="MixingBarrel" Count="1" />
     </Components>
-    <CriticalComponent Tag="Plank" Index="0" />
-    <MaxIntegrity>500</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -49,30 +34,49 @@
       <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="MixingBarrel" />
+      <Item Amount="1" Type="Block" Subtype="MixingBarrel" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="MixingBarrel"/>
-    <CraftingCategories>
-      <Category>Barrel</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="MixingBarrelCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-    <ConstrainInventory>true</ConstrainInventory>
-    <InputInventory>CraftingInventory</InputInventory>
-    <OutputInventory>CraftingInventory</OutputInventory>
-    <CraftingInventory>ProcessingInventory</CraftingInventory>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Mix</CraftString>
+    <CraftingString>Mixing Queue</CraftingString>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="MixingBarrel" />
-    <Component Type="Inventory" Subtype="CraftingInventory"/>
-    <Component Type="Inventory" Subtype="ProcessingInventory"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="MixingBarrelScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="MixingBarrelCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="MixingBarrelRecipes" />
+    <Category>Barrel</Category>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="MixingBarrel" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <Component Type="CraftingComponent" Subtype="MixingBarrelCrafting" />
+    <Component Type="CraftingScheduler" Subtype="MixingBarrelScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="MixingBarrelRecipes" />
+    
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponentQueued" Subtype="MixingBarrel"/>
   </Definition>
   
 </Definitions>

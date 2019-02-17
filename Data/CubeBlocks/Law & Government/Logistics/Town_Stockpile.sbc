@@ -1,51 +1,41 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Town_Stockpile" />
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Town_Stockpile" />
     <DisplayName>Town Stockpile</DisplayName>
-    <Public>false</Public>
     <Description>The Town Stockpile serves as a central hub of storage within the town. Requires taxes, but will claim the land. Will hold almost anything, and a lot of it!</Description>
-    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
-    <CubeSize>Large</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="3" y="3" z="1" />
-    <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\LawGovernment\Town_Stockpile.mwm</Model>
+    <Public>false</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\Stockpile_Timber.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Universal\LawGovernment\Town_Stockpile.mwm</Model>
     <BuildProgressModels>
-      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\KingStatue_Construction_1.mwm">
-        <MountPointOverrides>
-          <MountPoint Side="Top" Enabled="false" />
-        </MountPointOverrides>
-      </Model>
+      <Model UpperBound="0.5" File="Models\Cubes\large\Stockpile_Timber_Construction_1.mwm" />
     </BuildProgressModels>
-    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
     <Components>
-      <Component Type="InventoryItem" Subtype="StoneLarge" Count="20" />
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Plank" Count="8" />
+      <Component Tag="Timber" Count="4" />
+      <Component Type="InventoryItem" Subtype="Thatch" Count="1" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
     <MountPoints>
-      <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
     </MountPoints>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Direction>Horizontal</Direction>
-    <Rotation>Vertical</Rotation>
-    <UseModelIntersection>true</UseModelIntersection>
-    <NavigationDefinition>NoEntry</NavigationDefinition>
-    <Mass>500</Mass>
-    <Points>200</Points>
-    <MaxIntegrity>300</MaxIntegrity>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <CompoundEnabled>false</CompoundEnabled>
+    <UseModelIntersection>false</UseModelIntersection>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>600</MaxIntegrity>
+    <CriticalIntegrityRatio>0.7</CriticalIntegrityRatio>
   </Definition>
 
-<!-- =================================================================================== -->
+  <!-- =================================================================================== -->
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
     <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Town_Stockpile" />
+    <LoadFromModel>false</LoadFromModel>
     <UseObjects>
       <UseObject Dummy="detector_inventory" Name="claim"/>
       <UseObject Dummy="detector_inventory" Name="inventory"/>
@@ -57,19 +47,22 @@
     <InventoryName>Inventory</InventoryName>
     <DisplayName>Inventory</DisplayName>
     <MaxItemCount>14</MaxItemCount>
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
 
-
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Town_Stockpile" />
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Town_Stockpile" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
     <Component Type="ClaimBlockComponent" Subtype="ClaimBlockWood" />
     <Component Type="EntityOwnershipComponent" />
     <Component Type="Inventory" Subtype="Town_StockpileInventory" ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="StockpileLog" /> ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="StockpileStone" /> ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="StockpileTimber" /> ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="StockpileOreSmall" /> ForceCreate="true"/>
+    <Component Type="Inventory" Subtype="StockpileLog" />
+    <Component Type="Inventory" Subtype="StockpileStone" />
+    <Component Type="Inventory" Subtype="StockpileTimber" />
+    <Component Type="Inventory" Subtype="StockpileOreSmall" />
     <Component Type="UseObjectsComponent" Subtype="Town_Stockpile" ForceCreate="true"/>
     <Component Type="ClaimBlockRespawnComponent" />
   </Definition>

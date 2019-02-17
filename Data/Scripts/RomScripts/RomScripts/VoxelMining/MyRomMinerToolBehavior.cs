@@ -40,12 +40,13 @@ using VRage.ObjectBuilders.Definitions.Inventory;
 using VRage.Library.Utils;
 using VRage.Definitions.Inventory;
 
-namespace RomScripts.VoxelMining
+
+namespace RomScripts76561197972467544.VoxelMining
 {
     [MyHandItemBehavior(typeof(MyObjectBuilder_RomMinerToolBehaviorDefinition), true)]
     public class MyRomMinerToolBehavior : MyMinerToolBehavior
     {
-        private static MyStorageData StorageData;
+        private static readonly MyStorageData StorageData = new MyStorageData();
 
         protected MyVoxelMiningLootTableDefinition m_oreMiningLootTableDefinition;
         
@@ -67,9 +68,9 @@ namespace RomScripts.VoxelMining
             Vector3D.TransformNoProjection(ref hitPos, ref worldMatrixInvScaled, out xyz);
             Vector3I vector3I = voxelBase.StorageMin + new Vector3I(xyz) + (voxelBase.Size >> 1);
             MyRomMinerToolBehavior.StorageData.Resize(Vector3I.One);
-            voxelBase.Storage.ReadRange(MyRomMinerToolBehavior.StorageData, MyStorageDataTypeFlags.Material, 0, vector3I, vector3I);
-            byte index = MyRomMinerToolBehavior.StorageData.Material(0);
-            return MyVoxelMaterialDefinition.Get((int)index);
+
+            //voxelBase.Storage.ReadRange(MyRomMinerToolBehavior.StorageData, MyStorageDataTypeFlags.Material, 0, vector3I, vector3I);
+            return MyVoxelMaterialDefinition.Get((int)MyRomMinerToolBehavior.StorageData.Material(0));
         }
 
 

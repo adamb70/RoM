@@ -1,54 +1,63 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Rienburg_ClaimBlock" />
+
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Rienburg_ClaimBlock" />
+    <Rotation>YAxis</Rotation>
     <DisplayName>Rienburg Claim Block</DisplayName>
-    <BlockPairName>Rienburg_ClaimBlock</BlockPairName>
     <Public>true</Public>
-    <Icon>Textures\GUI\Icons\Cubes\ClaimBlock.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\ClaimBlock.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
-    <CubeSize>Large</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="1" y="1" z="1" />
-    <ModelOffset x="0" y="0" z="0" />
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
     <Model>Models\Cubes\Large\ClaimBlock.mwm</Model>
-    <PhysicalMaterial>ClaimStone</PhysicalMaterial>
+    <PhysicalMaterial>StoneSoft</PhysicalMaterial>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Back" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+      <MountPoint Side="Left" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.0324" EndX="1.0324" EndY="-0.032400012" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+    </MountPoints>
     <Components>
-      <Component Tag="ScrapWood" Count="4" />
-      <Component Type="InventoryItem" Subtype="StoneLarge" Count="20" />
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="50" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
     <BuildProgressModels>
-      <Model BuildPercentUpperBound="0.7" File="Models\Cubes\large\ClaimBlock_Construction_1.mwm" />
+      <Model UpperBound="0.7" File="Models\Cubes\large\ClaimBlock_Construction_1.mwm" />
     </BuildProgressModels>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
     <UseModelIntersection>true</UseModelIntersection>
-    <CompoundTemplates>
-      <Template>Universal</Template>
-    </CompoundTemplates>
-    <GuiVisible>true</GuiVisible>
-    <AvailableInSurvival>false</AvailableInSurvival>
-    <MaxIntegrity>3000</MaxIntegrity>
     <VoxelPlacement>
       <StaticMode>
-        <PlacementMode>Volumetric</PlacementMode>
-        <MaxAllowed>0.5</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>1.0</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
       </StaticMode>
       <DynamicMode>
-        <PlacementMode>InVoxel</PlacementMode>
-        <MaxAllowed>0.5</MaxAllowed>
-        <MinAllowed>0.2</MinAllowed>
+        <MaxAllowed>0.3</MaxAllowed>
+        <MinAllowed>0.1</MinAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
       </DynamicMode>
     </VoxelPlacement>
+    <MaxIntegrity>800</MaxIntegrity>
+    <CriticalIntegrityRatio>0.9</CriticalIntegrityRatio>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Rienburg_ClaimBlock" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Rienburg_ClaimBlock" />
-    <Component BuilderType="SafezoneRespawnComponent" ForceCreate="true"/>
+    <!-- <Component Type="ClaimBlockComponent" Subtype="ClaimBlockTier1" /> -->
+    <Component Type="SafezoneRespawnComponent" />
   </Definition>
+
 
 </Definitions>

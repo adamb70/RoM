@@ -1,77 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
     <Id Type="HandItem" Subtype="SwordIron"/>
 
-    <!-- Display -->
-
-    <DisplayName>DisplayName_Weapon_Sword</DisplayName>
-    <Description>Description_Weapon_Sword</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SwordIron.dds</Icon>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
-    <Model>Models\Weapons\Sword.mwm</Model>
-
-    <PhysicalMaterial>Sword</PhysicalMaterial>
-
-    <Animation>Sword</Animation>
-
-    <MaxStackAmount>1</MaxStackAmount>
-
     <MaxDurability>200</MaxDurability>
-
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Orientation>
-        <X>0</X>
-        <Y>0</Y>
-        <Z>0</Z>
-        <W>1</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.464</X>
-        <Y>-1.0</Y>
-        <Z>-0.505</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFps>
-    <EquippedTransformFpsCrouch>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.285</X>
-        <Y>-0.334</Y>
-        <Z>-0.131</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFpsCrouch>
-
-    <!-- Behaviors -->
-    <StanceToBehavior>
-      <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="SwordIron"/>
-    </StanceToBehavior>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
@@ -84,7 +16,7 @@
 
       <Animation>Attack</Animation>
       <SwingSound>ToolSwishSword</SwingSound>
-      
+
       <LightAttack MinimumDamage="26">
         <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="-3" />
@@ -119,7 +51,7 @@
 
       <Animation>Attack</Animation>
       <SwingSound>ToolSwishSword</SwingSound>
-      
+
       <LightAttack MinimumDamage="26">
         <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="-3" />
@@ -135,13 +67,13 @@
       <ChargedAttack MinimumDamage="26" MaximumDamage="52" AttackMultipleTargets="true">
         <StatCost Stat="Fury" Cost="25" />
         <StatCost Stat="Stamina" Cost="20" />
-      <!--  <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+        <!--  <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
           <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
         </AppliedEffect> -->
         <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
           <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
         </AppliedEffect>
-       <!-- <AppliedEffect Affectee="Target" ContactType="Hit">
+        <!-- <AppliedEffect Affectee="Target" ContactType="Hit">
           <Effect Type="DamageOverTimeEffect" Subtype="BleedingLong" Chance="0.4"/>
         </AppliedEffect> -->
       </ChargedAttack>
@@ -154,7 +86,7 @@
 
       <Animation>Attack</Animation>
       <SwingSound>ToolSwishSword</SwingSound>
-      
+
       <LightAttack MinimumDamage="20">
         <StatCost Stat="Stamina" Cost="15" />
         <StatCost Stat="Fury" Cost="-3" />
@@ -181,6 +113,7 @@
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Sword</WeaponMaterial>
 
     <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 

@@ -9,14 +9,14 @@ using Sandbox.Game.Multiplayer;
 using System;
 using VRage.Audio;
 using VRage.Game;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Utils;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
 using VRageMath;
-using RomScripts.StatExtensions;
+using RomScripts76561197972467544.StatExtensions;
 
-namespace RomScripts.PoisonEffect
+namespace RomScripts76561197972467544.PoisonEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_PoisonEffect))]
     public class MyPoisonEffect : MyEntityStatEffect
@@ -38,11 +38,11 @@ namespace RomScripts.PoisonEffect
             
             if (this.m_poisonStat == null)
             {
-                MyLog.Default.Error("Poison effect '{0}' applied to an entity '{1}' without poison stat!", new object[]
-                {
-                    base.Definition.Id,
-                    base.Owner.Entity.Definition.Id
-                });
+                //MyLog.Default.Error("Poison effect '{0}' applied to an entity '{1}' without poison stat!", new object[]
+                //{
+                //    base.Definition.Id,
+                //    base.Owner.Entity.Definition.Id
+                //});
                 return;
             }
             this.m_poisonStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.poisonStat_OnValueChanged);

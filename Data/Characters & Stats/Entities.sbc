@@ -2,47 +2,12 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   
 
-<Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
-    <Id Type="EntityBase" Subtype="RoMPlayableCharacter"/>
-
-    <!-- Copy from base character. -->
-    <CopyFrom Type="EntityBase" Subtype="Humanoid"/>
-    
-    <!-- <Component Type="InventorySpawnComponent" Subtype="CharacterBag" /> -->
-
-    <Component Type="CharacterControllerComponent" />
-    <Component Type="TargetTrackingComponent" Subtype="PlayableCharacter"/>
-
-    <Component Type="CraftingComponentQueued" Subtype="Humanoid"/>
-    <Component Type="Inventory" Subtype="ProcessingInventory"/>
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Merge="Append">
+    <Id Type="EntityBase" Subtype="PlayableCharacter"/>
 
     <Component Type="EntityStatComponent" Subtype="RoMStats"/>
-
-    <Component Type="ResearchComponent" />
-    <Component Type="QuestEntityComponent" Subtype="Humanoid" />
-
-    <Component Type="AreaInventory" Subtype="Ground"/>
-    <Component Type="AreaInventoryAggregate" Subtype="NearbyInventories"/>
-
-    <Component Type="EntityStateComponent" Subtype="CharacterStances"  />
-
-    <Component Type="QuickEquipComponent" Subtype="Humanoid"  />
-    <Component Type="EntityEquipmentEffectComponent" />
-
-    <Component Type="CharacterShapecastDetectorComponent" Subtype="Default" />
-
-    <Component Type="FirstPersonCameraComponent" Subtype="DefaultFirstPerson" />
-    <Component Type="ThirdPersonCameraComponent" Subtype="DefaultThirdPerson" />
-
-    <Component Type="FirstPersonControllerComponent" Subtype="DefaultFirstPerson" />
-    <Component Type="ThirdPersonControllerComponent" Subtype="DefaultThirdPerson" />
-
-    <Component Type="RagdollComponent" Subtype="Humanoid" />
-    <Component Type="MedievalCharacterPickupComponent" Subtype="RoMCharacterPickup" />
-    <Component Type="FlightComponent" Subtype="FlightDefault" />
-    <Component Type="CharacterMovementComponent" Subtype="PlayableCharacter" />
-    <Component Type="Toolbar"/>
+    
   </Definition>
 
-
+  
 </Definitions>

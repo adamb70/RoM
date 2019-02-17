@@ -1,109 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
     <Id Type="HandItem" Subtype="HammerWood"/>
 
-    <!-- Display -->
-
-    <DisplayName>DisplayName_Tool_WoodenMallet</DisplayName>
-    <Description>Description_Tool_WoodenMallet</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\WoodenMallet.dds</Icon>
-    <Tag>HammerBuilding</Tag>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
-    <Model>Models\Weapons\WoodenMallet.mwm</Model>
-
-    <PhysicalMaterial>WoodenMallet</PhysicalMaterial>
-
-    <MaxStackAmount>1</MaxStackAmount>
-
-    <!-- Equipment -->
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
-
     <MaxDurability>100</MaxDurability>
-
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-
-    <Position>
-      <Slot>OffHand</Slot>
-    </Position>
-
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Orientation>
-        <X>0</X>
-        <Y>0</Y>
-        <Z>0</Z>
-        <W>1</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.530</X>
-        <Y>-1.0</Y>
-        <Z>-0.740</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFps>
-    <EquippedTransformFpsCrouch>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.284</X>
-        <Y>-0.277</Y>
-        <Z>-0.216</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFpsCrouch>
-
-    <!-- Behavior -->
-    <StanceToBehavior>
-      <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_BuilderToolBehaviorDefinition" Subtype="HammerWood"/>
-    </StanceToBehavior>
-    <StanceToBehavior>
-      <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="HammerWood"/>
-    </StanceToBehavior>
-    
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_BuilderToolBehaviorDefinition">
     <Id Type="BuilderToolBehaviorDefinition" Subtype="HammerWood"/>
-    <Efficiency>1</Efficiency>
-	<Cost Stat="Mood" Cost="0.25" />
-	<Cost Stat="Stamina" Cost="2.5" />
+    <Efficiency>120</Efficiency>
+    <Cost Stat="Mood" Cost="0.25" />
+    <Cost Stat="Stamina" Cost="2.5" />
+    <ToolheadMaterial>HammerWood</ToolheadMaterial>
 
     <PrimaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1.4</AnimationTime>
+      <AnimationTime>1.2</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
       <Animation>BuildWall</Animation>
     </PrimaryEffect>
 
     <SecondaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
+      <AnimationTime>0.9</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
-      <Animation>Attack</Animation>
+      <Animation>Cutting</Animation>
     </SecondaryEffect>
+
+    <ConstructionCompletedEvent Material="" Event="BlockConstructedWood" />
+    <ConstructionCompletedEvent Material="Wood" Event="BlockConstructedWood" />
+    <ConstructionCompletedEvent Material="Stone" Event="BlockConstructedStone" />
+
+    <DeconstructionCompletedEvent Material="" Event="BlockDeconstructedWood" />
+    <DeconstructionCompletedEvent Material="Wood" Event="BlockDeconstructedWood" />
+    <DeconstructionCompletedEvent Material="Stone" Event="BlockDeconstructedStone" />
   </Definition>
 
 
@@ -173,6 +103,7 @@
 
       <Animation>Attack</Animation>
       <SwingSound>ToolSwish</SwingSound>
+      <WeaponMaterial>HammerWood</WeaponMaterial>
 
       <LightAttack MinimumDamage="5">
         <StatCost Stat="Stamina" Cost="7" />

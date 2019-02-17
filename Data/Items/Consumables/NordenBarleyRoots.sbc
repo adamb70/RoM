@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Norden_Barley_Roots" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Norden Barley Roots</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley_Roots.dds</Icon>
+    <Size>
+      <X>0.5</X>
+      <Y>0.5</Y>
+      <Z>0.5</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\WoodenRoot.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Food" />
+    <Effect Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Vigor" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+
+
+
+</Definitions>

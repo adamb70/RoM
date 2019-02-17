@@ -1,101 +1,61 @@
-<Definitions xmlns:xsi=" http://www.w3.org/2001/XMLSchema-instance " xmlns:xsd=" http://www.w3.org/2001/XMLSchema ">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id Type="CubeBlock" Subtype="NordicChair" />
-      <DisplayName>Norden Chair</DisplayName>
-      <Icon>Textures\GUI\Icons\Cubes\NordicChair.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="2" y="2" z="2" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\Small\NordicChair.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Type="InventoryItem" Subtype="Sticks" Count="5" />
-      </Components>
-      <CriticalComponent Subtype="Sticks" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>4</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NordicChair" />
+    <Rotation>All</Rotation>
+    <DisplayName>Norden Chair</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NordicChair.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-1" z="-1" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\NordicChair.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="NordicChair" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
   </Definition>
 
-      <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id Type="CubeBlock" Subtype="NordicThrone" />
-      <DisplayName>Norden Throne</DisplayName>
-      <Icon>Textures\GUI\Icons\Cubes\NordicThrone.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="2" y="2" z="2" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\Small\NordicThrone.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Type="InventoryItem" Subtype="Sticks" Count="4" />
-      </Components>
-      <CriticalComponent Subtype="Sticks" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>4</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NordicThrone" />
+    <Rotation>All</Rotation>
+    <DisplayName>Norden Throne</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NordicThrone.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-1" z="-1" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\NordicThrone.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="NordicThrone" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
   </Definition>
 
-      <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id Type="CubeBlock" Subtype="NorseBed" />
-      <DisplayName>Norden Bed</DisplayName>
-      <Icon>Textures\GUI\Icons\Cubes\NorseBed.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="8" y="2" z="5" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\Small\NorseBed.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Type="InventoryItem" Subtype="Sticks" Count="8" />
-        <Component Type="InventoryItem" Subtype="StringLinen" Count="3" />
-      </Components>
-      <CriticalComponent Subtype="Sticks" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>4</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NorseBed" />
+    <Rotation>All</Rotation>
+    <DisplayName>Norden Bed</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NordicThrone.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-4" y="-1" z="-2" />
+      <Max x="4" y="1" z="3" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\NorseBed.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="NorseBed" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
   </Definition>
+
 </Definitions>

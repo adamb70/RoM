@@ -1,88 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
     <Id Type="HandItem" Subtype="HammerCopper"/>
 
-    <!-- Display -->
-
-    <DisplayName>DisplayName_Tool_HammerCopper</DisplayName>
-    <Description>Description_Tool_HammerCopper</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\HammerCopper.dds</Icon>
-    <Tag>HammerBuilding</Tag>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
-    <Model>Models\Weapons\Hammer_OneHandCopper.mwm</Model>
-    
-    <PhysicalMaterial>Hammer</PhysicalMaterial>
-
-    <MaxStackAmount>1</MaxStackAmount>
-
-    <!-- Equipment -->
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
-
     <MaxDurability>200</MaxDurability>
-
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-    
-    <Position>
-      <Slot>OffHand</Slot>
-    </Position>
-
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Orientation>
-        <X>0</X>
-        <Y>0</Y>
-        <Z>0</Z>
-        <W>1</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.464</X>
-        <Y>-1.0</Y>
-        <Z>-0.505</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFps>
-    <EquippedTransformFpsCrouch>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.285</X>
-        <Y>-0.334</Y>
-        <Z>-0.131</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFpsCrouch>
-
-    <!-- Behavior -->
-    <StanceToBehavior>
-      <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_BuilderToolBehaviorDefinition" Subtype="HammerCopper"/>
-    </StanceToBehavior>
-    <StanceToBehavior>
-      <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="HammerCopper"/>
-    </StanceToBehavior>
-    
   </Definition>
 
 
@@ -175,6 +96,7 @@
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>HammerCombat</WeaponMaterial>
 
     <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 
@@ -188,23 +110,32 @@
 
   <Definition xsi:type="MyObjectBuilder_BuilderToolBehaviorDefinition">
     <Id Type="BuilderToolBehaviorDefinition" Subtype="HammerCopper"/>
-    <Efficiency>1.5</Efficiency>
-	<Cost Stat="Mood" Cost="0.25" />
-	<Cost Stat="Stamina" Cost="2.5" />
+    <Efficiency>150</Efficiency>
+    <Cost Stat="Mood" Cost="0.25" />
+    <Cost Stat="Stamina" Cost="2.5" />
+    <ToolheadMaterial>Hammer</ToolheadMaterial>
 
     <PrimaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1.33</AnimationTime>
-      <SwingSound>ToolSwish</SwingSound>
+      <AnimationTime>1.2</AnimationTime>
+      <SwingSound>ToolSwishBlunt</SwingSound>
       <Animation>BuildWall</Animation>
     </PrimaryEffect>
 
     <SecondaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
-      <SwingSound>ToolSwish</SwingSound>
-      <Animation>Attack</Animation>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwishBlunt</SwingSound>
+      <Animation>Cutting</Animation>
     </SecondaryEffect>
+
+    <ConstructionCompletedEvent Material="" Event="BlockConstructedWood" />
+    <ConstructionCompletedEvent Material="Wood" Event="BlockConstructedWood" />
+    <ConstructionCompletedEvent Material="Stone" Event="BlockConstructedStone" />
+
+    <DeconstructionCompletedEvent Material="" Event="BlockDeconstructedWood" />
+    <DeconstructionCompletedEvent Material="Wood" Event="BlockDeconstructedWood" />
+    <DeconstructionCompletedEvent Material="Stone" Event="BlockDeconstructedStone" />
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">

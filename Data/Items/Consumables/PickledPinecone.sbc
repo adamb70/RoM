@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Pickled_Pine_Cones" />
+    <Tag>Dish</Tag>
+    <Public>true</Public>
+    <DisplayName>Pickled Pine Cones</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Pickled_Pine_Cone.dds</Icon>
+    <Size>
+      <X>0.3</X>
+      <Y>0.3</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.15</Mass>
+    <Model>Models\Consumables\Bread.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>6</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Food" />
+    <Effect Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Vigor" />
+    <UseSound>PineCone</UseSound>
+  </Definition>
+
+
+
+
+
+</Definitions>

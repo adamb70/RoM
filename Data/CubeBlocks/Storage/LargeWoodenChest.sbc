@@ -2,30 +2,28 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ChestWoodLarge"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ChestWoodLarge" />
     <DisplayName>DisplayName_Block_WoodChestLarge</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\WoodChestLarge.dds</Icon>
+    <Description>Description_Block_WoodChestLarge</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\ChestWoodLarge_V1.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
       <Item Amount="4" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="ChestWoodLarge" />
+      <Item Amount="1" Type="Block" Subtype="ChestWoodLarge" />
     </Results>
-    <CraftingTime Seconds="1"/>
+    <CraftingTime Seconds="1" />
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
     <Id Type="MyObjectBuilder_Inventory" Subtype="WoodChestLargeInventory" />
     <MaxItemCount>28</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="false">
-      <Id Type="InventoryItem" Subtype="Log" />
-      <Id Type="InventoryItem" Subtype="StoneLarge" />
-      <Id Type="InventoryItem" Subtype="LargeSandStone" />
-      <Id Type="CubeBlock" Subtype="Timber10" />
-      <Id Type="CubeBlock" Subtype="TimberRound10" />
-    </Constraint>
+    <SupportsAreaInventory>true</SupportsAreaInventory>
+    <Constraint Type="CompositeInventoryConstraint" Subtype="BlacklistLargeObjects" />
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
   </Definition>
 
 </Definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Herbs" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Herbs</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Herbs_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Herbs_Food" />
+    <Effect Type="EntityStatEffect" Subtype="Herbs_Vigor" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+
+
+
+</Definitions>

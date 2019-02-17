@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="FruitsOpuntia" />
+    <Public>true</Public>
+    <Tag>Universal_SimpleSoup</Tag>
+    <DisplayName>Opuntia Fruit</DisplayName>
+    <Description>Description_Consumables_FruitsOpuntia</Description>
+    <Icon>Textures\GUI\Icons\Consumables\FruitsOpuntia.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\FruitsOpuntia.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>20</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Food" />
+    <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Thirst" />
+    <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Vigor" />
+    <Effect Type="EntityStatEffect" Subtype="FruitsOpuntia_Stamina" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+
+
+
+</Definitions>

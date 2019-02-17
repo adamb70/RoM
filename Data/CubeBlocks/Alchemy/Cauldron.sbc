@@ -1,50 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Cauldron" />
-    <BlockPairName>SmithingStation</BlockPairName>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Cauldron" />
+    <Rotation>All</Rotation>
     <DisplayName>Cauldron</DisplayName>
-    <Description>Brews extracts</Description>
+	  <Description>Hubble bubble</Description>
     <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemycauldron.dds</Icon>
     <Public>true</Public>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="5" y="4" z="5" />
-    <ModelOffset x="0" y="-0.02" z="0" />
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
     <Model>Models\Alchemy\Cubeblocks\AlchemyCauldron.mwm</Model>
-    <BuildProgressModels>
-      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Smithy_Construction1.mwm">
-        <MountPointOverrides>
-          <MountPoint Side="Top" Enabled="false" />
-        </MountPointOverrides>
-      </Model>
-    </BuildProgressModels>
-    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
     <Components>
-      <Component Type="InventoryItem" Subtype="IngotIron" Count="8" />
-      <Component Tag="Universal_Log" Count="2" />
+      <Component Type="Block" Subtype="Cauldron" Count="1" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="IngotIron" Index="0" />
-    <MaxIntegrity>1200</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
-    <Mass>800</Mass>
     <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -58,52 +34,66 @@
       <Item Amount="2" Tag="Universal_Log" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Cauldron" />
+      <Item Amount="1" Type="Block" Subtype="Cauldron" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="Cauldron"/>
-    <CraftingCategories>
-      <Category>Cauldron</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="CauldronCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-    <ConstrainInventory>true</ConstrainInventory>
-    <InputInventory>CraftingInventory</InputInventory>
-    <OutputInventory>CraftingInventory</OutputInventory>
-    <CraftingInventory>ProcessingInventory</CraftingInventory>
-    <PowerRequired>All</PowerRequired>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Brew</CraftString>
+    <CraftingString>Brewing Queue</CraftingString>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="UseObjectsComponent" Subtype="Cauldron" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_furnace" Name="inventory" />
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="CauldronScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="CauldronCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="CauldronRecipes" />
+    <Category>Cauldron</Category>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="EntityFXComponent" Subtype="Cauldron" />
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition" Copy="Append">
+    <Id Type="EntityFXComponent" Subtype="CauldronFX" />
+    <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
     <Effects>
-      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_inventory">
-        <EffectId Type="EffectDefinition" Subtype="Cauldron"/>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
+        <EffectId Type="EffectDefinition" Subtype="Furnace" />
+      </Effect>
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_furnace">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingFurnace" />
       </Effect>
     </Effects>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Cauldron" />
-    <Component Type="Inventory" Subtype="CraftingInventory"/>
-    <Component Type="Inventory" Subtype="ProcessingInventory"/>
-    <Component Type="CraftingComponentQueued" Subtype="Cauldron"/>
-    <Component Type="InventorySpawnComponent" />
-    <Component Type="EntityFXComponent" Subtype="Cauldron" />
-    <Component Type="UseObjectsComponent" Subtype="Cauldron" />
-    <Component Type="Inventory" Subtype="Fuel" />
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Cauldron" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <Component Type="CraftingComponent" Subtype="CauldronCrafting" />
+    <Component Type="CraftingScheduler" Subtype="CauldronScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="CauldronRecipes" />
+    
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
     <Component Type="FuelComponent" Subtype="Fire" />
+    <Component Type="Inventory" Subtype="Fuel" />
+
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="CauldronFX" />
   </Definition>
   
 </Definitions>

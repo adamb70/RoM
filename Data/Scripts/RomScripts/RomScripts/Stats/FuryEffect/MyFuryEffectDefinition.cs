@@ -4,7 +4,7 @@ using System;
 using VRage.Game;
 using VRage.Game.Definitions;
 
-namespace RomScripts.FuryEffect
+namespace RomScripts76561197972467544.FuryEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_FuryEffectDefinition))]
     public class MyFuryEffectDefinition : MyEntityStatEffectDefinition

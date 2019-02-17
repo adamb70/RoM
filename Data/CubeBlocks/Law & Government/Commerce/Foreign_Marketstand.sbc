@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Foreign_Marketstand" />
+    <Public>true</Public>
+    <DisplayName>Foreign Marketstand</DisplayName>
+    <Description>
+    Invite a forign merchant to sell general items from a marketstand. The merchant requires a payment inorder to keep the store running. If taxes are not payed, the merchant and marketstand will leave.
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Universal\LawGovernment\foreign_market_stand.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\StoneBlocks\CubeStone_V1_C1.mwm" />
+    </BuildProgressModels>
+    <MountpointRule>FromModel</MountpointRule>
+    <Rotation>YAxis</Rotation>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count="20" />
+      <Component Type="InventoryItem" Subtype="Foreign_Market_Contract" Count="1" />
+    </Components>
+    <RandomRotation>true</RandomRotation>
+    <NavigationDefinition>Default</NavigationDefinition>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <MaxIntegrity>600</MaxIntegrity>
+    <UseModelIntersection>false</UseModelIntersection>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Foreign_Marketstand" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="claim"/>
+      <UseObject Dummy="detector_inventory" Name="inventory"/>
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="Foreign_MarketstandInventory" />
+    <InventoryName>Inventory</InventoryName>
+    <DisplayName>Inventory</DisplayName>
+    <MaxItemCount>14</MaxItemCount>
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Foreign_Marketstand" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="ClaimBlockComponent" Subtype="ClaimBlockTier1" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="ClaimBlockRespawnComponent" />
+
+    <Component Type="Inventory" Subtype="Foreign_MarketstandInventory" ForceCreate="true"/>
+    <Component Type="InventorySpawnComponent"/>
+    <Component Type="UseObjectsComponent" Subtype="Foreign_Marketstand" ForceCreate="true"/>
+  </Definition>
+</Definitions>

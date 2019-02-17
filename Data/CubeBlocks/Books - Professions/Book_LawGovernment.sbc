@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="LawGovernment_Book" />
-      <BlockPairName>LawGovernment_Book</BlockPairName>
-      <DisplayName>Law and Government Book</DisplayName>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LawGovernment_Book" />
+    <Rotation>All</Rotation>
+    <DisplayName>Law and Government Book</DisplayName>
     <Description>
 "Government is the essential tool of any leader.
 How such a government is set up though, is the 
@@ -15,71 +15,226 @@ with research related to Law and Government. As you
 find new pristine ingredients, research will be 
 available to unlocked. Place this book on a surface 
 to read from it.
-</Description>
-      <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
-      <Model>Models\Universal\book_LawGovernment.mwm</Model>
-		  <CubeSize>Small</CubeSize>
-		  <BlockTopology>TriangleMesh</BlockTopology>
-      		  <Size x="2" y="1" z="2" />
-		  <ModelOffset x="0" y="0" z="0" />
-		  <PhysicalMaterial>Wood</PhysicalMaterial>
-		  <Components>
-			<Component Subtype="Timber10" Count="1" />
-		  </Components>
-		  <CriticalComponent Subtype="Timber10" Index="0" />
-	  <MountPoints>
-        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="1" />
-      </MountPoints>
-	  <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-		  <BuildTimeSeconds>6</BuildTimeSeconds>
-		  <Mass>1</Mass>
-		  <AvailableInSurvival>true</AvailableInSurvival>
-		  <VoxelPlacement>
-			<StaticMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</StaticMode>
-			<DynamicMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</DynamicMode>
-		  </VoxelPlacement>
-		</Definition>
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
+    <Model>Models\Universal\book_LawGovernment.mwm</Model>
+    <PhysicalMaterial>Paper</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="LawGovernment_Book" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
 
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="LawGovernment_Book"/>
-    <CraftingCategories>
-      <Category>Ethos</Category>
-      <Category>LawGovernment_Book</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="LawGovernmentBookCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Research</CraftString>
+    <CraftingString>Researching Queue</CraftingString>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="LawGovernment_Book" />
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory"/>
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="LawGovernmentBookScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="LawGovernmentBookCrafting" />
+    <QueueSize>4</QueueSize>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="LawGovernment_BookInventory" />
-    <InventoryName>LawGovernment_BookInventory</InventoryName>
-    <DisplayName>LawGovernment_Book</DisplayName>
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="LawGovernmentBookRecipes" />
+    <Category>Ethos</Category>
+    <Category>LawGovernment_Book</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="LawGovernment_Book" />
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="LawGovernment_Book" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="LawGovernmentBookCrafting" />
+    <Component Type="CraftingScheduler" Subtype="LawGovernmentBookScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="LawGovernmentBookRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponentQueued" Subtype="LawGovernment_Book" />
-    <Component Type="UseObjectsComponent" Subtype="LawGovernment_Book" />
-    <Component Type="Inventory" Subtype="LawGovernment_BookInventory" />
   </Definition>
+
+
+
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LawGovernment_Book" />
+    <DisplayName>Law and Government Book</DisplayName>
+    <Description>
+"Government is the essential tool of any leader.
+How such a government is set up though, is the 
+fundamental question for any settlement."
+
+This book teaches how to rule and manage a kingdom,
+with research related to Law and Government. As you 
+find new pristine ingredients, research will be 
+available to unlocked. Place this book on a surface 
+to read from it.
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Category>Book_Cooking</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="LawGovernment_Book" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Z_LawGovernment_Book_Nomadic_Book" />
+    <DisplayName>Law and Government Profession</DisplayName>
+    <Description>
+"Government is the essential tool of any leader.
+How such a government is set up though, is the 
+fundamental question for any settlement."
+
+This book teaches how to rule and manage a kingdom,
+with research related to Law and Government. As you 
+find new pristine ingredients, research will be 
+available to unlocked. Place this book on a surface 
+to read from it.
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Professions</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Book_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+
+  <!-- =================================================================================== -->
+
+  <!-- Ethos -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Liberty_Ethos_LawGovernment_Book" />
+    <DisplayName>Liberty Ethos</DisplayName>
+    <Description>
+"The end of law is not to abolish or restrain, but 
+to preserve and enlarge freedom. For in all the 
+states of created beings capable of law, where 
+there is no law, there is no freedom."
+
+A Liberty Ethos will focus on the civil liberties,
+including liberty of speech, commerce, and privacy.
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Ethos</Category>
+    <Prerequisites>
+      <Item Amount="15" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Liberty_Ethos_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Security_Ethos_LawGovernment_Book" />
+    <DisplayName>Security Ethos</DisplayName>
+    <Description>
+"Unless your government is respectable, foreigners 
+will invade your rights; and to maintain tranquillity, 
+it must be respectable - even to observe neutrality, 
+you must have a strong government."
+
+A Security Ethos will focus on the civil security,
+including security of boarders, law, and order.
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Ethos</Category>
+    <Prerequisites>
+      <Item Amount="15" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Security_Ethos_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Foreign_Marketstand_LawGovernment_Book" />
+    <DisplayName>Foreign Markets</DisplayName>
+    <Description>
+Invite a forign merchant to sell general items 
+from a marketstand. The merchant requires a 
+payment inorder to keep the store running. If 
+taxes are not payed, the merchant and 
+marketstand will leave.
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Ethos</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Foreign_Marketstand_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Town_Stockpile_LawGovernment_Book" />
+    <DisplayName>Town Stockpile</DisplayName>
+    <Public>false</Public>
+    <Description>
+The Town Stockpile serves as a central hub of 
+storage within the town. Requires taxes, but 
+will claim the land. Will hold almost 
+anything, and a lot of it!
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Ethos</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Town_Stockpile_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+
+
+
+
+
 </Definitions>

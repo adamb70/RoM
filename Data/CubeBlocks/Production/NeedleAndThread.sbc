@@ -1,90 +1,85 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NeedleThread" />
+    <DisplayName>Needle and Thread</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Tailor\NeedleThread.dds</Icon>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <Public>true</Public>
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Universal\Tailor\needle_thread_Small.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="NeedleThread" Count="1" />
+    </Components>
+    <Volume>4000</Volume>
+    <!--<MountPoints>
+      <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3" EndY="6" />
+    </MountPoints>-->
+    <Rotation>YAxis</Rotation>
+    <Mass>200</Mass>
+    <MaxIntegrity>300</MaxIntegrity>
+  </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="NeedleThread" />
-      <BlockPairName>NeedleThread</BlockPairName>
-      <DisplayName>Needle and Thread</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Tailor\NeedleThread.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="1" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Tailor\needle_thread_Small.mwm</Model>
-      <Components>
-        <Component Subtype="Sticks" Count="1" />
-      </Components>
-      <CriticalComponent Subtype="Timber" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-      <ParticleScale>0.22</ParticleScale>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Mass>1</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
-    
+
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NeedleThread"/>
     <DisplayName>Needle and Thread</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Tailor\NeedleThread.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Tailor\NeedleThread.dds</Icon>
     <Category>Carpentry_Table</Category>
     <Prerequisites>
       <Item Amount="1" Tag="Universal_Stick" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="NeedleThread" />
+      <Item Amount="1" Type="Block" Subtype="NeedleThread" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
 
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="NeedleThread"/>
-    <CraftingCategories>
-      <Category>Weaving</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="NeedleThreadCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Sew</CraftString>
+    <CraftingString>Sewing Queue</CraftingString>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="NeedleThread" />
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory" />
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="NeedleThreadScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="NeedleThreadCrafting" />
+    <QueueSize>6</QueueSize>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="NeedleThread_Inventory" />
-    <InventoryName>NeedleThread_Inventory</InventoryName>
-    <DisplayName>NeedleThread</DisplayName>
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="NeedleThreadRecipes" />
+    <Category>Weaving</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="NeedleThread" />
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NeedleThread" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="NeedleThreadCrafting" />
+    <Component Type="CraftingScheduler" Subtype="NeedleThreadScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="NeedleThreadRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponentQueued" Subtype="NeedleThread" />
-    <Component Type="UseObjectsComponent" Subtype="NeedleThread" />
-    <Component Type="Inventory" Subtype="NeedleThread_Inventory" />
   </Definition>
+
 
 
 </Definitions>

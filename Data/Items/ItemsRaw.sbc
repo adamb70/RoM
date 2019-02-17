@@ -1,76 +1,30 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
     <Id Type="InventoryItem" Subtype="BranchesConiferous" />
-    <Public>true</Public>
-    <Tag>ScrapWood</Tag>
+
     <Tag>Universal_Brush</Tag>
-    <DisplayName>DisplayName_Block_ScrapWoodBranches</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\ScrapWoodBranches.dds</Icon>
-    <Model>Models\Cubes\Small\ScrapWoodBranches.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <Size>
-      <X>0.7</X>
-      <Y>0.1</Y>
-      <Z>1</Z>
-    </Size>
-    <Mass>6.7</Mass>
     <MaxStackAmount>15</MaxStackAmount>
-    <Health>15</Health>
-  </Definition>
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="BranchesPalmtree" />
-    <Public>true</Public>
-    <Tag>ScrapWood</Tag>
-    <Tag>Universal_Brush</Tag>
-    <DisplayName>DisplayName_Item_BranchesPalmtree</DisplayName>
-    <Description>Description_Item_BranchesPalmtree</Description>
-    <Icon>Textures\GUI\Icons\Cubes\PalmtreeBranches.dds</Icon>
-    <Model>Models\Cubes\Small\PalmtreeBranches.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <Size>
-      <X>0.7</X>
-      <Y>0.1</Y>
-      <Z>1</Z>
-    </Size>
-    <Mass>4</Mass>
-    <MaxStackAmount>20</MaxStackAmount>
-    <Health>15</Health>
-  </Definition>
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="StoneSmall" />
-    <Tag>Universal_Stone</Tag>
-    <Public>true</Public>
-    <DisplayName>DisplayName_Item_StoneSmall</DisplayName>
-    <Description>Description_Item_StoneSmall</Description>
-    <Icon>Textures\GUI\Icons\Materials\StoneSmall.dds</Icon>
-    <Size>
-      <X>0.2</X>
-      <Y>0.2</Y>
-      <Z>0.2</Z>
-    </Size>
-
-    <!--<Model>Models\Cubes\Small\StoneOreSmall.mwm</Model>-->
-    <Model>Models\Environment\Rocks\StoneOreSmall_1.mwm</Model>
-    <Model>Models\Environment\Rocks\StoneOreSmall_2.mwm</Model>
-    <Model>Models\Environment\Rocks\StoneOreSmall_3.mwm</Model>
-    <Model>Models\Environment\Rocks\StoneOreSmall_4.mwm</Model>
-
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-    <Mass>6</Mass>
-    <MaxStackAmount>20</MaxStackAmount>
-    <Health>30</Health>
   </Definition>
   <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="BranchesPalmtree" />
+    <Tag>Universal_Brush</Tag>
+    <MaxStackAmount>20</MaxStackAmount>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="StoneSmall" />
 
-
+    <Tag>Universal_Stone</Tag>
+    <MaxStackAmount>20</MaxStackAmount>
+  </Definition>
+  <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="SandStoneOreSmall" />
-    <Tag>Universal_Stone</Tag>
     <Public>true</Public>
+    <Tag>Universal_Stone</Tag>
     <DisplayName>Sandstone Ore</DisplayName>
     <Description>Native to the Kharidian Steppes.</Description>
     <Icon>Textures\GUI\Icons\Materials\SandStoneSmall.dds</Icon>
@@ -86,18 +40,17 @@
     <Model>Models\Environment\Rocks\StoneOreSmall_3.mwm</Model>
     <Model>Models\Environment\Rocks\StoneOreSmall_4.mwm</Model>
 
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-    <Mass>6</Mass>
+    <PhysicalMaterial>StoneLight</PhysicalMaterial>
     <MaxStackAmount>20</MaxStackAmount>
-    <Health>30</Health>
+    <Health>10</Health>
+    <Mass>0.5</Mass>
   </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Sand" />
     <Public>true</Public>
     <DisplayName>Sand</DisplayName>
-    <Description>Native to the Kharidian Steppes.
-Used for Glassblowing.</Description>
+    <Description>Native to the Kharidian Steppes.</Description>
     <Icon>Textures\GUI\Icons\Materials\Sand.dds</Icon>
     <Size>
       <X>0.2</X>
@@ -105,23 +58,23 @@ Used for Glassblowing.</Description>
       <Z>0.2</Z>
     </Size>
     <Model>Models\Components\DirtBag.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-    <Mass>6</Mass>
+
+    <PhysicalMaterial>StoneLight</PhysicalMaterial>
     <MaxStackAmount>100</MaxStackAmount>
     <Health>10</Health>
+    <Mass>0.5</Mass>
   </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="LargeSandStone" />
     <DisplayName>Large Sandstone</DisplayName>
-    <Description>Native to the Kharidian Steppes.</Description>
+    <Description>Native to the Kharidian Desert.</Description>
     <Icon>Textures\GUI\Icons\Materials\SandStoneLarge.dds</Icon>
     <Size>
       <X>0.25</X>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>200</Mass>
 
     <!--<Model>Models\Cubes\Small\StoneOreMid.mwm</Model>-->
     <Model>Models\Environment\Rocks\StoneOreLarge_1.mwm</Model>
@@ -133,9 +86,10 @@ Used for Glassblowing.</Description>
     <Model>Models\Environment\Rocks\StoneOreLarge_7.mwm</Model>
     <Model>Models\Environment\Rocks\StoneOreLarge_8.mwm</Model>
 
-    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
     <MaxStackAmount>5</MaxStackAmount>
     <Health>52</Health>
+    <Mass>50</Mass>
   </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -150,8 +104,8 @@ Used for Glassblowing.</Description>
       <Z>0.2</Z>
     </Size>
     <Model>Models\Components\DirtBag.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-    <Mass>6</Mass>
+    <PhysicalMaterial>Cloth</PhysicalMaterial>
+    <Mass>1</Mass>
     <MaxStackAmount>100</MaxStackAmount>
     <Health>10</Health>
   </Definition>
@@ -168,30 +122,52 @@ Used for Glassblowing.</Description>
       <Z>0.2</Z>
     </Size>
     <Model>Models\Components\DirtBag.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-    <Mass>6</Mass>
+    <PhysicalMaterial>Cloth</PhysicalMaterial>
+    <Mass>2</Mass>
     <MaxStackAmount>100</MaxStackAmount>
     <Health>10</Health>
   </Definition>
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
     <Id Type="InventoryItem" Subtype="Sticks" />
     <Tag>Universal_Stick</Tag>
+    <MaxStackAmount>30</MaxStackAmount>
+  </Definition>
+  <!-- =================================================================================== -->
+
+
+
+
+
+  <!-- =================================================================================== -->
+
+  <!-- Kharidian -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="LogPalmtree" />
+    <Tag>Universal_Log</Tag>
+    <MaxStackAmount>1</MaxStackAmount>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="KharidianSticks" />
     <Public>true</Public>
     <Tag>ScrapWood</Tag>
-    <DisplayName>Wooden Sticks</DisplayName>
-    <Description>Description_Item_WoodenSticks</Description>
+    <Tag>Universal_Stick</Tag>
+    <DisplayName>Palm Tree Sticks</DisplayName>
+    <Description>Wooden sticks from a Palm Tree</Description>
     <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
     <Model>Models\Components\WoodenStick.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <Size>
       <X>0.7</X>
       <Y>0.1</Y>
       <Z>1</Z>
     </Size>
-    <Mass>6.7</Mass>
     <MaxStackAmount>30</MaxStackAmount>
     <Health>10</Health>
+    <Mass>0.1</Mass>
   </Definition>
   <!-- =================================================================================== -->
 
@@ -199,776 +175,86 @@ Used for Glassblowing.</Description>
 
 
 
-  <!-- =================================================================================== -->
-
-
-				<!-- Farming Withering -->
 
 
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Pumpkin" />
-    <DisplayName>Withering Pumpkin</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
-      <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
 
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Cabbage" />
-      <Public>true</Public>
-      <DisplayName>Withering Cabbage</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
-      <Model>Models\Consumables\CabbageHead.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_RedCabbage" />
-      <Public>true</Public>
-      <DisplayName>Withering Red Cabbage</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\RedCabbageHead.dds</Icon>
-      <Model>Models\Consumables\RedCabbageHead.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_FlaxStraws" />
-      <Public>true</Public>
-      <DisplayName>Withering Flax Straws</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
-      <Model>Models\Components\FlaxBundle.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_WheatStraws" />
-      <Public>true</Public>
-      <DisplayName>Withering Wheat Straws</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
-      <Model>Models\Components\WheatStraws.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Herbs" />
-      <Public>true</Public>
-      <DisplayName>Withering Herbs</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-      <Model>Models\Consumables\Herbs.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_TreeSmall_Seed" />
-      <Public>true</Public>
-      <DisplayName>Withering Tree</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
-      <Model>Models\Consumables\Herbs.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Norden_Spalt" />
-      <Public>true</Public>
-      <DisplayName>Withering Norden Spalt</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
-      <Model>Models\Universal\Farming\norden_spalt_item.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Norden_Barley" />
-      <Public>true</Public>
-      <DisplayName>Withering Norden Barley</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
-      <Model>Models\Universal\Farming\norden_barley_item.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Pumpkin_Compost" />
-      <Public>true</Public>
-      <DisplayName>Withering Pumpkin (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
-      <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Cabbage_Compost" />
-      <Public>true</Public>
-      <DisplayName> Withering Cabbage (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
-      <Model>Models\Consumables\CabbageHead.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_RedCabbage_Compost" />
-      <Public>true</Public>
-      <DisplayName>Withering Red Cabbage_ (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\RedCabbageHead.dds</Icon>
-      <Model>Models\Components\RedCabbage.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_FlaxStraws_Compost" />
-      <Public>true</Public>
-      <DisplayName>Withering Flax Straws (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
-      <Model>Models\Components\FlaxBundle.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_WheatStraws_Compost" />
-      <Public>true</Public>
-      <DisplayName>Withering WheatStraws (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
-      <Model>Models\Components\WheatStraws.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Herbs_Compost" />
-      <Public>true</Public>
-      <DisplayName>Withering Herbs (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-      <Model>Models\Consumables\Herbs.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_TreeSmall_Seed_Compost" />
-      <Public>true</Public>
-      <DisplayName>Withering Tree (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
-      <Model>Models\Components\Herbs.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Norden_Spalt_Compost" />
-      <Public>true</Public>
-      <DisplayName>Withering Norden Spalt (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
-      <Model>Models\Universal\Farming\norden_spalt_item.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Withering_Norden_Barley_Compost" />
-      <Public>true</Public>
-      <DisplayName>Withering Norden Barley (Compost)</DisplayName>
-    <Description>Bring this to a Farmer's Table, then 
-water the plant, inorder to regrow it.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
-      <Model>Models\Universal\Farming\norden_barley_item.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-<!-- Farming Rotten -->
-
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_Pumpkin" />
-    <Tag>Rotten</Tag>
-    <DisplayName>Rotten Pumpkin</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-      <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
-      <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_Cabbage" />
-      <Public>true</Public>
-      <Tag>Rotten</Tag>
-      <DisplayName>Rotten Cabbage</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-
-      <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
-      <Model>Models\Consumables\CabbageHead.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_RedCabbage" />
-      <Public>true</Public>
-      <Tag>Rotten</Tag>
-      <DisplayName>Rotten Red Cabbage</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-
-      <Icon>Textures\GUI\Icons\Consumables\RedCabbageHead.dds</Icon>
-      <Model>Models\Consumables\RedCabbageHead.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_FlaxStraws" />
-      <Public>true</Public>
-      <Tag>Rotten</Tag>
-      <DisplayName>Rotten Flax Straws</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-
-      <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
-      <Model>Models\Components\FlaxBundle.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_WheatStraws" />
-      <Public>true</Public>
-      <Tag>Rotten</Tag>
-      <DisplayName>Rotten Wheat Straws</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-
-      <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
-      <Model>Models\Components\WheatStraws.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_Herbs" />
-      <Public>true</Public>
-      <Tag>Rotten</Tag>
-      <DisplayName>Rotten Herbs</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-
-      <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-      <Model>Models\Consumables\Herbs.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_TreeSmall_Seed" />
-      <Public>true</Public>
-      <DisplayName>Rotten Tree</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-
-      <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
-      <Model>Models\Consumables\Herbs.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_Norden_Spalt" />
-      <Public>true</Public>
-      <Tag>Rotten</Tag>
-      <DisplayName>Rotten Norden Spalt</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
-      <Model>Models\Universal\Farming\norden_spalt_item.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Rotten_Norden_Barley" />
-      <Public>true</Public>
-      <Tag>Rotten</Tag>
-      <DisplayName>Rotten Norden Barley</DisplayName>
-    <Description>While this may be rotten, you can still 
-use it as compost for a Compost Bin.</Description>
-
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
-      <Model>Models\Universal\Farming\norden_barley_item.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-		<!-- Kharidian Steppes  -->
-
-
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="LogPalmtree" />
-    <Public>true</Public>
-    <Tag>Universal_Log</Tag>
-    <DisplayName>DisplayName_Item_LogPalmtree</DisplayName>
-    <Description>Description_Item_Log</Description>
-    <Icon>Textures\GUI\Icons\Cubes\LogPalm250cm.dds</Icon>
-    <Model>Models\Cubes\Small\LogPalm250cm.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <Size>
-      <X>2.5</X>
-      <Y>0.2</Y>
-      <Z>0.2</Z>
-    </Size>
-    <Mass>161</Mass>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Health>10</Health>
-  </Definition>
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="KharidianSticks" />
-    <Public>true</Public>
-    <Tag>Universal_Stick</Tag>
-    <DisplayName>Palm Tree Sticks</DisplayName>
-    <Description>Wooden sticks from a Palm Tree</Description>
-    <Icon>Textures\GUI\Icons\Cubes\LogPalm250cm.dds</Icon>
-    <Model>Models\Components\WoodenStick.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <Size>
-      <X>2.5</X>
-      <Y>0.2</Y>
-      <Z>0.2</Z>
-    </Size>
-    <Mass>161</Mass>
-    <MaxStackAmount>30</MaxStackAmount>
-    <Health>10</Health>
-  </Definition>
-<!-- =================================================================================== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- =================================================================================== -->
-
-
-		<!-- Enchanted Forest -->
-
+  <!-- Enchanted Forest -->
 
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+    <Public>true</Public>
     <Tag>Universal_Stick</Tag>
-      <Public>true</Public>
-      <DisplayName>Enchanted Wooden Sticks</DisplayName>
-	  <Description>Native to the Elven Grove, bombardment of magical 
-energy has mutated the local trees. Yielding stronger materials.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Herblore\Enchanted_WoodenStick.dds</Icon>
-      <Model>Models\Components\WoodenStick.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>30</MaxStackAmount>
-      <Health>200</Health>
+    <Tag>ScrapWood</Tag>
+    <DisplayName>Enchanted Wooden Sticks</DisplayName>
+    <Description>Native to the Elven Grove, bombardment of magical energy has mutated the local trees yielding stronger materials.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\Enchanted_WoodenStick.dds</Icon>
+    <Model>Models\Components\WoodenStick.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Health>10</Health>
+    <Mass>0.1</Mass>
   </Definition>
   <!-- =================================================================================== -->
-
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Enchanted_StoneOreSmall" />
+    <Public>true</Public>
     <Tag>Universal_Stone</Tag>
-      <Public>true</Public>
-      <DisplayName>Enchanted Stone</DisplayName>
-	  <Description>Native to the Elven Grove, these 
-stones radiate magical essence.</Description>
-      <Icon>Textures\GUI\Icons\Materials\StoneSmall.dds</Icon>
-      <Size>
-        <X>0.2</X>
-        <Y>0.2</Y>
-        <Z>0.2</Z>
-      </Size>
-	  
-	    <!--<Model>Models\Cubes\Small\StoneOreSmall.mwm</Model>-->
-        <Model>Models\Environment\Rocks\StoneOreSmall_1.mwm</Model>
-        <Model>Models\Environment\Rocks\StoneOreSmall_2.mwm</Model>
-        <Model>Models\Environment\Rocks\StoneOreSmall_3.mwm</Model>
-        <Model>Models\Environment\Rocks\StoneOreSmall_4.mwm</Model>
+    <DisplayName>Enchanted Stone</DisplayName>
+    <Description>Native to the Elven Grove, these stones radiate magical essence.</Description>
+    <Icon>Textures\GUI\Icons\Materials\StoneSmall.dds</Icon>
+    <Size>
+      <X>0.2</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+    </Size>
 
-      <PhysicalMaterial>Stone</PhysicalMaterial>
-      <Mass>6</Mass>
-      <MaxStackAmount>20</MaxStackAmount>
-      <Health>300</Health>
+    <!--<Model>Models\Cubes\Small\StoneOreSmall.mwm</Model>-->
+    <Model>Models\Environment\Rocks\StoneOreSmall_1.mwm</Model>
+    <Model>Models\Environment\Rocks\StoneOreSmall_2.mwm</Model>
+    <Model>Models\Environment\Rocks\StoneOreSmall_3.mwm</Model>
+    <Model>Models\Environment\Rocks\StoneOreSmall_4.mwm</Model>
+
+    <PhysicalMaterial>StoneLight</PhysicalMaterial>
+    <MaxStackAmount>20</MaxStackAmount>
+    <Health>10</Health>
+    <Mass>6</Mass>
   </Definition>
   <!-- =================================================================================== -->
-
-
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Enchanted_Log" />
-      <Public>true</Public>
-      <Tag>Universal_Log</Tag>
-      <DisplayName>Enchanted Log</DisplayName>
-	  <Description>Native to the Elven Grove. Bombardment of magical 
-energy has mutated the local trees. Yielding stronger materials.</Description>
-      <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
-      <Model>Models\Cubes\Small\Log250cm.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>2.5</X>
-        <Y>0.2</Y>
-        <Z>0.2</Z>
-      </Size>
-      <Mass>161</Mass>
-      <MaxStackAmount>1</MaxStackAmount>
-      <Health>10</Health>
+    <Public>true</Public>
+    <Tag>Log</Tag>
+    <Tag>Universal_Log</Tag>
+    <DisplayName>Enchanted Log</DisplayName>
+    <Description>Native to the Elven Grove. Bombardment of magical energy has mutated the local trees yielding stronger materials.</Description>
+    <Icon>Textures\GUI\Icons\Materials\LogPalm250cm.dds</Icon>
+    <Model>Models\Cubes\Small\LogPalm250cm.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Size>
+      <X>2.5</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+    </Size>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Health>100</Health>
+    <Mass>10</Mass>
   </Definition>
+  
+  
   <!-- =================================================================================== -->
 
+  <!-- Norden Plains -->
 
-
-
-
-		<!-- Norden Plains -->
-
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="PeltDeer" />
-    <DisplayName>DisplayName_Item_DeerSkin</DisplayName>
-    <Description>Description_Item_DeerSkin</Description>
-      <Icon>Textures\GUI\Icons\Materials\DeerSkin.dds</Icon>
-      <Size>
-        <X>0.25</X>
-        <Y>0.25</Y>
-        <Z>0.25</Z>
-      </Size>
-      <Mass>2</Mass>
-      <Model>Models\Components\DeerSkin.mwm</Model>
-      <MaxStackAmount>5</MaxStackAmount>
-      <Health>52</Health>
-  </Definition>
-<!-- =================================================================================== -->
+  <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Log" />
     <Public>true</Public>
@@ -976,283 +262,262 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
     <Tag>Universal_Log</Tag>
     <DisplayName>Log</DisplayName>
     <Description>Description_Item_Log</Description>
-    <Icon>Textures\GUI\Icons\Cubes\Log250cm.dds</Icon>
-    <Model>Models\Cubes\Small\Log250cm.mwm</Model>
+    <Icon>Textures\GUI\Icons\Materials\Log250cm.dds</Icon>
+    <Model>Models\Cubes\Small\LogSpruce250cm.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
     <Size>
       <X>2.5</X>
       <Y>0.2</Y>
       <Z>0.2</Z>
     </Size>
-    <Mass>161</Mass>
     <MaxStackAmount>1</MaxStackAmount>
-    <Health>10</Health>
-  </Definition>
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Antlers" />
-    <DisplayName>DisplayName_Item_Antlers</DisplayName>
-    <Description>Description_Item_Antlers</Description>
-      <Icon>Textures\GUI\Icons\Materials\Antlers.dds</Icon>
-      <Size>
-        <X>0.25</X>
-        <Y>0.25</Y>
-        <Z>0.25</Z>
-      </Size>
-      <Mass>5</Mass>
-      <Model>Models\Components\Antlers.mwm</Model>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>20</Health>
-  </Definition>
-<!-- =================================================================================== -->
-
-
-		<!-- Spider -->
-
-
-<!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Venom_Gland" />
-      <DisplayName>Venom Gland</DisplayName>
-	  <Description>Description_Item_Venom_Gland</Description>
-      <Icon>Textures\GUI\Icons\Materials\FlaxBundle.dds</Icon>
-      <Model>Models\Components\FlaxBundle.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>16</MaxStackAmount>
-      <Health>200</Health>
+    <Health>100</Health>
+    <Mass>10</Mass>
   </Definition>
   <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="Antlers" />
+    <MaxStackAmount>15</MaxStackAmount>
+  </Definition>
+  
+  
+  <!-- =================================================================================== -->
 
+  <!-- Spider -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Venom_Gland" />
+    <DisplayName>Venom Gland</DisplayName>
+    <Description>Description_Item_Venom_Gland</Description>
+    <Icon>Textures\GUI\Icons\Materials\FlaxBundle.dds</Icon>
+    <Model>Models\Components\FlaxBundle.mwm</Model>
+    <PhysicalMaterial>Generic</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>0.1</Mass>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>20</Health>
+  </Definition>
+  <!-- =================================================================================== -->
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Spider_Silk" />
-      <DisplayName>Spider Silk</DisplayName>
-	  <Description>Description_Item_Spider_Silk</Description>
-      <Icon>Textures\GUI\Icons\Materials\FlaxBundle.dds</Icon>
-      <Model>Models\Components\FlaxBundle.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>16</MaxStackAmount>
-      <Health>200</Health>
+    <DisplayName>Spider Silk</DisplayName>
+    <Description>Description_Item_Spider_Silk</Description>
+    <Icon>Textures\GUI\Icons\Materials\FlaxBundle.dds</Icon>
+    <Model>Models\Components\FlaxBundle.mwm</Model>
+    <PhysicalMaterial>Generic</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>0.1</Mass>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>20</Health>
   </Definition>
   <!-- =================================================================================== -->
-
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Spider_Fang" />
-      <DisplayName>Spider Fang</DisplayName>
-	  <Description>Description_Item_Spider_Fang</Description>
-      <Icon>Textures\GUI\Icons\Materials\FlaxBundle.dds</Icon>
-      <Model>Models\Components\FlaxBundle.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>16</MaxStackAmount>
-      <Health>200</Health>
+    <DisplayName>Spider Fang</DisplayName>
+    <Description>Description_Item_Spider_Fang</Description>
+    <Icon>Textures\GUI\Icons\Materials\FlaxBundle.dds</Icon>
+    <Model>Models\Components\FlaxBundle.mwm</Model>
+    <PhysicalMaterial>Generic</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>0.1</Mass>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>20</Health>
   </Definition>
   <!-- =================================================================================== -->
-
-
-<!-- ================================================================================ -->
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Barley_Malt" />
-      <Public>true</Public>
-      <DisplayName>Barley Malt</DisplayName>
-	  <Description>Used in the process of brewing.</Description>
-      <Icon>Textures\GUI\Icons\Materials\FlourBag.dds</Icon>
-      <Model>Models\Components\FlourBag.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.5</X>
-        <Y>0.5</Y>
-        <Z>0.5</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
+    <Public>true</Public>
+    <DisplayName>Barley Malt</DisplayName>
+    <Description>Used in the process of brewing.</Description>
+    <Icon>Textures\GUI\Icons\Materials\FlourBag.dds</Icon>
+    <Model>Models\Components\FlourBag.mwm</Model>
+    <PhysicalMaterial>Cloth</PhysicalMaterial>
+    <Size>
+      <X>0.5</X>
+      <Y>0.5</Y>
+      <Z>0.5</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
   </Definition>
   <!-- =================================================================================== -->
-  <!-- ================================================================================ -->
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Wort" />
-      <Public>true</Public>
-      <DisplayName>Wort</DisplayName>
-	  <Description>Used in the process of brewing.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
-      <Model>Models\Components\FlourBag.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>100</Health>
+    <Public>true</Public>
+    <DisplayName>Wort</DisplayName>
+    <Description>Used in the process of brewing.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Model>Models\Components\FlourBag.mwm</Model>
+    <PhysicalMaterial>Generic</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>0.2</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
   </Definition>
-  <!-- =================================================================================== -->
-  <!-- ================================================================================ -->
-			
-						<!--Ores/Nuggets-->
+  
+  
+  
   <!-- ================================================================================ -->
 
+  <!--Ores/Nuggets-->
+  
+  <!-- ================================================================================ -->
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="SaltNugget" />
-      <Public>true</Public>
-      <DisplayName>Salt Nugget</DisplayName>
-	  <Description>Used for making alchemy and tastier cooking recipies.</Description>
-      <Icon>Textures\GUI\Icons\SaltNuggetIcon.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>10</Mass>
-      <Model>Models\Environment\Rocks\SaltNugget.mwm</Model>
-      <PhysicalMaterial>Stone</PhysicalMaterial>
-      <MaxStackAmount>10</MaxStackAmount>
-      <Health>700</Health>
+    <Public>true</Public>
+    <DisplayName>Salt Nugget</DisplayName>
+    <Description>Used for making alchemy and tastier cooking recipies.</Description>
+    <Icon>Textures\GUI\Icons\SaltNuggetIcon.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Environment\Rocks\SaltNugget.mwm</Model>
+    <PhysicalMaterial>StoneSmall</PhysicalMaterial>
+    <MaxStackAmount>10</MaxStackAmount>
+    <Health>700</Health>
+    <Mass>1</Mass>
   </Definition>
   <!-- =================================================================================== -->
-  <!-- ================================================================================ -->
-	
-	
+  
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="SaltOre" />
-      <DisplayName>Salt Ore</DisplayName>
-	  <Description>Used for making alchemy and tastier cooking recipies.</Description>
-      <Icon>Textures\GUI\Icons\SaltOreIcon.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>120</Mass>
-      <Model>Models\Environment\Rocks\SaltOre.mwm</Model>
-      <PhysicalMaterial>Stone</PhysicalMaterial>
-      <MaxStackAmount>5</MaxStackAmount>
-      <Health>700</Health>
+    <DisplayName>Salt Ore</DisplayName>
+    <Description>Used for making alchemy and tastier cooking recipies.</Description>
+    <Icon>Textures\GUI\Icons\SaltOreIcon.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Environment\Rocks\SaltOre.mwm</Model>
+    <PhysicalMaterial>StoneLarge</PhysicalMaterial>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Health>700</Health>
+    <Mass>10</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="GoldNugget" />
+    <Public>true</Public>
+    <DisplayName>Gold Nugget</DisplayName>
+    <Description>Valuable Metal.</Description>
+    <Icon>Textures\GUI\Icons\GoldNuggetIcon.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Environment\Rocks\GoldNugget.mwm</Model>
+    <PhysicalMaterial>StoneSmall</PhysicalMaterial>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>700</Health>
+    <Mass>3</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="CoalNugget" />
+    <Public>true</Public>
+    <DisplayName>Coal Nugget</DisplayName>
+    <Description>A better source of fuel in almost all cases.</Description>
+    <Icon>Textures\GUI\Icons\CoalNuggetIcon.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Environment\Rocks\CoalOre.mwm</Model>
+    <PhysicalMaterial>StoneSmall</PhysicalMaterial>
+    <MaxStackAmount>4</MaxStackAmount>
+    <Health>700</Health>
+    <Mass>1</Mass>
   </Definition>
   <!-- =================================================================================== -->
   <!-- ================================================================================ -->
 
-	
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="GoldNugget" />
-      <Public>true</Public>
-      <DisplayName>Gold Nugget</DisplayName>
-	  <Description>Valuable Metal.</Description>
-      <Icon>Textures\GUI\Icons\GoldNuggetIcon.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>30</Mass>
-      <Model>Models\Environment\Rocks\GoldNugget.mwm</Model>
-      <PhysicalMaterial>Stone</PhysicalMaterial>
-      <MaxStackAmount>16</MaxStackAmount>
-      <Health>700</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-  <!-- ================================================================================ -->
-		
-	
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="CoalNugget" />
-      <Public>true</Public>
-      <DisplayName>Coal Nugget</DisplayName>
-	  <Description>A better source of fuel in almost all cases.</Description>
-      <Icon>Textures\GUI\Icons\CoalNuggetIcon.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>5</Mass>
-      <Model>Models\Environment\Rocks\CoalOre.mwm</Model>
-      <PhysicalMaterial>Stone</PhysicalMaterial>
-      <MaxStackAmount>4</MaxStackAmount>
-      <Health>700</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-  <!-- ================================================================================ -->
-	
-	
+
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="CoalOre" />
-      <DisplayName>Coal Ore</DisplayName>
-	  <Description>A better source of fuel in almost all cases.</Description>
-      <Icon>Textures\GUI\Icons\CoalOreIcon.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>150</Mass>
-      <Model>Models\Environment\Rocks\CoalOre.mwm</Model>
-      <PhysicalMaterial>Stone</PhysicalMaterial>
-      <MaxStackAmount>16</MaxStackAmount>
-      <Health>700</Health>
+    <DisplayName>Coal Ore</DisplayName>
+    <Description>A better source of fuel in almost all cases.</Description>
+    <Icon>Textures\GUI\Icons\CoalOreIcon.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Environment\Rocks\CoalOre.mwm</Model>
+    <PhysicalMaterial>StoneLarge</PhysicalMaterial>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>700</Health>
+    <Mass>10</Mass>
   </Definition>
   <!-- =================================================================================== -->
   <!-- ================================================================================ -->
-	
+
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="MithrilOre" />
-      <DisplayName>Mithril Ore</DisplayName>
-	  <Description>A very strong, lightweight, material.</Description>
-      <Icon>Textures\GUI\Icons\MithrilOreIcon.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>220</Mass>
-      <Model>Models\Environment\Rocks\MithrilOre.mwm</Model>
-      <PhysicalMaterial>Stone</PhysicalMaterial>
-      <MaxStackAmount>16</MaxStackAmount>
-      <Health>700</Health>
+    <DisplayName>Mithril Ore</DisplayName>
+    <Description>A very strong, lightweight, material.</Description>
+    <Icon>Textures\GUI\Icons\MithrilOreIcon.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Environment\Rocks\MithrilOre.mwm</Model>
+    <PhysicalMaterial>StoneLarge</PhysicalMaterial>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>700</Health>
+    <Mass>30</Mass>
   </Definition>
   <!-- =================================================================================== -->
   <!-- ================================================================================ -->
-	
+
 
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="IronNugget" />
-      <Public>true</Public>
-      <DisplayName>Iron Nugget</DisplayName>
-	  <Description>Used to make Iron Ingots</Description>
-      <Icon>Textures\GUI\Icons\IronNuggetIcon.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>10</Mass>
-      <Model>Models\Environment\Rocks\IronNugget.mwm</Model>
-      <PhysicalMaterial>Stone</PhysicalMaterial>
-      <MaxStackAmount>32</MaxStackAmount>
-      <Health>700</Health>
+    <Public>true</Public>
+    <DisplayName>Iron Nugget</DisplayName>
+    <Description>Used to make Iron Ingots</Description>
+    <Icon>Textures\GUI\Icons\IronNuggetIcon.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Environment\Rocks\IronNugget.mwm</Model>
+    <PhysicalMaterial>StoneSmall</PhysicalMaterial>
+    <MaxStackAmount>32</MaxStackAmount>
+    <Health>700</Health>
+    <Mass>1</Mass>
   </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -1267,11 +532,11 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
       <Y>0.1</Y>
       <Z>0.1</Z>
     </Size>
-    <Mass>220</Mass>
     <Model>Models\Environment\Rocks\IronOre.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <PhysicalMaterial>StoneLarge</PhysicalMaterial>
     <MaxStackAmount>6</MaxStackAmount>
-    <Health>70</Health>
+    <Health>700</Health>
+    <Mass>20</Mass>
   </Definition>
   <!-- ================================================================================ -->
   <!-- ================================================================================ -->
@@ -1286,11 +551,11 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
       <Y>0.1</Y>
       <Z>0.1</Z>
     </Size>
-    <Mass>220</Mass>
     <Model>Models\Environment\Rocks\IronOre.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <PhysicalMaterial>StoneLarge</PhysicalMaterial>
     <MaxStackAmount>6</MaxStackAmount>
-    <Health>70</Health>
+    <Health>700</Health>
+    <Mass>30</Mass>
   </Definition>
   <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -1304,11 +569,11 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
       <Y>0.1</Y>
       <Z>0.1</Z>
     </Size>
-    <Mass>220</Mass>
     <Model>Models\Environment\Rocks\IronOre.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <PhysicalMaterial>StoneLarge</PhysicalMaterial>
     <MaxStackAmount>6</MaxStackAmount>
-    <Health>70</Health>
+    <Health>700</Health>
+    <Mass>20</Mass>
   </Definition>
   <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -1322,12 +587,28 @@ energy has mutated the local trees. Yielding stronger materials.</Description>
       <Y>0.1</Y>
       <Z>0.1</Z>
     </Size>
-    <Mass>220</Mass>
     <Model>Models\Environment\Rocks\IronOre.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <PhysicalMaterial>StoneLarge</PhysicalMaterial>
     <MaxStackAmount>6</MaxStackAmount>
-    <Health>70</Health>
+    <Health>700</Health>
+    <Mass>20</Mass>
   </Definition>
   <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="SandPile" />
+    <DisplayName>Sand Pile</DisplayName>
+    <Description>Sand pile</Description>
+    <Icon>Textures\GUI\Icons\component\SandPile.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Components\SandPile.mwm</Model>
+    <PhysicalMaterial>Sand</PhysicalMaterial>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Health>70</Health>
+    <Mass>20</Mass>
+  </Definition>
 
 </Definitions>

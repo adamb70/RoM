@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using VRage.Audio;
 using VRage.ObjectBuilders;
 
-namespace RomScripts.RomHungerEffect
+namespace RomScripts76561197972467544.RomHungerEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_RomHungerEffectDefinition))]
     public class MyRomHungerEffectDefinition : MyEntityStatEffectDefinition

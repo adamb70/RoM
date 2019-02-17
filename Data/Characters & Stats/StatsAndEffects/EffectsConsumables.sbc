@@ -59,19 +59,6 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Minor_Potion_Strength" />
-    <DisplayName>Minor Strength Potion</DisplayName>
-    <Description>Prepared by an Apothocary the Minor Strength Potion gives a temporary surge of stamina to whoever drinks it.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Apothocary\potion_strength.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Stamina</Stat>
-	<RegenPerSecond>15</RegenPerSecond>
-	<Duration Seconds="2" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Stamina_Potion_1" />
     <DisplayName>Minor Strength Potion</DisplayName>
     <Description>Prepared by an Apothocary the Minor Strength Potion gives a temporary surge of stamina to whoever drinks it.</Description>
@@ -181,34 +168,6 @@
 	<EffectType>Positive</EffectType>
 	<Stat>Stamina</Stat>
 	<RegenPerSecond>5</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Stamina" />
-    <DisplayName>Stamina</DisplayName>
-    <Public>false</Public>
-    <Description>Your stamina is regnerating!</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Stamina</Stat>
-	<RegenPerSecond>5</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="CrimsonThristleTea_Stamina" />
-    <DisplayName>Stamina</DisplayName>
-    <Public>false</Public>
-    <Description>Your stamina is regnerating!</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Stamina</Stat>
-	<RegenPerSecond>.75</RegenPerSecond>
 	<Duration Seconds="10" />
 	<CancelOnDamage>false</CancelOnDamage>
   </Definition>
@@ -344,7 +303,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Berry_Juice_Vigor" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Vigor" />
     <DisplayName>Vigor</DisplayName>
     <Public>false</Public>
     <Description>Your Vigor is changing.</Description>
@@ -372,7 +331,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Grape_Juice_Vigor" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Grape_Vigor" />
     <DisplayName>Vigor</DisplayName>
     <Public>false</Public>
     <Description>Your Vigor is changing.</Description>
@@ -400,7 +359,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Blue_Berry_Juice_Vigor" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Blue_Vigor" />
     <DisplayName>Vigor</DisplayName>
     <Public>false</Public>
     <Description>Your Vigor is changing.</Description>
@@ -582,7 +541,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="TreeSmall_Seed_Vigor" />
+    <Id Type="EntityStatEffect" Subtype="Pinecone_Vigor" />
     <DisplayName>Vigor</DisplayName>
     <Public>false</Public>
     <Description>Your Vigor is changing.</Description>
@@ -764,20 +723,6 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="CrimsonThristleTea_Vigor" />
-    <DisplayName>Vigor</DisplayName>
-    <Public>false</Public>
-    <Description>Your Vigor is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Vigor</Stat>
-	<RegenPerSecond>.04</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Salad_Vigor" />
     <DisplayName>Vigor</DisplayName>
     <Public>false</Public>
@@ -935,7 +880,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Berry_Juice_Mood" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Mood" />
     <DisplayName>Mood</DisplayName>
     <Public>false</Public>
     <Description>Your mood is changing.</Description>
@@ -963,7 +908,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Grape_Juice_Mood" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Grape_Mood" />
     <DisplayName>Mood</DisplayName>
     <Public>false</Public>
     <Description>Your mood is changing.</Description>
@@ -991,7 +936,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Blue_Berry_Juice_Mood" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Blue_Mood" />
     <DisplayName>Mood</DisplayName>
     <Public>false</Public>
     <Description>Your mood is changing.</Description>
@@ -1173,7 +1118,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="TreeSmall_Seed_Mood" />
+    <Id Type="EntityStatEffect" Subtype="Pinecone_Mood" />
     <DisplayName>Mood</DisplayName>
     <Public>false</Public>
     <Description>Your mood is changing.</Description>
@@ -1355,20 +1300,6 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="CrimsonThristleTea_Mood" />
-    <DisplayName>Mood</DisplayName>
-    <Public>false</Public>
-    <Description>Your mood is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Mood</Stat>
-	<RegenPerSecond>1.5</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Salad_Mood" />
     <DisplayName>Mood</DisplayName>
     <Public>false</Public>
@@ -1479,7 +1410,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Berry_Juice_Thirst" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Thirst" />
     <DisplayName>Drinking</DisplayName>
     <Description>You are feeling less thirsty. . .</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
@@ -1518,7 +1449,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Grape_Juice_Thirst" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Grape_Thirst" />
     <DisplayName>Drinking</DisplayName>
     <Description>You are feeling less thirsty. . .</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
@@ -1544,7 +1475,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Blue_Berry_Juice_Thirst" />
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Blue_Thirst" />
     <DisplayName>Drinking</DisplayName>
     <Description>You are feeling less thirsty. . .</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
@@ -1578,19 +1509,6 @@
 	<EffectType>Positive</EffectType>
 	<Stat>Thirst</Stat>
 	<RegenPerSecond>4</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="CrimsonThristleTea_Thirst" />
-    <DisplayName>Drinking</DisplayName>
-    <Description>You are feeling less thirsty. . .</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Thirst</Stat>
-	<RegenPerSecond>2</RegenPerSecond>
 	<Duration Seconds="10" />
 	<CancelOnDamage>false</CancelOnDamage>
   </Definition>
@@ -2001,7 +1919,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="TreeSmall_Seed_Food" />
+    <Id Type="EntityStatEffect" Subtype="Pinecone_Food" />
     <DisplayName>Eating</DisplayName>
     <Description>You are feeling less hungry. . .</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>

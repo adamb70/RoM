@@ -1,20 +1,22 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_QuestDefinition">
     <Id Type="QuestDefinition" Subtype="HungryBellies" />
-	
-	<DisplayName>DisplayName_Quest_HungryBellies</DisplayName>
-	<Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
-	<Tag>Tutorial</Tag>
-	
-	<IsAbandonable>true</IsAbandonable>
-	<IsRepeatable>false</IsRepeatable>
-	
 
-	<Step>
-		<FullDescription>Description_Quest_HungryBellies_Step01</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="1" />
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
+    <DisplayName>DisplayName_Quest_HungryBellies</DisplayName>
+    <Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Tutorial</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+
+    <Step>
+      <FullDescription>Description_Quest_HungryBellies_Step01</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="1" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
   </Definition>
+
 </Definitions>

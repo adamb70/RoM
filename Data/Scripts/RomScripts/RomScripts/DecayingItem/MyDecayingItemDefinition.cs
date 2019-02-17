@@ -5,7 +5,7 @@ using VRage.Game.Definitions;
 using VRage.ObjectBuilders.Definitions.Inventory;
 using Sandbox.Definitions.Inventory;
 
-namespace RomScripts.DecayingItem
+namespace RomScripts76561197972467544.DecayingItem
 {
     [MyDefinitionType(typeof(MyObjectBuilder_DecayingItemDefinition))]
     public class MyDecayingItemDefinition : MyDurableItemDefinition

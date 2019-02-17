@@ -1,33 +1,28 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Small_Fabricator_Wood" />
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Small_Fabricator_Wood" />
+    <Rotation>YAxis</Rotation>
     <DisplayName>Small Fabricator (Wood)</DisplayName>
     <Description>
-"The Wood Fabricator is the least 
-effiecant type of Fabricator."
-</Description>
-    <BlockPairName>Small_Fabricator</BlockPairName>
-    <Public>false</Public>
-    <Icon>Textures\GUI\Icons\Cubes\Mechanical\SawmillMechanical.dds</Icon>
-    <CubeSize>Large</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="1" y="1" z="1" />
-    <ModelOffset x="0" y="0" z="0" />
+"The Steel Fabricator is the more 
+effiecant than a Bronze Fabricator."
+    </Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Materials\IngotSteel.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
     <Model>Models\Cubes\large\Mechanical\SawmillMechanical.mwm</Model>
     <BuildProgressModels>
-      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Mechanical\SawmillMechanical_Construction_1.mwm">
-        <!--<MountPointOverrides>
-          <MountPoint Side="Top" Enabled="false" />
-        </MountPointOverrides>-->
-      </Model> 
+      <Model UpperBound="0.5" File="Models\Cubes\large\Mechanical\SawmillMechanical_Construction_1.mwm" />
     </BuildProgressModels>
     <Components>
       <Component Type="InventoryItem" Subtype="Small_FactoryKit" Count="1" />
       <Component Type="InventoryItem" Subtype="Wood_Gear" Count="5" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="Wood_Gear" Index="0" />
-    <MaxIntegrity>600</MaxIntegrity>
     <MountPoints>
       <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
       <MountPoint Side="Top" StartX="1" StartY="1" EndX="0" EndY="0" />
@@ -36,95 +31,40 @@ effiecant type of Fabricator."
       <MountPoint Side="Back" StartX="1" StartY="1" EndX="0" EndY="0" />
       <MountPoint Side="Front" StartX="1" StartY="1" EndX="0" EndY="0" />
     </MountPoints>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>3</BuildTimeSeconds>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <GuiVisible>true</GuiVisible>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>InVoxel</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
-	<!-- Disable compound building for the framed blocks; The unframed ones are designed for compounding. -->
-	<CompoundEnabled>false</CompoundEnabled>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <!-- Disable compound building for the framed blocks; The unframed ones are designed for compounding. -->
+    <CompoundEnabled>false</CompoundEnabled>
+    <MaxIntegrity>600</MaxIntegrity>
+    <CriticalIntegrityRatio>0.9</CriticalIntegrityRatio>
   </Definition>
-<!-- ================================================================================ -->
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Small_Fabricator_Wood" />
-    <Component Type="MechanicalSinkComponent" Subtype="Small_Fabricator_Wood" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="Small_Fabricator_Wood" />
-    <Component Type="SubpartAnimationComponent" Subtype="Small_Fabricator_Wood" />
-    <Component Type="EntityFXComponent" Subtype="Small_Fabricator_Wood" />
-    <Component Type="Inventory" Subtype="Small_FabricatorToolheadInventory" />
-    <Component Type="StockpileComponent" Subtype="Small_FabricatorToolheadVisual" />
-    <Component Type="Inventory" Subtype="Small_FabricatorInventoryInput" />
-    <Component Type="Inventory" Subtype="Small_FabricatorInventoryOutput" />
-    <Component Type="CraftingComponentAutonomous" Subtype="Small_Fabricator_Wood" />
-    <Component Type="InventorySpawnComponent" />
-  </Definition>
-<!-- ================================================================================ -->
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="Inventory" Subtype="Small_FabricatorToolheadInventory" />
-    <DisplayName>DisplayName_InventoryName_Toolhead</DisplayName>
-    <MaxItemCount>1</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="true">
-      <Id Type="ToolheadItem" Subtype="Small_FactoryKit_Wood_Toolhead" />
-    </Constraint>
-  </Definition>
-<!-- ================================================================================ -->
-  <Definition xsi:type="MyObjectBuilder_StockpileComponentDefinition">
-    <Id Type="StockpileComponent" Subtype="Small_FabricatorToolheadVisual" />
-    <SubpartNameFormat>Sawblades</SubpartNameFormat>
-    <MaxNumberOfSubparts>1</MaxNumberOfSubparts>
-    <InventoryName>Small_FabricatorToolheadInventory</InventoryName>
-  </Definition>
-<!-- ================================================================================ -->
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="Inventory" Subtype="Small_FabricatorInventoryInput" />
-    <DisplayName>Input</DisplayName>
-    <MaxItemCount>7</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-  </Definition>
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="Inventory" Subtype="Small_FabricatorInventoryOutput" />
-    <DisplayName>Output</DisplayName>
-    <MaxItemCount>7</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-  </Definition>
-<!-- ================================================================================ -->
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentAutonomousDefinition">
-    <Id Type="CraftingComponentAutonomous" Subtype="Small_Fabricator_Wood" />
-    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-    <ConstrainInventory>true</ConstrainInventory>
-    <ReturnPrerequisitesOnCancel>false</ReturnPrerequisitesOnCancel>
-    <PowerRequired>All</PowerRequired>
-    <CraftingInventory>Small_FabricatorInventory_WoodInput</CraftingInventory>
-    <OutputInventory>Small_FabricatorInventory_WoodOutput</OutputInventory>
 
-    <ToolheadInventory>Small_FabricatorToolheadInventory</ToolheadInventory>
-    <AcceptedToolheads>
-      <Toolhead Type="ToolheadItem" Subtype="Small_FactoryKit_Wood_Toolhead" />
-    </AcceptedToolheads>
+
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Small_Fabricator_Wood" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="MechanicalSinkComponent" Subtype="Small_Fabricator_Wood" />
+    <Component Type="ModelAttachmentComponent" Subtype="SawmillMechanical" />
+    <Component Type="AttachmentAnimationComponent" Subtype="SawmillMechanical" />
+    <Component Type="EntityFXComponent" Subtype="SawmillMechanical" />
+    <Component Type="VisualInventoryComponent" Subtype="SawmillMechanicalVisualInventory" />
+    <Component Type="Inventory" Subtype="Small_FabricatorToolheadInventory" />
+
+    <Component Type="Inventory" Subtype="SawmillMechanicalInventory" />
+    <Component Type="Inventory" Subtype="SawmillMechanicalOutputInventory" />
+    <Component Type="Inventory" Subtype="ProcessingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+
+    <Component Type="CraftingComponent" Subtype="Small_Fabricator_WoodCrafting" />
+    <Component Type="CraftingScheduler" Subtype="Small_Fabricator_WoodScheduler" />
+    <Component Type="ToolBasedRecipeProviderComponent" Subtype="Small_Fabricator_WoodRecipes" />
+
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
   </Definition>
-<!-- ================================================================================ -->
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="CubeBlockSubpartComponent" Subtype="Small_Fabricator_Wood" />
-	<ShowSubpartsWhileBuilding>false</ShowSubpartsWhileBuilding>
-    <Subparts>
-      <Subpart Name="SawbladeFrame" Model="Models\Cubes\large\Mechanical\SawmillMechanical_Arm.mwm" PhysicalMaterial="Wood" HingeBone="subpart_sawblades" RequiresAxialCorrection="true" HasDummy="false" HasPhysics="false" />
-      <Subpart Name="Sawblades" PhysicalMaterial="Wood" HingeBone="subpart_sawblades" RequiresAxialCorrection="true" HasDummy="false" HasPhysics="false" />
-    </Subparts>
-  </Definition>
-<!-- ================================================================================ -->
+
+  <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_MechanicalSinkComponentDefinition">
     <Id Type="MechanicalSinkComponent" Subtype="Small_Fabricator_Wood" />
     <Connection>connection_backward</Connection>
@@ -132,43 +72,44 @@ effiecant type of Fabricator."
     <ClockwiseAnimation>cw</ClockwiseAnimation>
     <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
   </Definition>
-<!-- ================================================================================ -->  
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="SubpartAnimationComponent" Subtype="Small_Fabricator_Wood" />
-    <AnimationSequences>
-      <Sequence Name="cw" WrapMode="Loop">
-        <Animation Start="0" End="1.25">
-          <Subpart Name="SawbladeFrame" Type="Translation" Axis="Y" From="0.0" To="-0.7" Method="SinusoidalEaseInOut" />
-          <Subpart Name="Sawblades" Type="Translation" Axis="Y" From="0.0" To="-0.7" Method="SinusoidalEaseInOut" />
-        </Animation>
-        <Animation Start="1.25" End="2.5">
-          <Subpart Name="SawbladeFrame" Type="Translation" Axis="Y" From="-0.7" To="0.0" Method="SinusoidalEaseInOut" />
-          <Subpart Name="Sawblades" Type="Translation" Axis="Y" From="-0.7" To="0.0" Method="SinusoidalEaseInOut" />
-        </Animation>
-      </Sequence>
-      <Sequence Name="ccw" WrapMode="Loop">
-        <Animation Start="0" End="1.25">
-          <Subpart Name="SawbladeFrame" Type="Translation" Axis="Y" From="0.0" To="-0.7" Method="SinusoidalEaseInOut" />
-          <Subpart Name="Sawblades" Type="Translation" Axis="Y" From="0.0" To="-0.7" Method="SinusoidalEaseInOut" />
-        </Animation>
-        <Animation Start="1.25" End="2.5">
-          <Subpart Name="SawbladeFrame" Type="Translation" Axis="Y" From="-0.7" To="0.0" Method="SinusoidalEaseInOut" />
-          <Subpart Name="Sawblades" Type="Translation" Axis="Y" From="-0.7" To="0.0" Method="SinusoidalEaseInOut" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="Small_FabricatorToolheadInventory" />
+    <DisplayName>DisplayName_InventoryName_Toolhead</DisplayName>
+    <MaxItemCount>1</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <Constraint Type="ItemTypeConstraint" Subtype="Small_Fabricator_Wood" />
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
   </Definition>
-<!-- ================================================================================ -->
-  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="Small_Fabricator_Wood" />
-    <Effects>
-      <Effect StartEvent="NotWorking_connection_backward" StopEvent="Working_connection_backward" Dummy="connection_backward">
-        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="MechanicalGrinding"/>
-      </Effect>
-      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="SawmillMechanical_particle_emitter">
-        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="SawmillMechanical"/>
-      </Effect>
-    </Effects>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_ItemTypeConstraint">
+    <Id Type="ItemTypeConstraint" Subtype="Small_Fabricator_Wood" />
+    <Whitelist>true</Whitelist>
+    <Item Type="ToolheadItem" Subtype="Small_FactoryKit_Wood_Toolhead" />
   </Definition>
-<!-- ================================================================================ -->
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="Small_Fabricator_WoodCrafting" />
+    <PowerRequired>None</PowerRequired>
+    <InputInventory>SawmillMechanicalInventory</InputInventory>
+    <OutputInventory>SawmillMechanicalOutputInventory</OutputInventory>
+    <CraftingInventory>ProcessingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <MergeStacks>true</MergeStacks>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="Small_Fabricator_WoodScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="Small_Fabricator_WoodCrafting" />
+    <RecipeSelection>Automatic</RecipeSelection>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_ToolBasedRecipeProviderComponentDefinition">
+    <Id Type="ToolBasedRecipeProviderComponent" Subtype="Small_Fabricator_WoodRecipes" />
+    <MonitoredInventory Type="Inventory" Subtype="Small_FabricatorToolheadInventory" />
+    <ToolheadConstraint Type="ItemTypeConstraint" Subtype="Small_Fabricator_Wood" />
+  </Definition>
 </Definitions>

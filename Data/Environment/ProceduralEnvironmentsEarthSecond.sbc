@@ -4,10 +4,7 @@
   <!-- NEW PLANET ENVIRONMENT-->
 
   <Definition xsi:type="MyObjectBuilder_ProceduralWorldEnvironment">
-    <Id>
-      <TypeId>MyObjectBuilder_ProceduralWorldEnvironment</TypeId>
-      <SubtypeId>SecondEarthEnvironment</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_ProceduralWorldEnvironment" Subtype="SecondEarthEnvironment" />
 
     <!-- Maximum lod until sectors are synchronized -->
     <MaxSyncLod>1</MaxSyncLod>

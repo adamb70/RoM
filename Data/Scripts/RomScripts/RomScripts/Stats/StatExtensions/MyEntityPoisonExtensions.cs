@@ -2,7 +2,7 @@
 using VRage.Utils;
 using Sandbox.Game.Entities.Entity.Stats;
 
-namespace RomScripts.StatExtensions
+namespace RomScripts76561197972467544.StatExtensions
 {
     public static class MyEntityPoisonExtensions
     {

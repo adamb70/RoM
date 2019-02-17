@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Juice_Grape" />
+    <Tag>Drink</Tag>
+    <Public>true</Public>
+    <DisplayName>Grape Juice</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Juice.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Grape.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\Berries.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Juice_Grape_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Juice_Grape_Thirst" />
+    <Effect Type="EntityStatEffect" Subtype="Juice_Grape_Vigor" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Juice_Grape" />
+    <DisplayName>Grape Juice</DisplayName>
+    <Description>Very Refreshing!</Description>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Juice.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Grape.dds</Icon>
+    <Category>Cooking_Juice_Grape_Kegstand</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="ConsumableItem" Subtype="Grape" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="Juice_Grape" />
+    </Results>
+    <CraftingTime Seconds="2"/>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Juice_Grape_Crafting" />
+    <DisplayName>Cooking: Grape Juice</DisplayName>
+    <Description>Recipie for learning how to make Grape Juice. Requires a Juicer Stand.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Juice.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Grape.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Cooking_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Grape" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Schematic_Juice_Grape" />
+    </Results>
+    <CraftingTime Seconds="2"/>
+  </Definition>
+
+
+
+</Definitions>

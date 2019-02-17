@@ -3,7 +3,7 @@ using VRage.Game.ObjectBuilders.ComponentSystem;
 using VRage.ObjectBuilders;
 using Medieval.ObjectBuilders.Components.MechanicalPower;
 
-namespace RomScripts.FueledMechanicalSource
+namespace RomScripts76561197972467544.FueledMechanicalSource
 {
     [MyObjectBuilderDefinition]
     [XmlSerializerAssembly("MedievalEngineers.ObjectBuilders.XmlSerializers")]

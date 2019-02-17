@@ -2,169 +2,117 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
-<!-- Blacksmithing -->
+  <!-- Blacksmithing -->
 
-	
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Iron_Nails" />
-      <Public>true</Public>
-      <DisplayName>Iron Nails</DisplayName>
-	  <Description>Used to boost the strength of wooden 
-structures. Nails are not required</Description>
-      <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Iron_Nails.dds</Icon>
-      <Size>
-        <X>0.25</X>
-        <Y>0.25</Y>
-        <Z>0.25</Z>
-      </Size>
-      <Mass>1</Mass>
-      <Model>Models\Components\IronIngot.mwm</Model>
-      <MaxStackAmount>60</MaxStackAmount>
-      <Health>520</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-
-
-<!-- Misc -->
-
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Empty_Bucket" />
-      <Public>false</Public>
-      <DisplayName>Empty Bucket</DisplayName>
-	  <Description>Used to hold material.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-      <Model>Models\Universal\Farming\empty_bucket.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>200</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="Compost_Bucket" />
-      <Public>false</Public>
-      <DisplayName>Compost Bucket</DisplayName>
-	  <Description>Used in advanced techniques of farming.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-      <Model>Models\Universal\Farming\compost_bucket.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <MaxStackAmount>15</MaxStackAmount>
-      <Health>200</Health>
-  </Definition>
-  <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToPlankCarpentry" />
-    <DisplayName>Cut Planks</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\Plank.dds</Icon>
-    <Category>Carpentry_Table</Category>
-    <Prerequisites>
-      <Item Amount="1" Tag="Log" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="15" Type="CubeBlock" Subtype="Plank10" />
-    </Results>
-    <CraftingTime Seconds="2.0"/>
-  </Definition>
-  <!-- =================================================================================== -->
-
-  
-  
-  
-  
-  <!-- ================================================================================ -->
-
-    <!-- ===================== ingots ===================== -->
-  
-  <!-- ================================================================================ -->
-  <!--tweeked some of the vanilla propertied of the ingot-->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="IngotGold" />
     <Public>true</Public>
-    <Tag>Ingot</Tag>
-    <Tag>IngotGold</Tag>
-    <DisplayName>DisplayName_Item_IngotGold</DisplayName>
-    <Description>Description_Item_IngotGold</Description>
-    <Icon>Textures\GUI\Icons\Materials\IngotGold.dds</Icon>
-    <Model>Models\Components\GoldIngot.mwm</Model>
-    <PhysicalMaterial>Iron</PhysicalMaterial>
-    <Size>
-      <X>0.7</X>
-      <Y>0.1</Y>
-      <Z>1</Z>
-    </Size>
-    <Mass>80</Mass>
-    <MaxStackAmount>16</MaxStackAmount>
-    <Health>520</Health>
-  </Definition>
-  <!-- ================================================================================ -->
-  
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="MithrilIngot" />
-    <DisplayName>Mithril Ingot</DisplayName>
-	  <Description>A very strong, lightweight, material.</Description>
-      <Icon>Textures\GUI\Icons\Ingot\MithrilIngotIcon.dds</Icon>
-      <Size>
-        <X>0.25</X>
-        <Y>0.25</Y>
-        <Z>0.25</Z>
-      </Size>
-      <Mass>100</Mass>
-      <Model>Models\Ingots\MithrilIngot.mwm</Model>
-      <MaxStackAmount>4</MaxStackAmount>
-      <Health>520</Health>
-  </Definition>
-  
-  <!-- ================================================================================ -->
-
-	  <!--tweeked some of the vanilla propertied of the ingot-->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Type="InventoryItem" Subtype="IngotIron" />
-    <Tag>Ingot</Tag>
-    <Tag>IngotIron</Tag>
-    <DisplayName>DisplayName_Item_IronIngot</DisplayName>
-    <Description>Description_Item_IronIngot</Description>
-    <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
-    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <DisplayName>Iron Nails</DisplayName>
+    <Description>Used to boost the strength of wooden structures. Nails are not required</Description>
+    <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Iron_Nails.dds</Icon>
     <Size>
       <X>0.25</X>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>100</Mass>
     <Model>Models\Components\WroughtIronIngot.mwm</Model>
-    <MaxStackAmount>24</MaxStackAmount>
-    <Health>520</Health>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <MaxStackAmount>60</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>0.1</Mass>
   </Definition>
-  <!-- =================================================================================== -->
-  
-  
-  
-  
+
+
   <!-- ================================================================================ -->
 
-  <!-- ===================== Metal Parts ===================== -->
+  <!-- ingots -->
 
-<!-- ================================================================================ -->
+  <!-- ================================================================================ -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotCopper" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">    
+    <Id Type="InventoryItem" Subtype="IngotIron" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotSilver" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotBronze" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotTin" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotGold" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotSteel" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="MithrilIngot" />
+    <Public>true</Public>
+    <Tag>Ingot</Tag>
+    <Tag>IngotMithril</Tag>
+    <DisplayName>Mithril Ingot</DisplayName>
+    <Description>A very strong, lightweight, material.</Description>
+    <Icon>Textures\GUI\Icons\Ingot\MithrilIngotIcon.dds</Icon>
+    <Model>Models\Ingots\MithrilIngot.mwm</Model>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>30</Mass>
+  </Definition>
+
+  <!-- ================================================================================ -->
+
+
+
+
+  <!-- ================================================================================ -->
+
+  <!-- Metal Parts -->
+
+  <!-- ================================================================================ -->
+  <!-- hide vanilla parts -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="PartsMetal" />
+    <Public>false</Public>
+  </Definition>
+
+  <!-- ================================================================================ -->
+  
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Copper_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
     <DisplayName>Copper Parts</DisplayName>
     <Description>Strips of copper cut from an ingot</Description>
     <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
@@ -174,14 +122,17 @@ structures. Nails are not required</Description>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>100</Mass>
     <Model>Models\Components\WroughtIronIngot.mwm</Model>
     <MaxStackAmount>24</MaxStackAmount>
-    <Health>520</Health>
+    <Health>50</Health>
+    <Mass>5</Mass>
   </Definition>
   <!-- =================================================================================== -->
+  
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Iron_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
     <DisplayName>Iron Parts</DisplayName>
     <Description>Strips of iron cut from an ingot</Description>
     <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
@@ -191,14 +142,17 @@ structures. Nails are not required</Description>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>100</Mass>
     <Model>Models\Components\WroughtIronIngot.mwm</Model>
     <MaxStackAmount>24</MaxStackAmount>
-    <Health>520</Health>
+    <Health>50</Health>
+    <Mass>5</Mass>
   </Definition>
   <!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Tin_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
     <DisplayName>Tin Parts</DisplayName>
     <Description>Strips of tin cut from an ingot</Description>
     <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
@@ -208,14 +162,17 @@ structures. Nails are not required</Description>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>100</Mass>
     <Model>Models\Components\WroughtIronIngot.mwm</Model>
     <MaxStackAmount>24</MaxStackAmount>
-    <Health>520</Health>
+    <Health>50</Health>
+    <Mass>5</Mass>
   </Definition>
   <!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Lead_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
     <DisplayName>Lead Parts</DisplayName>
     <Description>Strips of lead cut from an ingot</Description>
     <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
@@ -225,14 +182,17 @@ structures. Nails are not required</Description>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>100</Mass>
     <Model>Models\Components\WroughtIronIngot.mwm</Model>
     <MaxStackAmount>24</MaxStackAmount>
-    <Health>520</Health>
+    <Health>50</Health>
+    <Mass>5</Mass>
   </Definition>
   <!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Gold_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
     <DisplayName>Gold Parts</DisplayName>
     <Description>Strips of gold cut from an ingot</Description>
     <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
@@ -242,14 +202,17 @@ structures. Nails are not required</Description>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>100</Mass>
     <Model>Models\Components\WroughtIronIngot.mwm</Model>
     <MaxStackAmount>24</MaxStackAmount>
-    <Health>520</Health>
+    <Health>50</Health>
+    <Mass>5</Mass>
   </Definition>
   <!-- =================================================================================== -->
+  
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Silver_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
     <DisplayName>Silver Parts</DisplayName>
     <Description>Strips of silver cut from an ingot</Description>
     <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
@@ -259,14 +222,16 @@ structures. Nails are not required</Description>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>100</Mass>
     <Model>Models\Components\WroughtIronIngot.mwm</Model>
     <MaxStackAmount>24</MaxStackAmount>
-    <Health>520</Health>
+    <Health>50</Health>
+    <Mass>5</Mass>
   </Definition>
   <!-- =================================================================================== -->
+  
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="Mercury_Vial" />
+    <Public>true</Public>
     <DisplayName>Mercury Vial</DisplayName>
     <Description>A vial containing a heavy liquid metal</Description>
     <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
@@ -276,10 +241,54 @@ structures. Nails are not required</Description>
       <Y>0.25</Y>
       <Z>0.25</Z>
     </Size>
-    <Mass>100</Mass>
     <Model>Models\Components\WroughtIronIngot.mwm</Model>
     <MaxStackAmount>24</MaxStackAmount>
     <Health>520</Health>
+    <Mass>5</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+
+
+
+
+
+  <!-- Misc -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Empty_Bucket" />
+    <Public>false</Public>
+    <DisplayName>Empty Bucket</DisplayName>
+    <Description>Used to hold material.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Model>Models\Universal\Farming\empty_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>200</Health>
+    <Mass>1</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Compost_Bucket" />
+    <Public>false</Public>
+    <DisplayName>Compost Bucket</DisplayName>
+    <Description>Used in advanced techniques of farming.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Model>Models\Universal\Farming\compost_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>200</Health>
+    <Mass>1</Mass>
   </Definition>
   <!-- =================================================================================== -->
 

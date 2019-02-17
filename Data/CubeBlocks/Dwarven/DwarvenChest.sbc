@@ -1,40 +1,39 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="DwarvenChest" />
-    <BlockPairName>DwarvenChest</BlockPairName>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="DwarvenChest" />
+    <Rotation>All</Rotation>
     <DisplayName>Dwarven Chest</DisplayName>
+    <Description>Storage</Description>
     <Icon>Textures\GUI\Icons\Cubes\Dwarven\DwarvenChest.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="6" y="4" z="3" />
-    <ModelOffset x="0" y="0" z="0" />
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="-2" z="-1" />
+      <Max x="3" y="2" z="2" />
+    </BoundingBox>
     <Model>Models\Cubes\Small\Dwarven\DwarvenChest_Small.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <Components>
-      <Component Tag="Plank" Count="8" />
-      <Component Type="InventoryItem" Subtype="PartsMetal" Count="4" />
+      <Component Type="Block" Subtype="DwarvenChest" Count="1" />
     </Components>
-    <CriticalComponent Tag="Plank" Index="0" />
-    <MaxIntegrity>800</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Mass>15</Mass>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
   </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="DwarvenChest" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="UseObjectsComponent" Subtype="ChestWood" />
+    <Component Type="Inventory" Subtype="WoodChestLargeInventory" />
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="MyObjectBuilder_EntityFXComponent" Subtype="ChestWoodFx" />
+  </Definition>
+
+
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="DwarvenChest"/>
@@ -46,30 +45,8 @@
       <Item Amount="4" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="DwarvenChest" />
+      <Item Amount="1" Type="Block" Subtype="DwarvenChest" />
     </Results>
     <CraftingTime Seconds="1"/>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="DwarvenChestInventory" />
-    <MaxItemCount>21</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_CompositeInventoryConstraint" Operator="And">
-      <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="false">
-        <Id Type="InventoryItem" Subtype="StoneLarge" />
-        <Id Type="CubeBlock" Subtype="Timber10" />
-        <Id Type="CubeBlock" Subtype="TimberRound10" />
-      </Constraint>
-      <Constraint xsi:type="MyObjectBuilder_ItemTagConstraint" Whitelist="false">
-        <Tag>Log</Tag>
-      </Constraint>
-    </Constraint>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="DwarvenChest" />
-    <Component Type="Inventory" Subtype="DwarvenChestInventory" />
-    <Component Type="InventorySpawnComponent"/>
   </Definition>
 </Definitions>

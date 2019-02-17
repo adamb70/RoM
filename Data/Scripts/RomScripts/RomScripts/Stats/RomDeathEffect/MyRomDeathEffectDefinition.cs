@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using VRage.Audio;
 using VRage.ObjectBuilders;
 
-namespace RomScripts.RomDeathEffect
+namespace RomScripts76561197972467544.RomDeathEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_RomDeathEffectDefinition))]
     public class MyRomDeathEffectDefinition : MyEntityStatEffectDefinition

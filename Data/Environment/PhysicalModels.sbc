@@ -1,74 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="FernBig" />
-    <Model>Models\Environment\Bushes\Fern_big_LOD0.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="-75" />
-  </Definition>
-
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="FernBig_colorVar2" />
-    <Model>Models\Environment\Bushes\Fern_big_LOD0.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-60" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-80" Saturation="0" Value="0" />
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="FernSmall" />
-    <Model>Models\Environment\Bushes\Fern_small_LOD0.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-25" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
-  </Definition>
-
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="FernSmall_colorVar2" />
-    <Model>Models\Environment\Bushes\Fern_small_LOD0.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-60" Saturation="0" Value="0" />
-    <MaxColorShift Hue="-80" Saturation="0" Value="0" />
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Bush01" />
-    <Model>Models\Environment\Bushes\Bushes_01_LOD0.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-40" Saturation="-50" Value="0" />
-    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Bush01_colorVar2" />
-    <Model>Models\Environment\Bushes\Bushes_01_LOD0.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-60" Saturation="-5" Value="-10" />
-    <MaxColorShift Hue="-80" Saturation="5" Value="0" />
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="BushEmpty01" />
-    <Model>Models\Environment\Bushes\BushWithoutBerries.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-45" Saturation="-5" Value="-10" />
-    <MaxColorShift Hue="0" Saturation="5" Value="0" />
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin" />
-    <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="BushBerries01" />
-    <Model>Models\Environment\Bushes\BushWithBerries.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-45" Saturation="-5" Value="-10" />
-    <MaxColorShift Hue="0" Saturation="5" Value="0" />
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Mushrooms01" />
-    <Model>Models\Environment\Bushes\Mushrooms_LOD0.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-
 
 
   <Definition xsi:type="VR.PhysicalModelDefinition">
@@ -77,15 +8,11 @@
     <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
 
-
-
   <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="Norden_Spaltless" />
     <Model>Models\Universal\Farming\norden_spaltless.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
-
-
 
   <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="Norden_Barley" />
@@ -95,211 +22,35 @@
 
 
 
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="StonePile" />
-    <Model>Models\Environment\Rocks\Stone_pile02.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="SingleStone1" />
-    <Model>Models\Environment\Rocks\StoneOreSmall_1.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="SingleStone1v2" />
-    <Model>Models\Environment\Rocks\StoneOreSmall_1v2.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="SingleStone1v3" />
-    <Model>Models\Environment\Rocks\StoneOreSmall_1v3.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="SingleStone2" />
-    <Model>Models\Environment\Rocks\StoneOreSmall_2.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="SingleStone2v2" />
-    <Model>Models\Environment\Rocks\StoneOreSmall_2v2.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="SingleStone3" />
-    <Model>Models\Environment\Rocks\StoneOreSmall_3.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="SingleStone4" />
-    <Model>Models\Environment\Rocks\StoneOreSmall_4.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="SingleStone4v2" />
-    <Model>Models\Environment\Rocks\StoneOreSmall_4v2.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
-  </Definition>
-
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Herbs01" />
-    <Model>Models\Environment\Bushes\PlantWithHerbs.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-15" Saturation="-5" Value="-10" />
-    <MaxColorShift Hue="15" Saturation="5" Value="-20" />
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="HerbsEmpty01" />
-    <Model>Models\Environment\Bushes\PlantWithoutHerbs.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MinColorShift Hue="-15" Saturation="-5" Value="-10" />
-    <MaxColorShift Hue="15" Saturation="5" Value="-20" />
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Roots01" />
-    <Model>Models\Environment\Bushes\Roots.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Cabbage_Young" />
-    <Model>Models\Environment\Farming\CabbageYoung.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Cabbage_Grown" />
-    <Model>Models\Environment\Farming\Cabbage.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Cabbage_Dead" />
-    <Model>Models\Environment\Farming\CabbageDead.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Sapling" />
-    <Model>Models\Environment\Farming\PumpkinSapling.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Young01" />
-    <Model>Models\Environment\Farming\Pumpkin01_Young.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Grown01" />
-    <Model>Models\Environment\Farming\Pumpkin01_Grown.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Dead01" />
-    <Model>Models\Environment\Farming\Pumpkin01_Dead.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Young02" />
-    <Model>Models\Environment\Farming\Pumpkin02_Young.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Grown02" />
-    <Model>Models\Environment\Farming\Pumpkin02_Grown.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Dead02" />
-    <Model>Models\Environment\Farming\Pumpkin02_Dead.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Young03" />
-    <Model>Models\Environment\Farming\Pumpkin03_Young.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Grown03" />
-    <Model>Models\Environment\Farming\Pumpkin03_Grown.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Pumpkin_Dead03" />
-    <Model>Models\Environment\Farming\Pumpkin03_Dead.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Flax_Young" />
-    <Model>Models\Environment\Farming\FlaxYoung.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Flax_Sapling" />
-    <Model>Models\Environment\Farming\FlaxSapling.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Flax_Grown" />
-    <Model>Models\Environment\Farming\Flax.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Flax_Dead" />
-    <Model>Models\Environment\Farming\FlaxDead.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Wheat_Young" />
-    <Model>Models\Environment\Farming\Wheat_Young.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Wheat_Sapling" />
-    <Model>Models\Environment\Farming\Wheat_Seedling.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Wheat_Grown" />
-    <Model>Models\Environment\Farming\Wheat_Grown.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Wheat_Dead" />
-    <Model>Models\Environment\Farming\Wheat_Dead.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Herb_Sapling" />
-    <Model>Models\Environment\Bushes\PlantWithoutHerbsSapling.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
-  
   <!--________Nuggets________-->
-  
+
   <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="IronNugget" />
     <Model>Models\Environment\Rocks\IronNugget.mwm</Model>
     <PhysicalMaterial>Stone</PhysicalMaterial>
   </Definition>
-  
-  
+
+
   <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="CoalNugget" />
     <Model>Models\Environment\Rocks\CoalNugget.mwm</Model>
     <PhysicalMaterial>Stone</PhysicalMaterial>
   </Definition>
-  
+
   <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="GoldNugget" />
     <Model>Models\Environment\Rocks\GoldNugget.mwm</Model>
     <PhysicalMaterial>Stone</PhysicalMaterial>
   </Definition>
-  
+
   <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="SaltNugget" />
     <Model>Models\Environment\Rocks\SaltNugget.mwm</Model>
     <PhysicalMaterial>Stone</PhysicalMaterial>
   </Definition>
-  
-  
-    <Definition xsi:type="VR.PhysicalModelDefinition">
+
+
+  <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="BushBlueBerries01" />
     <Model>Models\Environment\Bushes\BushWithBlueBerries.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
@@ -321,7 +72,7 @@
     <Model>Models\Environment\Farming\RedCabbageDead.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
-    <Definition xsi:type="VR.PhysicalModelDefinition">
+  <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="HealingHerbs" />
     <Model>Models\Environment\Bushes\HealingPlant.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
@@ -331,12 +82,12 @@
     <Model>Models\Environment\Bushes\DeathMushrooms_LOD0.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
-  
+
   <!-- pristine iron -->
   <Definition xsi:type="VR.PhysicalModelDefinition">
     <Id Type="PhysicalModelDefinition" Subtype="PristineIron1" />
     <Model>Models\Environment\Rocks\pristineiron.mwm</Model>
     <PhysicalMaterial>Stone</PhysicalMaterial>
   </Definition>
-  
+
 </Definitions>

@@ -5,7 +5,7 @@
 //using VRage.Game.Definitions;
 //using VRage.Utils;
 
-//namespace RomScripts
+//namespace RomScripts76561197972467544
 //{
 //    [MyDefinitionType(typeof(MyObjectBuilder_WaterFuelComponent2Definition))]
 //    public class MyWaterFuelComponent2Definition : MyEntityComponentDefinition

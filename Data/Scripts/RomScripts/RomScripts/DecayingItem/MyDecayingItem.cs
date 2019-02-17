@@ -10,7 +10,7 @@ using VRage.ObjectBuilders.Inventory;
 using VRageMath;
 using Sandbox.Game.Inventory;
 
-namespace RomScripts.DecayingItem
+namespace RomScripts76561197972467544.DecayingItem
 {
     [MyInventoryItemType(typeof(MyObjectBuilder_DecayingItem))]
     public class MyDecayingItem : MyDurableItem

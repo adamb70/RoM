@@ -10,7 +10,7 @@ using Medieval.Definitions.Combat;
 using Sandbox.Game.EntityComponents;
 
 
-namespace RomScripts.ReadableItem
+namespace RomScripts76561197972467544.ReadableItem
 
 {
     [MyDefinitionType(typeof(MyObjectBuilder_ReadableItemBehaviorDefinition))]

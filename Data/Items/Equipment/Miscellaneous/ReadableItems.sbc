@@ -1,60 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Definition xsi:type="MyObjectBuilder_TreasureMapItemDefinition">
+	<Definition xsi:type="MyObjectBuilder_TreasureMapItemDefinition" Copy="Merge">
 		<Id Type="TreasureMapItem" Subtype="ReadableBook" />
+    <CopyFrom Type="TreasureMapItem" Subtype="MapTreasure" />
     
 		<DisplayName>Readable Book</DisplayName>
-		<Description>Readable Book
+		<Description>Readable Book 
+    
     Press primary to read, secondary to turn the page</Description>
-		<Icon>Textures\GUI\Icons\TreasureMaps\Map_Background.dds</Icon>
-		<Icon>Textures\GUI\Icons\TreasureMaps\Map_Journeyman.dds</Icon>
-		<Size>
-			<X>0.25</X>
-			<Y>0.25</Y>
-			<Z>0.25</Z>
-		</Size>
-		<Mass>0.018</Mass>
-		<Model>Models\Cubes\small\Scroll.mwm</Model>
-		<MaxStackAmount>1</MaxStackAmount>
-		<PhysicalMaterial>Wood</PhysicalMaterial>
-
-		<Position>
-			<Slot>MainHand</Slot>
-		</Position>
-
-    <Animation>SeedBag</Animation>
-
-		<!-- extra transform on IK dummy in 1st person -->
-		<EquippedTransform>
-			<!-- tool rotation offset from hand -->
-			<Position>
-				<X>0</X>
-				<Y>0.049</Y>
-				<Z>0</Z>
-			</Position>
-			<Orientation>
-				<X>0.707</X>
-				<Y>0</Y>
-				<Z>0.707</Z>
-				<W>0</W>
-			</Orientation>
-		</EquippedTransform>
-		<EquippedTransformFps>
-			<!-- hand IK target offset -->
-			<Position>
-				<X>0.393</X>
-				<Y>-0.368</Y>
-				<Z>-0.362</Z>
-			</Position>
-			<Orientation>
-				<X>0.4951935</X>
-				<Y>0.5476472</Y>
-				<Z>-0.3941949</Z>
-				<W>0.5472659</W>
-			</Orientation>
-		</EquippedTransformFps>
-
-		<!-- Behavior -->
+    
 		<StanceToBehavior>
 			<StanceName>NormalMode</StanceName>
 			<BehaviorId Type="MyObjectBuilder_ReadableItemBehaviorDefinition" Subtype="ReadableBook"/>

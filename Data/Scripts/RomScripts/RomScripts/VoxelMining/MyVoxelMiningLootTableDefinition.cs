@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using VRage.Factory;
 using VRage.Game;
+using VRage.Components;
 using VRage.Game.Definitions;
 using VRage.ObjectBuilder;
 using VRage.ObjectBuilders.Definitions;
@@ -11,9 +12,9 @@ using VRageMath;
 using Sandbox.ModAPI;
 using Sandbox.Definitions;
 using VRage.Definitions;
-using VRage.Library.Logging;
+using VRage.Logging;
 
-namespace RomScripts.VoxelMining
+namespace RomScripts76561197972467544.VoxelMining
 {
     [MyDependency(typeof(MyVoxelMaterialDefinition), Recursive = true), MyDefinitionType(typeof(MyObjectBuilder_VoxelMiningLootTableDefinition), null)]
     public class MyVoxelMiningLootTableDefinition : MyDefinitionBase
@@ -105,10 +106,10 @@ namespace RomScripts.VoxelMining
                             }
                             catch (Exception)
                             {
-                                MyLog.Default.Error("Can not parse defined builder type {0}", new object[]
-                                {
-                                    current2.Type
-                                });
+                                //MyLog.Default.Error("Can not parse defined builder type {0}", new object[]
+                                //{
+                                //    current2.Type
+                                //});
                                 continue;
                             }
                             MyDefinitionId key = new MyDefinitionId(type, MyStringHash.GetOrCompute(current2.Subtype));
@@ -129,10 +130,10 @@ namespace RomScripts.VoxelMining
                 MyVoxelMaterialDefinition myVoxelMaterialDefinition = MyDefinitionManager.Get<MyVoxelMaterialDefinition>(current.VoxelMaterial, false);
                 if (myVoxelMaterialDefinition == null || myVoxelMaterialDefinition.Index == 255)
                 {
-                    MyLog.Default.Error("Cannot find voxel material {0}", new object[]
-                    {
-                        current.VoxelMaterial
-                    });
+                    //MyLog.Default.Error("Cannot find voxel material {0}", new object[]
+                    //{
+                    //    current.VoxelMaterial
+                    //});
                 }
                 else
                 {

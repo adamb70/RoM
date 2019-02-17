@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- =================================================================================== -->
+
+  <!-- Farming Withering -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Pumpkin" />
+    <DisplayName>Withering Pumpkin</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
+    <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Cabbage" />
+    <Public>true</Public>
+    <DisplayName>Withering Cabbage</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
+    <Model>Models\Consumables\CabbageHead.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_RedCabbage" />
+    <Public>true</Public>
+    <DisplayName>Withering Red Cabbage</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedCabbageHead.dds</Icon>
+    <Model>Models\Consumables\RedCabbageHead.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_FlaxStraws" />
+    <Public>true</Public>
+    <DisplayName>Withering Flax Straws</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
+    <Model>Models\Components\FlaxBundle.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_WheatStraws" />
+    <Public>true</Public>
+    <DisplayName>Withering Wheat Straws</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
+    <Model>Models\Components\WheatStraws.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Herbs" />
+    <Public>true</Public>
+    <DisplayName>Withering Herbs</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Pinecone" />
+    <Public>true</Public>
+    <DisplayName>Withering Tree</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Norden_Spalt" />
+    <Public>true</Public>
+    <DisplayName>Withering Norden Spalt</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
+    <Model>Models\Universal\Farming\norden_spalt_item.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Norden_Barley" />
+    <Public>true</Public>
+    <DisplayName>Withering Norden Barley</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
+    <Model>Models\Universal\Farming\norden_barley_item.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Pumpkin_Compost" />
+    <Public>true</Public>
+    <DisplayName>Withering Pumpkin (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
+    <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Cabbage_Compost" />
+    <Public>true</Public>
+    <DisplayName> Withering Cabbage (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
+    <Model>Models\Consumables\CabbageHead.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_RedCabbage_Compost" />
+    <Public>true</Public>
+    <DisplayName>Withering Red Cabbage_ (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedCabbageHead.dds</Icon>
+    <Model>Models\Environment\Farming\RedCabbage.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_FlaxStraws_Compost" />
+    <Public>true</Public>
+    <DisplayName>Withering Flax Straws (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
+    <Model>Models\Components\FlaxBundle.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_WheatStraws_Compost" />
+    <Public>true</Public>
+    <DisplayName>Withering WheatStraws (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
+    <Model>Models\Components\WheatStraws.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Herbs_Compost" />
+    <Public>true</Public>
+    <DisplayName>Withering Herbs (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Pinecone_Compost" />
+    <Public>true</Public>
+    <DisplayName>Withering Tree (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Norden_Spalt_Compost" />
+    <Public>true</Public>
+    <DisplayName>Withering Norden Spalt (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
+    <Model>Models\Universal\Farming\norden_spalt_item.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Withering_Norden_Barley_Compost" />
+    <Public>true</Public>
+    <DisplayName>Withering Norden Barley (Compost)</DisplayName>
+    <Description>Bring this to a Farmer's Table, then water the plant, inorder to regrow it.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\watering_can_water.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
+    <Model>Models\Universal\Farming\norden_barley_item.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+
+
+
+</Definitions>

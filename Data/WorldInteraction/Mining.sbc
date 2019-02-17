@@ -1,196 +1,103 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- Volume 64 = 1 dirt -->
-  
-  
-  
-<!-- ======================================================================================================= -->
-<!-- Vanilla Shovel - Keep this updated with vanilla version =============================================== -->
-<!-- ======================================================================================================= -->
-  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition">
-    <Id Type="VoxelMiningDefinition" Subtype="VanillaShovel" />
-    
-    <!-- GRASS -->
-    <Entry VoxelMaterial="Grass">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="SteppeYellowGrass">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-    <!-- FOREST -->
-    <Entry VoxelMaterial="Woods">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Woods_grass">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Woods_needles">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-
-    <!-- DIRT -->
-    <Entry VoxelMaterial="Soil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="PlowedSoil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="PlantedSoil">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="ExhaustedSoil" Volume="256">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="DirtSteppe">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="Clay" Volume="256">
-      <MinedItem Type="InventoryItem" Subtype="Clay" Amount="1" />
-    </Entry>
-    <Entry VoxelMaterial="SandDark">
-    </Entry>
-    <Entry VoxelMaterial="SandDark">
-    </Entry>
-    <Entry VoxelMaterial="SandGrass">
-    </Entry>
-    <Entry VoxelMaterial="SandGrassGreen">
-    </Entry>
-    <Entry VoxelMaterial="Snow">
-    </Entry>
-    
-    <!-- ROCKS_GRASS -->
-    <Entry VoxelMaterial="Rocks_grass" Volume="256">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-    <Entry VoxelMaterial="Rocks_moss" Volume="256">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneSmall" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="StoneLarge" Amount="1" />
-    </Entry>
-
-    <!-- ORE -->
-    <Entry VoxelMaterial="IronOre_PoorYield" Volume="512">
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="2" />
-      <MinedItem Type="InventoryItem" Subtype="OreIron" Amount="1" />
-    </Entry>
-
-	  <Entry VoxelMaterial="CopperOre" Volume="512">
-      <MinedItem Type="InventoryItem" Subtype="OreCopper" Amount="1" />
-      <MinedItem Type="InventoryItem" Subtype="Dirt" Amount="1" />
-    </Entry>
-  </Definition>
 
 
-<!-- ======================================================================================================= -->
-<!-- Shovel ================================================================================================ -->
-<!-- ======================================================================================================= -->
-  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
+  <!-- ========================================================================== -->
+  <!-- ================================= Shovel ================================= -->
+  <!-- ========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Merge="Append">
     <Id Type="VoxelMiningDefinition" Subtype="Shovel"/>
-    <!-- Include Vanilla Shovel -->
-    <CopyFrom Type="VoxelMiningDefinition" Subtype="VanillaShovel"/>
-    
-  <!-- Coal ========================================================= -->
+
+
     <Entry VoxelMaterial="COGCoal" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="CoalOre" Amount="1" />
     </Entry>
-  <!-- Salt ========================================================= -->
+
     <Entry VoxelMaterial="COGSalt" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="SaltOre" Amount="1" />
     </Entry>
-  <!-- Grass ========================================================= -->
+
     <Entry VoxelMaterial="Sandstone" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
     </Entry>
 
   </Definition>
-  
 
-  
 
-<!-- ======================================================================================================= -->
-<!-- Stone Pick Axe ======================================================================================== -->
-<!-- ======================================================================================================= -->
+  <!-- ========================================================================== -->
+  <!-- ============================= Stone Pick Axe ============================= -->
+  <!-- ========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
     <Id Type="VoxelMiningDefinition" Subtype="Stone_Pickaxe" />
     <!-- Include Vanilla Pickaxe -->
     <CopyFrom Type="VoxelMiningDefinition" Subtype="Pickaxe"/>
-    
-  <!-- Start RoM Ores -->
 
-  <!-- Coal ========================================================= -->
+
     <Entry VoxelMaterial="COGCoal" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="CoalOre" Amount="1" />
     </Entry>
-  <!-- Salt ========================================================= -->
+
     <Entry VoxelMaterial="COGSalt" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="SaltOre" Amount="1" />
     </Entry>
-  <!-- Grass ========================================================= -->
+
     <Entry VoxelMaterial="Sandstone" Volume="64">
       <MinedItem Type="InventoryItem" Subtype="Sand" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="SandStoneOreSmall" Amount="1" />
       <MinedItem Type="InventoryItem" Subtype="LargeSandStone" Amount="1" />
     </Entry>
 
-  <!-- End RoM Ores -->
-
   </Definition>
 
-  
-<!-- ======================================================================================================= -->
-<!-- Copper Pick Axe ======================================================================================= -->
-<!-- ======================================================================================================= -->
+
+  <!-- ========================================================================== -->
+  <!-- ============================= Copper Pick Axe ============================ -->
+  <!-- ========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
     <Id Type="VoxelMiningDefinition" Subtype="Copper_Pickaxe" />
     <!-- Include Stone Pickaxe -->
     <CopyFrom Type="VoxelMiningDefinition" Subtype="Stone_Pickaxe"/>
-    
-    
+
+
   </Definition>
-  
-  
-<!-- ======================================================================================================= -->
-<!-- Bronze Pick Axe ======================================================================================= -->
-<!-- ======================================================================================================= -->
+
+  <!-- ========================================================================== -->
+  <!-- ============================ Bronze Pick Axe ============================= -->
+  <!-- ========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
     <Id Type="VoxelMiningDefinition" Subtype="Bronze_Pickaxe" />
     <!-- Include Copper Pickaxe -->
     <CopyFrom Type="VoxelMiningDefinition" Subtype="Copper_Pickaxe"/>
-    
-    
+
+
   </Definition>
-  
-<!-- ======================================================================================================= -->
-<!-- Iron Pick Axe ========================================================================================= -->
-<!-- ======================================================================================================= -->
+
+  <!-- ========================================================================== -->
+  <!-- ============================= Iron Pick Axe ============================== -->
+  <!-- ========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
     <Id Type="VoxelMiningDefinition" Subtype="Iron_Pickaxe" />
     <!-- Include Bronze Pickaxe -->
     <CopyFrom Type="VoxelMiningDefinition" Subtype="Bronze_Pickaxe"/>
-    
-    <!-- Mithril ========================================================= -->
+
+
     <Entry VoxelMaterial="Mithril_Ore" Volume="256">
       <MinedItem Type="InventoryItem" Subtype="MithrilOre" Amount="1" />
     </Entry>
 
   </Definition>
-  
 
-<!-- ======================================================================================================= -->
-<!-- Steel Pick Axe ======================================================================================== -->
-<!-- ======================================================================================================= -->
+  <!-- ========================================================================== -->
+  <!-- ============================= Steel Pick Axe ============================= -->
+  <!-- ========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_VoxelMiningDefinition" Copy="Append">
     <Id Type="VoxelMiningDefinition" Subtype="Steel_Pickaxe" />
     <!-- Include Iron Pickaxe -->
     <CopyFrom Type="VoxelMiningDefinition" Subtype="Iron_Pickaxe"/>
-    
 
   </Definition>
-  
+
 
 </Definitions>

@@ -9,14 +9,14 @@ using Sandbox.Game.Multiplayer;
 using System;
 using VRage.Audio;
 using VRage.Game;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Utils;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
 using VRageMath;
-using RomScripts.StatExtensions;
+using RomScripts76561197972467544.StatExtensions;
 
-namespace RomScripts.RomDeathEffect
+namespace RomScripts76561197972467544.RomDeathEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_RomDeathEffect))]
     public class MyRomDeathEffect : MyEntityStatEffect
@@ -37,11 +37,11 @@ namespace RomScripts.RomDeathEffect
             }
             if (this.m_DeathStat == null)
             {
-                MyLog.Default.Error("Death effect '{0}' applied to an entity '{1}' without source stat!", new object[]
-                {
-                    base.Definition.Id,
-                    base.Owner.Entity.Definition.Id
-                });
+                //MyLog.Default.Error("Death effect '{0}' applied to an entity '{1}' without source stat!", new object[]
+                //{
+                //    base.Definition.Id,
+                //    base.Owner.Entity.Definition.Id
+                //});
                 return;
             }
             this.m_DeathStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.DeathStat_OnValueChanged);

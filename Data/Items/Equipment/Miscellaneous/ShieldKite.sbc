@@ -1,40 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
     <Id Type="HandItem" Subtype="ShieldKitePersonal"/>
-    <DisplayName>DisplayName_Item_ShieldKitePersonal</DisplayName>
-    <Description>Description_Item_ShieldKitePersonal</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\ShieldKitePersonal.png</Icon>
-    <Size>
-      <X>0.5</X>
-      <Y>0.3</Y>
-      <Z>0.5</Z>
-    </Size>
-    <Mass>2</Mass>
-    <Model>Models\Weapons\ShieldKitePersonal.mwm</Model>
-    <PhysicalMaterial>ShieldWood</PhysicalMaterial>
-    
-    <Animation>Shield</Animation>
-    
-    <MaxStackAmount>1</MaxStackAmount>
 
-    <EquippedTransform>
-      <Position x="0" y="0.1" z="0" />
-      <Up x="0" y="1" z="0" />
-      <Forward x="1" y="0" z="0" />
-    </EquippedTransform>
-
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
     <MaxDurability>150</MaxDurability>
-    <Position>
-      <Slot>OffHand</Slot>
-    </Position>
-    
-    <!-- Behaviors -->
-    <StanceToBehavior>
-      <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="ShieldBehaviorDefinition" Subtype="ShieldKite"/>
-    </StanceToBehavior>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
@@ -47,7 +16,7 @@
       <Y>0.3</Y>
       <Z>0.5</Z>
     </Size>
-    <Mass>2</Mass>
+    <Mass>5</Mass>
     <Model>Models\Weapons\ShieldKitePersonal.mwm</Model>
     <PhysicalMaterial>ShieldWood</PhysicalMaterial>
 
@@ -142,7 +111,7 @@
     <Prerequisites>
       <Item Amount="4" Tag="Plank" />
       <Item Type="InventoryItem" Subtype="PartsMetal" Amount="2" />
-      <Item Type="CubeBlock" Subtype="LeatherTanned" Amount="1" />
+      <Item Type="Block" Subtype="LeatherTanned" Amount="1" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="HandItem" Subtype="ShieldKitePersonal" />
@@ -159,7 +128,7 @@
     <Prerequisites>
       <Item Amount="4" Tag="Plank" />
       <Item Type="InventoryItem" Subtype="PartsMetal" Amount="2" />
-      <Item Type="CubeBlock" Subtype="LeatherTanned" Amount="1" />
+      <Item Type="Block" Subtype="LeatherTanned" Amount="1" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="HandItem" Subtype="ShieldKiteHouse" />

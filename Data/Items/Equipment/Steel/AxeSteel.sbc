@@ -1,87 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
-  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
     <Id Type="HandItem" Subtype="AxeSteel"/>
-
-    <!-- Display -->
-
-    <DisplayName>DisplayName_Tool_AxeSteel</DisplayName>
-    <Description>Description_Tool_AxeSteel</Description>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\AxeSteel.dds</Icon>
-    <Size>
-      <X>1.2</X>
-      <Y>0.6</Y>
-      <Z>0.3</Z>
-    </Size>
-    <Mass>0.5</Mass>
-    <Model>Models\Weapons\Axe_OneHandSteel.mwm</Model>
-
-    <PhysicalMaterial>Axe</PhysicalMaterial>
-
-    <MaxStackAmount>1</MaxStackAmount>
-
-    <!-- Equipment -->
-    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
-
-    <MaxDurability>1200</MaxDurability>
-
-    <Position>
-      <Slot>MainHand</Slot>
-    </Position>
-
-    <Position>
-      <Slot>OffHand</Slot>
-    </Position>
-
-    <!-- extra transform on IK dummy in 1st person -->
-    <EquippedTransform>
-      <!-- tool rotation offset from hand -->
-      <Orientation>
-        <X>0</X>
-        <Y>0</Y>
-        <Z>0</Z>
-        <W>1</W>
-      </Orientation>
-    </EquippedTransform>
-    <EquippedTransformFps>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.464</X>
-        <Y>-1.0</Y>
-        <Z>-0.405</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFps>
-    <EquippedTransformFpsCrouch>
-      <!-- hand IK target offset -->
-      <Position>
-        <X>0.285</X>
-        <Y>-0.334</Y>
-        <Z>-0.131</Z>
-      </Position>
-      <Orientation>
-        <X>0.5215536</X>
-        <Y>0.4426106</Y>
-        <Z>-0.4053448</Z>
-        <W>0.6064432</W>
-      </Orientation>
-    </EquippedTransformFpsCrouch>
-
-    <!-- Behavior -->
-    <StanceToBehavior>
-      <StanceName>NormalMode</StanceName>
-      <BehaviorId Type="MyObjectBuilder_TreeCutterToolBehaviorDefinition" Subtype="AxeSteel"/>
-    </StanceToBehavior>
-    <StanceToBehavior>
-      <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="AxeSteel"/>
-    </StanceToBehavior>
     
+    <MaxDurability>1200</MaxDurability>
   </Definition>
 
 
@@ -172,6 +94,7 @@
 
     <CanBlock>true</CanBlock>
     <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Axe</WeaponMaterial>
 
     <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
 
@@ -186,19 +109,20 @@
   <Definition xsi:type="MyObjectBuilder_TreeCutterToolBehaviorDefinition">
     <Id Type="TreeCutterToolBehaviorDefinition" Subtype="AxeSteel"/>
     <Efficiency>1.0</Efficiency>
-	<Cost Stat="Mood" Cost="0.25" />
-	<Cost Stat="Stamina" Cost="2.5" />
+    <Cost Stat="Mood" Cost="0.25" />
+    <Cost Stat="Stamina" Cost="2.5" />
+    <ToolheadMaterial>Axe</ToolheadMaterial>
 
     <PrimaryEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
+      <AnimationTime>0.9</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
       <Animation>Cutting</Animation>
     </PrimaryEffect>
 
     <PrimaryLogEffect>
       <HitTime>.6</HitTime>
-      <AnimationTime>1</AnimationTime>
+      <AnimationTime>0.9</AnimationTime>
       <SwingSound>ToolSwish</SwingSound>
       <Animation>CuttingLog</Animation>
     </PrimaryLogEffect>

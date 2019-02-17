@@ -1,49 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Grindstone" />
-    <BlockPairName>SmithingStation</BlockPairName>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Grindstone" />
+    <Rotation>All</Rotation>
     <DisplayName>Grindstone</DisplayName>
-    <Description>Grinds herbs and spices</Description>
+	  <Description>Grinds herbs and spices</Description>
     <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemymortarpestlestone.dds</Icon>
     <Public>true</Public>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="1" y="1" z="1" />
-    <ModelOffset x="0" y="-0.08" z="0" />
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
     <Model>Models\Alchemy\Cubeblocks\AlchemyMortarPestleStone.mwm</Model>
-    <BuildProgressModels>
-      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Smithy_Construction1.mwm">
-        <MountPointOverrides>
-          <MountPoint Side="Top" Enabled="false" />
-        </MountPointOverrides>
-      </Model>
-    </BuildProgressModels>
-    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
     <Components>
-      <Component Type="InventoryItem" Subtype="StoneLarge" Count="2" />
+      <Component Type="Block" Subtype="Grindstone" Count="1" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="StoneLarge" Index="0" />
-    <MaxIntegrity>1200</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
-    <Mass>300</Mass>
     <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -56,39 +33,48 @@
       <Item Amount="2" Type="InventoryItem" Subtype="StoneLarge" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Grindstone" />
+      <Item Amount="1" Type="Block" Subtype="Grindstone" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="Grindstone"/>
-    <CraftingCategories>
-      <Category>Grind_Stone</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>1</ProductionQueueSize>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="GrindstoneCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-    <ConstrainInventory>true</ConstrainInventory>
-    <InputInventory>CraftingInventory</InputInventory>
-    <OutputInventory>CraftingInventory</OutputInventory>
-    <CraftingInventory>ProcessingInventory</CraftingInventory>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Grind</CraftString>
+    <CraftingString>Grinding Queue</CraftingString>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="UseObjectsComponent" Subtype="Grindstone" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory" />
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="GrindstoneScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="GrindstoneCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="GrindstoneRecipes" />
+    <Category>Grind_Stone</Category>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Grindstone" />
-    <Component Type="Inventory" Subtype="CraftingInventory"/>
-    <Component Type="Inventory" Subtype="ProcessingInventory"/>
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Grindstone" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <Component Type="CraftingComponent" Subtype="GrindstoneCrafting" />
+    <Component Type="CraftingScheduler" Subtype="GrindstoneScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="GrindstoneRecipes" />
+    
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponentQueued" Subtype="Grindstone"/>
-    <Component Type="UseObjectsComponent" Subtype="Grindstone" />
   </Definition>
-  
 </Definitions>

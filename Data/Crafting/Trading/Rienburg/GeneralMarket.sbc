@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Foreign_Market_Contract_Rienburg_General" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\TreasureMaps\Map_Piece01_Background.dds</Icon>
+    <DisplayName>Buy: Foreign Market Contract (2000G)</DisplayName>
+    <Category>Rienburg_General_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="2000" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Foreign_Market_Contract" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Rienburg_General" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\DeerSkin.dds</Icon>
+    <DisplayName>Sell: Deer Hide (25G)</DisplayName>
+    <Category>Rienburg_General_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="PeltDeer" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="25" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerAntlers_Rienburg_General" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\Antlers.dds</Icon>
+    <DisplayName>Sell: Deer Antlers (35G)</DisplayName>
+    <Category>Rienburg_General_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="Antlers" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="35" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Buy_Sand_Bucket_Rienburg_General" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Sand_Bucket.dds</Icon>
+    <DisplayName>Buy: Bucket of Sand (2G)</DisplayName>
+    <Category>Rienburg_General_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Sand_Bucket" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+
+
+
+
+</Definitions>

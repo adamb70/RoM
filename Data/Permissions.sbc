@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_PermissionSetDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_PermissionSetDefinition</TypeId>
-      <SubtypeId>Default</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_PermissionSetDefinition" Subtype="Default" />
     <IsDefault>true</IsDefault>
     <Permission Name="Build">
       <Usergroup Groupname="Self" Allowed="true"/>
@@ -31,11 +29,9 @@
       <Usergroup Groupname="Allied" Allowed="true"/>
     </Permission>
   </Definition>
+
   <Definition xsi:type="MyObjectBuilder_PermissionSetDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_PermissionSetDefinition</TypeId>
-      <SubtypeId>Safezone</SubtypeId>
-    </Id>
+    <Id Type="MyObjectBuilder_PermissionSetDefinition" Subtype="Safezone" />
     <Permission Name="Build">
       <Usergroup Groupname="Self" Allowed="false"/>
       <Usergroup Groupname="Faction" Allowed="true"/>
@@ -67,7 +63,7 @@
       <Usergroup Groupname="Allied" Allowed="false"/>
     </Permission>
     <Permission Name="Interaction">
-      <Usergroup Groupname="Self" Allowed="false"/>
+      <Usergroup Groupname="Self" Allowed="false"/> <!-- TODO: changing this to true means we don't need NPC doors? -->
       <Usergroup Groupname="Faction" Allowed="true"/>
       <Usergroup Groupname="Allied" Allowed="true"/>
     </Permission>
@@ -77,4 +73,5 @@
       <Usergroup Groupname="Allied" Allowed="false"/>
     </Permission>
   </Definition>
+
 </Definitions>

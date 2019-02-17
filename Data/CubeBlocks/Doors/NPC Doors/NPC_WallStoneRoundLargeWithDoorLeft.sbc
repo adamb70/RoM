@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_WallStoneRoundLargeWithDoorLeft" />
+    
+    <DisplayName>DisplayName_Block_StoneWallRoundLargeRoundDoorRightMultiBlock</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\WallStoneRoundLargeWithDoorLeft_V1.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Visible>false</Visible>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Positions>
+      <Position x="0" y="0" z="0" />
+      <Position x="1" y="0" z="0" />
+      <Position x="0" y="0" z="1" />
+    </Positions>
+    <Model>Models\Cubes\large\StoneBlocks\WallStoneRoundLargeWithDoorLeft_V1.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\StoneBlocks\WallStoneRoundLargeWithDoorLeft_V1_C1.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="15" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count="8" />
+      <Component Tag="Plank" Count="8" />
+    </Components>
+    <Rotation>YAxis</Rotation>
+    <UseModelIntersection>false</UseModelIntersection>
+    <MaxIntegrity>1600</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_WallStoneRoundLargeWithDoorLeft" />
+    <CopyFrom Type="Block" Subtype="NPC_DefaultDoorContainer" />
+    <Component Type="ModelAttachmentComponent" Subtype="WallStoneRoundLargeWithDoorLeft" />
+    <Component Type="AttachmentAnimationComponent" Subtype="DefaultDoorAnimationComponentRight" />
+  </Definition>
+</Definitions>

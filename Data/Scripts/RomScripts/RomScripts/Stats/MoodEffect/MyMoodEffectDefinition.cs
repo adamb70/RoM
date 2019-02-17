@@ -4,7 +4,7 @@ using System;
 using VRage.Game;
 using VRage.Game.Definitions;
 
-namespace RomScripts.MoodEffect
+namespace RomScripts76561197972467544.MoodEffect
 {
     [MyDefinitionType(typeof(MyObjectBuilder_MoodEffectDefinition))]
     public class MyMoodEffectDefinition : MyEntityStatEffectDefinition

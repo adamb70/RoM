@@ -1,50 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="FilterStand" />
-    <BlockPairName>SmithingStation</BlockPairName>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="FilterStand" />
+    <Rotation>All</Rotation>
     <DisplayName>Filter Stand</DisplayName>
-    <Description>Filters liquids</Description>
+	  <Description>Filters liquids</Description>
     <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemyfilter.dds</Icon>
     <Public>true</Public>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="2" y="2" z="2" />
-    <ModelOffset x="0" y="-0.045" z="0" />
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
     <Model>Models\Alchemy\Cubeblocks\alchemyFilter.mwm</Model>
-    <BuildProgressModels>
-      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\Smithy_Construction1.mwm">
-        <MountPointOverrides>
-          <MountPoint Side="Top" Enabled="false" />
-        </MountPointOverrides>
-      </Model>
-    </BuildProgressModels>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <Components>
-      <Component Tag="Universal_Stick" Count ="2" />
-      <Component Type="InventoryItem" Subtype="Cloth" Count="1" />
+      <Component Type="Block" Subtype="FilterStand" Count="1" />
     </Components>
-    <CriticalComponent Tag="Ingot" Index="0" />
-    <MaxIntegrity>1200</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
-    <Mass>300</Mass>
     <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -58,39 +34,49 @@
       <Item Amount="1" Type="InventoryItem" Subtype="Cloth" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="FilterStand" />
+      <Item Amount="1" Type="Block" Subtype="FilterStand" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="FilterStand"/>
-    <CraftingCategories>
-      <Category>Filter</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="FilterStandCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-    <ConstrainInventory>true</ConstrainInventory>
-    <InputInventory>CraftingInventory</InputInventory>
-    <OutputInventory>CraftingInventory</OutputInventory>
-    <CraftingInventory>ProcessingInventory</CraftingInventory>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="UseObjectsComponent" Subtype="FilterStand" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory" />
-    </UseObjects>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Filter</CraftString>
+    <CraftingString>Filtering Queue</CraftingString>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="FilterStand" />
-    <Component Type="Inventory" Subtype="CraftingInventory"/>
-    <Component Type="Inventory" Subtype="ProcessingInventory"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="FilterStandScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="FilterStandCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="FilterStandRecipes" />
+    <Category>Filter</Category>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="FilterStand" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <Component Type="CraftingComponent" Subtype="FilterStandCrafting" />
+    <Component Type="CraftingScheduler" Subtype="FilterStandScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="FilterStandRecipes" />
+    
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
     <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponentQueued" Subtype="FilterStand"/>
-    <Component Type="UseObjectsComponent" Subtype="FilterStand" />
   </Definition>
   
 </Definitions>

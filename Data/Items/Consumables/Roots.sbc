@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Roots" />
+    <Public>true</Public>
+    <DisplayName>Roots</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\WoodenRoot.dds</Icon>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Volume>1</Volume>
+    <Model>Models\Consumables\WoodenRoot.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Roots_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Roots_Food" />
+    <Effect Type="EntityStatEffect" Subtype="Roots_Vigor" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+    <Id Type="SchematicItem" Subtype="Schematic_Roots" />
+    <Public>true</Public>
+    <DisplayName>Pristine Roots</DisplayName>
+    <Description>As you examine the quality of these Roots you find that they're in pristine condition. Without any adnormal properties, it makes a perfect specimen for a Farmer, Apothocary or Chef.
+((Consume to receive knowledge))</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\WoodenRoot.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\WoodenRoot.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <UseSound>ResearchSound</UseSound>
+    <Research Type="ResearchDefinition" Subtype="Roots_Herblore" />
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+
+
+</Definitions>

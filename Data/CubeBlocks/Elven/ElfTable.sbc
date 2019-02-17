@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="ElfTable" />
+    <DisplayName>Elven Table</DisplayName>
+    <Description>Elven Table</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ElfTable.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-5" y="0" z="-3" />
+      <Max x="5" y="3" z="4" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\ElfTable.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="ElfTable" Count="1" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="1.4" StartY="1.5" EndX="8.6" EndY="5.5" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="10" EndY="7" />
+      <MountPoint Side="Left" StartX="0" StartY="2.8" EndX="7" EndY="3" />
+      <MountPoint Side="Right" StartX="0" StartY="2.8" EndX="7" EndY="3" />
+      <MountPoint Side="Front" StartX="0" StartY="2.8" EndX="10" EndY="3" />
+      <MountPoint Side="Back" StartX="0" StartY="2.8" EndX="10" EndY="3" />
+    </MountPoints>
+    <Rotation>All</Rotation>
+    <UseModelIntersection>true</UseModelIntersection>
+    <Mass>20</Mass>
+    <MaxIntegrity>160</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="ElfTableBlue" />
+    <DisplayName>Elven Table Blue</DisplayName>
+    <Description>Elven Table Blue</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ElfTableBlue.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-5" y="0" z="-3" />
+      <Max x="5" y="3" z="4" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\ElfTableBlue.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="ElfTableBlue" Count="1" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="1.4" StartY="1.5" EndX="8.6" EndY="5.5" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="10" EndY="7" />
+      <MountPoint Side="Left" StartX="0" StartY="2.8" EndX="7" EndY="3" />
+      <MountPoint Side="Right" StartX="0" StartY="2.8" EndX="7" EndY="3" />
+      <MountPoint Side="Front" StartX="0" StartY="2.8" EndX="10" EndY="3" />
+      <MountPoint Side="Back" StartX="0" StartY="2.8" EndX="10" EndY="3" />
+    </MountPoints>
+    <Rotation>All</Rotation>
+    <UseModelIntersection>true</UseModelIntersection>
+    <Mass>20</Mass>
+    <MaxIntegrity>160</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="ElfTableRed" />
+    <DisplayName>Elven Table Red</DisplayName>
+    <Description>Elven Table Red</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ElfTableRed.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-5" y="0" z="-3" />
+      <Max x="5" y="3" z="4" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\ElfTableRed.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="ElfTableRed" Count="1" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="1.4" StartY="1.5" EndX="8.6" EndY="5.5" />
+      <MountPoint Side="Top" StartX="0" StartY="0" EndX="10" EndY="7" />
+      <MountPoint Side="Left" StartX="0" StartY="2.8" EndX="7" EndY="3" />
+      <MountPoint Side="Right" StartX="0" StartY="2.8" EndX="7" EndY="3" />
+      <MountPoint Side="Front" StartX="0" StartY="2.8" EndX="10" EndY="3" />
+      <MountPoint Side="Back" StartX="0" StartY="2.8" EndX="10" EndY="3" />
+    </MountPoints>
+    <Rotation>All</Rotation>
+    <UseModelIntersection>true</UseModelIntersection>
+    <Mass>20</Mass>
+    <MaxIntegrity>160</MaxIntegrity>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElfTable" />    
+    <DisplayName>Elven Table</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\ElfTable.dds</Icon>
+    <Category>Elven_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="ElfTable" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElfTableBlue" />    
+    <DisplayName>Elven Table Blue</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\ElfTableBlue.dds</Icon>
+    <Category>Elven_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+      <Item Amount="3" Type="ConsumableItem" Subtype="Blue_Berry" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="ElfTableBlue" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElfTableRed" />    
+    <DisplayName>Elven Table Red</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\ElfTableRed.dds</Icon>
+    <Category>Elven_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+      <Item Amount="3" Type="ConsumableItem" Subtype="Berries" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="ElfTableRed" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElfTable_Carpenter" />
+    <DisplayName>Carpenter: Elven Table</DisplayName>
+    <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\ElfTable.dds</Icon>
+    <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+    <Category>Elven_Carpentry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_ElfTable" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+    <Id Type="SchematicItem" Subtype="Carpenter_Schematic_ElfTable" />
+    <Public>true</Public>
+    <DisplayName>Elven Table Manuscript</DisplayName>
+    <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Elven Table. This 
+      knowledge would be valuable for a Carpenter.
+    </Description>
+    <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\ElfTable.dds</Icon>
+    <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Cubes\small\Scroll.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>10</MaxStackAmount>
+    <UseSound>PlayEat</UseSound>
+    <Research Type="ResearchDefinition" Subtype="ElfTable_Carpenter" />
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+
+</Definitions>

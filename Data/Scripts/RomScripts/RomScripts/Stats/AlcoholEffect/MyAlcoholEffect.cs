@@ -9,14 +9,14 @@ using Sandbox.Game.Multiplayer;
 using System;
 using VRage.Audio;
 using VRage.Game;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Utils;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
 using VRageMath;
-using RomScripts.StatExtensions;
+using RomScripts76561197972467544.StatExtensions;
 
-namespace RomScripts.AlcoholEffect
+namespace RomScripts76561197972467544.AlcoholEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_AlcoholEffect))]
     public class MyAlcoholEffect : MyEntityStatEffect
@@ -34,11 +34,11 @@ namespace RomScripts.AlcoholEffect
             this.m_alcoholStat = owner.GetAlcohol();
             if (this.m_alcoholStat == null)
             {
-                MyLog.Default.Error("Alcohol effect '{0}' applied to an entity '{1}' without alcohol stat!", new object[]
-                {
-                    base.Definition.Id,
-                    base.Owner.Entity.Definition.Id
-                });
+                //MyLog.Default.Error("Alcohol effect '{0}' applied to an entity '{1}' without alcohol stat!", new object[]
+                //{
+                //    base.Definition.Id,
+                //    base.Owner.Entity.Definition.Id
+                //});
                 return;
             }
             this.m_alcoholStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.alcoholStat_OnValueChanged);

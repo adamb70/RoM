@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="KegstandInventory" />
+    <DisplayName>Kegstand</DisplayName>
+    <MaxItemCount>28</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <ShownInGUI>false</ShownInGUI>
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
+  </Definition>
+
+</Definitions>

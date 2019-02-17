@@ -1,73 +1,105 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Norden_Ale_Kegstand" />
-      <BlockPairName>Norden_Ale_Kegstand</BlockPairName>
-      <DisplayName>Norden Ale Kegstand</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
-      <Public>true</Public>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="4" y="7" z="4" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Cooking\Norden_Ale_Kegstand.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Tag="Timber" Count ="1" />
-        <Component Subtype="Iron_Nails" Count ="12" />
-      </Components>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Norden_Ale_Kegstand" />
+    <Rotation>All</Rotation>
+    <DisplayName>Norden Ale Kegstand</DisplayName>
+    <Description>Produces ale</Description>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-2" y="-2" z="-2" />
+      <Max x="2" y="5" z="2" />
+    </BoundingBox>
+    <Model>Models\Universal\Cooking\Norden_Ale_Kegstand.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Norden_Ale_Kegstand" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="Norden_Ale_Kegstand"/>
-    <CraftingCategories>
-      <Category>Norden_Ale_Kegstand</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="NordenAleKegstandCrafting" />
+    <InputInventory>KegstandInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Press</CraftString>
+    <CraftingString>Pressing Queue</CraftingString>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Norden_Ale_Kegstand" />
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory"/>
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="NordenAleKegstandScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="NordenAleKegstandCrafting" />
+    <QueueSize>4</QueueSize>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Norden_Ale_KegstandInventory" />
-    <InventoryName>Norden_Ale_KegstandInventory</InventoryName>
-    <DisplayName>Norden_Ale_Kegstand</DisplayName>
-    <MaxItemCount>28</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="NordenAleKegstandRecipes" />
+    <Category>Norden_Ale_Kegstand</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Norden_Ale_Kegstand" />
-    <Component Type="UseObjectsComponent" Subtype="Norden_Ale_Kegstand" ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="Norden_Ale_KegstandInventory" ForceCreate="true"/>
-    <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponentQueued" Subtype="Norden_Ale_Kegstand" ForceCreate="true"/>
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Norden_Ale_Kegstand" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="NordenAleKegstandCrafting" />
+    <Component Type="CraftingScheduler" Subtype="NordenAleKegstandScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="NordenAleKegstandRecipes" />
+
+    <Component Type="Inventory" Subtype="KegstandInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" />
   </Definition>
 
+
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand" />  
+    <DisplayName>Spalt Lager Kegstand</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
+    <Category>Norden_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Universal_Timber" />
+      <Item Amount="4" Type="InventoryItem" Subtype="Sticks" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="Block" Subtype="Norden_Ale_Kegstand" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Ale_Kegstand_Carpenter" />
+    <DisplayName>Carpenter: Spalt Lager Kegstand
+
+Allows you to store and
+open Spalt Lager Kegs.</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Ale_Kegstand.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_Norden_Ale_Kegstand" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
 
 </Definitions>

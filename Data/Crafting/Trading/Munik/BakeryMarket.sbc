@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Bread_Munik_Bakery" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\baked_bread.dds</Icon>
+    <DisplayName>Sell: Bread (15GP)</DisplayName>
+    <Category>Munik_Bakery_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="ConsumableItem" Subtype="Bread" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="15" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+
+
+
+
+</Definitions>

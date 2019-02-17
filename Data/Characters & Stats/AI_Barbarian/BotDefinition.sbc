@@ -2,123 +2,19 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
-
-<!-- Vanilla Barbarians -->
-
-  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition">
-    <Id Type="HumanoidBot" Subtype="NormalBarbarian" />
-    <DisplayName>DisplayName_Bots_Barbarian</DisplayName>
-    <Icon>Textures\GUI\Icons\Bots\SpawnBarbarian.dds</Icon>
-    <BotModel>Medieval_barbarian</BotModel>
-    <BotBehaviorTree Subtype="BarbarianBehavior" />
-    <BehaviorType>Barbarian</BehaviorType>
-    <TargetType>Humanoid</TargetType>
-    <StartingItem Type="HandItem" Subtype="ClubStudded" />
-    <Public>true</Public>
-    <AvailableInSurvival>false</AvailableInSurvival>
-    <InventoryContentGenerated>true</InventoryContentGenerated>
-    <InventoryContainerTypeId>
-      <TypeId>LootTableDefinition</TypeId>
-      <SubtypeId>BarbarianBagContent</SubtypeId>
-    </InventoryContainerTypeId>
-    <FactionTag>BARB</FactionTag>
-  </Definition>
-  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition">
-    <Id Type="HumanoidBot" Subtype="BrokenSwordBarbarian" />
-    <DisplayName>DisplayName_Bots_BrokenSwordBarbarian</DisplayName>
-    <Icon>Textures\GUI\Icons\Bots\SpawnBarbarian.dds</Icon>
-    <BotModel>Medieval_barbarian</BotModel>
-    <BotBehaviorTree Subtype="BarbarianBehavior" />
-    <BehaviorType>Barbarian</BehaviorType>
-    <TargetType>Humanoid</TargetType>
-    <StartingItem Type="HandItem" Subtype="SwordBroken" />
-    <Public>true</Public>
-    <AvailableInSurvival>false</AvailableInSurvival>
-    <InventoryContentGenerated>true</InventoryContentGenerated>
-    <InventoryContainerTypeId>
-      <TypeId>LootTableDefinition</TypeId>
-      <SubtypeId>BarbarianBagContent</SubtypeId>
-    </InventoryContainerTypeId>
-    <FactionTag>BARB</FactionTag>
-  </Definition>
-  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition">
-    <Id Type="HumanoidBot" Subtype="SwordBarbarian" />
-    <DisplayName>DisplayName_Bots_SwordBarbarian</DisplayName>
-    <Icon>Textures\GUI\Icons\Bots\SpawnBarbarian.dds</Icon>
-    <BotModel>Medieval_barbarian</BotModel>
-    <BotBehaviorTree Subtype="BarbarianBehavior" />
-    <BehaviorType>Barbarian</BehaviorType>
-    <TargetType>Humanoid</TargetType>
-    <StartingItem Type="HandItem" Subtype="ClubWood" />
-    <Public>true</Public>
-    <AvailableInSurvival>false</AvailableInSurvival>
-    <InventoryContentGenerated>true</InventoryContentGenerated>
-    <InventoryContainerTypeId>
-      <TypeId>LootTableDefinition</TypeId>
-      <SubtypeId>BarbarianBagContent</SubtypeId>
-    </InventoryContainerTypeId>
-    <FactionTag>BARB</FactionTag>
-  </Definition>
-  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition">
-    <Id Type="HumanoidBot" Subtype="CrossbowBarbarian" />
-    <DisplayName>DisplayName_Bots_CrossbowBarbarian</DisplayName>
-    <Icon>Textures\GUI\Icons\Bots\SpawnBarbarian.dds</Icon>
-    <BotModel>Medieval_barbarian</BotModel>
-    <BotBehaviorTree Subtype="BarbarianBehavior" />
-    <BehaviorType>Barbarian</BehaviorType>
-    <TargetType>Humanoid</TargetType>
-    <StartingItem Type="HandItem" Subtype="CrossbowIron" />
-    <Public>false</Public>
-    <AvailableInSurvival>false</AvailableInSurvival>
-    <InventoryContentGenerated>true</InventoryContentGenerated>
-    <InventoryContainerTypeId>
-      <TypeId>LootTableDefinition</TypeId>
-      <SubtypeId>BarbarianBagContent</SubtypeId>
-    </InventoryContainerTypeId>
-    <FactionTag>BARB</FactionTag>
-    <InventoryItems>
-      <Item Type="HandItem" Subtype="ClubStudded" />
-      <Item Type="HandItem" Subtype="CrossbowIron" />
-    </InventoryItems>
-  </Definition>
-  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition">
-    <Id Type="HumanoidBot" Subtype="TestingBarbarian" />
-    <DisplayName>Testing Barbarian</DisplayName>
-    <Icon>Textures\GUI\Icons\Bots\SpawnBarbarian.dds</Icon>
-    <BotModel>Medieval_barbarian</BotModel>
-    <BotBehaviorTree Subtype="TestingBarbarian" />
-    <BehaviorType>Barbarian</BehaviorType>
-    <TargetType>Humanoid</TargetType>
-    <StartingItem Type="HandItem" Subtype="ClubStudded" />
-    <Public>false</Public>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <FactionTag>BARB</FactionTag>
-  </Definition>
-
-
-
 <!-- RoM Barbarians -->
 
-  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition">
+  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition" Copy="Append">
     <Id Type="HumanoidBot" Subtype="ApothecaryBarbarian" />
-    <DisplayName>Barbarian Apothecary</DisplayName>
-    <Icon>Textures\GUI\Icons\Bots\SpawnBarbarian.dds</Icon>
-    <BotModel>Medieval_barbarian</BotModel>
-    <BotBehaviorTree Subtype="BarbarianBehavior" />
-    <BehaviorType>Barbarian</BehaviorType>
-    <TargetType>Humanoid</TargetType>
-    <StartingItem Type="HandItem" Subtype="ShovelNorden" />
+    <CopyFrom Type="HumanoidBot" Subtype="BarbarianBase" />
     <Public>true</Public>
-    <AvailableInSurvival>false</AvailableInSurvival>
-    <InventoryContentGenerated>true</InventoryContentGenerated>
-    <InventoryContainerTypeId>
-      <TypeId>LootTableDefinition</TypeId>
-      <SubtypeId>ApothecaryBarbarianBagContent</SubtypeId>
-    </InventoryContainerTypeId>
-    <FactionTag>BARB</FactionTag>
+    <DisplayName>Barbarian Apothecary</DisplayName>
+    <BotEntity Type="EntityBase" Subtype="BarbarianForestGreen" />
+    <Item Type="HandItem" Subtype="ShovelNorden" />
+    <CombatEquipment Type="HandItem" Subtype="ShovelNorden" />
+    <!--<BaseAttackWindow>1200</BaseAttackWindow>
+    <AttackDecisionWindow>300</AttackDecisionWindow>
+    <BlockDelayWindow>100</BlockDelayWindow>-->
   </Definition>
-
-
-
-
+  
 </Definitions>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--plank door, straight-->
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_WallClayWithDoor" />
+    <DisplayName>DisplayName_Block_PlankDoorW</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\WallClayDoors_V1.dds</Icon>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\large\ClayWalls\WallClayDoors_V1.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\ClayWalls\WallClayDoors_V1_C1.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Timber" Count="2" />
+      <Component Tag="Plank" Count="8" />
+      <Component Type="InventoryItem" Subtype="Clay" Count="3" />
+    </Components>
+    <UseModelIntersection>false</UseModelIntersection>
+    <Rotation>YAxis</Rotation>
+    <Visible>false</Visible>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_WallClayWithDoor" />
+    <CopyFrom Type="Block" Subtype="NPC_DefaultDoorContainer" />
+    <Component Type="ModelAttachmentComponent" Subtype="WallClayWithDoor" />
+    <Component Type="AttachmentAnimationComponent" Subtype="DefaultDoorAnimationComponentLeft" />
+  </Definition>
+</Definitions>

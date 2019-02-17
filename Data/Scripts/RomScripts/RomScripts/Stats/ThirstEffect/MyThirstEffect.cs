@@ -9,14 +9,14 @@ using Sandbox.Game.Multiplayer;
 using System;
 using VRage.Audio;
 using VRage.Game;
-using VRage.Library.Logging;
+using VRage.Logging;
 using VRage.Utils;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
 using VRageMath;
-using RomScripts.StatExtensions;
+using RomScripts76561197972467544.StatExtensions;
 
-namespace RomScripts.ThirstEffect
+namespace RomScripts76561197972467544.ThirstEffect
 {
     [MyEntityEffect(typeof(MyObjectBuilder_ThirstEffect))]
     public class MyThirstEffect : MyEntityStatEffect
@@ -34,11 +34,11 @@ namespace RomScripts.ThirstEffect
             this.m_thirstStat = owner.GetThirst();
             if (this.m_thirstStat == null)
             {
-                MyLog.Default.Error("Thirst effect '{0}' applied to an entity '{1}' without thirst stat!", new object[]
-                {
-                    base.Definition.Id,
-                    base.Owner.Entity.Definition.Id
-                });
+                //MyLog.Default.Error("Thirst effect '{0}' applied to an entity '{1}' without thirst stat!", new object[]
+                //{
+                //    base.Definition.Id,
+                //    base.Owner.Entity.Definition.Id
+                //});
                 return;
             }
             this.m_thirstStat.OnValueChanged += new MyEntityStat.ValueChangedDelegate(this.thirstStat_OnValueChanged);

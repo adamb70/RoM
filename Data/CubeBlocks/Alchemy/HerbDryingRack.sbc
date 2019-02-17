@@ -1,41 +1,28 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="HerbDryingRack" />
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="HerbDryingRack" />
+    <Rotation>All</Rotation>
     <DisplayName>Herb Drying Rack</DisplayName>
-	<Description>Herb Drying Rack</Description>
-    <BlockPairName>HerbDryingRack</BlockPairName>
+    <Description>Herb Drying Rack</Description>
     <Icon>Textures\GUI\Icons\Props\WeaponRack.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="4" y="4" z="2" />
-    <ModelOffset x="0" y="0" z="0" />
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-2" y="0" z="0" />
+      <Max x="2" y="4" z="2" />
+    </BoundingBox>
     <Model>Models\Cubes\small\WeaponRack.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-	<Mass>5</Mass>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <Components>
-      <Component Tag="Timber" Count="4" />
+      <Component Type="Block" Subtype="WeaponRack" Count="1" />
     </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
     <MountPoints>
-      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="1" />
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="4" EndY="2" />
     </MountPoints>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
     <UseModelIntersection>true</UseModelIntersection>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <MaxIntegrity>1000</MaxIntegrity>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
+    <Mass>5</Mass>
+    <MaxIntegrity>120</MaxIntegrity>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -48,66 +35,65 @@
       <Item Amount="4" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="HerbDryingRack" />
+      <Item Amount="1" Type="Block" Subtype="HerbDryingRack" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
     <Id Type="MyObjectBuilder_Inventory" Subtype="HerbDryingRackInput" />
-    <DisplayName>Input</DisplayName>
     <MaxItemCount>7</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_ItemTagConstraint" Whitelist="true" >
-      <Tag>Dryable_Ingredient</Tag>
-      <!-- <Id Type="DurableItem" /> -->
-    </Constraint>
+    <SupportsAreaInventory>true</SupportsAreaInventory>
+    <Constraint Type="ItemTagConstraint" Subtype="HerbDryingRackInput" />
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
   </Definition>
-  
+
+  <Definition xsi:type="MyObjectBuilder_ItemTagConstraint">
+    <Id Type="ItemTagConstraint" Subtype="HerbDryingRackInput" />
+    <Whitelist>true</Whitelist>
+    <Tag>Dryable_Ingredient</Tag>
+    <!-- <Id Type="DurableItem" /> -->
+  </Definition>
+
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
     <Id Type="MyObjectBuilder_Inventory" Subtype="HerbDryingRackOutput" />
-    <DisplayName>Output</DisplayName>
     <MaxItemCount>7</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_ItemTagConstraint" Whitelist="true" >
-      <!-- <Tag>Dried_Ingredient</Tag> -->
-    </Constraint>
+    <SupportsAreaInventory>true</SupportsAreaInventory>
+    <Constraint Type="ItemTagConstraint" Subtype="HerbDryingRackOutput" />
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_StockpileComponentDefinition">
-    <Id Type="MyObjectBuilder_StockpileComponent" Subtype="HerbDryingRackVisual" />
-    <SubpartNameFormat>Inventory_Slot_{0:00}</SubpartNameFormat>
-    <MaxNumberOfSubparts>7</MaxNumberOfSubparts>
+  <Definition xsi:type="MyObjectBuilder_ItemTagConstraint">
+    <Id Type="ItemTagConstraint" Subtype="HerbDryingRackOutput" />
+    <Whitelist>true</Whitelist>
+    <!-- <Tag>Dried_Ingredient</Tag> -->
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="HerbDryingRack" />
-    <Subparts>
-      <Subpart Name="Inventory_Slot_00" HingeBone="Inventory_Slot_00" CanUse="false" UseBoneOrientation="true" HasPhysics="false" />
-      <Subpart Name="Inventory_Slot_01" HingeBone="Inventory_Slot_01" CanUse="false" UseBoneOrientation="true" HasPhysics="false" />
-      <Subpart Name="Inventory_Slot_02" HingeBone="Inventory_Slot_02" CanUse="false" UseBoneOrientation="true" HasPhysics="false" />
-      <Subpart Name="Inventory_Slot_03" HingeBone="Inventory_Slot_03" CanUse="false" UseBoneOrientation="true" HasPhysics="false" />
-      <Subpart Name="Inventory_Slot_04" HingeBone="Inventory_Slot_04" CanUse="false" UseBoneOrientation="true" HasPhysics="false" />
-      <Subpart Name="Inventory_Slot_05" HingeBone="Inventory_Slot_05" CanUse="false" UseBoneOrientation="true" HasPhysics="false" />
-      <Subpart Name="Inventory_Slot_06" HingeBone="Inventory_Slot_06" CanUse="false" UseBoneOrientation="true" HasPhysics="false" />
-    </Subparts>
-  </Definition>
-  
   <!-- The decay handling component. Sets how often to decay 1 durability of items inside -->
   <Definition xsi:type="MyObjectBuilder_DecayHandlerComponentDefinition">
     <Id Type="DecayHandlerComponent" Subtype="DecayableHerbDrying"/>
-    <TickInterval>10000</TickInterval>   <!-- in milliseconds -->
+    <TickInterval>10000</TickInterval>
+    <!-- in milliseconds -->
     <OutputInventory>HerbDryingRackOutput</OutputInventory>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="HerbDryingRack" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="HerbDryingRack" />
-    <Component Type="StockpileComponent" Subtype="HerbDryingRackVisual" />
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="HerbDryingRack" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="ModelAttachmentComponent" Subtype="WeaponRack" />
+    <Component Type="VisualInventoryComponent" Subtype="WeaponRackVisualInventory" />
+    <Component Type="Inventory" Subtype="WeaponRack" />
     <Component Type="Inventory" Subtype="HerbDryingRackInput" />
     <Component Type="Inventory" Subtype="HerbDryingRackOutput" />
-    <Component Type="InventorySpawnComponent"/>
-    
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
+
     <Component Type="DecayHandlerComponent" Subtype="DecayableHerbDrying" />
   </Definition>
+
 </Definitions>

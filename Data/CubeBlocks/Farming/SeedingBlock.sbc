@@ -1,47 +1,5 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="SeedingBlock" />
-    <DisplayName>DisplayName_Block_SeedingBlock</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\SeederBlock.dds</Icon>
-    <BlockPairName>SeedingBlock</BlockPairName>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="3" y="3" z="8" />
-    <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\small\SeederBlock.mwm</Model>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <MountPoints>
-      <MountPoint Side="Front" StartX="0.0" StartY="3.0" EndX="3.0" EndY="2.0" Default="true" />
-      <MountPoint Side="Back" StartX="0.0" StartY="3.0" EndX="3.0" EndY="2.0" />
-      <MountPoint Side="Left" StartX="0.0" StartY="3.0" EndX="8.0" EndY="2.0" />
-      <MountPoint Side="Right" StartX="0.0" StartY="3.0" EndX="8.0" EndY="2.0" />
-    </MountPoints>
-    <CriticalComponent Tag="Timber" Index="0" />
-    <Components>
-      <Component Tag="ScrapWood" Count="5" />
-      <Component Tag="Timber" Count ="10" />
-      <Component Type="InventoryItem" Subtype="PartsMetal" Count ="18" />
-    </Components>
-    <MaxIntegrity>2000</MaxIntegrity>
-    <Mass>100</Mass>
-    <Volume>1125</Volume>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Direction>Vertical</Direction>
-    <Rotation>Both</Rotation>
-    <GuiVisible>true</GuiVisible>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="SeedingBlock" />
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="true">
-      <Id Type="SeedBagHandItem" />
-    </Constraint>
-  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SeedingBlock"/>
@@ -49,12 +7,12 @@
     <Icon>Textures\GUI\Icons\Cubes\SeederBlock.dds</Icon>
     <Category>Machinesmith_Table</Category>
     <Prerequisites>
-      <Item Amount="1" Type="CubeBlock" Subtype="ChestWoodLarge" />
+      <Item Amount="1" Type="Block" Subtype="ChestWoodLarge" />
       <Item Amount="10" Tag="Timber" />
       <Item Amount="18" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="SeedingBlock" />
+      <Item Amount="1" Type="Block" Subtype="SeedingBlock" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>

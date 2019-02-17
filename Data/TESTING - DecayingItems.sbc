@@ -1,43 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-<!-- ============================= Begin Bloomery stuff ============================= -->
-<!-- This bloomery is a test version. It has a component that decays any "DurableItem" type items inside it. -->
+  <!-- ============================= Begin Bloomery stuff ============================= -->
+  <!-- This bloomery is a test version. It has a component that decays any "DurableItem" type items inside it. -->
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="DecayableBloomery" />
-    <BlockPairName>Furnace</BlockPairName>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="DecayableBloomery" />
     <DisplayName>TEST Bloomery - decaying items</DisplayName>
     <Description>Description_Block_Furnace</Description>
     <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="3" y="5" z="8" />
-    <ModelOffset x="0" y="0.03" z="0" />
-    <Model>Models\Cubes\Small\bloomery.mwm</Model>
-    <!--
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\ClayFurnace_Construction_1.mwm">
-					<MountPointOverrides>
-						<MountPoint Side="Top" Enabled="false" />
-					</MountPointOverrides>
-				</Model>
-			</BuildProgressModels>
-			-->
-    <PhysicalMaterial>Rock</PhysicalMaterial>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="-2" z="-3" />
+      <Max x="3" y="5" z="3" />
+    </BoundingBox>
+    <Model>Models\Cubes\small\FurnaceClay_V1.mwm</Model>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
     <Components>
-      <Component Type="InventoryItem" Subtype="StoneSmall" Count="18" />
-      <Component Type="InventoryItem" Subtype="Dirt" Count="20" />
+      <Component Type="Block" Subtype="DecayableBloomery" Count="1" />
     </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="Dirt" Index="0" />
-    <Mass>400</Mass>
     <Volume>4500</Volume>
-    <MaxIntegrity>800</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Direction>Horizontal</Direction>
-    <Rotation>Vertical</Rotation>
+    <Rotation>YAxis</Rotation>
     <MountPoints>
       <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
     </MountPoints>
@@ -47,25 +30,14 @@
     <LightIntensity Min="0.3" Max="0.3" Default="0.3" />
     <PrimarySound>BlockFire</PrimarySound>
     <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
+    <Mass>180</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="CraftingRecipeDefinition" Subtype="DecayableBloomery"/>
     <DisplayName>DisplayName_Block_Furnace</DisplayName>
-	<Description>Description_Block_Furnace</Description>
+    <Description>Description_Block_Furnace</Description>
     <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
     <Category>Woodcrafting</Category>
     <Prerequisites>
@@ -73,13 +45,13 @@
       <Item Amount="18" Type="InventoryItem" Subtype="StoneSmall" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="DecayableBloomery" />
+      <Item Amount="1" Type="Block" Subtype="DecayableBloomery" />
     </Results>
     <CraftingTime Seconds="6"/>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="EntityFXComponent" Subtype="DecayableBloomery" />
+    <Id Type="EntityFXComponent" Subtype="DecayableBloomeryFX" />
     <Effects>
       <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="fire_dummy">
         <EffectId Type="EffectDefinition" Subtype="Torch"/>
@@ -95,56 +67,74 @@
     </UseObjects>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="DecayableBloomery" />
-    <InventoryName>Furnace</InventoryName>
-    <DisplayName>DisplayName_InventoryName_Crafting</DisplayName>
-    <MaxItemCount>12</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="DecayableBloomeryCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>All</PowerRequired>
+    <PowerConsumptionStyle>Continuous</PowerConsumptionStyle>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>CraftString_Smelt</CraftString>
+    <CraftingString>CraftingString_Smelting</CraftingString>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentQueuedDefinition">
-    <Id Type="CraftingComponentQueued" Subtype="DecayableBloomery"/>
-    <CraftingCategories>
-      <Category>Smelting</Category>
-      <Category>Melting</Category>
-    </CraftingCategories>
-    <CraftingInventory>Bloomery</CraftingInventory>
-    <ProductionQueueSize>4</ProductionQueueSize>
-    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-    <ConstrainInventory>false</ConstrainInventory>
-    <PowerRequired>All</PowerRequired>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="DecayableBloomeryScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="FurnaceCrafting" />
+    <QueueSize>6</QueueSize>
   </Definition>
-  
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="DecayableBloomeryRecipes" />
+    <Category>Smelting</Category>
+    <Category>Melting</Category>
+  </Definition>
+
   <!-- The decaying component. Sets how often to decay 1 durability of items inside -->
   <Definition xsi:type="MyObjectBuilder_DecayHandlerComponentDefinition">
     <Id Type="DecayHandlerComponent" Subtype="DecayableBloomery"/>
-    <TickInterval>1000</TickInterval>   <!-- 1000 milliseconds -->
+    <TickInterval>1000</TickInterval>
+    <!-- 1000 milliseconds -->
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="DecayableBloomery" />
-    <Component Type="Inventory" Subtype="DecayableBloomery" />
-    <Component Type="CraftingComponentQueued" Subtype="DecayableBloomery" />
-    <Component Type="InventorySpawnComponent" />
-    <Component Type="EntityFXComponent" Subtype="DecayableBloomery" />
-    <Component Type="UseObjectsComponent" Subtype="DecayableBloomery" />
-    <Component Type="Inventory" Subtype="Fuel" />
-    <Component Type="FuelComponent" Subtype="Fire" />
-    
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="DecayableBloomery" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="DecayableBloomeryCrafting" />
+    <Component Type="CraftingScheduler" Subtype="DecayableBloomeryScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="DecayableBloomeryRecipes" />
+
     <Component Type="DecayHandlerComponent" Subtype="DecayableBloomery" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="FuelComponent" Subtype="Fire" />
+    <Component Type="Inventory" Subtype="Fuel" />
+
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="DecayableBloomeryFX" />
+    <Component Type="UseObjectsComponent" Subtype="FurnaceClay" />
   </Definition>
-  
+
+
+
   <!-- ============================= End Bloomery stuff ============================= -->
-  
-  
+
+
   <!-- ============================= Begin Ingot stuff ============================= -->
   <!-- This ingot is a "DurableItem". When it's inside the bloomery inventory it will lose 1 durability from MaxDurability each TickInterval. When it decays it returns a gold ingot. -->
-  
+
   <Definition xsi:type="MyObjectBuilder_DurableItemDefinition">
     <Id Type="DurableItem" Subtype="DecayingIngot" />
     <DisplayName>TEST - Decaying Ingot</DisplayName>
-	  <Description>A very strong, lightweight, material.</Description>
+    <Description>A very strong, lightweight, material.</Description>
     <Icon>Textures\GUI\Icons\Ingot\MithrilIngotIcon.dds</Icon>
     <Size>
       <X>0.25</X>
@@ -158,8 +148,8 @@
     <MaxDurability>4</MaxDurability>
     <BrokenItem Type="InventoryItem" Subtype="IngotGold"/>
   </Definition>
-  
-  
+
+
   <!-- ============================= End Ingot stuff ============================= -->
-  
+
 </Definitions>

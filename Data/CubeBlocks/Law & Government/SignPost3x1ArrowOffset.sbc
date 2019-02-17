@@ -1,81 +1,24 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="SignpostArrow3x1Left" />
-    <DisplayName>DisplayName_Block_SignPost3x1ArrowOffset</DisplayName>
-    <Description>Description_Block_ArrowSign</Description>
-    <BlockPairName>SignPost3x1ArrowOffset</BlockPairName>
-    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
-    <Icon>Textures\GUI\Icons\Cubes\SignPost3x1ArrowLeft.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="3" y="1" z="1" />
-    <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\small\SignPost3x1_ArrowLeft.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <MountPoints>
-      <!--<MountPoint Side="Left" StartX="0" StartY="0" EndX="0.2" EndY="1" />-->
-      <MountPoint Side="Right" StartX="0.8" StartY="0" EndX="1" EndY="1" />
-      <MountPoint Side="Front" StartX="0" StartY="0" EndX="3" EndY="1" />
-      <MountPoint Side="Top" StartX="0.0" StartY="0.8" EndX="3" EndY="1.0" />
-      <MountPoint Side="Bottom" StartX="0.0" StartY="0" EndX="3" EndY="0.2" />
-    </MountPoints>
-    <Components>
-      <Component Tag="Timber" Count="1" />
-    </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Mass>28</Mass>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
-    <MaxIntegrity>40</MaxIntegrity>
-    <BlockGroupName>BlockGroupName_Block_ArrowSigns</BlockGroupName>
-    <BlockVariants>
-      <BlockVariant>
-        <TypeId>CubeBlock</TypeId>
-          <SubtypeId>SignPost3x1ArrowOffsetMir</SubtypeId>
-      </BlockVariant>
-      <BlockVariant>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>SignpostArrowCentered3x1</SubtypeId>
-      </BlockVariant>
-    </BlockVariants>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SignPost3x1ArrowOffset_LawGovernment" />
+    <DisplayName>Law and Government: Signpost [3x1]</DisplayName>
+    <Description>A settlemant without written laws, is a lawless town</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\SignPost3x1ArrowOffset.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>LawGovernment_Book</Category>
+    <Prerequisites>
+      <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Schematic_SignPost3x1ArrowOffset" />
+    </Results>
+    <CraftingTime Seconds="1"/>
   </Definition>
 
-
-
-<!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SignPost3x1ArrowOffset_LawGovernment" />
-      <DisplayName>Law and Government: Signpost [3x1]</DisplayName>
-      <Description>A settlemant without written laws, is a lawless town</Description>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\SignPost3x1ArrowOffset.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>LawGovernment_Book</Category>
-      <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Schematic_SignPost3x1ArrowOffset" />
-      </Results>
-	  <CraftingTime Seconds="1"/>
-    </Definition>
-<!-- -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SignpostArrow3x1Left"/>
     <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
@@ -87,11 +30,11 @@
       <Item Amount="1" Tag="Timber" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="SignpostArrow3x1Left" />
+      <Item Amount="1" Type="Block" Subtype="SignpostArrow3x1Left" />
     </Results>
     <CraftingTime Seconds="2"/>
   </Definition>
-<!-- =================================================================================== -->
+
 
 
 </Definitions>

@@ -5,7 +5,7 @@ using VRage.Game;
 using VRage.Game.Definitions;
 using Medieval.Definitions.Tools;
 
-namespace RomScripts.VoxelMining
+namespace RomScripts76561197972467544.VoxelMining
 {
     [MyDefinitionType(typeof(MyObjectBuilder_RomMinerToolBehaviorDefinition))]
     public class MyRomMinerToolBehaviorDefinition : MyMinerToolBehaviorDefinition

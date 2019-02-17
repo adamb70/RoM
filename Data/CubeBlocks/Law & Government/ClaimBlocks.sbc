@@ -1,95 +1,94 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="ClaimBlockWood" />
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="ClaimBlockWood" />
+    <Rotation>YAxis</Rotation>
     <DisplayName>DisplayName_Block_ClaimBlockWood</DisplayName>
-    <BlockPairName>ClaimBlockWood</BlockPairName>
     <Public>true</Public>
-    <Icon>Textures\GUI\Icons\Cubes\ClaimBlockWood.dds</Icon>
-    <CubeSize>Large</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="1" y="1" z="1" />
-    <ModelOffset x="0" y="0" z="0" />
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\ClaimBlock_Wood.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
     <Model>Models\Cubes\large\ClaimBlock_Wood.mwm</Model>
-    <PhysicalMaterial>Stone</PhysicalMaterial>
+    <PhysicalMaterial>WoodSoft</PhysicalMaterial>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Back" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+      <MountPoint Side="Left" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.0324" EndX="1.0324" EndY="-0.032400012" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+    </MountPoints>
     <Components>
-      <Component Tag="ScrapWood" Count="4" />
-      <Component Tag="Timber" Count="6" />
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Timber" Count="12" />
     </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
     <BuildProgressModels>
-      <Model BuildPercentUpperBound="0.5" File="Models\Cubes\large\ClaimBlock_Wood_Construction_1.mwm" />
-    </BuildProgressModels>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>Models\Cubes\large\ClaimBlock_Wood.mwm
-    <BuildTimeSeconds>6</BuildTimeSeconds>
+      <Model UpperBound="0.5" File="Models\Cubes\large\ClaimBlock_Wood_Construction_1.mwm" />
+    </BuildProgressModels>Models\Cubes\large\ClaimBlock_Wood.mwm
     <UseModelIntersection>true</UseModelIntersection>
-    <CompoundTemplates>
-      <Template>Universal</Template>
-    </CompoundTemplates>
-    <GuiVisible>true</GuiVisible>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <MaxIntegrity>500</MaxIntegrity>
     <VoxelPlacement>
       <StaticMode>
-        <PlacementMode>Volumetric</PlacementMode>
-        <MaxAllowed>0.5</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
       </StaticMode>
       <DynamicMode>
-        <PlacementMode>InVoxel</PlacementMode>
-        <MaxAllowed>0.5</MaxAllowed>
+        <MaxAllowed>0.3</MaxAllowed>
         <MinAllowed>0.2</MinAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
       </DynamicMode>
     </VoxelPlacement>
+    <MaxIntegrity>600</MaxIntegrity>
+    <CriticalIntegrityRatio>0.9</CriticalIntegrityRatio>
   </Definition>
 
-
-
-
-
-<!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClaimBlockWood_LawGovernment" />
-      <DisplayName>Law and Government: Territorial Claim [Tier 1]</DisplayName>
-      <Description>The power to stake your claim in the realm is important
+    <DisplayName>Law and Government: Territorial Claim [Tier 1]</DisplayName>
+    <Description>The power to stake your claim in the realm is important
 for any leader.</Description>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\ClaimBlockWood.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>LawGovernment_Book</Category>
-      <Prerequisites>
-        <Item Amount="28" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlockWood" />
-      </Results>
-	  <CraftingTime Seconds="1"/>
-    </Definition>
-<!-- =================================================================================== -->
-    <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\ClaimBlockWood.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>LawGovernment_Book</Category>
+    <Prerequisites>
+      <Item Amount="28" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlockWood" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClaimBlock_LawGovernment" />
-      <DisplayName>Law and Government: Territorial Claim [Tier 2]</DisplayName>
-      <Description>The power to stake your claim in the realm is important for
+    <DisplayName>Law and Government: Territorial Claim [Tier 2]</DisplayName>
+    <Description>The power to stake your claim in the realm is important for
 any leader. Though, making a more durable claim never hurts.</Description>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\ClaimBlock.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Category>LawGovernment_Book</Category>
-      <Prerequisites>
-        <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-        <Item Amount="20" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
-      </Prerequisites>
-      <Results>
-	  
-	    <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlock" />
-      </Results>
-	  <CraftingTime Seconds="1"/>
-    </Definition>
-<!-- =================================================================================== -->
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\ClaimBlock.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>LawGovernment_Book</Category>
+    <Prerequisites>
+      <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="20" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlock" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+  <!-- =================================================================================== -->
 
 
 

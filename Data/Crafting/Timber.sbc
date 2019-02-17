@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- =========================================================================================== -->
+  <!-- Mechanical Block Crafting -->
+  <!-- =========================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimber10Mechanical" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>DisplayName_LogToTimber</DisplayName>
+    <Category>SawbladesTimber</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Universal_Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="Block" Subtype="Timber10" />
+    </Results>
+    <CraftingTime Seconds="10"/>
+  </Definition>
+  
+  <!-- =========================================================================================== -->
+  <!-- Kharidian Lumber -->
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToWoodenSticks"/>
+    <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
+    <DisplayName>Chop Into Sticks</DisplayName>
+    <Category>Kharidian_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="15" Type="InventoryItem" Subtype="KharidianSticks" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToTimberRound" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberRound.dds</Icon>
+    <DisplayName>Round Palm Timber</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="LogPalmtree_TimberRound10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToTimberRound_CraftingTable" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberRound.dds</Icon>
+    <DisplayName>Round Palm Timber</DisplayName>
+    <Category>Kharidian_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="Block" Subtype="LogPalmtree_TimberRound10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToTimber10" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>Palm Timber</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="LogPalmtree_Timber10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogPalmtree_LogToTimber10Carpentry_Table" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>Palm Timber</DisplayName>
+    <Category>Kharidian_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="LogPalmtree" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="Block" Subtype="LogPalmtree_Timber10" />
+    </Results>
+    <CraftingTime Seconds="5" />
+  </Definition>
+  
+  <!-- ============================================================================================ -->
+  <!-- Norden Lumber -->
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToWoodenSticks"/>
+    <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
+    <DisplayName>DisplayName_LogToWoodenSticks</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="15" Type="InventoryItem" Subtype="Sticks" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimberRound" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberRound.dds</Icon>
+    <DisplayName>Round Timber</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="TimberRound10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimberRound_CraftingTable" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberRound.dds</Icon>
+    <DisplayName>Round Timber</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="Block" Subtype="TimberRound10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimber10" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>DisplayName_LogToTimber</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Timber10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- ============================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimber10Carpentry_Table" />
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <DisplayName>DisplayName_LogToTimber</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="Block" Subtype="Timber10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- =========================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimberDiagonal10" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberDiagonal1_10_10.dds</Icon>
+    <DisplayName>DisplayName_Block_LogToTimberDiagonal</DisplayName>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="TimberDiagonal10" />
+    </Results>
+    <CraftingTime Seconds="10"/>
+  </Definition>
+  <!-- =========================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToTimberDiagonal10_CraftingTable" />
+    <Icon>Textures\GUI\Icons\Cubes\TimberDiagonal1_10_10.dds</Icon>
+    <DisplayName>DisplayName_Block_LogToTimberDiagonal</DisplayName>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="Block" Subtype="TimberDiagonal10" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+  <!-- =========================================================================================== -->
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LogToPlankCarpentry" />
+    <DisplayName>Cut Planks</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\Plank.dds</Icon>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="15" Type="Block" Subtype="Plank10" />
+    </Results>
+    <CraftingTime Seconds="2.0"/>
+  </Definition>
+
+
+</Definitions>

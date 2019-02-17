@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RomScripts</RootNamespace>
     <AssemblyName>RomScripts</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="MySeedingToolBehavior\MyObjectBuilder_SeedingToolBehaviorDefinition.cs" />
@@ -37,6 +42,10 @@
     <Compile Include="Stats\RomDeathEffect\MyObjectBuilder_RomDeathEffectDefinition.cs" />
     <Compile Include="Stats\RomDeathEffect\MyRomDeathEffect.cs" />
     <Compile Include="Stats\RomDeathEffect\MyRomDeathEffectDefinition.cs" />
+    <Compile Include="Stats\RomHealthEffect\MyObjectBuilder_RomHealthEffect.cs" />
+    <Compile Include="Stats\RomHealthEffect\MyObjectBuilder_RomHealthEffectDefinition.cs" />
+    <Compile Include="Stats\RomHealthEffect\MyRomHealthEffect.cs" />
+    <Compile Include="Stats\RomHealthEffect\MyRomHealthEffectDefinition.cs" />
     <Compile Include="VoxelMining\MyObjectBuilder_RomMinerToolBehaviorDefinition.cs" />
     <Compile Include="VoxelMining\MyObjectBuilder_VoxelMiningLootTableDefinition.cs" />
     <Compile Include="VoxelMining\MyRomMinerToolBehavior.cs" />
@@ -46,10 +55,6 @@
     <Compile Include="Stats\PoisonEffect\MyPoisonEffectDefinition.cs" />
     <Compile Include="Stats\PoisonEffect\MyObjectBuilder_PoisonEffect.cs" />
     <Compile Include="Stats\PoisonEffect\MyObjectBuilder_PoisonEffectDefinition.cs" />
-    <Compile Include="CraftingRequireSky\MyObjectBuilder_SkyCraftingComponent.cs" />
-    <Compile Include="CraftingRequireSky\MyObjectBuilder_SkyCraftingComponentDefinition.cs" />
-    <Compile Include="CraftingRequireSky\MySkyCraftingComponentDefinition.cs" />
-    <Compile Include="CraftingRequireSky\MySkyCraftingComponent.cs" />
     <Compile Include="DecayingItem\MyDecayHandlerComponent.cs" />
     <Compile Include="DecayingItem\MyDecayingItem.cs" />
     <Compile Include="DecayingItem\MyDecayHandlerComponentDefinition.cs" />
@@ -95,7 +100,6 @@
     <Compile Include="FueledMechanicalSource\MyFueledMechanicalSourceDefinition.cs" />
     <Compile Include="FueledMechanicalSource\MyObjectBuilder_FueledMechanicalSource.cs" />
     <Compile Include="FueledMechanicalSource\MyObjectBuilder_FueledMechanicalSourceDefinition.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WaterFuelComponent - Copy\MyObjectBuilder_MyWaterFuelComponent2.cs" />
     <Compile Include="WaterFuelComponent - Copy\MyObjectBuilder_MyWaterFuelComponent2Definition.cs" />
     <Compile Include="WaterFuelComponent - Copy\MyWaterFuelComponent2.cs" />
@@ -106,12 +110,13 @@
     <Compile Include="WaterFuelComponent\MyObjectBuilder_MyWaterFuelComponentDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="MedievalEngineersModApi">
       <HintPath>F:\SteamLibrary\steamapps\common\MedievalEngineersModSDK\OriginalContent\ModTools\MedievalEngineersModApi.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

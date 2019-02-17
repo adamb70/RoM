@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--plank door, straight-->
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_WallPlankWithDoor" />
+    
+    <DisplayName>DisplayName_Block_WallPlankWithDoor</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\cubes\Blocks\WallWoodPlanksWithEntrance.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <Visible>false</Visible>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\large\PlankWalls\WallWoodPlanksWithDoor.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\PlankWalls\WallWoodPlanksWithDoor_Construction_1.mwm" />
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.02962387" StartY="-0.0342126861" EndX="0.6709341" EndY="1.032467" />
+      <MountPoint Side="Front" StartX="0.3290661" StartY="-0.0342127346" EndX="-0.03518951" EndY="1.03246713" />
+      <MountPoint Side="Front" StartX="0.7357341" StartY="0.867801368" EndX="0.264266074" EndY="1.032467" />
+      <MountPoint Side="Left" StartX="-0.0326138027" StartY="-0.0342126861" EndX="0.132186279" EndY="1.032467" />
+      <MountPoint Side="Right" StartX="1.03261375" StartY="-0.0342127346" EndX="0.8678137" EndY="1.03246713" />
+      <MountPoint Side="Top" StartX="-0.0296238419" StartY="1.03261387" EndX="0.3290659" EndY="0.867813766" />
+      <MountPoint Side="Top" StartX="0.6709339" StartY="1.03261375" EndX="1.03518951" EndY="0.8678137" />
+      <MountPoint Side="Top" StartX="0.2642659" StartY="1.03261375" EndX="0.7357339" EndY="0.8678137" />
+      <MountPoint Side="Bottom" StartX="-0.0296238419" StartY="-0.0326137543" EndX="0.3290659" EndY="0.132186323" />
+      <MountPoint Side="Bottom" StartX="0.6709339" StartY="-0.03261385" EndX="1.03518951" EndY="0.132186219" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Plank" Count="18" />
+    </Components>
+    <UseModelIntersection>false</UseModelIntersection>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_WallPlankWithDoor" />
+    <CopyFrom Type="Block" Subtype="NPC_DefaultDoorContainer" />
+    <Component Type="ModelAttachmentComponent" Subtype="WallPlankWithDoor" />
+    <Component Type="AttachmentAnimationComponent" Subtype="DefaultDoorAnimationComponentLeft" />
+  </Definition>
+</Definitions>

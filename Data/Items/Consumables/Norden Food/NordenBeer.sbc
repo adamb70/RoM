@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Norden_Beer" />
+    <Tag>Drink</Tag>
+    <Public>true</Public>
+    <DisplayName>Norden Beer 10%</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>5</Mass>
+    <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Norden_Beer_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Norden_Beer_Thirst" />
+    <Effect Type="EntityStatEffect" Subtype="Norden_Beer_Vigor" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+
+
+</Definitions>

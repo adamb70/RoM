@@ -7,16 +7,16 @@
     <DisplayName>Test pickaxe</DisplayName>
     <Description>Loottable pickaxe. 10% chance of dropping gold ingot when mining grass, 90% for iron.</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeSteel.dds</Icon>
-	<Tag>Pickaxe</Tag>
+    <Tag>Pickaxe</Tag>
     <Size>
       <X>1.2</X>
       <Y>0.6</Y>
       <Z>0.3</Z>
     </Size>
-    <Mass>0.5</Mass>
     <Model>Models\Weapons\PickaxeSteel_OneHand.mwm</Model>
 
-    <PhysicalMaterial>PickAxe</PhysicalMaterial>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Mass>5</Mass>
 
     <MaxStackAmount>1</MaxStackAmount>
 
@@ -82,7 +82,7 @@
       <StanceName>CombatMode</StanceName>
       <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="PickaxeSteel" />
     </StanceToBehavior>
-    
+
   </Definition>
 
 
@@ -90,7 +90,8 @@
     <Id Type="RomMinerToolBehaviorDefinition" Subtype="PickaxeSteelTEST" />
     <Efficiency>4.5</Efficiency>
     <Cost Stat="Stamina" Cost="2.5" />
-	
+    <ToolheadMaterial>Pickaxe</ToolheadMaterial>
+
     <YieldMultiplier>1</YieldMultiplier>
     <MiningDistance>5</MiningDistance>
     <MiningRadius>0.5</MiningRadius>
@@ -111,16 +112,16 @@
       <Animation>Mining</Animation>
     </SecondaryEffect>
   </Definition>
-  
-  
+
+
   <Definition xsi:type="MyObjectBuilder_VoxelMiningLootTableDefinition">
     <Id Type="VoxelMiningLootTableDefinition" Subtype="PickaxeSteelTEST" />
-    
+
     <Entry VoxelMaterial="Grass" Volume="64" Rolls="1">
       <MinedItem Type="InventoryItem" Subtype="IngotGold" Amount="1" Weight="1"  IsUnique="true"/>
       <MinedItem Type="InventoryItem" Subtype="IngotIron" Amount="1" Weight="9"  IsUnique="true"/>
     </Entry>
-    
+
     <Entry VoxelMaterial="Mithril_Ore" Volume="256" Rolls="1">
       <MinedItem Type="InventoryItem" Subtype="IngotGold" Amount="1" Weight="1"  IsUnique="false"/>
       <!-- use empty item as padding -->
@@ -128,9 +129,9 @@
       <!-- items with AlwaysDrops="true" will be handled just like vanilla ore mining and will be ignored for loot rolls -->
       <MinedItem Type="InventoryItem" Subtype="MithrilOre" Amount="1" Weight="1"  IsUnique="true" AlwaysDrops="true"/>
     </Entry>
-    
+
   </Definition>
-  
-  
+
+
 
 </Definitions>

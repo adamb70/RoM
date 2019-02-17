@@ -4,10 +4,10 @@ using System;
 using VRage.Game;
 using VRage.Game.Definitions;
 using Medieval.Definitions.Tools;
-using VRage.Library.Logging;
+using VRage.Logging;
 using System.Collections.Generic;
 
-namespace Romscripts.SeedingToolBehavior
+namespace RomScripts76561197972467544.SeedingToolBehavior
 {
     [MyDefinitionType(typeof(MyObjectBuilder_RomSeedingToolBehaviorDefinition))]
     public class MyRomSeedingToolBehaviorDefinition : MySeedingToolBehaviorDefinition

@@ -8,19 +8,21 @@
     <DisplayName>Enchanted Stone Plow</DisplayName>
     <Description>An enchanted stone plow; better than a normal stone plow.</Description>
     <Icon>Textures\GUI\Icons\ToolsAndWeapons\HandPlow.dds</Icon>
+    <Tag>Plow</Tag>
+    <Tag>ToolLong</Tag>
     <Size>
       <X>1.2</X>
       <Y>0.6</Y>
       <Z>0.3</Z>
     </Size>
-    <Mass>0.5</Mass>
     <Model>Models\Weapons\Plow.mwm</Model>
-
-    <PhysicalMaterial>plow</PhysicalMaterial>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Mass>5</Mass>
 
     <Animation>Plow</Animation>
 
-    <DummyMapping Name="shovel_dumb_left" AnimationVariable="#shovelleft"/>
+    <DummyMapping Name="shovel_dumb_left" AnimationVariable="#shovelleft" />
+    <DummyMapping Name="shovel_dumb_left_female" AnimationVariable="#shovelleftfemale" />
 
     <MaxStackAmount>1</MaxStackAmount>
 
@@ -33,7 +35,7 @@
       <Slot>MainHand</Slot>
       <Slot>OffHand</Slot>
     </Position>
-    
+
     <!-- extra transform on IK dummy in 1st person -->
     <EquippedTransform>
       <!-- tool rotation offset from hand -->
@@ -66,7 +68,7 @@
     </StanceToBehavior>
     <StanceToBehavior>
       <StanceName>CombatMode</StanceName>
-      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="GenericToolCombatBehavior"/>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="PlowIron"/>
     </StanceToBehavior>
   </Definition>
 

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-<!-- =================== Vanilla Tutorial Research ================ -->
+  <!-- =================== Vanilla Tutorial Research ================ -->
   <Definition xsi:type="ResearchDefinition">
     <Id Type="ResearchDefinition" Subtype="Tutorial" />
     <DisplayName>DisplayName_Research_Tutorial</DisplayName>
   </Definition>
-<!-- ============================================================== -->
+  <!-- ============================================================== -->
   <Definition xsi:type="ResearchDefinition">
     <Id Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
     <DisplayName>Nomadic Technology</DisplayName>
@@ -19,7 +19,7 @@
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Schematic_Stone_Well" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />
-    
+
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
@@ -32,106 +32,106 @@
 
   <Definition xsi:type="MyObjectBuilder_QuestDefinition">
     <Id Type="QuestDefinition" Subtype="RoM_Intro" />
-	
-	<DisplayName>Ways of The Nomad</DisplayName>
-	<Description>A traveller without a home, the way of the nomad. The realm holds great possibilities for those who can survive. Even more for those who master it.</Description>
-	<Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
-	<Tag>Tutorial</Tag>
-	
-	<IsAbandonable>true</IsAbandonable>
-	<IsRepeatable>false</IsRepeatable>
-	
-	<!-- unlocks all the research if quest is abandoned -->
-	<FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
 
-	<SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
-  <SuccessAction xsi:type="Quest.Actions.StartQuest" Subtype="Establishing_Encampment" />
+    <DisplayName>Ways of The Nomad</DisplayName>
+    <Description>A traveller without a home, the way of the nomad. The realm holds great possibilities for those who can survive. Even more for those who master it.</Description>
+    <Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Tutorial</Tag>
 
-	<Step>
-		<FullDescription>A traveller without a home, the way of the nomad. The realm holds great possibilities for those who can survive. Even more for those who master it.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="1" />
-    
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Nomadic_Book" />   
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>The Ways of The Nomad is an ancient text, with knowledge from many generations. Learn as much as possible from it, and it will aid you in survival.</FullDescription>
-			<Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="Nomadic_Book" Amount="1" />
-		<Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>It's important to gather pristine materials inorder to conduct research to discover new technologies. Look in the nearby forest for pristine items.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="1" />
-    
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />   
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>Learn from your ancestors, discover their knowledge in the Ways of The Nomad book.</FullDescription>
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Ancestral_Knowledge_Schematic" Amount="1" />
-		<Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>Fire, the most essential element. Making a Campfire will allow for food production. While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="9" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="2" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Mushroom" Amount="2" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Mushroom" Amount="2" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Berry" Amount="2" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Berry" Amount="2" />
-		</Condition>
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
 
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />   
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />   
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />   
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>Food is essential for surviving the wilderness.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_Bonfire" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="SoupMushroom_Schematic" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="Bonfire" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Craft" Type="ConsumableItem" Subtype="SoupMushroom" Amount="1" />
-		</Condition>
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>Gather additional pristine items to prepare for the next step of knowledge.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="1" />
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />  
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>Migration is a daily part of life, and inventing the wheel will make life much easier. Research the Teachings of the Nomad.</FullDescription>
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Teachings_Of_The_Nomad_Schematic" Amount="1" />
-		<Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>Finally, gather the last bits needed to construct a well. While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="3" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="3" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="3" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="3" />
-		</Condition>
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>This is the last step. Remember that the well will not be able to draw water on dry or rocky ground.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bucket" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Masonry_Schematic_Stone_Well" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="Stone_Well" Amount="1" />
-		</Condition>
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
+    <!-- unlocks all the research if quest is abandoned -->
+    <FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
+
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
+    <SuccessAction xsi:type="Quest.Actions.StartQuest" Subtype="Establishing_Encampment" />
+
+    <Step>
+      <FullDescription>A traveller without a home, the way of the nomad. The realm holds great possibilities for those who can survive. Even more for those who master it.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="1" />
+
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Nomadic_Book" />   
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>The Ways of The Nomad is an ancient text, with knowledge from many generations. Learn as much as possible from it, and it will aid you in survival.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="Nomadic_Book" Amount="1" />
+      <Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>It's important to gather pristine materials inorder to conduct research to discover new technologies. Look in the nearby forest for pristine items.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="1" />
+
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />   
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Learn from your ancestors, discover their knowledge in the Ways of The Nomad book.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Ancestral_Knowledge_Schematic" Amount="1" />
+      <Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Fire, the most essential element. Making a Campfire will allow for food production. While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="9" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="2" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Mushroom" Amount="2" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Mushroom" Amount="2" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Berry" Amount="2" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Berry" Amount="2" />
+      </Condition>
+
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />   
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />   
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />   
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Food is essential for surviving the wilderness.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_Bonfire" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="SoupMushroom_Schematic" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="Bonfire" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="ConsumableItem" Subtype="SoupMushroom" Amount="1" />
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Gather additional pristine items to prepare for the next step of knowledge.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="1" />
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />  
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Migration is a daily part of life, and inventing the wheel will make life much easier. Research the Teachings of the Nomad.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Teachings_Of_The_Nomad_Schematic" Amount="1" />
+      <Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Finally, gather the last bits needed to construct a well. While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="3" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="3" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="3" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="3" />
+      </Condition>
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>This is the last step. Remember that the well will not be able to draw water on dry or rocky ground.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bucket" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Masonry_Schematic_Stone_Well" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="Stone_Well" Amount="1" />
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
   </Definition>
 
 
@@ -139,49 +139,49 @@
 
   <Definition xsi:type="MyObjectBuilder_QuestDefinition">
     <Id Type="QuestDefinition" Subtype="Establishing_Encampment" />
-	
-	<DisplayName>Establishing The Encampment</DisplayName>
-	<FullDescription>Constructing a Claim Totem will mark the territory. Though fortifications are needed to protect the encampment from theives. Research the fortification technologies located in the Ways of The Nomad book.</FullDescription>
-	<Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
-	<Tag>Tutorial</Tag>
-	
-	<IsAbandonable>true</IsAbandonable>
-	<IsRepeatable>false</IsRepeatable>
-  
-	<FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
-	<SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
 
-	<Step>
-		<FullDescription>Find a suitable location for an encampment. Look for some local resources needed to begin construction of the encampment.  While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="6" />
-			<Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="5" />
-		</Condition>
-    
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>Once a suitable spot has been chosen, establish the encampment!</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranches" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="NomadTentBranches" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Craft" Type="CubeBlock" Subtype="ClaimTotem" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.PlaceBlock" Type="CubeBlock" Subtype="ClaimTotem" Amount="1" />
-		</Condition>
-    
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
-	<Step>
-		<FullDescription>Fortifications are needed to protect the encampment from theives. Research the fortification technologies located in the Ways of The Nomad book. They can be easily disassembled and transported, but difficult to destroy.</FullDescription>
-		<Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" Amount="1" />
-			<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_FenceGate" Amount="1" />
-		</Condition>
-    <Action xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
-		<Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
-	</Step>
+    <DisplayName>Establishing The Encampment</DisplayName>
+    <FullDescription>Constructing a Claim Totem will mark the territory. Though fortifications are needed to protect the encampment from theives. Research the fortification technologies located in the Ways of The Nomad book.</FullDescription>
+    <Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
+    <Tag>Tutorial</Tag>
+
+    <IsAbandonable>true</IsAbandonable>
+    <IsRepeatable>false</IsRepeatable>
+
+    <FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
+    <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
+
+    <Step>
+      <FullDescription>Find a suitable location for an encampment. Look for some local resources needed to begin construction of the encampment.  While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="6" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="5" />
+      </Condition>
+
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Once a suitable spot has been chosen, establish the encampment!</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranches" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="NomadTentBranches" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="ClaimTotem" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="Block" Subtype="ClaimTotem" Amount="1" />
+      </Condition>
+
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Fortifications are needed to protect the encampment from theives. Research the fortification technologies located in the Ways of The Nomad book. They can be easily disassembled and transported, but difficult to destroy.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_FenceGate" Amount="1" />
+      </Condition>
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
   </Definition>
 </Definitions>
