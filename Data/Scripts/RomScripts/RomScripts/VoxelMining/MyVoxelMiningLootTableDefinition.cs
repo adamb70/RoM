@@ -63,8 +63,8 @@ namespace RomScripts76561197972467544.VoxelMining
             public int Volume;
         }
 
-        public System.Collections.Generic.Dictionary<int, MyVoxelMiningLootTableDefinition.MiningEntry> MiningEntries = new System.Collections.Generic.Dictionary<int, MyVoxelMiningLootTableDefinition.MiningEntry>();
-        public Dictionary<int, MyVoxelMiningDefinition.MiningEntry> VanillaMiningEntries = new Dictionary<int, MyVoxelMiningDefinition.MiningEntry>();
+        public System.Collections.Generic.Dictionary<int, MyVoxelMiningLootTableDefinition.MiningEntry> MiningLootEntries = new System.Collections.Generic.Dictionary<int, MyVoxelMiningLootTableDefinition.MiningEntry>();
+        public Dictionary<int, MyVoxelMiningDefinition.MiningEntry> MiningEntries = new Dictionary<int, MyVoxelMiningDefinition.MiningEntry>();
 
         protected override void Init(MyObjectBuilder_DefinitionBase builder)
         {
@@ -74,79 +74,79 @@ namespace RomScripts76561197972467544.VoxelMining
             {
                 return;
             }
-            foreach (MyObjectBuilder_VoxelMiningLootTableDefinition.MiningDef current in ob.Entries)
+            foreach (MyObjectBuilder_VoxelMiningLootTableDefinition.MiningDef miningDef in ob.Entries)
             {
                 System.Collections.Generic.List<MyVoxelMiningLootTableDefinition.MinedItem> minedItemList = new System.Collections.Generic.List<MyVoxelMiningLootTableDefinition.MinedItem>();
                 Dictionary<MyDefinitionId, int> dictionary = new Dictionary<MyDefinitionId, int>();
-                System.Collections.Generic.List<MyObjectBuilder_VoxelMiningLootTableDefinition.MinedItem> minedItems = current.MinedItems;
+                System.Collections.Generic.List<MyObjectBuilder_VoxelMiningLootTableDefinition.MinedItem> minedItems = miningDef.MinedItems;
                 if (minedItems != null)
                 {
-                    foreach (MyObjectBuilder_VoxelMiningLootTableDefinition.MinedItem current2 in minedItems)
+                    foreach (MyObjectBuilder_VoxelMiningLootTableDefinition.MinedItem minedLootItem in minedItems)
                     {
-                        MyVoxelMiningLootTableDefinition.MinedItem minedItemData = new MyVoxelMiningLootTableDefinition.MinedItem();
+                        MyVoxelMiningLootTableDefinition.MinedItem minedLootItemData = new MyVoxelMiningLootTableDefinition.MinedItem();
 
-                        if (!current2.IsEmpty)
+                        if (!minedLootItem.IsEmpty)
                         {
-                            minedItemData.ItemDefinition = new MyDefinitionId?(current2.DefinitionId);
+                            minedLootItemData.ItemDefinition = new MyDefinitionId?(minedLootItem.DefinitionId);
                         }
                         
-                        minedItemData.AlwaysDrops = current2.AlwaysDrops;
-                        minedItemData.Amount = current2.Amount;
-                        minedItemData.IsUnique = current2.IsUnique;
-                        minedItemData.Weight = current2.Weight;
+                        minedLootItemData.AlwaysDrops = minedLootItem.AlwaysDrops;
+                        minedLootItemData.Amount = minedLootItem.Amount;
+                        minedLootItemData.IsUnique = minedLootItem.IsUnique;
+                        minedLootItemData.Weight = minedLootItem.Weight;
 
-                        minedItemList.Add(minedItemData);
+                        minedItemList.Add(minedLootItemData);
 
                         /////////////// Build a vanilla dictionary too
-                        if (current2.AlwaysDrops) {
+                        if (minedLootItem.AlwaysDrops) {
                             MyObjectBuilderType type;
                             try
                             {
-                                type = MyObjectBuilderType.Parse(current2.Type);
+                                type = MyObjectBuilderType.Parse(minedLootItem.Type);
                             }
                             catch (Exception)
                             {
                                 //MyLog.Default.Error("Can not parse defined builder type {0}", new object[]
                                 //{
-                                //    current2.Type
+                                //    minedLootItem.Type
                                 //});
                                 continue;
                             }
-                            MyDefinitionId key = new MyDefinitionId(type, MyStringHash.GetOrCompute(current2.Subtype));
-                            dictionary[key] = current2.Amount;
+                            MyDefinitionId key = new MyDefinitionId(type, MyStringHash.GetOrCompute(minedLootItem.Subtype));
+                            dictionary[key] = minedLootItem.Amount;
                         }
 
                     }
                 }
                 int volume;
-                if (!current.Volume.HasValue)
+                if (miningDef.Volume == null)
                 {
                     volume = 64;
                 }
                 else
                 {
-                    volume = System.Math.Max(current.Volume.Value, 1);
+                    volume = System.Math.Max(miningDef.Volume.Value, 1);
                 }
-                MyVoxelMaterialDefinition myVoxelMaterialDefinition = MyDefinitionManager.Get<MyVoxelMaterialDefinition>(current.VoxelMaterial, false);
+                MyVoxelMaterialDefinition myVoxelMaterialDefinition = MyDefinitionManager.Get<MyVoxelMaterialDefinition>(miningDef.VoxelMaterial, false);
                 if (myVoxelMaterialDefinition == null || myVoxelMaterialDefinition.Index == 255)
                 {
                     //MyLog.Default.Error("Cannot find voxel material {0}", new object[]
                     //{
-                    //    current.VoxelMaterial
+                    //    miningDef.VoxelMaterial
                     //});
                 }
                 else
                 {
-                    this.MiningEntries[(int)myVoxelMaterialDefinition.Index] = new MyVoxelMiningLootTableDefinition.MiningEntry
+                    this.MiningLootEntries[(int)myVoxelMaterialDefinition.Index] = new MyVoxelMiningLootTableDefinition.MiningEntry
                     {
                         MinedItems = minedItemList,
                         Volume = volume,
-                        Rolls = current.Rolls
+                        Rolls = miningDef.Rolls
                         
                     };
 
                     // Create vanilla mining entries to be handled by the custom behaviour
-                    this.VanillaMiningEntries[(int)myVoxelMaterialDefinition.Index] = new MyVoxelMiningDefinition.MiningEntry
+                    this.MiningEntries[(int)myVoxelMaterialDefinition.Index] = new MyVoxelMiningDefinition.MiningEntry
                     {
                         MinedItems = dictionary,
                         Volume = volume
@@ -158,7 +158,7 @@ namespace RomScripts76561197972467544.VoxelMining
         public static explicit operator MyVoxelMiningDefinition(MyVoxelMiningLootTableDefinition def)
         {
             var mining_def = new MyVoxelMiningDefinition();
-            mining_def.MiningEntries = def.VanillaMiningEntries;
+            mining_def.MiningEntries = def.MiningEntries;
             return mining_def;
         }
     }

@@ -35,6 +35,7 @@ using Medieval.GameSystems;
 using VRage.Session;
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI;
+using VRage.ModAPI;
 using VRage.Collections;
 using VRage.ObjectBuilders.Definitions.Inventory;
 using VRage.Library.Utils;
@@ -46,10 +47,7 @@ namespace RomScripts76561197972467544.VoxelMining
     [MyHandItemBehavior(typeof(MyObjectBuilder_RomMinerToolBehaviorDefinition), true)]
     public class MyRomMinerToolBehavior : MyMinerToolBehavior
     {
-        private static readonly MyStorageData StorageData = new MyStorageData();
-
         protected MyVoxelMiningLootTableDefinition m_oreMiningLootTableDefinition;
-        
 
         public override void Init(MyEntity holder, MyHandItem item, MyHandItemBehaviorDefinition definition)
         {
@@ -63,14 +61,8 @@ namespace RomScripts76561197972467544.VoxelMining
 
         private MyVoxelMaterialDefinition GetVoxelMaterial(MyVoxelBase voxelBase, Vector3D hitPos)
         {
-            MatrixD worldMatrixInvScaled = voxelBase.PositionComp.WorldMatrixInvScaled;
-            Vector3D xyz;
-            Vector3D.TransformNoProjection(ref hitPos, ref worldMatrixInvScaled, out xyz);
-            Vector3I vector3I = voxelBase.StorageMin + new Vector3I(xyz) + (voxelBase.Size >> 1);
-            MyRomMinerToolBehavior.StorageData.Resize(Vector3I.One);
-
-            //voxelBase.Storage.ReadRange(MyRomMinerToolBehavior.StorageData, MyStorageDataTypeFlags.Material, 0, vector3I, vector3I);
-            return MyVoxelMaterialDefinition.Get((int)MyRomMinerToolBehavior.StorageData.Material(0));
+            ((IMyUtilities)MyAPIUtilities.Static).ShowNotification(voxelBase.GetMaterialAt(ref hitPos).ToString(), 2500, null, Color.Gold);
+            return voxelBase.GetMaterialAt(ref hitPos);
         }
 
 
@@ -82,7 +74,7 @@ namespace RomScripts76561197972467544.VoxelMining
             {
                 return;
             }
-            
+
             MyVoxelBase myVoxelBase = (MyVoxelBase)this.Target.Entity;
             myVoxelBase = myVoxelBase.RootVoxel;
             if (!myVoxelBase.MarkedForClose)
@@ -90,7 +82,7 @@ namespace RomScripts76561197972467544.VoxelMining
                 MyVoxelMaterialDefinition voxelMaterial = this.GetVoxelMaterial(myVoxelBase, this.Target.Position);
                 MyVoxelMiningLootTableDefinition.MiningEntry miningEntry;
 
-                if (voxelMaterial != null && this.m_oreMiningLootTableDefinition.MiningEntries.TryGetValue((int)voxelMaterial.Index, out miningEntry))
+                if (voxelMaterial != null && this.m_oreMiningLootTableDefinition.MiningLootEntries.TryGetValue((int)voxelMaterial.Index, out miningEntry))
                 {
                     if (this.Holder == MySession.Static.PlayerEntity)
                     {
@@ -103,9 +95,9 @@ namespace RomScripts76561197972467544.VoxelMining
 
         private void GenerateLoot(int voxelMaterial)
         {
-            //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(this.m_oreMiningLootTableDefinition.MiningEntries.Count.ToString(), 1000, null, Color.Black);
+            //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(this.m_oreMiningLootTableDefinition.MiningLootEntries.Count.ToString(), 1000, null, Color.Black);
             MyVoxelMiningLootTableDefinition.MiningEntry miningEntry;
-            if (this.m_oreMiningLootTableDefinition.MiningEntries.TryGetValue(voxelMaterial, out miningEntry))
+            if (this.m_oreMiningLootTableDefinition.MiningLootEntries.TryGetValue(voxelMaterial, out miningEntry))
             {
                 CachingHashSet<MyVoxelMiningLootTableDefinition.MinedItem> cachingHashSet = new CachingHashSet<MyVoxelMiningLootTableDefinition.MinedItem>();
                 foreach (MyVoxelMiningLootTableDefinition.MinedItem current in miningEntry.MinedItems)
@@ -164,12 +156,6 @@ namespace RomScripts76561197972467544.VoxelMining
                 return;
             }
             inventory.AddOrSpawnItem(itemDefinition, amount);
-        }
-        
-
-        static MyRomMinerToolBehavior()
-        {
-            MyRomMinerToolBehavior.StorageData = new MyStorageData();
         }
     }
 }
