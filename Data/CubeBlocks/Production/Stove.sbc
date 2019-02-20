@@ -70,7 +70,7 @@
     <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="StoveFX" />
     <Effects>
       <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
-        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Bonfire"/>
       </Effect>
       <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_furnace">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingMeal"/>
