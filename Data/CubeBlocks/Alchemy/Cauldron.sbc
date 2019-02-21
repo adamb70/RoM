@@ -70,7 +70,7 @@
       <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
         <EffectId Type="EffectDefinition" Subtype="Furnace" />
       </Effect>
-      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_furnace">
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_furnace" Overwrite="false">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingFurnace" />
       </Effect>
     </Effects>
