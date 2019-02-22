@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Subtype="HazelSmallBranchless" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.1">
+        <NextStep>HazelFull</NextStep>
+        <TimeToNextStep Hours="4" />
+      </GrowthStep>
+      <GrowthStep Name="HazelFull" StartingProbability="0.9">
+        <ModelCollectionSubtypeId>HazelSmall</ModelCollectionSubtypeId>
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Subtype="Sticks" Type="InventoryItem" />
+            <Min>2</Min>
+            <Max>4</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Roots" StartingProbability="0">
+        <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
+        <NextStep>Dead</NextStep>
+        <TimeToNextStep Hours="4" />
+        <Actions>
+          <Action Name="Gather" NextStep="Dead">
+            <Id Subtype="Roots" Type="ConsumableItem" />
+            <Min>1</Min>
+            <Max>1</Max>
+          </Action>
+        </Actions>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
+  
+</Definitions>
+
