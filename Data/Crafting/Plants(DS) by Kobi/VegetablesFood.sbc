@@ -1,0 +1,69 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BeansAndOnions"/>
+    <DisplayName>Beans</DisplayName>
+    <Description>A Dish with Beans.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\BeansOnions.dds</Icon>
+    <Category>Meals</Category>
+    <Prerequisites>
+      <Item Amount="4" Type="ConsumableItem" Subtype="Beans" />
+      <Item Amount="2" Type="ConsumableItem" Subtype="Onion" />
+      <Item Amount="1" Type="ConsumableItem" Subtype="Garlic" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="BeansAndOnions" />
+    </Results>
+    <CraftingTime Seconds="8"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Humus"/>
+    <DisplayName>Humus</DisplayName>
+    <Description>A Dish with mashed-up Peas.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Humus.dds</Icon>
+    <Category>Meals</Category>
+    <Prerequisites>
+      <Item Amount="4" Type="ConsumableItem" Subtype="Peas" />
+      <Item Amount="1" Type="ConsumableItem" Subtype="Garlic" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="Humus" />
+    </Results>
+    <CraftingTime Seconds="8"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PeasAndCarrots"/>
+    <DisplayName>PeasAndCarrots</DisplayName>
+    <Description>A Dish with Peas and Carrots.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\CarrotsPeas.dds</Icon>
+    <Category>Meals</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="ConsumableItem" Subtype="Carrot" />
+      <Item Amount="4" Type="ConsumableItem" Subtype="Peas" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="PeasAndCarrots" />
+    </Results>
+    <CraftingTime Seconds="8"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LeekAndMangold"/>
+    <DisplayName>GreedDelight</DisplayName>
+    <Description>A Dish with Leek and Mangold.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\LeekMangold.dds</Icon>
+    <Category>Meals</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="ConsumableItem" Subtype="Leek" />
+      <Item Amount="1" Type="ConsumableItem" Subtype="Mangold" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="LeekAndMangold" />
+    </Results>
+    <CraftingTime Seconds="8"/>
+  </Definition>
+
+</Definitions>

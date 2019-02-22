@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AppleTreeSapling"/>
+    <DisplayName>Grow Apple tree Sapling</DisplayName>
+    <Description>Rumour has it clay contains ancient apple tree seeds. Put it in the pot and wait.
+	This could take an hour.</Description>
+    <Icon>Textures\GUI\Icons\AppleTreeSapling.dds</Icon>
+    <Category>SaplingGrowth</Category>
+    <Prerequisites>
+      <Item Amount="50" Type="InventoryItem" Subtype="Clay" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SeedBagHandItem" Subtype="AppleTreeSapling" />
+    </Results>
+    <CraftingTime Seconds="3600"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition">
+    <Id Type="SeedBagHandItem" Subtype="AppleTreeSapling"/>
+
+    <DisplayName>Apple Tree Sapling</DisplayName>
+    <Description>Place this sapling in the ground.
+	It will need space to grow. Leave atleast 2m of space at each side</Description>
+    <Icon>Textures\GUI\Icons\AppleTreeSapling.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\AppleTreeSapling.mwm</Model>
+
+    <PhysicalMaterial>SeedBag</PhysicalMaterial>
+    <MaxStackAmount>1</MaxStackAmount>
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+    <MaxDurability>1</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_SeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>AppleTree</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Apple" />
+    <Public>true</Public>
+    <DisplayName>Apple</DisplayName>
+    <Description>a round red Fruit found on trees</Description>
+    <Icon>Textures\GUI\Icons\Apple.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\PickedApple.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>20</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="2" Clamped="true" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="RottenApple" />
+    <Public>true</Public>
+    <DisplayName>Rotten Apple</DisplayName>
+    <Description>Do Not Eat</Description>
+    <Icon>Textures\GUI\Icons\RottenApple.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\PickedRottenApple.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>/
+    <MaxStackAmount>20</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="-10" Clamped="false" />
+      <Stat Name="Poison" Value="5" Clamped="false" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ApplePie"/>
+    <DisplayName>Bake an Apple Pie</DisplayName>
+    <Description>Apples, flour and some herbs</Description>
+    <Icon>Textures\GUI\Icons\ApplePie.dds</Icon>
+    <Category>Meals</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="ConsumableItem" Subtype="Apple" />
+      <Item Amount="2" Type="ConsumableItem" Subtype="Herbs" />
+      <Item Amount="1" Type="InventoryItem" Subtype="FlourWheat" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="ConsumableItem" Subtype="ApplePie" />
+    </Results>
+    <CraftingTime Seconds="10"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="ApplePie" />
+    <Public>true</Public>
+    <DisplayName>Apple Pie</DisplayName>
+    <Description>Apples baked in dough seasoned with some herbs</Description>
+    <Icon>Textures\GUI\Icons\ApplePie.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\ApplePie.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="50" Clamped="true" />
+      <Stat Name="VigorGain" Value="5" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AppleJuice"/>
+    <DisplayName>Make Apple Juice</DisplayName>
+    <Description>Squish all the juice out of these apples</Description>
+    <Icon>Textures\GUI\Icons\AppleJuice.dds</Icon>
+    <Category>Milling</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="ConsumableItem" Subtype="Apple" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="AppleJuice" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="AppleJuice" />
+    <Public>true</Public>
+    <DisplayName>Apple Juice</DisplayName>
+    <Description>Refreshing apple juice</Description>
+    <Icon>Textures\GUI\Icons\AppleJuice.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\AppleJuiceBottle.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>10</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="20" Clamped="true" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="PoisonedApple" />
+    <Public>true</Public>
+    <DisplayName>Apple</DisplayName>
+    <Description>a round red Fruit found on trees</Description>
+    <Icon>Textures\GUI\Icons\Apple.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\PickedApple.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>20</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="2" Clamped="true" />
+    </Stats>
+    <Effect Type="EntityStatEffect" Subtype="PoisonApple" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="PoisonApple" />
+    <DisplayName>An apple a day</DisplayName>
+    <Description>will end you</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Poisoned.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Category>ConsumableBuff</Category>
+    <Stat>Health</Stat>
+    <RegenPerSecond>-1</RegenPerSecond>
+    <Duration Seconds="666" />
+  </Definition>
+
+
+</Definitions>

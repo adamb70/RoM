@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTreeSapling" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTreeSapling" Weight="1.0"/>
+    </Items>
+  </Definition>
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTreeSapling" />
+    <Model>Models\AppleTreeSapling.mwm</Model>
+    <BranchesStartHeight>1.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>20</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTreeSmall" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="TreeSmall01" Weight="0.5"/>
+      <Item TypeId="TreeDefinition" SubtypeId="TreeSmall01_colorVar2" Weight="0.5"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTreeMedium" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="TreeMedium01" Weight="0.5"/>
+      <Item TypeId="TreeDefinition" SubtypeId="TreeMedium01_colorVar2" Weight="0.5"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTreeEmpty" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTreeEmpty" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTreeEmpty" />
+    <Model>Models\AppleTree.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTreeRotten" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTreeRotten" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTreeRotten" />
+    <Model>Models\AppleTreeRotten.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree10" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree10" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree10" />
+    <Model>Models\AppleTree10.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree9" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree9" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree9" />
+    <Model>Models\AppleTree9.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree8" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree8" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree8" />
+    <Model>Models\AppleTree8.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree7" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree7" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree7" />
+    <Model>Models\AppleTree7.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree6" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree6" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree6" />
+    <Model>Models\AppleTree6.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree5" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree5" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree5" />
+    <Model>Models\AppleTree5.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree4" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree4" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree4" />
+    <Model>Models\AppleTree4.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree3" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree3" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree3" />
+    <Model>Models\AppleTree3.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree2" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree2" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree2" />
+    <Model>Models\AppleTree2.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+  <Definition xsi:type="VR.PhysicalModelCollectionDefinition">
+    <Id Type="PhysicalModelCollectionDefinition" Subtype="AppleTree1" />
+    <Items>
+      <Item TypeId="TreeDefinition" SubtypeId="AppleTree1" Weight="1"/>
+    </Items>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TreeDefinition">
+    <Id Type="TreeDefinition" Subtype="AppleTree1" />
+    <Model>Models\AppleTree1.mwm</Model>
+    <BranchesStartHeight>5.302</BranchesStartHeight>
+    <PhysicalMaterial>TreeTall</PhysicalMaterial>
+    <HitPoints>70</HitPoints>
+    <CutEffect>ChipOff_Wood</CutEffect>
+    <FallSound>ImpTreeFelling</FallSound>
+    <BreakSound>ImpTreeBreak</BreakSound>
+    <MinColorShift Hue="-25" Saturation="0" Value="0" />
+    <MaxColorShift Hue="-10" Saturation="0" Value="0" />
+  </Definition>
+
+
+</Definitions>

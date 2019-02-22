@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Grapes" />
+    <Tag>Fruit</Tag>
+    <Public>true</Public>
+    <DisplayName>Grapes</DisplayName>
+    <Description>Grapes to eat and make wine.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Grapes.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Brew and Wine by Wolf\Grapes_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="3" Clamped="true" />
+      <Stat Name="Vigor" Value="0.1" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Hops" />
+    <Public>true</Public>
+    <DisplayName>Hops</DisplayName>
+    <Description>Hops for brewing</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Hops.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Brew and Wine by Wolf\Hops_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="1" Clamped="true" />
+      <Stat Name="Vigor" Value="-0.4" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>  
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Malt" />
+    <Public>true</Public>
+    <DisplayName>Malt</DisplayName>
+    <Description>Malt for brewing</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Malt.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Brew and Wine by Wolf\Malt.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="1" Clamped="true" />
+      <Stat Name="Vigor" Value="-0.4" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>    
+
+</Definitions>

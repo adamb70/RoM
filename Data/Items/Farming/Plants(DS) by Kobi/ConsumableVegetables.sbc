@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Carrot" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Carrot</DisplayName>
+    <Description>Only orange because of the Dutch.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Carrot.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Carrot_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="0.6" Time="3" />
+      <Stat Name="Stamina" Value="0" Time="0" />
+      <Stat Name="Health" Value="0" Time="0" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Onion" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Onion</DisplayName>
+    <Description>Don't give it a name, or you will cry when you chopp it up.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Onion.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Onion_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="0.6" Time="3" />
+      <Stat Name="Stamina" Value="0" Time="0" />
+      <Stat Name="Health" Value="0" Time="0" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Mangold" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Mangold</DisplayName>
+    <Description>World winning chards.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Mangold.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Mangold_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="0.2" Time="3" />
+      <Stat Name="Stamina" Value="0" Time="0" />
+      <Stat Name="Health" Value="0" Time="0" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Garlic" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Garlic</DisplayName>
+    <Description>Good against vampires. And chances to get laid.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Garlic.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Garlic_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="0.3" Time="3" />
+      <Stat Name="Stamina" Value="0" Time="0" />
+      <Stat Name="Health" Value="0" Time="2" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Leek" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Leek</DisplayName>
+    <Description>Check wiki leeks for further information.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Leek.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Leek_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="0.2" Time="3" />
+      <Stat Name="Stamina" Value="0" Time="0" />
+      <Stat Name="Health" Value="0" Time="2" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Beans" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Beans</DisplayName>
+    <Description>Bended little green things.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Beans.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Beans_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="0.2" Time="3" />
+      <Stat Name="Stamina" Value="0" Time="0" />
+      <Stat Name="Health" Value="-0.5" Time="2" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Peas" />
+    <Tag>Harvest</Tag>
+    <Public>true</Public>
+    <DisplayName>Peas</DisplayName>
+    <Description>World Peas.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Peas.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Peas_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="0.2" Time="3" />
+      <Stat Name="Stamina" Value="0" Time="0" />
+      <Stat Name="Health" Value="-0.1" Time="2" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+  
+  <!-- Hemp. Do not eat! Not consumable... Only fibers. Buds allready stolen by barbs. -->
+  
+ <!--  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="StrawsHemp" />
+    <Public>true</Public>
+    <Tag>Harvest</Tag>
+    <DisplayName>HempStraws</DisplayName>
+    <Description>Hemp, use it to make LinenString in the Spinningwheel.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Hemp.dds</Icon>
+    <Model>Models\HempStraws_Small.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>6.7</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>10</Health>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StringLinenHemp"/>
+    <Icon>Textures\GUI\Icons\Cubes\LinenStringHemp.dds</Icon>
+    <DisplayName>HempLinenString</DisplayName>
+    <Description>Craft normal Linen with your HempStraws.</Description>
+    <Category>Weaving</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="StrawsHemp" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="StringLinen" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition> -->
+  
+  
+</Definitions>
