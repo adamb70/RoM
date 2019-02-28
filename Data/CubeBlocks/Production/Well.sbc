@@ -80,7 +80,7 @@
     <Component Type="InventorySpawnComponent" />
     <Component Type="EntityFXComponent" Subtype="BonfireFX" />
     <Component Type="UseObjectsComponent" Subtype="Stone_Well" />
-    <!-- <Component Type="EquiVoxelPowerComponent" Subtype="Stone_Well" /> -->
+    <Component Type="EquiVoxelPowerComponent" Subtype="Stone_Well" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
@@ -91,13 +91,13 @@
   </Definition>
 
 
-  <!-- <Definition xsi:type="MyObjectBuilder_EquiVoxelPowerComponentDefinition">
+  <Definition xsi:type="MyObjectBuilder_EquiVoxelPowerComponentDefinition">
     <Id Type="MyObjectBuilder_EquiVoxelPowerComponent" Subtype="Stone_Well" />
     <ScanRadius>2</ScanRadius>
     <ScanMargin>1</ScanMargin>
     <Mode>Surface</Mode>
     <DisturbedTime Seconds="2"/>
-    <PoweredWhenDisturbed>false</PoweredWhenDisturbed>
+    <PoweredWhenDisturbed>true</PoweredWhenDisturbed>
     <LevelOfDetail>1</LevelOfDetail>
     <DebugMode>false</DebugMode>
     <Operator>OR</Operator>
@@ -115,6 +115,6 @@
       <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_grass" Amount="10" />
       <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_needles" Amount="10" />
     </Materials>
-  </Definition> -->
+  </Definition>
   
 </Definitions>
