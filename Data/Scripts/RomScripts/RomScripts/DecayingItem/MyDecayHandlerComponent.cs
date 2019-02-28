@@ -54,6 +54,8 @@ namespace RomScripts76561197972467544.DecayingItem
             {
                 inv.ContentsChanged += new System.Action<MyInventoryBase>(this.OnInventoryChanged);
 
+                inv.RaiseContentsChanged(); // Used to trigger countdown when loading save, otherwise will not tick until inventory changed another way.
+
                 //((IMyUtilities)MyAPIUtilities.Static).ShowNotification(inv.ItemCount.ToString(), 3000, null, Color.Red);
             }
         }
