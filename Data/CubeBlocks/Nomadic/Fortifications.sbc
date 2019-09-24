@@ -1,0 +1,101 @@
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LongBarricade" />
+    <Rotation>All</Rotation>
+    <DisplayName>Long Barricade</DisplayName>
+    <Description>Long Barricade</Description>
+    <Icon>Textures\GUI\Icons\Cubes\LongBarricade.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-4" y="-3" z="-4" />
+      <Max x="4" y="3" z="4" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\LongBarricade.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="LongBarricade" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>480</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="SmallBarricade" />
+    <Rotation>All</Rotation>
+    <DisplayName>Small Barricade</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\SmallBarricade.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="-3" z="-3" />
+      <Max x="4" y="4" z="4" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\SmallBarricade.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="SmallBarricade" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>480</MaxIntegrity>
+  </Definition>
+
+
+
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LongBarricade" />
+    <Icon>Textures\GUI\Icons\Cubes\LongBarricade.dds</Icon>
+    <DisplayName>Long Barricade Kit</DisplayName>
+    <Description>Used to construct a long wooden barricade, perfect for an encampment!</Description>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="10" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="LongBarricade" />
+    </Results>
+    <CraftingTime Seconds="3" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\LongBarricade.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Survival Essentials: Wooden Barricades</DisplayName>
+    <Description>
+    "Barricades are the first line of defence
+    against a foe. Quick to set up, but long to 
+    break through." -Jarl Aksel, Siege of Reyjk
+
+    Learning this will unlock construction 
+    of wooden barricades, perfect for an 
+    encampment. This is essential!
+    </Description>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmallBarricade" />
+    <Icon>Textures\GUI\Icons\Cubes\SmallBarricade.dds</Icon>
+    <DisplayName>Corner Barricade Kit</DisplayName>
+    <Description>Used to construct the corner of a wooden barricade, perfect for an encampment!</Description>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="10" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="SmallBarricade" />
+    </Results>
+    <CraftingTime Seconds="3" />
+  </Definition>
+
+</Definitions>

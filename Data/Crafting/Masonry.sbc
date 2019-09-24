@@ -1,0 +1,943 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneArchFull_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneArchFull.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Arch</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneArchFull" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneCube_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneCube.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Cube</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="10" Tag="Pristine_Stick" />
+      <Item Amount="12" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneCube" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="KingStatueBlock_Masonry" />
+    <DisplayName>Masonry: King Statue</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\KingStatue.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="20" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_KingStatueBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Enchanted_StoneAxe" />
+    <DisplayName>Enchanted Stone Axe</DisplayName>
+    <Description>Materials native to the Elven Grove, 
+this stone axe yields better strength.</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\StoneAxe.dds</Icon>
+    <Category>Tools</Category>
+    <Prerequisites>
+      <Item Amount="3" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+      <Item Amount="1" Type="InventoryItem" Subtype="Enchanted_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="Enchanted_StoneAxe" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmallWoodenGateW_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\StoneWallRoundDoor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Door</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="8" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SmallWoodenGateW" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseHalfStoneDoor_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneDoor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Wall Door</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseHalfStoneDoor" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Furnace_Masonry" />
+    <DisplayName>Masonry: Furnace
+
+Needed for turning raw ore
+into valuable ingots.</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_Furnace" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MillStone_Masonry" />
+    <DisplayName>Masonry: Millstone</DisplayName>
+    <Description>
+"The millstone is as old as civilization. 
+Sufficient grain production is the key
+to any prosperous city."
+
+Used to grind Barley or Wheat
+into grains, perfect for bread
+or Barley Malt.
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\MillStone_Small.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="20" Tag="Pristine_Stick" />
+      <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_MillStone" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
+    <DisplayName>Survival Essentials: Stone Well</DisplayName>
+    <Description>
+"Wells are the vital organ of any lively 
+settlement. Without them, their are no 
+citizens." -Nordic Proverb
+
+
+A well provides water, which can be used to 
+fill empty buckets. Can be crafted from a
+Masonry Block.
+
+
+((Hint: Pick up small stones on the ground
+to aquire Pristine Stones))</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stone" />
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_Stone_Well" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stone_Well" />  
+    <DisplayName>Stone Well</DisplayName>
+    <Description>
+"The well is the vital organ of any settlement.
+Without wells, their are no citizens."
+
+A well provides water, which can be used to 
+fill empty buckets.
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Universal_Stone" />
+      <Item Amount="2" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="Block" Subtype="Stone_Well" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseHalfStoneWall_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneWall.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Wall</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseHalfStoneWall" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseHalfStoneWindow_Masonry" />
+    <DisplayName>Masonry: Stone Wall With Window</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneWindow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseHalfStoneWindow" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneArchHalfWall_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\StoneWallArchHalf.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Wall Arch</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="12" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneArchHalfWall" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneWallRoundLargeMultiBlock_Masonry" />
+    <DisplayName>Masonry: Large Round Wall</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\StoneWallRoundLarge.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="12" Tag="Pristine_Stick" />
+      <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneWallRoundLargeMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneWallRoundLargeDoorRightMultiBlock_Masonry" />
+    <DisplayName>Masonry: Large Round Walls With Door</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\LargeRoundWallRightDoor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="14" Tag="Pristine_Stick" />
+      <Item Amount="27" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneWallRoundLargeDoorRightMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneWallRoundLargeWindowRightMultiBlock_Masonry" />
+    <DisplayName>Masonry: Large Round Walls With Windows</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\LargeRoundWallRightWindow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="13" Tag="Pristine_Stick" />
+      <Item Amount="25" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneWallRoundLargeWindowRightMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BattlementRoofTriangleMultiBlock_Masonry" />
+    <DisplayName>Masonry: Roof Battlement</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\BattlementRoofTriangle.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_BattlementRoofTriangleMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BattlementStoneStraight_Masonry" />
+    <DisplayName>Masonry: Battlement</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\BattlementStoneStraight.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="6" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_BattlementStoneStraight" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneBattlementRoundSmall_Masonry" />
+    <DisplayName>Masonry: Small Round Battlement</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneBattlementRoundSmall.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementRoundSmall" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneBattlementSideDiagonal_Masonry" />
+    <DisplayName>Masonry: Diagonal Battlement</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\StoneBattlementSideDiagonal.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="6" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementSideDiagonal" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneBattlementRoundLargeSide_1_Masonry" />
+    <DisplayName>Masonry: Large Round Battlement</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\StoneBattlementRoundLargeSide.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+      <Item Amount="24" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementRoundLargeSide_1" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePillarSquare_Masonry" />
+    <DisplayName>Masonry: Stone Pillar</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\StonePillarSquare.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+      <Item Amount="4" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StonePillarSquare" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallWithArch_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneArchFullWall.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Wall Arch</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_WallWithArch" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneStairs_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneStairsSimple.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Stairs</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+      <Item Amount="10" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneStairs" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneSpiralStairs_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\SpiralStairs.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Spiral Stairs</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+      <Item Amount="11" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneSpiralStairs" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SharpStoneStairs_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StairsSharp.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Spiral Stairs</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+      <Item Amount="11" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SharpSpiralStairs" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="CornerStoneStairs_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\AngledStairsSlopeCorner.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Corner Stairs</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+      <Item Amount="11" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_CornerStoneStairs" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseStoneRoundedFull_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneRoundedFull.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Rounded Stone Block</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="8" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseStoneRoundedFull" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneRoundLargeFullMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneRoundLargeFull.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Large Rounded Stone Block</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="15" Tag="Pristine_Stick" />
+      <Item Amount="30" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneRoundLargeFull" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmallStoneRoundedWall_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneRoundedWall.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Rounded Stone Wall</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SmallStoneRoundedWall" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SmallStoneRoundedWindow_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneRoundedWindow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Rounded Stone Window</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="8" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SmallStoneRoundedWindow" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneSlope_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\SmallSlope.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Slope</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="7" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneSlope" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneSlopeCorner_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneBlockSlopeCorner.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Slope Corner</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="6" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneSlopeCorner" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SlopeLongLargeMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\LargeSlope.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Large Stone Slope</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SlopeLongLargeMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseStoneRoundInDoorLeft_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneRoundInDoorLeft.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Round Interior Door</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="8" Tag="Pristine_Stick" />
+      <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseStoneRoundInDoorLeft" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseStoneRoundIn_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\HouseStoneRoundIn.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Round Interior Wall</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="8" Tag="Pristine_Stick" />
+      <Item Amount="15" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseStoneRoundIn" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneCeilingStraight_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\StoneCeilingStraight.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Arch Ceiling</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Pristine_Stick" />
+      <Item Amount="10" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneCeilingStraight" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HouseHalfStoneTriangleMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\HouseHalfStoneTriangle.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Wall Slope</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="6" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_HouseHalfStoneTriangleMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Machicolation_RoundLargeMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\MachicolationRoundLarge.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Large Round Stone Machicolations</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="16" Tag="Pristine_Stick" />
+      <Item Amount="35" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_Machicolation_RoundLargeMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Machicolation_RoundMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\MachicolationRound.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Round Stone Machicolations</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="15" Tag="Pristine_Stick" />
+      <Item Amount="26" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_Machicolation_RoundMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MachicolationStraightMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\MachicolationStraight.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Straight Stone Machicolations</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="11" Tag="Pristine_Stick" />
+      <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_MachicolationStraightMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePlatformRoundAdvanced_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\SmallRoundLedgePlatform.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Small Round Stone Ledges</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="10" Tag="Pristine_Stick" />
+      <Item Amount="22" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformRoundAdvanced" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StoneBattlementAdvancedStraightBottom_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\LedgePlatform.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Stone Ledges</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="8" Tag="Pristine_Stick" />
+      <Item Amount="13" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StoneBattlementAdvancedStraightBottom" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePlatformDiagonalMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\DiagonalLedgePlatform.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Diagonal Stone Ledges</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="10" Tag="Pristine_Stick" />
+      <Item Amount="18" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformDiagonalMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StonePlatformRoundLargeMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\LargeRoundLedgePlatform.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Large Round Stone Ledges</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="16" Tag="Pristine_Stick" />
+      <Item Amount="28" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_StonePlatformRoundLargeMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RoofTileOddTopWithTop_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\RoofTileOddTop.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Tile Roof Tops</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="20" Tag="Pristine_Stick" />
+      <Item Amount="12" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_RoofTileOddTopWithTop" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SlicedRoofTileSlope_Main_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\BasicRoof.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Tile Roofs</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="25" Tag="Pristine_Stick" />
+      <Item Amount="20" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SlicedRoofTileSlope_Main" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RoofTileCornerRoundTallMultiBlock_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\RoofTileCornerRoundTall.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Tile Roof Cone</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="25" Tag="Pristine_Stick" />
+      <Item Amount="17" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_RoofTileCornerRoundTallMultiBlock" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+
+  <!-- Kharidian Masonry -->
+
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SandStoneWall_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\kharidian\SandstoneWall.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Sandstone Wall</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SandStoneWall" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SandStoneDoorWay_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\BrickDoor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Sandstone Door</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SandStoneDoorWay" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SandStoneWallWindow_Masonry" />
+    <DisplayName>Masonry: Sandstone Window</DisplayName>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\kharidian\SandstoneWall.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="9" Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SandStoneWallWindow" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SandStoneCube_Masonry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\kharidian\SandstoneCube.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Masonry: Sandstone Cube</DisplayName>
+    <Category>Masonry_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+      <Item Amount="12" Type="SchematicItem" Subtype="Schematic_SandStoneOreSmall" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Masonry_Schematic_SandStoneCube" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+
+
+
+</Definitions>

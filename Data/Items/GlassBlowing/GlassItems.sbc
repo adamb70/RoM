@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Glass_Vial" />
+    <Public>true</Public>
+    <DisplayName>Glass Vial</DisplayName>
+    <Description>Glass Vial</Description>
+    <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Alchemy\Items\VialStandardEmpty.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  
+</Definitions>

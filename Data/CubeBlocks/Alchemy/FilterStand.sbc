@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="FilterStand" />
+    <Rotation>All</Rotation>
+    <DisplayName>Filter Stand</DisplayName>
+	  <Description>Filters liquids</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemyfilter.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
+    <Model>Models\Alchemy\Cubeblocks\alchemyFilter.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="FilterStand" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FilterStand"/>
+    <DisplayName>FilterStand</DisplayName>
+    <Description>Filter</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemyfilter.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Universal_Stick" />
+      <Item Amount="1" Type="InventoryItem" Subtype="Cloth" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="FilterStand" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="FilterStandCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Filter</CraftString>
+    <CraftingString>Filtering Queue</CraftingString>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="FilterStandScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="FilterStandCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="FilterStandRecipes" />
+    <Category>Filter</Category>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="FilterStand" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <Component Type="CraftingComponent" Subtype="FilterStandCrafting" />
+    <Component Type="CraftingScheduler" Subtype="FilterStandScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="FilterStandRecipes" />
+    
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+  </Definition>
+  
+</Definitions>

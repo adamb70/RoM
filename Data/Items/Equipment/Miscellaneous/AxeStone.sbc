@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
+    <Id Type="HandItem" Subtype="AxeStone"/>
+
+    <MaxDurability>80</MaxDurability>   
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="AxeStone" />
+
+    <LeftSwing>
+      <Range>1.6</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwish</SwingSound>
+
+      <LightAttack MinimumDamage="10">
+        <StatCost Stat="Stamina" Cost="7" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="10" MaximumDamage="13" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="9" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </LeftSwing>
+
+    <RightSwing>
+      <Range>1.6</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwish</SwingSound>
+
+      <LightAttack MinimumDamage="10">
+        <StatCost Stat="Stamina" Cost="7" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="10" MaximumDamage="13" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="9" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </RightSwing>
+
+    <ForwardSwing>
+      <Range>1.6</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwish</SwingSound>
+
+      <LightAttack MinimumDamage="10">
+        <StatCost Stat="Stamina" Cost="7" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="10" MaximumDamage="13" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="9" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Axe</WeaponMaterial>
+
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+
+    <ImmediateLocking>false</ImmediateLocking>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_TreeCutterToolBehaviorDefinition">
+    <Id Type="TreeCutterToolBehaviorDefinition" Subtype="AxeStone"/>
+    <Efficiency>0.3</Efficiency>
+    <Cost Stat="Mood" Cost="0.25" />
+    <Cost Stat="Stamina" Cost="2.5" />
+    <ToolheadMaterial>AxeStone</ToolheadMaterial>
+
+    <PrimaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>Cutting</Animation>
+    </PrimaryEffect>
+
+    <PrimaryLogEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>CuttingLog</Animation>
+    </PrimaryLogEffect>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="AxeStone"/>
+    <DisplayName>DisplayName_Tool_StoneAxe</DisplayName>
+    <Description>Description_Tool_StoneAxe</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\StoneAxe.dds</Icon>
+    <Category>Tools</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="ScrapWood" />
+      <Item Amount="1" Type="InventoryItem" Subtype="StoneSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="AxeStone" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+</Definitions>

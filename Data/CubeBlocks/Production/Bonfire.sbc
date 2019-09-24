@@ -1,104 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="MyObjectBuilder_CubeBlock" Subtype="BonFire" />
-    <BlockPairName>BonFire</BlockPairName>
-    <DisplayName>DisplayName_Block_BonFire</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="3" y="1" z="3" />
-    <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\Small\BonFire.mwm</Model>
-    <PhysicalMaterial>Rock</PhysicalMaterial>
-    <Components>
-      <Component Type="InventoryItem" Subtype="LargeStone" Count="1" />
-    </Components>
-    <CriticalComponent Type="InventoryItem" Subtype="LargeStone" Index="0" />
-    <MaxIntegrity>200</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Direction>Horizontal</Direction>
-    <Rotation>Vertical</Rotation>
-    <MountPoints>
-      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
-    </MountPoints>
-    <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
-    <Mass>12</Mass>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
-  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire" />
     <DisplayName>DisplayName_Block_BonFire</DisplayName>
+    <Description>The Campfire is the simplest way to cook food with, though it's limited to lower tier foods.</Description>
     <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
-    <Category>SmallBlocks</Category>
+    <Category>Personal</Category>
     <Prerequisites>
-      <Item Amount="9" Type="InventoryItem" Subtype="StoneOreSmall" />
+      <Item Amount="9" Tag="Universal_Stone" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="BonFire" />
+      <Item Amount="1" Type="Block" Subtype="Bonfire" />
     </Results>
-    <CraftingTime Seconds="3"/>
+    <CraftingTime Seconds="3" />
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="BonFire" />
-    <Effects>
-      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
-        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
-      </Effect>
-    </Effects>
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="CampfireRecipes" />
+    <Category>Campfire</Category>
+    <Category>Meals</Category>
+    <Category>Cooking</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="BonFire" />
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_furnace" Name="inventory" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="BonFire"/>
-    <CraftingCategories>
-      <Category>Cooking</Category>
-    </CraftingCategories>
-    <CraftingInventory>BonfireInventory</CraftingInventory>
-    <ProductionQueueSize>4</ProductionQueueSize>
-    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
-    <ConstrainInventory>true</ConstrainInventory>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="BonfireInventory" />
-    <InventoryName>BonfireInventory</InventoryName>
-    <DisplayName>DisplayName_InventoryName_Crafting</DisplayName>
-    <MaxItemCount>7</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="BonFire" />
-    <Component Type="Inventory" Subtype="BonfireInventory" />
-    <Component Type="CraftingComponent" Subtype="BonFire" />
-    <Component Type="InventorySpawnComponent" />
-    <Component Type="EntityFXComponent" Subtype="BonFire" />
-    <Component Type="UseObjectsComponent" Subtype="BonFire" />
-    <Component Type="Inventory" Subtype="Fuel" />
-    <Component Type="FuelComponent" Subtype="Fire" />
-  </Definition>
 </Definitions>

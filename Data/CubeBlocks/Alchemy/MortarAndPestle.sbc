@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="MortarAndPestle" />
+    <Rotation>All</Rotation>
+    <DisplayName>Mortar and pestle</DisplayName>
+	  <Description>Grinds herbs and spices</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemymortarpestle.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
+    <Model>Models\Alchemy\Cubeblocks\AlchemyMortarPestle.mwm</Model>
+    <PhysicalMaterial>StoneLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="MortarAndPestle" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="MortarAndPestle"/>
+    <DisplayName>Mortar and Pestle</DisplayName>
+    <Description>Mortar and Pestle</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemymortarpestle.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="StoneLarge" />
+      <Item Amount="4" Type="InventoryItem" Subtype="Clay" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="MortarAndPestle" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="MortarAndPestleCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
+    <CraftingSpeedMultiplier>0.5</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Grind</CraftString>
+    <CraftingString>Grinding Queue</CraftingString>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="MortarAndPestleScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="MortarAndPestleCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="MortarAndPestleRecipes" />
+    <Category>Mortar_Pestle</Category>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="MortarAndPestle" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <Component Type="CraftingComponent" Subtype="MortarAndPestleCrafting" />
+    <Component Type="CraftingScheduler" Subtype="MortarAndPestleScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="MortarAndPestleRecipes" />
+    
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+  </Definition>
+  
+</Definitions>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="PickaxeSteelTEST" />
+
+    <!-- Display -->
+    <DisplayName>Test pickaxe</DisplayName>
+    <Description>Loottable pickaxe. 10% chance of dropping gold ingot when mining grass, 90% for iron.</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\PickaxeSteel.dds</Icon>
+    <Tag>Pickaxe</Tag>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Model>Models\Weapons\PickaxeSteel_OneHand.mwm</Model>
+
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Mass>5</Mass>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid" />
+
+    <MaxDurability>1500</MaxDurability>
+
+    <BrokenItem Type="MyObjectBuilder_InventoryItem" Subtype="PickaxeSteelBroken" />
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.464</X>
+        <Y>-1.0</Y>
+        <Z>-0.455</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.131</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomMinerToolBehaviorDefinition" Subtype="PickaxeSteelTEST" />
+    </StanceToBehavior>
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="PickaxeSteel" />
+    </StanceToBehavior>
+
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_RomMinerToolBehaviorDefinition">
+    <Id Type="RomMinerToolBehaviorDefinition" Subtype="PickaxeSteelTEST" />
+    <Efficiency>4.5</Efficiency>
+    <Cost Stat="Stamina" Cost="2.5" />
+    <ToolheadMaterial>Pickaxe</ToolheadMaterial>
+
+    <YieldMultiplier>1</YieldMultiplier>
+    <MiningDistance>5</MiningDistance>
+    <MiningRadius>0.5</MiningRadius>
+    <!-- Custom MiningLootTable definition slot. -->
+    <MiningLootTable Type="MyObjectBuilder_VoxelMiningLootTableDefinition" Subtype="PickaxeSteelTEST"/>
+
+    <PrimaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>Mining</Animation>
+    </PrimaryEffect>
+
+    <SecondaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>Mining</Animation>
+    </SecondaryEffect>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_VoxelMiningLootTableDefinition">
+    <Id Type="VoxelMiningLootTableDefinition" Subtype="PickaxeSteelTEST" />
+
+    <Entry VoxelMaterial="Grass" Volume="64" Rolls="1">
+      <MinedItem Type="InventoryItem" Subtype="IngotGold" Amount="1" Weight="1"  IsUnique="true"/>
+      <MinedItem Type="InventoryItem" Subtype="IngotIron" Amount="1" Weight="9"  IsUnique="true"/>
+    </Entry>
+
+    <Entry VoxelMaterial="Mithril_Ore" Volume="256" Rolls="1">
+      <MinedItem Type="InventoryItem" Subtype="IngotGold" Amount="1" Weight="1"  IsUnique="false"/>
+      <!-- use empty item as padding -->
+      <MinedItem Amount="1" Weight="19"  IsUnique="false"/> 
+      <!-- items with AlwaysDrops="true" will be handled just like vanilla ore mining and will be ignored for loot rolls -->
+      <MinedItem Type="InventoryItem" Subtype="MithrilOre" Amount="1" Weight="1"  IsUnique="true" AlwaysDrops="true"/>
+    </Entry>
+
+  </Definition>
+
+
+
+</Definitions>

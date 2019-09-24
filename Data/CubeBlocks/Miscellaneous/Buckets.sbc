@@ -1,179 +1,212 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-<!-- Buckets -->
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Empty_Bucket" />
+    <Rotation>All</Rotation>
+    <DisplayName>Empty Bucket</DisplayName>
+    <Description>Empty Bucket</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="-1" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Universal\Farming\empty_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Empty_Bucket" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>1</Mass>
+    <MaxIntegrity>60</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
+    <DisplayName>Survival Essentials: Empty Bucket</DisplayName>
+    <Description>
+    "The bucket is a vessel of possbilities."
+
+    An empty bucket can be filled with 
+    liquids and solids. Most commonly
+    water from a well. Can be crafted 
+    from a Carpentry Table.
 
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Empty_Bucket" />
-      <BlockPairName>Empty_Bucket</BlockPairName>
-      <DisplayName>Empty Bucket</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="2" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Farming\empty_bucket.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="2" />
-      </Components>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
+    ((Hint: Search small trees and small
+    pine trees to aquire Pristine Sticks))
+    </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bucket" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Compost_Bucket" />
-      <BlockPairName>Compost_Bucket</BlockPairName>
-      <DisplayName>Compost Bucket</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="2" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Farming\compost_bucket.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="2" />
-      </Components>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket" />    
+    <DisplayName>Empty Bucket</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Empty_Bucket.dds</Icon>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Empty_Bucket" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <!-- =================================================================================== -->
 
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Milk_Bucket" />
-      <BlockPairName>Milk_Bucket</BlockPairName>
-      <DisplayName>Milk Bucket</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Milk_Bucket.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="2" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Farming\milk_bucket.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="2" />
-      </Components>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Compost_Bucket" />
+    <Rotation>All</Rotation>
+    <DisplayName>Compost Bucket</DisplayName>
+    <Description>Compost Bucket</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="-1" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Universal\Farming\compost_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Empty_Bucket" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>1</Mass>
+    <MaxIntegrity>60</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Compost_Bucket" />  
+    <DisplayName>Fill Compost Bucket</DisplayName>
+    <Description>Used in the process of Compost Farming.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Category>Compost_Bin</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="Empty_Bucket" />
+      <Item Amount="1" Tag="Rotten" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Compost_Bucket" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Water_Bucket" />
-      <BlockPairName>Water_Bucket</BlockPairName>
-      <DisplayName>Water Bucket</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="2" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Farming\water_bucket.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="2" />
-      </Components>
-      <CriticalComponent Subtype="Timber10" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
+  <!-- =================================================================================== -->
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Sand_Bucket" />
-      <BlockPairName>Sand_Bucket</BlockPairName>
-      <DisplayName>Sand Bucket</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Sand_Bucket.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="1" y="2" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Farming\sand_bucket.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="WoodenSticks" Count="2" />
-      </Components>
-      <CriticalComponent Subtype="Timber10" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Milk_Bucket" />
+    <Rotation>All</Rotation>
+    <DisplayName>Milk Bucket</DisplayName>
+    <Description>Milk Bucket</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Milk_Bucket.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="-1" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Universal\Farming\milk_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Milk_Bucket" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>1</Mass>
+    <MaxIntegrity>60</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Milk_Bucket" />    
+    <DisplayName>Fill Empty Bucket</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Milk_Bucket.dds</Icon>
+    <Category></Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="Empty_Bucket" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Milk_Bucket" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Water_Bucket" />
+    <Rotation>All</Rotation>
+    <DisplayName>Water Bucket</DisplayName>
+    <Description>Water Bucket</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="-1" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Universal\Farming\water_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Water_Bucket" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>1</Mass>
+    <MaxIntegrity>60</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Water_Bucket_Fill" />   
+    <DisplayName>Fill Empty Bucket</DisplayName>
+    <Description>Fills and empty bucket with water from the well. Will only work if the well is on grass or dirt.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
+    <Category>Stone_Well</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="Empty_Bucket" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Water_Bucket" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Sand_Bucket" />
+    <Rotation>All</Rotation>
+    <DisplayName>Sand Bucket</DisplayName>
+    <Description>Sand Bucket</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Sand_Bucket.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="-1" z="0" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Universal\Farming\sand_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Sand_Bucket" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>1</Mass>
+    <MaxIntegrity>60</MaxIntegrity>
+  </Definition>
+
 
 
 </Definitions>

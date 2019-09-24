@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Jug_Of_Water" />
+    <Tag>Drink</Tag>
+    <Public>true</Public>
+    <DisplayName>Jug of Water</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\jug_of_water.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\Berries.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Jug_Of_Water_Thirst" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Jug_of_Water" />
+    <DisplayName>Jug of Water</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\jug_of_water.dds</Icon>
+    <Category>Cooking_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="Water_Bucket" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Type="ConsumableItem" Subtype="Jug_Of_Water" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+
+
+
+</Definitions>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_FloorWoodWithDoor" />
+    
+    <DisplayName>DisplayName_Block_WoodenCeilingDoor</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\WoodenCeilingDoor.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\large\Doors\WoodenCeilingDoor.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\Doors\WoodenCeilingDoor_Construction_1.mwm" />
+    </BuildProgressModels>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.03189778" StartY="-0.03239999" EndX="-0.0321325064" EndY="0.07443757" />
+      <MountPoint Side="Front" StartX="0.832399964" StartY="-0.0823999" EndX="0.667600036" EndY="0.0324000828" />
+      <MountPoint Side="Front" StartX="0.332399964" StartY="-0.0823999" EndX="0.167600036" EndY="0.0324000828" />
+      <MountPoint Side="Back" StartX="-0.03189783" StartY="-0.03239999" EndX="1.03213251" EndY="0.07443757" />
+      <MountPoint Side="Back" StartX="0.167600021" StartY="-0.0823999" EndX="0.3324" EndY="0.0324000828" />
+      <MountPoint Side="Back" StartX="0.667600036" StartY="-0.0823999" EndX="0.832399964" EndY="0.0324000828" />
+      <MountPoint Side="Left" StartX="-0.0320541859" StartY="-0.03239999" EndX="1.03212607" EndY="0.07443757" />
+      <MountPoint Side="Right" StartX="1.03205419" StartY="-0.03239999" EndX="-0.03212607" EndY="0.07443757" />
+      <MountPoint Side="Bottom" StartX="-0.03189783" StartY="-0.0320541859" EndX="1.03213251" EndY="1.03212607" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Plank" Count="10" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count="4" />
+    </Components>
+    <Rotation>YAxis</Rotation>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>0.01</MinAllowed>
+        <MaxAllowed>0.12</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_FloorWoodWithDoor" />
+    <CopyFrom Type="Block" Subtype="NPC_DefaultDoorContainer" />
+    
+    <Component Type="ModelAttachmentComponent" Subtype="FloorWoodWithDoor" />
+    <Component Type="AttachmentAnimationComponent" Subtype="FloorWoodWithDoor" />
+  </Definition>
+</Definitions>

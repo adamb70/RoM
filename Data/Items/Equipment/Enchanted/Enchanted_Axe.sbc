@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- ================================================================================================= -->
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="Enchanted_StoneAxe"/>
+    <Public>true</Public>
+    <DisplayName>Enchanted Stone Axe</DisplayName>
+    <Description>Materials native to the Elven Grove, this stone axe yields better strength.</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\StoneAxe.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Broken.dds</Icon>
+    <Model>Models\Weapons\StoneAxe.mwm</Model>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Mass>5</Mass>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <!-- Equipment -->
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+
+    <MaxDurability>300</MaxDurability>
+    
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+    
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.464</X>
+        <Y>-1.0</Y>
+        <Z>-0.405</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.131</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_TreeCutterToolBehaviorDefinition" Subtype="AxeEnchanted"/>
+    </StanceToBehavior>
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="AxeIron"/>
+    </StanceToBehavior>
+  </Definition>
+<!-- ================================================================================================= -->
+  <Definition xsi:type="MyObjectBuilder_TreeCutterToolBehaviorDefinition">
+    <Id Type="TreeCutterToolBehaviorDefinition" Subtype="AxeEnchanted"/>
+    <Efficiency>0.3</Efficiency>
+    <Cost Stat="Mood" Cost="0.25" />
+    <Cost Stat="Stamina" Cost="2.5" />
+    <ToolheadMaterial>Axe</ToolheadMaterial>
+
+    <PrimaryEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>Cutting</Animation>
+    </PrimaryEffect>
+
+    <PrimaryLogEffect>
+      <HitTime>.6</HitTime>
+      <AnimationTime>0.9</AnimationTime>
+      <SwingSound>ToolSwish</SwingSound>
+      <Animation>CuttingLog</Animation>
+    </PrimaryLogEffect>
+  </Definition>
+<!-- ================================================================================================= -->
+</Definitions>

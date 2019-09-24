@@ -1,18 +1,11 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="Inventory" Subtype="StockpileStone" />
-    <MaxItemCount>33</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="true">
-      <Id Type="InventoryItem" Subtype="LargeStone" />
-      <Id Type="InventoryItem" Subtype="LargeSandStone" />
-    </Constraint>
+  <Definition xsi:type="MyObjectBuilder_ItemTypeConstraint" Merge="Append">
+    <Id Type="ItemTypeConstraint" Subtype="StockpileStone" />
+        
+    <Id Type="InventoryItem" Subtype="LargeSandStone" />
   </Definition>
-
-
 
 
 </Definitions>

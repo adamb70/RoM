@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="ElvenChair" />
+    <Rotation>All</Rotation>
+    <DisplayName>Elven Chair</DisplayName>
+    <Description>Elven chair</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ElvenChair.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-1" z="-1" />
+      <Max x="1" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\ElvenChair.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="ElvenChair" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenChair" />    
+    <DisplayName>Elven Chair</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\ElvenChair.dds</Icon>
+    <Category>Elven_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="InventoryItem" Subtype="Enchanted_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="ElvenChair" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ElvenChair_Carpenter" />
+    <DisplayName>Carpenter: Elven Chair</DisplayName>
+    <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\ElvenChair.dds</Icon>
+    <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+    <Category>Elven_Carpentry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_Enchanted_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenChair" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+    <Id Type="SchematicItem" Subtype="Carpenter_Schematic_ElvenChair" />
+    <Public>true</Public>
+    <DisplayName>Elven Chair Manuscript</DisplayName>
+    <Description>
+      As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for crafting an Elven Chair. This 
+      knowledge would be valuable for a Carpenter.
+    </Description>
+    <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\ElvenChair.dds</Icon>
+    <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Cubes\small\Scroll.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>10</MaxStackAmount>
+    <UseSound>PlayEat</UseSound>
+    <Research Type="ResearchDefinition" Subtype="ElvenChair_Carpenter" />
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+
+
+
+</Definitions>

@@ -2,19 +2,27 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
-
-
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="StockpileStoneSmall" />
-    <MaxItemCount>17</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-    <Constraint xsi:type="MyObjectBuilder_ItemTypeConstraint" Whitelist="true">
-      <Id Type="InventoryItem" Subtype="LargeStone" />
-      <Id Type="InventoryItem" Subtype="LargeSandStone" />
-    </Constraint>
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="StockpileStoneSmall" />
+    <DisplayName>DisplayName_Block_StockpileStoneSmall</DisplayName>
+    <Description>Description_Block_StockpileStoneSmall</Description>
+    <Icon>Textures\GUI\Icons\Props\StockpileOreSmall.dds</Icon>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Universal_Timber" />
+      <Item Tag="Plank" Amount="6" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="StockpileStoneSmall" />
+    </Results>
+    <CraftingTime Seconds="1" />
   </Definition>
 
-
+  <Definition xsi:type="MyObjectBuilder_ItemTypeConstraint">
+    <Id Type="ItemTypeConstraint" Subtype="StockpileStoneSmall" />
+    <Whitelist>true</Whitelist>
+    <Item Type="InventoryItem" Subtype="LargeSandStone" />
+  </Definition>
 
 
 </Definitions>

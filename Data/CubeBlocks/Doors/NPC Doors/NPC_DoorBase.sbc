@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- Default door components -->
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append" Abstract="true">
+    <Id Type="Block" Subtype="NPC_DefaultDoorContainer" />
+
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    <!-- <Component Type="MedievalGridOwnershipComponent" /> -->
+    <!-- <Component Type="AccessPermissionComponent" /> -->
+    <Component Type="EntityStateComponent" Subtype="DefaultDoorStateComponent" />
+    <Component Type="StateAnimationComponent" Subtype="DefaultDoorStateAnimationComponent" />
+    <Component Type="AnimationEventSoundComponent" Subtype="DefaultDoorAnimationEventSoundComponent" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="DefaultDoorAnimationEventStateTransitionComponent" />
+    <Component Type="MyObjectBuilder_StateUseObjectComponent" Subtype="DefaultDoorStateUseObject" />
+    <Component Type="MyObjectBuilder_EntityFXComponent" Subtype="DefaultDoorFx" />
+  </Definition>
+  
+  <!-- Default shutters components -->
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append" Abstract="true">
+    <Id Type="Block" Subtype="NPC_DefaultShuttersContainer" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    <!-- <Component Type="MedievalGridOwnershipComponent" /> -->
+    <!-- <Component Type="AccessPermissionComponent" /> -->
+    <Component Type="EntityStateComponent" Subtype="DefaultDoorStateComponent" />
+    <Component Type="StateAnimationComponent" Subtype="DefaultDoorStateAnimationComponent" />
+    <Component Type="AnimationEventSoundComponent" Subtype="DefaultShuttersAnimationEventSoundComponent" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="DefaultShuttersAnimationEventStateTransitionComponent" />
+    <Component Type="MyObjectBuilder_StateUseObjectComponent" Subtype="DefaultShutterStateUseObject" />
+  </Definition>
+  
+</Definitions>

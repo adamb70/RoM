@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Small round wall, right door -->
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    
+    <DisplayName>DisplayName_Block_RoundRightWoodGateW</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\WallStoneRoundDoorRight_V1.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\large\StoneBlocks\WallStoneRoundDoorRight_V1.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\StoneBlocks\WallStoneRoundDoorRight_V1_C1.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Plank" Count="8" />
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="5" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count="8" />
+    </Components>
+    <UseModelIntersection>false</UseModelIntersection>
+    <Rotation>YAxis</Rotation>
+    <Visible>false</Visible>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_WallStoneRoundWithDoorRight" />
+    <CopyFrom Type="Block" Subtype="DefaultDoorContainer" />
+    <Component Type="ModelAttachmentComponent" Subtype="WallStoneRoundWithDoorRight" />
+    <Component Type="AttachmentAnimationComponent" Subtype="DefaultDoorAnimationComponentRight" />
+  </Definition>
+</Definitions>

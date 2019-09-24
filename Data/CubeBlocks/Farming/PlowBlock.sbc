@@ -1,155 +1,5 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="PlowBlock" />
-    <DisplayName>DisplayName_Block_PlowBlock</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\PlowBlock.dds</Icon>
-    <BlockPairName>PlowBlock</BlockPairName>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="2" y="3" z="8" />
-    <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\small\PlowBlockChassis.mwm</Model>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <MountPoints>
-      <MountPoint Side="Front" StartX="0.0" StartY="1.0" EndX="2.0" EndY="3.0" Default="true" />
-      <MountPoint Side="Back" StartX="0.0" StartY="1.0" EndX="2.0" EndY="3.0" />
-      <MountPoint Side="Left" StartX="0.0" StartY="1.0" EndX="8.0" EndY="3.0" />
-      <MountPoint Side="Right" StartX="0.0" StartY="1.0" EndX="8.0" EndY="3.0" />
-      <!--<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="3.0" EndY="3.0" />
-        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="3.0" EndY="8.0" />
-        <MountPoint Side="Right" StartX="0.0" StartY="0.0" EndX="8.0" EndY="3.0" />
-        <MountPoint Side="Top" StartX="0.0" StartY="0.0" EndX="3.0" EndY="8.0" />-->
-    </MountPoints>
-    <CriticalComponent Type="InventoryItem" Subtype="MetalParts" Index="0" />
-    <Components>
-      <Component Tag="ScrapWood" Count="5" />
-      <Component Tag="Timber" Count ="8" />
-      <Component Type="InventoryItem" Subtype="MetalParts" Count ="60" />
-    </Components>
-    <MaxIntegrity>4000</MaxIntegrity>
-    <Mass>400</Mass>
-    <Volume>1125</Volume>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Direction>Vertical</Direction>
-    <Rotation>Both</Rotation>
-    <GuiVisible>true</GuiVisible>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="PlowBlock" />
-    <Component Type="UseObjectsComponent" Subtype="PlowBlock" />
-    <Component Type="SubpartAnimationComponent" Subtype="PlowBlock" />
-    <Component Type="CubeBlockSubpartComponent" Subtype="PlowBlock" />
-    <Component Type="EntityStateComponent" Subtype="PlowBlock" />
-    <Component Type="StateAnimationComponent" Subtype="PlowBlock" />
-    <Component Type="StateUseObjectComponent" Subtype="PlowBlock" />
-    <Component Type="AnimationEventStateTransitionComponent" Subtype="PlowBlock" />
-    <Component Type="PlowComponent" Subtype="PlowBlock" />
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_CubeBlockSubpartComponentDefinition">
-    <Id Type="MyObjectBuilder_CubeBlockSubpartComponent" Subtype="PlowBlock" />
-    <Subparts>
-      <Subpart Name="PlowBlockBlades" HingeBone="PlowBlockChassis_Pin" />
-      <Subpart Name="PlowBlockHandleLeft" HingeBone="PlowBlockHandleLeft_Pin" />
-      <Subpart Name="PlowBlockHandleRight" HingeBone="PlowBlockHandleRight_Pin" />
-    </Subparts>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_SubpartAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_SubpartAnimationComponent" Subtype="PlowBlock" />
-    <AnimationSequences>
-      <Sequence Name="Down" WrapMode="Once">
-        <Event Start="0.2" Name="MovingDown" />
-        <Event Start="1.2" Name="MovedDown" />
-
-        <Animation Start="0" End="0.3">
-          <Subpart Name="PlowBlockHandleLeft" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
-          <Subpart Name="PlowBlockHandleRight" Type="Rotation" Axis="Y" From="0" To="90" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="0.3" End="1.1">
-          <Subpart Name="PlowBlockBlades" Type="Translation" Axis="Y" From="0" To="-0.4" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-
-      <Sequence Name="Up" WrapMode="Once">
-        <Event Start="0.2" Name="MovingUp" />
-        <Event Start="1.2" Name="MovedUp" />
-
-        <Animation Start="0" End="0.8">
-          <Subpart Name="PlowBlockBlades" Type="Translation" Axis="Y" From="-0.4" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-        <Animation Start="0.8" End="1.1">
-          <Subpart Name="PlowBlockHandleLeft" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
-          <Subpart Name="PlowBlockHandleRight" Type="Rotation" Axis="Y" From="90" To="0" Method="QuadraticEaseIn" />
-        </Animation>
-      </Sequence>
-    </AnimationSequences>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="PlowBlock" />
-    <LoadFromModel>true</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_plow" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id Type="MyObjectBuilder_StateUseObjectComponent" Subtype="PlowBlock" />
-    <Tooltip>UseObject_DynamicPress</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_plow" From="Down" To="MovingUp" ActionName="CubeBlock_Action_DisablePlow" />
-      <Trigger Dummy="detector_plow" From="Up" To="MovingDown" ActionName="CubeBlock_Action_EnablePlow" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateAnimationComponentDefinition">
-    <Id Type="MyObjectBuilder_StateAnimationComponent" Subtype="PlowBlock" />
-    <Animations>
-      <Animation State="MovingDown" Animation="Down" />
-      <Animation State="MovingUp" Animation="Up" />
-    </Animations>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id Type="MyObjectBuilder_EntityStateComponent" Subtype="PlowBlock" />
-    <InitialState>Up</InitialState>
-    <States>
-      <State Name="Up">
-        <Transition>MovingDown</Transition>
-      </State>
-      <State Name="MovingUp">
-        <Transition>Up</Transition>
-      </State>
-      <State Name="Down">
-        <Transition>MovingUp</Transition>
-      </State>
-      <State Name="MovingDown">
-        <Transition>Down</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_AnimationEventStateTransitionComponentDefinition">
-    <Id Type="MyObjectBuilder_AnimationEventStateTransitionComponent" Subtype="PlowBlock" />
-    <Events>
-      <Event Name="MovedDown" TransitionToState="Down" />
-      <Event Name="MovedUp" TransitionToState="Up" />
-    </Events>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_PlowComponentDefinition">
-    <Id Type="MyObjectBuilder_PlowComponent" Subtype="PlowBlock" />
-    <PlowOffset x="0" y="-1" z="0" />
-    <PlowDirection x="-1" y="0" z="0" />
-    <PlowDistance>1.0</PlowDistance>
-    <PlowState>Down</PlowState>
-  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="PlowBlock"/>
@@ -159,10 +9,10 @@
     <Prerequisites>
       <Item Amount="5" Tag="ScrapWood" />
       <Item Amount="4" Tag="Timber" />
-      <Item Amount="60" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Amount="60" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="PlowBlock" />
+      <Item Amount="1" Type="Block" Subtype="PlowBlock" />
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>

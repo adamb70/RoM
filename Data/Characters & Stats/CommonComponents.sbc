@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_MedievalCharacterPickupComponentDefinition" Merge="Append">
+    <Id Type="MyObjectBuilder_MedievalCharacterPickupComponent" Subtype="CharacterPickup" />
+    
+    <PickableItems>
+      <!--5s Pickup Time-->
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Cooking_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Scribe_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Apothocary_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Herbalist_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Masonry_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Machinesmith_Table" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Stove" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Compost_Bin" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Stone_Well" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Norden_Ale_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Juice_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Grape_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Blueberry_Kegstand" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Anvil" PickupTime="5"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="ClaimTotem" PickupTime="5"/>
+      <!--3s Pickup Time-->
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Carpentry_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Blacksmithing_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Tailor_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Cooking_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Farming_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Apothocary_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Masonry_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Machinesmith_Book" PickupTime="3"/>
+        <Item TypeId="MyObjectBuilder_Block" SubtypeId="Nomadic_Book" PickupTime="3"/>
+      <!--2s Pickup Time-->
+      <!--1s Pickup Time-->
+      <!--Instant Pickup-->
+    </PickableItems>
+    <!--<ToolBlacklist>
+      <Tool TypeId="MyObjectBuilder_CubePlacer"/>
+    </ToolBlacklist>-->
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition" Merge="Append">
+    <Id Type="Inventory" Subtype="Internal"/>
+    <MaxItemCount>28</MaxItemCount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition" Merge="Append">
+    <Id Type="Inventory" Subtype="Animal"/>
+    <MaxItemCount>14</MaxItemCount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_QuestEntityComponentDefinition">
+    <Id Type="QuestEntityComponent" Subtype="Humanoid" />
+    <InitialQuest>RoM_Intro</InitialQuest>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_DeathComponentDefinition" Copy="Append">
+    <Id Type="DeathComponent" Subtype="PlayerDeath" />
+    <CopyFrom Type="DeathComponent" Subtype="CharacterDeath" />
+    <RespawnCost>-60</RespawnCost>
+    <!--
+    The cost is paid by these stats in the order they are added here.
+    If one stat does not have enough, the next stat is used for the remainder, etc.
+    The player will always spawn, regardless of whether or not they can afford the respawn cost.
+    -->
+    <RespawnCostStat>Death</RespawnCostStat>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+    <Id Type="MyObjectBuilder_EntityStatComponent" Subtype="RoMStats" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Health" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Stamina" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Food" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Thirst" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Fury" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Alcohol" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Poison" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Mood" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Vigor" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorGain" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorLoss" />
+    <Stat Type="MyObjectBuilder_EntityStatDefinition" Subtype="Death" />
+    <Effect Type="VigorEffect" Subtype="Vigor" />
+    <Effect Type="RomHealthEffect" Subtype="HealthRegen" />
+    <Effect Type="RomStaminaEffect" Subtype="StaminaRegen" />
+    <Effect Type="RomHungerEffect" Subtype="HungerDegen" />
+    <Effect Type="ThirstEffect" Subtype="ThirstDegen" />
+    <Effect Type="MoodEffect" Subtype="MoodRegen" />
+    <Effect Type="FuryEffect" Subtype="FuryDegen" />
+    <Effect Type="AlcoholEffect" Subtype="AlcoholDegen" />
+    <Effect Type="PoisonEffect" Subtype="PoisonDegen" />
+    <Effect Type="RomDeathEffect" Subtype="DeathDegen" />
+  </Definition>
+
+</Definitions>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_WallStoneWithShutters" />
+    
+    <DisplayName>DisplayName_Block_WoodenRoundShutters</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\cubes\Blocks\WallStoneWindowShutters_V1.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Model>Models\Cubes\Large\StoneBlocks\WallStoneWindowShutters_V1.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\Large\StoneBlocks\WallStoneWindowShutters_V1_C1.mwm" />
+    </BuildProgressModels>
+    <UseModelIntersection>false</UseModelIntersection>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Visible>false</Visible>
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="5" />
+      <Component Tag="Timber" Count="2" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count="4" />
+    </Components>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_WallStoneWithShutters" />
+    <CopyFrom Type="Block" Subtype="NPC_DefaultShuttersContainer" />
+    <Component Type="ModelAttachmentComponent" Subtype="WallStoneWithShutters" />
+    <Component Type="AttachmentAnimationComponent" Subtype="WallStoneWithShutters" />
+  </Definition>
+</Definitions>

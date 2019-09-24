@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="DwarvenClaimStone" />
+    <Rotation>YAxis</Rotation>
+    <DisplayName>Dwarven ClaimStone</DisplayName>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Dwarven\DwarvenClaim.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\Large\Dwarven\DwarvenClaim_Large.mwm</Model>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Back" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+      <MountPoint Side="Left" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.0324" EndX="1.0324" EndY="-0.032400012" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+    </MountPoints>
+    <Components>
+      <Component Tag="ScrapWood" Count="4" />
+      <Component Type="InventoryItem" Subtype="StoneLarge" Count="20" />
+    </Components>
+    <BuildProgressModels>
+      <Model UpperBound="0.7" File="Models\Cubes\Large\ClaimBlock_V1_C1.mwm" />
+    </BuildProgressModels>
+    <UseModelIntersection>true</UseModelIntersection>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>1.0</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MaxAllowed>0.3</MaxAllowed>
+        <MinAllowed>0.1</MinAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <MaxIntegrity>2000</MaxIntegrity>
+    <CriticalIntegrityRatio>0.9</CriticalIntegrityRatio>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ClaimBlockComponentDefinition">
+    <Id Type="MyObjectBuilder_ClaimBlockComponent" Subtype="DwarvenClaimTier1" />
+    <ContextMenuId Type="MyObjectBuilder_ContextMenu" Subtype="DwarvenClaimStone"/>
+    <DestructionParticleEffect>ParticleBlockDestruction</DestructionParticleEffect>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityBannerComponentDefinition">
+    <Id Type="MyObjectBuilder_OwnershipBannerComponent" Subtype="DwarvenClaimBanner" />
+    <Material>ShieldMaterial</Material>
+    <Type>Player</Type>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="DwarvenClaimStone" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="ClaimBlockComponent" Subtype="DwarvenClaimTier1" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="ClaimBlockRespawnComponent" />
+    <Component Type="OwnershipBannerComponent" Subtype="DwarvenClaimBanner" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_PlacementRulesDefinition">
+    <Id Type="Block" Subtype="DwarvenClaimStone" />
+    <PlacementRule Type="MyObjectBuilder_OneInAreaRuleDefinition" Subtype="Default" />
+  </Definition>
+
+
+
+</Definitions>

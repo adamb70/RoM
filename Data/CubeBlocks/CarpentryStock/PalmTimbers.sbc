@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber1" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber2.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\Small\Timber1.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>0.8</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber2" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber2</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber2.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+      <Position x="1" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\Small\Timber2.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>1.6</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber3" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber3</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber3.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="3" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Timber3.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>2.4</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber4" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber4</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber4.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="4" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Timber4.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>3.2</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber5" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber5</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber5.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="5" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Timber5.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>4</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber6" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber6</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber6.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="6" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Timber6.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>4.8</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber7" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber7</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber7.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="7" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Timber7.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>5.6</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber8" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber8</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber8.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="8" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Timber8.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>6.4</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber9" />
+    <Rotation>All</Rotation>
+    <DisplayName>DisplayName_Block_Timber9</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Timber9.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="9" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Timber9.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Visible>false</Visible>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>7.2</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LogPalmtree_Timber10" />
+    <DisplayName>DisplayName_Block_Timber10</DisplayName>
+    <Description>Description_Item_Timber</Description>
+    <Public>true</Public>
+    <Visible>false</Visible>
+    <Icon>Textures\GUI\Icons\Cubes\Timber10.dds</Icon>
+    <BoundingBox>
+      <Min x="0" y="0" z="0" /> 
+      <Max x="10" y="1" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Timber10.mwm</Model>
+    <Components>
+      <Component Type="Block" Subtype="LogPalmtree_Timber10" Count="1" />
+    </Components>
+    <Rotation>All</Rotation>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.24</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <MountPoints>
+      <MountPoint Side="Front" StartX="10.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Back" StartX="-0.03239999" StartY="-0.03239999" EndX="10.0324" EndY="1.0324" />
+      <MountPoint Side="Left" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+      <MountPoint Side="Right" StartX="1.0324" StartY="-0.03239999" EndX="-0.032400012" EndY="1.0324" />
+      <MountPoint Side="Top" StartX="-0.03239999" StartY="1.0324" EndX="10.0324" EndY="-0.032400012" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.03239999" EndX="10.0324" EndY="1.0324" />
+    </MountPoints>
+    <Mass>8</Mass>
+    <DamagesVoxels>false</DamagesVoxels>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+</Definitions>

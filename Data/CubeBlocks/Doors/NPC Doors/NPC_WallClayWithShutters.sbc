@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Shutters-->
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_WallClayWithShutters" />
+    
+    <DisplayName>DisplayName_Block_WoodenFlatShutters</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\PlankShutter.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <Public>true</Public>
+    <Visible>false</Visible>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\large\ClayWalls\WallClayShutter_V1.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\ClayWalls\WallClayShutter_V1_C1.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Type="InventoryItem" Subtype="Clay" Count="3" />
+      <Component Tag="Timber" Count="2" />
+      <Component Tag="Plank" Count="4" />
+    </Components>
+    <UseModelIntersection>false</UseModelIntersection>
+    <PhysicalMaterial>WallClay</PhysicalMaterial>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_WallClayWithShutters" />
+    <CopyFrom Type="Block" Subtype="NPC_DefaultShuttersContainer" />
+    
+    <Component Type="ModelAttachmentComponent" Subtype="WallClayWithShutters" />
+    <Component Type="AttachmentAnimationComponent" Subtype="DefaultSquareShuttersAnimationComponent" />
+    <Component Type="AnimationEventSoundComponent" Subtype="DefaultShuttersAnimationEventSoundComponent" />
+  </Definition>
+  
+</Definitions>

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_WheatStraws_Rienburg_Food" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
+    <DisplayName>Sell: Wheat (4G)</DisplayName>
+    <Category>Rienburg_Food_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="StrawsWheat" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Cabbage_Rienburg_Food" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
+    <DisplayName>Sell: Cabbage (4G)</DisplayName>
+    <Category>Rienburg_Food_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="ConsumableItem" Subtype="Cabbage" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Pumpkin_Rienburg_Food" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
+    <DisplayName>Sell: Pumpkin (4G)</DisplayName>
+    <Category>Rienburg_Food_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="ConsumableItem" Subtype="Pumpkin" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Herbs_Rienburg_Food" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
+    <DisplayName>Sell: Herbs (4G)</DisplayName>
+    <Category>Rienburg_Food_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="ConsumableItem" Subtype="Herbs" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_Norden_Barley_Rienburg_Food" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
+    <DisplayName>Sell: Norden Barley (4G)</DisplayName>
+    <Category>Rienburg_Food_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="ConsumableItem" Subtype="Norden_Barley" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_RedCabbage_Rienburg_Food" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedCabbageHead.dds</Icon>
+    <DisplayName>Sell: Red Cabbage (5G)</DisplayName>
+    <Category>Rienburg_Food_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="ConsumableItem" Subtype="RedCabbage" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="5" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_CrimsonThristle_Rienburg_Food" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\CrimsonThristle.dds</Icon>
+    <DisplayName>Sell: Crimson Thristle (5G)</DisplayName>
+    <Category>Rienburg_Food_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="ConsumableItem" Subtype="CrimsonThristle" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="5" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+
+
+
+
+</Definitions>

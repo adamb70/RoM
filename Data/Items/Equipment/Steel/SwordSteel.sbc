@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
+    <Id Type="HandItem" Subtype="SwordSteel"/>
+
+    <MaxDurability>600</MaxDurability>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SwordSteel" />
+
+    <LeftSwing>
+      <Range>1.6</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="28">
+        <StatCost Stat="Stamina" Cost="10" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="28" MaximumDamage="35" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="13" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </LeftSwing>
+
+    <RightSwing>
+      <Range>1.6</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="28">
+        <StatCost Stat="Stamina" Cost="10" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="29" MaximumDamage="35" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="13" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </RightSwing>
+
+    <ForwardSwing>
+      <Range>1.6</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="28">
+        <StatCost Stat="Stamina" Cost="10" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.3"/>
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="28" MaximumDamage="35" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="13" />
+        <StatCost Stat="Fury" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0"/>
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.6"/>
+        </AppliedEffect>
+      </ChargedAttack>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Sword</WeaponMaterial>
+
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SwordSteel"/>
+    <DisplayName>DisplayName_Weapon_SwordSteel</DisplayName>
+    <Description>Description_Weapon_SwordSteel</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SwordSteel.dds</Icon>
+    <Category>Anvil_Steel</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="InventoryItem" Subtype="StripsLeather" />
+      <Item Amount="4" Tag="IngotSteel" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="SwordSteel" />
+    </Results>
+    <CraftingTime Seconds="5"/>
+  </Definition>
+</Definitions>

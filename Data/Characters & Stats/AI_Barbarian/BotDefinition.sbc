@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- RoM Barbarians -->
+
+  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition" Copy="Append">
+    <Id Type="HumanoidBot" Subtype="ApothecaryBarbarian" />
+    <CopyFrom Type="HumanoidBot" Subtype="BarbarianBase" />
+    <Public>true</Public>
+    <DisplayName>Barbarian Apothecary</DisplayName>
+    <BotEntity Type="EntityBase" Subtype="BarbarianForestGreen" />
+    <Item Type="HandItem" Subtype="ShovelNorden" />
+    <CombatEquipment Type="HandItem" Subtype="ShovelNorden" />
+    <!--<BaseAttackWindow>1200</BaseAttackWindow>
+    <AttackDecisionWindow>300</AttackDecisionWindow>
+    <BlockDelayWindow>100</BlockDelayWindow>-->
+  </Definition>
+  
+</Definitions>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Mushrooms" />
+    <Tag>Universal_Mushroom</Tag>
+    <Tag>Universal_SimpleSoup</Tag>
+    <Public>true</Public>
+    <DisplayName>Mushrooms</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\Mushrooms.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\Mushrooms.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Mushrooms_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Mushrooms_Food" />
+    <Effect Type="EntityStatEffect" Subtype="Mushrooms_Vigor" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+    <Id Type="SchematicItem" Subtype="Schematic_Mushrooms" />
+    <Tag>Pristine_Mushroom</Tag>
+    <Tag>Pristine_SimpleSoup</Tag>
+    <Public>true</Public>
+    <DisplayName>Pristine Mushrooms</DisplayName>
+    <Description>As you examine the quality of these Mushrooms you find that they're in pristine condition. 
+Without any adnormal properties, it makes a perfect specimen for a Farmer, Apothocary or Chef.
+
+((Consume to receive knowledge))</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Mushrooms.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\Mushrooms.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <UseSound>ResearchSound</UseSound>
+    <Research Type="ResearchDefinition" Subtype="Mushroom_Herblore" />
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+
+  
+
+
+</Definitions>

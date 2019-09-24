@@ -1,54 +1,20 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Wardrobe" />
-    <BlockPairName>Wardrobe</BlockPairName>
-    <DisplayName>DisplayName_Block_Wardrobe</DisplayName>
-    <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
-    <CubeSize>Small</CubeSize>
-    <BlockTopology>TriangleMesh</BlockTopology>
-    <Size x="6" y="10" z="4" />
-    <ModelOffset x="0" y="0" z="0" />
-    <Model>Models\Cubes\Small\Wardrobe.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <Components>
-      <Component Tag="Timber" Count="4" />
-      <Component Type="InventoryItem" Subtype="MetalParts" Count="8" />
-    </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
-    <MaxIntegrity>1300</MaxIntegrity>
-    <MirroringY>Z</MirroringY>
-    <MirroringZ>Y</MirroringZ>
-    <BuildTimeSeconds>6</BuildTimeSeconds>
-    <Mass>10</Mass>
-    <AvailableInSurvival>true</AvailableInSurvival>
-    <VoxelPlacement>
-      <StaticMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </StaticMode>
-      <DynamicMode>
-        <PlacementMode>Both</PlacementMode>
-        <MaxAllowed>1</MaxAllowed>
-        <MinAllowed>0</MinAllowed>
-      </DynamicMode>
-    </VoxelPlacement>
-  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wardrobe"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wardrobe" />
     <DisplayName>DisplayName_Block_Wardrobe</DisplayName>
+    <Description>Description_Block_Wardrobe</Description>
     <Icon>Textures\GUI\Icons\Cubes\Wardrobe.dds</Icon>
-    <Category>Carpentry_Table</Category>
+    <Category>Woodcrafting</Category>
     <Prerequisites>
-      <Item Amount="4" Tag="Timber" />
-      <Item Amount="8" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Tag="Plank" Amount="8" />
+      <!-- <Item Type="InventoryItem" Subtype="PartsMetal" Amount="8" /> -->
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Wardrobe" />
+      <Item Amount="1" Type="Block" Subtype="Wardrobe" />
     </Results>
-    <CraftingTime Seconds="1"/>
+    <CraftingTime Seconds="1" />
   </Definition>
 
 </Definitions>

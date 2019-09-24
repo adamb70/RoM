@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Wooden Gate-->
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_GateWoodWithArchStone" />
+    
+    <DisplayName>DisplayName_Block_WoodenGate</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\StoneGate_V1.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="2" y="2" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Large\StoneGate_V1.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\Large\StoneGate_V1_C1.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Plank" Count="30" />
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="10" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count="32" />
+    </Components>
+    <UseModelIntersection>false</UseModelIntersection>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>2000</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_GateWoodWithArchStone" />
+    <CopyFrom Type="Block" Subtype="NPC_DefaultDoorContainer" />
+    
+    <Component Type="ModelAttachmentComponent" Subtype="GateWoodWithArchStone" />
+    <Component Type="AttachmentAnimationComponent" Subtype="GateWoodWithArchStone" />
+    <Component Type="AnimationEventSoundComponent" Subtype="GateWoodWithArchStone" />
+  </Definition>
+</Definitions>

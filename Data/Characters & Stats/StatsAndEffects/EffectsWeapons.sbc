@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+
+<!-- ============================================================================================== -->
+  <!-- Short weapons attack speedup -->
+  <Definition xsi:type="MyObjectBuilder_EquipmentItemEffectDefinition">
+    <Id Type="EquipmentItemEffectDefinition" Subtype="Weapon_Dagger" />
+    <Item Tag="Weapon_Dagger" />
+    <EquipEffect Type="ToolEfficiencyEffect" Subtype="Weapon_DaggerSpeedUp" Operation="Add" />
+    <UnequipEffect Type="ToolEfficiencyEffect" Subtype="Weapon_DaggerSpeedUp" Operation="Remove" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
+    <Id Type="ToolEfficiencyEffect" Subtype="Weapon_DaggerSpeedUp" />
+    <DisplayName>Dagger</DisplayName>
+    <Description>Daggers are effective weapons for quick attacks.</Description>
+    <Public>false</Public>
+    <EffectType>Positive</EffectType>
+    <AffectedTool>Weapon_Dagger</AffectedTool>
+    <Multiplier Style="Multiplicative" Value="4" />
+  </Definition>
+
+
+<!-- ============================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_MovementSpeedEffectDefinition">
+    <Id Type="MovementSpeedEffect" Subtype="Slowdown_Spear" />
+    <DisplayName>Heavy Weapon</DisplayName>
+    <Description>The heavy weight of your weapon slows you down.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Sprint.png</Icon>
+    <EffectType>Negative</EffectType>
+	<Multiplier Style="Multiplicative" Value="0.8" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EquipmentItemEffectDefinition">
+    <Id Type="EquipmentItemEffectDefinition" Subtype="Spear" />
+	<Item Tag="Spear" />
+	<EquipEffect Type="MovementSpeedEffect" Subtype="Slowdown_Spear" Operation="Add" />
+	<UnequipEffect Type="MovementSpeedEffect" Subtype="Slowdown_Spear" Operation="Remove" />
+  </Definition>
+<!-- ============================================================================================== -->
+
+
+  <!-- Short weapons attack speedup -->
+  <Definition xsi:type="MyObjectBuilder_EquipmentItemEffectDefinition">
+    <Id Type="EquipmentItemEffectDefinition" Subtype="WeaponShort" />
+    <Item Tag="WeaponShort" />
+    <EquipEffect Type="ToolEfficiencyEffect" Subtype="WeaponShortSpeedUp" Operation="Add" />
+    <UnequipEffect Type="ToolEfficiencyEffect" Subtype="WeaponShortSpeedUp" Operation="Remove" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
+    <Id Type="ToolEfficiencyEffect" Subtype="WeaponShortSpeedUp" />
+    <DisplayName>Short Weapon</DisplayName>
+    <Description>Daggers are effective weapons for quick attacks.</Description>
+    <Public>true</Public>
+    <EffectType>Positive</EffectType>
+    <AffectedTool>WeaponShort</AffectedTool>
+    <Multiplier Style="Multiplicative" Value="400" />
+  </Definition>
+  
+  <!-- Long tools attack slowdown -->
+  <Definition xsi:type="MyObjectBuilder_EquipmentItemEffectDefinition">
+    <Id Type="EquipmentItemEffectDefinition" Subtype="ToolLong" />
+    <Item Tag="ToolLong" />
+    <EquipEffect Type="ToolEfficiencyEffect" Subtype="ToolLongSlowdown" Operation="Add" />
+    <UnequipEffect Type="ToolEfficiencyEffect" Subtype="ToolLongSlowdown" Operation="Remove" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ToolEfficiencyEffectDefinition">
+    <Id Type="ToolEfficiencyEffect" Subtype="ToolLongSlowdown" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <AffectedTool>ToolLong</AffectedTool>
+    <Multiplier Style="Multiplicative" Value="0.75" />
+  </Definition>
+  
+  <!--
+  <Definition xsi:type="MyObjectBuilder_MovementSpeedEffectDefinition">
+    <Id Type="MovementSpeedEffect" Subtype="Slowdown" />
+    <DisplayName>DisplayName_StatusEffect_Slowdown</DisplayName>
+    <Description>Description_StatusEffect_Slowdown</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Sprint.png</Icon>
+    <EffectType>Negative</EffectType>
+    <Multiplier Style="Multiplicative" Value="0.7" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EquipmentItemEffectDefinition">
+    <Id Type="EquipmentItemEffectDefinition" Subtype="RangedWeapons" />
+    <Item Tag="WeaponRanged" />
+    <EquipEffect Type="MovementSpeedEffect" Subtype="Slowdown" Operation="Add" />
+    <UnequipEffect Type="MovementSpeedEffect" Subtype="Slowdown" Operation="Remove" />
+  </Definition>
+  -->
+
+</Definitions>

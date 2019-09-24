@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BlockVariantsDefinition">
+    <Id Type="MyObjectBuilder_BlockVariantsDefinition" Subtype="NPC_WallStoneRoundWithEntranceGroup" />
+    <DisplayName>DisplayName_Group_RoundWallsWithDoors</DisplayName>
+    <Block Type="Block" Subtype="NPC_WallStoneRoundWithDoorLeft" />
+    <Block Type="Block" Subtype="NPC_WallStoneRoundWithDoorRight" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockVariantsDefinition">
+    <Id Type="MyObjectBuilder_BlockVariantsDefinition" Subtype="NPC_WallStoneRoundLargeWithEntranceLeftGroup" />
+    <DisplayName>DisplayName_Group_LargeRoundWallsWithDoorsRight</DisplayName>
+    <Block Type="Block" Subtype="NPC_WallStoneRoundLargeWithDoorLeft" />
+    <Block Type="Block" Subtype="NPC_WallStoneRoundLargeWithDoorLeftOffset" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockVariantsDefinition">
+    <Id Type="MyObjectBuilder_BlockVariantsDefinition" Subtype="NPC_WallStoneRoundLargeWithEntranceRightGroup" />
+    <DisplayName>DisplayName_Group_LargeRoundWallsWithDoorsLeft</DisplayName>
+    <Block Type="Block" Subtype="NPC_WallStoneRoundLargeWithDoorRight" />  
+    <Block Type="Block" Subtype="NPC_WallStoneRoundLargeWithDoorRightOffset" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockVariantsDefinition">
+    <Id Type="MyObjectBuilder_BlockVariantsDefinition" Subtype="NPC_WallStoneRoundLargeWithEntrancesGroup" />
+    <DisplayName>DisplayName_Group_LargeRoundWallsWithDoorsBoth</DisplayName>
+    <Block Type="Block" Subtype="NPC_WallStoneRoundLargeWithDoors" />
+    <Block Type="Block" Subtype="NPC_WallStoneRoundLargeWithDoorsOffset" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_BlockVariantsDefinition">
+    <Id Type="MyObjectBuilder_BlockVariantsDefinition" Subtype="NPC_CornerRoundInnerWithEntranceGroup" />
+    <DisplayName>DisplayName_Group_RoundInteriorWithDoor</DisplayName>
+    <Block Type="Block" Subtype="NPC_CornerStoneRoundInnerWithDoorLeft" />
+    <Block Type="Block" Subtype="NPC_CornerStoneRoundInnerWithDoorRight" />
+  </Definition>
+
+</Definitions>

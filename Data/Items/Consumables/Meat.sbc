@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Meat" />
+    <Tag>Meat</Tag>
+    <Public>true</Public>
+    <DisplayName>Raw Meat</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\Meat.dds</Icon>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Volume>1</Volume>
+    <Model>Models\Consumables\Meat.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Meat_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Meat_Food" />
+    <Effect Type="EntityStatEffect" Subtype="Meat_Vigor" />
+    <Effect Type="EntityStatEffect" Subtype="Meat_Poison" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+    <Id Type="SchematicItem" Subtype="Schematic_Meat" />
+    <Public>true</Public>
+    <DisplayName>Pristine Raw Meat</DisplayName>
+    <Description>As you examine the quality of this Meat you find that it's in pristine condition. Without any adnormal properties, it makes a perfect specimen for an Apothocary or Chef.
+
+((Consume to receive knowledge))</Description>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Meat.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\Meat.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <UseSound>ResearchSound</UseSound>
+    <Research Type="ResearchDefinition" Subtype="Meat_Herblore" />
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+
+</Definitions>

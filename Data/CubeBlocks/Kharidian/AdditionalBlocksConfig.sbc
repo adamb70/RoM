@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_AdditionalBlocksDefinition">
+    <Id Type="Block" Subtype="SandstoneCube" />
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Side_V2" Key="BackRight">
+      <Check x="0" y="0" z="-1" />
+      <Check x="-1" y="0" z="0" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Side_V2" Key="FrontRight">
+      <Check x="-1" y="0" z="0" />
+      <Check x="0" y="0" z="1" />
+      <Rotation y="90" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Side_V2" Key="FrontLeft">
+      <Check x="0" y="0" z="1" />
+      <Check x="1" y="0" z="0" />
+      <Rotation y="180" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Side_V2" Key="BackLeft">
+      <Check x="1" y="0" z="0" />
+      <Check x="0" y="0" z="-1" />
+      <Rotation y="270" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Top" Key="TopBack">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="1" z="0" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Top" Key="TopLeft">
+      <Check x="-1" y="0" z="0" />
+      <Check x="0" y="1" z="0" />
+      <Rotation y="90" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Top" Key="TopFront">
+      <Check x="0" y="0" z="1" />
+      <Check x="0" y="1" z="0" />
+      <Rotation y="180" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Top" Key="TopRight">
+      <Check x="1" y="0" z="0" />
+      <Check x="0" y="1" z="0" />
+      <Rotation y="270" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Bottom" Key="BottomBack">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="-1" z="0" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Bottom" Key="BottomLeft">
+      <Check x="-1" y="0" z="0" />
+      <Check x="0" y="-1" z="0" />
+      <Rotation y="90" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Bottom" Key="BottomFront">
+      <Check x="0" y="0" z="1" />
+      <Check x="0" y="-1" z="0" />
+      <Rotation y="180" />
+    </Generate>
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Bottom" Key="BottomRight">
+      <Check x="1" y="0" z="0" />
+      <Check x="0" y="-1" z="0" />
+      <Rotation y="270" />
+    </Generate>
+  </Definition>
+
+
+
+  <Definition xsi:type="MyObjectBuilder_AdditionalBlocksDefinition">
+    <Id Type="Block" Subtype="SandstoneWall" />
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Side_V2" Key="FrontRight">
+      <Check x="0" y="0" z="-1" />
+      <Check x="-1" y="0" z="0" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Side_V2" Key="FrontLeft">
+      <Check x="1" y="0" z="0" />
+      <Check x="0" y="0" z="-1" />
+      <Rotation y="270" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Top" Key="TopFront">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="1" z="0" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Bottom" Key="BottomFront">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="-1" z="0" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_InnerSide_V1" Key="BackRight">
+      <Check x="1" y="0" z="0" />
+      <Rotation y="-90" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_InnerSide_V1" Key="BackLeft">
+      <Check x="-1" y="0" z="0" />
+      <Rotation x="180" y="-90" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_InnerSide_V1" Key="TopBack">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="1" z="0" />
+      <Rotation x="90" y="-90" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_InnerSide_V1" Key="BottomBack">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="-1" z="0" />
+      <Rotation x="270" y="-90" />
+    </Generate>
+  </Definition>
+
+
+
+  <Definition xsi:type="MyObjectBuilder_AdditionalBlocksDefinition">
+    <Id Type="Block" Subtype="SandstoneWallWithWindow" />
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Side_V2" Key="FrontRight">
+      <Check x="0" y="0" z="-1" />
+      <Check x="-1" y="0" z="0" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Side_V2" Key="FrontLeft">
+      <Check x="1" y="0" z="0" />
+      <Check x="0" y="0" z="-1" />
+      <Rotation y="270" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Top" Key="TopFront">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="1" z="0" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_Bottom" Key="BottomFront">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="-1" z="0" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_InnerSide_V1" Key="BackRight">
+      <Check x="1" y="0" z="0" />
+      <Rotation y="-90" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_InnerSide_V1" Key="BackLeft">
+      <Check x="-1" y="0" z="0" />
+      <Rotation x="180" y="-90" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_InnerSide_V1" Key="TopBack">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="1" z="0" />
+      <Rotation x="90" y="-90" />
+    </Generate>
+
+    <Generate Type="GeneratedBlock" Subtype="GeneratedStoneEdge_InnerSide_V1" Key="BottomBack">
+      <Check x="0" y="0" z="-1" />
+      <Check x="0" y="-1" z="0" />
+      <Rotation x="270" y="-90" />
+    </Generate>
+  </Definition>
+
+</Definitions>

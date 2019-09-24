@@ -1,48 +1,86 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Stone_Well" />
-      <BlockPairName>Stone_Well</BlockPairName>
-      <DisplayName>Stone Well</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
-      <Public>true</Public>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="4" y="7" z="4" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Universal\Masonry\stone_well.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Tag="Timber" Count ="1" />
-      </Components>
-      <CriticalComponent Tag="Timber" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Stone_Well" />
+    <DisplayName>Stone Well</DisplayName>
+    <Description>Fills empty buckets with water. Will not work on dry or rocky ground.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="0" z="-1" />
+      <Max x="2" y="2" z="2" />
+    </BoundingBox>
+    <Model>Models\Universal\Masonry\stone_well.mwm</Model>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Stone_Well" Count="1" />
+    </Components>
+    <Rotation>YAxis</Rotation>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+    </MountPoints>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0.01</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <Mass>50</Mass>
+    <MaxIntegrity>100</MaxIntegrity>
+  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Stone_Well"/>
-    <CraftingCategories>
-      <Category>Stone_Well</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+    <Id Type="CraftingComponent" Subtype="StoneWellCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>All</PowerRequired>
+    <PowerConsumptionStyle>Continuous</PowerConsumptionStyle>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="StoneWellScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="StoneWellCrafting" />
+    <ConstrainInventories>true</ConstrainInventories>
+    <QueueSize>6</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="StoneWellRecipes" />
+    <Category>Stone_Well</Category>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Stone_Well" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="StoneWellCrafting" />
+    <Component Type="CraftingScheduler" Subtype="StoneWellScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="StoneWellRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+    <Component Type="EntityFXComponent" Subtype="BonfireFX" />
+    <Component Type="UseObjectsComponent" Subtype="Stone_Well" />
+    <Component Type="EquiVoxelPowerComponent" Subtype="Stone_Well" />
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
@@ -52,19 +90,31 @@
     </UseObjects>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Stone_WellInventory" />
-    <InventoryName>Stone_WellInventory</InventoryName>
-    <DisplayName>Stone Well</DisplayName>
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
-  </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Stone_Well" />
-    <Component Type="UseObjectsComponent" Subtype="Stone_Well" ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="Stone_WellInventory" ForceCreate="true"/>
-    <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Stone_Well" ForceCreate="true"/>
+  <Definition xsi:type="MyObjectBuilder_EquiVoxelPowerComponentDefinition">
+    <Id Type="MyObjectBuilder_EquiVoxelPowerComponent" Subtype="Stone_Well" />
+    <ScanRadius>2</ScanRadius>
+    <ScanMargin>1</ScanMargin>
+    <Mode>Surface</Mode>
+    <DisturbedTime Seconds="2"/>
+    <PoweredWhenDisturbed>true</PoweredWhenDisturbed>
+    <LevelOfDetail>1</LevelOfDetail>
+    <DebugMode>false</DebugMode>
+    <Operator>OR</Operator>
+    <Materials>
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Grass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Dirt" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="DirtSteppe" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="PlantedSoil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="PlowedSoil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SandGrass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SandGrassGreen" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Soil" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="SteppeYellowGrass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_grass" Amount="10" />
+      <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_needles" Amount="10" />
+    </Materials>
   </Definition>
+  
 </Definitions>

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Grind_BarleyMalt" />
+    <DisplayName>Grind Barley</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Category>Milling</Category>
+    <Prerequisites>
+      <Item Amount="8" Type="ConsumableItem" Subtype="Norden_Barley" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Barley_Malt" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Mash_BarleyMalt" />
+    <DisplayName>Mash Barley Malt</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Category>Cooking_Table</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="Barley_Malt" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Wort" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Boil_Wort" />
+    <DisplayName>Boil Wort</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Category>Wort_Boiler</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="Wort" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Sterilized_Wort" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ferment_Sterilized_Wort" />
+    <DisplayName>Ferment Sterilized Wort</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Category>Fermenting_Vat</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="Sterilized_Wort" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Unfiltered_Alcohol" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Filter_Alcohol" />
+    <DisplayName>Filter Alcohol</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Category>Fermenting_Vat</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="Unfiltered_Alcohol" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Alcohol" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+  <!-- ================================================================================ -->
+
+
+  <!-- Norden Spalt -->
+
+
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Boil_Wort_With_Norden_Spalt" />
+    <DisplayName>Boil Wort (With Norden Spalt)</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
+    <Category>Wort_Boiler</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="Wort" />
+      <Item Amount="1" Type="ConsumableItem" Subtype="Spalt" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Sterilized_Wort_With_Norden_Spalt" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ferment_Sterilized_Wort_With_Norden_Spalt" />
+    <DisplayName>Ferment Sterilized Wort</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Category>Fermenting_Vat</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="Sterilized_Wort_With_Norden_Spalt" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Unfiltered_Norden_Lager" />
+    </Results>
+    <CraftingTime Seconds="4"/>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Filter_Norden_Lager" />
+    <DisplayName>Filter Norden Lager</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+    <Category>Fermenting_Vat</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="InventoryItem" Subtype="Unfiltered_Norden_Lager" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="Norden_Lager" />
+    </Results>
+    <CraftingTime Seconds="12"/>
+  </Definition>
+
+
+
+
+</Definitions>

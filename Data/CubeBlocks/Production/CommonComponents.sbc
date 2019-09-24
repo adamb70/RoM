@@ -3,10 +3,10 @@
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
     <Id Type="Inventory" Subtype="Fuel"/>
     <DisplayName>DisplayName_InventoryName_Fuel</DisplayName>
-    <MaxItemCount>4</MaxItemCount>
+    <MaxItemCount>3</MaxItemCount>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
-
+  
   <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
     <Id Type="Inventory" Subtype="Compost"/>
     <DisplayName>Compost</DisplayName>
@@ -14,135 +14,11 @@
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
   
-  <Definition xsi:type="MyObjectBuilder_FuelComponentDefinition">
+  <Definition xsi:type="MyObjectBuilder_FuelComponentDefinition" Merge="Append">
     <Id Type="FuelComponent" Subtype="Fire"/>
     <FuelInventory>Fuel</FuelInventory>
     <FuelTimes>
-      <Fuel Tag="ScrapWood">
-        <Time Seconds="10" />
-      </Fuel>
-      <Fuel Tag="Timber">
-        <Time Seconds="30" />
-      </Fuel>
-      <Fuel Tag="Flag">
-        <Time Seconds="10" />
-      </Fuel>
-      <Fuel Type="InventoryItem" Subtype="Log250cm">
-        <Time Seconds="120" />
-      </Fuel>
-      <Fuel Type="InventoryItem" Subtype="LinenString">
-        <Time Seconds="3" />
-      </Fuel>
-      <Fuel Type="InventoryItem" Subtype="FlaxStraws">
-        <Time Seconds="3" />
-      </Fuel>
-      <Fuel Type="InventoryItem" Subtype="WheatStraws">
-        <Time Seconds="3" />
-      </Fuel>
-      <Fuel Type="ConsumableItem" Subtype="Bandage">
-        <Time Seconds="3" />
-      </Fuel>
-      <Fuel Type="ConsumableItem" Subtype="Herbs">
-        <Time Seconds="1" />
-      </Fuel>
-      <Fuel Type="EquipmentItem" Subtype="HandTorchItem">
-        <Time Seconds="15" />
-      </Fuel>
-      <Fuel Type="HandItem" Subtype="WoodenShovel">
-        <Time Seconds="20" />
-      </Fuel>
-      <Fuel Type="HandItem" Subtype="WoodenMallet">
-        <Time Seconds="20" />
-      </Fuel>
-      <Fuel Type="HandItem" Subtype="LandscapeStakeItem">
-        <Time Seconds="15" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WoodTable">
-        <Time Seconds="30" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WheelMediumSmall">
-        <Time Seconds="20" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="CatapultHead">
-        <Time Seconds="20" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WindMillBlade">
-        <Time Seconds="40" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="RopeDrumAloneSmall">
-        <Time Seconds="30" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="HarvesterBlock">
-        <Time Seconds="40" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="SeedingBlock">
-        <Time Seconds="40" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="PlowBlock">
-        <Time Seconds="40" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="TurnCrossSmall">
-        <Time Seconds="20" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="Wardrobe">
-        <Time Seconds="90" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WoodBed">
-        <Time Seconds="60" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="ResearchTable">
-        <Time Seconds="30" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="SpinningWheel">
-        <Time Seconds="30" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WoodBarrel">
-        <Time Seconds="30" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="Bookshelf">
-        <Time Seconds="90" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WoodChestLarge">
-        <Time Seconds="80" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="SimpleTable">
-        <Time Seconds="40" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WoodChest">
-        <Time Seconds="60" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="StockpileIronSmall">
-        <Time Seconds="90" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="StockpileLogSmall">
-        <Time Seconds="90" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="StockpileTimberSmall">
-        <Time Seconds="90" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WeaponRack">
-        <Time Seconds="30" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WoodenDiningTable">
-        <Time Seconds="60" />
-      </Fuel>
-      <Fuel Type="CubeBlock" Subtype="WoodenShelf">
-        <Time Seconds="20" />
-      </Fuel>
-      <Fuel Type="CogWheelsBlock" Subtype="RopePowerSmall">
-        <Time Seconds="40" />
-      </Fuel>
-      <Fuel Type="CogWheelsBlock" Subtype="CatchBlockSmall2">
-        <Time Seconds="20" />
-      </Fuel>
-      <Fuel Type="CogWheelsBlock" Subtype="LockGearBox2">
-        <Time Seconds="20" />
-      </Fuel>    
-<!-- ToDo: Uncomment when tags added to proper items
-      <Fuel Tag="SeedBag">
-        <Time Seconds="3" />
-      </Fuel>
-      <Fuel Tag="Schematics">
+      <!-- <Fuel Tag="Schematics">
         <Time Seconds="3" />
       </Fuel> -->
     </FuelTimes>

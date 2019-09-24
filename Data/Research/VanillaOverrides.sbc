@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ResearchTreeDefinition">
+    <Id Type="ResearchTreeDefinition" Subtype="Civil" />
+    <Public>false</Public>
+    <DisplayName>Null</DisplayName>
+    <Description>This research method is not utilized in Realm of Mistvalin</Description>
+    <Icon>Textures\GUI\Icons\Schematics\Masonry.dds</Icon>
+    <RootNode Type="ResearchNodeDefinition" Subtype="FakeNode" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ResearchTreeDefinition">
+    <Id Type="ResearchTreeDefinition" Subtype="Military" />
+    <Public>false</Public>
+    <DisplayName>Null</DisplayName>
+    <Description>This research method is not utilized in Realm of Mistvalin</Description>
+    <Icon>Textures\GUI\Icons\Schematics\AdvancedMechanics.dds</Icon>
+    <RootNode Type="ResearchNodeDefinition" Subtype="FakeNode" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ResearchTreeDefinition">
+    <Id Type="ResearchTreeDefinition" Subtype="Economic" />
+    <Public>false</Public>
+    <DisplayName>Null</DisplayName>
+    <Description>This research method is not utilized in Realm of Mistvalin</Description>
+    <Icon>Textures\GUI\Icons\Schematics\Weaving.dds</Icon>
+    <RootNode Type="ResearchNodeDefinition" Subtype="FakeNode" />
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_ResearchNodeDefinition">
+    <Id Type="ResearchNodeDefinition" Subtype="FakeNode" />
+    <Public>false</Public>
+  </Definition>
+
+</Definitions>

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Damage effects - damage over time effects with different damage types -->
+
+  <!-- Backstab bonus damage and slowdown -->
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Backstab" />
+    <Public>false</Public>
+    <EffectType>Negative</EffectType>
+    <Effect Type="DamageOverTimeEffect" Subtype="BackstabDamage" />
+    <Effect Type="MovementSpeedEffect" Subtype="BackstabSlowdown" IsSeparate="true"/>
+    <Duration Seconds="3" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
+    <Id Type="DamageOverTimeEffect" Subtype="BackstabDamage" />
+    <Amount>10</Amount>
+    <Interval Seconds="0" />
+    <Duration Seconds="0" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MovementSpeedEffectDefinition">
+    <Id Type="MovementSpeedEffect" Subtype="BackstabSlowdown" />
+    <Public>false</Public>
+    <Category>BackstabSlowdown</Category>
+    <SupportedState>Run|Sprint</SupportedState>
+    <ForwardMultiplier Style="Multiplicative" Value="0.7" />
+    <BackwardMultiplier Style="Multiplicative" Value="0.7" />
+    <StrafingMultiplier Style="Multiplicative" Value="0.7" />
+    <Duration Seconds="3" />
+  </Definition>
+  
+  <!-- Bleeding - applied by sharp weapons -->
+  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
+    <Id Type="DamageOverTimeEffect" Subtype="BleedingShort" />
+    <DisplayName>Small Cut</DisplayName>
+    <Description>Description_StatusEffect_Bleeding</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Bleeding.png</Icon>
+    <Category>Bleeding</Category>
+    <Public>true</Public>
+    <EffectType>Negative</EffectType>
+    <DamageType>Bleeding</DamageType>
+    <ActivationEvent>Bleeding_Activate</ActivationEvent>
+    <DeactivationEvent>Bleeding_Deactivate</DeactivationEvent>
+    <Amount>1</Amount>
+    <Interval Seconds="1" />
+    <Duration Seconds="30" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
+    <Id Type="DamageOverTimeEffect" Subtype="BleedingLong" />
+    <DisplayName>Deep Cut</DisplayName>
+    <Description>Description_StatusEffect_Bleeding</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Bleeding.png</Icon>
+    <Category>Bleeding</Category>
+    <Public>true</Public>
+    <EffectType>Negative</EffectType>
+    <DamageType>Bleeding</DamageType>
+    <ActivationEvent>Bleeding_Activate</ActivationEvent>
+    <DeactivationEvent>Bleeding_Deactivate</DeactivationEvent>
+    <Amount>1</Amount>
+    <Interval Seconds="1" />
+    <Duration Seconds="60" />
+  </Definition>
+  
+  <!-- Elemental damage effects -->
+  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
+    <Id Type="DamageOverTimeEffect" Subtype="BurningInFireplace" />
+    <DisplayName>DisplayName_StatusEffect_Burning</DisplayName>
+    <Description>Description_StatusEffect_Burning</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Burning.png</Icon>
+    <EffectType>Negative</EffectType>
+    <ActivationEvent>Burning_Activate</ActivationEvent>
+    <DeactivationEvent>Burning_Deactivate</DeactivationEvent>
+    <DamageType>Burning</DamageType>
+    <Amount>5</Amount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
+    <Id Type="DamageOverTimeEffect" Subtype="Burning" />
+    <DisplayName>DisplayName_StatusEffect_Burning</DisplayName>
+    <Description>Description_StatusEffect_Burning</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Burning.png</Icon>
+    <EffectType>Negative</EffectType>
+    <ActivationEvent>Burning_Activate</ActivationEvent>
+    <DeactivationEvent>Burning_Deactivate</DeactivationEvent>
+    <DamageType>Burning</DamageType>
+    <Amount>5</Amount>
+    <Duration Seconds="5" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
+    <Id Type="DamageOverTimeEffect" Subtype="Poisoned" />
+    <DisplayName>DisplayName_StatusEffect_Poisoned</DisplayName>
+    <Description>Description_StatusEffect_Poisoned</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Poisoned.png</Icon>
+    <EffectType>Negative</EffectType>
+    <DamageType>Poison</DamageType>
+    <Amount>5</Amount>
+    <Duration Seconds="5" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DamageOverTimeEffectDefinition">
+    <Id Type="DamageOverTimeEffect" Subtype="PoisonedLight" />
+    <DisplayName>DisplayName_StatusEffect_Poisoned</DisplayName>
+    <Description>Description_StatusEffect_Poisoned</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\HUD\StatsAndEffects\Poisoned.png</Icon>
+    <EffectType>Negative</EffectType>
+    <DamageType>Poison</DamageType>
+    <Amount>1</Amount>
+    <Duration Seconds="5" />
+  </Definition>
+
+</Definitions>

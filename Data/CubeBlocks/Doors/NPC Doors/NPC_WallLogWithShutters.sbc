@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Shutters-->
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_WallLogWithShutters" />
+    
+    <DisplayName>DisplayName_Block_WallLogWithShutters</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\WallWoodLogWithWindow.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <Public>true</Public>
+    <Visible>false</Visible>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\large\LogWalls\WallWoodLogWithShutters.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\LogWalls\WallWoodLogWithShutters_Construction_1.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Log" Count="1" />
+      <Component Tag="Plank" Count="4" />
+    </Components>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <MountPoints>
+      <MountPoint Side="Front" StartX="1.0324" StartY="-0.0349058621" EndX="-0.032400012" EndY="0.42989403" />
+      <MountPoint Side="Front" StartX="0.7374" StartY="0.7698602" EndX="0.2626" EndY="1.02810025" />
+      <MountPoint Side="Front" StartX="1.02882659" StartY="0.365093976" EndX="0.6842358" EndY="1.031525" />
+      <MountPoint Side="Front" StartX="0.321223974" StartY="0.365093976" EndX="-0.0233668089" EndY="1.031525" />
+      <MountPoint Side="Left" StartX="-0.0338439941" StartY="-0.0349058621" EndX="0.130955979" EndY="0.42989403" />
+      <MountPoint Side="Left" StartX="-0.0314826965" StartY="0.365093976" EndX="0.128662691" EndY="1.031525" />
+      <MountPoint Side="Right" StartX="1.033844" StartY="-0.0349058621" EndX="0.869044" EndY="0.42989403" />
+      <MountPoint Side="Right" StartX="1.0314827" StartY="0.365093976" EndX="0.8713373" EndY="1.031525" />
+      <MountPoint Side="Top" StartX="0.2626" StartY="1.033844" EndX="0.7374" EndY="0.869044" />
+      <MountPoint Side="Top" StartX="-0.02882657" StartY="1.0314827" EndX="0.3157642" EndY="0.8713373" />
+      <MountPoint Side="Top" StartX="0.678776" StartY="1.0314827" EndX="1.02336681" EndY="0.8713373" />
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.0338439941" EndX="1.0324" EndY="0.130955979" />
+    </MountPoints>
+    <UseModelIntersection>false</UseModelIntersection>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+    
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_WallLogWithShutters" />
+    <CopyFrom Type="Block" Subtype="NPC_DefaultShuttersContainer" />
+    <Component Type="ModelAttachmentComponent" Subtype="WallLogWithShutters" />
+    <Component Type="AttachmentAnimationComponent" Subtype="DefaultSquareShuttersAnimationComponent" />
+    <Component Type="AnimationEventSoundComponent" Subtype="DefaultShuttersAnimationEventSoundComponent" />
+  </Definition>
+</Definitions>

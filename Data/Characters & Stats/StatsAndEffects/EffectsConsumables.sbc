@@ -1,0 +1,1823 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- =========================================================================== -->
+				<!-- Potions -->
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="SimpleBandage" />
+    <Public>true</Public>
+    <DisplayName>Healing</DisplayName>
+    <Description>After the bandage is finished being applied it will heal any broken or wounded parts.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <EffectType>Positive</EffectType>
+    <Effect Type="OperationTriggerEffect" Subtype="Duration_To_Heal_Wound_Complete" />
+    <Effect Type="EntityStatEffect" Subtype="BuffBandage" />
+    <Duration Seconds="5" />
+    <CancelOnDamage>true</CancelOnDamage>
+  </Definition>
+<!-- ============================== -->
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="Duration_To_Heal_Wound_Complete" /> 
+    <Public>false</Public>
+    <Deactivation Type="CompositeEntityEffect" Subtype="Heal_Broken" Operation="Add" />
+    <Deactivation Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Operation="Remove" />
+    <Deactivation Type="CompositeEntityEffect" Subtype="ArmWoundRight" Operation="Remove" />
+  </Definition>
+<!-- ============================== -->
+  <Definition xsi:type="MyObjectBuilder_CompositeEntityEffectDefinition">
+    <Id Type="CompositeEntityEffect" Subtype="Heal_Broken" />
+    <Public>true</Public>
+    <DisplayName>Healing</DisplayName>
+    <Description>After the bandage is finished being applied it will heal any broken or wounded parts.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <EffectType>Positive</EffectType>
+    <Effect Type="OperationTriggerEffect" Subtype="Duration_To_Heal_Broken_Complete" />
+    <Duration Seconds="15" />
+    <CancelOnDamage>true</CancelOnDamage>
+  </Definition>
+<!-- ============================== -->
+  <Definition xsi:type="MyObjectBuilder_OperationTriggerEffectDefinition">
+    <Id Type="OperationTriggerEffect" Subtype="Duration_To_Heal_Broken_Complete" /> 
+    <Public>false</Public>
+    <Deactivation Type="CompositeEntityEffect" Subtype="ArmBrokenLeft" Operation="Remove" />
+    <Deactivation Type="CompositeEntityEffect" Subtype="ArmBrokenRight" Operation="Remove" />
+  </Definition>
+<!-- ============================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="BuffBandage" />
+    <DisplayName>Simple Bandage</DisplayName>
+    <Description>Description_Effects_Bandage</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Health</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="50" />
+	<CancelOnDamage>true</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Stamina_Potion_1" />
+    <DisplayName>Minor Strength Potion</DisplayName>
+    <Description>Prepared by an Apothocary the Minor Strength Potion gives a temporary surge of stamina to whoever drinks it.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Stamina</Stat>
+	<RegenPerSecond>3</RegenPerSecond>
+	<Duration Seconds="60" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Health_Potion_1" />
+    <DisplayName>Minor Health Potion</DisplayName>
+    <Description>Prepared by an Apothocary the Minor Health Potion restores a small amount of health to whoever drinks it.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Health</Stat>
+	<RegenPerSecond>1.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Fury_Potion_1" />
+    <DisplayName>Minor Fury Potion</DisplayName>
+    <Description>Prepared by an Apothocary the Minor Fury Potion gives a temporary surge of fury to whoever drinks it.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundFury.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Fury</Stat>
+	<RegenPerSecond>1</RegenPerSecond>
+	<Duration Seconds="60" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+				<!-- Staminas -->
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SpiderEggs_Stamina" />
+    <DisplayName>Stamina</DisplayName>
+    <Public>false</Public>
+    <Description>Your stamina is regnerating!</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Stamina</Stat>
+	<RegenPerSecond>-.6</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Roots_Stamina" />
+    <DisplayName>Stamina</DisplayName>
+    <Public>false</Public>
+    <Description>Your stamina is regnerating!</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Stamina</Stat>
+	<RegenPerSecond>1.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="FruitsOpuntia_Stamina" />
+    <DisplayName>Stamina</DisplayName>
+    <Public>false</Public>
+    <Description>Your stamina is regnerating!</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Stamina</Stat>
+	<RegenPerSecond>1.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Chocolate_Bar_Stamina" />
+    <DisplayName>Stamina</DisplayName>
+    <Public>false</Public>
+    <Description>Your stamina is regnerating!</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Stamina</Stat>
+	<RegenPerSecond>3</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Stamina" />
+    <DisplayName>Stamina</DisplayName>
+    <Public>false</Public>
+    <Description>Your stamina is regnerating!</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Stamina</Stat>
+	<RegenPerSecond>5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+				<!-- Poisons -->
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SpiderEggs_Poison" />
+    <DisplayName>Poison!</DisplayName>
+    <Public>true</Public>
+    <Description>You are slowly being poisoned!</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Poison</Stat>
+	<RegenPerSecond>1.3</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Meat_Poison" />
+    <DisplayName>Raw Food!</DisplayName>
+    <Public>true</Public>
+    <Description>This will make you sick!</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Poison</Stat>
+	<RegenPerSecond>1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+				<!-- Vigors -->
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Kharidian_Jellab_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.01</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Beer_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Dwarven_Beer_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SpiderEggs_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SpiderLeg_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Berries_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.04</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Grape_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Grape_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.04</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Blue_Berry_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Blue_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.04</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Cabbage_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RedCabbage_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pumpkin_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.04</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Mushrooms_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.025</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="HighlandCaps_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.025</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Herbs_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Roots_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Barley_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pinecone_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Bread_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.03</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RedBerryPie_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Chocolate_Bar_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.075</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Baked_Cake_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Roots_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.02</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="MeatRoasted_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.09</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Meat_Vigor" />
+    <DisplayName>Raw Food!</DisplayName>
+    <Public>true</Public>
+    <Description>This is gross!.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.075</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Goulash_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SoupMushroom_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.05</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="HighlandCapsSoup_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.05</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Salad_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.06</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SteakWithMushrooms_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.12</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RootsWithShrooms_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>.075</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="BerryPreserve_Vigor" />
+    <DisplayName>Vigor</DisplayName>
+    <Public>false</Public>
+    <Description>Your Vigor is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Vigor</Stat>
+	<RegenPerSecond>-.01</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+
+<!-- =========================================================================== -->
+				<!-- Moods -->
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Bones_Mood" />
+    <DisplayName>Buried Bones</DisplayName>
+    <Public>true</Public>
+    <Description>You feel good after burying the bones.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>1</RegenPerSecond>
+	<Duration Seconds="600" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Kharidian_Jellab_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Beer_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="600" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Dwarven_Beer_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="600" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SpiderEggs_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>-.6</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SpiderLeg_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.6</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Berries_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.8</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Grape_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Grape_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.8</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Blue_Berry_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Blue_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.8</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Cabbage_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RedCabbage_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pumpkin_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Mushrooms_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="HighlandCaps_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Herbs_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Roots_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>-.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Barley_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>-.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>-.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pinecone_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>-.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.6</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Bread_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>2.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RedBerryPie_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>10</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Chocolate_Bar_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>1.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Baked_Cake_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>8</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Roots_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="MeatRoasted_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>5.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Meat_Mood" />
+    <DisplayName>Raw Food!</DisplayName>
+    <Public>true</Public>
+    <Description>This is gross!.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>-1.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Goulash_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>4.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SoupMushroom_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="HighlandCapsSoup_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Salad_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SteakWithMushrooms_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RootsWithShrooms_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>1</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="BerryPreserve_Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Public>false</Public>
+    <Description>Your mood is changing.</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Mood</Stat>
+	<RegenPerSecond>.8</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+				<!-- Thirsts -->
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Kharidian_Jellab_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>6</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Beer_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Dwarven_Beer_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Berries_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>.4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Jug_Of_Water_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Grape_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>.4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Grape_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Blue_Berry_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>.4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Juice_Berry_Blue_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SoupMushroom_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="HighlandCapsSoup_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="BerryPreserve_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>.4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+				<!-- Foods -->
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Bread_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Roots_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.01</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="MeatRoasted_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>6</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Meat_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>4.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Goulash_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>11</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SoupMushroom_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="HighlandCapsSoup_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Salad_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SteakWithMushrooms_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>11</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RootsWithShrooms_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>4</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RedBerryPie_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>8</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Baked_Cake_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>11</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Chocolate_Bar_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.75</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Baked_Cake_Chocolate_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>11</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SpiderEggs_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.2</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="SpiderLeg_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.6</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Berries_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Grape_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Cabbage_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="RedCabbage_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pumpkin_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>1.5</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Mushrooms_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="HighlandCaps_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Herbs_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Roots_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Barley_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Norden_Barley_Roots_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pinecone_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="FruitsOpuntia_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.25</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Pickled_Pine_Cones_Food" />
+    <DisplayName>Eating</DisplayName>
+    <Description>You are feeling less hungry. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Food</Stat>
+	<RegenPerSecond>.6</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+</Definitions>

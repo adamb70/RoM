@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="AlchemyFurnace" />
+    <DisplayName>Alchemy Furnace</DisplayName>
+    <Description>Alchemy Furnace</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemyfurnace.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="-2" z="-3" />
+      <Max x="3" y="5" z="3" />
+    </BoundingBox>
+    <Model>Models\Alchemy\Cubeblocks\alchemyFurnace.mwm</Model>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="AlchemyFurnace" Count="1" />
+    </Components>
+    <Volume>4500</Volume>
+    <Rotation>YAxis</Rotation>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+    </MountPoints>
+    <ParticleScale>0.22</ParticleScale>
+    <LightRadius Min="6.5" Max="6.5" Default="6.5" />
+    <LightFalloff Min="0.3" Max="0.3" Default="0.3" />
+    <LightIntensity Min="0.3" Max="0.3" Default="0.3" />
+    <PrimarySound>BlockFire</PrimarySound>
+    <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
+    <Mass>180</Mass>
+    <MaxIntegrity>300</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="CraftingRecipeDefinition" Subtype="AlchemyFurnace"/>
+    <DisplayName>Alchemy Furnace</DisplayName>
+    <Description>Alchemy Furnace</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemyfurnace.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="18" Type="InventoryItem" Subtype="IngotCopper" />
+      <Item Amount="8" Type="InventoryItem" Subtype="IngotIron" />
+      <Item Amount="1" Tag="Universal_Log" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="AlchemyFurnace" />
+    </Results>
+    <CraftingTime Seconds="6"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition" Copy="Append">
+    <Id Type="EntityFXComponent" Subtype="AlchemyFurnaceFX" />
+    <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
+    <Effects>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
+        <EffectId Type="EffectDefinition" Subtype="Furnace" />
+      </Effect>
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_furnace" Overwrite="false">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingFurnace" />
+      </Effect>
+    </Effects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="UseObjectsComponent" Subtype="AlchemyFurnace" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_furnace" Name="inventory" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="AlchemyFurnaceCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>All</PowerRequired>
+    <PowerConsumptionStyle>Continuous</PowerConsumptionStyle>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Heat</CraftString>
+    <CraftingString>Heating Queue</CraftingString>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="AlchemyFurnaceScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="AlchemyFurnaceCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="AlchemyFurnaceRecipes" />
+    <Category>Alchemy_Furnace</Category>
+    <Category>Alembic_Imbue</Category>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="AlchemyFurnace" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="AlchemyFurnaceCrafting" />
+    <Component Type="CraftingScheduler" Subtype="AlchemyFurnaceScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="AlchemyFurnaceRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="FuelComponent" Subtype="Fire" />
+    <Component Type="Inventory" Subtype="Fuel" />
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+    <Component Type="EntityFXComponent" Subtype="AlchemyFurnaceFX" />
+    <Component Type="UseObjectsComponent" Subtype="AlchemyFurnace" />
+  </Definition>
+</Definitions>

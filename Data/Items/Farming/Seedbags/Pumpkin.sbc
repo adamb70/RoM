@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
+    <Id Type="SeedBagHandItem" Subtype="Experimental_SeedBagPumpkin"/>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    <DisplayName>Experimental</DisplayName>
+    <Description>Used only in creative. Not ment for survival.</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
+    
+    <Model>Models\Weapons\SeedBag_Pumpkin.mwm</Model>
+    
+    <MaxStackAmount>1</MaxStackAmount>
+    <MaxDurability>10</MaxDurability>
+    
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmPumpkin_Test</SubtypeId>
+    </GrowableDefinitionId>
+    
+  </Definition>
+  
+  
+  <!-- Compost -->
+
+  
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
+    <Id Type="SeedBagHandItem" Subtype="SeedBagPumpkin_Compost"/>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    <DisplayName>Pumpkin Seed Bag (Compost)</DisplayName>
+    <Description>Description_Tool_SeedBag</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
+    
+    <Model>Models\Weapons\SeedBag_Pumpkin.mwm</Model>
+    
+    <MaxStackAmount>1</MaxStackAmount>
+    <MaxDurability>25</MaxDurability>
+    
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmPumpkin_Compost</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+  
+  
+  <!-- Single Seed bag -->
+  
+  
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
+    <Id Type="SeedBagHandItem" Subtype="Single_SeedBagPumpkin"/>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    <DisplayName>DisplayName_Tool_SeedBagPumpkin</DisplayName>
+    <Description>Description_Tool_SeedBag</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
+    
+    <Model>Models\Weapons\SeedBag_Pumpkin.mwm</Model>
+    
+    <MaxStackAmount>1</MaxStackAmount>
+    <MaxDurability>5</MaxDurability>
+    
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmPumpkin</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+  
+  
+  <!-- Single Compost seed bag -->
+  
+  
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
+    <Id Type="SeedBagHandItem" Subtype="Single_SeedBagPumpkin_Compost"/>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    <DisplayName>Pumpkin Seed Bag (Compost)</DisplayName>
+    <Description>Description_Tool_SeedBag</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
+    
+    <Model>Models\Weapons\SeedBag_Pumpkin.mwm</Model>
+    
+    <MaxStackAmount>1</MaxStackAmount>
+    <MaxDurability>5</MaxDurability>
+    
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmPumpkin_Compost</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+</Definitions>

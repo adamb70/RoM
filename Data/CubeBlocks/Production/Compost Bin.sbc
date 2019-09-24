@@ -1,58 +1,51 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="MyObjectBuilder_CubeBlock" Subtype="Compost_Bin" />
-      <BlockPairName>Compost_Bin</BlockPairName>
-      <DisplayName>Compost Bin</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bin_Icon.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="4" y="4" z="4" />
-      <ModelOffset x="0" y="-0.1" z="0" />
-      <Model>Models\Universal\Farming\compost_bin.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Subtype="Timber10" Count="1" />
-      </Components>
-      <CriticalComponent Subtype="Timber10" Index="0" />
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <Mass>10</Mass>
-      <UseModelIntersection>true</UseModelIntersection>
-      <CompoundTemplates>
-        <Template>Universal</Template>
-      </CompoundTemplates>
-      <GuiVisible>true</GuiVisible>
-      <AvailableInSurvival>true</AvailableInSurvival>
-      <VoxelPlacement>
-        <StaticMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </StaticMode>
-        <DynamicMode>
-          <PlacementMode>Both</PlacementMode>
-          <MaxAllowed>1</MaxAllowed>
-          <MinAllowed>0</MinAllowed>
-        </DynamicMode>
-      </VoxelPlacement>
-    </Definition>
-
-
-
-
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Compost_Bin"/>
-    <CraftingCategories>
-      <Category>Compost_Bin</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
-    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Compost_Bin" />
+    <Rotation>All</Rotation>
+    <DisplayName>Compost Bin</DisplayName>
+    <Description>Compost Bin</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bin_Icon.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-2" y="-2" z="-2" />
+      <Max x="2" y="2" z="2" />
+    </BoundingBox>
+    <Model>Models\Universal\Farming\compost_bin.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Compost_Bin" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>130</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="CompostBinCrafting" />
+    <InputInventory>Compost_BinInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>All</PowerRequired>
+    <PowerConsumptionStyle>Continuous</PowerConsumptionStyle>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="CompostBinScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="CompostBinCrafting" />
+    <ConstrainInventories>true</ConstrainInventories>
+    <QueueSize>6</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="CompostBinRecipes" />
+    <Category>Compost_Bin</Category>
+  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
     <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Compost_Bin" />
@@ -68,17 +61,29 @@
     <InventoryName>Compost_BinInventory</InventoryName>
     <DisplayName>Compost</DisplayName>
     <MaxItemCount>14</MaxItemCount>
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
     <MultiplierEnabled>false</MultiplierEnabled>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Compost_Bin" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
 
+    <Component Type="CraftingComponent" Subtype="CompostBinCrafting" />
+    <Component Type="CraftingScheduler" Subtype="CompostBinScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="CompostBinRecipes" />
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Compost_Bin" />
-    <Component Type="InventorySpawnComponent" />
-    <Component Type="CraftingComponent" Subtype="Compost_Bin" />
-    <Component Type="UseObjectsComponent" Subtype="Compost_Bin" />
     <Component Type="Inventory" Subtype="Compost_BinInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="FuelComponent" Subtype="Fire" />
+    <Component Type="Inventory" Subtype="Fuel" />
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+    <Component Type="UseObjectsComponent" Subtype="Compost_Bin" />
   </Definition>
 
 

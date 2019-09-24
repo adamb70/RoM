@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- ================================================================================== -->  
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Health" />
+	<DisplayName>DisplayName_Stat_Health</DisplayName>
+	<Description>Description_Stat_Health</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Health.png</Icon>
+	<MainStat>
+		<StatId>Health</StatId>
+		<BackgroundColor Hex="#a0282c" />
+		<ForegroundColor Hex="#d64047" />
+		<CriticalValue>30</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="250" Interval="25" />
+	<Arrows Scale="0.03" />
+	<Scale>4</Scale>
+  </Definition>
+<!-- ================================================================================== -->  
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Stamina" />
+    <DisplayName>DisplayName_Stat_Stamina</DisplayName>
+    <Description>Description_Stat_Stamina</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Stamina.png</Icon>
+	<MainStat>
+		<StatId>Stamina</StatId>
+		<BackgroundColor Hex="#E1E1E1" />
+		<ForegroundColor Hex="#E1E1E1" />
+		<CriticalValue>15</CriticalValue>
+	</MainStat>
+	<GainStat>
+		<StatId>Vigor</StatId>
+		<ClampedStatId>Vigor</ClampedStatId>
+		<BackgroundColor R="255" G="255" B="255" A="255" />
+		<ForegroundColor R="255" G="255" B="255" A="255" />
+	</GainStat>
+	<Notches RelativeAtValue="500" Interval="50" />
+	<Arrows Scale="0.03" />
+	<Scale>2</Scale>
+  </Definition>
+<!-- ================================================================================== --> 
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Food" />
+	<DisplayName>DisplayName_Stat_Food</DisplayName>
+	<Description>Description_Stat_Food</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Food.png</Icon>
+	<MainStat>
+		<StatId>Food</StatId>
+		<BackgroundColor Hex="#43ba0b" />
+		<ForegroundColor Hex="#6bd642" />
+	</MainStat>
+	<Notches RelativeAtValue="250" Interval="25" />
+	<Arrows Scale="0.0009" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Thirst" />
+	<DisplayName>Thirst</DisplayName>
+	<Description>This determines how thirsty of you are.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Thirst_Icon.png</Icon>
+	<MainStat>
+		<StatId>Thirst</StatId>
+		<BackgroundColor Hex="#4696FF" />
+		<ForegroundColor Hex="#4696FF" />
+	</MainStat>
+	<Notches RelativeAtValue="250" Interval="25" />
+	<Arrows Scale="0.0009" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Fury" />
+    <DisplayName>Fury</DisplayName>
+    <Description>This determines your Fury. You gain fury from attacking people or animals, once you've reached enough fury you can use a special attack depending on the weapon.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Fury_Icon.png</Icon>
+	<MainStat>
+		<StatId>Fury</StatId>
+		<BackgroundColor Hex="#FF8725" />
+		<ForegroundColor Hex="#FF8725" />
+	</MainStat>
+	<Notches RelativeAtValue="250" Interval="25" />
+	<Arrows Scale="0.03" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== --> 
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Mood" />
+	<DisplayName>Mood</DisplayName>
+	<Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+	<MainStat>
+		<StatId>Mood</StatId>
+		<BackgroundColor Hex="#FFFF00" />
+		<ForegroundColor Hex="#FFFF00" />
+		<CriticalValue>30</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="250" Interval="25" />
+	<Arrows Scale="0.03" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Vigor" />
+	<DisplayName>Vigor</DisplayName>
+	<Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+	<MainStat>
+		<StatId>Vigor</StatId>
+		<BackgroundColor Hex="#FFFF00" />
+		<ForegroundColor Hex="#FFFF00" />
+		<CriticalValue>30</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="250" Interval="50" />
+	<Arrows Scale="0.03" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="VigorGain" />
+	<DisplayName>VigorGain</DisplayName>
+	<Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+	<MainStat>
+		<StatId>VigorGain</StatId>
+		<BackgroundColor Hex="#FFFF00" />
+		<ForegroundColor Hex="#FFFF00" />
+		<CriticalValue>0</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="10" Interval="1" />
+	<Arrows Scale="0.03" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="VigorLoss" />
+	<DisplayName>VigorLoss</DisplayName>
+	<Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Mood_Icon.png</Icon>
+	<MainStat>
+		<StatId>VigorLoss</StatId>
+		<BackgroundColor Hex="#FFFF00" />
+		<ForegroundColor Hex="#FFFF00" />
+		<CriticalValue>0</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="10" Interval="1" />
+	<Arrows Scale="0.03" />
+	<Scale>1</Scale>
+  </Definition>
+<!-- ================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_HudStatDefinition">
+	<Id Type="MyObjectBuilder_HudStatDefinition" Subtype="Death" />
+	<DisplayName>Death</DisplayName>
+	<Description>death</Description>
+	<Icon>Textures\HUD\StatsAndEffects\StatBars\Health.png</Icon>
+	<MainStat>
+		<StatId>Death</StatId>
+		<BackgroundColor Hex="#ffffff" />
+		<ForegroundColor Hex="#ffffff" />
+		<CriticalValue>30</CriticalValue>>
+	</MainStat>
+	<Notches RelativeAtValue="60" Interval="1" />
+	<Arrows Scale="0.03" />
+	<Scale>4</Scale>
+  </Definition>
+</Definitions>

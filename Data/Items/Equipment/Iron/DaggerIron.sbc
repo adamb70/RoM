@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="DwarfDagger" />
+
+    <!-- Display -->
+
+    <DisplayName>Dwarf Dagger</DisplayName>
+    <Description>Iron Dwarf Dagger</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\DwarfDagger.dds</Icon>
+    <Tag>Weapon_Dagger</Tag>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Weapons\DwarfDagger_Small.mwm</Model>
+
+    <PhysicalMaterial>Sword</PhysicalMaterial>
+
+    <Animation>Sword</Animation>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <MaxDurability>200</MaxDurability>
+
+    <BrokenItem Type="HandItem" Subtype="DwarfDaggerBroken" />
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.464</X>
+        <Y>-1.0</Y>
+        <Z>-0.505</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.131</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+
+    <!-- Behaviors -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="DwarfDagger" />
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="DwarfDaggerBroken" />
+    <Public>true</Public>
+    <DisplayName>Dwarf Dagger Broken</DisplayName>
+    <Description>Iron Dwarf Dagger Broken</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\DwarfDagger.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Broken.dds</Icon>
+    <Model>Models\Weapons\DwarfDaggerBroken_Small.mwm</Model>
+    <PhysicalMaterial>Hammer</PhysicalMaterial>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>5</Mass>
+    <MaxStackAmount>5</MaxStackAmount>
+    <Health>50</Health>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="DwarfDagger" />
+
+    <!-- Attack that goes from right to left part of attacker's screen, usually lands on left side of target's body -->
+    <LeftSwing>
+      <Range>1.0</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="5" AttackMultipleTargets="false">
+        <StatCost Stat="Stamina" Cost="7" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.1" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.1" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="PoisonedLight" Chance="0.1" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="5" MaximumDamage="10" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <StatCost Stat="Fury" Cost="18" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="PoisonedLight" Chance="0.2" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </LeftSwing>
+
+
+    <!-- Attack that goes from left to right part of attacker's screen, usually lands on right side of target's body -->
+    <RightSwing>
+      <Range>1.0</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="5" AttackMultipleTargets="false">
+        <StatCost Stat="Stamina" Cost="7" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.1" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.1" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="PoisonedLight" Chance="0.1" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="5" MaximumDamage="10" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <StatCost Stat="Fury" Cost="18" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="PoisonedLight" Chance="0.2" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </RightSwing>
+
+
+    <!-- Attack from above, always lands on 'head' body region -->
+    <ForwardSwing>
+      <Range>1.0</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="5">
+        <StatCost Stat="Stamina" Cost="7" />
+        <StatCost Stat="Fury" Cost="-3" />
+        <StatCost Stat="Vigor" Cost="-.1" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.1" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="PoisonedLight" Chance="0.1" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="5" MaximumDamage="10" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <StatCost Stat="Fury" Cost="18" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.6" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="PoisonedLight" Chance="0.2" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="DwarfDagger" />
+    <DisplayName>Dwarf Dagger</DisplayName>
+    <Description>Iron Dwarf Dagger</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\DwarfDagger.dds</Icon>
+    <Category>Weapons</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="StripsLeather" Amount="5" />
+      <Item Tag="IngotIron" Amount="4" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="DwarfDagger" />
+    </Results>
+    <CraftingTime Seconds="4" />
+  </Definition>
+
+  <!-- Broken Iron Sword-->
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="DwarfDaggerBroken" />
+
+    <!-- Display -->
+
+    <Visible>false</Visible>
+    <DisplayName>Dwarf Dagger Broken</DisplayName>
+    <Description>Iron Dwarf Dagger Broken</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\DwarfDagger.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Broken.dds</Icon>
+    <Tag>WeaponMelee</Tag>
+    <Tag>WeaponShort</Tag>
+    <Size>
+      <X>.7</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Volume>3</Volume>
+    <Model>Models\Weapons\DwarfDaggerBroken_Small.mwm</Model>
+
+    <PhysicalMaterial>Sword</PhysicalMaterial>
+
+    <Animation>Sword</Animation>
+
+    <BrokenItem Type="InventoryItem" Subtype="PartsMetal" />
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.817</X>
+        <Y>-1.0</Y>
+        <Z>-0.918</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.173</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <MaxDurability>100</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <!-- Behaviors -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="DwarfDaggerBroken" />
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="DwarfDaggerBroken" />
+
+    <!-- Attack that goes from right to left part of attacker's screen, usually lands on left side of target's body -->
+    <LeftSwing>
+      <Range>1.4</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishDagger</SwingSound>
+
+      <LightAttack MinimumDamage="11">
+        <StatCost Stat="Stamina" Cost="8" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="11" MaximumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.1" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.0" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </LeftSwing>
+
+    <!-- Attack that goes from left to right part of attacker's screen, usually lands on right side of target's body -->
+    <RightSwing>
+      <Range>1.4</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishDagger</SwingSound>
+
+      <LightAttack MinimumDamage="11">
+        <StatCost Stat="Stamina" Cost="8" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="11" MaximumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.1" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.0" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </RightSwing>
+
+    <!-- Attack from above, always lands on 'head' body region -->
+    <ForwardSwing>
+      <Range>1.4</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishDagger</SwingSound>
+
+      <LightAttack MinimumDamage="11">
+        <StatCost Stat="Stamina" Cost="8" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="11" MaximumDamage="14" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="CompositeEntityEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+  </Definition>
+</Definitions>

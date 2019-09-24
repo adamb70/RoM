@@ -1,0 +1,60 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Windmill" />
+    <DisplayName>DisplayName_Block_WindmillMechanical</DisplayName>
+    <Description>Description_Block_WindmillMechanical</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\Windmill.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <BoundingBox>
+      <Min x="-2" y="-2" z="0" />
+      <Max x="3" y="3" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\large\Mechanical\Windmill_Base.mwm</Model>
+    <PreviewModel>Models\Cubes\large\Mechanical\Windmill_Preview.mwm</PreviewModel>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\Mechanical\Windmill_Construction_1.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Type="InventoryItem" Subtype="JarClayWithLinseedOil" Count="1"/>
+      <Component Tag="Rope" Count="6" />
+      <Component Type="Block" Subtype="WindMillBlade" Count="4" />
+      <Component Type="InventoryItem" Subtype="Small_FactoryKit" Count="1" />
+      <Component Type="InventoryItem" Subtype="Wood_Gear" Count="5" />
+    </Components>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Rotation>YAxis</Rotation>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>0</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>Infinity</MinAllowed>
+        <MaxAllowed>-Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
+    <MaxIntegrity>800</MaxIntegrity>
+    <CriticalIntegrityRatio>0.9</CriticalIntegrityRatio>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_BlockWindmillComponentDefinition">
+    <Id Type="BlockWindmillComponent" Subtype="Windmill" />
+    <MaxPowerOutput>20</MaxPowerOutput>
+    <MaxAltitudeDelta>20</MaxAltitudeDelta>
+    <PowerInterpolation>Linear</PowerInterpolation>
+    <Connection>connection_01</Connection>
+    <ClockwiseAnimation>cw</ClockwiseAnimation>
+    <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
+  </Definition>
+
+</Definitions>

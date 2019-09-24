@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TableWoodLarge" />
+    <Icon>Textures\GUI\Icons\Props\WoodenDiningTable.dds</Icon>
+    <DisplayName>DisplayName_Block_WoodenDiningTable</DisplayName>
+    <Description>Description_Block_WoodenDiningTable</Description>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Universal_Timber" />
+      <Item Tag="Plank" Amount="4" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="TableWoodLarge" />
+    </Results>
+    <CraftingTime Seconds="1" />
+  </Definition>
+
+</Definitions>

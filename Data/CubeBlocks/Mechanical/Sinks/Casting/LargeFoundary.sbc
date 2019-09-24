@@ -1,0 +1,171 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="LargeFoundary" />
+    <Rotation>YAxis</Rotation>
+    <DisplayName>Large Foundary Steel</DisplayName>
+    <Description>Large Foundary Steel</Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\MillstoneMechanical.dds</Icon>
+    <Icon>Textures\GUI\Icons\Materials\IngotSteel.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\Large\Mechanical\foundaryBlock.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\Mechanical\MechanicalGenericConstruction.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Type="InventoryItem" Subtype="Small_FactoryKit" Count="1" />
+      <Component Type="InventoryItem" Subtype="Wood_Gear" Count="5" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Top" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Left" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Right" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Back" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Front" StartX="1" StartY="1" EndX="0" EndY="0" />
+    </MountPoints>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <!-- Disable compound building for the framed blocks; The unframed ones are designed for compounding. -->
+    <CompoundEnabled>false</CompoundEnabled>
+    <MaxIntegrity>6000</MaxIntegrity>
+    <CriticalIntegrityRatio>0.9</CriticalIntegrityRatio>
+  </Definition>
+
+
+
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="UseObjectsComponent" Subtype="LargeFoundary" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory" />
+    </UseObjects>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="Block" Subtype="LargeFoundary" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <Component Type="MechanicalSinkComponent" Subtype="LargeFoundary" />
+    <Component Type="ModelAttachmentComponent" Subtype="LargeFoundary" />
+    <Component Type="AttachmentAnimationComponent" Subtype="LargeFoundary" />
+    <Component Type="Inventory" Subtype="LargeFoundaryToolheadInventory" />
+    <Component Type="UseObjectsComponent" Subtype="LargeFoundary" />
+    
+    <Component Type="Inventory" Subtype="LargeFoundaryInventoryInput" />
+    <Component Type="Inventory" Subtype="LargeFoundaryInventoryOutput" />
+    <Component Type="Inventory" Subtype="ProcessingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    
+    <Component Type="CraftingComponent" Subtype="LargeFoundaryCrafting" />
+    <Component Type="CraftingScheduler" Subtype="LargeFoundaryScheduler" />
+    <Component Type="ToolBasedRecipeProviderComponent" Subtype="LargeFoundaryRecipes" />
+    
+    <Component Type="InventorySpawnComponent"  Subtype="ProductionSpawner"/>
+    <Component Type="MyObjectBuilder_EntityFXComponent" Subtype="MillstoneMechanicalFx" />
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="LargeFoundaryInventoryInput" />
+    <DisplayName>Input</DisplayName>
+    <MaxItemCount>7</MaxItemCount>
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="LargeFoundaryInventoryOutput" />
+    <DisplayName>Output</DisplayName>
+    <MaxItemCount>7</MaxItemCount>
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
+    <MultiplierEnabled>false</MultiplierEnabled>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_ModelAttachmentComponentDefinition">
+    <Id Type="ModelAttachmentComponent" Subtype="LargeFoundary" />
+    <Attachment Name="RotorShaft" Bone="subpart_rotor_center" />
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_MechanicalSinkComponentDefinition">
+    <Id Type="MechanicalSinkComponent" Subtype="LargeFoundary" />
+    <Connection>connection_left</Connection>
+    <Connection>connection_right</Connection>
+    <Connection>connection_front</Connection>
+    <Connection>connection_back</Connection>
+    <Friction>1</Friction>
+    <ClockwiseAnimation>cw</ClockwiseAnimation>
+    <CounterClockwiseAnimation>ccw</CounterClockwiseAnimation>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_AttachmentAnimationComponentDefinition">
+    <Id Type="AttachmentAnimationComponent" Subtype="LargeFoundary" />
+    <Sequence Name="cw" WrapMode="Loop">
+      <Animation AttachmentPoint="RotorShaft">
+        <Key Time="0" />
+        <Key Time="5">
+          <OrientationEuler x="360" y="0" z="0" />
+        </Key>
+      </Animation>
+    </Sequence>
+    <Sequence Name="ccw" WrapMode="Loop">
+      <Animation AttachmentPoint="RotorShaft">
+        <Key Time="0" />
+        <Key Time="5">
+          <OrientationEuler x="-360" y="0" z="0" />
+        </Key>
+      </Animation>
+    </Sequence>
+  </Definition>
+  <!-- ================================================================================ --> 
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="LargeFoundaryCrafting" />
+    <PowerRequired>None</PowerRequired>
+    <InputInventory>LargeFoundaryInventoryInput</InputInventory>
+    <OutputInventory>LargeFoundaryInventoryOutput</OutputInventory>
+    <CraftingInventory>ProcessingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <MergeStacks>true</MergeStacks>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="LargeFoundaryScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="MillstoneMechanicalCrafting" />
+    <RecipeSelection>Automatic</RecipeSelection>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ToolBasedRecipeProviderComponentDefinition">
+    <Id Type="ToolBasedRecipeProviderComponent" Subtype="LargeFoundaryRecipes" />
+    <MonitoredInventory Type="Inventory" Subtype="LargeFoundaryToolheadInventory" />
+    <ToolheadConstraint Type="ItemTypeConstraint" Subtype="LargeFoundaryToolheadInventory" />
+  </Definition>
+  
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="LargeFoundaryToolheadInventory" />
+    <DisplayName>DisplayName_InventoryName_Toolhead</DisplayName>
+    <MaxItemCount>1</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <Constraint Type="ItemTypeConstraint" Subtype="LargeFoundaryToolheadInventory" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ItemTypeConstraint">
+    <Id Type="ItemTypeConstraint" Subtype="LargeFoundaryToolheadInventory" />
+    <Whitelist>true</Whitelist>
+    <Item Type="ToolheadItem" Subtype="Small_Casting_Steel_Gear_Steel_Toolhead" />
+    <Item Type="ToolheadItem" Subtype="Small_Casting_SteelAxe_Steel_Toolhead" />
+    <Item Type="ToolheadItem" Subtype="Small_Casting_HammerSteel_Steel_Toolhead" />
+    <Item Type="ToolheadItem" Subtype="Small_Casting_PickaxeSteel_Steel_Toolhead" />
+    <Item Type="ToolheadItem" Subtype="Small_Casting_PlowSteel_Steel_Toolhead" />
+    <Item Type="ToolheadItem" Subtype="Small_Casting_SwordSteel_Steel_Toolhead" />
+    <Item Type="ToolheadItem" Subtype="Small_Casting_ShovelSteel_Steel_Toolhead" />
+  </Definition>
+</Definitions>

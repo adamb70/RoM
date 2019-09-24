@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="BerryPreserve" />
+    <Tag>Dish</Tag>
+    <Public>true</Public>
+    <DisplayName>Red Berry Preserve</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\RedJam.dds</Icon>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Model>Models\Consumables\JamJar.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <Effect Type="EntityStatEffect" Subtype="BerryPreserve_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="BerryPreserve_Food" />
+    <Effect Type="EntityStatEffect" Subtype="BerryPreserve_Vigor" />
+    <UseSound>PlayEat</UseSound>
+  </Definition> 
+
+
+<Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve"/>
+    <DisplayName>Red Berry Preserve</DisplayName>
+    <Icon>Textures\GUI\Icons\Consumables\RedJam.dds</Icon>
+    <Category>Cooking</Category>
+    <Prerequisites>
+      <Item Amount="6" Type="ConsumableItem" Subtype="Berries" />
+      <!--<Item Amount="9" Type="ConsumableItem" Subtype="Berry_Blue" />-->
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="ConsumableItem" Subtype="BerryPreserve" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition> 
+
+
+</Definitions>

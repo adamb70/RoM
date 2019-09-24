@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Boots" />
+    <DisplayName>Boots</DisplayName>
+    <Description>Boots</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Boots.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="0" z="0" />
+      <Max x="1" y="2" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\Boots.mwm</Model>
+    <PhysicalMaterial>Cloth</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Boots" Count="1" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+    </MountPoints>
+    <Rotation>All</Rotation>
+    <Visible>false</Visible>
+    <MaxIntegrity>800</MaxIntegrity>
+  </Definition>
+
+
+</Definitions>

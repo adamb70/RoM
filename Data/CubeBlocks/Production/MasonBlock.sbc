@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Masonry_Table" />
+    <Rotation>All</Rotation>
+    <DisplayName>Masonry Table</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\MasonBlock.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-2" y="-2" z="-2" />
+      <Max x="2" y="2" z="2" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\WoodTable.mwm</Model>
+    <PhysicalMaterial>StoneSoft</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Masonry_Table" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>130</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Table"/>
+    <DisplayName>Masonry Block</DisplayName>
+    <Description>This is an essential for masonry and crafting things out of stone material, including furnaces.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\Masonry.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\MasonBlock.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="5" Tag="Universal_Stone" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Masonry_Table" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+</Definitions>

@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Survival Essentials: Campfire</DisplayName>
+    <Description>
+"Fire, the invention that started it all.
+Fire can be destructive, if not lethal, but
+to master fire is to manifest survival!" 
+
+The Campfire is the simplist way to cook 
+food with, though it's limited to lower
+skilled foods.
+
+
+((Hint: Pick up small stones on the ground
+to aquire Pristine Stones))</Description>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stone" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_Bonfire" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <!-- =================================================================================== -->  
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedJam.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Red Berry Preserve</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Berry" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_BerryPreserve" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  
+
+  <!-- =================================================================================== -->
+
+  <!-- Log Walls -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLog_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLog.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLog</DisplayName>
+    <Description/>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLog" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogWithWindow_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLogWithWindow.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLogWithWindow</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogWithWindow" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogWithEntrance_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLogWithEntrance.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLogWithEntrance</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogWithEntrance" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogSlopeLeft_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallWoodLogSlopeLeft.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Log Sloped Wall</DisplayName>
+    <Description/>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogSlopeLeft" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogSlopeTop_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallWoodLogSlopeTop.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLogSlopeTop</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogSlopeTop" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallLogPillar_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallWoodLogCorner.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>DisplayName_Block_WallLogPillar</DisplayName>
+    <Description/>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_WallLogPillar" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+
+  <!-- Norden Walls -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClay_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLog.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Wall.dds</Icon>
+    <DisplayName>Norden Wall</DisplayName>
+    <Description/>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClay" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClayWithWindow_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\WallWoodLogWithWindow.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Window.dds</Icon>
+    <DisplayName>Norden Window</DisplayName>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClayWithWindow" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClayWithEntrance_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\cubes\House Half Timber Door.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Norden Door</DisplayName>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClayWithEntrance" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClaySlope_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\House Half Timber Triangle.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Norden Sloped Wall</DisplayName>
+    <Description/>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClaySlope" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="WallClaySlopeTop_Carpentry" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WallWoodLogSlopeTop.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\HouseTimberTriangleOdd.dds</Icon>
+    <DisplayName>Norden Triangle Wall</DisplayName>
+    <Category>Carpentry_Book_Norden_Construction</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpentry_Schematic_WallClaySlopeTop" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <!-- Milestone -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />
+    <DisplayName>Ancestral Knowledge</DisplayName>
+    <Description>
+"Ancestral knowledge passed down through generations,
+it is now the time to make sure of it."
+
+Begins the Research Tree...
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Category>Milestone</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Ancestral_Knowledge_Schematic" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />
+    <DisplayName>Teachings of The Nomad</DisplayName>
+    <Description>
+"Migration is a daily part of life, and 
+inventing the wheel will make life much 
+easier."
+
+...researches carts...
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Category>Milestone</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Teachings_Of_The_Nomad_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Establishing_Encampment_Milestone" />
+    <DisplayName>Establish The Encampment</DisplayName>
+    <Description>
+"Establishing the Encampment guarantees our
+safty when traveling abroad or claiming new
+land."
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Category>Milestone</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Establishing_Encampment_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Founding_Our_Settlement_Milestone" />
+    <DisplayName>Founding Our Settlement</DisplayName>
+    <Description>
+"We stake our claim into the ground,
+declaring our sovergnty."
+
+...researches Settlements.
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\LawGovernment.dds</Icon>
+    <Category>Milestone</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="SchematicItem" Subtype="Founding_Our_Settlement_Schematic" />
+    </Results>
+    <CraftingTime Seconds="1.5"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+
+
+  <!-- Norden furniture -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NordicChair_Carpenter" />
+    <DisplayName>Carpenter: Norden Chair</DisplayName>
+    <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NordicChair.dds</Icon>
+    <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+    <Category>Norden_Carpentry_Book</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_NordicChair" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NordicChair" />    
+    <DisplayName>Norden Chair</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NordicChair.dds</Icon>
+    <Category>Norden_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="5" Type="InventoryItem" Subtype="Sticks" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="NordicChair" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NorseBed_Carpenter" />
+    <DisplayName>Carpenter: Norden Bed</DisplayName>
+    <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NorseBed.dds</Icon>
+    <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+    <Category>Norden_Carpentry_Book</Category>
+    <Prerequisites>
+      <Item Amount="8" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_NorseBed" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NorseBed" />    
+    <DisplayName>Norden Bed</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NorseBed.dds</Icon>
+    <Category>Norden_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="8" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="3" Type="InventoryItem" Subtype="StringLinen" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="NorseBed" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NordicThrone_Carpenter" />
+    <DisplayName>Carpenter: Norden Throne</DisplayName>
+    <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NordicThrone.dds</Icon>
+    <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+    <Category>Norden_Carpentry_Book</Category>
+    <Prerequisites>
+      <Item Amount="16" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="3" Type="SchematicItem" Subtype="Schematic_Flax" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Carpenter_Schematic_NordicThrone" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- RoM Research -->
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NordicThrone" />    
+    <DisplayName>Norden Throne</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NordicThrone.dds</Icon>
+    <Category>Norden_Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="12" Type="InventoryItem" Subtype="Sticks" />
+      <Item Amount="4" Type="InventoryItem" Subtype="StringLinen" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="NordicThrone" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+
+
+
+</Definitions>

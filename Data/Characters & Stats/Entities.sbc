@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  
+  <!-- The decaying component. Sets how often to decay 1 durability of items inside -->
+  <Definition xsi:type="MyObjectBuilder_DecayHandlerComponentDefinition">
+    <Id Type="DecayHandlerComponent" Subtype="CharacterInvDecay"/>
+    <TickInterval>1000</TickInterval> <!-- milliseconds -->
+    <OutputInventory>Internal</OutputInventory> <!-- Specify an inventory in the same container -->
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Merge="Append">
+    <Id Type="EntityBase" Subtype="PlayableCharacter"/>
+
+    <Component Type="EntityStatComponent" Subtype="RoMStats"/>
+    
+    <!-- TESTING!! Decayable component makes certain items in the inventory decay over time -->
+    <!-- <Component Type="DecayHandlerComponent" Subtype="CharacterInvDecay" /> -->
+    
+  </Definition>
+
+  
+</Definitions>

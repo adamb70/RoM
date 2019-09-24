@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition" Merge="Merge">
+    <Id Type="HandItem" Subtype="ShieldKitePersonal"/>
+
+    <MaxDurability>150</MaxDurability>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="ShieldKiteHouse"/>
+    <DisplayName>DisplayName_Item_ShieldKiteHouse</DisplayName>
+    <Description>Description_Item_ShieldKiteHouse</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\ShieldKiteHouse.png</Icon>
+    <Size>
+      <X>0.5</X>
+      <Y>0.3</Y>
+      <Z>0.5</Z>
+    </Size>
+    <Mass>5</Mass>
+    <Model>Models\Weapons\ShieldKitePersonal.mwm</Model>
+    <PhysicalMaterial>ShieldWood</PhysicalMaterial>
+
+    <Animation>Shield</Animation>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <EquippedTransform>
+      <Position x="0" y="0.1" z="0" />
+      <Up x="0" y="1" z="0" />
+      <Forward x="1" y="0" z="0" />
+    </EquippedTransform>
+
+    <BearerDefinition Type="MyObjectBuilder_EntityEquipmentComponent" Subtype="Humanoid"/>
+    <MaxDurability>150</MaxDurability>
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+
+    <!-- Behaviors -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="ShieldBehaviorDefinition" Subtype="ShieldKite"/>
+    </StanceToBehavior>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_ShieldBehaviorDefinition">
+    <Id Type="ShieldBehaviorDefinition" Subtype="ShieldKite"/>
+
+    <CanBlock>true</CanBlock>
+
+    <!-- Cover from the left -->
+    <LeftSwing>
+      <Coverage>Left</Coverage>
+      <Coverage>Right</Coverage>
+      <Coverage>Center</Coverage>
+    </LeftSwing>
+
+    <!-- Cover from the right -->
+    <RightSwing>
+      <Coverage>Left</Coverage>
+      <Coverage>Right</Coverage>
+      <Coverage>Center</Coverage>
+    </RightSwing>
+
+    <!-- Cover from the up -->
+    <ForwardSwing>
+      <Coverage>Head</Coverage>
+      <Coverage>Center</Coverage>
+    </ForwardSwing>
+
+    <RaiseAnimation>block_idle</RaiseAnimation>
+    <RaiseTime>.35</RaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <ProjectileBlockStatCost Stat="Stamina" Cost="5" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityBannerComponentDefinition">
+    <Id Type="MyObjectBuilder_OwnershipBannerComponent" Subtype="ShieldPersonalBanner" />
+    <Entries>
+      <Entry Material="ShieldMaterial" Type="Player" />
+    </Entries>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="HandItem" Subtype="ShieldKitePersonal" />
+    <Component Type="EquipmentOwnershipComponent" />
+    <Component Type="OwnershipBannerComponent" Subtype="ShieldPersonalBanner" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityBannerComponentDefinition">
+    <Id Type="MyObjectBuilder_OwnershipBannerComponent" Subtype="ShieldHouseBanner" />
+    <Entries>
+      <Entry Material="ShieldMaterial" Type="Faction" />
+    </Entries>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="HandItem" Subtype="ShieldKiteHouse" />
+    <Component Type="EquipmentOwnershipComponent" />
+    <Component Type="OwnershipBannerComponent" Subtype="ShieldHouseBanner" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ShieldKitePersonal"/>
+    <DisplayName>DisplayName_Item_ShieldKitePersonal</DisplayName>
+    <Description>Description_Item_ShieldKitePersonal</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\ShieldKitePersonal.png</Icon>
+    <Category>Weapons</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Plank" />
+      <Item Type="InventoryItem" Subtype="PartsMetal" Amount="2" />
+      <Item Type="Block" Subtype="LeatherTanned" Amount="1" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="ShieldKitePersonal" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ShieldKiteHouse"/>
+    <DisplayName>DisplayName_Item_ShieldKiteHouse</DisplayName>
+    <Description>Description_Item_ShieldKiteHouse</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\ShieldKiteHouse.png</Icon>
+    <Category>Weapons</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Plank" />
+      <Item Type="InventoryItem" Subtype="PartsMetal" Amount="2" />
+      <Item Type="Block" Subtype="LeatherTanned" Amount="1" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="ShieldKiteHouse" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+</Definitions>

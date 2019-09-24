@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- ===================================================================================== -->
+				<!-- Vanilla -->
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Health" />
+    <DisplayName>DisplayName_Stat_Health</DisplayName>
+    <Description>Description_Stat_Health</Description>
+    <Default>100</Default>
+    <Initial>100</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+    <ClampToMaximum>true</ClampToMaximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="HealthDeer" />
+    <StatId>Health</StatId>
+    <DisplayName>DisplayName_Stat_Health</DisplayName>
+    <Description>Description_Stat_Health</Description>
+    <Default>34</Default>
+    <Initial>34</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>34</Maximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Stamina" />
+    <DisplayName>DisplayName_Stat_Stamina</DisplayName>
+    <Description>Description_Stat_Stamina</Description>
+    <Default>100</Default>
+    <Initial>100</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+    <ClampToMaximum>true</ClampToMaximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Food" />
+    <DisplayName>DisplayName_Stat_Food</DisplayName>
+    <Description>Description_Stat_Food</Description>
+    <Initial>100</Initial>
+    <Default>10</Default>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+    <ClampToMaximum>false</ClampToMaximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Vigor" />
+    <DisplayName>DisplayName_Stat_Vigor</DisplayName>
+    <Description>Description_Stat_Vigor</Description>
+    <Initial>100</Initial>
+    <Minimum>50</Minimum>
+    <Maximum>250</Maximum>
+	<IgnoreLock>true</IgnoreLock>
+    <ClampToMaximum>false</ClampToMaximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorGain" />
+    <DisplayName>DisplayName_Stat_VigorGain</DisplayName>
+    <Description>Description_Stat_VigorGain</Description>
+    <Initial>0</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>10</Maximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="VigorLoss" />
+    <DisplayName>DisplayName_Stat_VigorLoss</DisplayName>
+    <Description>Description_Stat_VigorLoss</Description>
+    <Initial>0</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>10</Maximum>
+  </Definition>
+  
+  
+<!-- ===================================================================================== -->
+				<!-- RoM -->
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Mood" />
+    <DisplayName>Mood</DisplayName>
+    <Description>This determines your mood. 0 is Unhappy, 100 is Happy. At 0 mood, you will refuse to do labor. Labor is mining, chopping, or building.</Description>
+    <Initial>50</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Fury" />
+    <DisplayName>Fury</DisplayName>
+    <Description>This determines your Fury. You gain fury from attacking people or animals, once you've reached enough fury you can use a special attack depending on the weapon.</Description>
+    <Initial>0</Initial>
+    <Default>0</Default>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Thirst" />
+    <DisplayName>Thirst</DisplayName>
+    <Description>This determines how thirsty of you are.</Description>
+    <Initial>100</Initial>
+    <Default>10</Default>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+    <ClampToMaximum>true</ClampToMaximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Alcohol" />
+    <DisplayName>Alcohol</DisplayName>
+    <Description>This determines how much Alcohol you have had. Being too drunk will cause your character to have alcohol poisoning.</Description>
+    <Initial>0</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+    <ClampToMaximum>false</ClampToMaximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Poison" />
+    <DisplayName>Poison</DisplayName>
+    <Description>This determines how Poisoned you are.</Description>
+    <Initial>0</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>100</Maximum>
+    <ClampToMaximum>true</ClampToMaximum>
+  </Definition>
+<!-- ===================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatDefinition">
+    <Id Type="MyObjectBuilder_EntityStatDefinition" Subtype="Death" />
+    <DisplayName>Death</DisplayName>
+    <Description>Death</Description>
+    <Default>0</Default>
+    <Initial>0</Initial>
+    <Minimum>0</Minimum>
+    <Maximum>60</Maximum>
+    <ClampToMaximum>true</ClampToMaximum>
+    <IgnoreLock>true</IgnoreLock>
+  </Definition>
+
+
+
+
+
+
+
+</Definitions>

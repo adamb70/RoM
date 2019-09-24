@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="HerbDryingRack" />
+    <Rotation>All</Rotation>
+    <DisplayName>Herb Drying Rack</DisplayName>
+    <Description>Herb Drying Rack</Description>
+    <Icon>Textures\GUI\Icons\Props\WeaponRack.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-2" y="0" z="0" />
+      <Max x="2" y="4" z="2" />
+    </BoundingBox>
+    <Model>Models\Cubes\small\WeaponRack.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="WeaponRack" Count="1" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="4" EndY="2" />
+    </MountPoints>
+    <UseModelIntersection>true</UseModelIntersection>
+    <Mass>5</Mass>
+    <MaxIntegrity>120</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="HerbDryingRack"/>
+    <Icon>Textures\GUI\Icons\Props\WeaponRack.dds</Icon>
+    <DisplayName>Herb Drying Rack</DisplayName>
+    <Description>Herb Drying Rack</Description>
+    <Category>Carpentry_Table</Category>
+    <Prerequisites>
+      <Item Amount="4" Tag="Timber" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="HerbDryingRack" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="HerbDryingRackInput" />
+    <MaxItemCount>7</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <SupportsAreaInventory>true</SupportsAreaInventory>
+    <Constraint Type="ItemTagConstraint" Subtype="HerbDryingRackInput" />
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ItemTagConstraint">
+    <Id Type="ItemTagConstraint" Subtype="HerbDryingRackInput" />
+    <Whitelist>true</Whitelist>
+    <Tag>Dryable_Ingredient</Tag>
+    <!-- <Id Type="DurableItem" /> -->
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="MyObjectBuilder_Inventory" Subtype="HerbDryingRackOutput" />
+    <MaxItemCount>7</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <SupportsAreaInventory>true</SupportsAreaInventory>
+    <Constraint Type="ItemTagConstraint" Subtype="HerbDryingRackOutput" />
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ItemTagConstraint">
+    <Id Type="ItemTagConstraint" Subtype="HerbDryingRackOutput" />
+    <Whitelist>true</Whitelist>
+    <!-- <Tag>Dried_Ingredient</Tag> -->
+  </Definition>
+
+  <!-- The decay handling component. Sets how often to decay 1 durability of items inside -->
+  <Definition xsi:type="MyObjectBuilder_DecayHandlerComponentDefinition">
+    <Id Type="DecayHandlerComponent" Subtype="DecayableHerbDrying"/>
+    <TickInterval>10000</TickInterval>
+    <!-- in milliseconds -->
+    <OutputInventory>HerbDryingRackOutput</OutputInventory>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="HerbDryingRack" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="ModelAttachmentComponent" Subtype="WeaponRack" />
+    <Component Type="VisualInventoryComponent" Subtype="WeaponRackVisualInventory" />
+    <Component Type="Inventory" Subtype="WeaponRack" />
+    <Component Type="Inventory" Subtype="HerbDryingRackInput" />
+    <Component Type="Inventory" Subtype="HerbDryingRackOutput" />
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+    <Component Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
+
+    <Component Type="DecayHandlerComponent" Subtype="DecayableHerbDrying" />
+  </Definition>
+
+</Definitions>

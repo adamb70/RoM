@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- =================================================================================== -->
+
+  <!-- Farming Rotten -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Rotten_Pumpkin" />
+    <Tag>Rotten</Tag>
+    <DisplayName>Rotten Pumpkin</DisplayName>
+    <Description>While this may be rotten, you can still use it as compost for a Compost Bin.</Description>
+    <Icon>Textures\GUI\Icons\Consumables\Pumpkin.dds</Icon>
+    <Model>Models\Environment\Bushes\Pumpkin.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Rotten_Cabbage" />
+    <Public>true</Public>
+    <Tag>Rotten</Tag>
+    <DisplayName>Rotten Cabbage</DisplayName>
+    <Description>While this may be rotten, you can still use it as compost for a Compost Bin.</Description>
+    <Icon>Textures\GUI\Icons\Consumables\CabbageHead.dds</Icon>
+    <Model>Models\Consumables\CabbageHead.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Rotten_RedCabbage" />
+    <Public>true</Public>
+    <Tag>Rotten</Tag>
+    <DisplayName>Rotten Red Cabbage</DisplayName>
+    <Description>While this may be rotten, you can still use it as compost for a Compost Bin.</Description>
+    <Icon>Textures\GUI\Icons\Consumables\RedCabbageHead.dds</Icon>
+    <Model>Models\Consumables\RedCabbageHead.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Rotten_FlaxStraws" />
+    <Public>true</Public>
+    <Tag>Rotten</Tag>
+    <DisplayName>Rotten Flax Straws</DisplayName>
+    <Description>While this may be rotten, you can still use it as compost for a Compost Bin.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
+    <Model>Models\Components\FlaxBundle.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Rotten_WheatStraws" />
+    <Public>true</Public>
+    <Tag>Rotten</Tag>
+    <DisplayName>Rotten Wheat Straws</DisplayName>
+    <Description>While this may be rotten, you can still use it as compost for a Compost Bin.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
+    <Model>Models\Components\WheatStraws.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Rotten_Herbs" />
+    <Public>true</Public>
+    <Tag>Rotten</Tag>
+    <DisplayName>Rotten Herbs</DisplayName>
+    <Description>While this may be rotten, you can still use it as compost for a Compost Bin.</Description>
+    <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Rotten_Pinecone" />
+    <Public>true</Public>
+    <DisplayName>Rotten Tree</DisplayName>
+    <Description>While this may be rotten, you can still use it as compost for a Compost Bin.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\PineCone_Icon.dds</Icon>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Rotten_Norden_Barley" />
+    <Public>true</Public>
+    <Tag>Rotten</Tag>
+    <DisplayName>Rotten Norden Barley</DisplayName>
+    <Description>While this may be rotten, you can still use it as compost for a Compost Bin.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
+    <Model>Models\Universal\Farming\norden_barley_item.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>1</Mass>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>100</Health>
+  </Definition>
+
+
+</Definitions>

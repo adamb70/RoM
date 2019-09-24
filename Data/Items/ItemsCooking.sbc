@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- =================================================================================== -->
+
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Pie_Dish" />
+      <Public>true</Public>
+      <DisplayName>Pie Dish</DisplayName>
+	  <Description>Description_Item_Pie_Dish</Description>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\pie_dish.dds</Icon>
+      <Model>Models\Consumables\Bread.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Size>
+        <X>0.3</X>
+        <Y>0.1</Y>
+        <Z>0.3</Z>
+      </Size>
+      <Mass>0.1</Mass>
+      <MaxStackAmount>10</MaxStackAmount>
+      <Health>50</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Kettle" />
+      <Public>true</Public>
+      <DisplayName>Kettle</DisplayName>
+	  <Description>Description_Item_Kettle</Description>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\kettle.dds</Icon>
+      <Model>Models\Consumables\Bread.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Size>
+        <X>0.3</X>
+        <Y>0.1</Y>
+        <Z>0.3</Z>
+      </Size>
+      <Mass>0.1</Mass>
+      <MaxStackAmount>4</MaxStackAmount>
+      <Health>50</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+
+
+  
+
+  
+  
+  <!-- ================================================================================ -->
+    
+      <!-- Brewing -->
+    
+  <!-- ================================================================================ -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Sterilized_Wort" />
+      <Public>true</Public>
+      <DisplayName>Sterilized Wort</DisplayName>
+	  <Description>Used in the process of brewing.</Description>
+      <Icon>Textures\GUI\Icons\Universal\Milling\Barley_Malt.dds</Icon>
+      <Model>Models\Components\FlourBag.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <MaxStackAmount>15</MaxStackAmount>
+      <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+  <!-- ================================================================================ -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Unfiltered_Alcohol" />
+      <Public>true</Public>
+      <DisplayName>Unfiltered Alcohol</DisplayName>
+	  <Description>Used in the process of brewing and 
+other alchemical recipies.</Description>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Alcohol.dds</Icon>
+      <Model>Models\Components\FlaxBundle.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <MaxStackAmount>15</MaxStackAmount>
+      <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+  <!-- ================================================================================ -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Unfiltered_Norden_Lager" />
+      <Public>true</Public>
+      <DisplayName>Unfiltered (Norden Lager)</DisplayName>
+	  <Description>Used in the process of brewing Norden Ale.</Description>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Lager.dds</Icon>
+      <Model>Models\Components\FlaxBundle.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <MaxStackAmount>15</MaxStackAmount>
+      <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+  <!-- ================================================================================ -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Alcohol" />
+      <Public>true</Public>
+      <DisplayName>Alcohol</DisplayName>
+	  <Description>Used in the process of brewing and 
+other alchemical recipies.</Description>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Alcohol.dds</Icon>
+      <Model>Models\Components\FlaxBundle.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <MaxStackAmount>15</MaxStackAmount>
+      <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+  <!-- ================================================================================ -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Norden_Lager" />
+      <Public>true</Public>
+      <DisplayName>Norden Lager</DisplayName>
+	  <Description>Used in the process of brewing Norden Ale.</Description>
+      <Icon>Textures\GUI\Icons\Universal\Cooking\Norden_Lager.dds</Icon>
+      <Model>Models\Components\FlaxBundle.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <MaxStackAmount>15</MaxStackAmount>
+      <Health>100</Health>
+  </Definition>
+  <!-- =================================================================================== -->
+</Definitions>

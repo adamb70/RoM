@@ -1,119 +1,20 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <CubeBlocks>
-    <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-      <Id>
-        <TypeId>MyObjectBuilder_CubeBlock</TypeId>
-        <SubtypeId>TorchWall</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Block_TorchWall</DisplayName>
-      <BlockPairName>TorchWall</BlockPairName>
-      <Icon>Textures\GUI\Icons\Cubes\WallTorch.dds</Icon>
-      <CubeSize>Small</CubeSize>
-      <BlockTopology>TriangleMesh</BlockTopology>
-      <Size x="2" y="4" z="1" />
-      <ModelOffset x="0" y="0" z="0" />
-      <Model>Models\Cubes\Small\TorchWall.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
-      <Components>
-        <Component Tag="ScrapWood" Count="2" />
-        <Component Type="InventoryItem" Subtype="MetalParts" Count="2" />
-      </Components>
-      <CriticalComponent Tag="ScrapWood" Index="0" />
-      <MaxIntegrity>200</MaxIntegrity>
-      <MirroringY>Z</MirroringY>
-      <MirroringZ>Y</MirroringZ>
-      <BuildTimeSeconds>6</BuildTimeSeconds>
-      <MountPoints>
-        <MountPoint Side="Right" StartX="0.9313071" StartY="2" EndX="0.06869292" EndY="3" />
-      </MountPoints>
-      <Direction>Both</Direction>
-      <Rotation>Both</Rotation>
-      <Mass>2</Mass>
-      <AvailableInSurvival>true</AvailableInSurvival>
-    </Definition>
-  </CubeBlocks>
-  
-  <Definition xsi:type="MyObjectBuilder_EntityStateComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_EntityStateComponent</TypeId>
-      <SubtypeId>TorchWall</SubtypeId>
-    </Id>
-    <InitialState>Off</InitialState>
-    <States>
-      <State Name="On">
-        <Transition>Off</Transition>
-      </State>
-      <State Name="Off">
-        <Transition>On</Transition>
-      </State>
-    </States>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_EntityFXComponent</TypeId>
-      <SubtypeId>TorchWall</SubtypeId>
-    </Id>
-    <Effects>
-      <Effect StartEvent="On" StopEvent="Off" Dummy="detector_fire">
-        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch"/>
-      </Effect>
-    </Effects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_UseObjectsComponent</TypeId>
-      <SubtypeId>TorchWall</SubtypeId>
-    </Id>
-    <LoadFromModel>false</LoadFromModel>
-    <UseObjects>
-      <UseObject Dummy="detector_fire" Name="Generic" />
-    </UseObjects>
-  </Definition>
-
-  <Definition xsi:type="MyObjectBuilder_StateUseObjectComponentDefinition">
-    <Id>
-      <TypeId>MyObjectBuilder_StateUseObjectComponent</TypeId>
-      <SubtypeId>TorchWall</SubtypeId>
-    </Id>
-    <Tooltip>UseObject_DynamicPress</Tooltip>
-    <PrimaryAction>Manipulate</PrimaryAction>
-    <SupportsAccessSettings>false</SupportsAccessSettings>
-    <UseObjectTransitionTriggers>
-      <Trigger Dummy="detector_fire" From="On" To="Off" ActionName="ActionHint_DouseFire" />
-      <Trigger Dummy="detector_fire" From="Off" To="On" ActionName="ActionHint_LightFire" />
-    </UseObjectTransitionTriggers>
-  </Definition>
-
-  <EntityContainers>
-    <Container>
-      <Id>
-        <TypeId>CubeBlock</TypeId>
-        <SubtypeId>TorchWall</SubtypeId>
-      </Id>
-      <DefaultComponents>
-        <Component BuilderType="MyObjectBuilder_EntityStateComponent" SubtypeId="TorchWall" ForceCreate="true"/>
-        <Component BuilderType="MyObjectBuilder_EntityFXComponent" SubtypeId="TorchWall" ForceCreate="true"/>
-        <Component BuilderType="MyObjectBuilder_UseObjectsComponent" SubtypeId="TorchWall" ForceCreate="true"/>
-        <Component BuilderType="MyObjectBuilder_StateUseObjectComponent" SubtypeId="TorchWall" ForceCreate="true"/>
-      </DefaultComponents>
-    </Container>
-  </EntityContainers>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchWall"/>
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TorchWall" />
     <DisplayName>DisplayName_Block_TorchWall</DisplayName>
+    <Description>Description_Block_TorchWall</Description>
     <Icon>Textures\GUI\Icons\Cubes\WallTorch.dds</Icon>
-    <Category>Woodcrafting</Category>
+    <Category>Anvil</Category>
     <Prerequisites>
-      <Item Amount="2" Tag="ScrapWood" />
-      <Item Amount="2" Type="InventoryItem" Subtype="MetalParts" />
+      <Item Amount="2" Tag="Universal_Stick" />
+      <Item Amount="2" Type="InventoryItem" Subtype="PartsMetal" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="TorchWall" />
+      <Item Amount="1" Type="Block" Subtype="TorchWall" />
     </Results>
-    <CraftingTime Seconds="1"/>
+    <CraftingTime Seconds="2" />
   </Definition>
+
 </Definitions>

@@ -1,53 +1,37 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Anvil" />
-		  <BlockPairName>Anvil</BlockPairName>
-		  <DisplayName>Anvil</DisplayName>
-      		  <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Anvil.dds</Icon>
-		  <Public>true</Public>
-		  <CubeSize>Small</CubeSize>
-		  <BlockTopology>TriangleMesh</BlockTopology>
-		  <Size x="3" y="2" z="3" />
-		  <ModelOffset x="0" y="0" z="0" />
-		  <Model>Models\Universal\Blacksmithing\anvil_tier1.mwm</Model>
-		  <BuildProgressModels>
-		  </BuildProgressModels>
-		  <PhysicalMaterial>Rock</PhysicalMaterial>
-		  <Components>
-			<Component Subtype="IronIngot" Count="1" />
-		  </Components>
-		  <CriticalComponent Subtype="IronIngot" Index="0" />
-		  <MirroringY>Z</MirroringY>
-		  <MirroringZ>Y</MirroringZ>
-		  <BuildTimeSeconds>6</BuildTimeSeconds>
-		  <AvailableInSurvival>true</AvailableInSurvival>
-		  <VoxelPlacement>
-			<StaticMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</StaticMode>
-			<DynamicMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</DynamicMode>
-		  </VoxelPlacement>
-		</Definition>
-	
 
-	
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Anvil" />
+    <Rotation>All</Rotation>
+    <DisplayName>Anvil</DisplayName>
+    <Description>Anvil</Description>
+    <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Anvil.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
+    <Model>Models\Universal\Blacksmithing\anvil_tier1.mwm</Model>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Anvil" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>6000</MaxIntegrity>
+  </Definition>
 
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Anvil_Blacksmithing"/>
     <DisplayName>Blacksmithing: Anvil</DisplayName>
     <Description>Anvils are the most basic necessity for blacksmiths.</Description>
-      <Icon>Textures\GUI\Icons\ScrollBackground_1.dds</Icon>
-      	<Icon>Textures\GUI\Icons\Universal\Books\Blacksmith.dds</Icon>
-        <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Anvil.dds</Icon>
-      <Icon>Textures\GUI\Icons\ScrollBackground_2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\Blacksmith.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Anvil.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
     <Category>Blacksmithing_Book</Category>
     <Prerequisites>
       <Item Amount="15" Type="SchematicItem" Subtype="Schematic_IronOre" />
@@ -62,28 +46,18 @@
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Anvil"/>
     <DisplayName>Anvil</DisplayName>
     <Description>Anvils are the most basic necessity for blacksmiths.</Description>
-      	<Icon>Textures\GUI\Icons\Universal\Books\Blacksmith.dds</Icon>
-      	<Icon>Textures\GUI\Icons\Universal\Blacksmithing\Anvil.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\Blacksmith.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Anvil.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="3" Type="InventoryItem" Subtype="IronIngot" />
+      <Item Amount="3" Type="InventoryItem" Subtype="IngotIron" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Anvil" />
+      <Item Amount="1" Type="Block" Subtype="Anvil" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Anvil"/>
-    <CraftingCategories>
-      <Category>Weapons</Category>
-      <Category>MetalWorks</Category>
-      <Category>Anvil</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
-    <CraftingSpeedMultiplier>.75</CraftingSpeedMultiplier>
-  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
     <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Anvil" />
@@ -92,20 +66,85 @@
     </UseObjects>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="AnvilInventory" />
-    <InventoryName>AnvilInventory</InventoryName>
-    <DisplayName>Anvil</DisplayName>
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="AnvilCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>All</PowerRequired>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>CraftString_Forge</CraftString>
+    <CraftingString>CraftingString_Forging</CraftingString>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Anvil" />
-    <Component Type="UseObjectsComponent" Subtype="Anvil" ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="AnvilInventory" ForceCreate="true"/>
-    <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Anvil" ForceCreate="true"/>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="AnvilScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="AnvilCrafting" />
+    <QueueSize>6</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="AnvilRecipes" />
+    <Category>Weapons</Category>
+    <Category>MetalWorks</Category>
+    <Category>Anvil</Category>
+    <Category>Anvil_Copper</Category>
+    <Category>Anvil_Bronze</Category>
+    <Category>Anvil_Iron</Category>
+    <Category>Anvil_Steel</Category>
+    <Category>Anvil_Copper_Mechanical</Category>
+    <Category>Anvil_Iron_Mechanical</Category>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_PhysicalPowerProviderComponentDefinition">
+    <Id Type="PhysicalPowerProviderComponent" Subtype="AnvilPower" />
+    <Tool>
+      <ToolId Type="HandItem" Subtype="HammerWood" />
+      <SuppliedPower Seconds="0.3" />
+    </Tool>
+    <Tool>
+      <ToolId Type="HandItem" Subtype="HammerCopper" />
+      <SuppliedPower Seconds="0.5" />
+    </Tool>
+    <Tool>
+      <ToolId Type="HandItem" Subtype="HammerIron" />
+      <SuppliedPower Seconds="0.7" />
+    </Tool>
+    <Tool>
+      <ToolId Type="HandItem" Subtype="HammerBronze" />
+      <SuppliedPower Seconds="1" />
+    </Tool>
+    <Tool>
+      <ToolId Type="HandItem" Subtype="HammerSteel" />
+      <SuppliedPower Seconds="1" />
+    </Tool>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Anvil" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="AnvilCrafting" />
+    <Component Type="CraftingScheduler" Subtype="AnvilScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="AnvilRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+
+    <Component Type="PhysicalPowerProviderComponent" Subtype="AnvilPower" />
+
+
+    <!-- <Component Type="ModelAttachmentComponent" Subtype="SmithyModelAttachment" /> -->
+    <!-- <Component Type="VisualInventoryComponent" Subtype="SmithyVisualInventory" /> -->
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+    <Component Type="EntityFXComponent" Subtype="SmithyFX" />
+    <Component Type="UseObjectsComponent" Subtype="Anvil"/>
   </Definition>
 
 </Definitions>

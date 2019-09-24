@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--Drawbridge-->
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NPC_DrawbridgeWoodWithArchStone" />
+    
+    <DisplayName>NPC Wooden Drawbridge</DisplayName>
+    <Description>Interactable by everyone, even on claims.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\DrawBridge_V1.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+	  <BoundingBox>
+	    <Min x="0" y="0" z="-1" />
+	    <Max x="2" y="2" z="2" />
+	  </BoundingBox>
+    <Model>Models\Cubes\large\DrawbridgeStoneArch.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\DrawbridgeStoneArch_V1_C1.mwm" />
+    </BuildProgressModels>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
+    <Components>
+      <Component Tag="ScrapWood" Count="1" />
+      <Component Tag="Timber" Count="10" />
+      <Component Tag="Plank" Count="20" />
+      <Component Type="InventoryItem" Subtype="StoneSmall" Count="15" />
+      <Component Type="InventoryItem" Subtype="PartsMetal" Count="32" />
+      <Component Tag="Rope" Count="2" />
+    </Components>
+    <UseModelIntersection>false</UseModelIntersection>
+    <Rotation>YAxis</Rotation>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>Infinity</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MinAllowed>0.05</MinAllowed>
+        <MaxAllowed>0.2</MaxAllowed>
+        <VoxelOnly>true</VoxelOnly>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+      </DynamicMode>
+    </VoxelPlacement>
+    <MaxIntegrity>1600</MaxIntegrity>
+    <PreviewModel>Models\Cubes\large\DrawBridge_V1_Preview.mwm</PreviewModel>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NPC_DrawbridgeWoodWithArchStone" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <!-- ========== disable ownership ========== -->
+    <!-- <Component Type="MedievalGridOwnershipComponent" /> -->
+    <!-- <Component Type="AccessPermissionComponent" /> -->
+    <Component Type="ModelAttachmentComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="AttachmentAnimationComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="EntityStateComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="StateAnimationComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="StateUseObjectComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="AnimationEventSoundComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="AnimationEventStateTransitionComponent" Subtype="DrawbridgeWoodWithArchStone" />
+    <Component Type="EntityRopeComponent" Subtype="DrawbridgeWoodWithArchStone" />
+  </Definition>
+</Definitions>

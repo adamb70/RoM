@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Definition xsi:type="MyObjectBuilder_TreasureMapItemDefinition" Copy="Merge">
+		<Id Type="TreasureMapItem" Subtype="ReadableBook" />
+    <CopyFrom Type="TreasureMapItem" Subtype="MapTreasure" />
+    
+		<DisplayName>Readable Book</DisplayName>
+		<Description>Readable Book 
+    
+    Press primary to read, secondary to turn the page</Description>
+    
+		<StanceToBehavior>
+			<StanceName>NormalMode</StanceName>
+			<BehaviorId Type="MyObjectBuilder_ReadableItemBehaviorDefinition" Subtype="ReadableBook"/>
+		</StanceToBehavior>
+	</Definition>
+  
+<Definition xsi:type="MyObjectBuilder_ReadableItemBehaviorDefinition">
+  <Id Type="MyObjectBuilder_ReadableItemBehaviorDefinition" Subtype="ReadableBook"/>
+  <Title>Book Title</Title>
+  <Pages>
+    <Page>This is a readable book test. Left click to read a page, right click to turn to the next page.
+    
+    Bugs:
+    - Must close interface for right click to work - can't fix that.</Page>
+    
+    <Page>Donec et efficitur quam. Aliquam at diam et tellus pellentesque bibendum. Nulla ultricies, massa nec imperdiet accumsan, lacus turpis hendrerit velit, eu scelerisque ex enim a felis. Maecenas tristique metus eu risus finibus dapibus. Donec luctus tortor a tempus scelerisque. Etiam est arcu, fermentum ullamcorper erat nec, vestibulum cursus tortor. Sed at pulvinar enim, sit amet fermentum sapien. Vivamus id velit interdum, varius est at, viverra risus. Donec felis lectus, tincidunt sed orci nec, imperdiet vulputate nisi. In consequat sapien nibh, non tempus lectus aliquam eu. Phasellus pretium, quam volutpat viverra aliquam, mi velit dictum nulla, in dictum quam nulla vel enim. Donec quis scelerisque quam, in dictum ante. Curabitur et mauris velit. Donec a arcu feugiat, tincidunt sem quis, bibendum tellus. Nulla quis mollis sem, at commodo dui. Duis quis vulputate erat.
+
+Curabitur eu mi odio. Aenean rutrum et massa quis volutpat. Duis pulvinar ipsum ut fringilla rutrum. Nam nibh neque, molestie nec velit at, tincidunt egestas turpis. Aliquam nec velit eget quam dignissim fringilla. Praesent viverra sollicitudin eleifend. Quisque vestibulum dolor id urna ornare mattis. Nullam nec tempus elit. Praesent vestibulum, turpis ut tincidunt volutpat, odio lacus sodales arcu, eget rhoncus sapien velit vitae enim. Duis velit ligula, tincidunt in nibh ut, gravida convallis lectus.</Page>
+    <Page>Nullam dapibus lobortis nisl, nec congue lorem faucibus sed. Etiam auctor ligula nec leo fermentum tempus. Nulla id vulputate sapien. Suspendisse non libero sollicitudin, auctor lorem quis, viverra ligula. Vivamus semper finibus elit non consequat. Nullam ut leo iaculis, egestas orci sed, varius dui. Aenean ante purus, lacinia eu lacus vitae, vestibulum gravida arcu.
+
+</Page>
+  </Pages>
+</Definition>
+
+</Definitions>

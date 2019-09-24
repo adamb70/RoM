@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
+    <Id Type="SeedBagHandItem" Subtype="SeedBagRedCabbage"/>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+        
+    <DisplayName>Red Cabbage Seed Bag</DisplayName>
+    <Description>Description_Tool_SeedBag</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
+    
+    <Model>Models\Weapons\SeedBag_Flax.mwm</Model>
+    
+    <MaxStackAmount>1</MaxStackAmount>    
+    <MaxDurability>25</MaxDurability>
+    
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmRedCabbage</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+  
+  
+  <!-- Compost -->
+  
+  
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
+    <Id Type="SeedBagHandItem" Subtype="SeedBagRedCabbage_Compost"/>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    
+    <DisplayName>Red Cabbage Seed Bag (Compost)</DisplayName>
+    <Description>Description_Tool_SeedBag</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
+    
+    <Model>Models\Weapons\SeedBag_Flax.mwm</Model>
+    
+    <MaxStackAmount>1</MaxStackAmount>
+    <MaxDurability>25</MaxDurability>
+    
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>FarmRedCabbage_Compost</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+  
+  
+  <!-- Single Seed bag -->
+  
+  
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
+    <Id Type="SeedBagHandItem" Subtype="Single_SeedBagRedCabbage"/>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    
+    <DisplayName>Red Cabbage Seed Bag</DisplayName>
+    <Description>Description_Tool_SeedBag</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
+    
+    <Model>Models\Weapons\SeedBag_Flax.mwm</Model>
+    
+    <MaxStackAmount>1</MaxStackAmount>
+    <MaxDurability>5</MaxDurability>
+        
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmRedCabbage</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+  
+  
+  <!-- Single Compost seed bag -->
+  
+  
+  <Definition xsi:type="MyObjectBuilder_SeedBagHandItemDefinition" Copy="Merge">
+    <Id Type="SeedBagHandItem" Subtype="Single_SeedBagRedCabbage_Compost"/>
+    <Public>true</Public>
+    
+    <CopyFrom Type="SeedBagHandItem" Subtype="BaseSeedBag"/>
+    
+    <DisplayName>Red Cabbage Seed Bag (Compost)</DisplayName>
+    <Description>Description_Tool_SeedBag</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
+    
+    <Model>Models\Weapons\SeedBag_Flax.mwm</Model>
+    
+    <MaxStackAmount>1</MaxStackAmount>
+    <MaxDurability>5</MaxDurability>
+    
+    <!-- Behavior -->
+    <StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="MyObjectBuilder_RomSeedingToolBehaviorDefinition" Subtype="SeedingNormal"/>
+    </StanceToBehavior>
+    <!-- Seed bag definition -->
+    <GrowableDefinitionId>
+      <TypeId>MyObjectBuilder_FarmableEnvironmentItemDefinition</TypeId>
+      <SubtypeId>Single_FarmRedCabbage_Compost</SubtypeId>
+    </GrowableDefinitionId>
+  </Definition>
+  
+</Definitions>

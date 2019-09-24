@@ -1,0 +1,94 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="SawmillMechanical_Steel" />
+    <Rotation>YAxis</Rotation>
+    <DisplayName>Small Sawmill (Steel)</DisplayName>
+    <Description>"The Steel Sawmill is more efficient than a Bronze Sawmill."
+    </Description>
+    <Public>true</Public>
+    <Icon>Textures\GUI\Icons\Cubes\Blocks\SawmillMechanical.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
+    <Model>Models\Cubes\large\Mechanical\SawmillMechanical.mwm</Model>
+    <BuildProgressModels>
+      <Model UpperBound="0.5" File="Models\Cubes\large\Mechanical\SawmillMechanical_Construction_1.mwm" />
+    </BuildProgressModels>
+    <Components>
+      <Component Type="InventoryItem" Subtype="Small_FactoryKit" Count="1" />
+      <Component Type="InventoryItem" Subtype="Steel_Gear" Count="5" />
+    </Components>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Top" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Left" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Right" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Back" StartX="1" StartY="1" EndX="0" EndY="0" />
+      <MountPoint Side="Front" StartX="1" StartY="1" EndX="0" EndY="0" />
+    </MountPoints>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <!-- Disable compound building for the framed blocks; The unframed ones are designed for compounding. -->
+    <CompoundEnabled>false</CompoundEnabled>
+    <UseModelIntersection>true</UseModelIntersection>
+    <MaxIntegrity>600</MaxIntegrity>
+    <CriticalIntegrityRatio>0.9</CriticalIntegrityRatio>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="SawmillMechanical_Steel" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="MechanicalSinkComponent" Subtype="SawmillMechanical" />
+    <Component Type="ModelAttachmentComponent" Subtype="SawmillMechanical" />
+    <Component Type="AttachmentAnimationComponent" Subtype="SawmillMechanical" />
+    <Component Type="Inventory" Subtype="SawmillMechanicalToolheadInventory_Steel" />
+    <Component Type="VisualInventoryComponent" Subtype="SawmillMechanicalVisualInventory_Steel" />
+
+    <Component Type="Inventory" Subtype="SawmillMechanicalInventory" />
+    <Component Type="Inventory" Subtype="SawmillMechanicalOutputInventory" />
+    <Component Type="Inventory" Subtype="ProcessingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+
+    <Component Type="CraftingComponent" Subtype="SawmillMechanicalCrafting" />
+    <Component Type="CraftingScheduler" Subtype="SawmillMechanicalScheduler" />
+    <Component Type="ToolBasedRecipeProviderComponent" Subtype="SawmillMechanicalRecipes_Steel" />
+    <DamagingCraftingComponent Type="CraftingComponent" Subtype="SawmillMechanicalCrafting" />
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+    <Component Type="MyObjectBuilder_EntityFXComponent" Subtype="SawmillMechanicalFx" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <Id Type="Inventory" Subtype="SawmillMechanicalToolheadInventory_Steel" />
+    <DisplayName>DisplayName_InventoryName_Toolhead</DisplayName>
+    <MaxItemCount>1</MaxItemCount>
+    <MultiplierEnabled>false</MultiplierEnabled>
+    <Constraint Type="ItemTypeConstraint" Subtype="SawmillMechanicalToolheadInventory_Steel" />
+    <OpenEvent>OpenInventory</OpenEvent>
+    <CloseEvent>CloseInventory</CloseEvent>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ItemTypeConstraint">
+    <Id Type="ItemTypeConstraint" Subtype="SawmillMechanicalToolheadInventory_Steel" />
+    <Whitelist>true</Whitelist>
+    <Item Type="ToolheadItem" Subtype="SawbladesTimber_Steel" />
+    <Item Type="ToolheadItem" Subtype="SawbladesPlank_Steel" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_VisualInventoryComponentDefinition">
+    <Id Type="VisualInventoryComponent" Subtype="SawmillMechanicalVisualInventory_Steel" />
+    <Mapping Inventory="SawmillMechanicalToolheadInventory_Steel" Slot="0" AttachmentPoint="Inventory_Toolhead" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ToolBasedRecipeProviderComponentDefinition">
+    <Id Type="ToolBasedRecipeProviderComponent" Subtype="SawmillMechanicalRecipes_Steel" />
+    <MonitoredInventory Type="Inventory" Subtype="SawmillMechanicalToolheadInventory_Steel" />
+    <ToolheadConstraint Type="ItemTypeConstraint" Subtype="SawmillMechanicalToolheadInventory_Steel" />
+  </Definition>
+
+
+</Definitions>

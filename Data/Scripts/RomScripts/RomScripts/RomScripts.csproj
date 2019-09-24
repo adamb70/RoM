@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7F61695-83FF-40F7-95C3-31415AC8819D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RomScripts</RootNamespace>
+    <AssemblyName>RomScripts</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="MySeedingToolBehavior\MyObjectBuilder_SeedingToolBehaviorDefinition.cs" />
+    <Compile Include="MySeedingToolBehavior\MySeedingToolBehaviorDefinition.cs" />
+    <Compile Include="MySeedingToolBehavior\MySeedingToolBehavior.cs" />
+    <Compile Include="RomGUI\MyDecayingItemRenderer.cs" />
+    <Compile Include="Stats\RomDeathEffect\MyObjectBuilder_RomDeathEffect.cs" />
+    <Compile Include="Stats\RomDeathEffect\MyObjectBuilder_RomDeathEffectDefinition.cs" />
+    <Compile Include="Stats\RomDeathEffect\MyRomDeathEffect.cs" />
+    <Compile Include="Stats\RomDeathEffect\MyRomDeathEffectDefinition.cs" />
+    <Compile Include="Stats\RomHealthEffect\MyObjectBuilder_RomHealthEffect.cs" />
+    <Compile Include="Stats\RomHealthEffect\MyObjectBuilder_RomHealthEffectDefinition.cs" />
+    <Compile Include="Stats\RomHealthEffect\MyRomHealthEffect.cs" />
+    <Compile Include="Stats\RomHealthEffect\MyRomHealthEffectDefinition.cs" />
+    <Compile Include="VoxelMining\MyObjectBuilder_RomMinerToolBehaviorDefinition.cs" />
+    <Compile Include="VoxelMining\MyObjectBuilder_VoxelMiningLootTableDefinition.cs" />
+    <Compile Include="VoxelMining\MyRomMinerToolBehavior.cs" />
+    <Compile Include="VoxelMining\MyRomMinerToolBehaviorDefinition.cs" />
+    <Compile Include="VoxelMining\MyVoxelMiningLootTableDefinition.cs" />
+    <Compile Include="Stats\PoisonEffect\MyPoisonEffect.cs" />
+    <Compile Include="Stats\PoisonEffect\MyPoisonEffectDefinition.cs" />
+    <Compile Include="Stats\PoisonEffect\MyObjectBuilder_PoisonEffect.cs" />
+    <Compile Include="Stats\PoisonEffect\MyObjectBuilder_PoisonEffectDefinition.cs" />
+    <Compile Include="DecayingItem\MyDecayHandlerComponent.cs" />
+    <Compile Include="DecayingItem\MyDecayingItem.cs" />
+    <Compile Include="DecayingItem\MyDecayHandlerComponentDefinition.cs" />
+    <Compile Include="DecayingItem\MyDecayingItemDefinition.cs" />
+    <Compile Include="DecayingItem\MyObjectBuilder_DecayHandlerComponent.cs" />
+    <Compile Include="DecayingItem\MyObjectBuilder_DecayingItem.cs" />
+    <Compile Include="DecayingItem\MyObjectBuilder_DecayHandlerComponentDefinition.cs" />
+    <Compile Include="DecayingItem\MyObjectBuilder_DecayingItemDefinition.cs" />
+    <Compile Include="Stats\AlcoholEffect\MyAlcoholEffect.cs" />
+    <Compile Include="Stats\AlcoholEffect\MyAlcoholEffectDefinition.cs" />
+    <Compile Include="Stats\AlcoholEffect\MyObjectBuilder_AlcoholEffect.cs" />
+    <Compile Include="Stats\AlcoholEffect\MyObjectBuilder_AlcoholEffectDefinition.cs" />
+    <Compile Include="Stats\StatExtensions\MyEntityPoisonExtensions.cs" />
+    <Compile Include="Stats\StatExtensions\MyEntityStaminaExtensions.cs" />
+    <Compile Include="Stats\RomStaminaEffect\MyObjectBuilder_RomStaminaEffect.cs" />
+    <Compile Include="Stats\RomStaminaEffect\MyObjectBuilder_RomStaminaEffectDefinition.cs" />
+    <Compile Include="Stats\RomStaminaEffect\MyRomStaminaEffect.cs" />
+    <Compile Include="Stats\RomStaminaEffect\MyRomStaminaEffectDefinition.cs" />
+    <Compile Include="Stats\StatExtensions\MyEntityMoodExtensions.cs" />
+    <Compile Include="Stats\StatExtensions\MyEntityFuryExtensions.cs" />
+    <Compile Include="Stats\StatExtensions\MyEntityAlcoholExtensions.cs" />
+    <Compile Include="Stats\StatExtensions\MyEntityThirstExtensions.cs" />
+    <Compile Include="Stats\MoodEffect\MyObjectBuilder_MoodEffect.cs" />
+    <Compile Include="Stats\MoodEffect\MyObjectBuilder_MoodEffectDefinition.cs" />
+    <Compile Include="Stats\MoodEffect\MyMoodEffect.cs" />
+    <Compile Include="Stats\MoodEffect\MyMoodEffectDefinition.cs" />
+    <Compile Include="Stats\FuryEffect\MyObjectBuilder_FuryEffect.cs" />
+    <Compile Include="Stats\FuryEffect\MyObjectBuilder_FuryEffectDefinition.cs" />
+    <Compile Include="Stats\FuryEffect\MyFuryEffect.cs" />
+    <Compile Include="Stats\FuryEffect\MyFuryEffectDefinition.cs" />
+    <Compile Include="Stats\RomHungerEffect\MyObjectBuilder_RomHungerEffect.cs" />
+    <Compile Include="Stats\RomHungerEffect\MyObjectBuilder_RomHungerEffectDefinition.cs" />
+    <Compile Include="Stats\RomHungerEffect\MyRomHungerEffect.cs" />
+    <Compile Include="Stats\RomHungerEffect\MyRomHungerEffectDefinition.cs" />
+    <Compile Include="Stats\ThirstEffect\MyThirstEffectDefinition.cs" />
+    <Compile Include="Stats\ThirstEffect\MyObjectBuilder_ThirstEffectDefinition.cs" />
+    <Compile Include="Stats\ThirstEffect\MyObjectBuilder_ThirstEffect.cs" />
+    <Compile Include="Stats\ThirstEffect\MyThirstEffect.cs" />
+    <Compile Include="ReadableItem\MyObjectBuilder_ReadableItemBehaviorDefinition.cs" />
+    <Compile Include="ReadableItem\MyReadableItemBehavior.cs" />
+    <Compile Include="ReadableItem\MyReadableItemBehaviorDefinition.cs" />
+    <Compile Include="FueledMechanicalSource\MyFueledMechanicalSource.cs" />
+    <Compile Include="FueledMechanicalSource\MyFueledMechanicalSourceDefinition.cs" />
+    <Compile Include="FueledMechanicalSource\MyObjectBuilder_FueledMechanicalSource.cs" />
+    <Compile Include="FueledMechanicalSource\MyObjectBuilder_FueledMechanicalSourceDefinition.cs" />
+    <Compile Include="WaterFuelComponent - Copy\MyObjectBuilder_MyWaterFuelComponent2.cs" />
+    <Compile Include="WaterFuelComponent - Copy\MyObjectBuilder_MyWaterFuelComponent2Definition.cs" />
+    <Compile Include="WaterFuelComponent - Copy\MyWaterFuelComponent2.cs" />
+    <Compile Include="WaterFuelComponent - Copy\MyWaterFuelComponent2Definition.cs" />
+    <Compile Include="WaterFuelComponent\MyWaterFuelComponent.cs" />
+    <Compile Include="WaterFuelComponent\MyWaterFuelComponentDefinition.cs" />
+    <Compile Include="WaterFuelComponent\MyObjectBuilder_MyWaterFuelComponent.cs" />
+    <Compile Include="WaterFuelComponent\MyObjectBuilder_MyWaterFuelComponentDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MedievalEngineersModApi">
+      <HintPath>F:\SteamLibrary\steamapps\common\MedievalEngineersModSDK\OriginalContent\ModTools\MedievalEngineersModApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

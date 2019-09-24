@@ -1,95 +1,83 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Definition xsi:type="MyObjectBuilder_CubeBlockDefinition">
-    <Id Type="CubeBlock" Subtype="Cooking_Table" />
-      <BlockPairName></BlockPairName>
-      <DisplayName>Cook's Table</DisplayName>
-      <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
-		  <CubeSize>Small</CubeSize>
-		  <BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="6" y="3" z="3" />
-		  <ModelOffset x="0" y="0" z="0" />
-		  <Model>Models\Cubes\Small\WoodTable.mwm</Model>
-		  <PhysicalMaterial>Wood</PhysicalMaterial>
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Cooking_Table" />
+    <DisplayName>Cook's Table</DisplayName>
+    <Description>Cook's Table</Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="0" z="-2" />
+      <Max x="3" y="3" z="1" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\WoodTable.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
     <Components>
-      <Component Tag="Timber" Count="1" />
+      <Component Type="Block" Subtype="Cooking_Table" Count="1" />
     </Components>
-    <CriticalComponent Tag="Timber" Index="0" />
-    <MaxIntegrity>200</MaxIntegrity>
-	  <MountPoints>
-        <MountPoint Side="Top" StartX="0" StartY="0" EndX="6" EndY="3" />
-        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="6" EndY="3" />
-      </MountPoints>
-	  <Direction>Horizontal</Direction>
-      <Rotation>Vertical</Rotation>
-		  <BuildTimeSeconds>6</BuildTimeSeconds>
-		  <Mass>10</Mass>
-		  <AvailableInSurvival>true</AvailableInSurvival>
-		  <VoxelPlacement>
-			<StaticMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</StaticMode>
-			<DynamicMode>
-			  <PlacementMode>Both</PlacementMode>
-			  <MaxAllowed>1</MaxAllowed>
-			  <MinAllowed>0</MinAllowed>
-			</DynamicMode>
-		  </VoxelPlacement>
-		</Definition>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="6" EndY="3" />
+    </MountPoints>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>160</MaxIntegrity>
+  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cooking_Table"/>
     <DisplayName>Cook's Table</DisplayName>
-
-<Description>This is an essential for being a Chef, 
-where you prepare jugs of drinkable 
-water and other foods.</Description>
-      <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
+    <Description>This is an essential for being a Chef, where you prepare jugs of drinkable water and other foods.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Books\Cook.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\WoodTable.dds</Icon>
     <Category>SmallBlocks</Category>
     <Prerequisites>
-      <Item Amount="2" Type="InventoryItem" Subtype="Log250cm" />
+      <Item Amount="1" Tag="Universal_Log" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Type="CubeBlock" Subtype="Cooking_Table" />
+      <Item Amount="1" Type="Block" Subtype="Cooking_Table" />
     </Results>
     <CraftingTime Seconds="3"/>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
-    <Id Type="CraftingComponent" Subtype="Cooking_Table"/>
-    <CraftingCategories>
-      <Category>Cooking_Table</Category>
-    </CraftingCategories>
-    <ProductionQueueSize>4</ProductionQueueSize>
+    <Id Type="CraftingComponent" Subtype="CookingTableCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
     <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
-    <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="Cooking_Table" />
-    <UseObjects>
-      <UseObject Dummy="detector_inventory" Name="inventory"/>
-    </UseObjects>
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="CookingTableScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="CookingTableCrafting" />
+    <QueueSize>14</QueueSize>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-    <Id Type="MyObjectBuilder_Inventory" Subtype="Cooking_TableInventory" />
-    <InventoryName>Cooking_TableInventory</InventoryName>
-    <DisplayName>Cooking_Table</DisplayName>
-    <MaxItemCount>14</MaxItemCount>
-    <MultiplierEnabled>false</MultiplierEnabled>
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="CookingTableRecipes" />
+    <Category>Cooking_Table</Category>
   </Definition>
 
-  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-    <Id Type="CubeBlock" Subtype="Cooking_Table" />
-    <Component Type="UseObjectsComponent" Subtype="Cooking_Table" ForceCreate="true"/>
-    <Component Type="Inventory" Subtype="Cooking_TableInventory" ForceCreate="true"/>
-    <Component Type="InventorySpawnComponent"/>
-    <Component Type="CraftingComponent" Subtype="Cooking_Table" ForceCreate="true"/>
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Cooking_Table" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    <Component Type="CraftingComponent" Subtype="CookingTableCrafting" />
+    <Component Type="CraftingScheduler" Subtype="CookingTableScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="CookingTableRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="TableCrafting" />
   </Definition>
+
 
 
 </Definitions>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Blue_Berry" />
+    <Tag>Universal_Berry</Tag>
+    <Tag>Universal_SimpleSoup</Tag>
+    <Tag>Berry</Tag>
+    <Public>true</Public>
+    <DisplayName>Blue Berries</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Cooking\Blue_Berry.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\BlueBerries.mwm</Model>
+    <PhysicalMaterial>Food</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Mood" />
+    <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Food" />
+    <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Thirst" />
+    <Effect Type="EntityStatEffect" Subtype="Blue_Berry_Vigor" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+
+
+
+</Definitions>

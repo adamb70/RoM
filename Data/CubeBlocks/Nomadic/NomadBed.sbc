@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NomadBed" />
+    <Rotation>All</Rotation>
+    <DisplayName>Basic Bed</DisplayName>
+    <Description>Basic bed made from branches and sticks</Description>
+    <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="0" z="-3" />
+      <Max x="2" y="1" z="3" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\NomadBed.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="NomadBed" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NomadBed" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="BindableRespawnComponent" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="BoundBannerComponent" Subtype="WoodenBedBanner" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicBed"/>
+    <DisplayName>Basic Bed</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="6"  Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="NomadBed" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+    <Id Type="SchematicItem" Subtype="Nomadic_Schematic_NomadBed" />
+    <Public>true</Public>
+    <DisplayName>Basic Bed Manuscript</DisplayName>
+
+    <Description>As you examine the manuscript, you notice 
+      diagrams and written instructions explaining
+      the process for constructing a basic bed.</Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadBed.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <Mass>6.7</Mass>
+    <Model>Models\Cubes\small\Scroll.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>10</MaxStackAmount>
+    <UseSound>PlayEat</UseSound>
+    <Research Type="ResearchDefinition" Subtype="Bed_Nomadic" />
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+
+</Definitions>

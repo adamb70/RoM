@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Bloomery" />
+    <Rotation>All</Rotation>
+    <DisplayName>Bloomery</DisplayName>
+    <Description>Bloomery</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-4" />
+      <Max x="2" y="3" z="4" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\bloomery.mwm</Model>
+    <PhysicalMaterial>StoneLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Bloomery" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>130</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="CraftingRecipeDefinition" Subtype="Bloomery"/>
+    <DisplayName>DisplayName_Block_Furnace</DisplayName>
+    <Description>Description_Block_Furnace</Description>
+    <Icon>Textures\GUI\Icons\Cubes\ClayFurnace.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="20" Type="InventoryItem" Subtype="Dirt" />
+      <Item Amount="18" Type="InventoryItem" Subtype="StoneSmall" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Bloomery" />
+    </Results>
+    <CraftingTime Seconds="6"/>
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+    <Id Type="UseObjectsComponent" Subtype="Bloomery" />
+    <LoadFromModel>false</LoadFromModel>
+    <UseObjects>
+      <UseObject Dummy="detector_inventory" Name="inventory" />
+    </UseObjects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="BloomeryCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>All</PowerRequired>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>CraftString_Forge</CraftString>
+    <CraftingString>CraftingString_Forging</CraftingString>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="BloomeryScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="BloomeryCrafting" />
+    <QueueSize>6</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="BloomeryRecipes" />
+    <Category>Smelting</Category>
+    <Category>Melting</Category>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Bloomery" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="CraftingComponent" Subtype="BloomeryCrafting" />
+    <Component Type="CraftingScheduler" Subtype="BloomeryScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="BloomeryRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+    <Component Type="EntityFXComponent" Subtype="SmithyFX" />
+    <Component Type="UseObjectsComponent" Subtype="Bloomery" />
+  </Definition>
+</Definitions>

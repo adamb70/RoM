@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <!-- Blacksmithing -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Iron_Nails" />
+    <Public>true</Public>
+    <DisplayName>Iron Nails</DisplayName>
+    <Description>Used to boost the strength of wooden structures. Nails are not required</Description>
+    <Icon>Textures\GUI\Icons\Universal\Blacksmithing\Iron_Nails.dds</Icon>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Model>Models\Components\WroughtIronIngot.mwm</Model>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <MaxStackAmount>60</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>0.1</Mass>
+  </Definition>
+
+
+  <!-- ================================================================================ -->
+
+  <!-- ingots -->
+
+  <!-- ================================================================================ -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotCopper" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">    
+    <Id Type="InventoryItem" Subtype="IngotIron" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotSilver" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotBronze" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotTin" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotGold" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="IngotSteel" />
+
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="MithrilIngot" />
+    <Public>true</Public>
+    <Tag>Ingot</Tag>
+    <Tag>IngotMithril</Tag>
+    <DisplayName>Mithril Ingot</DisplayName>
+    <Description>A very strong, lightweight, material.</Description>
+    <Icon>Textures\GUI\Icons\Ingot\MithrilIngotIcon.dds</Icon>
+    <Model>Models\Ingots\MithrilIngot.mwm</Model>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <MaxStackAmount>16</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>30</Mass>
+  </Definition>
+
+  <!-- ================================================================================ -->
+
+
+
+
+  <!-- ================================================================================ -->
+
+  <!-- Metal Parts -->
+
+  <!-- ================================================================================ -->
+  <!-- hide vanilla parts -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+    <Id Type="InventoryItem" Subtype="PartsMetal" />
+    <Public>false</Public>
+  </Definition>
+
+  <!-- ================================================================================ -->
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Copper_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
+    <DisplayName>Copper Parts</DisplayName>
+    <Description>Strips of copper cut from an ingot</Description>
+    <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Model>Models\Components\WroughtIronIngot.mwm</Model>
+    <MaxStackAmount>24</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>5</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Iron_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
+    <DisplayName>Iron Parts</DisplayName>
+    <Description>Strips of iron cut from an ingot</Description>
+    <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Model>Models\Components\WroughtIronIngot.mwm</Model>
+    <MaxStackAmount>24</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>5</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Tin_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
+    <DisplayName>Tin Parts</DisplayName>
+    <Description>Strips of tin cut from an ingot</Description>
+    <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Model>Models\Components\WroughtIronIngot.mwm</Model>
+    <MaxStackAmount>24</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>5</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Lead_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
+    <DisplayName>Lead Parts</DisplayName>
+    <Description>Strips of lead cut from an ingot</Description>
+    <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Model>Models\Components\WroughtIronIngot.mwm</Model>
+    <MaxStackAmount>24</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>5</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Gold_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
+    <DisplayName>Gold Parts</DisplayName>
+    <Description>Strips of gold cut from an ingot</Description>
+    <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Model>Models\Components\WroughtIronIngot.mwm</Model>
+    <MaxStackAmount>24</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>5</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Silver_Parts" />
+    <Public>true</Public>
+    <Tag>MetalParts</Tag>
+    <DisplayName>Silver Parts</DisplayName>
+    <Description>Strips of silver cut from an ingot</Description>
+    <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Model>Models\Components\WroughtIronIngot.mwm</Model>
+    <MaxStackAmount>24</MaxStackAmount>
+    <Health>50</Health>
+    <Mass>5</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Mercury_Vial" />
+    <Public>true</Public>
+    <DisplayName>Mercury Vial</DisplayName>
+    <Description>A vial containing a heavy liquid metal</Description>
+    <Icon>Textures\GUI\Icons\Materials\IngotIron.dds</Icon>
+    <PhysicalMaterial>Iron</PhysicalMaterial>
+    <Size>
+      <X>0.25</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+    </Size>
+    <Model>Models\Components\WroughtIronIngot.mwm</Model>
+    <MaxStackAmount>24</MaxStackAmount>
+    <Health>520</Health>
+    <Mass>5</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+
+
+
+
+
+  <!-- Misc -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Empty_Bucket" />
+    <Public>false</Public>
+    <DisplayName>Empty Bucket</DisplayName>
+    <Description>Used to hold material.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Model>Models\Universal\Farming\empty_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>200</Health>
+    <Mass>1</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Compost_Bucket" />
+    <Public>false</Public>
+    <DisplayName>Compost Bucket</DisplayName>
+    <Description>Used in advanced techniques of farming.</Description>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
+    <Model>Models\Universal\Farming\compost_bucket.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <MaxStackAmount>15</MaxStackAmount>
+    <Health>200</Health>
+    <Mass>1</Mass>
+  </Definition>
+  <!-- =================================================================================== -->
+
+</Definitions>

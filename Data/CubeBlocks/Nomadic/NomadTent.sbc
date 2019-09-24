@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NomadTent" />
+    <Rotation>All</Rotation>
+    <DisplayName>Linen Tent</DisplayName>
+    <Description>Linen Tent</Description>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="-3" z="-3" />
+      <Max x="4" y="3" z="4" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\NomadTent.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="NomadTent" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NomadTent" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="BindableRespawnComponent" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="BoundBannerComponent" Subtype="WoodenBedBanner" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadicTent"/>
+    <DisplayName>Linen Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="NomadBed" />
+      <Item Amount="2" Type="InventoryItem" Subtype="StringLinen" />
+      <Item Amount="4" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="NomadTent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Tent_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Linen Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="2" Tag="Pristine_Stick" />
+      <Item Amount="2" Type="SchematicItem" Subtype="Schematic_Flax" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTent" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="NomadTentBranches" />
+    <Rotation>All</Rotation>
+    <DisplayName>Tent</DisplayName>
+    <Description>Tent</Description>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent2.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-3" y="-3" z="-3" />
+      <Max x="4" y="3" z="4" />
+    </BoundingBox>
+    <Model>Models\Cubes\Small\NomadTent2.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="NomadTentBranches" Count="1" />
+    </Components>
+    <Mass>30</Mass>
+    <MaxIntegrity>200</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="NomadTentBranches" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+
+    <Component Type="BindableRespawnComponent" />
+    <Component Type="EntityOwnershipComponent" />
+    <Component Type="BoundBannerComponent" Subtype="WoodenBedBanner" />
+  </Definition>
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="NomadTentBranches"/>
+    <DisplayName>Tent</DisplayName>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTentAdv2.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="1" Type="Block" Subtype="NomadBed" />
+      <Item Amount="10" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="NomadTentBranches" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\NomadTent2.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Tent</DisplayName>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranches" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
+
+
+</Definitions>

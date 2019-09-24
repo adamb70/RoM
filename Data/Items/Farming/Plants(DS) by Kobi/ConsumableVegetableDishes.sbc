@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+<!--   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="BreadPlate" />
+    <Public>true</Public>
+    <DisplayName>BreadPlates</DisplayName>
+    <Description>An edibel plate of bread used as plate for PlantsMod dishes.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\BreadPlate.dds</Icon>
+    <Size>
+      <X>0.3</X>
+      <Y>0.3</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.125</Mass>
+    <Model>Models\BreadPlate_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>24</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="1" Time="6" />
+      <Stat Name="Stamina" Value="0" Time="0" />
+      <Stat Name="Health" Value="0" Time="0" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+	<CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition> -->
+  
+ <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="BeansAndOnions" />
+    <Public>true</Public>
+    <DisplayName>BeansAndOnions</DisplayName>
+	<Description>Healthy and delicious.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\BeansOnions.dds</Icon>
+    <Tag>Dish</Tag>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Volume>2</Volume>
+    <Model>Models\PeasantBeansOnions_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="10" Time="7" />
+      <Stat Name="Stamina" Value="5" Time="8" />
+      <Stat Name="Health" Value="3" Time="5" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Humus" />
+    <Public>true</Public>
+    <DisplayName>Humus</DisplayName>
+	<Description>World Peas. A Mash-up.</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Humus.dds</Icon>
+    <Tag>Dish</Tag>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Volume>2</Volume>
+    <Model>Models\PeasantHumus_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="5" Time="7" />
+      <Stat Name="Stamina" Value="2" Time="8" />
+      <Stat Name="Health" Value="1" Time="5" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="PeasAndCarrots" />
+    <Public>true</Public>
+    <DisplayName>PeasAndCarrots</DisplayName>
+	<Description>No Pee in it. I swear. But do you Carrot all?</Description>
+    <Icon>Textures\GUI\Icons\Cubes\CarrotsPeas.dds</Icon>
+    <Tag>Dish</Tag>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Volume>2</Volume>
+    <Model>Models\PeasantPeasCarrots_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="6" Time="7" />
+      <Stat Name="Stamina" Value="3" Time="8" />
+      <Stat Name="Health" Value="1" Time="5" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+  
+   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="LeekAndMangold" />
+    <Public>true</Public>
+    <DisplayName>GreedDelight</DisplayName>
+	<Description>Leek and Mangold doesnt taste that good. Really. Who even eats this? Hamsters?</Description>
+    <Icon>Textures\GUI\Icons\Cubes\LeekMangold.dds</Icon>
+    <Tag>Dish</Tag>
+    <Size>
+      <X>0.3</X>
+      <Y>0.1</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Mass>0.5</Mass>
+    <Volume>2</Volume>
+    <Model>Models\PeasantLeekMangold_Small.mwm</Model>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Stats>
+      <Stat Name="Food" Value="7" Time="7" />
+      <Stat Name="Stamina" Value="12" Time="8" />
+      <Stat Name="Health" Value="3" Time="5" />
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <CanSpawnFromScreen>true</CanSpawnFromScreen>
+  </Definition>
+  
+</Definitions>

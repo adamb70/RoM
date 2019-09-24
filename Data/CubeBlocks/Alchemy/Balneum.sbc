@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Balneum" />
+    <Rotation>All</Rotation>
+    <DisplayName>Balneum</DisplayName>
+	  <Description>Brews extracts</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemybalneum.dds</Icon>
+    <Public>true</Public>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-1" y="-2" z="-2" />
+      <Max x="2" y="2" z="3" />
+    </BoundingBox>
+    <Model>Models\Alchemy\Cubeblocks\AlchemyBalneum.mwm</Model>
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Balneum" Count="1" />
+    </Components>
+    <Volume>135</Volume>
+    <Mass>100</Mass>
+    <MaxIntegrity>600</MaxIntegrity>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Balneum"/>
+    <DisplayName>Balneum</DisplayName>
+    <Description>Balneum</Description>
+    <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemybalneum.dds</Icon>
+    <Category>Woodcrafting</Category>
+    <Prerequisites>
+      <Item Amount="2" Type="InventoryItem" Subtype="IngotCopper" />
+      <Item Amount="8" Type="InventoryItem" Subtype="Clay" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="Block" Subtype="Balneum" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="BalneumCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>All</PowerRequired>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Brew</CraftString>
+    <CraftingString>Brewing Queue</CraftingString>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="BalneumScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="BalneumCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="BalneumRecipes" />
+    <Category>Balneum</Category>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Balneum" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <Component Type="CraftingComponent" Subtype="BalneumCrafting" />
+    <Component Type="CraftingScheduler" Subtype="BalneumScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="BalneumRecipes" />
+    
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="FuelComponent" Subtype="Fire" />
+    <Component Type="Inventory" Subtype="Fuel" />
+
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
+    <Component Type="EntityFXComponent" Subtype="BalneumFX" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition" Copy="Append">
+    <Id Type="EntityFXComponent" Subtype="BalneumFX" />
+    <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
+    <Effects>
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_inventory">
+        <EffectId Type="EffectDefinition" Subtype="Furnace" />
+      </Effect>
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_inventory">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingFurnace" />
+      </Effect>
+    </Effects>
+  </Definition>
+  
+</Definitions>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_ParticleEffectDefinition" Enabled="true" Merge="Overwrite">
+    <Id Type="MyObjectBuilder_ParticleEffectDefinition" Subtype="CauldronFire" />
+    <CopyFrom xsi:nil="true" />
+    <Length>10</Length>
+    <Loop>true</Loop>
+    <Duration Min="0" Max="0" />
+    <Light Enabled="true" Name="ParticleLight">
+      <Position />
+      <PositionVar>
+        <Key Time="0">
+          <Value x="0" y="0" z="0" />
+        </Key>
+        <Key Time="0.7177033">
+          <Value x="0.35" y="0.3" z="0.3" />
+        </Key>
+      </PositionVar>
+      <Color>
+        <Key Time="0">
+          <Value>
+            <PackedValue>4280397055</PackedValue>
+            <X>255</X>
+            <Y>128</Y>
+            <Z>27</Z>
+            <R>255</R>
+            <G>128</G>
+            <B>27</B>
+            <A>255</A>
+          </Value>
+        </Key>
+      </Color>
+      <ColorVar>
+        <Key Time="0">
+          <Value>0</Value>
+        </Key>
+      </ColorVar>
+      <Range>
+        <Key Time="0">
+          <Value>7</Value>
+        </Key>
+      </Range>
+      <RangeVar />
+      <Intensity>
+        <Key Time="0">
+          <Value>4</Value>
+        </Key>
+      </Intensity>
+      <IntensityVar>
+        <Key Time="0">
+          <Value>1</Value>
+        </Key>
+      </IntensityVar>
+    </Light>
+  </Definition>
+  
+</Definitions>
