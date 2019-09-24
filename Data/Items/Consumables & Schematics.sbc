@@ -1488,37 +1488,6 @@ or Chef.
     
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id Type="SchematicItem" Subtype="Schematic_DeadmanMushroom" />
-      <Public>true</Public>
-      <DisplayName>Pristine Deadman's Mushroom</DisplayName>
-
-<Description>As you examine the quality of the Deadman's Mushroom 
-you find that they're in pristine condition. 
-Without any adnormal properties, it makes a 
-perfect specimen for a Farmer, Apothocary
-or Chef.
-
-((Consume to receive knowledge))</Description>
-      <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
-      <Icon>Textures\GUI\Icons\DeadmanMushroom.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>0.25</Mass>
-      <Model>Models\Consumables\DeathMushrooms.mwm</Model>
-      <PhysicalMaterial>None</PhysicalMaterial>
-      <MaxStackAmount>30</MaxStackAmount>
-      <UseSound>ResearchSound</UseSound>
-      <Research Type="ResearchDefinition" Subtype="DeadmanMushroom_Herblore" />
-      <CanSpawnFromScreen>true</CanSpawnFromScreen>
-    </Definition>
-<!-- =================================================================================== -->
-    
-<!-- -->
-    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
       <Id Type="SchematicItem" Subtype="Schematic_Fireflies" />
       <Public>true</Public>
       <DisplayName>Pristine Fire Flies</DisplayName>
@@ -1724,36 +1693,6 @@ or Chef.
     
 <!-- -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id Type="SchematicItem" Subtype="Schematic_Norden_Spalt" />
-      <Public>true</Public>
-      <DisplayName>Pristine Norden Spalt</DisplayName>
-
-<Description>As you examine the quality of this Norden Spalt 
-you find that it's in pristine condition. 
-Without any adnormal properties, it makes a 
-perfect specimen for an Chef.
-
-((Consume to receive knowledge))</Description>
-      <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>0.25</Mass>
-      <Model>Models\Universal\Farming\norden_spalt_item.mwm</Model>
-      <PhysicalMaterial>None</PhysicalMaterial>
-      <MaxStackAmount>30</MaxStackAmount>
-      <UseSound>ResearchSound</UseSound>
-      <Research Type="ResearchDefinition" Subtype="Norden_Spalt_Herblore" />
-      <CanSpawnFromScreen>true</CanSpawnFromScreen>
-    </Definition>
-<!-- -->
-    
-<!-- -->
-    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
       <Id Type="SchematicItem" Subtype="Schematic_Norden_Roots" />
       <Public>true</Public>
       <DisplayName>Pristine Norden Spalt Roots</DisplayName>
@@ -1778,62 +1717,6 @@ perfect specimen for an Apothocary.
       <MaxStackAmount>30</MaxStackAmount>
       <UseSound>ResearchSound</UseSound>
       <Research Type="ResearchDefinition" Subtype="Norden_Roots_Herblore" />
-      <CanSpawnFromScreen>true</CanSpawnFromScreen>
-    </Definition>
-<!-- -->
-    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id Type="SchematicItem" Subtype="Farming_Schematic_Norden_Spalt" />
-      <Public>true</Public>
-      <DisplayName>Norden Spalt Farming Manuscript</DisplayName>
-      <Description>
-      As you examine the manuscript, you notice 
-      diagrams and written instructions explaining
-      the process for Norden Spalt Farming. This 
-      knowledge would be valuable for a Farmer.
-      </Description>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
-      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>0.25</Mass>
-      <Model>Models\Cubes\small\Scroll.mwm</Model>
-      <PhysicalMaterial>None</PhysicalMaterial>
-      <MaxStackAmount>10</MaxStackAmount>
-      <UseSound>ResearchSound</UseSound>
-      <Research Type="ResearchDefinition" Subtype="Norden_Spalt_Farming" />
-      <CanSpawnFromScreen>true</CanSpawnFromScreen>
-    </Definition>
-<!-- -->
-    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id Type="SchematicItem" Subtype="Farming_Schematic_Norden_Spalt_Compost" />
-      <Public>true</Public>
-      <DisplayName>Norden Spalt Farming (Compost) Manuscript</DisplayName>
-      <Description>
-      As you examine the manuscript, you notice 
-      diagrams and written instructions explaining
-      the process for Norden Spalt Farming with Compost. 
-      This knowledge would be valuable for a Farmer.
-      </Description>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Spalt.dds</Icon>
-      <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Size>
-        <X>0.1</X>
-        <Y>0.1</Y>
-        <Z>0.1</Z>
-      </Size>
-      <Mass>0.25</Mass>
-      <Model>Models\Cubes\small\Scroll.mwm</Model>
-      <PhysicalMaterial>None</PhysicalMaterial>
-      <MaxStackAmount>10</MaxStackAmount>
-      <UseSound>ResearchSound</UseSound>
-      <Research Type="ResearchDefinition" Subtype="Norden_Spalt_Farming_Compost" />
       <CanSpawnFromScreen>true</CanSpawnFromScreen>
     </Definition>
 <!-- =================================================================================== -->

@@ -3,13 +3,13 @@
 
 
   <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Norden_Spalt" />
+    <Id Type="PhysicalModelDefinition" Subtype="Spalt" />
     <Model>Models\Universal\Farming\norden_spalt.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
 
   <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="Norden_Spaltless" />
+    <Id Type="PhysicalModelDefinition" Subtype="Empty_Spalt" />
     <Model>Models\Universal\Farming\norden_spaltless.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
@@ -77,11 +77,6 @@
     <Model>Models\Environment\Bushes\HealingPlant.mwm</Model>
     <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
-  <Definition xsi:type="VR.PhysicalModelDefinition">
-    <Id Type="PhysicalModelDefinition" Subtype="DeathMushrooms" />
-    <Model>Models\Environment\Bushes\DeathMushrooms_LOD0.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-  </Definition>
 
   <!-- pristine iron -->
   <Definition xsi:type="VR.PhysicalModelDefinition">
@@ -90,4 +85,13 @@
     <PhysicalMaterial>Stone</PhysicalMaterial>
   </Definition>
 
+  
+  <!-- Alchemy -->
+  
+  <Definition xsi:type="VR.PhysicalModelDefinition">
+    <Id Type="PhysicalModelDefinition" Subtype="CloudFunnel" />
+    <Model>Models\Environment\Bushes\DeathMushrooms_LOD0.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+  </Definition>
+  
 </Definitions>

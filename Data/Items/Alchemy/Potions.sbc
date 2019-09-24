@@ -3,7 +3,7 @@
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
     <Id Subtype="Anti_Poison_Potion_1" Type="ConsumableItem" />
     <Public>true</Public>
-    <DisplayName>Minor Anti Poison Potion</DisplayName>
+    <DisplayName>Anti Poison Potion</DisplayName>
     <Description />
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundAntiPoison.dds</Icon>
@@ -17,7 +17,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Poison" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-5" />
+      <Stat Name="Thirst" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -25,7 +25,7 @@
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Subtype="Anti_Poison_Potion_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Minor Anti Poison Potion</DisplayName>
+    <DisplayName>Anti Poison Potion</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundAntiPoison.dds</Icon>
     <Category>Alembic</Category>
@@ -57,7 +57,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Poison" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-5" />
+      <Stat Name="Thirst" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -97,7 +97,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Poison" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-5" />
+      <Stat Name="Thirst" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -243,7 +243,7 @@
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
     <Id Subtype="Fury_Potion_1" Type="ConsumableItem" />
     <Public>true</Public>
-    <DisplayName>Minor Fury Potion</DisplayName>
+    <DisplayName>Fury Potion</DisplayName>
     <Description />
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundFury.dds</Icon>
@@ -255,14 +255,17 @@
     </Size>
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
-    	<Effect Type="EntityStatEffect" Subtype="Fury_Potion_1" />
+    <Stats>
+      <Stat Name="Fury" Time="1" Value="10" />
+      <Stat Name="Poison" Time="1" Value="10" />
+    </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Subtype="Fury_Potion_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Minor Fury Potion</DisplayName>
+    <DisplayName>Fury Potion</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundFury.dds</Icon>
     <Category>Balneum</Category>
@@ -294,7 +297,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Fury" Time="1" Value="10" />
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -334,7 +337,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Fury" Time="1" Value="10" />
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -480,7 +483,7 @@
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
     <Id Subtype="Health_Potion_1" Type="ConsumableItem" />
     <Public>true</Public>
-    <DisplayName>Minor Health Potion</DisplayName>
+    <DisplayName>Health Potion</DisplayName>
     <Description />
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
@@ -492,14 +495,18 @@
     </Size>
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
-    	<Effect Type="EntityStatEffect" Subtype="Health_Potion_1" />
+    <Stats>
+      <Stat Name="Health" Time="1" Value="10" />
+      <Stat Name="Poison" Time="1" Value="10" />
+    </Stats>
+    <Effect Sub="Health_Potion_1" Type="EntityStatEffect" />
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Subtype="Health_Potion_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Minor Health Potion</DisplayName>
+    <DisplayName>Health Potion</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <Category>Alembic</Category>
@@ -531,7 +538,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -571,7 +578,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -717,7 +724,7 @@
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
     <Id Subtype="Poison_Potion_1" Type="ConsumableItem" />
     <Public>true</Public>
-    <DisplayName>Minor Poison Potion</DisplayName>
+    <DisplayName>Poison Potion</DisplayName>
     <Description />
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
@@ -730,7 +737,7 @@
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
       <Stat Name="Health" Time="1" Value="-10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
@@ -739,7 +746,7 @@
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Subtype="Poison_Potion_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Minor Poison Potion</DisplayName>
+    <DisplayName>Poison Potion</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <Category>Alembic</Category>
@@ -770,7 +777,7 @@
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
       <Stat Name="Health" Time="1" Value="-10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
@@ -810,7 +817,7 @@
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
       <Stat Name="Health" Time="1" Value="-10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
@@ -850,8 +857,8 @@
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="10" Value="1" />
-      <Stat Name="Mood" Time="1" Value="-5" />
+      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Thirst" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -890,8 +897,8 @@
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="10" Value="1" />
-      <Stat Name="Mood" Time="1" Value="-5" />
+      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Thirst" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -930,8 +937,8 @@
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="10" Value="1" />
-      <Stat Name="Mood" Time="1" Value="-5" />
+      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Thirst" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -957,7 +964,7 @@
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
     <Id Subtype="Stamina_Potion_1" Type="ConsumableItem" />
     <Public>true</Public>
-    <DisplayName>Minor Stamina Potion</DisplayName>
+    <DisplayName>Stamina Potion</DisplayName>
     <Description />
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
@@ -969,14 +976,17 @@
     </Size>
     <Model>Models\Alchemy\Items\VialSquare.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
-    	<Effect Type="EntityStatEffect" Subtype="Stamina_Potion_1" />
+    <Stats>
+      <Stat Name="Stamina" Time="1" Value="10" />
+      <Stat Name="Thirst" Time="1" Value="10" />
+    </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Subtype="Stamina_Potion_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Minor Stamina Potion</DisplayName>
+    <DisplayName>Stamina Potion</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialSquare.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Balneum</Category>
@@ -1008,7 +1018,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-5" />
+      <Stat Name="Thirst" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -1048,7 +1058,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-5" />
+      <Stat Name="Thirst" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -1208,7 +1218,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -1248,7 +1258,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
@@ -1288,7 +1298,7 @@
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
       <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Poison" Time="10" Value="1" />
+      <Stat Name="Poison" Time="1" Value="10" />
     </Stats>
     <UseSound>PlayEat</UseSound>
     <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />

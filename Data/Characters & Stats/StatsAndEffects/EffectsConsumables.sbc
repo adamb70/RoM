@@ -189,20 +189,6 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="DeadmanMushroom_Poison" />
-    <DisplayName>Poison!</DisplayName>
-    <Public>true</Public>
-    <Description>You are slowly being poisoned!</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Poison</Stat>
-	<RegenPerSecond>2</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Meat_Poison" />
     <DisplayName>Raw Food!</DisplayName>
     <Public>true</Public>
@@ -443,20 +429,6 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="DeadmanMushroom_Vigor" />
-    <DisplayName>Vigor</DisplayName>
-    <Public>false</Public>
-    <Description>Your Vigor is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Vigor</Stat>
-	<RegenPerSecond>-.02</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Herbs_Vigor" />
     <DisplayName>Vigor</DisplayName>
     <Public>false</Public>
@@ -466,34 +438,6 @@
 	<EffectType>Positive</EffectType>
 	<Stat>Vigor</Stat>
 	<RegenPerSecond>.02</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="CrimsonThristle_Vigor" />
-    <DisplayName>Vigor</DisplayName>
-    <Public>false</Public>
-    <Description>Your Vigor is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Vigor</Stat>
-	<RegenPerSecond>.02</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Norden_Spalt_Vigor" />
-    <DisplayName>Vigor</DisplayName>
-    <Public>false</Public>
-    <Description>Your Vigor is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Vigor</Stat>
-	<RegenPerSecond>-.02</RegenPerSecond>
 	<Duration Seconds="10" />
 	<CancelOnDamage>false</CancelOnDamage>
   </Definition>
@@ -1020,20 +964,6 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="DeadmanMushroom_Mood" />
-    <DisplayName>Mood</DisplayName>
-    <Public>false</Public>
-    <Description>Your mood is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Mood</Stat>
-	<RegenPerSecond>-2</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Herbs_Mood" />
     <DisplayName>Mood</DisplayName>
     <Public>false</Public>
@@ -1043,34 +973,6 @@
 	<EffectType>Positive</EffectType>
 	<Stat>Mood</Stat>
 	<RegenPerSecond>.1</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="CrimsonThristle_Mood" />
-    <DisplayName>Mood</DisplayName>
-    <Public>false</Public>
-    <Description>Your mood is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Mood</Stat>
-	<RegenPerSecond>.2</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Norden_Spalt_Mood" />
-    <DisplayName>Mood</DisplayName>
-    <Public>false</Public>
-    <Description>Your mood is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Mood</Stat>
-	<RegenPerSecond>-.2</RegenPerSecond>
 	<Duration Seconds="10" />
 	<CancelOnDamage>false</CancelOnDamage>
   </Definition>
@@ -1828,46 +1730,7 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="DeadmanMushroom_Food" />
-    <DisplayName>Eating</DisplayName>
-    <Description>You are feeling less hungry. . .</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Food</Stat>
-	<RegenPerSecond>.25</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Herbs_Food" />
-    <DisplayName>Eating</DisplayName>
-    <Description>You are feeling less hungry. . .</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Food</Stat>
-	<RegenPerSecond>.25</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="CrimsonThristle_Food" />
-    <DisplayName>Eating</DisplayName>
-    <Description>You are feeling less hungry. . .</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Food</Stat>
-	<RegenPerSecond>.25</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Norden_Spalt_Food" />
     <DisplayName>Eating</DisplayName>
     <Description>You are feeling less hungry. . .</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>

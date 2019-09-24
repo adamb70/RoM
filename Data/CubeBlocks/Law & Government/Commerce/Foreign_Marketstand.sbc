@@ -9,27 +9,22 @@
     Invite a forign merchant to sell general items from a marketstand. The merchant requires a payment inorder to keep the store running. If taxes are not payed, the merchant and marketstand will leave.
     </Description>
     <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
-    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
-    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
-    <Positions>
-      <Position x="0" y="0" z="0" />
-    </Positions>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="0" y="3" z="0" />
+      <Max x="6" y="10" z="4" />
+    </BoundingBox>
     <Model>Models\Universal\LawGovernment\foreign_market_stand.mwm</Model>
-    <BuildProgressModels>
-      <Model UpperBound="0.5" File="Models\Cubes\large\StoneBlocks\CubeStone_V1_C1.mwm" />
-    </BuildProgressModels>
-    <MountpointRule>FromModel</MountpointRule>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
+    </MountPoints>
     <Rotation>YAxis</Rotation>
     <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
     <Components>
       <Component Type="InventoryItem" Subtype="StoneLarge" Count="20" />
       <Component Type="InventoryItem" Subtype="Foreign_Market_Contract" Count="1" />
     </Components>
-    <RandomRotation>true</RandomRotation>
-    <NavigationDefinition>Default</NavigationDefinition>
-    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
-    <MaxIntegrity>600</MaxIntegrity>
-    <UseModelIntersection>false</UseModelIntersection>
+    <MaxIntegrity>1200</MaxIntegrity>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">

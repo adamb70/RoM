@@ -6,15 +6,12 @@
     <DisplayName>Rienburg Food Market Stand</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
     <Icon>Textures\GUI\Icons\NPC.dds</Icon>
-    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
     <BoundingBox>
-      <Min x="0" y="0" z="0" />
-      <Max x="1" y="1" z="1" />
+      <Min x="0" y="-9" z="0" />
+      <Max x="6" y="-2" z="4" />
     </BoundingBox>
     <Model>Models\Universal\Economy\market_stand.mwm</Model>
-    <BuildProgressModels>
-      <Model UpperBound="0.5" File="Models\Cubes\large\KingStatue_Construction_1.mwm" />
-    </BuildProgressModels>
     <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
     <Components>
       <Component Tag="Timber" Count="10" />
@@ -23,9 +20,6 @@
       <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" />
     </MountPoints>
     <Rotation>YAxis</Rotation>
-    <UseModelIntersection>false</UseModelIntersection>
-    <NavigationDefinition>NoEntry</NavigationDefinition>
-    <CompoundEnabled>false</CompoundEnabled>
     <MaxIntegrity>1200</MaxIntegrity>
   </Definition>
   

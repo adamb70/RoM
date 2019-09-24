@@ -13,7 +13,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -22,12 +22,12 @@
     <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
     <Category>Alchemy_Table</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
+      <Item Amount="1" Subtype="Water_Bucket" Type="CubeBlock" />
       <Item Amount="10" Subtype="Glass_Vial" Type="InventoryItem" />
     </Prerequisites>
     <Results>
       <Item Amount="10" Subtype="Water_Vial" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Amount="1" Subtype="Empty_Bucket" Type="CubeBlock" />
     </Results>
     <CraftingTime Seconds="20" />
   </Definition>
@@ -51,14 +51,14 @@
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Subtype="Water_Bucket" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Water Bucket</DisplayName>
-    <Icon>Textures\GUI\Icons\Universal\Alchemy\Placeholder.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
     <Category>Alchemy_Table</Category>
     <Prerequisites>
       <Item Amount="10" Subtype="Water_Vial" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Amount="1" Subtype="Empty_Bucket" Type="CubeBlock" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
+      <Item Amount="1" Subtype="Water_Bucket" Type="CubeBlock" />
       <Item Amount="10" Subtype="Glass_Vial" Type="InventoryItem" />
     </Results>
     <CraftingTime Seconds="20" />
@@ -67,14 +67,14 @@
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Subtype="Water_Bucket_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Water Bucket</DisplayName>
-    <Icon>Textures\GUI\Icons\Universal\Alchemy\Placeholder.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Farming\Water_Bucket.dds</Icon>
     <Category>Alchemy_Table</Category>
     <Prerequisites>
       <Item Amount="10" Subtype="Pure_Water_Vial" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Amount="1" Subtype="Empty_Bucket" Type="CubeBlock" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
+      <Item Amount="1" Subtype="Water_Bucket" Type="CubeBlock" />
       <Item Amount="10" Subtype="Glass_Vial" Type="InventoryItem" />
     </Results>
     <CraftingTime Seconds="20" />
@@ -93,7 +93,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -125,9 +125,9 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Soda_Ash" Type="InventoryItem" />
+    <Id Subtype="Ground_Natron" Type="InventoryItem" />
     <Public>true</Public>
-    <DisplayName>Soda Ash</DisplayName>
+    <DisplayName>Ground Natron</DisplayName>
     <Description />
     <Icon>Textures\GUI\Icons\Universal\Alchemy\Placeholder.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -137,19 +137,51 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Soda_Ash" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Soda Ash</DisplayName>
+    <Id Subtype="Ground_Natron" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Ground Natron</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\Placeholder.dds</Icon>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
       <Item Amount="1" Subtype="Natron" Type="InventoryItem" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Soda_Ash" Type="InventoryItem" />
+      <Item Amount="4" Subtype="Ground_Natron" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Soda_Ash" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Soda Ash</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Alchemy\soda_ash.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
+    <MaxStackAmount>12</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Soda_Ash" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Soda Ash</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\soda_ash.dds</Icon>
+    <Category>Filter</Category>
+    <Prerequisites>
+      <Item Amount="4" Subtype="Ground_Natron" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Water_Vial" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="2" Subtype="Soda_Ash" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
     </Results>
     <CraftingTime Seconds="20" />
   </Definition>
@@ -167,7 +199,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -198,7 +230,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -229,7 +261,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -259,7 +291,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -290,7 +322,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -367,7 +399,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -397,7 +429,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSmallStraightWide.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -523,7 +555,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -569,7 +601,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -615,7 +647,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -661,7 +693,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -692,7 +724,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -723,7 +755,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -754,7 +786,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -800,7 +832,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -831,7 +863,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -862,7 +894,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -893,7 +925,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -924,7 +956,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -970,7 +1002,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1001,7 +1033,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1032,7 +1064,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1063,7 +1095,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1111,7 +1143,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSmallCurved.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1161,7 +1193,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1207,7 +1239,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1238,7 +1270,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1269,7 +1301,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1300,7 +1332,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1361,7 +1393,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1392,7 +1424,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1423,7 +1455,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1432,7 +1464,7 @@
     <Icon>Textures\GUI\Icons\Universal\Alchemy\Placeholder.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Common_Salt" Type="InventoryItem" />
+      <Item Amount="4" Subtype="Common_Salt" Type="InventoryItem" />
       <Item Amount="1" Subtype="Pure_Water_Vial" Type="InventoryItem" />
     </Prerequisites>
     <Results>
@@ -1454,7 +1486,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1515,7 +1547,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1546,7 +1578,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1592,7 +1624,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialStandardNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1623,7 +1655,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1654,7 +1686,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1685,7 +1717,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1731,7 +1763,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1762,7 +1794,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1823,7 +1855,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1869,7 +1901,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1900,7 +1932,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -1913,7 +1945,52 @@
       <Item Amount="1" Subtype="Salt_Water" Type="InventoryItem" />
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Common_Salt" Type="InventoryItem" />
+      <Item Amount="4" Subtype="Common_Salt" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Ground_Halite" Type="InventoryItem" />
+    <Public>true</Public>
+    <DisplayName>Ground Halite</DisplayName>
+    <Description />
+    <Icon>Textures\GUI\Icons\Universal\Alchemy\Placeholder.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
+    <MaxStackAmount>12</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Ground_Halite" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Ground Halite</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Alchemy\Placeholder.dds</Icon>
+    <Category>Mortar_Pestle</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Halite" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="4" Subtype="Ground_Halite" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Salt_Water_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Salt Water</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Alchemy\Placeholder.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Amount="4" Subtype="Ground_Halite" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Pure_Water_Vial" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Salt_Water" Type="InventoryItem" />
     </Results>
     <CraftingTime Seconds="20" />
   </Definition>
@@ -1931,7 +2008,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -2007,7 +2084,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -2038,7 +2115,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -2069,7 +2146,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialLargeNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -2285,7 +2362,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Salt_Water_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Subtype="Salt_Water_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Salt Water</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
     <Category>Cauldron</Category>
@@ -2301,23 +2378,6 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Salt_Water_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Salt Water</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
-    <Category>Alembic_Imbue</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Oyle_of_Soda_Vitrioli" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Spiritus_Salis" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Oyle_of_Caustic_Soda" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Salt_Water" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Oyle_of_Soda_Vitrioli" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Subtype="Salt_Water_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Salt Water</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
@@ -2325,7 +2385,7 @@
     <Prerequisites>
       <Item Amount="1" Subtype="Oyle_of_Soda_Vitrioli" Type="InventoryItem" />
       <Item Amount="1" Subtype="Spiritus_Salis" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Milk_of_Soda" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Oyle_of_Caustic_Soda" Type="InventoryItem" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Subtype="Salt_Water" Type="InventoryItem" />
@@ -2342,11 +2402,11 @@
     <Prerequisites>
       <Item Amount="1" Subtype="Oyle_of_Soda_Vitrioli" Type="InventoryItem" />
       <Item Amount="1" Subtype="Spiritus_Salis" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Oyle_of_Caustic_Tartar" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Milk_of_Soda" Type="InventoryItem" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Subtype="Salt_Water" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Oyle_of_Tartarus_Vitrioli" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Oyle_of_Soda_Vitrioli" Type="InventoryItem" />
     </Results>
     <CraftingTime Seconds="20" />
   </Definition>
@@ -2359,7 +2419,7 @@
     <Prerequisites>
       <Item Amount="1" Subtype="Oyle_of_Soda_Vitrioli" Type="InventoryItem" />
       <Item Amount="1" Subtype="Spiritus_Salis" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Milk_of_Tartar" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Oyle_of_Caustic_Tartar" Type="InventoryItem" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Subtype="Salt_Water" Type="InventoryItem" />
@@ -2376,6 +2436,23 @@
     <Prerequisites>
       <Item Amount="1" Subtype="Oyle_of_Soda_Vitrioli" Type="InventoryItem" />
       <Item Amount="1" Subtype="Spiritus_Salis" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Milk_of_Tartar" Type="InventoryItem" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Subtype="Salt_Water" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Oyle_of_Tartarus_Vitrioli" Type="InventoryItem" />
+    </Results>
+    <CraftingTime Seconds="20" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Subtype="Salt_Water_8" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <DisplayName>Salt Water</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
+    <Category>Alembic_Imbue</Category>
+    <Prerequisites>
+      <Item Amount="1" Subtype="Oyle_of_Soda_Vitrioli" Type="InventoryItem" />
+      <Item Amount="1" Subtype="Spiritus_Salis" Type="InventoryItem" />
       <Item Amount="1" Subtype="Milk_of_Lime" Type="InventoryItem" />
     </Prerequisites>
     <Results>
@@ -2386,7 +2463,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Salt_Water_8" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Subtype="Salt_Water_9" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Salt Water</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
     <Category>Alembic_Imbue</Category>
@@ -2403,7 +2480,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Salt_Water_9" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Subtype="Salt_Water_10" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Salt Water</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
     <Category>Alembic</Category>
@@ -2419,7 +2496,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Salt_Water_10" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Subtype="Salt_Water_11" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Salt Water</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
     <Category>Cauldron</Category>
@@ -2435,7 +2512,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Salt_Water_11" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Subtype="Salt_Water_12" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Salt Water</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
     <Category>Alembic</Category>
@@ -2451,7 +2528,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Salt_Water_12" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Subtype="Salt_Water_13" Type="MyObjectBuilder_CraftingRecipeDefinition" />
     <DisplayName>Salt Water</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\GlassVial.dds</Icon>
     <Category>Cauldron</Category>
@@ -3753,7 +3830,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSmallCube.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -3784,7 +3861,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -3816,7 +3893,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSmallSquare.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -3942,7 +4019,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSmallSquare.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -3973,7 +4050,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -4004,7 +4081,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
@@ -4035,7 +4112,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -4051,7 +4128,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\VialSquareNoLabel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -4067,7 +4144,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -4083,7 +4160,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
@@ -4099,7 +4176,7 @@
       <Y>1</Y>
     </Size>
     <Model>Models\Alchemy\Items\PlaceholderModel.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
+    <MaxStackAmount>12</MaxStackAmount>
   </Definition>
 </Definitions>
 

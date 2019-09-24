@@ -52,12 +52,29 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Dried_Arctic_Lichen" Type="InventoryItem" />
+    <Tag>Dried_Ingredient</Tag>
+    <Public>true</Public>
+    <DisplayName>Dried Arctic Lichen</DisplayName>
+    <Description>Dried Arctic Lichen.</Description>
+    <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Subtype="Dried_Belladonna_Berries" Type="InventoryItem" />
     <Tag>Dried_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Dried Belladonna Berries</DisplayName>
     <Description>Dried Belladonna.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
       <X>1</X>
@@ -74,7 +91,7 @@
     <Public>true</Public>
     <DisplayName>Dried Broom Flowers</DisplayName>
     <Description>Dried Broom.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
       <X>1</X>
@@ -91,7 +108,7 @@
     <Public>true</Public>
     <DisplayName>Dried Castor Beans</DisplayName>
     <Description>Dried Castor.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
       <X>1</X>
@@ -108,41 +125,7 @@
     <Public>true</Public>
     <DisplayName>Dried Cinquefoil Flowers</DisplayName>
     <Description>Dried Cinquefoil.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Consumables\Herbs.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Dried_Crimson_Thristle_Stems" Type="InventoryItem" />
-    <Tag>Dried_Ingredient</Tag>
-    <Public>true</Public>
-    <DisplayName>Dried Crimson Thristle Stems</DisplayName>
-    <Description>Dried Crimson Thristle.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Consumables\Herbs.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Dried_Crocus_Roots" Type="InventoryItem" />
-    <Tag>Dried_Ingredient</Tag>
-    <Public>true</Public>
-    <DisplayName>Dried Crocus Roots</DisplayName>
-    <Description>Dried Crocus.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
       <X>1</X>
@@ -159,58 +142,7 @@
     <Public>true</Public>
     <DisplayName>Dried Cloud Funnel Mushroom</DisplayName>
     <Description>Dried Cloud Funnel.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Consumables\Herbs.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Dried_Gilliflower_Buds" Type="InventoryItem" />
-    <Tag>Dried_Ingredient</Tag>
-    <Public>true</Public>
-    <DisplayName>Dried Gilliflower Buds</DisplayName>
-    <Description>Dried Gilliflower.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Consumables\Herbs.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Dried_Glasswort_Shoots" Type="InventoryItem" />
-    <Tag>Dried_Ingredient</Tag>
-    <Public>true</Public>
-    <DisplayName>Dried Glasswort Shoots</DisplayName>
-    <Description>Dried Glasswort.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Consumables\Herbs.mwm</Model>
-    <MaxStackAmount>16</MaxStackAmount>
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Dried_Luceat_Berries" Type="InventoryItem" />
-    <Tag>Dried_Ingredient</Tag>
-    <Public>true</Public>
-    <DisplayName>Dried Luceat Berries</DisplayName>
-    <Description>Dried Luceat.</Description>
-    <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
       <X>1</X>
@@ -227,6 +159,74 @@
     <Public>true</Public>
     <DisplayName>Dried Concordia Mushroom</DisplayName>
     <Description>Dried Concordia.</Description>
+    <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Dried_Crimson_Thristle_Stems" Type="InventoryItem" />
+    <Tag>Dried_Ingredient</Tag>
+    <Public>true</Public>
+    <DisplayName>Dried Crimson Thristle Stems</DisplayName>
+    <Description>Dried Crimson Thristle.</Description>
+    <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Dried_Crocus_Roots" Type="InventoryItem" />
+    <Tag>Dried_Ingredient</Tag>
+    <Public>true</Public>
+    <DisplayName>Dried Crocus Roots</DisplayName>
+    <Description>Dried Crocus.</Description>
+    <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Dried_Gilliflower_Buds" Type="InventoryItem" />
+    <Tag>Dried_Ingredient</Tag>
+    <Public>true</Public>
+    <DisplayName>Dried Gilliflower Buds</DisplayName>
+    <Description>Dried Gilliflower.</Description>
+    <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Consumables\Herbs.mwm</Model>
+    <MaxStackAmount>16</MaxStackAmount>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Subtype="Dried_Glasswort_Shoots" Type="InventoryItem" />
+    <Tag>Dried_Ingredient</Tag>
+    <Public>true</Public>
+    <DisplayName>Dried Glasswort Shoots</DisplayName>
+    <Description>Dried Glasswort.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -307,11 +307,11 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Dried_Rock_Lichen" Type="InventoryItem" />
+    <Id Subtype="Dried_Luceat_Berries" Type="InventoryItem" />
     <Tag>Dried_Ingredient</Tag>
     <Public>true</Public>
-    <DisplayName>Dried Rock Lichen</DisplayName>
-    <Description>Dried Rock Lichen.</Description>
+    <DisplayName>Dried Luceat Berries</DisplayName>
+    <Description>Dried Luceat.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>

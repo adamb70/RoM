@@ -59,7 +59,7 @@ efficient type of sawmill."
     <Component Type="CraftingScheduler" Subtype="Water_PumpScheduler" />
     <Component Type="ToolBasedRecipeProviderComponent" Subtype="Water_PumpRecipes" />
 
-    <Component Type="InventorySpawnComponent" />
+    <Component Type="InventorySpawnComponent" Subtype="ProductionSpawner" />
     <Component Type="MyObjectBuilder_EntityFXComponent" Subtype="SawmillMechanicalFx" />
   </Definition>
 
