@@ -12,9 +12,7 @@
         <ModelCollectionSubtypeId>HazelSmall</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Sticks" Type="InventoryItem" />
-            <Min>2</Min>
-            <Max>4</Max>
+            <Id Type="LootTableDefinition" Subtype="Sticks" />
           </Action>
         </Actions>
       </GrowthStep>
@@ -24,9 +22,7 @@
         <TimeToNextStep Hours="4" />
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Roots" Type="ConsumableItem" />
-            <Min>1</Min>
-            <Max>1</Max>
+            <Id Type="LootTableDefinition" Subtype="Roots" />
           </Action>
         </Actions>
       </GrowthStep>
