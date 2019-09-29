@@ -5,12 +5,14 @@
   <Definition xsi:type="MyObjectBuilder_PlanetAreaOwnershipComponentDefinition">
     <Id Type="MyObjectBuilder_PlanetAreaOwnershipComponent" Subtype="Terra" />
     <OwnedAreaSets>
-      <AreaSet FactionTag="KRBG" Name="City of Langenmosen">
+      <AreaSet FactionTag="KRBG" Name="Hamlet of Langenmosen">
         <PermissionSet Type="MyObjectBuilder_PermissionSetDefinition" Subtype="Langenmosen"/>
+        <Area Side="Forward" X="17" Y="63"/>
+      </AreaSet>
 
-        <Area Side="Forward" X="16" Y="63"/>
-	<Area Side="Forward" X="17" Y="63"/>
-
+      <AreaSet FactionTag="KRBG" Name="Outskirts of Langenmosen">
+        <PermissionSet Type="MyObjectBuilder_PermissionSetDefinition" Subtype="Langenmosen"/>
+	<Area Side="Forward" X="16" Y="63"/>
       </AreaSet>
     </OwnedAreaSets>
   </Definition>
