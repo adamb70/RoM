@@ -4,7 +4,7 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="Herbs" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.3">
+      <GrowthStep Name="Dead" StartingProbability="0">
         <NextStep>Empty</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
@@ -169,7 +169,7 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="Norden_Barley" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.3">
+      <GrowthStep Name="Dead" StartingProbability="0">
         <NextStep>Norden_Barleyless</NextStep>
         <TimeToNextStep Hours="4.5" />
       </GrowthStep>
@@ -201,7 +201,7 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="Roots" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.3">
+      <GrowthStep Name="Dead" StartingProbability="0">
         <NextStep>Roots</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
@@ -903,15 +903,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="StonePile" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0.1">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>StonePile</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="StonePile" StartingProbability="0.3">
+      <GrowthStep Name="StonePile" StartingProbability="0.9">
         <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -927,15 +927,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="SingleStone" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0.1">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>SingleStone</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="SingleStone" StartingProbability="0.3">
+      <GrowthStep Name="SingleStone" StartingProbability="0.9">
         <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -951,15 +951,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="BrownStonePile" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0.1">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>StonePile</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="StonePile" StartingProbability="0.3">
+      <GrowthStep Name="StonePile" StartingProbability="0.9">
         <ModelCollectionSubtypeId>BrownStonePile</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -975,15 +975,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="BrownSingleStone" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0.1">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>SingleStone</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="SingleStone" StartingProbability="0.3">
+      <GrowthStep Name="SingleStone" StartingProbability="0.9">
         <ModelCollectionSubtypeId>BrownSingleStone</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -999,15 +999,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="SandStonePile" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0.1">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>SandStonePile</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="SandStonePile" StartingProbability="0.3">
+      <GrowthStep Name="SandStonePile" StartingProbability="0.9">
         <ModelCollectionSubtypeId>SandStonePile</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -1023,15 +1023,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="SingleSandStone" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0.1">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>SingleSandStone</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="SingleSandStone" StartingProbability="0.3">
+      <GrowthStep Name="SingleSandStone" StartingProbability="0.9">
         <ModelCollectionSubtypeId>SingleSandStone</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -1047,15 +1047,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="Enchanted_StonePile" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0.1">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>Enchanted_StonePile</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="Enchanted_StonePile" StartingProbability="0.3">
+      <GrowthStep Name="Enchanted_StonePile" StartingProbability="0.9">
         <ModelCollectionSubtypeId>StonePile</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -1071,15 +1071,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="Enchanted_SingleStone" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0.1">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>Enchanted_SingleStone</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="Enchanted_SingleStone" StartingProbability="0.3">
+      <GrowthStep Name="Enchanted_SingleStone" StartingProbability="0.9">
         <ModelCollectionSubtypeId>SingleStone</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -1095,11 +1095,11 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="IronOrePile" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>IronOrePile</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
@@ -1119,15 +1119,15 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="SingleIronOre" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.35">
+      <GrowthStep Name="Dead" StartingProbability="0">
         <NextStep>Still_Dead</NextStep>
         <TimeToNextStep Hours="2" />
       </GrowthStep>
-      <GrowthStep Name="Still_Dead" StartingProbability="0.35">
+      <GrowthStep Name="Still_Dead" StartingProbability="0">
         <NextStep>SingleIronOre</NextStep>
         <TimeToNextStep Hours="3" />
       </GrowthStep>
-      <GrowthStep Name="SingleIronOre" StartingProbability="0.3">
+      <GrowthStep Name="SingleIronOre" StartingProbability="1">
         <ModelCollectionSubtypeId>PristineIron</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
@@ -1964,11 +1964,11 @@
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="Norden_Spalt" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0.3">
+      <GrowthStep Name="Dead" StartingProbability="0">
         <NextStep>Empty_Spalt</NextStep>
         <TimeToNextStep Hours="4.5" />
       </GrowthStep>
-      <GrowthStep Name="Empty_Spalt" StartingProbability="0.3">
+      <GrowthStep Name="Empty_Spalt" StartingProbability="0.1">
         <ModelCollectionSubtypeId>Empty_Spalt</ModelCollectionSubtypeId>
         <NextStep>Spalt</NextStep>
         <TimeToNextStep Hours="2" />
@@ -1980,7 +1980,7 @@
           </Action>
         </Actions>
       </GrowthStep>
-      <GrowthStep Name="Spalt" StartingProbability="0.6">
+      <GrowthStep Name="Spalt" StartingProbability="0.9">
         <ModelCollectionSubtypeId>Spalt</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Norden_Spaltless">
