@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="HazelSmallBranchless" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
@@ -12,7 +11,7 @@
         <ModelCollectionSubtypeId>HazelSmall</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Type="LootTableDefinition" Subtype="Sticks" />
+            <Id Subtype="Sticks" Type="LootTableDefinition" />
           </Action>
         </Actions>
       </GrowthStep>
@@ -22,14 +21,11 @@
         <TimeToNextStep Hours="4" />
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Type="LootTableDefinition" Subtype="Roots" />
+            <Id Subtype="Roots" Type="LootTableDefinition" />
           </Action>
         </Actions>
       </GrowthStep>
     </GrowthSteps>
   </Definition>
-  
-  
-  
 </Definitions>
 
