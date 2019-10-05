@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="Torch" />
+
+    <DisplayName>DisplayName_Torch</DisplayName>
+    <Description>Description_Torch</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Torch.dds</Icon>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Model>Models\Weapons\Torch.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Mass>5</Mass>
+
+    <MaxDurability>1800</MaxDurability>
+
+    <Position>
+      <Slot>OffHand</Slot>
+    </Position>
+
+	  <Animation>torch</Animation>
+	  
+    <EquippedTransform>
+      <Forward y="1" />
+      <Up z="-1" />
+    </EquippedTransform>
+	
+	<StanceToBehavior>
+      <StanceName>NormalMode</StanceName>
+      <BehaviorId Type="TimedDurabilityBehaviorDefinition" Subtype="Torch" />
+    </StanceToBehavior>
+
+	<DummyMapping Name="detector_fire" AnimationVariable="#torch_fire" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition">
+    <Id Type="EntityFXComponent" Subtype="Torch" />
+    <Effects>
+      <Effect On="true" Dummy="detector_fire">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="Torch" />
+      </Effect>
+    </Effects>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_TimedDurabilityBehaviorDefinition">
+    <Id Type="TimedDurabilityBehaviorDefinition" Subtype="Torch" />
+    <TickInterval Milliseconds="1000" />
+    <DamagePerTick>1</DamagePerTick>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+    <Id Type="HandItem" Subtype="Torch" />
+    <Component Type="EntityFXComponent" Subtype="Torch" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Torch" />
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Torch.dds</Icon>
+    <DisplayName>DisplayName_Torch</DisplayName>
+    <Description>Description_Torch</Description>
+    <Category>Personal</Category>
+    <Category>Tools</Category>
+    <Prerequisites>
+      <Item Tag="Universal_Stick" Amount="2" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="Torch" />
+    </Results>
+    <CraftingTime Seconds="2" />
+  </Definition>
+</Definitions>
