@@ -8,18 +8,37 @@
     <Description>The Claim Totem is used to stake your claim in the Realm of Mistvalin.</Description>
     <Icon>Textures\GUI\Icons\Universal\Books\book_law.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\SkullImpaled.dds</Icon>
-    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
-    <BoundingBox>
-      <Min x="-2" y="0" z="-4" />
-      <Max x="2" y="3" z="4" />
-    </BoundingBox>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="LargeGridDataBase" />
+    <Positions>
+      <Position x="0" y="0" z="0" />
+    </Positions>
     <Model>Models\Universal\LawGovernment\Claim_Stake.mwm</Model>
     <PhysicalMaterial>WoodLight</PhysicalMaterial>
     <Components>
-      <Component Type="Block" Subtype="ClaimTotem" Count="1" />
+      <Component Tag="ScrapWood" Count="5" />
     </Components>
     <Mass>30</Mass>
+    <MountPoints>
+      <MountPoint Side="Bottom" StartX="-0.03239999" StartY="-0.03239999" EndX="1.0324" EndY="1.0324" />
+    </MountPoints>
+    <UseModelIntersection>true</UseModelIntersection>
     <MaxIntegrity>300</MaxIntegrity>
+    <VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>1.0</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MaxAllowed>0.3</MaxAllowed>
+        <MinAllowed>0.1</MinAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
