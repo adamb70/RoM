@@ -21,7 +21,22 @@
       <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
     </MountPoints>
     <Mass>180</Mass>
-    <MaxIntegrity>700</MaxIntegrity>
+    <MaxIntegrity>700</MaxIntegrity><VoxelPlacement>
+      <StaticMode>
+        <MinAllowed>-Infinity</MinAllowed>
+        <MaxAllowed>1.0</MaxAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>false</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </StaticMode>
+      <DynamicMode>
+        <MaxAllowed>0.3</MaxAllowed>
+        <MinAllowed>0.1</MinAllowed>
+        <SnapMin>false</SnapMin>
+        <SnapMax>true</SnapMax>
+        <VoxelOnly>true</VoxelOnly>
+      </DynamicMode>
+    </VoxelPlacement>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
