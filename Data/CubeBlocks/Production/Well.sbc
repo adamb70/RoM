@@ -5,13 +5,13 @@
     <Id Type="Block" Subtype="Stone_Well" />
     <DisplayName>Stone Well</DisplayName>
     <Description>Fills empty buckets with water. Will not work on dry or rocky ground.</Description>
-    <Icon>Textures\GUI\Icons\Universal\Cooking\Stone_Well.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Masonry\WaterWell.dds</Icon>
     <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
     <BoundingBox>
-      <Min x="-1" y="0" z="-1" />
-      <Max x="2" y="2" z="2" />
+      <Min x="-3" y="-5" z="-2" />
+      <Max x="3" y="5" z="4" />
     </BoundingBox>
-    <Model>Models\Universal\Masonry\stone_well.mwm</Model>
+    <Model>Models\Universal\Masonry\WaterWell.mwm</Model>
     <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
     <Components>
       <Component Type="Block" Subtype="Stone_Well" Count="1" />
@@ -20,24 +20,8 @@
     <MountPoints>
       <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
     </MountPoints>
-    <VoxelPlacement>
-      <StaticMode>
-        <MinAllowed>-Infinity</MinAllowed>
-        <MaxAllowed>Infinity</MaxAllowed>
-        <SnapMin>false</SnapMin>
-        <SnapMax>false</SnapMax>
-        <VoxelOnly>true</VoxelOnly>
-      </StaticMode>
-      <DynamicMode>
-        <MinAllowed>-Infinity</MinAllowed>
-        <MaxAllowed>0.01</MaxAllowed>
-        <SnapMin>false</SnapMin>
-        <SnapMax>true</SnapMax>
-        <VoxelOnly>true</VoxelOnly>
-      </DynamicMode>
-    </VoxelPlacement>
-    <Mass>50</Mass>
-    <MaxIntegrity>100</MaxIntegrity>
+    <Mass>180</Mass>
+    <MaxIntegrity>700</MaxIntegrity>
   </Definition>
 
   <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
@@ -97,7 +81,7 @@
     <ScanMargin>1</ScanMargin>
     <Mode>Surface</Mode>
     <DisturbedTime Seconds="2"/>
-    <PoweredWhenDisturbed>true</PoweredWhenDisturbed>
+    <PoweredWhenDisturbed>false</PoweredWhenDisturbed>
     <LevelOfDetail>1</LevelOfDetail>
     <DebugMode>false</DebugMode>
     <Operator>OR</Operator>

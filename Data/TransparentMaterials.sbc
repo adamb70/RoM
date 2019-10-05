@@ -151,6 +151,34 @@
     <Reflectivity>0.8</Reflectivity>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_TransparentMaterialDefinition">
+    <Id Type="TransparentMaterialDefinition" Subtype="Water2" />      
+    <AlphaMistingEnable>false</AlphaMistingEnable>
+    <CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights>
+    <Emissivity>0.0</Emissivity>
+    <IgnoreDepth>false</IgnoreDepth>
+    <SoftParticleDistanceScale>1</SoftParticleDistanceScale>
+    <Texture>Textures\Particles\Water2.dds</Texture>
+    <UseAtlas>false</UseAtlas>
+    <NeedSort>true</NeedSort>
+    <UVOffset>
+      <X>0</X>
+      <Y>0</Y>
+    </UVOffset>
+    <UVSize>
+      <X>1</X>
+      <Y>1</Y>
+    </UVSize>
+    <Color>
+      <X>0.2</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+      <W>0.7</W>
+    </Color>
+    <Reflection>true</Reflection>
+    <Reflectivity>0.02</Reflectivity>
+  </Definition>
+
 
 
 </Definitions>
