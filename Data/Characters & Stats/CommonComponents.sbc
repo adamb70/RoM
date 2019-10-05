@@ -2,7 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Definition xsi:type="MyObjectBuilder_MedievalCharacterPickupComponentDefinition" Merge="Append">
     <Id Type="MyObjectBuilder_MedievalCharacterPickupComponent" Subtype="CharacterPickup" />
-    
+    <Wheel X="0.5" Y="0.45" Texture="Textures\GUI\Icons\ProgressCircle128.dds" Size="128" Scale="1.0" RadPerSecond="4.28" />
     <PickableItems>
       <!--5s Pickup Time-->
         <Item TypeId="MyObjectBuilder_Block" SubtypeId="Cooking_Table" PickupTime="5"/>
