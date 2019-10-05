@@ -56,23 +56,6 @@
     <CraftingTime Seconds="1" />
   </Definition>
 
-
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClaimTotem"/>
-    <Icon>Textures\GUI\Icons\Universal\Books\book_law.dds</Icon>
-    <Icon>Textures\GUI\Icons\Cubes\SkullImpaled.dds</Icon>
-    <DisplayName>Claim Totem</DisplayName>    
-    <Description>The Claim Totem is used to stake your claim in the Realm of Mistvalin.</Description>
-    <Category>Personal</Category>
-    <Prerequisites>
-      <Item Amount="2" Tag="ScrapWood" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Type="Block" Subtype="ClaimTotem" />
-    </Results>
-    <CraftingTime Seconds="1"/>
-  </Definition>
-
   <Definition xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
     <Id Type="MyObjectBuilder_UseObjectsComponent" Subtype="ClaimTotem" />
     <LoadFromModel>false</LoadFromModel>
