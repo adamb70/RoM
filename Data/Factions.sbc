@@ -206,5 +206,28 @@
     </DefaultBanner>
   </Definition>
   <!-- =================================================================================== -->
-
+  <Definition xsi:type="MyObjectBuilder_FactionDefinition" Tag="ZOMB" Founder="Aurelius Grimsford">
+    <Id Type="MyObjectBuilder_FactionDefinition" Subtype="Barbarians" />
+    <DisplayName>Cult of Rotting</DisplayName>
+    <Description>The Cult of Rotting is led by Aurelius Grimsford, a teacher of necromancy. The cult's experiments run loose within the Dreadlands and often make the area dangerous to bypassers.</Description>
+    <DefaultRelationship>War</DefaultRelationship>
+    <AcceptsMembers>false</AcceptsMembers>
+    <AutoAcceptMember>true</AutoAcceptMember>
+    <Rank>Grand Lich</Rank>
+    <Rank>Necromancer</Rank>
+    <Rank>Minion</Rank>
+    <DefaultBanner>
+      <BackgroundColor x="0.52631232785753284" y="0.4404246557150657" z="0.05727077595251095" />
+      <Layers>
+        <BannerLayer ModId="" Pattern="Diamond">
+          <Color x="0.4178658762907817" y="0.221057277903065" z="0.028750446605548277" />
+        </BannerLayer>
+        <BannerLayer ModId="" Pattern="Axe">
+          <Color x="0.8931680004838078" y="0.9333435885546558" z="0.9991557441445022" />
+        </BannerLayer>
+      </Layers>
+      <BonusPattern>0</BonusPattern>
+    </DefaultBanner>
+  </Definition>
+  <!-- =================================================================================== -->
 </Definitions>

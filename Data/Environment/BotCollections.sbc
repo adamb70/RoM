@@ -3,10 +3,14 @@
   
   <Definition xsi:type="VR.EI.BotCollection">
     <Id Type="MyObjectBuilder_BotCollectionDefinition" Subtype="Barbarian" />
-    
-    <Bot Type="HumanoidBot" Subtype="BarbarianForestClubWood" Probability="0.4" />
-    <Bot Type="HumanoidBot" Subtype="BarbarianForestSwordRusted" Probability="0.2" />
-    <Bot Type="HumanoidBot" Subtype="BarbarianForestClubStudded" Probability="0.4" />
-    <Bot Type="HumanoidBot" Subtype="ApothecaryBarbarian" Probability="0.1" />
-  </Definition>
+      <Bot Type="HumanoidBot" Subtype="BarbarianForestClubWood" Probability="0.4" />
+      <Bot Type="HumanoidBot" Subtype="BarbarianForestSwordRusted" Probability="0.2" />
+      <Bot Type="HumanoidBot" Subtype="BarbarianForestClubStudded" Probability="0.4" />
+      <Bot Type="HumanoidBot" Subtype="ApothecaryBarbarian" Probability="0.1" />
+    </Definition>
+
+    <Id Type="MyObjectBuilder_BotCollectionDefinition" Subtype="Undead" />
+    <Bot Type="HumanoidBot" Subtype="Medieval_zombie" Probability="0.3" />
+    <Bot Type="HumanoidBot" Subtype="Medieval_skeleton" Probability="0.7" />
+    </Definition>
 </Definitions>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Base definition for all barbarians -->
+  <Definition xsi:type="MyObjectBuilder_HumanoidBotDefinition">
+    <Id Type="HumanoidBot" Subtype="Medieval_skeleton" />
+    <Public>true</Public>
+    <DisplayName>Skeleton</DisplayName>
+    <Icon>Textures\GUI\Icons\Bots\SpawnBarbarian.dds</Icon>
+
+    <BotEntity Type="EntityBase" Subtype="Medieval_skeleton" />
+
+    <Alignment>Hostile</Alignment>
+    <FactionTag>ZOMB</FactionTag>
+    
+    <!-- <Item Type="HandItem" Subtype="Torch" /> -->
+    <!-- <IdleEquipment Type="HandItem" Subtype="Torch" /> -->
+    <Item Type="HandItem" Subtype="SwordRusted" />
+    <CombatEquipment Type="HandItem" Subtype="SwordRusted" />
+  </Definition>
+  
+</Definitions>

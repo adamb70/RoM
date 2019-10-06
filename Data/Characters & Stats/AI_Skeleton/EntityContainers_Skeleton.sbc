@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="EntityBase" Subtype="Medieval_skeleton" />
+    <CopyFrom Type="EntityBase" Subtype="Medieval_barbarian" />
+    <Tag>AI</Tag>
+
+    <Component Type="ModelComponent" Subtype="Medieval_skeleton" />
+    <Component Type="CharacterSoundComponent" Subtype="Medieval_skeleton" />
+
+    <!-- <Component Type="AiDetectorComponent" Subtype="Default" /> -->
+    <Component Type="BarbarianBehavior" Subtype="Medieval_skeleton" />
+
+    <Component Type="CharacterMovementComponent" Subtype="Medieval_skeleton" />
+
+    <Component Type="RenderComponentCharacter" Subtype="Medieval_skeleton" />
+    <Component Type="EntityFXComponent" Subtype="Medieval_skeleton" />
+
+    <Component Type="DeathComponent" Subtype="Medieval_skeleton" />
+  </Definition>
+  
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="EntityBase" Subtype="Medieval_skeleton_corpse" />
+
+    <CopyFrom Type="EntityBase" Subtype="Medieval_barbarian_corpse" />
+
+    <Component Type="ModelComponent" Subtype="Medieval_skeleton" />
+    <Component Type="RenderComponentCharacter" Subtype="Medieval_skeleton" />
+  </Definition>
+</Definitions>

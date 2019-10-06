@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_BarbarianBehaviorDefinition">
+    <Id Type="BarbarianBehavior" Subtype="Medieval_skeleton" />
+    <PathfindingLayerId Type="RDPathfindingLayerDefinition" Subtype="Humanoid" />
+    <VisionCone>120</VisionCone>
+    <SightRange>50</SightRange>
+    <HearingRange>25</HearingRange>
+    <BaseAttackWindow Milliseconds="1600" />
+    <AttackDecisionWindow Milliseconds="600" />
+    <BlockDelayWindow Milliseconds="200" />
+    <HeavyAttackChargeTime Seconds="0.8" />
+    <LightAttacksBeforeHeavy Min="2" Max="4" />
+    <AttackRange>1.7</AttackRange>
+    <AlertEvent>AlertShout</AlertEvent>
+    <Torch Type="HandItem" Subtype="Torch" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CharacterSoundComponentDefinition">
+    <Id Type="MyObjectBuilder_CharacterSoundComponent" Subtype="Medieval_skeleton" />
+    <LoopingFootsteps>true</LoopingFootsteps>
+    <Death>VocSkeletonDeath</Death>
+
+    <StepSounds>
+      <StepSound>
+        <Type>Fall</Type>
+        <Material>Stone</Material>
+        <Sound>PlayFallRock</Sound>
+      </StepSound>
+      <StepSound>
+        <Type>Fall</Type>
+        <Material>Grass</Material>
+        <Sound>PlayFallGrass</Sound>
+      </StepSound>
+      <StepSound>
+        <Type>Fall</Type>
+        <Material>Wood</Material>
+        <Sound>PlayFallWood</Sound>
+      </StepSound>
+    </StepSounds>
+  </Definition>
+
+  
+  <Definition xsi:type="MyObjectBuilder_ModelComponentDefinition">
+    <Id Type="ModelComponent" Subtype="Medieval_skeleton" />
+    <DisplayName>Skeleton</DisplayName>
+    <Model>Models\Characters\Skeleton.mwm</Model>
+    <ColorshiftHSV H="104" S="-36" V="-75" />
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CharacterMovementComponentDefinition">
+    <Id Type="CharacterMovementComponent" Subtype="Medieval_skeleton" />
+
+    <MaxSlope>70</MaxSlope>
+
+    <SprintSpeed Forward="7" Backward="0" Strafing="0" />
+    <RunSpeed Forward="3.8" Backward="3.1" Strafing="3.3" />
+    <WalkSpeed Forward="1.8" Backward="1.8" Strafing="1.8" />
+    <CrouchSpeed Forward="1.3" Backward="0.9" Strafing="0.9" />
+
+    <JumpForce>2.5</JumpForce>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_RenderComponentCharacterDefinition">
+    <Id Type="RenderComponentCharacter" Subtype="Medieval_skeleton" />
+
+    <MaterialsDisabledIn1st>
+      <Material>Upper_body_face_mat</Material>
+      <Material>Upper_body_beard</Material>
+      <Material>SledgeHammer</Material>
+    </MaterialsDisabledIn1st>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_DeathComponentDefinition" Copy="Append">
+    <Id Type="DeathComponent" Subtype="Medieval_skeleton" />
+    <CopyFrom Type="DeathComponent" Subtype="CharacterDeath" />
+    
+    <CorpseId Type="EntityBase" Subtype="Medieval_skeleton_corpse" />
+    <LootId Type="LootTableDefinition" Subtype="BarbarianBagContent" />
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition" Copy="Append">
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="Medieval_skeleton" />
+    <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="Humanoid" />
+
+    <Effects>
+      <Effect StartEvent="Death">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="DeathSkeleton" />
+      </Effect>
+      <Effect StartEvent="Pain">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="PainSkeleton" />
+      </Effect>
+      <Effect StartEvent="AttackShout">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="AttackSkeleton" />
+      </Effect>
+      <Effect StartEvent="AlertShout">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="AlertShoutSkeleton" />
+      </Effect>
+      <Effect StartEvent="Exhausted">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="ExhaustedSkeleton" />
+      </Effect>
+    </Effects>
+  </Definition>
+  
+    <Definition xsi:type="MyObjectBuilder_EffectDefinition">
+    <Id Type="MyObjectBuilder_EffectDefinition" Subtype="JumpSkeleton" />
+    <CueId>VocSkeletonJump</CueId>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EffectDefinition">
+    <Id Type="MyObjectBuilder_EffectDefinition" Subtype="DeathSkeleton" />
+    <CueId>VocSkeletonDeath</CueId>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EffectDefinition">
+    <Id Type="MyObjectBuilder_EffectDefinition" Subtype="PainSkeleton" />
+    <CueId>VocSkeletonPain</CueId>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EffectDefinition">
+    <Id Type="MyObjectBuilder_EffectDefinition" Subtype="AttackSkeleton" />
+    <CueId>VocSkeletonAttack</CueId>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EffectDefinition">
+    <Id Type="MyObjectBuilder_EffectDefinition" Subtype="AlertShoutSkeleton" />
+    <CueId>VocSkeletonAlert</CueId>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_EffectDefinition">
+    <Id Type="MyObjectBuilder_EffectDefinition" Subtype="ExhaustedSkeleton" />
+    <CueId>VocSkeletonExhausted</CueId>
+  </Definition>
+  
+</Definitions>
