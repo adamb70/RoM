@@ -109,23 +109,6 @@ inorder to plant it again.</Description>
   </Definition>
   <!-- -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagHerbs" />
-    <DisplayName>5x Single Herb Seed</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_Herbs" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagHerbs" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Herbs_Compost_Farming" />
     <DisplayName>Compost Farming: Herbs</DisplayName>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -182,24 +165,6 @@ inorder to plant it again.</Description>
     </Results>
     <CraftingTime Seconds="1.5"/>
   </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagHerbs_Compost" />
-    <DisplayName>5x Single Herb Seed (Compost)</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Herbs.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_Herbs_Compost" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagHerbs_Compost" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Pumpkin_Farming" />
@@ -247,23 +212,6 @@ inorder to plant it again.</Description>
     <Prerequisites>
       <Item Amount="5" Type="InventoryItem" Subtype="Withering_Pumpkin" />
       <Item Amount="1" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagPumpkin" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagPumpkin" />
-    <DisplayName>5x Single Herb Seed</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_Pumpkin" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
     </Prerequisites>
     <Results>
 
@@ -329,24 +277,6 @@ inorder to plant it again.</Description>
     </Results>
     <CraftingTime Seconds="1.5"/>
   </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagPumpkin_Compost" />
-    <DisplayName>5x Single Pumpkin Seed (Compost)</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-    <Icon>Textures\GUI\Icons\Cubes\Pumpkin.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_Pumpkin_Compost" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagPumpkin_Compost" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cabbage_Farming" />
@@ -401,24 +331,7 @@ inorder to plant it again.</Description>
     </Results>
     <CraftingTime Seconds="1.5"/>
   </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagCabbage" />
-    <DisplayName>5x Single Cabbage Seed</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Cabbage.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_Cabbage" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagCabbage" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
+  
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cabbage_Compost_Farming" />
     <DisplayName>Compost Farming: Cabbage</DisplayName>
@@ -476,24 +389,6 @@ inorder to plant it again.</Description>
     </Results>
     <CraftingTime Seconds="1.5"/>
   </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagCabbage_Compost" />
-    <DisplayName>5x Single Cabbage Seed (Compost)</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Cabbage.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_Cabbage_Compost" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagCabbage_Compost" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Flax_Farming" />
@@ -541,23 +436,6 @@ inorder to plant it again.</Description>
     <Prerequisites>
       <Item Amount="5" Type="InventoryItem" Subtype="Withering_FlaxStraws" />
       <Item Amount="1" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagFlax" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagFlax" />
-    <DisplayName>5x Single Flax Seed</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_FlaxStraws" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
     </Prerequisites>
     <Results>
 
@@ -623,24 +501,6 @@ inorder to plant it again.</Description>
     </Results>
     <CraftingTime Seconds="1.5"/>
   </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagFlax_Compost" />
-    <DisplayName>5x Single Flax Seed (Compost)</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\flax.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_FlaxStraws_Compost" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagFlax_Compost" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wheat_Farming" />
@@ -688,23 +548,6 @@ inorder to plant it again.</Description>
     <Prerequisites>
       <Item Amount="5" Type="InventoryItem" Subtype="Withering_WheatStraws" />
       <Item Amount="1" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagWheat" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagWheat" />
-    <DisplayName>5x Single Wheat Seed</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_WheatStraws" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
     </Prerequisites>
     <Results>
 
@@ -763,24 +606,6 @@ inorder to plant it again.</Description>
     <Prerequisites>
       <Item Amount="5" Type="InventoryItem" Subtype="Withering_WheatStraws_Compost" />
       <Item Amount="1" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagWheat_Compost" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagWheat_Compost" />
-    <DisplayName>5x Single Wheat Seed (Compost)</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\grain.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_WheatStraws_Compost" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
     </Prerequisites>
     <Results>
 
@@ -889,25 +714,7 @@ inorder to plant it again.</Description>
     </Results>
     <CraftingTime Seconds="1.5"/>
   </Definition>
-  <!-- -->
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagRedCabbage" />
-    <DisplayName>5x Single Red Cabbage Seed</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="25" Type="InventoryItem" Subtype="Withering_RedCabbage" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagRedCabbage" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
+  
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="RedCabbage_Compost_Farming" />
     <DisplayName>Compost Enchanted Farming: Red Cabbage
@@ -974,24 +781,6 @@ inorder to plant it again.</Description>
     </Results>
     <CraftingTime Seconds="1.5"/>
   </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="x5xSingle_SeedBagRedCabbage_Compost" />
-    <DisplayName>5x Single Red Cabbage Seed (Compost)</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\RedCabbage.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="25" Type="InventoryItem" Subtype="Withering_RedCabbage_Compost" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagRedCabbage_Compost" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
   <!-- =================================================================================== -->
   
   <!-- =================================================================================== -->
@@ -1050,23 +839,6 @@ inorder to plant it again.</Description>
   </Definition>
   <!-- -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagNorden_Barley" />
-    <DisplayName>5x Single Norden Barley Seed</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_Norden_Barley" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagNorden_Barley" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Norden_Barley_Farming_Compost" />
     <DisplayName>Compost Farming: Norden Barley</DisplayName>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -1116,24 +888,6 @@ inorder to plant it again.</Description>
     <Prerequisites>
       <Item Amount="5" Type="InventoryItem" Subtype="Withering_Norden_Barley_Compost" />
       <Item Amount="1" Type="Block" Subtype="Water_Bucket" />
-    </Prerequisites>
-    <Results>
-
-      <Item Amount="1" Type="SeedBagHandItem" Subtype="Single_SeedBagNorden_Barley_Compost" />
-    </Results>
-    <CraftingTime Seconds="1.5"/>
-  </Definition>
-  <!-- -->
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="5xSingle_SeedBagNorden_Barley_Compost" />
-    <DisplayName>5x Single Norden Barley Seed (Compost)</DisplayName>
-    <Icon>Textures\GUI\Icons\ToolsAndWeapons\SeedBag.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Compost_Bucket.dds</Icon>
-    <Icon>Textures\GUI\Icons\Universal\Farming\Norden_Barley.dds</Icon>
-    <Category></Category>
-    <Prerequisites>
-      <Item Amount="5" Type="InventoryItem" Subtype="Withering_Norden_Barley_Compost" />
-      <Item Amount="5" Type="Block" Subtype="Water_Bucket" />
     </Prerequisites>
     <Results>
 
