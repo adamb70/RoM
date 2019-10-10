@@ -30,7 +30,6 @@ using VRage.Game.Entity;
 
 namespace RomScripts76561197972467544.FueledMechanicalSource
 {
-    [ReplicatedComponent]
     [MyComponent(typeof(MyObjectBuilder_FueledMechanicalSourceComponent))]
     public class MyFueledMechanicalSourceComponent : MyMechanicalSourceComponent
     {
