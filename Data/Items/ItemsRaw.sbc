@@ -595,6 +595,24 @@
   </Definition>
   <!-- ================================================================================ -->
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="Halite" />
+    <Tag>Ore</Tag>
+    <DisplayName>Halite</DisplayName>
+    <Description>Raw Halite</Description>
+    <Icon>Textures\GUI\Icons\Materials\IronOre.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Model>Models\Environment\Rocks\IronOre.mwm</Model>
+    <PhysicalMaterial>StoneLarge</PhysicalMaterial>
+    <MaxStackAmount>6</MaxStackAmount>
+    <Health>700</Health>
+    <Mass>20</Mass>
+  </Definition>
+  <!-- ================================================================================ -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
     <Id Type="InventoryItem" Subtype="SandPile" />
     <DisplayName>Sand Pile</DisplayName>
     <Description>Sand pile</Description>
