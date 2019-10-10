@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
+<?xml version='1.0' encoding='UTF-8'?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="Herbs" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <GrowthSteps>
@@ -167,7 +166,7 @@
         <TimeToNextStep Hours="2" />
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Norden_Roots" Type="LootTableDefinition" />
+            <Id Subtype="Spalt_Roots" Type="DurableItem" />
           </Action>
         </Actions>
       </GrowthStep>
@@ -1894,7 +1893,7 @@
         <TimeToNextStep Hours="2" />
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Roots" Type="LootTableDefinition" />
+            <Id Subtype="Spalt_Roots" Type="DurableItem" />
           </Action>
         </Actions>
       </GrowthStep>
@@ -1902,7 +1901,7 @@
         <ModelCollectionSubtypeId>Spalt</ModelCollectionSubtypeId>
         <Actions>
           <Action Name="Gather" NextStep="Norden_Spaltless">
-            <Id Subtype="Spalt" Type="DurableItem" />
+            <Id Subtype="Norden_Spalt" Type="ConsumableItem" />
             <Min>1</Min>
             <Max>1</Max>
           </Action>

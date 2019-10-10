@@ -117,20 +117,6 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Norden_Roots_Stamina" />
-    <DisplayName>Stamina</DisplayName>
-    <Public>false</Public>
-    <Description>Your stamina is regnerating!</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Stamina</Stat>
-	<RegenPerSecond>1.5</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="FruitsOpuntia_Stamina" />
     <DisplayName>Stamina</DisplayName>
     <Public>false</Public>
@@ -438,20 +424,6 @@
 	<EffectType>Positive</EffectType>
 	<Stat>Vigor</Stat>
 	<RegenPerSecond>.02</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Norden_Roots_Vigor" />
-    <DisplayName>Vigor</DisplayName>
-    <Public>false</Public>
-    <Description>Your Vigor is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Vigor</Stat>
-	<RegenPerSecond>-.02</RegenPerSecond>
 	<Duration Seconds="10" />
 	<CancelOnDamage>false</CancelOnDamage>
   </Definition>
@@ -973,20 +945,6 @@
 	<EffectType>Positive</EffectType>
 	<Stat>Mood</Stat>
 	<RegenPerSecond>.1</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Norden_Roots_Mood" />
-    <DisplayName>Mood</DisplayName>
-    <Public>false</Public>
-    <Description>Your mood is changing.</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Mood</Stat>
-	<RegenPerSecond>-.2</RegenPerSecond>
 	<Duration Seconds="10" />
 	<CancelOnDamage>false</CancelOnDamage>
   </Definition>
@@ -1731,19 +1689,6 @@
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Herbs_Food" />
-    <DisplayName>Eating</DisplayName>
-    <Description>You are feeling less hungry. . .</Description>
-    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
-    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
-	<EffectType>Positive</EffectType>
-	<Stat>Food</Stat>
-	<RegenPerSecond>.25</RegenPerSecond>
-	<Duration Seconds="10" />
-	<CancelOnDamage>false</CancelOnDamage>
-  </Definition>
-<!-- =========================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
-    <Id Type="EntityStatEffect" Subtype="Norden_Roots_Food" />
     <DisplayName>Eating</DisplayName>
     <Description>You are feeling less hungry. . .</Description>
     <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>

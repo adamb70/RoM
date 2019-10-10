@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  
+<?xml version='1.0' encoding='UTF-8'?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Subtype="FarmAgave" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
     <DeadState>Dead</DeadState>
@@ -1341,7 +1340,7 @@
         <TimeToNextStep Hours="1" />
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Norden_roots" Type="ConsumableItem" />
+            <Id Subtype="Spalt_Roots" Type="DurableItem" />
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1412,7 +1411,7 @@
         <TimeToNextStep Hours="1" />
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Norden_roots" Type="ConsumableItem" />
+            <Id Subtype="Spalt_Roots" Type="DurableItem" />
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1483,7 +1482,7 @@
         <TimeToNextStep Hours="1" />
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Norden_roots" Type="ConsumableItem" />
+            <Id Subtype="Spalt_Roots" Type="DurableItem" />
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -4106,6 +4105,5 @@
     </GrowthSteps>
     <MaxSlope>20</MaxSlope>
   </Definition>
-  
-  
 </Definitions>
+

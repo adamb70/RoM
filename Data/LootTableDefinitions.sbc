@@ -56,7 +56,6 @@
     <Item Type="SchematicItem" Subtype="Schematic_Cabbage" Weight="5" Amount="3" />
     <Item Type="SchematicItem" Subtype="Schematic_Mushrooms" Weight="5" Amount="3" />
     <Item Type="SchematicItem" Subtype="Schematic_Herbs" Weight="5" Amount="3" />
-    <Item Type="SchematicItem" Subtype="Schematic_Norden_Roots" Weight="5" Amount="3" />
     <Item Type="SchematicItem" Subtype="Schematic_Norden_Barley" Weight="5" Amount="3" />
 
 <!-- Schematics -->
@@ -167,16 +166,7 @@
 	  <!-- Roughly 21% Probability for Pristine -->
 	  <Item Type="SchematicItem"	Subtype="Schematic_HighlandCaps" Weight="21" />
 	<Item Weight="100" />
-  </Definition>
-<!-- ================================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
-  <Id Type="LootTableDefinition" Subtype="Norden_Roots" />
-  	<Rolls>1</Rolls>
-	  <Item Type="ConsumableItem"	Subtype="Norden_Roots" AlwaysDrops="true" IsUnique="true" />
-	  <!-- Roughly 25% Probability for Pristine -->
-	  <Item Type="SchematicItem"	Subtype="Schematic_Norden_Roots" Weight="25" />
-	<Item Weight="100" />
-  </Definition>
+  </Definition> 
 <!-- ================================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
   <Id Type="LootTableDefinition" Subtype="Norden_Barley" />
