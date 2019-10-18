@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Definition xsi:type="AnimationControllerDefinition" Abstract="false" Enabled="true" Merge="Append">
+    <Id Type="AnimationControllerComponent" Subtype="CowSkin" />
+    <CopyFrom xsi:nil="true" />
+    <Layers>
+      <Layer>
+        <Name>CowStatic</Name>
+        <Mode>Replace</Mode>
+        <StateMachine>CowStatic</StateMachine>
+        <InitialSMNode>IdleAnim</InitialSMNode>
+      </Layer>
+    </Layers>
+    <StateMachines>
+      <StateMachine>
+        <Name>CowStatic</Name>
+        <Nodes>
+          <Node>
+            <Name>RestartAnim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-140</X>
+                <Y>-32</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>56</X>
+                  <Y>-36</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Farming\cow_animated_idle.mwm</PathToModel>
+                <Loop>true</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+            </AnimationTree>
+            <EdPos>
+              <X>398</X>
+              <Y>68</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+          <Node>
+            <Name>IdleAnim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-159</X>
+                <Y>-19</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>68</X>
+                  <Y>-40</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Farming\cow_animated_idle.mwm</PathToModel>
+                <Loop>false</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+            </AnimationTree>
+            <EdPos>
+              <X>408</X>
+              <Y>-65</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+          <Node>
+            <Name>FeedAnim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-120</X>
+                <Y>-19</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>75</X>
+                  <Y>24</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Farming\cow_animated_feed.mwm</PathToModel>
+                <Loop>false</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+            </AnimationTree>
+            <EdPos>
+              <X>526</X>
+              <Y>-206</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+        </Nodes>
+        <Transitions>
+          <Transition From="FeedAnim" To="IdleAnim" TimeInSec="0.2" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="@animationfinished" Op="Equal" Rhs="1" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+          <Transition From="IdleAnim" To="RestartAnim" TimeInSec="0" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="@animationfinished" Op="Equal" Rhs="1" />
+                <Condition Lhs="@randomstable" Op="Less" Rhs="0.6" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+          <Transition From="RestartAnim" To="IdleAnim" TimeInSec="0.2" Sync="Restart">
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+          <Transition From="IdleAnim" To="FeedAnim" TimeInSec="0.2" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="@animationfinished" Op="Equal" Rhs="1" />
+                <Condition Lhs="@randomstable" Op="GreaterOrEqual" Rhs="0.6" />
+                <Condition Lhs="@randomstable" Op="Less" Rhs="0.9" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+        </Transitions>
+      </StateMachine>
+    </StateMachines>
+  </Definition>
+</Definitions>
