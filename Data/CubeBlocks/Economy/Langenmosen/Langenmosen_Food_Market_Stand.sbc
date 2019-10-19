@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
+    <Id Type="Block" Subtype="Langenmosen_Food_Market_Stand" />
+    <DisplayName>Langenmosen Food Market Stand</DisplayName>
+    <Icon>Textures\GUI\Icons\Universal\Economy\MarketStand.dds</Icon>
+    <Icon>Textures\GUI\Icons\NPC.dds</Icon>
+    <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
+    <BoundingBox>
+      <Min x="-6" y="-7" z="-6" />
+      <Max x="6" y="7" z="6" />
+    </BoundingBox>
+    <Model>Models\Universal\Economy\Redux\Market_Stand_1.mwm</Model>
+    <PhysicalMaterial>WoodHeavy</PhysicalMaterial>
+    <Components>
+      <Component Type="Block" Subtype="Langenmosen_Food_Market_Stand" Count="1" />
+    </Components>
+    <Rotation>YAxis</Rotation>
+    <MaxIntegrity>320</MaxIntegrity>
+    <Mass>400</Mass>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="LangenmosenFoodMarketStandCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+    <CraftString>Purchase</CraftString>
+    <CraftingString>Purchasing Queue</CraftingString>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="LangenmosenFoodMarketStandScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="LangenmosenFoodMarketStandCrafting" />
+    <QueueSize>4</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="LangenmosenFoodMarketStandRecipes" />
+    <Category>Langenmosen_Food_Market_Stand</Category>
+  </Definition>
+  
+  
+  <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition" Copy="Append">
+    <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="LangenmosenFoodMarketStandFX" />
+    <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
+    <Effects>
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_inventory" Overwrite="false">
+        <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingTable" />
+      </Effect>
+    </Effects>
+  </Definition>
+  
+  <!-- Attached model data (skinned market lady without animation)-->
+  <Definition xsi:type="MyObjectBuilder_ModelAttachmentComponentDefinition">
+        <Id Type="ModelAttachmentComponent" Subtype="MarketLady_Attachment" />
+        <Attachment Name="Skin">
+            <Offset x="0" y="-1.75" z="0.35" />
+            <Rotation x="180" y="0" z="0" />
+            <DefaultEntity Type="EntityBase" Subtype="MarketLady_Block" />
+        </Attachment>
+    </Definition>
+    
+  <!-- Attached model file -->
+  <Definition xsi:type="MyObjectBuilder_ModelComponentDefinition">
+      <Id Type="ModelComponent" Subtype="MarketLady_Model" />
+      <Model>Models\Universal\Economy\Redux\Market_Lady2.mwm</Model>
+      <PhysicalMaterial>Wood</PhysicalMaterial>
+  </Definition>
+  
+  <!-- Block definition for attached model -->
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
+        <Id Type="MyObjectBuilder_EntityBase" Subtype="MarketLady_Block" />
+        
+        <Component Type="PhysicsBodyComponent" Subtype="InteractableProxyBase" />
+        <!-- <Component Type="UseObjectsComponent" Subtype="InteractableProxyBase" /> -->
+        <Component Type="DamageProxyComponent" Subtype="InteractableProxyBase" />
+
+        <Component Type="ModelComponent" Subtype="MarketLady_Model" />
+        <Component Type="SkeletonComponent" />
+        <Component Type="RenderComponentRigged" />
+        <Component Type="MyObjectBuilder_AnimationControllerComponent" Subtype="MarketLady_AnimData" />
+    </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Langenmosen_Food_Market_Stand" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    
+    <!-- Attach our skinned model -->
+    <Component Type="ModelAttachmentComponent" Subtype="MarketLady_Attachment" />
+    
+    <Component Type="CraftingComponent" Subtype="LangenmosenFoodMarketStandCrafting" />
+    <Component Type="CraftingScheduler" Subtype="LangenmosenFoodMarketStandScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="LangenmosenFoodMarketStandRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="LangenmosenFoodMarketStandFX" />
+  </Definition>
+
+</Definitions>

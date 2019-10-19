@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Definition xsi:type="AnimationControllerDefinition" Abstract="false" Enabled="true" Merge="Append">
+    <Id Type="AnimationControllerComponent" Subtype="Market_Lady_3_AnimData" />
+    <CopyFrom xsi:nil="true" />
+    <Layers>
+      <Layer>
+        <Name>Market_Lady_3</Name>
+        <Mode>Replace</Mode>
+        <StateMachine>Market_Lady_3</StateMachine>
+        <InitialSMNode>Idle2Anim</InitialSMNode>
+      </Layer>
+    </Layers>
+    <StateMachines>
+      <StateMachine>
+        <Name>Market_Lady_3</Name>
+        <Nodes>
+          <Node>
+            <Name>RestartAnim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-165</X>
+                <Y>-42</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>82</X>
+                  <Y>-96</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Economy\Redux\Market_Lady_3_idle_standing.mwm</PathToModel>
+                <Loop>false</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+              <Orphans />
+            </AnimationTree>
+            <EdPos>
+              <X>302</X>
+              <Y>173</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+          <Node>
+            <Name>BoredAnim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-195</X>
+                <Y>-44</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>44</X>
+                  <Y>-115</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Economy\Redux\Market_Lady_3_idle_nails.mwm</PathToModel>
+                <Loop>false</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+              <Orphans />
+            </AnimationTree>
+            <EdPos>
+              <X>342</X>
+              <Y>-106</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+          <Node>
+            <Name>Idle2Anim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-159</X>
+                <Y>-19</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>68</X>
+                  <Y>-40</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Economy\Redux\Market_Lady_3_idle_standing.mwm</PathToModel>
+                <Loop>false</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+            </AnimationTree>
+            <EdPos>
+              <X>296</X>
+              <Y>31</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+        </Nodes>
+        <Transitions>
+          <Transition From="Idle2Anim" To="BoredAnim" TimeInSec="0.5" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="@animationfinished" Op="Equal" Rhs="1" />
+                <Condition Lhs="@randomstable" Op="GreaterOrEqual" Rhs="0.7" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+          <Transition From="RestartAnim" To="Idle2Anim" TimeInSec="0.2" Sync="Restart">
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+          <Transition From="Idle2Anim" To="RestartAnim" TimeInSec="0" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="@animationfinished" Op="Equal" Rhs="1" />
+                <Condition Lhs="@randomstable" Op="Less" Rhs="0.7" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+          <Transition From="BoredAnim" To="Idle2Anim" TimeInSec="0.5" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="@animationfinished" Op="Equal" Rhs="1" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+        </Transitions>
+      </StateMachine>
+    </StateMachines>
+  </Definition>
+</Definitions>

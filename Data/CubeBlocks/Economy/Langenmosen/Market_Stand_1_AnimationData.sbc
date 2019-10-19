@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Definition xsi:type="AnimationControllerDefinition" Abstract="false" Enabled="true" Merge="Append">
+    <Id Type="AnimationControllerComponent" Subtype="MarketLady_AnimData" />
+    <CopyFrom xsi:nil="true" />
+    <Layers>
+      <Layer>
+        <Name>MarketLady</Name>
+        <Mode>Replace</Mode>
+        <StateMachine>MarketLady</StateMachine>
+        <InitialSMNode>IdleAnim</InitialSMNode>
+      </Layer>
+    </Layers>
+    <StateMachines>
+      <StateMachine>
+        <Name>MarketLady</Name>
+        <Nodes>
+          <Node>
+            <Name>RestartAnim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-165</X>
+                <Y>-42</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>82</X>
+                  <Y>-96</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Economy\Redux\Market_Lady2_idle.mwm</PathToModel>
+                <Loop>false</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+              <Orphans />
+            </AnimationTree>
+            <EdPos>
+              <X>227</X>
+              <Y>48</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+          <Node>
+            <Name>WaveAnim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-195</X>
+                <Y>-44</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>44</X>
+                  <Y>-115</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Economy\Redux\Market_Lady_Waving.mwm</PathToModel>
+                <Loop>false</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+              <Orphans />
+            </AnimationTree>
+            <EdPos>
+              <X>475</X>
+              <Y>17</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+          <Node>
+            <Name>IdleAnim</Name>
+            <AnimationTree>
+              <EdPos>
+                <X>-159</X>
+                <Y>-19</Y>
+              </EdPos>
+              <Child xsi:type="MyObjectBuilder_AnimationTreeNodeTrack">
+                <EdPos>
+                  <X>68</X>
+                  <Y>-40</Y>
+                </EdPos>
+                <PathToModel>Models\Universal\Economy\Redux\Market_Lady2_idle.mwm</PathToModel>
+                <Loop>false</Loop>
+                <Speed>1</Speed>
+                <Interpolate>true</Interpolate>
+              </Child>
+            </AnimationTree>
+            <EdPos>
+              <X>388</X>
+              <Y>-108</Y>
+            </EdPos>
+            <Type>Normal</Type>
+          </Node>
+        </Nodes>
+        <Transitions>
+          <Transition From="IdleAnim" To="WaveAnim" TimeInSec="0.5" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="@animationfinished" Op="Equal" Rhs="1" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+          <Transition From="WaveAnim" To="RestartAnim" TimeInSec="0.5" Sync="Restart">
+            <Conditions>
+              <Conjunction>
+                <Condition Lhs="@animationfinished" Op="Equal" Rhs="1" />
+              </Conjunction>
+            </Conditions>
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+          <Transition From="RestartAnim" To="IdleAnim" TimeInSec="0.2" Sync="Restart">
+            <Priority xsi:nil="true" />
+            <Curve>Smooth</Curve>
+          </Transition>
+        </Transitions>
+      </StateMachine>
+    </StateMachines>
+  </Definition>
+</Definitions>
