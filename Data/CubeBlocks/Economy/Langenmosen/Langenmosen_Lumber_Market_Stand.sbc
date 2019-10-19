@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  
+
   <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
     <Id Type="Block" Subtype="Langenmosen_Lumber_Market_Stand" />
     <DisplayName>Langenmosen Lumber Market Stand</DisplayName>
@@ -20,7 +20,7 @@
     <MaxIntegrity>320</MaxIntegrity>
     <Mass>400</Mass>
   </Definition>
-  
+
   <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
     <Id Type="CraftingComponent" Subtype="LangenmosenLumberMarketStandCrafting" />
     <InputInventory>InputInventory</InputInventory>
@@ -44,7 +44,7 @@
     <Id Type="ConstantRecipeProviderComponent" Subtype="LangenmosenLumberMarketStandRecipes" />
     <Category>Langenmosen_Lumber_Market_Stand</Category>
   </Definition>
-  
+
   <Definition xsi:type="MyObjectBuilder_EntityFXComponentDefinition" Copy="Append">
     <Id Type="MyObjectBuilder_EntityFXComponent" Subtype="LangenmosenLumberMarketStandFX" />
     <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
@@ -54,42 +54,42 @@
       </Effect>
     </Effects>
   </Definition>
-  
+
   <!-- Attached model data (skinned market lady without animation)-->
   <Definition xsi:type="MyObjectBuilder_ModelAttachmentComponentDefinition">
-        <Id Type="ModelAttachmentComponent" Subtype="BigMan_Attachment" />
-        <Attachment Name="Skin">
-            <Offset x="0" y="-1.37" z="-0.11" />
-            <Rotation x="0" y="0" z="0" />
-            <DefaultEntity Type="EntityBase" Subtype="BigMan_Block" />
-        </Attachment>
-    </Definition>
-    
+    <Id Type="ModelAttachmentComponent" Subtype="BigMan_Attachment" />
+    <Attachment Name="Skin">
+      <Offset x="0" y="-1.37" z="-0.11" />
+      <Rotation x="0" y="0" z="0" />
+      <DefaultEntity Type="EntityBase" Subtype="BigMan_Block" />
+    </Attachment>
+  </Definition>
+
   <!-- Attached model file -->
   <Definition xsi:type="MyObjectBuilder_ModelComponentDefinition">
-      <Id Type="ModelComponent" Subtype="BigMan_Model" />
-      <Model>Models\Universal\Economy\Redux\MarketMan_skinned.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Id Type="ModelComponent" Subtype="BigMan_Model" />
+    <Model>Models\Universal\Economy\Redux\MarketMan_skinned.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
-  
+
   <!-- Block definition for attached model -->
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-        <Id Type="MyObjectBuilder_EntityBase" Subtype="BigMan_Block" />
-        
-        <Component Type="PhysicsBodyComponent" Subtype="InteractableProxyBase" />
-        <!-- <Component Type="UseObjectsComponent" Subtype="InteractableProxyBase" /> -->
-        <Component Type="DamageProxyComponent" Subtype="InteractableProxyBase" />
+    <Id Type="MyObjectBuilder_EntityBase" Subtype="BigMan_Block" />
 
-        <Component Type="ModelComponent" Subtype="BigMan_Model" />
-        <Component Type="SkeletonComponent" />
-        <Component Type="RenderComponentRigged" />
-        <Component Type="MyObjectBuilder_AnimationControllerComponent" Subtype="Bigman_AnimData" />
-    </Definition>
+    <Component Type="PhysicsBodyComponent" Subtype="InteractableProxyBase" />
+    <!-- <Component Type="UseObjectsComponent" Subtype="InteractableProxyBase" /> -->
+    <Component Type="DamageProxyComponent" Subtype="InteractableProxyBase" />
+
+    <Component Type="ModelComponent" Subtype="BigMan_Model" />
+    <Component Type="SkeletonComponent" />
+    <Component Type="RenderComponentRigged" />
+    <Component Type="MyObjectBuilder_AnimationControllerComponent" Subtype="Bigman_AnimData" />
+  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
     <Id Type="Block" Subtype="Langenmosen_Lumber_Market_Stand" />
     <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
-    
+
     <!-- Attach our skinned model -->
     <Component Type="ModelAttachmentComponent" Subtype="BigMan_Attachment" />
 

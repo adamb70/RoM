@@ -54,42 +54,42 @@
       </Effect>
     </Effects>
   </Definition>
-  
+
   <!-- Attached model data (skinned market lady without animation)-->
   <Definition xsi:type="MyObjectBuilder_ModelAttachmentComponentDefinition">
-        <Id Type="ModelAttachmentComponent" Subtype="Market_Lady_3_Attachment" />
-        <Attachment Name="Skin">
-            <Offset x="0" y="-1.25" z="0.2" />
-            <Rotation x="180" y="0" z="0" />
-            <DefaultEntity Type="EntityBase" Subtype="Market_Lady_3_Block" />
-        </Attachment>
-    </Definition>
-    
+    <Id Type="ModelAttachmentComponent" Subtype="Market_Lady_3_Attachment" />
+    <Attachment Name="Skin">
+      <Offset x="0" y="-1.25" z="0.2" />
+      <Rotation x="180" y="0" z="0" />
+      <DefaultEntity Type="EntityBase" Subtype="Market_Lady_3_Block" />
+    </Attachment>
+  </Definition>
+
   <!-- Attached model file -->
   <Definition xsi:type="MyObjectBuilder_ModelComponentDefinition">
-      <Id Type="ModelComponent" Subtype="Market_Lady_3_Model" />
-      <Model>Models\Universal\Economy\Redux\Market_Lady_3.mwm</Model>
-      <PhysicalMaterial>Wood</PhysicalMaterial>
+    <Id Type="ModelComponent" Subtype="Market_Lady_3_Model" />
+    <Model>Models\Universal\Economy\Redux\Market_Lady_3.mwm</Model>
+    <PhysicalMaterial>Wood</PhysicalMaterial>
   </Definition>
-  
+
   <!-- Block definition for attached model -->
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition">
-        <Id Type="MyObjectBuilder_EntityBase" Subtype="Market_Lady_3_Block" />
-        
-        <Component Type="PhysicsBodyComponent" Subtype="InteractableProxyBase" />
-        <!-- <Component Type="UseObjectsComponent" Subtype="InteractableProxyBase" /> -->
-        <Component Type="DamageProxyComponent" Subtype="InteractableProxyBase" />
+    <Id Type="MyObjectBuilder_EntityBase" Subtype="Market_Lady_3_Block" />
 
-        <Component Type="ModelComponent" Subtype="Market_Lady_3_Model" />
-        <Component Type="SkeletonComponent" />
-        <Component Type="RenderComponentRigged" />
-        <Component Type="MyObjectBuilder_AnimationControllerComponent" Subtype="Market_Lady_3_AnimData" />
-    </Definition>
+    <Component Type="PhysicsBodyComponent" Subtype="InteractableProxyBase" />
+    <!-- <Component Type="UseObjectsComponent" Subtype="InteractableProxyBase" /> -->
+    <Component Type="DamageProxyComponent" Subtype="InteractableProxyBase" />
+
+    <Component Type="ModelComponent" Subtype="Market_Lady_3_Model" />
+    <Component Type="SkeletonComponent" />
+    <Component Type="RenderComponentRigged" />
+    <Component Type="MyObjectBuilder_AnimationControllerComponent" Subtype="Market_Lady_3_AnimData" />
+  </Definition>
 
   <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
     <Id Type="Block" Subtype="Langenmosen_GeneralStore_Market_Stand" />
     <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
-    
+
     <!-- Attach our skinned model -->
     <Component Type="ModelAttachmentComponent" Subtype="Market_Lady_3_Attachment" />
 
