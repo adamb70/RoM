@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Althea_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Althea_Extract"/>
     <Public>true</Public>
     <DisplayName>Althea Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Althea.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -18,27 +19,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Althea_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Althea_Extract"/>
     <DisplayName>Althea Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Althea_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Althea_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Althea_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Althea_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Amaranth_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Amaranth_Extract"/>
     <Public>true</Public>
     <DisplayName>Amaranth Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Amaranth.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -52,27 +53,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Amaranth_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Amaranth_Extract"/>
     <DisplayName>Amaranth Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Amaranth_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Amaranth_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Amaranth_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Amaranth_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Angelica_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Angelica_Extract"/>
     <Public>true</Public>
     <DisplayName>Angelica Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Angelica.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -86,27 +87,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Angelica_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Angelica_Extract"/>
     <DisplayName>Angelica Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Angelica_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Angelica_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Angelica_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Angelica_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Belladonna_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Belladonna_Extract"/>
     <Public>true</Public>
     <DisplayName>Belladonna Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Belladonna.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -120,27 +121,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Belladonna_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Belladonna_Extract"/>
     <DisplayName>Belladonna Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Belladonna_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Belladonna_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Belladonna_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Belladonna_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Broom_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Broom_Extract"/>
     <Public>true</Public>
     <DisplayName>Broom Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Broom.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -154,27 +155,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Broom_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Broom_Extract"/>
     <DisplayName>Broom Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Broom_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Broom_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Broom_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Broom_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Castor_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Castor_Extract"/>
     <Public>true</Public>
     <DisplayName>Castor Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Castor.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -188,27 +189,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Castor_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Castor_Extract"/>
     <DisplayName>Castor Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Castor_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Castor_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Castor_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Castor_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Cinquefoil_Extract"/>
     <Public>true</Public>
     <DisplayName>Cinquefoil Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Cinquefoil.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -222,27 +223,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Cinquefoil_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cinquefoil_Extract"/>
     <DisplayName>Cinquefoil Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Cinquefoil_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Cinquefoil_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Crimson_Thristle_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Crimson_Thristle_Extract"/>
     <Public>true</Public>
     <DisplayName>Crimson Thristle Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Crimson_Thristle.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -256,27 +257,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Crimson_Thristle_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crimson_Thristle_Extract"/>
     <DisplayName>Crimson Thristle Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Crimson_Thristle_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Crimson_Thristle_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Crimson_Thristle_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Crimson_Thristle_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Crocus_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Crocus_Extract"/>
     <Public>true</Public>
     <DisplayName>Crocus Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Crocus.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -290,27 +291,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Crocus_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crocus_Extract"/>
     <DisplayName>Crocus Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Crocus_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Crocus_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Crocus_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Crocus_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Cloud_Funnel_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Cloud_Funnel_Extract"/>
     <Public>true</Public>
     <DisplayName>Cloud Funnel Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Cloud_Funnel.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -324,27 +325,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Cloud_Funnel_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cloud_Funnel_Extract"/>
     <DisplayName>Cloud Funnel Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Cloud_Funnel_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Cloud_Funnel_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Cloud_Funnel_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Cloud_Funnel_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Gilliflower_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Gilliflower_Extract"/>
     <Public>true</Public>
     <DisplayName>Gilliflower Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Gilliflower.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -358,27 +359,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Gilliflower_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Gilliflower_Extract"/>
     <DisplayName>Gilliflower Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Gilliflower_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Gilliflower_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Gilliflower_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Gilliflower_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Glasswort_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Glasswort_Extract"/>
     <Public>true</Public>
     <DisplayName>Glasswort Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Glasswort.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -392,27 +393,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Glasswort_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Glasswort_Extract"/>
     <DisplayName>Glasswort Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Glasswort_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Glasswort_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Glasswort_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Glasswort_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Luceat_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Luceat_Extract"/>
     <Public>true</Public>
     <DisplayName>Luceat Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Luceat.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -426,27 +427,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Luceat_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Luceat_Extract"/>
     <DisplayName>Luceat Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Luceat_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Luceat_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Luceat_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Luceat_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Concordia_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Concordia_Extract"/>
     <Public>true</Public>
     <DisplayName>Concordia Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Concordia.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -460,27 +461,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Concordia_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Concordia_Extract"/>
     <DisplayName>Concordia Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Concordia_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Concordia_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Concordia_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Concordia_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Hellebore_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Hellebore_Extract"/>
     <Public>true</Public>
     <DisplayName>Hellebore Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Hellebore.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -494,27 +495,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hellebore_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hellebore_Extract"/>
     <DisplayName>Hellebore Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Hellebore_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Hellebore_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hellebore_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Hellebore_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Hemlock_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Hemlock_Extract"/>
     <Public>true</Public>
     <DisplayName>Hemlock Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Hemlock.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -528,27 +529,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hemlock_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hemlock_Extract"/>
     <DisplayName>Hemlock Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Hemlock_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Hemlock_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hemlock_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Hemlock_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Hoppan_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Hoppan_Extract"/>
     <Public>true</Public>
     <DisplayName>Hoppan Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Hoppan.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -562,27 +563,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hoppan_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hoppan_Extract"/>
     <DisplayName>Hoppan Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Hoppan_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Hoppan_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hoppan_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Hoppan_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Knotweed_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Knotweed_Extract"/>
     <Public>true</Public>
     <DisplayName>Knotweed Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Knotweed.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\knotweed.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -596,27 +597,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Knotweed_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Knotweed_Extract"/>
     <DisplayName>Knotweed Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\knotweed.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Knotweed_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Knotweed_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Arctic_Lichen_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Arctic_Lichen_Extract"/>
     <Public>true</Public>
     <DisplayName>Arctic Lichen Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Arctic_Lichen.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -630,27 +631,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Arctic_Lichen_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Arctic_Lichen_Extract"/>
     <DisplayName>Arctic Lichen Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Arctic_Lichen_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Arctic_Lichen_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Arctic_Lichen_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Arctic_Lichen_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Mugwort_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Mugwort_Extract"/>
     <Public>true</Public>
     <DisplayName>Mugwort Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Mugwort.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -664,27 +665,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Mugwort_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Mugwort_Extract"/>
     <DisplayName>Mugwort Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Mugwort_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Mugwort_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Mugwort_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Mugwort_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Rock_Willow_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Rock_Willow_Extract"/>
     <Public>true</Public>
     <DisplayName>Rock Willow Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Rock_Willow.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -698,27 +699,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Rock_Willow_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Rock_Willow_Extract"/>
     <DisplayName>Rock Willow Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Rock_Willow_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Rock_Willow_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Rock_Willow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Rock_Willow_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Sage_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Sage_Extract"/>
     <Public>true</Public>
     <DisplayName>Sage Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Sage.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -732,27 +733,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Sage_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sage_Extract"/>
     <DisplayName>Sage Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Sage_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Sage_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Sage_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Sage_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Spalt_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Spalt_Extract"/>
     <Public>true</Public>
     <DisplayName>Spalt Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Spalt.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -766,27 +767,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Spalt_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Spalt_Extract"/>
     <DisplayName>Spalt Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Spalt_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Spalt_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Spalt_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Spalt_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Vervain_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Vervain_Extract"/>
     <Public>true</Public>
     <DisplayName>Vervain Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Vervain.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\vervain.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -800,27 +801,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Vervain_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Vervain_Extract"/>
     <DisplayName>Vervain Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\vervain.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Vervain_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Vervain_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Wormwood_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Wormwood_Extract"/>
     <Public>true</Public>
     <DisplayName>Wormwood Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Wormwood.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -834,27 +835,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Wormwood_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wormwood_Extract"/>
     <DisplayName>Wormwood Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Wormwood_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Wormwood_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Wormwood_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Wormwood_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Yarrow_Extract" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Yarrow_Extract"/>
     <Public>true</Public>
     <DisplayName>Yarrow Extract</DisplayName>
-    <Description />
+    <Description>Reduced extract of Yarrow.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -868,488 +869,488 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Yarrow_Extract" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Yarrow_Extract"/>
     <DisplayName>Yarrow Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Yarrow_Tea" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Yarrow_Tea" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Yarrow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="JarClay" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Yarrow_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="JarClay" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Althea_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Althea_Extract_2"/>
     <DisplayName>Althea Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Althea" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Althea" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Althea_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Althea_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Amaranth_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Amaranth_Extract_2"/>
     <DisplayName>Amaranth Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Amaranth" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Amaranth" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Amaranth_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Amaranth_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Angelica_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Angelica_Extract_2"/>
     <DisplayName>Angelica Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Angelica" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Angelica" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Angelica_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Angelica_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Belladonna_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Belladonna_Extract_2"/>
     <DisplayName>Belladonna Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Belladonna" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Belladonna" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Belladonna_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Belladonna_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Broom_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Broom_Extract_2"/>
     <DisplayName>Broom Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Broom" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Broom" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Broom_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Broom_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Castor_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Castor_Extract_2"/>
     <DisplayName>Castor Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Castor" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Castor" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Castor_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Castor_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Cinquefoil_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cinquefoil_Extract_2"/>
     <DisplayName>Cinquefoil Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Cinquefoil" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Cinquefoil" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Crimson_Thristle_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crimson_Thristle_Extract_2"/>
     <DisplayName>Crimson Thristle Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Crimson_Thristle" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Crimson_Thristle" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Crimson_Thristle_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Crimson_Thristle_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Crocus_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crocus_Extract_2"/>
     <DisplayName>Crocus Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Crocus" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Crocus" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Crocus_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Crocus_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Cloud_Funnel_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cloud_Funnel_Extract_2"/>
     <DisplayName>Cloud Funnel Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Cloud_Funnel" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Cloud_Funnel" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Cloud_Funnel_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Cloud_Funnel_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Gilliflower_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Gilliflower_Extract_2"/>
     <DisplayName>Gilliflower Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Gilliflower" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Gilliflower" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Gilliflower_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Gilliflower_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Glasswort_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Glasswort_Extract_2"/>
     <DisplayName>Glasswort Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Glasswort" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Glasswort" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Glasswort_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Glasswort_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Luceat_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Luceat_Extract_2"/>
     <DisplayName>Luceat Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Luceat" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Luceat" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Luceat_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Luceat_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Concordia_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Concordia_Extract_2"/>
     <DisplayName>Concordia Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Concordia" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Concordia" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Concordia_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Concordia_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hellebore_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hellebore_Extract_2"/>
     <DisplayName>Hellebore Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Hellebore" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hellebore" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hellebore_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Hellebore_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hemlock_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hemlock_Extract_2"/>
     <DisplayName>Hemlock Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Hemlock" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hemlock" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hemlock_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Hemlock_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hoppan_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hoppan_Extract_2"/>
     <DisplayName>Hoppan Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Hoppan" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hoppan" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hoppan_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Hoppan_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Knotweed_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Knotweed_Extract_2"/>
     <DisplayName>Knotweed Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\knotweed.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Knotweed" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Knotweed" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Arctic_Lichen_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Arctic_Lichen_Extract_2"/>
     <DisplayName>Arctic Lichen Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Arctic_Lichen" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Arctic_Lichen" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Arctic_Lichen_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Arctic_Lichen_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Mugwort_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Mugwort_Extract_2"/>
     <DisplayName>Mugwort Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Mugwort" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Mugwort" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Mugwort_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Mugwort_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Rock_Willow_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Rock_Willow_Extract_2"/>
     <DisplayName>Rock Willow Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Rock_Willow" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Rock_Willow" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Rock_Willow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Rock_Willow_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Sage_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sage_Extract_2"/>
     <DisplayName>Sage Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Sage" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Sage" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Sage_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Sage_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Spalt_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Spalt_Extract_2"/>
     <DisplayName>Spalt Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Spalt" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Spalt" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Spalt_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Spalt_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Vervain_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Vervain_Extract_2"/>
     <DisplayName>Vervain Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\vervain.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Vervain" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Vervain" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Wormwood_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wormwood_Extract_2"/>
     <DisplayName>Wormwood Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Wormwood" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Wormwood" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Wormwood_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Wormwood_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Yarrow_Extract_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Yarrow_Extract_2"/>
     <DisplayName>Yarrow Extract</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Yarrow" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Water_Bucket" Type="Block" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Yarrow" Amount="1"/>
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Yarrow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Empty_Bucket" Type="Block" />
+      <Item Type="InventoryItem" Subtype="Yarrow_Extract" Amount="1"/>
+      <Item Type="Block" Subtype="Empty_Bucket" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
 </Definitions>
 

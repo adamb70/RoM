@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Blue_Vitriol" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Blue_Vitriol"/>
     <Public>true</Public>
     <DisplayName>Blue Vitriol</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolBlue.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -17,25 +18,25 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Blue_Vitriol" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Blue_Vitriol"/>
     <DisplayName>Blue Vitriol</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolBlue.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Copper_Parts" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Spiritus_Vitriolum" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Copper_Parts" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Spiritus_Vitriolum" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Blue_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Blue_Vitriol" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Green_Vitriol" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Green_Vitriol"/>
     <Public>true</Public>
     <DisplayName>Green Vitriol</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolGreen.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -48,25 +49,25 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Green_Vitriol" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Green_Vitriol"/>
     <DisplayName>Green Vitriol</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolGreen.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Iron_Parts" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Spiritus_Vitriolum" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Iron_Parts" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Spiritus_Vitriolum" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Green_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Green_Vitriol" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Yellow_Vitriol" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Yellow_Vitriol"/>
     <Public>true</Public>
     <DisplayName>Yellow Vitriol</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolYellow.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -79,25 +80,25 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Yellow_Vitriol" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Yellow_Vitriol"/>
     <DisplayName>Yellow Vitriol</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolYellow.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Tin_Parts" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Spiritus_Vitriolum" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Tin_Parts" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Spiritus_Vitriolum" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Yellow_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Yellow_Vitriol" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Black_Vitriol" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Black_Vitriol"/>
     <Public>true</Public>
     <DisplayName>Black Vitriol</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolBlack.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -110,25 +111,25 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Black_Vitriol" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Black_Vitriol"/>
     <DisplayName>Black Vitriol</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolBlack.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lead_Parts" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Spiritus_Vitriolum" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lead_Parts" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Spiritus_Vitriolum" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Black_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Black_Vitriol" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Amber_Vitriol" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Amber_Vitriol"/>
     <Public>true</Public>
     <DisplayName>Amber Vitriol</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolAmber.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -141,25 +142,25 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Amber_Vitriol" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Amber_Vitriol"/>
     <DisplayName>Amber Vitriol</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolAmber.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Gold_Parts" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Spiritus_Vitriolum" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Gold_Parts" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Spiritus_Vitriolum" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Amber_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Amber_Vitriol" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Red_Vitriol" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Red_Vitriol"/>
     <Public>true</Public>
     <DisplayName>Red Vitriol</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolRed.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -172,25 +173,25 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Red_Vitriol" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Red_Vitriol"/>
     <DisplayName>Red Vitriol</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolRed.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Mercury_Vial" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Spiritus_Vitriolum" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Mercury_Vial" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Spiritus_Vitriolum" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Red_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Red_Vitriol" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Gray_Vitriol" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Gray_Vitriol"/>
     <Public>true</Public>
     <DisplayName>Gray Vitriol</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolGray.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -203,25 +204,25 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Gray_Vitriol" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Gray_Vitriol"/>
     <DisplayName>Gray Vitriol</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VitriolGray.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Silver_Parts" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Spiritus_Vitriolum" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Silver_Parts" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Spiritus_Vitriolum" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Gray_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Gray_Vitriol" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Purification" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Purification"/>
     <Public>true</Public>
     <DisplayName>Virtue of Purification</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundLaguz.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -235,118 +236,118 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purification" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purification"/>
     <DisplayName>Virtue of Purification</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundLaguz.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Glasswort_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Arctic_Lichen_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Gray_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Glasswort_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Arctic_Lichen_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Gray_Vitriol" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purification_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purification_2"/>
     <DisplayName>Virtue of Purification</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundLaguz.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Luceat_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Arctic_Lichen_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Gray_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Luceat_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Arctic_Lichen_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Gray_Vitriol" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purification_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purification_3"/>
     <DisplayName>Virtue of Purification</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundLaguz.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Mugwort_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Arctic_Lichen_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Gray_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Mugwort_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Arctic_Lichen_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Gray_Vitriol" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purification_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purification_4"/>
     <DisplayName>Virtue of Purification</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundLaguz.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Glasswort_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Concordia_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Gray_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Glasswort_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Concordia_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Gray_Vitriol" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purification_5" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purification_5"/>
     <DisplayName>Virtue of Purification</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundLaguz.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Luceat_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Concordia_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Gray_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Luceat_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Concordia_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Gray_Vitriol" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purification_6" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purification_6"/>
     <DisplayName>Virtue of Purification</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundLaguz.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Mugwort_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Concordia_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Gray_Vitriol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Mugwort_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Concordia_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Gray_Vitriol" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Harmony" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Harmony"/>
     <Public>true</Public>
     <DisplayName>Virtue of Harmony</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAnsuz.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -360,44 +361,44 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Harmony" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Harmony"/>
     <DisplayName>Virtue of Harmony</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAnsuz.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Arctic_Lichen_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Arctic_Lichen_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Harmony" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Harmony" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Harmony_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Harmony_2"/>
     <DisplayName>Virtue of Harmony</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAnsuz.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Concordia_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Concordia_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Harmony" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Harmony" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Persistance" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Persistance"/>
     <Public>true</Public>
     <DisplayName>Virtue of Persistance</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAlgiz.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -411,42 +412,42 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Persistance" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Persistance"/>
     <DisplayName>Virtue of Persistance</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAlgiz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Sage_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Sage_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Persistance_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Persistance_2"/>
     <DisplayName>Virtue of Persistance</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAlgiz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Arctic_Lichen_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Arctic_Lichen_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Endurance" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Endurance"/>
     <Public>true</Public>
     <DisplayName>Virtue of Endurance</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundNauthiz.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -460,74 +461,74 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Endurance" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Endurance"/>
     <DisplayName>Virtue of Endurance</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundNauthiz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Angelica_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Angelica_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Endurance" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Endurance" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Endurance_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Endurance_2"/>
     <DisplayName>Virtue of Endurance</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundNauthiz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Crocus_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Crocus_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Endurance" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Endurance" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Endurance_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Endurance_3"/>
     <DisplayName>Virtue of Endurance</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundNauthiz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Spalt_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Spalt_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Endurance" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Endurance" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Endurance_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Endurance_4"/>
     <DisplayName>Virtue of Endurance</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundNauthiz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Yarrow_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Yarrow_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Endurance" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Endurance" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Purity" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Purity"/>
     <Public>true</Public>
     <DisplayName>Virtue of Purity</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundKenaz.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -541,58 +542,58 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purity" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purity"/>
     <DisplayName>Virtue of Purity</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundKenaz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Althea_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Althea_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Purity" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purity" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purity_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purity_2"/>
     <DisplayName>Virtue of Purity</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundKenaz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Broom_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Broom_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Purity" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purity" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purity_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purity_3"/>
     <DisplayName>Virtue of Purity</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundKenaz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Gilliflower_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Gilliflower_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Purity" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purity" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Strength" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Strength"/>
     <Public>true</Public>
     <DisplayName>Virtue of Strength</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundUruz.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -606,58 +607,58 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Strength" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Strength"/>
     <DisplayName>Virtue of Strength</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundUruz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Cloud_Funnel_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Cloud_Funnel_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Strength" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Strength" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Strength_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Strength_2"/>
     <DisplayName>Virtue of Strength</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundUruz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Hellebore_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Hellebore_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Strength" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Strength" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Strength_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Strength_3"/>
     <DisplayName>Virtue of Strength</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundUruz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Hoppan_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Hoppan_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Strength" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Strength" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Corruption" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Corruption"/>
     <Public>true</Public>
     <DisplayName>Virtue of Corruption</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedThurisaz.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -671,58 +672,58 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Corruption" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Corruption"/>
     <DisplayName>Virtue of Corruption</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedThurisaz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Belladonna_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Belladonna_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Corruption" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Corruption" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Corruption_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Corruption_2"/>
     <DisplayName>Virtue of Corruption</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedThurisaz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Hemlock_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Hemlock_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Corruption" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Corruption" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Corruption_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Corruption_3"/>
     <DisplayName>Virtue of Corruption</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedThurisaz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Wormwood_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Wormwood_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Corruption" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Corruption" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Vitality" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Vitality"/>
     <Public>true</Public>
     <DisplayName>Virtue of Vitality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSowilo.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -736,74 +737,74 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Vitality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Vitality"/>
     <DisplayName>Virtue of Vitality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSowilo.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Amaranth_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Amaranth_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Vitality" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Vitality" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Vitality_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Vitality_2"/>
     <DisplayName>Virtue of Vitality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSowilo.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Castor_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Castor_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Vitality" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Vitality" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Vitality_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Vitality_3"/>
     <DisplayName>Virtue of Vitality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSowilo.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Crimson_Thristle_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Crimson_Thristle_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Vitality" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Vitality" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Vitality_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Vitality_4"/>
     <DisplayName>Virtue of Vitality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSowilo.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Rock_Willow_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Rock_Willow_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Virtue_of_Vitality" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Vitality" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Jupiter" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Jupiter"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Jupiter</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundJupiter.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -817,28 +818,28 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Jupiter" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Jupiter"/>
     <DisplayName>Lixivium of Jupiter</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundJupiter.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Yellow_Vitriol" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Regia" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Corruption" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Yellow_Vitriol" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Regia" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Corruption" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Jupiter" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Jupiter" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Sol" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Sol"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Sol</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSun.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -852,28 +853,28 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Sol" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Sol"/>
     <DisplayName>Lixivium of Sol</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSun.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Amber_Vitriol" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Regia" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Vitality" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Amber_Vitriol" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Regia" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Vitality" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Sol" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Sol" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Saturn" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Saturn"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Saturn</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSaturn.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -887,28 +888,28 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Saturn" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Saturn"/>
     <DisplayName>Lixivium of Saturn</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSaturn.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Black_Vitriol" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Regia" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Torpor" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Black_Vitriol" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Regia" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Torpor" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Saturn" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Saturn" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Luna" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Luna"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Luna</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMoon.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -922,28 +923,28 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Luna" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Luna"/>
     <DisplayName>Lixivium of Luna</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMoon.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Gray_Vitriol" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Regia" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Mortality" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Gray_Vitriol" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Regia" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Mortality" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Luna" Type="InventoryItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Luna" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Mercury" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Mercury"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Mercury</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMercury.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -957,27 +958,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Mercury" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Mercury"/>
     <DisplayName>Lixivium of Mercury</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMercury.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Oyle_of_Opposition" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Lixivium_of_Saturn" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Oyle_of_Opposition" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Saturn" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Mercury" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mercury" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Venus" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Venus"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Venus</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVenus.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -991,27 +992,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Venus" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Venus"/>
     <DisplayName>Lixivium of Venus</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVenus.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Oyle_of_Opposition" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Lixivium_of_Jupiter" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Oyle_of_Opposition" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Jupiter" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Venus" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Venus" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Mars" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Mars"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Mars</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMars.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1025,27 +1026,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Mars" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Mars"/>
     <DisplayName>Lixivium of Mars</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallCurved.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMars.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Oyle_of_Opposition" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Lixivium_of_Sol" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Oyle_of_Opposition" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Sol" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Mars" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mars" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Oyle_of_Opposition" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Oyle_of_Opposition"/>
     <Public>true</Public>
     <DisplayName>Oyle of Opposition</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialStandardNoLabel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundJeraRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1059,61 +1060,61 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Oyle_of_Opposition" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Oyle_of_Opposition"/>
     <DisplayName>Oyle of Opposition</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialStandardNoLabel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundJeraRight.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Mercury" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Lixivium_of_Saturn" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mercury" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Saturn" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Oyle_of_Opposition" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Oyle_of_Opposition" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Oyle_of_Opposition_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Oyle_of_Opposition_2"/>
     <DisplayName>Oyle of Opposition</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialStandardNoLabel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundJeraRight.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Venus" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Lixivium_of_Jupiter" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Venus" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Jupiter" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Oyle_of_Opposition" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Oyle_of_Opposition" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Oyle_of_Opposition_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Oyle_of_Opposition_3"/>
     <DisplayName>Oyle of Opposition</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialStandardNoLabel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundJeraRight.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Sol" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Lixivium_of_Luna" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Sol" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Luna" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Oyle_of_Opposition" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Oyle_of_Opposition" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Inversion" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Inversion"/>
     <Public>true</Public>
     <DisplayName>Virtue of Inversion</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundDagaz.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1127,27 +1128,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Inversion" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Inversion"/>
     <DisplayName>Virtue of Inversion</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundDagaz.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Oyle_of_Opposition" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Oyle_of_Opposition" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Inversion" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Inversion" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Torpor" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Torpor"/>
     <Public>true</Public>
     <DisplayName>Virtue of Torpor</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedUruzRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1161,61 +1162,61 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Torpor" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Torpor"/>
     <DisplayName>Virtue of Torpor</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedUruzRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Virtue_of_Endurance" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Inversion" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Endurance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Inversion" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Torpor" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Torpor" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Corruption_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Corruption_4"/>
     <DisplayName>Virtue of Corruption</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedThurisaz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Virtue_of_Purity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Inversion" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purity" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Inversion" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Corruption" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Corruption" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Purity_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Purity_4"/>
     <DisplayName>Virtue of Purity</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundKenaz.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Virtue_of_Corruption" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Inversion" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Corruption" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Inversion" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Purity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purity" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Virtue_of_Mortality" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Virtue_of_Mortality"/>
     <Public>true</Public>
     <DisplayName>Virtue of Mortality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedSowilo.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1229,27 +1230,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Virtue_of_Mortality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Virtue_of_Mortality"/>
     <DisplayName>Virtue of Mortality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallFlask.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedSowilo.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Virtue_of_Vitality" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Inversion" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Vitality" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Inversion" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Virtue_of_Mortality" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Mortality" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Mercury_Intermedium" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Mercury_Intermedium"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Mercury Intermedium</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMercury.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1263,27 +1264,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Mercury_Intermedium" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Mercury_Intermedium"/>
     <DisplayName>Lixivium of Mercury Intermedium</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMercury.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Mercury" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mercury" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Mercury_Intermedium" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mercury_Intermedium" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Venus_Intermedium" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Venus_Intermedium"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Venus Intermedium</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVenus.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1297,27 +1298,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Venus_Intermedium" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Venus_Intermedium"/>
     <DisplayName>Lixivium of Venus Intermedium</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVenus.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Venus" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Venus" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Venus_Intermedium" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Venus_Intermedium" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Mars_Intermedium" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Mars_Intermedium"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Mars Intermedium</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMars.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1331,27 +1332,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Mars_Intermedium" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Mars_Intermedium"/>
     <DisplayName>Lixivium of Mars Intermedium</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMars.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Mars" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mars" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Mars_Intermedium" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mars_Intermedium" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Jupiter_Intermedium" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Jupiter_Intermedium"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Jupiter Intermedium</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundJupiter.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1365,27 +1366,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Jupiter_Intermedium" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Jupiter_Intermedium"/>
     <DisplayName>Lixivium of Jupiter Intermedium</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundJupiter.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Jupiter" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Jupiter" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Jupiter_Intermedium" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Jupiter_Intermedium" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Saturn_Intermedium" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Saturn_Intermedium"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Saturn Intermedium</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSaturn.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1399,27 +1400,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Saturn_Intermedium" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Saturn_Intermedium"/>
     <DisplayName>Lixivium of Saturn Intermedium</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSaturn.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Saturn" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Saturn" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Saturn_Intermedium" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Saturn_Intermedium" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Sol_Intermedium" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Sol_Intermedium"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Sol Intermedium</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSun.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1433,27 +1434,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Sol_Intermedium" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Sol_Intermedium"/>
     <DisplayName>Lixivium of Sol Intermedium</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSun.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Sol" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Sol" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Sol_Intermedium" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Sol_Intermedium" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Lixivium_of_Luna_Intermedium" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Lixivium_of_Luna_Intermedium"/>
     <Public>true</Public>
     <DisplayName>Lixivium of Luna Intermedium</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMoon.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1467,20 +1468,20 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Lixivium_of_Luna_Intermedium" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Lixivium_of_Luna_Intermedium"/>
     <DisplayName>Lixivium of Luna Intermedium</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallStraightWide.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundMoon.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Luna" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Luna" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Lixivium_of_Luna_Intermedium" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Luna_Intermedium" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
 </Definitions>
 

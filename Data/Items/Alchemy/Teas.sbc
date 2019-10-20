@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Althea_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Althea_Tea"/>
     <Public>true</Public>
     <DisplayName>Althea Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Althea.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -16,34 +17,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="-10" />
-      <Stat Name="Food" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="-10" Time="1"/>
+      <Stat Name="Food" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Althea_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Althea_Tea"/>
     <DisplayName>Althea Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Althea" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Althea" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Althea_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Althea_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Amaranth_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Amaranth_Tea"/>
     <Public>true</Public>
     <DisplayName>Amaranth Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Amaranth.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -55,34 +56,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Amaranth_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Amaranth_Tea"/>
     <DisplayName>Amaranth Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Amaranth" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Amaranth" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Amaranth_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Amaranth_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Angelica_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Angelica_Tea"/>
     <Public>true</Public>
     <DisplayName>Angelica Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Angelica.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -94,34 +95,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Angelica_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Angelica_Tea"/>
     <DisplayName>Angelica Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Angelica" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Angelica" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Angelica_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Angelica_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Belladonna_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Belladonna_Tea"/>
     <Public>true</Public>
     <DisplayName>Belladonna Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Belladonna.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -133,34 +134,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Belladonna_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Belladonna_Tea"/>
     <DisplayName>Belladonna Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Belladonna" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Belladonna" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Belladonna_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Belladonna_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Broom_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Broom_Tea"/>
     <Public>true</Public>
     <DisplayName>Broom Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Broom.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -172,34 +173,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="-10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
+      <Stat Name="Poison" Value="-10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Broom_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Broom_Tea"/>
     <DisplayName>Broom Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Broom" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Broom" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Broom_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Broom_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Castor_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Castor_Tea"/>
     <Public>true</Public>
     <DisplayName>Castor Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Castor.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -211,34 +212,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Castor_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Castor_Tea"/>
     <DisplayName>Castor Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Castor" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Castor" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Castor_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Castor_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Cinquefoil_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Cinquefoil_Tea"/>
     <Public>true</Public>
     <DisplayName>Cinquefoil Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Cinquefoil.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -250,33 +251,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Cinquefoil_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cinquefoil_Tea"/>
     <DisplayName>Cinquefoil Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Cinquefoil" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Cinquefoil" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Cinquefoil_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Cinquefoil_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Crimson_Thristle_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Crimson_Thristle_Tea"/>
     <Public>true</Public>
     <DisplayName>Crimson Thristle Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Crimson Thristle.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -288,34 +289,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Crimson_Thristle_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crimson_Thristle_Tea"/>
     <DisplayName>Crimson Thristle Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Crimson_Thristle" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Crimson_Thristle" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Crimson_Thristle_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Crimson_Thristle_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Crocus_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Crocus_Tea"/>
     <Public>true</Public>
     <DisplayName>Crocus Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Crocus.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -327,34 +328,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Crocus_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Crocus_Tea"/>
     <DisplayName>Crocus Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Crocus" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Crocus" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Crocus_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Crocus_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Cloud_Funnel_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Cloud_Funnel_Tea"/>
     <Public>true</Public>
     <DisplayName>Cloud Funnel Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Cloud Funnel.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -366,34 +367,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="-10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Health" Value="-10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Cloud_Funnel_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cloud_Funnel_Tea"/>
     <DisplayName>Cloud Funnel Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Cloud_Funnel" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Cloud_Funnel" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Cloud_Funnel_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Cloud_Funnel_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Gilliflower_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Gilliflower_Tea"/>
     <Public>true</Public>
     <DisplayName>Gilliflower Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Gilliflower.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -405,33 +406,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Gilliflower_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Gilliflower_Tea"/>
     <DisplayName>Gilliflower Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Gilliflower" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Gilliflower" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Gilliflower_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Gilliflower_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Glasswort_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Glasswort_Tea"/>
     <Public>true</Public>
     <DisplayName>Glasswort Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Glasswort.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -443,33 +444,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Thirst" Time="1" Value="10" />
+      <Stat Name="Thirst" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Glasswort_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Glasswort_Tea"/>
     <DisplayName>Glasswort Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Glasswort" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Glasswort" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Glasswort_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Glasswort_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Luceat_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Luceat_Tea"/>
     <Public>true</Public>
     <DisplayName>Luceat Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Luceat.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -481,33 +482,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Luceat_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Luceat_Tea"/>
     <DisplayName>Luceat Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Luceat" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Luceat" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Luceat_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Luceat_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Concordia_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Concordia_Tea"/>
     <Public>true</Public>
     <DisplayName>Concordia Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Concordia.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -519,34 +520,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Mood" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Mood" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Concordia_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Concordia_Tea"/>
     <DisplayName>Concordia Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Concordia" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Concordia" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Concordia_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Concordia_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Hellebore_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Hellebore_Tea"/>
     <Public>true</Public>
     <DisplayName>Hellebore Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Hellebore.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -558,34 +559,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hellebore_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hellebore_Tea"/>
     <DisplayName>Hellebore Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Hellebore" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hellebore" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hellebore_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Hellebore_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Hemlock_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Hemlock_Tea"/>
     <Public>true</Public>
     <DisplayName>Hemlock Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Hemlock.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -597,34 +598,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hemlock_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hemlock_Tea"/>
     <DisplayName>Hemlock Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Hemlock" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hemlock" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hemlock_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Hemlock_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Hoppan_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Hoppan_Tea"/>
     <Public>true</Public>
     <DisplayName>Hoppan Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Hoppan.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -636,34 +637,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="-10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Hoppan_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Hoppan_Tea"/>
     <DisplayName>Hoppan Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Hoppan" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hoppan" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Hoppan_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Hoppan_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Knotweed_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Knotweed_Tea"/>
     <Public>true</Public>
     <DisplayName>Knotweed Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Knotweed.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\knotweed.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -675,33 +676,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Knotweed_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Knotweed_Tea"/>
     <DisplayName>Knotweed Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\knotweed.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Knotweed" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Knotweed" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Knotweed_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Knotweed_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Arctic_Lichen_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Arctic_Lichen_Tea"/>
     <Public>true</Public>
     <DisplayName>Arctic Lichen Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Arctic Lichen.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -713,33 +714,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Arctic_Lichen_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Arctic_Lichen_Tea"/>
     <DisplayName>Arctic Lichen Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Arctic_Lichen" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Arctic_Lichen" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Arctic_Lichen_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Arctic_Lichen_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Mugwort_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Mugwort_Tea"/>
     <Public>true</Public>
     <DisplayName>Mugwort Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Mugwort.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -751,33 +752,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Food" Time="1" Value="-10" />
+      <Stat Name="Food" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Mugwort_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Mugwort_Tea"/>
     <DisplayName>Mugwort Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Mugwort" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Mugwort" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Mugwort_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Mugwort_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Rock_Willow_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Rock_Willow_Tea"/>
     <Public>true</Public>
     <DisplayName>Rock Willow Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Rock Willow.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -789,34 +790,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Rock_Willow_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Rock_Willow_Tea"/>
     <DisplayName>Rock Willow Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Rock_Willow" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Rock_Willow" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Rock_Willow_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Rock_Willow_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Sage_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Sage_Tea"/>
     <Public>true</Public>
     <DisplayName>Sage Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Sage.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -828,33 +829,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Food" Time="1" Value="-10" />
+      <Stat Name="Food" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Sage_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sage_Tea"/>
     <DisplayName>Sage Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Sage" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Sage" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Sage_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Sage_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Spalt_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Spalt_Tea"/>
     <Public>true</Public>
     <DisplayName>Spalt Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Spalt.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -866,34 +867,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Spalt_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Spalt_Tea"/>
     <DisplayName>Spalt Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Spalt" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Spalt" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Spalt_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Spalt_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Vervain_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Vervain_Tea"/>
     <Public>true</Public>
     <DisplayName>Vervain Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Vervain.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\vervain.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -905,33 +906,33 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Vervain_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Vervain_Tea"/>
     <DisplayName>Vervain Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\vervain.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Vervain" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Vervain" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Vervain_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Vervain_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Wormwood_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Wormwood_Tea"/>
     <Public>true</Public>
     <DisplayName>Wormwood Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Wormwood.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -943,34 +944,34 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Wormwood_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Wormwood_Tea"/>
     <DisplayName>Wormwood Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Wormwood" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Wormwood" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Wormwood_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Wormwood_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Yarrow_Tea" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Yarrow_Tea"/>
     <Public>true</Public>
     <DisplayName>Yarrow Tea</DisplayName>
-    <Description />
+    <Description>Tea brewed by boiling Ground Yarrow.</Description>
     <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -982,27 +983,27 @@
     <Model>Models\Alchemy\Items\Tea.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Food" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Food" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="JarClay" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="JarClay"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Yarrow_Tea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Yarrow_Tea"/>
     <DisplayName>Yarrow Tea</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\Tea.dds</Icon>
     <Category>ClayCooking</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ground_Yarrow" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Jug_Of_Water" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Yarrow" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Jug_Of_Water" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Yarrow_Tea" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Yarrow_Tea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
 </Definitions>
 

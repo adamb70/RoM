@@ -1,32 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmAgave" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmAgave"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>AgaveSmall</ModelCollectionSubtypeId>
         <NextStep>AgaveGrown1</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AgaveRoots" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="AgaveRoots"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -35,10 +36,10 @@
       <GrowthStep Name="AgaveGrown1" StartingProbability="0">
         <ModelCollectionSubtypeId>AgaveFull</ModelCollectionSubtypeId>
         <NextStep>AgaveGrown2</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="AgaveRoot1">
-            <Id Subtype="AgaveLeaves" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="AgaveLeaves"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -47,10 +48,10 @@
       <GrowthStep Name="AgaveRoot1" StartingProbability="0">
         <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
         <NextStep>AgaveGrown2</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AgaveRoots" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="AgaveRoots"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -59,10 +60,10 @@
       <GrowthStep Name="AgaveGrown2" StartingProbability="0">
         <ModelCollectionSubtypeId>AgaveFull</ModelCollectionSubtypeId>
         <NextStep>AgaveGrown3</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="AgaveRoot2">
-            <Id Subtype="AgaveLeaves" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="AgaveLeaves"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -71,10 +72,10 @@
       <GrowthStep Name="AgaveRoot2" StartingProbability="0">
         <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
         <NextStep>AgaveGrown3</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AgaveRoots" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="AgaveRoots"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -83,10 +84,10 @@
       <GrowthStep Name="AgaveGrown3" StartingProbability="0">
         <ModelCollectionSubtypeId>AgaveFull</ModelCollectionSubtypeId>
         <NextStep>AgaveGrown4</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="AgaveRoot3">
-            <Id Subtype="AgaveLeaves" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="AgaveLeaves"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -95,10 +96,10 @@
       <GrowthStep Name="AgaveRoot3" StartingProbability="0">
         <ModelCollectionSubtypeId>Roots</ModelCollectionSubtypeId>
         <NextStep>AgaveGrown4</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AgaveRoots" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="AgaveRoots"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -107,10 +108,10 @@
       <GrowthStep Name="AgaveGrown4" StartingProbability="0">
         <ModelCollectionSubtypeId>AgaveFull</ModelCollectionSubtypeId>
         <NextStep>AgaveFlower</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="AgaveRoot4">
-            <Id Subtype="AgaveLeaves" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="AgaveLeaves"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -119,10 +120,10 @@
       <GrowthStep Name="AgaveFlower" StartingProbability="0">
         <ModelCollectionSubtypeId>AgaveFlowers</ModelCollectionSubtypeId>
         <NextStep>AgaveGrown5</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
         <Actions>
           <Action Name="Gather" NextStep="AgaveGrown5">
-            <Id Subtype="FlowerAgave" Type="LootTableDefinition" />
+            <Id Type="LootTableDefinition" Subtype="FlowerAgave"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -131,10 +132,10 @@
       <GrowthStep Name="AgaveGrown5" StartingProbability="0">
         <ModelCollectionSubtypeId>AgaveFull</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="AgaveRoot4">
-            <Id Subtype="AgaveLeaves" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="AgaveLeaves"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -142,10 +143,10 @@
       </GrowthStep>
       <GrowthStep Name="AgaveRoot4" StartingProbability="0">
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AgaveRoots" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="AgaveRoots"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -153,10 +154,10 @@
       </GrowthStep>
       <GrowthStep Name="Withered" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AgaveRoots" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="AgaveRoots"/>
             <Min>3</Min>
             <Max>3</Max>
           </Action>
@@ -167,32 +168,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmPumpkin" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmPumpkin"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -201,10 +202,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Pumpkin" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -213,10 +214,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>5</Min>
             <Max>5</Max>
           </Action>
@@ -224,10 +225,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -238,32 +239,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmPumpkin_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmPumpkin_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -272,10 +273,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Pumpkin" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -284,10 +285,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>5</Min>
             <Max>5</Max>
           </Action>
@@ -295,10 +296,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -309,32 +310,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmPumpkin_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmPumpkin_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>Pumpkin_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -343,10 +344,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Pumpkin" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Pumpkin"/>
             <Min>4</Min>
             <Max>4</Max>
           </Action>
@@ -355,10 +356,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Pumpkin_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>5</Min>
             <Max>7</Max>
           </Action>
@@ -366,10 +367,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -380,32 +381,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmCabbage" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmCabbage"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -414,10 +415,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Cabbage" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Cabbage"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -426,10 +427,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -440,32 +441,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmCabbage_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmCabbage_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -474,10 +475,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Cabbage" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Cabbage"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -486,10 +487,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -500,32 +501,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmCabbage_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmCabbage_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -534,10 +535,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Cabbage" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Cabbage"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -546,10 +547,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Cabbage_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>3</Min>
             <Max>4</Max>
           </Action>
@@ -560,32 +561,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmRedCabbage" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmRedCabbage"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -594,10 +595,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="RedCabbage" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="RedCabbage"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -606,10 +607,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -620,32 +621,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmRedCabbage_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmRedCabbage_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -654,10 +655,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="RedCabbage" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="RedCabbage"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -666,10 +667,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -680,32 +681,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmRedCabbage_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmRedCabbage_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>RedCabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -714,10 +715,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="RedCabbage" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="RedCabbage"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -726,10 +727,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>RedCabbage_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>3</Min>
             <Max>4</Max>
           </Action>
@@ -740,32 +741,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmFlax" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmFlax"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -774,10 +775,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="StrawsFlax" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="StrawsFlax"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -786,10 +787,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -800,32 +801,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmFlax_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmFlax_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -834,10 +835,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="StrawsFlax" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="StrawsFlax"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -846,10 +847,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -860,32 +861,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmFlax_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmFlax_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>Flax_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -894,10 +895,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="StrawsFlax" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="StrawsFlax"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -906,10 +907,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Flax_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>3</Min>
             <Max>4</Max>
           </Action>
@@ -920,32 +921,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmWheat" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmWheat"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -954,10 +955,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="StrawsWheat" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="StrawsWheat"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -966,10 +967,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -980,32 +981,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmWheat_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmWheat_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1014,10 +1015,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="StrawsWheat" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="StrawsWheat"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1026,10 +1027,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -1040,32 +1041,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmWheat_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmWheat_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1074,10 +1075,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="StrawsWheat" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="StrawsWheat"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1086,10 +1087,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>4</Min>
             <Max>5</Max>
           </Action>
@@ -1100,32 +1101,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmHerbs" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmHerbs"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1134,10 +1135,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Herbs" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Herbs"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1146,10 +1147,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1160,32 +1161,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmHerbs_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmHerbs_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1194,10 +1195,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Herbs" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Herbs"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1206,10 +1207,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1220,32 +1221,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmHerbs_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmHerbs_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>HerbsEmpty</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1254,10 +1255,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Herbs</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Herbs" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Herbs"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -1266,10 +1267,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -1280,32 +1281,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmNorden_Spalt" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmNorden_Spalt"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1314,10 +1315,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Norden_Spalt" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1326,10 +1327,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1337,10 +1338,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Spalt_Roots" Type="DurableItem" />
+            <Id Type="DurableItem" Subtype="Spalt_Roots"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1351,32 +1352,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmNorden_Spalt_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmNorden_Spalt_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1385,10 +1386,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Norden_Spalt" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1397,10 +1398,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1408,10 +1409,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Spalt_Roots" Type="DurableItem" />
+            <Id Type="DurableItem" Subtype="Spalt_Roots"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1422,32 +1423,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmNorden_Spalt_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmNorden_Spalt_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Spaltless</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1456,10 +1457,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Spalt</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Norden_Spalt" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Norden_Spalt"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -1468,10 +1469,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -1479,10 +1480,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Spalt_Roots" Type="DurableItem" />
+            <Id Type="DurableItem" Subtype="Spalt_Roots"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -1493,32 +1494,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmNorden_Barley" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmNorden_Barley"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -1527,10 +1528,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Norden_Barley" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1539,10 +1540,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -1553,32 +1554,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmNorden_Barley_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmNorden_Barley_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -1587,10 +1588,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Norden_Barley" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1599,10 +1600,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -1613,32 +1614,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmNorden_Barley_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmNorden_Barley_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>Cabbage_Saplings</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -1647,10 +1648,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>Norden_Barley</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Norden_Barley" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Norden_Barley"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -1659,10 +1660,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>Herb_Withered</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>4</Min>
             <Max>5</Max>
           </Action>
@@ -1673,32 +1674,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmCarrot" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmCarrot"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1707,10 +1708,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Carrot" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Carrot"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1719,10 +1720,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1733,32 +1734,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmCarrot_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmCarrot_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1767,10 +1768,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Carrot" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Carrot"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1779,10 +1780,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1793,32 +1794,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmCarrot_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmCarrot_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>CarrotSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1827,10 +1828,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Carrot" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Carrot"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -1839,10 +1840,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>CarrotOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -1853,32 +1854,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmOnion" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmOnion"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1887,10 +1888,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Onion" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Onion"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1899,10 +1900,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1913,32 +1914,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmOnion_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmOnion_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1947,10 +1948,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Onion" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Onion"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1959,10 +1960,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -1973,32 +1974,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmOnion_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmOnion_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>OnionSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2007,10 +2008,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Onion" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Onion"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -2019,10 +2020,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>OnionOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -2033,32 +2034,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmMangold" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmMangold"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2067,10 +2068,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Mangold" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Mangold"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2079,10 +2080,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2093,32 +2094,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmMangold_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmMangold_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2127,10 +2128,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Mangold" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Mangold"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2139,10 +2140,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2153,32 +2154,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmMangold_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmMangold_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>MangoldSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2187,10 +2188,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Mangold" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Mangold"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -2199,10 +2200,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>MangoldOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -2213,32 +2214,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmGarlic" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmGarlic"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2247,10 +2248,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Garlic" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Garlic"/>
             <Min>4</Min>
             <Max>4</Max>
           </Action>
@@ -2259,10 +2260,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2273,32 +2274,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmGarlic_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmGarlic_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2307,10 +2308,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Garlic" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Garlic"/>
             <Min>4</Min>
             <Max>4</Max>
           </Action>
@@ -2319,10 +2320,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2333,32 +2334,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmGarlic_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmGarlic_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>GarlicSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2367,10 +2368,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Garlic" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Garlic"/>
             <Min>8</Min>
             <Max>8</Max>
           </Action>
@@ -2379,10 +2380,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>GarlicOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -2393,32 +2394,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmLeek" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmLeek"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2427,10 +2428,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Leek" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Leek"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2439,10 +2440,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2453,32 +2454,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmLeek_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmLeek_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2487,10 +2488,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Leek" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Leek"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2499,10 +2500,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2513,32 +2514,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmLeek_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmLeek_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>LeekSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2547,10 +2548,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekBig</ModelCollectionSubtypeId>
         <NextStep>Withering</NextStep>
-        <TimeToNextStep Hours="16" />
+        <TimeToNextStep Hours="16"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Leek" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Leek"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -2559,10 +2560,10 @@
       <GrowthStep Name="Withering" StartingProbability="0">
         <ModelCollectionSubtypeId>LeekOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -2573,32 +2574,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmBean" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmBean"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2607,10 +2608,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig3</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig2">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -2619,10 +2620,10 @@
       <GrowthStep Name="BeanBig2" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig3</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2631,10 +2632,10 @@
       <GrowthStep Name="BeanBig3" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig5</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig4">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -2643,10 +2644,10 @@
       <GrowthStep Name="BeanBig4" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig5</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2655,10 +2656,10 @@
       <GrowthStep Name="BeanBig5" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig7</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig6">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -2667,10 +2668,10 @@
       <GrowthStep Name="BeanBig6" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig7</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2679,10 +2680,10 @@
       <GrowthStep Name="BeanBig7" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig8">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -2691,10 +2692,10 @@
       <GrowthStep Name="BeanBig8" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2703,10 +2704,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -2717,32 +2718,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmBean_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmBean_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2751,10 +2752,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig3</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig2">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -2763,10 +2764,10 @@
       <GrowthStep Name="BeanBig2" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig3</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2775,10 +2776,10 @@
       <GrowthStep Name="BeanBig3" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig5</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig4">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -2787,10 +2788,10 @@
       <GrowthStep Name="BeanBig4" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig5</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2799,10 +2800,10 @@
       <GrowthStep Name="BeanBig5" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig7</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig6">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -2811,10 +2812,10 @@
       <GrowthStep Name="BeanBig6" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig7</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2823,10 +2824,10 @@
       <GrowthStep Name="BeanBig7" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig8">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -2835,10 +2836,10 @@
       <GrowthStep Name="BeanBig8" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2847,10 +2848,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -2861,32 +2862,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmBean_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmBean_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>BeanSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2895,10 +2896,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig3</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig2">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -2907,10 +2908,10 @@
       <GrowthStep Name="BeanBig2" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig3</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2919,10 +2920,10 @@
       <GrowthStep Name="BeanBig3" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig5</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig4">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -2931,10 +2932,10 @@
       <GrowthStep Name="BeanBig4" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig5</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2943,10 +2944,10 @@
       <GrowthStep Name="BeanBig5" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig7</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig6">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -2955,10 +2956,10 @@
       <GrowthStep Name="BeanBig6" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>BeanBig7</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -2967,10 +2968,10 @@
       <GrowthStep Name="BeanBig7" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="BeanBig8">
-            <Id Subtype="Beans" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Beans"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -2979,10 +2980,10 @@
       <GrowthStep Name="BeanBig8" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -2991,10 +2992,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>BeanOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -3005,32 +3006,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmPea" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmPea"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3039,10 +3040,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig3</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig2">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -3051,10 +3052,10 @@
       <GrowthStep Name="PeaBig2" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig3</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3063,10 +3064,10 @@
       <GrowthStep Name="PeaBig3" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig5</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig4">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -3075,10 +3076,10 @@
       <GrowthStep Name="PeaBig4" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig5</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3087,10 +3088,10 @@
       <GrowthStep Name="PeaBig5" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig7</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig6">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -3099,10 +3100,10 @@
       <GrowthStep Name="PeaBig6" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig7</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3111,10 +3112,10 @@
       <GrowthStep Name="PeaBig7" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig8">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -3123,10 +3124,10 @@
       <GrowthStep Name="PeaBig8" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3135,10 +3136,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -3149,32 +3150,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmPea_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmPea_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3183,10 +3184,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig3</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig2">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -3195,10 +3196,10 @@
       <GrowthStep Name="PeaBig2" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig3</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3207,10 +3208,10 @@
       <GrowthStep Name="PeaBig3" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig5</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig4">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -3219,10 +3220,10 @@
       <GrowthStep Name="PeaBig4" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig5</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3231,10 +3232,10 @@
       <GrowthStep Name="PeaBig5" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig7</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig6">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -3243,10 +3244,10 @@
       <GrowthStep Name="PeaBig6" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig7</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3255,10 +3256,10 @@
       <GrowthStep Name="PeaBig7" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig8">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>1</Min>
             <Max>3</Max>
           </Action>
@@ -3267,10 +3268,10 @@
       <GrowthStep Name="PeaBig8" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3279,10 +3280,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>3</Max>
           </Action>
@@ -3293,32 +3294,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmPea_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmPea_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="2" />
+        <TimeToNextStep Hours="2"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>PeaSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3327,10 +3328,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig3</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig2">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -3339,10 +3340,10 @@
       <GrowthStep Name="PeaBig2" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig3</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3351,10 +3352,10 @@
       <GrowthStep Name="PeaBig3" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig5</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig4">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -3363,10 +3364,10 @@
       <GrowthStep Name="PeaBig4" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig5</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3375,10 +3376,10 @@
       <GrowthStep Name="PeaBig5" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig7</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig6">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -3387,10 +3388,10 @@
       <GrowthStep Name="PeaBig6" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>PeaBig7</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3399,10 +3400,10 @@
       <GrowthStep Name="PeaBig7" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="PeaBig8">
-            <Id Subtype="Peas" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Peas"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -3411,10 +3412,10 @@
       <GrowthStep Name="PeaBig8" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -3423,10 +3424,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>PeaOld</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -3437,32 +3438,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmHops" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmHops"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3471,10 +3472,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsBigHops</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Hops" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Hops"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3483,10 +3484,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -3494,10 +3495,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3508,32 +3509,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmHops_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmHops_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3542,10 +3543,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsBigHops</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Hops" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Hops"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -3554,10 +3555,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -3565,10 +3566,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3579,32 +3580,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmHops_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmHops_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>HopsSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3613,10 +3614,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsBigHops</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Hops" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Hops"/>
             <Min>4</Min>
             <Max>4</Max>
           </Action>
@@ -3625,10 +3626,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>HopsBig</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -3636,10 +3637,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -3650,32 +3651,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmGrapes" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmGrapes"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3684,10 +3685,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesBigGrapes</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Grapes" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Grapes"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -3696,10 +3697,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesBigEmpty</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -3707,10 +3708,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3721,32 +3722,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmGrapes_Compost" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmGrapes_Compost"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3755,10 +3756,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesBigGrapes</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Grapes" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Grapes"/>
             <Min>4</Min>
             <Max>4</Max>
           </Action>
@@ -3767,10 +3768,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesBigEmpty</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>2</Max>
           </Action>
@@ -3778,10 +3779,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3792,32 +3793,32 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmGrapes_Fertilizer" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmGrapes_Fertilizer"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.5" />
+        <TimeToNextStep Hours="0.5"/>
       </GrowthStep>
       <GrowthStep Name="FastSapling" StartingProbability="0.3">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="0.35" />
+        <TimeToNextStep Hours="0.35"/>
       </GrowthStep>
       <GrowthStep Name="SlowSapling" StartingProbability="0.1">
         <ModelCollectionSubtypeId>GrapesSmall</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
       </GrowthStep>
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesHalf</ModelCollectionSubtypeId>
         <NextStep>Grown</NextStep>
-        <TimeToNextStep Hours="1.5" />
+        <TimeToNextStep Hours="1.5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3826,10 +3827,10 @@
       <GrowthStep Name="Grown" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesBigGrapes</ModelCollectionSubtypeId>
         <NextStep>Withered</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Harvested">
-            <Id Subtype="Grapes" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Grapes"/>
             <Min>6</Min>
             <Max>6</Max>
           </Action>
@@ -3838,10 +3839,10 @@
       <GrowthStep Name="Withered" StartingProbability="0">
         <ModelCollectionSubtypeId>GrapesBigEmpty</ModelCollectionSubtypeId>
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="12" />
+        <TimeToNextStep Hours="12"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>3</Min>
             <Max>5</Max>
           </Action>
@@ -3849,10 +3850,10 @@
       </GrowthStep>
       <GrowthStep Name="Harvested" StartingProbability="0">
         <NextStep>Dead</NextStep>
-        <TimeToNextStep Hours="1" />
+        <TimeToNextStep Hours="1"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="PlantMaterial" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="PlantMaterial"/>
             <Min>2</Min>
             <Max>2</Max>
           </Action>
@@ -3863,17 +3864,17 @@
   </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
-    <Id Subtype="FarmAppleTree" Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" />
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="FarmAppleTree"/>
     <DeadState>Dead</DeadState>
     <GrowthSteps>
-      <GrowthStep Name="Dead" StartingProbability="0" />
+      <GrowthStep Name="Dead" StartingProbability="0"/>
       <GrowthStep Name="Sapling" StartingProbability="0.6">
         <ModelCollectionSubtypeId>AppleTreeSapling</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="4" />
+        <TimeToNextStep Hours="4"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AppleTreeSapling" Type="SeedBagHandItem" />
+            <Id Type="SeedBagHandItem" Subtype="AppleTreeSapling"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3882,10 +3883,10 @@
       <GrowthStep Name="FastSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>AppleTreeSapling</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="3" />
+        <TimeToNextStep Hours="3"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AppleTreeSapling" Type="SeedBagHandItem" />
+            <Id Type="SeedBagHandItem" Subtype="AppleTreeSapling"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3894,10 +3895,10 @@
       <GrowthStep Name="SlowSapling" StartingProbability="0.2">
         <ModelCollectionSubtypeId>AppleTreeSapling</ModelCollectionSubtypeId>
         <NextStep>Young</NextStep>
-        <TimeToNextStep Hours="5" />
+        <TimeToNextStep Hours="5"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="AppleTreeSapling" Type="SeedBagHandItem" />
+            <Id Type="SeedBagHandItem" Subtype="AppleTreeSapling"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -3906,10 +3907,10 @@
       <GrowthStep Name="Young" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTreeSmall</ModelCollectionSubtypeId>
         <NextStep>Medium</NextStep>
-        <TimeToNextStep Hours="10" />
+        <TimeToNextStep Hours="10"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Sticks" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>8</Min>
             <Max>10</Max>
           </Action>
@@ -3918,10 +3919,10 @@
       <GrowthStep Name="Medium" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTreeMedium</ModelCollectionSubtypeId>
         <NextStep>Empty</NextStep>
-        <TimeToNextStep Hours="10" />
+        <TimeToNextStep Hours="10"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Subtype="Sticks" Type="InventoryItem" />
+            <Id Type="InventoryItem" Subtype="Sticks"/>
             <Min>10</Min>
             <Max>15</Max>
           </Action>
@@ -3930,175 +3931,175 @@
       <GrowthStep Name="Empty" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTreeEmpty</ModelCollectionSubtypeId>
         <NextStep>Full</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Full" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree10</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple9">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple9" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree9</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple8">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple8" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree08</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple7">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple7" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree07</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple6">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple6" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree06</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple5">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple5" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree05</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple4">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple4" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree04</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple3">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple3" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree03</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple2">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple2" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree02</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Apple1">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Apple1" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTree01</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Empty">
-            <Id Subtype="Apple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="Apple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree06" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree06"/>
           </Action>
         </Actions>
       </GrowthStep>
       <GrowthStep Name="Rotten" StartingProbability="0">
         <ModelCollectionSubtypeId>AppleTreeRotten</ModelCollectionSubtypeId>
         <NextStep>Rotten</NextStep>
-        <TimeToNextStep Hours="24" />
+        <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Empty">
-            <Id Subtype="RottenApple" Type="ConsumableItem" />
+            <Id Type="ConsumableItem" Subtype="RottenApple"/>
             <Min>2</Min>
             <Max>4</Max>
           </Action>
           <Action Name="Cut" NextStep="Dead">
-            <Id Subtype="Tree03" Type="MyObjectBuilder_TreeDefinition" />
+            <Id Type="MyObjectBuilder_TreeDefinition" Subtype="Tree03"/>
           </Action>
         </Actions>
       </GrowthStep>

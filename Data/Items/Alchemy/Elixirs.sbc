@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Endurance" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Endurance"/>
     <Public>true</Public>
     <DisplayName>Elixir of Endurance</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundNauthizRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -16,29 +17,29 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Endurance" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Endurance"/>
     <DisplayName>Elixir of Endurance</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundNauthizRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Mercury_Intermedium" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mercury_Intermedium" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Endurance" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="40" />
+    <CraftingTime Seconds="40"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Purity" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Purity"/>
     <Public>true</Public>
     <DisplayName>Elixir of Purity</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundKenazRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -50,29 +51,29 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Purity" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Purity"/>
     <DisplayName>Elixir of Purity</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundKenazRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Venus_Intermedium" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Venus_Intermedium" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Purity" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Purity" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="40" />
+    <CraftingTime Seconds="40"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Strength" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Strength"/>
     <Public>true</Public>
     <DisplayName>Elixir of Strength</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundUruzRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -84,29 +85,29 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Strength" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Strength"/>
     <DisplayName>Elixir of Strength</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundUruzRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Mars_Intermedium" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Mars_Intermedium" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Strength" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Strength" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="40" />
+    <CraftingTime Seconds="40"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Corruption" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Corruption"/>
     <Public>true</Public>
     <DisplayName>Elixir of Corruption</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedThurisazRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -118,29 +119,29 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Corruption" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Corruption"/>
     <DisplayName>Elixir of Corruption</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedThurisazRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Jupiter_Intermedium" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Jupiter_Intermedium" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Corruption" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Corruption" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="40" />
+    <CraftingTime Seconds="40"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Torpor" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Torpor"/>
     <Public>true</Public>
     <DisplayName>Elixir of Torpor</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedUruzRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -152,29 +153,29 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Torpor" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Torpor"/>
     <DisplayName>Elixir of Torpor</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedUruzRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Saturn_Intermedium" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Saturn_Intermedium" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Torpor" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Torpor" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="40" />
+    <CraftingTime Seconds="40"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Vitality" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Vitality"/>
     <Public>true</Public>
     <DisplayName>Elixir of Vitality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSowiloRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -186,29 +187,29 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Vitality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Vitality"/>
     <DisplayName>Elixir of Vitality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundSowiloRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Sol_Intermedium" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Sol_Intermedium" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Vitality" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Vitality" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="40" />
+    <CraftingTime Seconds="40"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Mortality" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Mortality"/>
     <Public>true</Public>
     <DisplayName>Elixir of Mortality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedSowiloRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -220,29 +221,29 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Mortality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Mortality"/>
     <DisplayName>Elixir of Mortality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedSowiloRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Lixivium_of_Luna_Intermedium" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Lixivium_of_Luna_Intermedium" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Mortality" Type="ConsumableItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Mortality" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="40" />
+    <CraftingTime Seconds="40"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Elixir_of_Duplicity"/>
     <Public>true</Public>
     <DisplayName>Elixir of Duplicity</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedEhwazRight.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -256,27 +257,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Duplicity" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Duplicity"/>
     <DisplayName>Elixir of Duplicity</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundReversedEhwazRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Virtue_of_Harmony" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Harmony" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="40" />
+    <CraftingTime Seconds="40"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Aqua_Pura" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Aqua_Pura"/>
     <Public>true</Public>
     <DisplayName>Aqua Pura</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialStandardNoLabel.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -289,26 +290,26 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Aqua_Pura" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Aqua_Pura"/>
     <DisplayName>Aqua Pura</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialStandardNoLabel.dds</Icon>
     <Category>Balneum</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Virtue_of_Purification" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Strength" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Virtue_of_Purification" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Strength" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Endurance_And_Purity" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Endurance_And_Purity"/>
     <Public>true</Public>
     <DisplayName>Elixir of Endurance And Purity</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixKenazRight.dds</Icon>
@@ -321,36 +322,36 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Endurance_And_Purity" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Endurance_And_Purity"/>
     <DisplayName>Elixir of Endurance And Purity</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixKenazRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Endurance" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Purity" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Purity" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Endurance_And_Purity" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance_And_Purity" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Endurance_And_Strength" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Endurance_And_Strength"/>
     <Public>true</Public>
     <DisplayName>Elixir of Endurance And Strength</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixUruzRight.dds</Icon>
@@ -363,37 +364,37 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Fury" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Fury" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Endurance_And_Strength" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Endurance_And_Strength"/>
     <DisplayName>Elixir of Endurance And Strength</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixUruzRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Endurance" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Strength" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Strength" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Endurance_And_Strength" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance_And_Strength" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Endurance_And_Vitality" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Endurance_And_Vitality"/>
     <Public>true</Public>
     <DisplayName>Elixir of Endurance And Vitality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixSowiloRight.dds</Icon>
@@ -406,37 +407,37 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Health" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Endurance_And_Vitality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Endurance_And_Vitality"/>
     <DisplayName>Elixir of Endurance And Vitality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixSowiloRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Endurance" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Vitality" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Vitality" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Endurance_And_Vitality" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance_And_Vitality" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Purity_And_Strength" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Purity_And_Strength"/>
     <Public>true</Public>
     <DisplayName>Elixir of Purity And Strength</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixKenazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixUruzRight.dds</Icon>
@@ -449,37 +450,37 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="-10" />
-      <Stat Name="Fury" Time="1" Value="10" />
+      <Stat Name="Poison" Value="-10" Time="1"/>
+      <Stat Name="Fury" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Purity_And_Strength" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Purity_And_Strength"/>
     <DisplayName>Elixir of Purity And Strength</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixKenazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixUruzRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Purity" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Strength" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Purity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Strength" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Purity_And_Strength" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Purity_And_Strength" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Purity_And_Vitality" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Purity_And_Vitality"/>
     <Public>true</Public>
     <DisplayName>Elixir of Purity And Vitality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixKenazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixSowiloRight.dds</Icon>
@@ -492,37 +493,37 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="-10" />
-      <Stat Name="Health" Time="1" Value="10" />
+      <Stat Name="Poison" Value="-10" Time="1"/>
+      <Stat Name="Health" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Purity_And_Vitality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Purity_And_Vitality"/>
     <DisplayName>Elixir of Purity And Vitality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixKenazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixSowiloRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Purity" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Vitality" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Purity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Vitality" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Purity_And_Vitality" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Purity_And_Vitality" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Strength_And_Vitality" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Strength_And_Vitality"/>
     <Public>true</Public>
     <DisplayName>Elixir of Strength And Vitality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixUruzLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixSowiloRight.dds</Icon>
@@ -535,37 +536,37 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Fury" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="10" />
+      <Stat Name="Fury" Value="10" Time="1"/>
+      <Stat Name="Health" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Strength_And_Vitality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Strength_And_Vitality"/>
     <DisplayName>Elixir of Strength And Vitality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixUruzLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixSowiloRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Strength" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Vitality" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Strength" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Vitality" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Strength_And_Vitality" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Strength_And_Vitality" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Corruption_And_Torpor" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Corruption_And_Torpor"/>
     <Public>true</Public>
     <DisplayName>Elixir of Corruption And Torpor</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedThurisazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedUruzRight.dds</Icon>
@@ -578,37 +579,37 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Corruption_And_Torpor" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Corruption_And_Torpor"/>
     <DisplayName>Elixir of Corruption And Torpor</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedThurisazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedUruzRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Corruption" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Torpor" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Corruption" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Torpor" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Corruption_And_Torpor" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Corruption_And_Torpor" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Corruption_And_Mortality" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Corruption_And_Mortality"/>
     <Public>true</Public>
     <DisplayName>Elixir of Corruption And Mortality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedThurisazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedSowiloRight.dds</Icon>
@@ -621,37 +622,37 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Corruption_And_Mortality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Corruption_And_Mortality"/>
     <DisplayName>Elixir of Corruption And Mortality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedThurisazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedSowiloRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Corruption" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Mortality" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Corruption" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Mortality" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Corruption_And_Mortality" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Corruption_And_Mortality" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Torpor_And_Mortality" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Torpor_And_Mortality"/>
     <Public>true</Public>
     <DisplayName>Elixir of Torpor And Mortality</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedUruzLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedSowiloRight.dds</Icon>
@@ -664,37 +665,37 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="-10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="-10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Torpor_And_Mortality" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Torpor_And_Mortality"/>
     <DisplayName>Elixir of Torpor And Mortality</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedUruzLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedSowiloRight.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Duplicity" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Elixir_of_Torpor" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Elixir_of_Mortality" Type="ConsumableItem" />
+      <Item Type="InventoryItem" Subtype="Elixir_of_Duplicity" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Torpor" Amount="1"/>
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Mortality" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="2" Subtype="Elixir_of_Torpor_And_Mortality" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Torpor_And_Mortality" Amount="2"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Endurance_in_Extent" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Endurance_in_Extent"/>
     <Public>true</Public>
     <DisplayName>Elixir of Endurance in Extent</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
@@ -707,33 +708,33 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Endurance_in_Extent" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Endurance_in_Extent"/>
     <DisplayName>Elixir of Endurance in Extent</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Endurance" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Endurance_in_Extent" Type="ConsumableItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Endurance_in_Extent" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Purity_in_Extent" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Purity_in_Extent"/>
     <Public>true</Public>
     <DisplayName>Elixir of Purity in Extent</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixKenazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
@@ -746,33 +747,33 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Purity_in_Extent" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Purity_in_Extent"/>
     <DisplayName>Elixir of Purity in Extent</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixKenazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Purity" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Purity" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Purity_in_Extent" Type="ConsumableItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Purity_in_Extent" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Strength_in_Extent" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Strength_in_Extent"/>
     <Public>true</Public>
     <DisplayName>Elixir of Strength in Extent</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixUruzLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
@@ -785,33 +786,33 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Strength_in_Extent" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Strength_in_Extent"/>
     <DisplayName>Elixir of Strength in Extent</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixUruzLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Strength" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Strength" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Strength_in_Extent" Type="ConsumableItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Strength_in_Extent" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Corruption_in_Extent" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Corruption_in_Extent"/>
     <Public>true</Public>
     <DisplayName>Elixir of Corruption in Extent</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedThurisazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
@@ -824,33 +825,33 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Corruption_in_Extent" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Corruption_in_Extent"/>
     <DisplayName>Elixir of Corruption in Extent</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedThurisazLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Corruption" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Corruption" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Corruption_in_Extent" Type="ConsumableItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Corruption_in_Extent" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Torpor_in_Extent" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Torpor_in_Extent"/>
     <Public>true</Public>
     <DisplayName>Elixir of Torpor in Extent</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
@@ -863,33 +864,33 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Torpor_in_Extent" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Torpor_in_Extent"/>
     <DisplayName>Elixir of Torpor in Extent</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixNauthizLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Torpor" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Torpor" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Torpor_in_Extent" Type="ConsumableItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Torpor_in_Extent" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Vitality_in_Extent" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Vitality_in_Extent"/>
     <Public>true</Public>
     <DisplayName>Elixir of Vitality in Extent</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixSowiloLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
@@ -902,36 +903,36 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="10" Value="5" />
+      <Stat Name="Health" Value="5" Time="10"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Vitality_in_Extent" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Vitality_in_Extent"/>
     <DisplayName>Elixir of Vitality in Extent</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixSowiloLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Vitality" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Vitality" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Vitality_in_Extent" Type="ConsumableItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Vitality_in_Extent" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Elixir_of_Mortality_in_Extent" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Elixir_of_Mortality_in_Extent"/>
     <Public>true</Public>
     <DisplayName>Elixir of Mortality in Extent</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedSowiloLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
@@ -944,29 +945,29 @@
     <Model>Models\Alchemy\Items\VialLarge.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="10" Value="-5" />
+      <Stat Name="Health" Value="-5" Time="10"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Elixir_of_Mortality_in_Extent" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Elixir_of_Mortality_in_Extent"/>
     <DisplayName>Elixir of Mortality in Extent</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialLarge.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixReversedSowiloLeft.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\MixIsaRight.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Elixir_of_Mortality" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Virtue_of_Persistance" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Aqua_Pura" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Mortality" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Virtue_of_Persistance" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Aqua_Pura" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Elixir_of_Mortality_in_Extent" Type="ConsumableItem" />
-      <Item Amount="2" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Elixir_of_Mortality_in_Extent" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="2"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
 </Definitions>
 

@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Althea" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Althea"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Althea</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Althea Leaves.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -20,7 +21,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Althea" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Althea"/>
     <DisplayName>Ground Althea</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\althea.dds</Icon>
@@ -28,20 +29,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Althea_Leaves" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Althea_Leaves" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Althea" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Althea" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Amaranth" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Amaranth"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Amaranth</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Amaranth Seeds.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -56,7 +57,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Amaranth" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Amaranth"/>
     <DisplayName>Ground Amaranth</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\amaranth.dds</Icon>
@@ -64,20 +65,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Amaranth_Seeds" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Amaranth_Seeds" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Amaranth" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Amaranth" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Angelica" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Angelica"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Angelica</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Angelica Roots.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -92,7 +93,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Angelica" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Angelica"/>
     <DisplayName>Ground Angelica</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\angelica.dds</Icon>
@@ -100,20 +101,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Angelica_Roots" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Angelica_Roots" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Angelica" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Angelica" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Belladonna" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Belladonna"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Belladonna</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Belladonna Berries.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -128,7 +129,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Belladonna" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Belladonna"/>
     <DisplayName>Ground Belladonna</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\belladonna.dds</Icon>
@@ -136,20 +137,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Belladonna_Berries" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Belladonna_Berries" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Belladonna" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Belladonna" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Broom" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Broom"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Broom</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Broom Flowers.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -164,7 +165,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Broom" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Broom"/>
     <DisplayName>Ground Broom</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\broom.dds</Icon>
@@ -172,20 +173,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Broom_Flowers" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Broom_Flowers" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Broom" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Broom" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Castor" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Castor"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Castor</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Castor Beans.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -200,7 +201,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Castor" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Castor"/>
     <DisplayName>Ground Castor</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\castor.dds</Icon>
@@ -208,20 +209,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Castor_Beans" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Castor_Beans" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Castor" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Castor" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Cinquefoil" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Cinquefoil"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Cinquefoil</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Cinquefoil Flowers.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -236,7 +237,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Cinquefoil" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Cinquefoil"/>
     <DisplayName>Ground Cinquefoil</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\cinquefoil.dds</Icon>
@@ -244,20 +245,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Cinquefoil_Flowers" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Cinquefoil_Flowers" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Cinquefoil" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Cinquefoil" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Crimson_Thristle" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Crimson_Thristle"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Crimson Thristle</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Crimson Thristle Stems.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -272,7 +273,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Crimson_Thristle" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Crimson_Thristle"/>
     <DisplayName>Ground Crimson Thristle</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\crimsonthistle.dds</Icon>
@@ -280,20 +281,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Crimson_Thristle_Stems" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Crimson_Thristle_Stems" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Crimson_Thristle" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Crimson_Thristle" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Crocus" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Crocus"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Crocus</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Crocus Roots.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -308,7 +309,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Crocus" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Crocus"/>
     <DisplayName>Ground Crocus</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\crocus.dds</Icon>
@@ -316,20 +317,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Crocus_Roots" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Crocus_Roots" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Crocus" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Crocus" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Cloud_Funnel" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Cloud_Funnel"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Cloud Funnel</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Cloud Funnel Mushroom.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -344,7 +345,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Cloud_Funnel" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Cloud_Funnel"/>
     <DisplayName>Ground Cloud Funnel</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\cloudfunnel.dds</Icon>
@@ -352,20 +353,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Cloud_Funnel_Mushroom" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Cloud_Funnel_Mushroom" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Cloud_Funnel" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Cloud_Funnel" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Gilliflower" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Gilliflower"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Gilliflower</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Gilliflower Buds.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -380,7 +381,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Gilliflower" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Gilliflower"/>
     <DisplayName>Ground Gilliflower</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\gilliflower.dds</Icon>
@@ -388,20 +389,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Gilliflower_Buds" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Gilliflower_Buds" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Gilliflower" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Gilliflower" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Glasswort" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Glasswort"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Glasswort</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Glasswort Shoots.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -416,7 +417,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Glasswort" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Glasswort"/>
     <DisplayName>Ground Glasswort</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\glasswort.dds</Icon>
@@ -424,20 +425,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Glasswort_Shoots" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Glasswort_Shoots" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Glasswort" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Glasswort" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Luceat" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Luceat"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Luceat</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Luceat Berries.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -452,7 +453,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Luceat" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Luceat"/>
     <DisplayName>Ground Luceat</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\luceat.dds</Icon>
@@ -460,20 +461,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Luceat_Berries" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Luceat_Berries" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Luceat" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Luceat" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Concordia" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Concordia"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Concordia</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Concordia Mushroom.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -488,7 +489,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Concordia" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Concordia"/>
     <DisplayName>Ground Concordia</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\concordia.dds</Icon>
@@ -496,20 +497,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Concordia_Mushroom" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Concordia_Mushroom" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Concordia" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Concordia" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Hellebore" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Hellebore"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Hellebore</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Hellebore Flowers.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -524,7 +525,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Hellebore" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Hellebore"/>
     <DisplayName>Ground Hellebore</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\hellebore.dds</Icon>
@@ -532,20 +533,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Hellebore_Flowers" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Hellebore_Flowers" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Hellebore" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hellebore" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Hemlock" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Hemlock"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Hemlock</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Hemlock Stems.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -560,7 +561,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Hemlock" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Hemlock"/>
     <DisplayName>Ground Hemlock</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\hemlock.dds</Icon>
@@ -568,20 +569,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Hemlock_Stems" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Hemlock_Stems" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Hemlock" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hemlock" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Hoppan" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Hoppan"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Hoppan</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Hoppan Leaves.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -596,7 +597,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Hoppan" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Hoppan"/>
     <DisplayName>Ground Hoppan</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\hoppan.dds</Icon>
@@ -604,20 +605,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Hoppan_Leaves" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Hoppan_Leaves" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Hoppan" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Hoppan" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Knotweed" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Knotweed"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Knotweed</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Knotweed Shoots.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\knotweed.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -632,7 +633,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Knotweed" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Knotweed"/>
     <DisplayName>Ground Knotweed</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\knotweed.dds</Icon>
@@ -640,20 +641,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Knotweed_Shoots" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Knotweed_Shoots" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Knotweed" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Knotweed" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Arctic_Lichen" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Arctic_Lichen"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Arctic Lichen</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Arctic Lichen.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -668,7 +669,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Arctic_Lichen" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Arctic_Lichen"/>
     <DisplayName>Ground Arctic Lichen</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\rocklichen.dds</Icon>
@@ -676,20 +677,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Arctic_Lichen" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Arctic_Lichen" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Arctic_Lichen" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Arctic_Lichen" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Mugwort" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Mugwort"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Mugwort</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Mugwort Stems.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -704,7 +705,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Mugwort" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Mugwort"/>
     <DisplayName>Ground Mugwort</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\mugwort.dds</Icon>
@@ -712,20 +713,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Mugwort_Stems" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Mugwort_Stems" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Mugwort" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Mugwort" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Rock_Willow" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Rock_Willow"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Rock Willow</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Rock Willow Leaves.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -740,7 +741,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Rock_Willow" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Rock_Willow"/>
     <DisplayName>Ground Rock Willow</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\rockwillow.dds</Icon>
@@ -748,20 +749,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Rock_Willow_Leaves" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Rock_Willow_Leaves" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Rock_Willow" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Rock_Willow" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Sage" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Sage"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Sage</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Sage Leaves.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -776,7 +777,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Sage" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Sage"/>
     <DisplayName>Ground Sage</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\sage.dds</Icon>
@@ -784,20 +785,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Sage_Leaves" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Sage_Leaves" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Sage" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Sage" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Spalt" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Spalt"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Spalt</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Spalt Roots.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -812,7 +813,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Spalt" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Spalt"/>
     <DisplayName>Ground Spalt</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\spalt.dds</Icon>
@@ -820,20 +821,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Spalt_Roots" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Spalt_Roots" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Spalt" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Spalt" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Vervain" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Vervain"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Vervain</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Vervain Flowers.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\vervain.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -848,7 +849,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Vervain" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Vervain"/>
     <DisplayName>Ground Vervain</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\vervain.dds</Icon>
@@ -856,20 +857,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Vervain_Flowers" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Vervain_Flowers" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Vervain" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Vervain" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Wormwood" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Wormwood"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Wormwood</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Wormwood Stems.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -884,7 +885,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Wormwood" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Wormwood"/>
     <DisplayName>Ground Wormwood</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\wormwood.dds</Icon>
@@ -892,20 +893,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Wormwood_Stems" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Wormwood_Stems" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Wormwood" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Wormwood" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ground_Yarrow" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ground_Yarrow"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ground Yarrow</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Dried Yarrow Leaves.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\pestle.dds</Icon>
@@ -920,7 +921,7 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ground_Yarrow" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ground_Yarrow"/>
     <DisplayName>Ground Yarrow</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\mortar.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\yarrow.dds</Icon>
@@ -928,20 +929,20 @@
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Dried_Yarrow_Leaves" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Dried_Yarrow_Leaves" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Ground_Yarrow" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ground_Yarrow" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Ennerite_Powder" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Ennerite_Powder"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Ennerite Powder</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Ennerite Raw.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\groundennerite.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -954,25 +955,25 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Ennerite_Powder" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ennerite_Powder"/>
     <DisplayName>Ennerite Powder</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\groundennerite.dds</Icon>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Ennerite_Raw" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ennerite_Raw" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="5" Subtype="Ennerite_Powder" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Ennerite_Powder" Amount="5"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Cinnabar_Powder" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Cinnabar_Powder"/>
     <Tag>Ground_Ingredient</Tag>
     <Public>true</Public>
     <DisplayName>Cinnabar Powder</DisplayName>
-    <Description />
+    <Description>A powder made by grinding Cinnabar Raw.</Description>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\groundcinnabar.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
     <Size>
@@ -985,18 +986,18 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Cinnabar_Powder" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Cinnabar_Powder"/>
     <DisplayName>Cinnabar Powder</DisplayName>
     <Icon>Textures\GUI\Icons\Universal\Alchemy\groundcinnabar.dds</Icon>
     <Category>Grind_Stone</Category>
     <Category>Mortar_Pestle</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Cinnabar_Raw" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Cinnabar_Raw" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="5" Subtype="Cinnabar_Powder" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Cinnabar_Powder" Amount="5"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
 </Definitions>
 

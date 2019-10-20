@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Anti_Poison_1" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Anti_Poison_1"/>
     <Public>true</Public>
     <DisplayName>Int Anti Poison</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAntiPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -18,27 +19,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Anti_Poison_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Anti_Poison_1"/>
     <DisplayName>Int Anti Poison</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAntiPoison.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Althea_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Broom_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Althea_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Broom_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Anti_Poison_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Anti_Poison_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Anti_Poison_2" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Anti_Poison_2"/>
     <Public>true</Public>
     <DisplayName>Int Anti Poison</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAntiPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -52,44 +53,44 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Anti_Poison_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Anti_Poison_2"/>
     <DisplayName>Int Anti Poison</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAntiPoison.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Althea_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Gilliflower_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Althea_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Gilliflower_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Anti_Poison_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Anti_Poison_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Anti_Poison_1_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Anti_Poison_1_2"/>
     <DisplayName>Int Anti Poison</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundAntiPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Broom_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Gilliflower_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Broom_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Gilliflower_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Anti_Poison_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Anti_Poison_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Fury_1" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Fury_1"/>
     <Public>true</Public>
     <DisplayName>Int Fury</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundFury.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -103,27 +104,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Fury_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Fury_1"/>
     <DisplayName>Int Fury</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundFury.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Cloud_Funnel_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Hellebore_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Cloud_Funnel_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Hellebore_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Fury_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Fury_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Fury_2" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Fury_2"/>
     <Public>true</Public>
     <DisplayName>Int Fury</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundFury.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -137,44 +138,44 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Fury_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Fury_2"/>
     <DisplayName>Int Fury</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundFury.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Cloud_Funnel_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Hoppan_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Cloud_Funnel_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Hoppan_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Fury_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Fury_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Fury_2_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Fury_2_2"/>
     <DisplayName>Int Fury</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundFury.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Hellebore_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Hoppan_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Hellebore_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Hoppan_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Fury_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Fury_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Health_1" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Health_1"/>
     <Public>true</Public>
     <DisplayName>Int Health</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -188,44 +189,44 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Health_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Health_1"/>
     <DisplayName>Int Health</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundHealth.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Amaranth_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Crimson_Thristle_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Amaranth_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Crimson_Thristle_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Health_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Health_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Health_1_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Health_1_2"/>
     <DisplayName>Int Health</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundHealth.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Amaranth_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Rock_Willow_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Amaranth_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Rock_Willow_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Health_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Health_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Health_2" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Health_2"/>
     <Public>true</Public>
     <DisplayName>Int Health</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -239,78 +240,78 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Health_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Health_2"/>
     <DisplayName>Int Health</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundHealth.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Amaranth_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Wormwood_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Amaranth_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Wormwood_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Health_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Health_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Health_2_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Health_2_2"/>
     <DisplayName>Int Health</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Crimson_Thristle_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Rock_Willow_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Crimson_Thristle_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Rock_Willow_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Health_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Health_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Health_2_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Health_2_3"/>
     <DisplayName>Int Health</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Crimson_Thristle_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Wormwood_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Crimson_Thristle_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Wormwood_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Health_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Health_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Health_2_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Health_2_4"/>
     <DisplayName>Int Health</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundHealth.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Rock_Willow_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Wormwood_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Rock_Willow_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Wormwood_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Health_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Health_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Poison_1" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Poison_1"/>
     <Public>true</Public>
     <DisplayName>Int Poison</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -324,44 +325,44 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Poison_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Poison_1"/>
     <DisplayName>Int Poison</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Belladonna_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Castor_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Belladonna_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Castor_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Poison_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Poison_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Poison_1_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Poison_1_2"/>
     <DisplayName>Int Poison</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundPoison.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Belladonna_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Hemlock_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Belladonna_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Hemlock_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Poison_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Poison_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Poison_2" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Poison_2"/>
     <Public>true</Public>
     <DisplayName>Int Poison</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -375,27 +376,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Poison_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Poison_2"/>
     <DisplayName>Int Poison</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundPoison.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Castor_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Hemlock_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Castor_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Hemlock_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Poison_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Poison_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Stamina_1" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Stamina_1"/>
     <Public>true</Public>
     <DisplayName>Int Stamina</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -409,27 +410,27 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Stamina_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Stamina_1"/>
     <DisplayName>Int Stamina</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Angelica_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Crocus_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Angelica_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Crocus_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Stamina_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Stamina_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Stamina_2" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Stamina_2"/>
     <Public>true</Public>
     <DisplayName>Int Stamina</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -443,44 +444,44 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Stamina_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Stamina_2"/>
     <DisplayName>Int Stamina</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Angelica_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Spalt_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Angelica_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Spalt_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Stamina_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Stamina_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Stamina_2_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Stamina_2_2"/>
     <DisplayName>Int Stamina</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Angelica_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Yarrow_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Angelica_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Yarrow_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Stamina_2" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Stamina_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
-    <Id Subtype="Int_Stamina_3" Type="InventoryItem" />
+    <Id Type="InventoryItem" Subtype="Int_Stamina_3"/>
     <Public>true</Public>
     <DisplayName>Int Stamina</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -494,54 +495,54 @@
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Stamina_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Stamina_3"/>
     <DisplayName>Int Stamina</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Crocus_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Spalt_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Crocus_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Spalt_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Stamina_3" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Stamina_3" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Stamina_1_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Stamina_1_2"/>
     <DisplayName>Int Stamina</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Crocus_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Yarrow_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Crocus_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Yarrow_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Stamina_1" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Stamina_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Int_Stamina_3_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Int_Stamina_3_2"/>
     <DisplayName>Int Stamina</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\VialSmallRound.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundStamina.dds</Icon>
     <Category>Alembic</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Prepd_Spalt_Essence" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Prepd_Yarrow_Essence" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Prepd_Spalt_Essence" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Prepd_Yarrow_Essence" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Int_Stamina_3" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Int_Stamina_3" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
 </Definitions>
 

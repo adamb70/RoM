@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_1" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_1"/>
     <Public>true</Public>
     <DisplayName>Health Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -16,76 +17,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_1"/>
     <DisplayName>Health Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Amaranth_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Amaranth_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Health_Tonic_1" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_2" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_2"/>
     <Public>true</Public>
     <DisplayName>Health Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Health Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Amaranth_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Health_Tonic_2" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_3" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Health Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -97,76 +58,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="-10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_2"/>
     <DisplayName>Health Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Amaranth_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Amaranth_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Health_Tonic_3" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_4" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_3"/>
     <Public>true</Public>
     <DisplayName>Health Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Health Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Crimson_Thristle_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Health_Tonic_4" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_5" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Health Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -178,76 +98,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Health" Value="-10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_5" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_3"/>
     <DisplayName>Health Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Crimson_Thristle_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Amaranth_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Health_Tonic_5" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_3" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_6" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_4"/>
     <Public>true</Public>
     <DisplayName>Health Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Health" Time="1" Value="-10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_6" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Health Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Crimson_Thristle_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Health_Tonic_6" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_7" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Health Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -259,77 +138,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_7" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_4"/>
     <DisplayName>Health Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Rock_Willow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Crimson_Thristle_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Health_Tonic_7" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_4" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_8" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_5"/>
     <Public>true</Public>
     <DisplayName>Health Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
-      <Stat Name="Poison" Time="1" Value="10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_8" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Health Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Rock_Willow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Health_Tonic_8" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_9" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Health Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -341,76 +179,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="-10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_9" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_5"/>
     <DisplayName>Health Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Rock_Willow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Crimson_Thristle_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Health_Tonic_9" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_5" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_10" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_6"/>
     <Public>true</Public>
     <DisplayName>Health Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_10" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Health Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Wormwood_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Health_Tonic_10" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_11" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Health Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -422,36 +220,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Health" Value="-10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_11" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_6"/>
     <DisplayName>Health Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Wormwood_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Crimson_Thristle_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Health_Tonic_11" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_6" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Health_Tonic_12" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_7"/>
     <Public>true</Public>
     <DisplayName>Health Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -463,35 +260,239 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Health" Time="1" Value="-10" />
-      <Stat Name="Stamina" Time="1" Value="-10" />
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Health_Tonic_12" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_7"/>
     <DisplayName>Health Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Wormwood_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Rock_Willow_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Health_Tonic_12" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_7" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_1" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_8"/>
+    <Public>true</Public>
+    <DisplayName>Health Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_8"/>
+    <DisplayName>Health Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Rock_Willow_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_8" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_9"/>
+    <Public>true</Public>
+    <DisplayName>Health Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Health" Value="-10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_9"/>
+    <DisplayName>Health Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Rock_Willow_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_9" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_10"/>
+    <Public>true</Public>
+    <DisplayName>Health Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_10"/>
+    <DisplayName>Health Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Wormwood_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_10" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_11"/>
+    <Public>true</Public>
+    <DisplayName>Health Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Health" Value="10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_11"/>
+    <DisplayName>Health Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Wormwood_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_11" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Health_Tonic_12"/>
+    <Public>true</Public>
+    <DisplayName>Health Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Health" Value="-10" Time="1"/>
+      <Stat Name="Stamina" Value="-10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Health_Tonic_12"/>
+    <DisplayName>Health Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundHealth.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Wormwood_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Health_Tonic_12" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_1"/>
     <Public>true</Public>
     <DisplayName>Poison Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -503,76 +504,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_1"/>
     <DisplayName>Poison Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Belladonna_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Belladonna_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_1" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_2" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_2"/>
     <Public>true</Public>
     <DisplayName>Poison Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Poison Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Belladonna_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_2" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_3" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Poison Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -584,75 +545,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_2"/>
     <DisplayName>Poison Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Belladonna_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Belladonna_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_3" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_4" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_3"/>
     <Public>true</Public>
     <DisplayName>Poison Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Poison Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Castor_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_4" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_5" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Poison Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -664,76 +585,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_5" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_3"/>
     <DisplayName>Poison Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Castor_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Belladonna_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_5" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_3" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_6" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_4"/>
     <Public>true</Public>
     <DisplayName>Poison Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
-      <Stat Name="Health" Time="1" Value="-10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_6" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Poison Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Castor_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_6" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_7" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Poison Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -745,76 +625,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_7" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_4"/>
     <DisplayName>Poison Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Hellebore_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Castor_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_7" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_4" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_8" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_5"/>
     <Public>true</Public>
     <DisplayName>Poison Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_8" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Poison Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Hellebore_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_8" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_9" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Poison Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -826,76 +665,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_9" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_5"/>
     <DisplayName>Poison Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Hellebore_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Castor_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_9" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_5" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_10" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_6"/>
     <Public>true</Public>
     <DisplayName>Poison Tonic</DisplayName>
-    <Description />
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <PhysicalMaterial>None</PhysicalMaterial>
-    <Size>
-      <X>1</X>
-      <Z>1</Z>
-      <Y>1</Y>
-    </Size>
-    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
-    </Stats>
-    <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_10" Type="MyObjectBuilder_CraftingRecipeDefinition" />
-    <DisplayName>Poison Tonic</DisplayName>
-    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
-    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
-    <Category>Cauldron</Category>
-    <Prerequisites>
-      <Item Amount="1" Subtype="Hemlock_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
-    </Prerequisites>
-    <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_10" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
-    </Results>
-    <CraftingTime Seconds="20" />
-  </Definition>
-  
-  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_11" Type="ConsumableItem" />
-    <Public>true</Public>
-    <DisplayName>Poison Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -907,35 +705,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_11" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_6"/>
     <DisplayName>Poison Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Hemlock_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Castor_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_11" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_6" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Poison_Tonic_12" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_7"/>
     <Public>true</Public>
     <DisplayName>Poison Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -947,36 +746,238 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Poison_Tonic_12" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_7"/>
     <DisplayName>Poison Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Hemlock_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Hellebore_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Poison_Tonic_12" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_7" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_1" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_8"/>
+    <Public>true</Public>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_8"/>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Hellebore_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_8" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_9"/>
+    <Public>true</Public>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_9"/>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Hellebore_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_9" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_10"/>
+    <Public>true</Public>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_10"/>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Hemlock_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_10" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_11"/>
+    <Public>true</Public>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_11"/>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Hemlock_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_11" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Poison_Tonic_12"/>
+    <Public>true</Public>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Description></Description>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <PhysicalMaterial>None</PhysicalMaterial>
+    <Size>
+      <X>1</X>
+      <Z>1</Z>
+      <Y>1</Y>
+    </Size>
+    <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Stats>
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
+    </Stats>
+    <UseSound>PlayEat</UseSound>
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Poison_Tonic_12"/>
+    <DisplayName>Poison Tonic</DisplayName>
+    <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
+    <Icon>Textures\GUI\Icons\Alchemy\ForegroundPoison.dds</Icon>
+    <Category>Cauldron</Category>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="Hemlock_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
+    </Prerequisites>
+    <Results>
+      <Item Type="ConsumableItem" Subtype="Poison_Tonic_12" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
+    </Results>
+    <CraftingTime Seconds="20"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_1"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -988,35 +989,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_1" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_1"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Angelica_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Angelica_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_1" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_1" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_2" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_2"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1028,36 +1029,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_2" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_2"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Angelica_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Angelica_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_2" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_2" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_3" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_3"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1069,36 +1070,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_3" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_3"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Angelica_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Angelica_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_3" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_3" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_4" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_4"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1110,36 +1111,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_4" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_4"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Crocus_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Crocus_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_4" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_4" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_5" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_5"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1151,36 +1152,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_5" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_5"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Crocus_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Crocus_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_5" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_5" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_6" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_6"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1192,36 +1193,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Thirst" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Thirst" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_6" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_6"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Crocus_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Crocus_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_6" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_6" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_7" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_7"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1233,36 +1234,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_7" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_7"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Spalt_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Spalt_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_7" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_7" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_8" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_8"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1274,35 +1275,35 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_8" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_8"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Spalt_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Spalt_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_8" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_8" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_9" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_9"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1314,36 +1315,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Poison" Time="1" Value="10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_9" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_9"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Spalt_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Spalt_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_9" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_9" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_10" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_10"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1355,36 +1356,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Food" Time="1" Value="-10" />
-      <Stat Name="Mood" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Food" Value="-10" Time="1"/>
+      <Stat Name="Mood" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_10" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_10"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Yarrow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Cinquefoil_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Yarrow_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Cinquefoil_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_10" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_10" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_11" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_11"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1396,36 +1397,36 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Food" Time="1" Value="-10" />
-      <Stat Name="Poison" Time="1" Value="10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Food" Value="-10" Time="1"/>
+      <Stat Name="Poison" Value="10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_11" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_11"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Yarrow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Knotweed_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Yarrow_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Knotweed_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_11" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_11" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
-    <Id Subtype="Stamina_Tonic_12" Type="ConsumableItem" />
+    <Id Type="ConsumableItem" Subtype="Stamina_Tonic_12"/>
     <Public>true</Public>
     <DisplayName>Stamina Tonic</DisplayName>
-    <Description />
+    <Description></Description>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <PhysicalMaterial>None</PhysicalMaterial>
@@ -1437,29 +1438,29 @@
     <Model>Models\Alchemy\Items\VialStandard.mwm</Model>
     <MaxStackAmount>1</MaxStackAmount>
     <Stats>
-      <Stat Name="Stamina" Time="1" Value="10" />
-      <Stat Name="Food" Time="1" Value="-10" />
-      <Stat Name="Health" Time="1" Value="-10" />
+      <Stat Name="Stamina" Value="10" Time="1"/>
+      <Stat Name="Food" Value="-10" Time="1"/>
+      <Stat Name="Health" Value="-10" Time="1"/>
     </Stats>
     <UseSound>PlayEat</UseSound>
-    <ReturnedItem Subtype="Glass_Vial" Type="InventoryItem" />
+    <ReturnedItem Type="InventoryItem" Subtype="Glass_Vial"/>
   </Definition>
   
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
-    <Id Subtype="Stamina_Tonic_12" Type="MyObjectBuilder_CraftingRecipeDefinition" />
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stamina_Tonic_12"/>
     <DisplayName>Stamina Tonic</DisplayName>
     <Icon>Textures\GUI\Icons\Alchemy\BackgroundVialStandard.dds</Icon>
     <Icon>Textures\GUI\Icons\Alchemy\ForegroundStamina.dds</Icon>
     <Category>Cauldron</Category>
     <Prerequisites>
-      <Item Amount="1" Subtype="Yarrow_Extract" Type="InventoryItem" />
-      <Item Amount="1" Subtype="Vervain_Extract" Type="InventoryItem" />
+      <Item Type="InventoryItem" Subtype="Yarrow_Extract" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Vervain_Extract" Amount="1"/>
     </Prerequisites>
     <Results>
-      <Item Amount="1" Subtype="Stamina_Tonic_12" Type="ConsumableItem" />
-      <Item Amount="1" Subtype="Glass_Vial" Type="InventoryItem" />
+      <Item Type="ConsumableItem" Subtype="Stamina_Tonic_12" Amount="1"/>
+      <Item Type="InventoryItem" Subtype="Glass_Vial" Amount="1"/>
     </Results>
-    <CraftingTime Seconds="20" />
+    <CraftingTime Seconds="20"/>
   </Definition>
 </Definitions>
 
