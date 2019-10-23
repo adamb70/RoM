@@ -22,7 +22,6 @@
     <MaxIntegrity>600</MaxIntegrity>
   </Definition>
 
-
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Table"/>
     <DisplayName>Masonry Block</DisplayName>
@@ -37,6 +36,44 @@
       <Item Amount="1" Type="Block" Subtype="Masonry_Table" />
     </Results>
     <CraftingTime Seconds="3"/>
+  </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_CraftingComponentDefinition">
+    <Id Type="CraftingComponent" Subtype="MasonryTableCrafting" />
+    <InputInventory>InputInventory</InputInventory>
+    <OutputInventory>OutputInventory</OutputInventory>
+    <CraftingInventory>CraftingInventory</CraftingInventory>
+    <ProductInventory>ProductInventory</ProductInventory>
+    <PowerRequired>None</PowerRequired>
+    <CraftingSpeedMultiplier>1</CraftingSpeedMultiplier>
+    <ReturnPrerequisitesOnCancel>true</ReturnPrerequisitesOnCancel>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_CraftingSchedulerDefinition">
+    <Id Type="CraftingScheduler" Subtype="MasonryTableScheduler" />
+    <CraftingComponent Type="CraftingComponent" Subtype="MasonryTableCrafting" />
+    <QueueSize>14</QueueSize>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="MasonryTableRecipes" />
+    <Category>Masonry_Table</Category>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_ContainerDefinition" Copy="Append">
+    <Id Type="Block" Subtype="Masonry_Table" />
+    <CopyFrom Type="EntityBase" Subtype="BaseFatBlock" />
+    <Component Type="CraftingComponent" Subtype="MasonryTableCrafting" />
+    <Component Type="CraftingScheduler" Subtype="MasonryTableScheduler" />
+    <Component Type="ConstantRecipeProviderComponent" Subtype="MasonryTableRecipes" />
+
+    <Component Type="Inventory" Subtype="InputInventory" />
+    <Component Type="Inventory" Subtype="CraftingInventory" />
+    <Component Type="Inventory" Subtype="ProductInventory" />
+    <Component Type="Inventory" Subtype="OutputInventory" />
+
+    <Component Type="InventorySpawnComponent" />
+    <Component Type="EntityFXComponent" Subtype="TableCrafting" />
   </Definition>
 
 </Definitions>
