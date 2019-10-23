@@ -90,5 +90,10 @@
     <Effect Type="PoisonEffect" Subtype="PoisonDegen" />
     <Effect Type="RomDeathEffect" Subtype="DeathDegen" />
   </Definition>
+  
+  <Definition xsi:type="MyObjectBuilder_ConstantRecipeProviderComponentDefinition" Merge="Append">
+    <Id Type="ConstantRecipeProviderComponent" Subtype="HumanoidRecipes" />
+    <Category>SmallBlocks</Category>
+  </Definition>
 
 </Definitions>

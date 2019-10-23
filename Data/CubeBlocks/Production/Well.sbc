@@ -21,7 +21,8 @@
       <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
     </MountPoints>
     <Mass>180</Mass>
-    <MaxIntegrity>700</MaxIntegrity><VoxelPlacement>
+    <MaxIntegrity>700</MaxIntegrity>
+    <VoxelPlacement>
       <StaticMode>
         <MinAllowed>-Infinity</MinAllowed>
         <MaxAllowed>1.0</MaxAllowed>
@@ -115,5 +116,29 @@
       <MaterialRequirement Type="MyObjectBuilder_VoxelMaterialDefinition" Subtype="Woods_needles" Amount="10" />
     </Materials>
   </Definition>
-  
+
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Stone_Well" />  
+    <DisplayName>Stone Well</DisplayName>
+    <Description>
+    "The well is the vital organ of any settlement.
+    Without wells, their are no citizens."
+
+    A well provides water, which can be used to 
+    fill empty buckets.
+    </Description>
+    <Icon>Textures\GUI\Icons\Universal\Masonry\WaterWell.dds</Icon>
+    <Category>SmallBlocks</Category>
+    <Prerequisites>
+      <Item Amount="3" Tag="Universal_Stone" />
+      <Item Amount="2" Tag="Universal_Stick" />
+    </Prerequisites>
+    <Results>
+
+      <Item Amount="1" Type="Block" Subtype="Stone_Well" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+
 </Definitions>
