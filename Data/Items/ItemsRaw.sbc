@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
     <Id Type="InventoryItem" Subtype="BranchesConiferous" />
 
     <Tag>Universal_Brush</Tag>
     <MaxStackAmount>15</MaxStackAmount>
   </Definition>
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
     <Id Type="InventoryItem" Subtype="BranchesPalmtree" />
     <Tag>Universal_Brush</Tag>
     <MaxStackAmount>20</MaxStackAmount>
   </Definition>
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
     <Id Type="InventoryItem" Subtype="StoneSmall" />
 
     <Tag>Universal_Stone</Tag>
@@ -128,7 +128,7 @@
     <Health>10</Health>
   </Definition>
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
     <Id Type="InventoryItem" Subtype="Sticks" />
     <Tag>Universal_Stick</Tag>
     <MaxStackAmount>30</MaxStackAmount>
@@ -144,7 +144,7 @@
   <!-- Kharidian -->
 
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
     <Id Type="InventoryItem" Subtype="LogPalmtree" />
     <Tag>Universal_Log</Tag>
     <MaxStackAmount>1</MaxStackAmount>
@@ -255,27 +255,27 @@
   <!-- Norden Plains -->
 
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
     <Id Type="InventoryItem" Subtype="Log" />
-    <Public>true</Public>
-    <Tag>Log</Tag>
     <Tag>Universal_Log</Tag>
-    <DisplayName>Log</DisplayName>
-    <Description>Description_Item_Log</Description>
-    <Icon>Textures\GUI\Icons\Materials\Log250cm.dds</Icon>
-    <Model>Models\Cubes\Small\LogSpruce250cm.mwm</Model>
-    <PhysicalMaterial>Wood</PhysicalMaterial>
-    <Size>
-      <X>2.5</X>
-      <Y>0.2</Y>
-      <Z>0.2</Z>
-    </Size>
-    <MaxStackAmount>1</MaxStackAmount>
-    <Health>100</Health>
-    <Mass>10</Mass>
   </Definition>
   <!-- =================================================================================== -->
-  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Merge">
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
+    <Id Type="InventoryItem" Subtype="LogOakQuarter" />
+    <Tag>Universal_Log</Tag>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
+    <Id Type="InventoryItem" Subtype="LogOakHalf" />
+    <Tag>Universal_Log</Tag>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
+    <Id Type="InventoryItem" Subtype="LogOakBranch" />
+    <Tag>Universal_Log</Tag>
+  </Definition>
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition" Merge="Append">
     <Id Type="InventoryItem" Subtype="Antlers" />
     <MaxStackAmount>15</MaxStackAmount>
   </Definition>
