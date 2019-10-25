@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
+<!--
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Foreign_Market_Contract_Langenmosen_General" />
     <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
@@ -15,6 +16,7 @@
     </Results>
     <CraftingTime Seconds="1"/>
   </Definition>
+-->
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Sell_DeerHide_Langenmosen_General" />
@@ -61,7 +63,35 @@
     <CraftingTime Seconds="1"/>
   </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Buy_Shovel_Copper_Langenmosen_General" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\ShovelCopper.dds</Icon>
+    <DisplayName>Buy: Copper Shovel (325G)</DisplayName>
+    <Category>Langenmosen_General_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="325" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="ShovelCopper" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
 
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Buy_Plow_Copper_Langenmosen_General" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\HammerCopper.dds</Icon>
+    <DisplayName>Buy: Copper Shovel (375G)</DisplayName>
+    <Category>Langenmosen_General_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="375" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="PlowCopper" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
 
 
 

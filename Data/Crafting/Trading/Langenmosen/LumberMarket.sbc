@@ -31,8 +31,20 @@
     <CraftingTime Seconds="1"/>
   </Definition>
 
-
-
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Buy_Copper_Axe_Langenmosen_Lumber" />
+    <Icon>Textures\GUI\Icons\Universal\Gold_Pieces.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\AxeCopper.dds</Icon>
+    <DisplayName>Buy: Copper Axe (350G)</DisplayName>
+    <Category>Langenmosen_Lumber_Market_Stand</Category>
+    <Prerequisites>
+      <Item Amount="350" Type="InventoryItem" Subtype="Gold_Coins" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="HandItem" Subtype="AxeCopper" />
+    </Results>
+    <CraftingTime Seconds="1"/>
+  </Definition>
 
 
 </Definitions>
