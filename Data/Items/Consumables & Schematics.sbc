@@ -476,7 +476,9 @@ it is now the time to make sure of it."
 
 Begins the Research Tree...
 </Description>
-      <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Size>
         <X>0.1</X>
         <Y>0.1</Y>
@@ -502,7 +504,9 @@ easier."
 
 ...researches carts...
 </Description>
-      <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Size>
         <X>0.1</X>
         <Y>0.1</Y>
@@ -528,7 +532,9 @@ land."
 
 ...researches fortifications...
 </Description>
-      <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Size>
         <X>0.1</X>
         <Y>0.1</Y>
@@ -553,7 +559,9 @@ declaring our sovergnty."
 
 ...researches Settlements.
 </Description>
-      <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
       <Size>
         <X>0.1</X>
         <Y>0.1</Y>
@@ -5568,6 +5576,30 @@ any leader. Though, making a more durable claim never hurts.</Description>
 
     <!-- Nomadic -->
     
+<!-- =================================================================================== -->
+<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="ClaimTotem_Schematic" />
+      <Public>true</Public>
+      <DisplayName>Claim Totem Manuscript</DisplayName>
+
+      <Description>A manuscript detailing how to build a claim totem.</Description>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Books\book_law.dds</Icon>
+      <Icon>Textures\GUI\Icons\Cubes\SkullImpaled.dds</Icon>
+      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Cubes\small\Scroll.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>10</MaxStackAmount>
+      <UseSound>ResearchSound</UseSound>
+      <Research Type="ResearchDefinition" Subtype="ClaimTotem_Nomadic" />
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>    
 <!-- =================================================================================== -->    
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">

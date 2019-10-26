@@ -14,12 +14,12 @@
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Nomadic_Book" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />
-    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Teachings_Of_The_Nomad_Milestone" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Schematic_Stone_Well" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />
 
+    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClaimTotem_Nomadic" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
@@ -61,7 +61,7 @@
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
     <Step>
-      <FullDescription>It's important to gather pristine materials inorder to conduct research to discover new technologies. Look in the nearby forest for pristine items.</FullDescription>
+      <FullDescription>While gathering resources occasionally a pristine versions of that resource will be gathered. These materials are needed in order to conduct research to discover new technologies. Look in the nearby forest for pristine items and use the book you have created to research.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="1" />
 
       <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />   
@@ -74,28 +74,24 @@
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
     <Step>
-      <FullDescription>Fire, the most essential element. Making a Campfire will allow for food production. While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
+      <FullDescription>Fire, the most essential element. Making a Campfire will allow for food production.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="9" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="2" />
-        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Mushroom" Amount="2" />
-        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Mushroom" Amount="2" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Berry" Amount="2" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Berry" Amount="2" />
       </Condition>
 
-      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />   
-      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />   
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />
       <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />   
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
     <Step>
-      <FullDescription>Food is essential for surviving the wilderness.</FullDescription>
+      <FullDescription>Food is essential for surviving the wilderness. Craft a bonfire, add fuel, and cook some food.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_Bonfire" Amount="1" />
-        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="SoupMushroom_Schematic" Amount="1" />
         <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="Bonfire" Amount="1" />
-        <Condition xsi:type="Quest.Conditions.Craft" Type="ConsumableItem" Subtype="SoupMushroom" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="ConsumableItem" Subtype="BerryPreserve" Amount="1" />
       </Condition>
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
@@ -112,7 +108,7 @@
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
     <Step>
-      <FullDescription>Finally, gather the last bits needed to construct a well. While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
+      <FullDescription>Finally, gather the last bits needed to construct a well.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="3" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="3" />
@@ -147,22 +143,24 @@
 
     <IsAbandonable>true</IsAbandonable>
     <IsRepeatable>false</IsRepeatable>
-
+    
+    <StartAction xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="ClaimTotem_Nomadic" />
     <FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
     <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
 
     <Step>
-      <FullDescription>Find a suitable location for an encampment. Look for some local resources needed to begin construction of the encampment.  While gathering resources occasionally a pristine versions of that resource will be gathered. This is used for research. Use the Ways of The Nomad (Survival Guide) book to learn research.</FullDescription>
+      <FullDescription>Find a suitable location for an encampment. Learn how to make a Claim Totem in order to lay claim to your land.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="6" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="5" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="ClaimTotem_Schematic" Amount="1" />
       </Condition>
 
       <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
     <Step>
-      <FullDescription>Once a suitable spot has been chosen, establish the encampment!</FullDescription>
+      <FullDescription>Once a suitable spot has been chosen, establish the encampment! You will need an axe to cut wood, and a mallet to build your claim totem (found in G menu).</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranches" Amount="1" />
         <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="NomadTentBranches" Amount="1" />

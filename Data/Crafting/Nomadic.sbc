@@ -4,6 +4,25 @@
   <!-- =================================================================================== -->
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClaimTotem_Nomadic" />
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
+    <Icon>Textures\GUI\Icons\Universal\Books\book_law.dds</Icon>
+    <Icon>Textures\GUI\Icons\Cubes\SkullImpaled.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
+    <DisplayName>Survival Essentials: Claim Totem</DisplayName>
+    <Description>Lay claim to your land.</Description>
+    <Category>Nomadic_Book</Category>
+    <Prerequisites>
+      <Item Amount="1" Tag="Pristine_Stick" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="SchematicItem" Subtype="ClaimTotem_Schematic" />
+    </Results>
+    <CraftingTime Seconds="3"/>
+  </Definition>
+  <!-- =================================================================================== -->
+
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Bonfire_Nomadic" />
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\BonFire.dds</Icon>
@@ -254,7 +273,9 @@ it is now the time to make sure of it."
 
 Begins the Research Tree...
     </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
     <Category>Milestone</Category>
     <Prerequisites>
       <Item Amount="1" Tag="Pristine_Stick" />
@@ -276,7 +297,9 @@ easier."
 
 ...researches carts...
     </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
     <Category>Milestone</Category>
     <Prerequisites>
       <Item Amount="1" Tag="Pristine_Stick" />
@@ -296,7 +319,9 @@ easier."
 safty when traveling abroad or claiming new
 land."
     </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
     <Category>Milestone</Category>
     <Prerequisites>
       <Item Amount="1" Tag="Pristine_Stick" />
@@ -317,7 +342,9 @@ declaring our sovergnty."
 
 ...researches Settlements.
     </Description>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Universal\Books\book_nomadic.dds</Icon>
+    <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
     <Category>Milestone</Category>
     <Prerequisites>
       <Item Amount="1" Tag="Pristine_Stick" />
