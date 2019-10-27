@@ -3,22 +3,27 @@
 
   <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
     <Id Type="Block" Subtype="Cauldron" />
-    <Rotation>All</Rotation>
     <DisplayName>Cauldron</DisplayName>
 	  <Description>Hubble bubble</Description>
     <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemycauldron.dds</Icon>
-    <Public>true</Public>
     <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
     <BoundingBox>
-      <Min x="-1" y="-2" z="-2" />
-      <Max x="2" y="2" z="3" />
+      <Min x="-2" y="-2" z="-2" />
+      <Max x="2" y="2" z="2" />
     </BoundingBox>
     <Model>Models\Alchemy\Cubeblocks\AlchemyCauldron.mwm</Model>
-    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
     <Components>
       <Component Type="Block" Subtype="Cauldron" Count="1" />
     </Components>
     <Volume>135</Volume>
+    <Rotation>YAxis</Rotation>
+    <ParticleScale>0.22</ParticleScale>
+    <LightRadius Min="6.5" Max="6.5" Default="6.5" />
+    <LightFalloff Min="0.3" Max="0.3" Default="0.3" />
+    <LightIntensity Min="0.3" Max="0.3" Default="0.3" />
+    <PrimarySound>BlockFire</PrimarySound>
+    <ActionSound>HudCraftBarProgressLoopMeals</ActionSound>
     <Mass>100</Mass>
     <MaxIntegrity>600</MaxIntegrity>
   </Definition>
@@ -67,10 +72,10 @@
     <Id Type="EntityFXComponent" Subtype="CauldronFX" />
     <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
     <Effects>
-      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
-        <EffectId Type="EffectDefinition" Subtype="Furnace" />
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="dummy_fire">
+        <EffectId Type="EffectDefinition" Subtype="Cauldron" />
       </Effect>
-      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_furnace" Overwrite="false">
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="dummy_fire" Overwrite="false">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingFurnace" />
       </Effect>
     </Effects>

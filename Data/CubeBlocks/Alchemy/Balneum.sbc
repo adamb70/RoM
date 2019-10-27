@@ -3,15 +3,13 @@
   
   <Definition xsi:type="MyObjectBuilder_BuildableBlockDefinition">
     <Id Type="Block" Subtype="Balneum" />
-    <Rotation>All</Rotation>
     <DisplayName>Balneum</DisplayName>
 	  <Description>Brews extracts</Description>
     <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemybalneum.dds</Icon>
-    <Public>true</Public>
     <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
     <BoundingBox>
-      <Min x="-1" y="-2" z="-2" />
-      <Max x="2" y="2" z="3" />
+      <Min x="-1" y="-1" z="-1" />
+      <Max x="1" y="1" z="2" />
     </BoundingBox>
     <Model>Models\Alchemy\Cubeblocks\AlchemyBalneum.mwm</Model>
     <PhysicalMaterial>Metal</PhysicalMaterial>
@@ -19,6 +17,7 @@
       <Component Type="Block" Subtype="Balneum" Count="1" />
     </Components>
     <Volume>135</Volume>
+    <Rotation>YAxis</Rotation>
     <Mass>100</Mass>
     <MaxIntegrity>600</MaxIntegrity>
   </Definition>
@@ -87,10 +86,10 @@
     <Id Type="EntityFXComponent" Subtype="BalneumFX" />
     <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
     <Effects>
-      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_inventory">
-        <EffectId Type="EffectDefinition" Subtype="Furnace" />
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="FurnaceFire">
+        <EffectId Type="EffectDefinition" Subtype="PumpkinCarved_Particle" />
       </Effect>
-      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_inventory">
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="FurnaceFire">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingFurnace" />
       </Effect>
     </Effects>

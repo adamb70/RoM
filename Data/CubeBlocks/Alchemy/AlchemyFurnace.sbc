@@ -8,8 +8,8 @@
     <Icon>Textures\GUI\Icons\Cubes\Alchemy\alchemyfurnace.dds</Icon>
     <GridDataDefinitionId Type="GridDataComponent" Subtype="SmallGridDataBase" />
     <BoundingBox>
-      <Min x="-3" y="-2" z="-3" />
-      <Max x="3" y="5" z="3" />
+      <Min x="-3" y="-2" z="-2" />
+      <Max x="3" y="5" z="2" />
     </BoundingBox>
     <Model>Models\Alchemy\Cubeblocks\alchemyFurnace.mwm</Model>
     <PhysicalMaterial>StoneHeavy</PhysicalMaterial>
@@ -52,10 +52,10 @@
     <Id Type="EntityFXComponent" Subtype="AlchemyFurnaceFX" />
     <CopyFrom Type="MyObjectBuilder_EntityFXComponent" Subtype="StorageFxBase" />
     <Effects>
-      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="detector_furnace">
+      <Effect StartEvent="FuelOn" StopEvent="FuelOff" Dummy="FurnaceFire">
         <EffectId Type="EffectDefinition" Subtype="Furnace" />
       </Effect>
-      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="detector_furnace" Overwrite="false">
+      <Effect StartEvent="CraftingStart" StopEvent="CraftingStop" Dummy="FurnaceFire" Overwrite="false">
         <EffectId Type="MyObjectBuilder_EffectDefinition" Subtype="CraftingFurnace" />
       </Effect>
     </Effects>
