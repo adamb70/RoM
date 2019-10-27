@@ -5454,7 +5454,7 @@ knowledge would be valuable for Blacksmithing.
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
       <Id Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlockWood" />
       <Public>true</Public>
-      <DisplayName>Law and Government: Territorial Claim [Tier 1]</DisplayName>
+      <DisplayName>Claim Block [Tier 1]</DisplayName>
       <Description>The power to stake your claim in the realm is important
 for any leader.</Description>
       <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
@@ -5576,30 +5576,6 @@ any leader. Though, making a more durable claim never hurts.</Description>
 
     <!-- Nomadic -->
     
-<!-- =================================================================================== -->
-<Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
-      <Id Type="SchematicItem" Subtype="ClaimTotem_Schematic" />
-      <Public>true</Public>
-      <DisplayName>Claim Totem Manuscript</DisplayName>
-
-      <Description>A manuscript detailing how to build a claim totem.</Description>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
-      <Icon>Textures\GUI\Icons\Universal\Books\book_law.dds</Icon>
-      <Icon>Textures\GUI\Icons\Cubes\SkullImpaled.dds</Icon>
-      <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
-      <Size>
-        <X>0.7</X>
-        <Y>0.1</Y>
-        <Z>1</Z>
-      </Size>
-      <Mass>6.7</Mass>
-      <Model>Models\Cubes\small\Scroll.mwm</Model>
-      <PhysicalMaterial>None</PhysicalMaterial>
-      <MaxStackAmount>10</MaxStackAmount>
-      <UseSound>ResearchSound</UseSound>
-      <Research Type="ResearchDefinition" Subtype="ClaimTotem_Nomadic" />
-      <CanSpawnFromScreen>true</CanSpawnFromScreen>
-    </Definition>    
 <!-- =================================================================================== -->    
 
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">

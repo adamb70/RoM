@@ -52,15 +52,16 @@
   <!-- =================================================================================== -->
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClaimBlockWood_LawGovernment" />
-    <DisplayName>Law and Government: Territorial Claim [Tier 1]</DisplayName>
+    <DisplayName>Claim Block [Tier 1]</DisplayName>
     <Description>The power to stake your claim in the realm is important
 for any leader.</Description>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
     <Icon>Textures\GUI\Icons\Cubes\ClaimBlockWood.dds</Icon>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
     <Category>LawGovernment_Book</Category>
+    <Category>Nomadic_Book</Category>
     <Prerequisites>
-      <Item Amount="28" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
+      <Item Amount="3" Tag="Pristine_Stick" />
     </Prerequisites>
     <Results>
 
@@ -79,8 +80,8 @@ any leader. Though, making a more durable claim never hurts.</Description>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_2.dds</Icon>
     <Category>LawGovernment_Book</Category>
     <Prerequisites>
-      <Item Amount="4" Type="SchematicItem" Subtype="Schematic_TreeSmall_WoodenSticks" />
-      <Item Amount="20" Type="SchematicItem" Subtype="Schematic_StoneOreSmall" />
+      <Item Amount="4" Tag="Pristine_Stick" />
+      <Item Amount="20" Tag="Pristine_Stone" />
     </Prerequisites>
     <Results>
 

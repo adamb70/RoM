@@ -18,8 +18,12 @@
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Schematic_Stone_Well" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />
-
-    <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="ClaimTotem_Nomadic" />
+  </Definition>
+  
+   <Definition xsi:type="ResearchDefinition">
+    <Id Type="ResearchDefinition" Subtype="Nomad_Encampment" />
+    <DisplayName>Nomadic Technology</DisplayName>
+    <!-- All this research will be unlocked instantly if the player abandons the intro quest -->
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FenceGate_Nomadic" />
@@ -43,6 +47,7 @@
 
     <!-- unlocks all the research if quest is abandoned -->
     <FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
+    <FailAction xsi:type="Quest.Actions.StartQuest" Subtype="Establishing_Encampment" />
 
     <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
     <SuccessAction xsi:type="Quest.Actions.StartQuest" Subtype="Establishing_Encampment" />
@@ -137,34 +142,34 @@
     <Id Type="QuestDefinition" Subtype="Establishing_Encampment" />
 
     <DisplayName>Establishing The Encampment</DisplayName>
-    <FullDescription>Constructing a Claim Totem will mark the territory. Though fortifications are needed to protect the encampment from theives. Research the fortification technologies located in the Ways of The Nomad book.</FullDescription>
+    <FullDescription>Constructing a Claim Block will mark the territory. Though fortifications are needed to protect the encampment from theives. Research the fortification technologies located in the Ways of The Nomad book.</FullDescription>
     <Icon>Textures\GUI\Book\QuestBook_Quest_Thumbnail.png</Icon>
     <Tag>Tutorial</Tag>
 
     <IsAbandonable>true</IsAbandonable>
     <IsRepeatable>false</IsRepeatable>
     
-    <StartAction xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="ClaimTotem_Nomadic" />
-    <FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
+    <StartAction xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="ClaimBlockWood_LawGovernment" />
+    <FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Encampment" />
     <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
 
     <Step>
-      <FullDescription>Find a suitable location for an encampment. Learn how to make a Claim Totem in order to lay claim to your land.</FullDescription>
+      <FullDescription>Find a suitable location for an encampment. Learn how to make a Wooden Claim Block in order to lay claim to your land.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="6" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="5" />
-        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="ClaimTotem_Schematic" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlockWood" Amount="1" />
       </Condition>
 
       <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="TentBranches_Nomadic" />
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
     <Step>
-      <FullDescription>Once a suitable spot has been chosen, establish the encampment! You will need an axe to cut wood, and a mallet to build your claim totem (found in G menu).</FullDescription>
+      <FullDescription>Once a suitable spot has been chosen, establish the encampment! You will need an axe to cut wood, and a mallet to build your claim block (found in G menu).</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranches" Amount="1" />
         <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="NomadTentBranches" Amount="1" />
-        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="Block" Subtype="ClaimTotem" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.BuildBlock" Type="Block" Subtype="ClaimBlockWood" Amount="1" />
       </Condition>
 
       <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="LongBarricade_Nomadic" />
@@ -177,7 +182,7 @@
         <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_LongBarricade" Amount="1" />
         <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_FenceGate" Amount="1" />
       </Condition>
-      <Action xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Encampment" />
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
   </Definition>
