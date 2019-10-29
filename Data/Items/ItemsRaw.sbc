@@ -138,7 +138,32 @@
 
 
 
+  <!-- =================================================================================== -->
 
+  <!-- Highlands -->
+
+  <!-- =================================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_InventoryItemDefinition">
+    <Id Type="InventoryItem" Subtype="HighlandSticks" />
+    <Public>true</Public>
+    <Tag>Universal_Stick</Tag>
+    <Tag>ScrapWood</Tag>
+    <DisplayName>Highland Sticks</DisplayName>
+    <Description>
+Sticks from the Prine Trees 
+of the Dwarven Highlands.</Description>
+    <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
+    <Model>Models\Components\WoodenStick.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <Size>
+      <X>0.7</X>
+      <Y>0.1</Y>
+      <Z>1</Z>
+    </Size>
+    <MaxStackAmount>30</MaxStackAmount>
+    <Health>10</Health>
+    <Mass>0.1</Mass>
+  </Definition>
   <!-- =================================================================================== -->
 
   <!-- Kharidian -->

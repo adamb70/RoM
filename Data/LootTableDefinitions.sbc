@@ -337,6 +337,15 @@
   </Definition>
 <!-- ================================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
+  <Id Type="LootTableDefinition" Subtype="HighlandSticks" />
+  	<Rolls>1</Rolls>
+	  <Item Type="InventoryItem"	Subtype="HighlandSticks" AlwaysDrops="true" IsUnique="true" />
+	  <!-- Roughly 25% Probability for Pristine -->
+	  <Item Type="SchematicItem"	Subtype="Schematic_Highland_Sticks" Weight="25" />
+	<Item Weight="100" />
+  </Definition>
+<!-- ================================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_LootTableDefinition">
   <Id Type="LootTableDefinition" Subtype="Enchanted_Sticks" />
   	<Rolls>1</Rolls>
 	  <Item Type="InventoryItem"	Subtype="Enchanted_WoodenSticks" AlwaysDrops="true" IsUnique="true" />

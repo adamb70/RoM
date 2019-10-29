@@ -2310,6 +2310,35 @@ perfect specimen for a Carpenter.
     </Definition>
 <!-- =================================================================================== -->
     <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
+      <Id Type="SchematicItem" Subtype="Schematic_Highland_Sticks" />
+      <Tag>Pristine_Stick</Tag>
+      <Public>true</Public>
+      <DisplayName>Pristine Highland Sticks</DisplayName>
+      <Description>
+As you examine the quality of the Highland  
+Sticks you find that it's in pristine condition. 
+Without any adnormal properties, it makes a 
+perfect specimen for a Carpenter. 
+
+((Consume to receive knowledge))</Description>
+      <Icon>Textures\GUI\Icons\Universal\Herblore\pestle_research.dds</Icon>
+      <Icon>Textures\GUI\Icons\Materials\WoodenStick.dds</Icon>
+      <Icon>Textures\GUI\Icons\Universal\Herblore\mortar_research.dds</Icon>
+      <Size>
+        <X>0.7</X>
+        <Y>0.1</Y>
+        <Z>1</Z>
+      </Size>
+      <Mass>6.7</Mass>
+      <Model>Models\Components\WoodenStick.mwm</Model>
+      <PhysicalMaterial>None</PhysicalMaterial>
+      <MaxStackAmount>30</MaxStackAmount>
+      <UseSound>ResearchSound</UseSound>
+      <Research Type="ResearchDefinition" Subtype="Highland_Sticks_Carpenter" />
+      <CanSpawnFromScreen>true</CanSpawnFromScreen>
+    </Definition>
+<!-- =================================================================================== -->
+    <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
       <Id Type="SchematicItem" Subtype="Schematic_Kharidian_Sticks" />
       <Tag>Pristine_Stick</Tag>
       <Public>true</Public>
