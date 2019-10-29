@@ -61,12 +61,15 @@
     </Step>
     <Step>
       <FullDescription>The Ways of The Nomad is an ancient text, with knowledge from many generations. Learn as much as possible from it, and it will aid you in survival.</FullDescription>
-      <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="Nomadic_Book" Amount="1" />
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="Nomadic_Book" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.PlaceBlock" Type="Block" Subtype="Nomadic_Book" Amount="1" />
+      </Condition>
       <Action xsi:type="Quest.Actions.FlagTutorialCompleted" />
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
     <Step>
-      <FullDescription>While gathering resources occasionally a pristine versions of that resource will be gathered. These materials are needed in order to conduct research to discover new technologies. Look in the nearby forest for pristine items and use the book you have created to research.</FullDescription>
+      <FullDescription>While gathering resources, occasionally, a pristine version of that specific resource will be gathered. These materials are in perfect condition and can be used for researching technologies in the Ways of the Nomad Book and Profession Books. Go gather sticks in the nearby forest until you receive a Pristine Stick.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="1" />
 
       <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Ancestral_Knowledge_Milestone" />   
@@ -156,7 +159,7 @@
     <Step>
       <FullDescription>Find a suitable location for an encampment. Learn how to make a Wooden Claim Block in order to lay claim to your land.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
-        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="6" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="3" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="5" />
         <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="LawGovernment_Schematic_ClaimBlockWood" Amount="1" />
       </Condition>

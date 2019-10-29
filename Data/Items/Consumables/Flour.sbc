@@ -3,9 +3,28 @@
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Merge="Merge">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FlourWheat"/>
-    <CraftingTime Seconds="4"/>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="StrawsWheat" Amount="4" />
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="FlourWheat" />
+      <Item Amount="1" Type="Block" Subtype="Empty_Bucket" />
+    </Results>
+    <CraftingTime Seconds="10"/>
   </Definition>
 
-
+  <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition" Merge="Merge">
+    <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="FlourWheatMechanical"/>
+    <Prerequisites>
+      <Item Type="InventoryItem" Subtype="StrawsWheat" Amount="4" />
+      <Item Type="Block" Subtype="Water_Bucket" Amount="1" />
+    </Prerequisites>
+    <Results>
+      <Item Amount="1" Type="InventoryItem" Subtype="FlourWheat" />
+      <Item Amount="1" Type="Block" Subtype="Empty_Bucket" />
+    </Results>
+    <CraftingTime Seconds="6"/>
+  </Definition>
 
 </Definitions>
