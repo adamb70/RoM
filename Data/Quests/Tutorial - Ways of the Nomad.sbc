@@ -46,7 +46,6 @@
     <IsRepeatable>false</IsRepeatable>
 
     <!-- unlocks all the research if quest is abandoned -->
-    <FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
     <FailAction xsi:type="Quest.Actions.StartQuest" Subtype="Establishing_Encampment" />
 
     <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
@@ -152,6 +151,8 @@
     <IsAbandonable>true</IsAbandonable>
     <IsRepeatable>false</IsRepeatable>
     
+    <!-- Unlock research that should be unlocked by previous quest. This is so that quest works if previous was abandoned -->
+    <StartAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Tutorial" />
     <StartAction xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="ClaimBlockWood_LawGovernment" />
     <FailAction xsi:type="Quest.Actions.UnlockResearch" Type="ResearchDefinition" Subtype="Nomad_Encampment" />
     <SuccessAction xsi:type="Quest.Actions.ShowNotification" Text="Description_Quest_Completed" SoundCueId="QuestCompleted" />
