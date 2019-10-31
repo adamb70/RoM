@@ -513,6 +513,45 @@
       </GrowthStep>
     </GrowthSteps>
   </Definition>
+
+  <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
+    <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="WildWheat_Farmed"/>
+    <GrowthSteps>
+      <GrowthStep Name="Dead" StartingProbability="0.2">
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStep Hours="2.5"/>
+      </GrowthStep>
+      <GrowthStep Name="Sapling" StartingProbability="0.3">
+        <ModelCollectionSubtypeId>Wheat_Saplings</ModelCollectionSubtypeId>
+        <NextStep>Young</NextStep>
+        <TimeToNextStep Hours="2"/>
+      </GrowthStep>
+      <GrowthStep Name="Young" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Wheat_Younglings</ModelCollectionSubtypeId>
+        <NextStep>Grown</NextStep>
+        <TimeToNextStep Hours="0.5"/>
+      </GrowthStep>
+      <GrowthStep Name="Grown" StartingProbability="0.2">
+        <ModelCollectionSubtypeId>Wheat_GrownUps</ModelCollectionSubtypeId>
+        <NextStep>Withered</NextStep>
+        <TimeToNextStep Hours="8"/>
+        <Actions>
+          <Action Name="Gather" NextStep="Gathered">
+            <Id Type="LootTableDefinition" Subtype="StrawsWheat_Farmed"/>
+          </Action>
+        </Actions>
+      </GrowthStep>
+      <GrowthStep Name="Withered" StartingProbability="0">
+        <ModelCollectionSubtypeId>Wheat_Withered</ModelCollectionSubtypeId>
+        <NextStep>Sapling</NextStep>
+        <TimeToNextStep Hours="3"/>
+      </GrowthStep>
+      <GrowthStep Name="Gathered" StartingProbability="0.1">
+        <NextStep>Dead</NextStep>
+        <TimeToNextStep Hours="0.5"/>
+      </GrowthStep>
+    </GrowthSteps>
+  </Definition>
   
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
     <Id Type="MyObjectBuilder_GrowableEnvironmentItemDefinition" Subtype="WildCarrot"/>

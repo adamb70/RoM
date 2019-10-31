@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+F<?xml version='1.0' encoding='UTF-8'?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
   <Definition xsi:type="VR.EI.GrowableEnvironmentItem">
@@ -123,7 +123,7 @@
         <TimeToNextStep Hours="2"/>
         <Actions>
           <Action Name="Gather" NextStep="AgaveGrown5">
-            <Id Type="LootTableDefinition" Subtype="FlowerAgave"/>
+            <Id Type="LootTableDefinition" Subtype="FlowerAgave_Farmed"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
@@ -958,7 +958,7 @@
         <TimeToNextStep Hours="24"/>
         <Actions>
           <Action Name="Gather" NextStep="Dead">
-            <Id Type="InventoryItem" Subtype="StrawsWheat"/>
+            <Id Type="InventoryItem" Subtype="StrawsWheat_Farmed"/>
             <Min>1</Min>
             <Max>1</Max>
           </Action>
