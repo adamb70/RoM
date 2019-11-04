@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="SwordRusted" />
+
+    <!-- Display -->
+    <DisplayName>DisplayName_Weapon_SwordRusted</DisplayName>
+    <Description>Description_Weapon_SwordRusted</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\BrokenSword.dds</Icon>
+    <Visible>false</Visible>
+    <Tag>WeaponMelee</Tag>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Model>Models\Weapons\SwordRusted.mwm</Model>
+
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Mass>5</Mass>
+    <ItemBreakEvent>ToolBreakMetal</ItemBreakEvent>
+
+    <Animation>Sword</Animation>
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <MaxDurability>80</MaxDurability>
+
+    <BrokenItem Type="HandItem" Subtype="SwordRustedBroken" />
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.464</X>
+        <Y>-1.0</Y>
+        <Z>-0.505</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.131</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>
+
+    <!-- Behaviors -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="SwordRusted" />
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SwordRusted" />
+
+    <!-- Attack that goes from right to left part of attacker's screen, usually lands on left side of target's body -->
+    <LeftSwing>
+      <Range>1.6</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="20" AttackMultipleTargets="false">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="20" MaximumDamage="25" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="13" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.3" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </LeftSwing>
+
+    <!-- Attack that goes from left to right part of attacker's screen, usually lands on right side of target's body -->
+    <RightSwing>
+      <Range>1.6</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="30" AttackMultipleTargets="false">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="20" MaximumDamage="25" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="13" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.3" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </RightSwing>
+
+    <!-- Attack from above, always lands on 'head' body region -->
+    <ForwardSwing>
+      <Range>1.6</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishSword</SwingSound>
+
+      <LightAttack MinimumDamage="20">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="20" MaximumDamage="25" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="13" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Sword</WeaponMaterial>
+
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+  </Definition>
+  
+  <!-- Broken Rusted Sword-->
+  <Definition xsi:type="MyObjectBuilder_HandItemDefinition">
+    <Id Type="HandItem" Subtype="SwordRustedBroken" />
+
+    <!-- Display -->
+
+    <Visible>false</Visible>
+    <DisplayName>DisplayName_Weapon_SwordRustedBroken</DisplayName>
+    <Description>Description_Weapon_SwordRustedBroken</Description>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\BrokenSword.dds</Icon>
+    <Icon>Textures\GUI\Icons\ToolsAndWeapons\Broken.dds</Icon>
+	  <Tag>WeaponMelee</Tag>
+    <Tag>WeaponShort</Tag>
+    <Size>
+      <X>1.2</X>
+      <Y>0.6</Y>
+      <Z>0.3</Z>
+    </Size>
+    <Volume>3</Volume>
+    <Model>Models\Weapons\BrokenSword.mwm</Model>
+
+    <PhysicalMaterial>Metal</PhysicalMaterial>
+    <Mass>5</Mass>
+
+    <Animation>Sword</Animation>
+    
+    <BrokenItem Type="InventoryItem" Subtype="PartsMetal" />
+
+    <!-- extra transform on IK dummy in 1st person -->
+    <EquippedTransform>
+      <!-- tool rotation offset from hand -->
+      <Orientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>1</W>
+      </Orientation>
+    </EquippedTransform>
+    <EquippedTransformFps>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.817</X>
+        <Y>-1.0</Y>
+        <Z>-0.918</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFps>
+    <EquippedTransformFpsCrouch>
+      <!-- hand IK target offset -->
+      <Position>
+        <X>0.285</X>
+        <Y>-0.334</Y>
+        <Z>-0.173</Z>
+      </Position>
+      <Orientation>
+        <X>0.5215536</X>
+        <Y>0.4426106</Y>
+        <Z>-0.4053448</Z>
+        <W>0.6064432</W>
+      </Orientation>
+    </EquippedTransformFpsCrouch>    
+
+    <MaxStackAmount>1</MaxStackAmount>
+
+    <MaxDurability>40</MaxDurability>
+
+    <Position>
+      <Slot>MainHand</Slot>
+    </Position>
+
+    <!-- Behaviors -->
+    <StanceToBehavior>
+      <StanceName>CombatMode</StanceName>
+      <BehaviorId Type="MeleeWeaponBehaviorDefinition" Subtype="SwordRustedBroken" />
+    </StanceToBehavior>
+  </Definition>
+
+  <Definition xsi:type="MyObjectBuilder_MeleeWeaponBehaviorDefinition">
+    <Id Type="MeleeWeaponBehaviorDefinition" Subtype="SwordRustedBroken" />
+
+    <!-- Attack that goes from right to left part of attacker's screen, usually lands on left side of target's body -->
+    <LeftSwing>
+      <Range>1.4</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishDagger</SwingSound>
+
+      <LightAttack MinimumDamage="8">
+        <StatCost Stat="Stamina" Cost="8" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="8" MaximumDamage="10" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Left">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundLeft" Chance="0.1" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </LeftSwing>
+
+    <!-- Attack that goes from left to right part of attacker's screen, usually lands on right side of target's body -->
+    <RightSwing>
+      <Range>1.4</Range>
+      <StartArc>70</StartArc>
+      <EndArc>-20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishDagger</SwingSound>
+
+      <LightAttack MinimumDamage="8">
+        <StatCost Stat="Stamina" Cost="8" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="8" MaximumDamage="10" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Right">
+          <Effect Type="CompositeEntityEffect" Subtype="ArmWoundRight" Chance="0.1" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </RightSwing>
+
+    <!-- Attack from above, always lands on 'head' body region -->
+    <ForwardSwing>
+      <Range>1.4</Range>
+      <StartArc>-70</StartArc>
+      <EndArc>20</EndArc>
+
+      <Animation>Attack</Animation>
+      <SwingSound>ToolSwishDagger</SwingSound>
+
+      <LightAttack MinimumDamage="8">
+        <StatCost Stat="Stamina" Cost="8" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+      </LightAttack>
+
+      <ChargedAttack MinimumDamage="8" MaximumDamage="10" AttackMultipleTargets="true">
+        <StatCost Stat="Stamina" Cost="10" />
+        <AppliedEffect Affectee="Target" ContactType="Hit" HitRegion="Back">
+          <Effect Type="DamageOverTimeEffect" Subtype="Backstab" Chance="1.0" />
+        </AppliedEffect>
+        <AppliedEffect Affectee="Target" ContactType="Hit">
+          <Effect Type="DamageOverTimeEffect" Subtype="BleedingShort" Chance="0.2" />
+        </AppliedEffect>
+      </ChargedAttack>
+    </ForwardSwing>
+
+    <CanBlock>true</CanBlock>
+    <HardnessLimited>true</HardnessLimited>
+    <WeaponMaterial>Sword</WeaponMaterial>
+
+    <ChargeEffect Type="CompositeEntityEffect" Subtype="Charging" />
+
+    <BlockAnimation>block_idle</BlockAnimation>
+    <BlockRaiseTime>.03</BlockRaiseTime>
+    <BlockStatCost Stat="Stamina" Cost="10" />
+    <BlockEffect Type="CompositeEntityEffect" Subtype="Blocking" />
+  </Definition>
+</Definitions>
