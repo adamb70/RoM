@@ -18,6 +18,9 @@
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Masonry_Schematic_Stone_Well" />
     <Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="BerryPreserve_Nomadic" />
+	<Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />
+	<Entry Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="Empty_Bowl_Carpenter" />
+	
   </Definition>
   
    <Definition xsi:type="ResearchDefinition">
@@ -85,7 +88,7 @@
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="9" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="2" />
-        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Berry" Amount="2" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Berry" Amount="6" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Berry" Amount="2" />
       </Condition>
 
@@ -118,20 +121,60 @@
       <FullDescription>Finally, gather the last bits needed to construct a well.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stone" Amount="3" />
-        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="3" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Stick" Amount="4" />
         <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stone" Amount="3" />
-        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="3" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Stick" Amount="4" />
       </Condition>
       <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Empty_Bucket_Carpenter" />
+	  <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Empty_Bowl_Carpenter" />
       <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="Stone_Well_Masonry" />
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
     <Step>
-      <FullDescription>This is the last step. Remember that the well will not be able to draw water on dry or rocky ground.</FullDescription>
+      <FullDescription>Remember that the well will not be able to draw water on dry or rocky ground.</FullDescription>
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bucket" Amount="1" />
-        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Masonry_Schematic_Stone_Well" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Carpenter_Schematic_Empty_Bowl" Amount="1" />
+		<Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Masonry_Schematic_Stone_Well" Amount="1" />
         <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="Stone_Well" Amount="1" />
+      </Condition>
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+	<Step>
+      <FullDescription>It is important to have a basic understanding of carpentry, so let's craft some of the essentials.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Craft" Type="HandItem" Subtype="AxeStone" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="HandItem" Subtype="HammerWood" Amount="1" />
+      </Condition>
+  
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+	<Step>
+      <FullDescription>Now that we have the tools, cut down a tree and prepare your Carpenter's Table.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+		<Condition xsi:type="Quest.Conditions.Equip" Type="HandItem" Subtype="AxeStone" />
+		<Condition xsi:type="Quest.Conditions.Gather" Tag="Log" Amount="1" />
+		<Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="TableCrafting" Amount="1" />
+      </Condition>
+  
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+	<Step>
+      <FullDescription>Foraging for food is ineffective for survival. Let's learn how to make a simple soup.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Universal_Berry" Amount="6" />
+        <Condition xsi:type="Quest.Conditions.Gather" Tag="Pristine_Berry" Amount="6" />
+		<Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="Empty_Bowl" Amount="1" />
+      </Condition>
+
+      <Action xsi:type="Quest.Actions.UnlockResearch" Type="CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />   
+      <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
+    </Step>
+    <Step>
+      <FullDescription>Fill an empty bowl with water from your well and cook a soup on the bonfire.</FullDescription>
+      <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
+	    <Condition xsi:type="Quest.Conditions.Craft" Type="ConsumableItem" Subtype="Water_Bowl" Amount="1" />
+        <Condition xsi:type="Quest.Conditions.Craft" Type="ConsumableItem" Subtype="SoupMushroom" Amount="1" />
       </Condition>
       <Action xsi:type="Quest.Actions.ShowNotification" Text="Description_Objective_Completed" SoundCueId="QuestStepCompleted" SoundDelay="300" />
     </Step>
@@ -173,6 +216,7 @@
       <Condition xsi:type="Quest.Conditions.Composite" Operator="AND">
         <Condition xsi:type="Quest.Conditions.Craft" Type="SchematicItem" Subtype="Nomadic_Schematic_NomadTentBranches" Amount="1" />
         <Condition xsi:type="Quest.Conditions.Craft" Type="Block" Subtype="NomadTentBranches" Amount="1" />
+		<Condition xsi:type="Quest.Conditions.Equip" Type="HandItem" Subtype="HammerWood" />
 		<Condition xsi:type="Quest.Conditions.BuildBlock" Type="Block" Subtype="SupportWood" Amount="1" />
         <Condition xsi:type="Quest.Conditions.BuildBlock" Type="Block" Subtype="ClaimBlockWood" Amount="1" />
       </Condition>

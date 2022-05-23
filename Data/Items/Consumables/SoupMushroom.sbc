@@ -34,7 +34,7 @@
     <Category>Cooking</Category>
     <Prerequisites>
       <Item Amount="6" Tag="Universal_SimpleSoup" />
-      <Item Amount="1" Type="Block" Subtype="Water_Bowl" />
+      <Item Amount="1" Type="ConsumableItem" Subtype="Water_Bowl" />
     </Prerequisites>
     <Results>
       <Item Amount="1" Type="ConsumableItem" Subtype="SoupMushroom" />
@@ -45,7 +45,7 @@
 
   <Definition xsi:type="MyObjectBuilder_CraftingRecipeDefinition">
     <Id Type="MyObjectBuilder_CraftingRecipeDefinition" Subtype="SoupMushroom_Cooking" />
-    <DisplayName>Cooking: Simple Soup</DisplayName>
+    <DisplayName>Cooking Essentials: Simple Soup</DisplayName>
     <Description>"Anyone can make soup, just toss randoms food into a bowl of hot water." -Grand Chef Gunter
 
     Soup and food in general are great for satisfying hunger and thirst. Can be cooked on a campfire.
@@ -67,7 +67,7 @@
   <Definition xsi:type="MyObjectBuilder_SchematicItemDefinition">
     <Id Type="SchematicItem" Subtype="SoupMushroom_Schematic" />
     <Public>true</Public>
-    <DisplayName>Simple Soup Cooking Manuscript</DisplayName>
+    <DisplayName>Cooking Essentials: Simple Soup</DisplayName>
     <Description>As you examine the manuscript, you notice diagrams and written instructions explaining
 the process for Cooking Simple Soup. This knowledge would be valuable for a Chef.</Description>
     <Icon>Textures\GUI\Icons\Schematics\ScrollBackground_1.dds</Icon>
