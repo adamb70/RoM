@@ -1296,6 +1296,19 @@
   </Definition>
 <!-- =========================================================================== -->
   <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
+    <Id Type="EntityStatEffect" Subtype="Water_Bowl_Thirst" />
+    <DisplayName>Drinking</DisplayName>
+    <Description>You are feeling less thirsty. . .</Description>
+    <Icon>Textures\HUD\StatsAndEffects\Stats_Center.png</Icon>
+    <Icon>Textures\GUI\Icons\Consumables\Bandage.dds</Icon>
+	<EffectType>Positive</EffectType>
+	<Stat>Thirst</Stat>
+	<RegenPerSecond>1.75</RegenPerSecond>
+	<Duration Seconds="10" />
+	<CancelOnDamage>false</CancelOnDamage>
+  </Definition>
+<!-- =========================================================================== -->
+  <Definition xsi:type="MyObjectBuilder_EntityStatEffectDefinition">
     <Id Type="EntityStatEffect" Subtype="Grape_Thirst" />
     <DisplayName>Drinking</DisplayName>
     <Description>You are feeling less thirsty. . .</Description>

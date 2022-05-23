@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Definition xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+    <Id Type="ConsumableItem" Subtype="Water_Bowl" />
+    <Tag>Drink</Tag>
+    <Public>true</Public>
+    <DisplayName>Water Bowl</DisplayName>
+    <Description>Water Bowls may be drinken from to replenish thirst.</Description>
+    <Icon>Textures\GUI\Icons\Consumables\WaterBowl.dds</Icon>
+    <Size>
+      <X>0.1</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+    </Size>
+    <Mass>0.25</Mass>
+    <Model>Models\Consumables\SaladBowl.mwm</Model>
+    <PhysicalMaterial>WoodLight</PhysicalMaterial>
+    <MaxStackAmount>1</MaxStackAmount>
+    <Effect Type="EntityStatEffect" Subtype="Water_Bowl_Thirst" />
+    <UseSound>PlayEat</UseSound>
+  </Definition>
+
+
+
+</Definitions>
